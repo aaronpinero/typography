@@ -64,8 +64,8 @@ h3 {
   color: #333;
   font-family: Roboto;
   font-size: 2.0736rem;
-  font-style: italic;
-  font-weight: 700;
+  font-style: normal;
+  font-weight: 500;
   letter-spacing: 0;
   line-height: 3rem;
   margin-bottom: 0;
@@ -79,7 +79,7 @@ h4 {
   font-family: Roboto;
   font-size: 1.728rem;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0;
   line-height: 3rem;
   margin-bottom: 0;
@@ -92,8 +92,8 @@ h5 {
   color: #333;
   font-family: Roboto;
   font-size: 1.44rem;
-  font-style: normal;
-  font-weight: 700;
+  font-style: italic;
+  font-weight: 500;
   letter-spacing: 0;
   line-height: 1.5rem;
   margin-bottom: 0;
@@ -108,7 +108,7 @@ h6 {
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.025em;
   line-height: 1.5rem;
   margin-bottom: 0;
   margin-top: 0;
@@ -162,7 +162,7 @@ h6 + p {
     h6 + p {
       margin-top: 0.875rem; } }
 
-p + h1
+p + h1,
 p + h2,
 p + h3,
 p + h4,
@@ -170,7 +170,7 @@ p + h5,
 p + h6 {
   margin-top: 2.25rem; }
   @media (min-width: 40em) {
-    p + h1
+    p + h1,
     p + h2,
     p + h3,
     p + h4,
@@ -319,5 +319,9 @@ ul.list-icons.list-icons-check li:before {
   content: "\f00c"; }
 ul.list-icons.list-icons-chevron li:before {
   content: "\f054"; }
+
+code {
+  background-color: rgba(34, 34, 34, 0.15);
+  font-size: 125%; }
 
 /*# sourceMappingURL=typography.css.map */
