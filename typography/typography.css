@@ -1,0 +1,181 @@
+.font-size-p {
+  font-size: 1rem; }
+
+.font-size-h6 {
+  font-size: 1.2rem; }
+
+.font-size-h5 {
+  font-size: 1.44rem; }
+
+.font-size-h4 {
+  font-size: 1.728rem; }
+
+.font-size-h3 {
+  font-size: 2.0736rem; }
+
+.font-size-h2 {
+  font-size: 2.48832rem; }
+
+.font-size-h1 {
+  font-size: 2.98598rem; }
+
+html {
+  font-size: 100%; }
+
+body {
+  color: #222;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 55em;
+  padding: 1.5rem; }
+  @media (min-width: 40em) {
+    body {
+      padding: 3.5rem; } }
+
+h1 {
+  color: #333;
+  font-family: Merriweather;
+  font-size: 2.98598rem;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 3rem;
+  margin-bottom: 0;
+  margin-top: 0; }
+  @media (min-width: 40em) {
+    h1 {
+      line-height: 3.5rem; } }
+
+h2 {
+  color: #333;
+  font-family: Roboto;
+  font-size: 2.48832rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 3rem;
+  margin-bottom: 0;
+  margin-top: 0; }
+  @media (min-width: 40em) {
+    h2 {
+      line-height: 3.5rem; } }
+
+h3 {
+  color: #333;
+  font-family: Roboto;
+  font-size: 2.0736rem;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 3rem;
+  margin-bottom: 0;
+  margin-top: 0; }
+  @media (min-width: 40em) {
+    h3 {
+      line-height: 3.5rem; } }
+
+h4 {
+  color: #333;
+  font-family: Roboto;
+  font-size: 1.728rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 3rem;
+  margin-bottom: 0;
+  margin-top: 0; }
+  @media (min-width: 40em) {
+    h4 {
+      line-height: 1.75rem; } }
+
+h5 {
+  color: #333;
+  font-family: Roboto;
+  font-size: 1.44rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0; }
+  @media (min-width: 40em) {
+    h5 {
+      line-height: 1.75rem; } }
+
+h6 {
+  color: #333;
+  font-family: Roboto;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-transform: uppercase; }
+  @media (min-width: 40em) {
+    h6 {
+      line-height: 1.75rem; } }
+
+p {
+  font-family: Merriweather;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0; }
+  @media (min-width: 40em) {
+    p {
+      line-height: 1.75rem; } }
+
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6,
+* + p {
+  margin-top: 1.5rem; }
+  @media (min-width: 40em) {
+    * + h1,
+    * + h2,
+    * + h3,
+    * + h4,
+    * + h5,
+    * + h6,
+    * + p {
+      margin-top: 1.75rem; } }
+
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0.75rem; }
+  @media (min-width: 40em) {
+    h2 + p,
+    h3 + p,
+    h4 + p,
+    h5 + p,
+    h6 + p {
+      margin-top: 0.875rem; } }
+
+p + h1
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+  margin-top: 2.25rem; }
+  @media (min-width: 40em) {
+    p + h1
+    p + h2,
+    p + h3,
+    p + h4,
+    p + h5,
+    p + h6 {
+      margin-top: 2.625rem; } }
+
+/*# sourceMappingURL=typography.css.map */
