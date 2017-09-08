@@ -1,9 +1,10 @@
+@import "../fontawesome/scss/_variables.scss";
 @import "defaults";
 @import "base";
 @import "paragraphs";
-// links and anchors
+@import "links";
 // buttons
-// lists
+@import "lists";
 // inline styles
 // quotes
 // reverse

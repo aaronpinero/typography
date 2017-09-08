@@ -1,0 +1,57 @@
+a {
+	color:$color-text-body;
+	text-decoration:none;
+	transition-duration:$transition-duration-hover;
+	transition-property:border-color,color;
+	h1 &,
+	h2 &,
+	h3 &,
+	h4 &,
+	h5 &,
+	h6 & {
+		color:$color-text-head;
+		text-text:none;
+	}
+	&[href] {
+		color:$color-link-default;
+		h1 &,
+		h2 &,
+		h3 &,
+		h4 &,
+		h5 &,
+		h6 & {
+			color:$color-text-head;
+		}
+		&:hover,
+		&:active {
+			color:$color-link-active;
+			h1 &,
+			h2 &,
+			h3 &,
+			h4 &,
+			h5 &,
+			h6 & {
+				color:$color-link-active;
+			}
+		}
+		.links-underlined & {
+			border-bottom:1px rgba($color-link-default,0.5) solid;
+			&:hover,
+			&:active {
+				border-bottom:1px $color-link-active solid;
+			}
+		}
+		.links-underlined h1 &,
+		.links-underlined h2 &,
+		.links-underlined h3 &,
+		.links-underlined h4 &,
+		.links-underlined h5 &,
+		.links-underlined h6 & {
+			border-bottom:1px rgba($color-text-head,0.5) solid;
+			&:hover,
+			&:active {
+				border-bottom:1px $color-link-active solid;
+			}
+		}
+	}
+}

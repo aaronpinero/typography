@@ -1,3 +1,16 @@
+html {
+  font-size: 100%; }
+
+body {
+  color: #222;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 55em;
+  padding: 1.5rem; }
+  @media (min-width: 40em) {
+    body {
+      padding: 3.5rem; } }
+
 .font-size-p {
   font-size: 1rem; }
 
@@ -18,19 +31,6 @@
 
 .font-size-h1 {
   font-size: 2.98598rem; }
-
-html {
-  font-size: 100%; }
-
-body {
-  color: #222;
-  font-size: 1rem;
-  margin: 0 auto;
-  max-width: 55em;
-  padding: 1.5rem; }
-  @media (min-width: 40em) {
-    body {
-      padding: 3.5rem; } }
 
 h1 {
   color: #333;
@@ -177,5 +177,147 @@ p + h6 {
     p + h5,
     p + h6 {
       margin-top: 2.625rem; } }
+
+a {
+  color: #222;
+  text-decoration: none;
+  transition-duration: 0.25s;
+  transition-property: border-color,color; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #333;
+    text-text: none; }
+  a[href] {
+    color: #0068a8; }
+    h1 a[href], h2 a[href], h3 a[href], h4 a[href], h5 a[href], h6 a[href] {
+      color: #333; }
+    a[href]:hover, a[href]:active {
+      color: #a84000; }
+      h1 a[href]:hover, h2 a[href]:hover, h3 a[href]:hover, h4 a[href]:hover, h5 a[href]:hover, h6 a[href]:hover, h1 a[href]:active, h2 a[href]:active, h3 a[href]:active, h4 a[href]:active, h5 a[href]:active, h6 a[href]:active {
+        color: #a84000; }
+    .links-underlined a[href] {
+      border-bottom: 1px rgba(0, 104, 168, 0.5) solid; }
+      .links-underlined a[href]:hover, .links-underlined a[href]:active {
+        border-bottom: 1px #a84000 solid; }
+    .links-underlined h1 a[href], .links-underlined h2 a[href], .links-underlined h3 a[href], .links-underlined h4 a[href], .links-underlined h5 a[href], .links-underlined h6 a[href] {
+      border-bottom: 1px rgba(51, 51, 51, 0.5) solid; }
+      .links-underlined h1 a[href]:hover, .links-underlined h1 a[href]:active, .links-underlined h2 a[href]:hover, .links-underlined h2 a[href]:active, .links-underlined h3 a[href]:hover, .links-underlined h3 a[href]:active, .links-underlined h4 a[href]:hover, .links-underlined h4 a[href]:active, .links-underlined h5 a[href]:hover, .links-underlined h5 a[href]:active, .links-underlined h6 a[href]:hover, .links-underlined h6 a[href]:active {
+        border-bottom: 1px #a84000 solid; }
+
+ol,
+ul {
+  line-height: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 2.25rem; }
+  @media (min-width: 40em) {
+    ol,
+    ul {
+      line-height: 1.75rem;
+      padding-left: 2.625rem; } }
+
+li {
+  font-family: Merriweather;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0; }
+  @media (min-width: 40em) {
+    li {
+      line-height: 1.75rem; } }
+
+* + ol,
+* + ul {
+  margin-top: 1.5rem; }
+  @media (min-width: 40em) {
+    * + ol,
+    * + ul {
+      margin-top: 1.75rem; } }
+
+h2 + ol,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+  margin-top: 0.75rem; }
+  @media (min-width: 40em) {
+    h2 + ol,
+    h3 + ol,
+    h4 + ol,
+    h5 + ol,
+    h6 + ol {
+      margin-top: 0.875rem; } }
+
+ol + h1
+ol + h2,
+ol + h3,
+ol + h4,
+ol + h5,
+ol + h6 {
+  margin-top: 2.25rem; }
+  @media (min-width: 40em) {
+    ol + h1
+    ol + h2,
+    ol + h3,
+    ol + h4,
+    ol + h5,
+    ol + h6 {
+      margin-top: 2.625rem; } }
+
+h2 + ul,
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul {
+  margin-top: 0.75rem; }
+  @media (min-width: 40em) {
+    h2 + ul,
+    h3 + ul,
+    h4 + ul,
+    h5 + ul,
+    h6 + ul {
+      margin-top: 0.875rem; } }
+
+ul + h1
+ul + h2,
+ul + h3,
+ul + h4,
+ul + h5,
+ul + h6 {
+  margin-top: 2.25rem; }
+  @media (min-width: 40em) {
+    ul + h1
+    ul + h2,
+    ul + h3,
+    ul + h4,
+    ul + h5,
+    ul + h6 {
+      margin-top: 2.625rem; } }
+
+li + li {
+  margin-top: 0.75rem; }
+  @media (min-width: 40em) {
+    li + li {
+      margin-top: 0.875rem; } }
+
+ul.list-icons li {
+  list-style-type: none;
+  position: relative; }
+  ul.list-icons li:before {
+    color: #999;
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    left: -1.5rem; }
+ul.list-icons.list-icons-angle li:before {
+  content: "\f105"; }
+ul.list-icons.list-icons-caret li:before {
+  content: "\f0da"; }
+ul.list-icons.list-icons-check li:before {
+  content: "\f00c"; }
+ul.list-icons.list-icons-chevron li:before {
+  content: "\f054"; }
 
 /*# sourceMappingURL=typography.css.map */

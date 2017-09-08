@@ -1,0 +1,111 @@
+// font styles and line heights for lists
+ol,
+ul {
+	line-height:$line-height-small;
+	margin-bottom:0;
+	margin-top:0;
+	padding-left:$line-height-small*1.5;
+	@media (min-width:$break-lineheight) {
+		line-height:$line-height-large;
+		padding-left:$line-height-large*1.5;
+	}
+}
+li {
+	font-family:$serif;
+	font-size:$font-size-p;
+	font-style:normal;
+	font-weight:400;
+	letter-spacing:0;
+	line-height:$line-height-small;
+	margin-bottom:0;
+	margin-top:0;
+	@media (min-width:$break-lineheight) {
+		line-height:$line-height-large;
+	}
+}
+
+// margins for lists
+* + ol,
+* + ul {
+	margin-top:$line-height-small;
+	@media (min-width:$break-lineheight) {
+		margin-top:$line-height-large;
+	}
+}
+h2 + ol,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+	margin-top:$line-height-small*0.5;
+	@media (min-width:$break-lineheight) {
+		margin-top:$line-height-large*0.5;
+	}
+}
+ol + h1
+ol + h2,
+ol + h3,
+ol + h4,
+ol + h5,
+ol + h6 {
+	margin-top:$line-height-small*1.5;
+	@media (min-width:$break-lineheight) {
+		margin-top:$line-height-large*1.5;
+	}
+}
+h2 + ul,
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul {
+	margin-top:$line-height-small*0.5;
+	@media (min-width:$break-lineheight) {
+		margin-top:$line-height-large*0.5;
+	}
+}
+ul + h1
+ul + h2,
+ul + h3,
+ul + h4,
+ul + h5,
+ul + h6 {
+	margin-top:$line-height-small*1.5;
+	@media (min-width:$break-lineheight) {
+		margin-top:$line-height-large*1.5;
+	}
+}
+li + li {
+	margin-top:$line-height-small*0.5;
+	@media (min-width:$break-lineheight) {
+		margin-top:$line-height-large*0.5;
+	}
+}
+
+// nested lists
+
+// unordered list variations
+ul.list-icons {
+	li {
+		list-style-type:none;
+		position:relative;
+		&:before {
+			color:$color-text-light;
+			font-family:$symbol;
+			position:absolute;
+			top:0;
+			left:$line-height-small*-1;
+		}
+	}
+	&.list-icons-angle li:before {
+		content:unquote("\"#{ $fa-var-angle-right }\"");
+	}
+	&.list-icons-caret li:before {
+		content:unquote("\"#{ $fa-var-caret-right }\"");
+	}
+	&.list-icons-check li:before {
+		content:unquote("\"#{ $fa-var-check }\"");
+	}
+	&.list-icons-chevron li:before {
+		content:unquote("\"#{ $fa-var-chevron-right }\"");
+	}
+}
