@@ -1,0 +1,32 @@
+// fonts
+$serif:Merriweather;
+$sans:Roboto;
+
+// typographical breakpoint
+$break-lineheight:40em;
+
+// line heights
+$line-height-large:1.75rem;
+$line-height-small:1.5rem;
+
+// font colors
+$color-font-text:#222;
+$color-font-head:#333;
+$color-font-light:#999;
+$color-link-default:#0068a8;
+$color-link-active:#a84000;
+$color-font-text-reverse:#eee;
+$color-font-head-reverse:#ddd;
+$color-font-light-reverse:#888;
+$color-link-default-reverse:#a8deff;
+$color-link-active-reverse:#ffc9a8;
+
+// modular scale
+$font-size-scalar:1.2;
+$font-size-p:1rem;
+$font-size-h6:$font-size-p * $font-size-scalar;
+$font-size-h5:$font-size-h6 * $font-size-scalar;
+$font-size-h4:$font-size-h5 * $font-size-scalar;
+$font-size-h3:$font-size-h4 * $font-size-scalar;
+$font-size-h2:$font-size-h3 * $font-size-scalar;
+$font-size-h1:$font-size-h2 * $font-size-scalar;

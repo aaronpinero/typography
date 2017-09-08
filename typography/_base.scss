@@ -1,0 +1,14 @@
+// root styles
+html {
+	font-size:100%;
+}
+body {
+	color:$color-font-text;
+	font-size:1rem;
+	margin:0 auto;
+	max-width:55em;
+	padding:$line-height-small;
+	@media (min-width:$break-lineheight) {
+		padding:$line-height-large*2;
+	}
+}
