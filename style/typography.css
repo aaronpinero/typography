@@ -38,7 +38,7 @@ body {
   font-size: 2.98598rem; }
 
 h1 {
-  color: #333;
+  color: #2f2f2f;
   font-family: Merriweather;
   font-size: 2.98598rem;
   font-style: normal;
@@ -52,7 +52,7 @@ h1 {
       line-height: 3.5rem; } }
 
 h2 {
-  color: #333;
+  color: #2f2f2f;
   font-family: Roboto;
   font-size: 2.48832rem;
   font-style: normal;
@@ -66,7 +66,7 @@ h2 {
       line-height: 3.5rem; } }
 
 h3 {
-  color: #333;
+  color: #2f2f2f;
   font-family: Roboto;
   font-size: 2.0736rem;
   font-style: normal;
@@ -80,7 +80,7 @@ h3 {
       line-height: 3.5rem; } }
 
 h4 {
-  color: #333;
+  color: #2f2f2f;
   font-family: Roboto;
   font-size: 1.728rem;
   font-style: italic;
@@ -94,7 +94,7 @@ h4 {
       line-height: 1.75rem; } }
 
 h5 {
-  color: #333;
+  color: #2f2f2f;
   font-family: Roboto;
   font-size: 1.44rem;
   font-style: italic;
@@ -108,7 +108,7 @@ h5 {
       line-height: 1.75rem; } }
 
 h6 {
-  color: #333;
+  color: #2f2f2f;
   font-family: Roboto;
   font-size: 1.2rem;
   font-style: normal;
@@ -189,12 +189,12 @@ a {
   transition-duration: 0.25s;
   transition-property: border-color,color; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: #333;
+    color: #2f2f2f;
     text-text: none; }
   a[href] {
     color: #418fde; }
     h1 a[href], h2 a[href], h3 a[href], h4 a[href], h5 a[href], h6 a[href] {
-      color: #333; }
+      color: #2f2f2f; }
     a[href]:hover, a[href]:active {
       color: #de9041; }
       h1 a[href]:hover, h2 a[href]:hover, h3 a[href]:hover, h4 a[href]:hover, h5 a[href]:hover, h6 a[href]:hover, h1 a[href]:active, h2 a[href]:active, h3 a[href]:active, h4 a[href]:active, h5 a[href]:active, h6 a[href]:active {
@@ -204,7 +204,7 @@ a {
       .links-underlined a[href]:hover, .links-underlined a[href]:active {
         border-bottom: 1px #de9041 solid; }
     .links-underlined h1 a[href], .links-underlined h2 a[href], .links-underlined h3 a[href], .links-underlined h4 a[href], .links-underlined h5 a[href], .links-underlined h6 a[href] {
-      border-bottom: 1px rgba(51, 51, 51, 0.5) solid; }
+      border-bottom: 1px rgba(47, 47, 47, 0.5) solid; }
       .links-underlined h1 a[href]:hover, .links-underlined h1 a[href]:active, .links-underlined h2 a[href]:hover, .links-underlined h2 a[href]:active, .links-underlined h3 a[href]:hover, .links-underlined h3 a[href]:active, .links-underlined h4 a[href]:hover, .links-underlined h4 a[href]:active, .links-underlined h5 a[href]:hover, .links-underlined h5 a[href]:active, .links-underlined h6 a[href]:hover, .links-underlined h6 a[href]:active {
         border-bottom: 1px #de9041 solid; }
 
@@ -323,7 +323,7 @@ ul.list-icons li {
   list-style-type: none;
   position: relative; }
   ul.list-icons li:before {
-    color: #999;
+    color: #626262;
     font-family: FontAwesome;
     position: absolute;
     top: 0;

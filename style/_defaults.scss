@@ -11,17 +11,17 @@ $break-lineheight-vertical:30em;
 $line-height-large:1.75rem;
 $line-height-small:1.5rem;
 
-// font colors
+// colors
 $color-text-body:#222;
-$color-text-head:#333;
-$color-text-light:#999;
+$color-text-head:lighten($color-text-body,7%);
+$color-text-light:lighten($color-text-body,25%);
 $color-link-default:#418fde;
-$color-link-active:#de9041;
-$color-font-text-reverse:#eee;
-$color-font-head-reverse:#ddd;
-$color-font-light-reverse:#888;
-$color-link-default-reverse:#b6d4f2;
-$color-link-active-reverse:#f2d4b6;
+$color-link-active:complement($color-link-default);
+$color-font-text-reverse:invert($color-text-body);
+$color-font-head-reverse:invert($color-text-head);
+$color-font-light-reverse:invert($color-text-light);
+$color-link-default-reverse:saturate(lighten($color-link-default,25%),10%);
+$color-link-active-reverse:complement($color-link-default-reverse);
 
 // modular scale
 $font-size-scalar:1.2;
