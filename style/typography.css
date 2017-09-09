@@ -9,7 +9,12 @@ body {
   padding: 1.5rem; }
   @media (min-width: 40em) {
     body {
-      padding: 3.5rem; } }
+      padding-left: 3.5rem;
+      padding-right: 3.5rem; } }
+  @media (min-height: 30em) {
+    body {
+      padding-bottom: 3.5rem;
+      padding-top: 3.5rem; } }
 
 .font-size-p {
   font-size: 1rem; }
@@ -42,7 +47,7 @@ h1 {
   line-height: 3rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     h1 {
       line-height: 3.5rem; } }
 
@@ -56,7 +61,7 @@ h2 {
   line-height: 3rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     h2 {
       line-height: 3.5rem; } }
 
@@ -70,7 +75,7 @@ h3 {
   line-height: 3rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     h3 {
       line-height: 3.5rem; } }
 
@@ -84,7 +89,7 @@ h4 {
   line-height: 3rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     h4 {
       line-height: 1.75rem; } }
 
@@ -98,7 +103,7 @@ h5 {
   line-height: 1.5rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     h5 {
       line-height: 1.75rem; } }
 
@@ -113,7 +118,7 @@ h6 {
   margin-bottom: 0;
   margin-top: 0;
   text-transform: uppercase; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     h6 {
       line-height: 1.75rem; } }
 
@@ -126,7 +131,7 @@ p {
   line-height: 1.5rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     p {
       line-height: 1.75rem; } }
 
@@ -138,7 +143,7 @@ p {
 * + h6,
 * + p {
   margin-top: 1.5rem; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     * + h1,
     * + h2,
     * + h3,
@@ -153,14 +158,14 @@ h3 + p,
 h4 + p,
 h5 + p,
 h6 + p {
-  margin-top: 0.75rem; }
-  @media (min-width: 40em) {
+  margin-top: 1.5rem; }
+  @media (min-width: 40em) and (min-height: 30em) {
     h2 + p,
     h3 + p,
     h4 + p,
     h5 + p,
     h6 + p {
-      margin-top: 0.875rem; } }
+      margin-top: 1.75rem; } }
 
 p + h1,
 p + h2,
@@ -169,7 +174,7 @@ p + h4,
 p + h5,
 p + h6 {
   margin-top: 2.25rem; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     p + h1,
     p + h2,
     p + h3,
@@ -187,21 +192,21 @@ a {
     color: #333;
     text-text: none; }
   a[href] {
-    color: #0068a8; }
+    color: #418fde; }
     h1 a[href], h2 a[href], h3 a[href], h4 a[href], h5 a[href], h6 a[href] {
       color: #333; }
     a[href]:hover, a[href]:active {
-      color: #a84000; }
+      color: #de9041; }
       h1 a[href]:hover, h2 a[href]:hover, h3 a[href]:hover, h4 a[href]:hover, h5 a[href]:hover, h6 a[href]:hover, h1 a[href]:active, h2 a[href]:active, h3 a[href]:active, h4 a[href]:active, h5 a[href]:active, h6 a[href]:active {
-        color: #a84000; }
+        color: #de9041; }
     .links-underlined a[href] {
-      border-bottom: 1px rgba(0, 104, 168, 0.5) solid; }
+      border-bottom: 1px rgba(65, 143, 222, 0.5) solid; }
       .links-underlined a[href]:hover, .links-underlined a[href]:active {
-        border-bottom: 1px #a84000 solid; }
+        border-bottom: 1px #de9041 solid; }
     .links-underlined h1 a[href], .links-underlined h2 a[href], .links-underlined h3 a[href], .links-underlined h4 a[href], .links-underlined h5 a[href], .links-underlined h6 a[href] {
       border-bottom: 1px rgba(51, 51, 51, 0.5) solid; }
       .links-underlined h1 a[href]:hover, .links-underlined h1 a[href]:active, .links-underlined h2 a[href]:hover, .links-underlined h2 a[href]:active, .links-underlined h3 a[href]:hover, .links-underlined h3 a[href]:active, .links-underlined h4 a[href]:hover, .links-underlined h4 a[href]:active, .links-underlined h5 a[href]:hover, .links-underlined h5 a[href]:active, .links-underlined h6 a[href]:hover, .links-underlined h6 a[href]:active {
-        border-bottom: 1px #a84000 solid; }
+        border-bottom: 1px #de9041 solid; }
 
 ol,
 ul {
@@ -209,7 +214,7 @@ ul {
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 2.25rem; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     ol,
     ul {
       line-height: 1.75rem;
@@ -224,14 +229,14 @@ li {
   line-height: 1.5rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     li {
       line-height: 1.75rem; } }
 
 * + ol,
 * + ul {
   margin-top: 1.5rem; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     * + ol,
     * + ul {
       margin-top: 1.75rem; } }
@@ -241,24 +246,24 @@ h3 + ol,
 h4 + ol,
 h5 + ol,
 h6 + ol {
-  margin-top: 0.75rem; }
-  @media (min-width: 40em) {
+  margin-top: 1.5rem; }
+  @media (min-width: 40em) and (min-height: 30em) {
     h2 + ol,
     h3 + ol,
     h4 + ol,
     h5 + ol,
     h6 + ol {
-      margin-top: 0.875rem; } }
+      margin-top: 1.75rem; } }
 
-ol + h1
+ol + h1,
 ol + h2,
 ol + h3,
 ol + h4,
 ol + h5,
 ol + h6 {
   margin-top: 2.25rem; }
-  @media (min-width: 40em) {
-    ol + h1
+  @media (min-width: 40em) and (min-height: 30em) {
+    ol + h1,
     ol + h2,
     ol + h3,
     ol + h4,
@@ -271,24 +276,24 @@ h3 + ul,
 h4 + ul,
 h5 + ul,
 h6 + ul {
-  margin-top: 0.75rem; }
-  @media (min-width: 40em) {
+  margin-top: 1.5rem; }
+  @media (min-width: 40em) and (min-height: 30em) {
     h2 + ul,
     h3 + ul,
     h4 + ul,
     h5 + ul,
     h6 + ul {
-      margin-top: 0.875rem; } }
+      margin-top: 1.75rem; } }
 
-ul + h1
+ul + h1,
 ul + h2,
 ul + h3,
 ul + h4,
 ul + h5,
 ul + h6 {
   margin-top: 2.25rem; }
-  @media (min-width: 40em) {
-    ul + h1
+  @media (min-width: 40em) and (min-height: 30em) {
+    ul + h1,
     ul + h2,
     ul + h3,
     ul + h4,
@@ -298,8 +303,20 @@ ul + h6 {
 
 li + li {
   margin-top: 0.75rem; }
-  @media (min-width: 40em) {
+  @media (min-width: 40em) and (min-height: 30em) {
     li + li {
+      margin-top: 0.875rem; } }
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-top: 0.75rem; }
+  @media (min-width: 40em) and (min-height: 30em) {
+    ol ol,
+    ol ul,
+    ul ol,
+    ul ul {
       margin-top: 0.875rem; } }
 
 ul.list-icons li {

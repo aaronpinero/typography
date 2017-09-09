@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Typography</title>
+		<title>Typography - Links</title>
 		<meta charset="utf8">
 		<link rel="stylesheet" href="fontawesome/css/font-awesome-solid.css">
 		<link rel="stylesheet" href="fontawesome/css/font-awesome-core.css">
@@ -9,36 +9,15 @@
 	</head>
 	<body class="links-underlined">
 		<h1>Link Styles</h1>
-		<p>Anchors should not have a style that is different from text, but links must so that users can identify them. Because anchors and links share the <code>&lt;a&gt;</code> tag, it is necessary to define styles for this tag progressively.</p>
-		
-		
-		<p>Paragraph: Archetype lets designers like you very quickly and easily create consistent typography styling and spacing live, in the browser. These styles are all underpinned by established typographic best practices meaning less guesswork and more harmonious designs.</p>
-		<p>Archetype helps you create a design system of consistent, reusable components which can be easily implemented as your finished design is exported as developer-friendly CSS so everyone’s happy!</p>
-		<h2>H2: Sounds Great, Where Do I Start?</h2>
-		<p>Paragraph: It’s easy peasy: 1) Start by selecting a visually compatible font pair. 2) Define harmoniously proportioned sizes for all the standard typographic elements your design might require. 3) Set the optimal vertical spacing of all elements in your design. 4) Tweak and refine individual elements to get everything looking exactly the way you want. 5) Export as CSS ready to send to a developer. Job Done.</p>
-		<ul class="list-icons list-icons-angle">
-			<li>Repellendus nesciunt laboriosam ut.</li>
-			<li>Et voluptatem sed sit alias sunt.</li>
-			<li>Qui qui dolores ipsa aliquid est dolor.</li>
-			<li>Labore totam sit repellendus illo quod.</li>
-		</ul>
-		<h2><a name="anchor">H2: Anchored Heading</a></h2>
-		<p>Dolorem id sapiente in sed est eius pariatur. Ratione est quam omnis explicabo nobis expedita enim praesentium. Fugiat cupiditate omnis nostrum ex. Et odio illum aut vel qui aut molestias.</p>
-		<p>Pariatur alias <a href="http://aaronpinero.net">reprehenderit</a> soluta dolor. Non qui quia veritatis. Facilis provident at officia et a ut atque. Ea perspiciatis est illo at doloribus in.</p>
-		<h3>H3: Help Us Improve our product</h3>
-		<p>Paragraph: This is version 1 of Archetype and we’d love your feedback and suggestions on how we can improve it to make it even more useful. Please use the feedback link in the header to let us know what you think. Be as critical as you like, we have thick skin.</p>
-		<h3><a href="http://aaronpinero.net">H3: Linked Heading</a></h3>
-		<p>Et omnis officia sint dolorum nobis deleniti. Sunt nobis doloremque ab eveniet eum earum sunt. Iure dolorem libero dolorum labore ad et magni. Voluptatibus est reiciendis dignissimos laborum quia.</p>
-		<ol>
-			<li>Mollitia id voluptatem rerum.</li>
-			<li>Soluta asperiores dolores ullam deleniti provident.</li>
-			<li>Molestiae soluta repellat rerum commodi.</li>
-		</ol>
-		<h4>H4: Still Reading?</h4>
-		<p>Well here’s some inspirational quotes for you: “Good design is making something intelligible and memorable. Great design is making something memorable and meaningful”: Dieter Rams.</p>
-		<h5>H5: More? Ok</h5>
-		<p>Paragraph: “A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away”: Antoine de Saint-Exupery.</p>
-		<h6>H6: One For the Road</h6>
-		<p>Paragraph: “The best activities for your health are pumping and humping”: Arnold Schwarzenegger.</p>
+		<p>Links must have a style that is different from body text, but anchors should not. Because anchors and links share the <code>&lt;a&gt;</code> tag, it is necessary to progressively define styles for this tag. Here, the default appearance of the <code>&lt;a&gt;</code> tag is the same as for body text. Using an attribute selector, those elements that have an <code>href</code> attribute have link styles applied. For links, I have used <code>border-bottom</code> to apply an underline instead of <code>text-decoration</code>. This way, the underline can be styled and transitions can be employed. The framework includes SASS variables to globally define transition speeds.</p>
+		<p>Links in headings have a slightly different appearance, as I prefer links in this context to have a default appearance that is not too far removed from the heading style.</p>
+		<p>There are contexts in which I prefer links to not have any underline. When creating tabs, menus, or other navigation, I often must override the default style to remove the underline. The default link styles do not have an underline. The <code>links-underlined</code> class can be applied where links should be presented with an underline.</p> 
+		<h1>Demo</h1>
+		<h2><a name="anchor1">Anchored Heading</a></h2>
+		<p><a name="anchor2">Anchored text</a>.</p>
+		<p>Lorem ipsum dolor sit amet, <a href="http://aaronpinero.net">consectetur adipiscing elit</a>. Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus. Cras odio mauris, varius nec tempor nec, elementum eget augue. Vivamus pretium ante sed ex ultrices semper. Donec ante diam, convallis at rutrum sit amet, sodales nec est. Integer tincidunt felis luctus placerat fermentum. Duis et felis mi. Mauris sed faucibus neque. Morbi facilisis blandit est, vel pellentesque nisi elementum ut.</p>
+		<p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
+		<h3>Pariatur Alias <a href="http://aaronpinero.net">Reprehenderit</a> Soluta Dolor</h3>
+		<p>Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas <a href="http://aaronpinero.net">quis nisi</a> sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.</p>
 	</body>
 </html>

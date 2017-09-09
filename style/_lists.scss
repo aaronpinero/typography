@@ -5,7 +5,7 @@ ul {
 	margin-bottom:0;
 	margin-top:0;
 	padding-left:$line-height-small*1.5;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		line-height:$line-height-large;
 		padding-left:$line-height-large*1.5;
 	}
@@ -19,7 +19,7 @@ li {
 	line-height:$line-height-small;
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		line-height:$line-height-large;
 	}
 }
@@ -28,7 +28,7 @@ li {
 * + ol,
 * + ul {
 	margin-top:$line-height-small;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		margin-top:$line-height-large;
 	}
 }
@@ -37,19 +37,19 @@ h3 + ol,
 h4 + ol,
 h5 + ol,
 h6 + ol {
-	margin-top:$line-height-small*0.5;
-	@media (min-width:$break-lineheight) {
-		margin-top:$line-height-large*0.5;
+	margin-top:$line-height-small;
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+		margin-top:$line-height-large;
 	}
 }
-ol + h1
+ol + h1,
 ol + h2,
 ol + h3,
 ol + h4,
 ol + h5,
 ol + h6 {
 	margin-top:$line-height-small*1.5;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		margin-top:$line-height-large*1.5;
 	}
 }
@@ -58,30 +58,40 @@ h3 + ul,
 h4 + ul,
 h5 + ul,
 h6 + ul {
-	margin-top:$line-height-small*0.5;
-	@media (min-width:$break-lineheight) {
-		margin-top:$line-height-large*0.5;
+	margin-top:$line-height-small;
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+		margin-top:$line-height-large;
 	}
 }
-ul + h1
+ul + h1,
 ul + h2,
 ul + h3,
 ul + h4,
 ul + h5,
 ul + h6 {
 	margin-top:$line-height-small*1.5;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		margin-top:$line-height-large*1.5;
 	}
 }
 li + li {
 	margin-top:$line-height-small*0.5;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		margin-top:$line-height-large*0.5;
 	}
 }
 
 // nested lists
+ol,
+ul {
+	ol,
+	ul {
+		margin-top:$line-height-small*0.5;
+		@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+			margin-top:$line-height-large*0.5;
+		}
+	}
+}
 
 // unordered list variations
 ul.list-icons {

@@ -8,7 +8,12 @@ body {
 	margin:0 auto;
 	max-width:55em;
 	padding:$line-height-small;
-	@media (min-width:$break-lineheight) {
-		padding:$line-height-large*2;
+	@media (min-width:$break-lineheight-horizontal) {
+		padding-left:$line-height-large*2;
+		padding-right:$line-height-large*2;
+	}
+	@media (min-height:$break-lineheight-vertical) {
+		padding-bottom:$line-height-large*2;
+		padding-top:$line-height-large*2;
 	}
 }

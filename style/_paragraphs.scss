@@ -32,7 +32,7 @@ h1 {
 	line-height:$line-height-small*2;
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		line-height:$line-height-large*2;
 	}
 }
@@ -46,7 +46,7 @@ h2 {
 	line-height:$line-height-small*2;;
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		line-height:$line-height-large*2;
 	}
 }
@@ -60,7 +60,7 @@ h3 {
 	line-height:$line-height-small*2;
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		line-height:$line-height-large*2;
 	}
 }
@@ -74,7 +74,7 @@ h4 {
 	line-height:$line-height-small*2;
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		line-height:$line-height-large;
 	}
 }
@@ -88,7 +88,7 @@ h5 {
 	line-height:$line-height-small;
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		line-height:$line-height-large;
 	}
 }
@@ -103,7 +103,7 @@ h6 {
 	margin-bottom:0;
 	margin-top:0;
 	text-transform:uppercase;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		line-height:$line-height-large;
 	}
 }
@@ -116,7 +116,7 @@ p {
 	line-height:$line-height-small;
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		line-height:$line-height-large;
 	}
 }
@@ -130,7 +130,7 @@ p {
 * + h6,
 * + p {
 	margin-top:$line-height-small;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		margin-top:$line-height-large;
 	}
 }
@@ -139,9 +139,9 @@ h3 + p,
 h4 + p,
 h5 + p,
 h6 + p {
-	margin-top:$line-height-small*0.5;
-	@media (min-width:$break-lineheight) {
-		margin-top:$line-height-large*0.5;
+	margin-top:$line-height-small;
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+		margin-top:$line-height-large;
 	}
 }
 p + h1,
@@ -151,7 +151,7 @@ p + h4,
 p + h5,
 p + h6 {
 	margin-top:$line-height-small*1.5;
-	@media (min-width:$break-lineheight) {
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 		margin-top:$line-height-large*1.5;
 	}
 }
