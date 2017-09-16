@@ -5,8 +5,11 @@ body {
 	padding:0;
 }
 
-header.brand {
+.reverse {
 	background-color:$color-text-body;
+}
+
+header.brand {
 	h1 {
 		font-size:$font-size-h3;
 		line-height:$line-height-small*2;

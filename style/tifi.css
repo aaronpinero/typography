@@ -189,11 +189,11 @@ a {
       h1 a[href]:hover, h2 a[href]:hover, h3 a[href]:hover, h4 a[href]:hover, h5 a[href]:hover, h6 a[href]:hover, h1 a[href]:active, h2 a[href]:active, h3 a[href]:active, h4 a[href]:active, h5 a[href]:active, h6 a[href]:active {
         color: #de9041; }
     .links-underlined a[href] {
-      border-bottom: 1px rgba(65, 143, 222, 0.5) solid; }
+      border-bottom: 1px rgba(65, 143, 222, 0.666) solid; }
       .links-underlined a[href]:hover, .links-underlined a[href]:active {
         border-bottom: 1px #de9041 solid; }
     .links-underlined h1 a[href], .links-underlined h2 a[href], .links-underlined h3 a[href], .links-underlined h4 a[href], .links-underlined h5 a[href], .links-underlined h6 a[href] {
-      border-bottom: 1px rgba(52, 52, 52, 0.5) solid; }
+      border-bottom: 1px rgba(52, 52, 52, 0.666) solid; }
       .links-underlined h1 a[href]:hover, .links-underlined h1 a[href]:active, .links-underlined h2 a[href]:hover, .links-underlined h2 a[href]:active, .links-underlined h3 a[href]:hover, .links-underlined h3 a[href]:active, .links-underlined h4 a[href]:hover, .links-underlined h4 a[href]:active, .links-underlined h5 a[href]:hover, .links-underlined h5 a[href]:active, .links-underlined h6 a[href]:hover, .links-underlined h6 a[href]:active {
         border-bottom: 1px #de9041 solid; }
 
@@ -366,9 +366,9 @@ code {
   .reverse a[href]:active {
     color: #de9041; }
   .links-underlined .reverse a[href] {
-    border-bottom: 1px rgba(65, 143, 222, 0.5) solid; }
+    border-bottom: 1px rgba(169, 207, 246, 0.666) solid; }
   .links-underlined .reverse h1 a[href], .links-underlined .reverse h2 a[href], .links-underlined .reverse h3 a[href], .links-underlined .reverse h4 a[href], .links-underlined .reverse h5 a[href], .links-underlined .reverse h6 a[href] {
-    border-bottom: 1px rgba(52, 52, 52, 0.5) solid; }
+    border-bottom: 1px rgba(203, 203, 203, 0.666) solid; }
   .links-underlined .reverse a[href]:hover, .links-underlined .reverse a[href]:active {
     border-bottom: 1px #de9041 solid; }
 

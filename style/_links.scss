@@ -34,7 +34,7 @@ a {
 			}
 		}
 		.links-underlined & {
-			border-bottom:1px rgba($color-link-default,0.5) solid;
+			border-bottom:1px rgba($color-link-default,0.666) solid;
 			&:hover,
 			&:active {
 				border-bottom:1px $color-link-active solid;
@@ -46,7 +46,7 @@ a {
 		.links-underlined h4 &,
 		.links-underlined h5 &,
 		.links-underlined h6 & {
-			border-bottom:1px rgba($color-text-head,0.5) solid;
+			border-bottom:1px rgba($color-text-head,0.666) solid;
 			&:hover,
 			&:active {
 				border-bottom:1px $color-link-active solid;
