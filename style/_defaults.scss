@@ -17,9 +17,9 @@ $color-text-head:lighten($color-text-body,7%);
 $color-text-light:lighten($color-text-body,25%);
 $color-link-default:#418fde;
 $color-link-active:complement($color-link-default);
-$color-font-text-reverse:invert($color-text-body);
-$color-font-head-reverse:invert($color-text-head);
-$color-font-light-reverse:invert($color-text-light);
+$color-text-body-reverse:invert($color-text-body);
+$color-text-head-reverse:invert($color-text-head);
+$color-text-light-reverse:invert($color-text-light);
 $color-link-default-reverse:saturate(lighten($color-link-default,25%),10%);
 $color-link-active-reverse:complement($color-link-default-reverse);
 

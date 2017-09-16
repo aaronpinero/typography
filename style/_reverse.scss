@@ -1,0 +1,67 @@
+// root styles
+.reverse {
+	color:$color-text-body-reverse;
+
+	// headings
+	h1 {
+		color:$color-text-head-reverse;
+	}
+	h2 {
+		color:$color-text-head-reverse;
+	}
+	h3 {
+		color:$color-text-head-reverse;
+	}
+	h4 {
+		color:$color-text-head-reverse;
+	}
+	h5 {
+		color:$color-text-head-reverse;
+	}
+	h6 {
+		color:$color-text-head-reverse;
+	}
+	
+	// links
+	a {
+		color:$color-text-body-reverse;
+	}
+	h1 a,
+	h2 a,
+	h3 a,
+	h4 a,
+	h5 a,
+	h6 a {
+		color:$color-text-head-reverse;
+	}
+	a[href] {
+		color:$color-link-default-reverse;
+	}
+	h1 a[href],
+	h2 a[href],
+	h3 a[href],
+	h4 a[href],
+	h5 a[href],
+	h6 a[href] {
+		color:$color-text-head-reverse;
+	}
+	a[href]:hover,
+	a[href]:active {
+		color:$color-link-active;
+	}
+	.links-underlined & a[href] {
+		border-bottom:1px rgba($color-link-default,0.5) solid;
+	}
+	.links-underlined & h1 a[href],
+	.links-underlined & h2 a[href],
+	.links-underlined & h3 a[href],
+	.links-underlined & h4 a[href],
+	.links-underlined & h5 a[href],
+	.links-underlined & h6 a[href] {
+		border-bottom:1px rgba($color-text-head,0.5) solid;
+	}
+	.links-underlined & a[href]:hover,
+	.links-underlined & a[href]:active {
+		border-bottom:1px $color-link-active solid;
+	}
+}

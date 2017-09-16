@@ -3,18 +3,8 @@ html {
 
 body {
   color: #222;
-  font-size: 1rem;
-  margin: 0 auto;
-  max-width: 55em;
-  padding: 1.5rem; }
-  @media (min-width: 40em) {
-    body {
-      padding-left: 3.5rem;
-      padding-right: 3.5rem; } }
-  @media (min-height: 30em) {
-    body {
-      padding-bottom: 3.5rem;
-      padding-top: 3.5rem; } }
+  font-family: Merriweather;
+  font-size: 1rem; }
 
 .font-size-p {
   font-size: 1rem; }
@@ -38,7 +28,7 @@ body {
   font-size: 2.98598rem; }
 
 h1 {
-  color: #2f2f2f;
+  color: #343434;
   font-family: Merriweather;
   font-size: 2.98598rem;
   font-style: normal;
@@ -52,7 +42,7 @@ h1 {
       line-height: 3.5rem; } }
 
 h2 {
-  color: #2f2f2f;
+  color: #343434;
   font-family: Roboto;
   font-size: 2.48832rem;
   font-style: normal;
@@ -66,7 +56,7 @@ h2 {
       line-height: 3.5rem; } }
 
 h3 {
-  color: #2f2f2f;
+  color: #343434;
   font-family: Roboto;
   font-size: 2.0736rem;
   font-style: normal;
@@ -80,7 +70,7 @@ h3 {
       line-height: 3.5rem; } }
 
 h4 {
-  color: #2f2f2f;
+  color: #343434;
   font-family: Roboto;
   font-size: 1.728rem;
   font-style: italic;
@@ -94,7 +84,7 @@ h4 {
       line-height: 1.75rem; } }
 
 h5 {
-  color: #2f2f2f;
+  color: #343434;
   font-family: Roboto;
   font-size: 1.44rem;
   font-style: italic;
@@ -108,7 +98,7 @@ h5 {
       line-height: 1.75rem; } }
 
 h6 {
-  color: #2f2f2f;
+  color: #343434;
   font-family: Roboto;
   font-size: 1.2rem;
   font-style: normal;
@@ -189,12 +179,11 @@ a {
   transition-duration: 0.25s;
   transition-property: border-color,color; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: #2f2f2f;
-    text-text: none; }
+    color: #343434; }
   a[href] {
     color: #418fde; }
     h1 a[href], h2 a[href], h3 a[href], h4 a[href], h5 a[href], h6 a[href] {
-      color: #2f2f2f; }
+      color: #343434; }
     a[href]:hover, a[href]:active {
       color: #de9041; }
       h1 a[href]:hover, h2 a[href]:hover, h3 a[href]:hover, h4 a[href]:hover, h5 a[href]:hover, h6 a[href]:hover, h1 a[href]:active, h2 a[href]:active, h3 a[href]:active, h4 a[href]:active, h5 a[href]:active, h6 a[href]:active {
@@ -204,7 +193,7 @@ a {
       .links-underlined a[href]:hover, .links-underlined a[href]:active {
         border-bottom: 1px #de9041 solid; }
     .links-underlined h1 a[href], .links-underlined h2 a[href], .links-underlined h3 a[href], .links-underlined h4 a[href], .links-underlined h5 a[href], .links-underlined h6 a[href] {
-      border-bottom: 1px rgba(47, 47, 47, 0.5) solid; }
+      border-bottom: 1px rgba(52, 52, 52, 0.5) solid; }
       .links-underlined h1 a[href]:hover, .links-underlined h1 a[href]:active, .links-underlined h2 a[href]:hover, .links-underlined h2 a[href]:active, .links-underlined h3 a[href]:hover, .links-underlined h3 a[href]:active, .links-underlined h4 a[href]:hover, .links-underlined h4 a[href]:active, .links-underlined h5 a[href]:hover, .links-underlined h5 a[href]:active, .links-underlined h6 a[href]:hover, .links-underlined h6 a[href]:active {
         border-bottom: 1px #de9041 solid; }
 
@@ -341,4 +330,46 @@ code {
   background-color: rgba(34, 34, 34, 0.15);
   font-size: 125%; }
 
-/*# sourceMappingURL=typography.css.map */
+.reverse {
+  color: #dddddd; }
+  .reverse h1 {
+    color: #cbcbcb; }
+  .reverse h2 {
+    color: #cbcbcb; }
+  .reverse h3 {
+    color: #cbcbcb; }
+  .reverse h4 {
+    color: #cbcbcb; }
+  .reverse h5 {
+    color: #cbcbcb; }
+  .reverse h6 {
+    color: #cbcbcb; }
+  .reverse a {
+    color: #dddddd; }
+  .reverse h1 a,
+  .reverse h2 a,
+  .reverse h3 a,
+  .reverse h4 a,
+  .reverse h5 a,
+  .reverse h6 a {
+    color: #cbcbcb; }
+  .reverse a[href] {
+    color: #a9cff6; }
+  .reverse h1 a[href],
+  .reverse h2 a[href],
+  .reverse h3 a[href],
+  .reverse h4 a[href],
+  .reverse h5 a[href],
+  .reverse h6 a[href] {
+    color: #cbcbcb; }
+  .reverse a[href]:hover,
+  .reverse a[href]:active {
+    color: #de9041; }
+  .links-underlined .reverse a[href] {
+    border-bottom: 1px rgba(65, 143, 222, 0.5) solid; }
+  .links-underlined .reverse h1 a[href], .links-underlined .reverse h2 a[href], .links-underlined .reverse h3 a[href], .links-underlined .reverse h4 a[href], .links-underlined .reverse h5 a[href], .links-underlined .reverse h6 a[href] {
+    border-bottom: 1px rgba(52, 52, 52, 0.5) solid; }
+  .links-underlined .reverse a[href]:hover, .links-underlined .reverse a[href]:active {
+    border-bottom: 1px #de9041 solid; }
+
+/*# sourceMappingURL=tifi.css.map */
