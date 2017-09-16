@@ -2,3 +2,9 @@ code {
 	background-color:rgba($color-text-body,0.15);
 	font-size:125%;
 }
+.smallcaps {
+	font-feature-settings:"c2sc", "smcp";
+	font-variant-caps:all-small-caps;
+	font-weight:500;
+	letter-spacing:0.1em;
+}

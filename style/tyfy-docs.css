@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 0 2rem 0;
   padding: 0; }
 
 .reverse {
@@ -32,4 +32,13 @@ section.main {
       padding-bottom: 3.5rem;
       padding-top: 3.5rem; } }
 
-/*# sourceMappingURL=tifi-docs.css.map */
+section.demo {
+  background-color: #f3f3f3;
+  border: 1px dashed #cdcdcd;
+  border-radius: 1rem; }
+
+section.demo.reverse {
+  background-color: #222;
+  border: none; }
+
+/*# sourceMappingURL=tyfy-docs.css.map */

@@ -1,4 +1,4 @@
-# Typography
+# Tyfy
 A personal framework for typographic styles on the web based on ideas from https://archetypeapp.com.
 
 ## There are a lot of frameworks. Why are you doing this?

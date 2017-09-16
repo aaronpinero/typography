@@ -1,7 +1,7 @@
 @import "defaults";
 
 body {
-	margin:0;
+	margin:0 0 2rem 0;
 	padding:0;
 }
 
@@ -38,4 +38,13 @@ section.main {
 		padding-bottom:$line-height-large*2;
 		padding-top:$line-height-large*2;
 	}
+}
+section.demo {
+	background-color:lighten($color-text-body,82%);
+	border:1px dashed lighten($color-text-body,67%);
+	border-radius:1rem;
+}
+section.demo.reverse {
+	background-color:$color-text-body;
+	border:none;
 }

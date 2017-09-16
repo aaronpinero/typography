@@ -113,7 +113,6 @@ h6 {
       line-height: 1.75rem; } }
 
 p {
-  font-family: Merriweather;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -330,6 +329,12 @@ code {
   background-color: rgba(34, 34, 34, 0.15);
   font-size: 125%; }
 
+.smallcaps {
+  font-feature-settings: "c2sc", "smcp";
+  font-variant-caps: all-small-caps;
+  font-weight: 500;
+  letter-spacing: 0.1em; }
+
 .reverse {
   color: #dddddd; }
   .reverse h1 {
@@ -365,6 +370,30 @@ code {
   .reverse a[href]:hover,
   .reverse a[href]:active {
     color: #de9041; }
+  .reverse .links-underlined a[href] {
+    border-bottom: 1px rgba(169, 207, 246, 0.666) solid; }
+  .reverse .links-underlined h1 a[href],
+  .reverse .links-underlined h2 a[href],
+  .reverse .links-underlined h3 a[href],
+  .reverse .links-underlined h4 a[href],
+  .reverse .links-underlined h5 a[href],
+  .reverse .links-underlined h6 a[href] {
+    border-bottom: 1px rgba(203, 203, 203, 0.666) solid; }
+  .reverse .links-underlined a[href]:hover,
+  .reverse .links-underlined a[href]:active {
+    border-bottom: 1px #de9041 solid; }
+  .reverse.links-underlined a[href] {
+    border-bottom: 1px rgba(169, 207, 246, 0.666) solid; }
+  .reverse.links-underlined h1 a[href],
+  .reverse.links-underlined h2 a[href],
+  .reverse.links-underlined h3 a[href],
+  .reverse.links-underlined h4 a[href],
+  .reverse.links-underlined h5 a[href],
+  .reverse.links-underlined h6 a[href] {
+    border-bottom: 1px rgba(203, 203, 203, 0.666) solid; }
+  .reverse.links-underlined a[href]:hover,
+  .reverse.links-underlined a[href]:active {
+    border-bottom: 1px #de9041 solid; }
   .links-underlined .reverse a[href] {
     border-bottom: 1px rgba(169, 207, 246, 0.666) solid; }
   .links-underlined .reverse h1 a[href], .links-underlined .reverse h2 a[href], .links-underlined .reverse h3 a[href], .links-underlined .reverse h4 a[href], .links-underlined .reverse h5 a[href], .links-underlined .reverse h6 a[href] {
@@ -372,4 +401,4 @@ code {
   .links-underlined .reverse a[href]:hover, .links-underlined .reverse a[href]:active {
     border-bottom: 1px #de9041 solid; }
 
-/*# sourceMappingURL=tifi.css.map */
+/*# sourceMappingURL=tyfy.css.map */

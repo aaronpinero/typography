@@ -1,22 +1,24 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Tifi - Links</title>
+		<title>Tyfy - Links</title>
 		<meta charset="utf8">
 		<link rel="stylesheet" href="../fontawesome/css/font-awesome-solid.css">
 		<link rel="stylesheet" href="../fontawesome/css/font-awesome-core.css">
-		<link rel="stylesheet" href="../style/tifi.css">
-		<link rel="stylesheet" href="../style/tifi-docs.css">
+		<link rel="stylesheet" href="../style/tyfy.css">
+		<link rel="stylesheet" href="../style/tyfy-docs.css">
 	</head>
 	<body class="">
 		<header class="brand reverse">
-			<h1><a href="index.html">Tifi</a></h1>
+			<h1><a href="index.html">Tyfy</a></h1>
 		</header>
 		<section class="main links-underlined">
 			<h1>Link Styles</h1>
-			<p>Links must have a style that is different from body text, but anchors should not. Because anchors and links share the <code>&lt;a&gt;</code> tag, it is necessary to progressively define styles for this tag. Here, the default appearance of the <code>&lt;a&gt;</code> tag is the same as for body text. Using an attribute selector, those elements that have an <code>href</code> attribute have link styles applied. For links, I have used <code>border-bottom</code> to apply an underline instead of <code>text-decoration</code>. This way, the underline can be styled and transitions can be employed. The framework includes SASS variables to globally define transition speeds.</p>
+			<p>Links must have a style that is different from body text, but anchors should not. Because anchors and links share the <code>&lt;a&gt;</code> tag, it is necessary to progressively define styles for this tag. Here, the default appearance of the <code>&lt;a&gt;</code> tag is the same as for body text. Using an attribute selector, those elements that have an <code>href</code> attribute have link styles applied. For links, I have used <code>border-bottom</code> to apply an underline instead of <code>text-decoration</code>. This way, the underline can be styled and transitions can be employed. The framework includes <span class="smallcaps">SASS</span> variables to globally define transition speeds.</p>
 			<p>Links in headings have a slightly different appearance, as I prefer links in this context to have a default appearance that is not too far removed from the heading style.</p>
 			<p>There are contexts in which I prefer links to not have any underline. When creating tabs, menus, or other navigation, I often must override the default style to remove the underline. The default link styles do not have an underline. The <code>links-underlined</code> class can be applied where links should be presented with an underline.</p> 
+		</section>
+		<section class="main links-underlined demo">
 			<h1>Demo</h1>
 			<h2><a name="anchor1">Anchored Heading</a></h2>
 			<p><a name="anchor2">Anchored text</a>.</p>
