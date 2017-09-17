@@ -34,10 +34,10 @@ a {
 			}
 		}
 		.links-underlined & {
-			border-bottom:1px rgba($color-link-default,0.666) solid;
+			border-bottom:2px rgba($color-link-default,0.5) solid;
 			&:hover,
 			&:active {
-				border-bottom:1px $color-link-active solid;
+				border-bottom:2px $color-link-active solid;
 			}
 		}
 		.links-underlined h1 &,
@@ -46,10 +46,10 @@ a {
 		.links-underlined h4 &,
 		.links-underlined h5 &,
 		.links-underlined h6 & {
-			border-bottom:1px rgba($color-text-head,0.666) solid;
+			border-bottom:2px rgba($color-text-head,0.5) solid;
 			&:hover,
 			&:active {
-				border-bottom:1px $color-link-active solid;
+				border-bottom:2px $color-link-active solid;
 			}
 		}
 	}

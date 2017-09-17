@@ -53,7 +53,7 @@
 	// underlined links inside reverse
 	.links-underlined {
 		a[href] {
-			border-bottom:1px rgba($color-link-default-reverse,0.666) solid;
+			border-bottom:2px rgba($color-link-default-reverse,0.5) solid;
 		}
 		h1 a[href],
 		h2 a[href],
@@ -61,18 +61,18 @@
 		h4 a[href],
 		h5 a[href],
 		h6 a[href] {
-			border-bottom:1px rgba($color-text-head-reverse,0.666) solid;
+			border-bottom:2px rgba($color-text-head-reverse,0.5) solid;
 		}
 		a[href]:hover,
 		a[href]:active {
-			border-bottom:1px $color-link-active solid;
+			border-bottom:2px $color-link-active solid;
 		}
 	}
 	
 	// underlined links with reverse
 	&.links-underlined {
 		a[href] {
-			border-bottom:1px rgba($color-link-default-reverse,0.666) solid;
+			border-bottom:2px rgba($color-link-default-reverse,0.5) solid;
 		}
 		h1 a[href],
 		h2 a[href],
@@ -80,17 +80,17 @@
 		h4 a[href],
 		h5 a[href],
 		h6 a[href] {
-			border-bottom:1px rgba($color-text-head-reverse,0.666) solid;
+			border-bottom:2px rgba($color-text-head-reverse,0.5) solid;
 		}
 		a[href]:hover,
 		a[href]:active {
-			border-bottom:1px $color-link-active solid;
+			border-bottom:2px $color-link-active solid;
 		}
 	}
 	
 	// underlined links outside reverse	
 	.links-underlined & a[href] {
-		border-bottom:1px rgba($color-link-default-reverse,0.666) solid;
+		border-bottom:2px rgba($color-link-default-reverse,0.5) solid;
 	}
 	.links-underlined & h1 a[href],
 	.links-underlined & h2 a[href],
@@ -98,10 +98,10 @@
 	.links-underlined & h4 a[href],
 	.links-underlined & h5 a[href],
 	.links-underlined & h6 a[href] {
-		border-bottom:1px rgba($color-text-head-reverse,0.666) solid;
+		border-bottom:2px rgba($color-text-head-reverse,0.5) solid;
 	}
 	.links-underlined & a[href]:hover,
 	.links-underlined & a[href]:active {
-		border-bottom:1px $color-link-active solid;
+		border-bottom:2px $color-link-active solid;
 	}
 }
