@@ -29,11 +29,11 @@ h1 {
 	font-style:normal;
 	font-weight:900;
 	letter-spacing:0;
-	line-height:$line-height-small*2;
+	@include calc-line-height($font-size-h1,$line-height-small);
 	margin-bottom:0;
 	margin-top:0;
 	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		line-height:$line-height-large*2;
+		@include calc-line-height($font-size-h1,$line-height-large);
 	}
 }
 h2 {
@@ -43,11 +43,11 @@ h2 {
 	font-style:normal;
 	font-weight:700;
 	letter-spacing:0;
-	line-height:$line-height-small*2;;
+	@include calc-line-height($font-size-h2,$line-height-small);
 	margin-bottom:0;
 	margin-top:0;
 	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		line-height:$line-height-large*2;
+		@include calc-line-height($font-size-h2,$line-height-large);
 	}
 }
 h3 {
@@ -57,11 +57,11 @@ h3 {
 	font-style:normal;
 	font-weight:500;
 	letter-spacing:0;
-	line-height:$line-height-small*2;
+	@include calc-line-height($font-size-h3,$line-height-small);
 	margin-bottom:0;
 	margin-top:0;
 	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		line-height:$line-height-large*2;
+		@include calc-line-height($font-size-h3,$line-height-large);
 	}
 }
 h4 {
@@ -71,11 +71,11 @@ h4 {
 	font-style:italic;
 	font-weight:700;
 	letter-spacing:0;
-	line-height:$line-height-small*2;
+	@include calc-line-height($font-size-h4,$line-height-small);
 	margin-bottom:0;
 	margin-top:0;
 	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		line-height:$line-height-large;
+		@include calc-line-height($font-size-h4,$line-height-large);
 	}
 }
 h5 {
@@ -85,11 +85,11 @@ h5 {
 	font-style:italic;
 	font-weight:500;
 	letter-spacing:0;
-	line-height:$line-height-small;
+	@include calc-line-height($font-size-h5,$line-height-small);
 	margin-bottom:0;
 	margin-top:0;
 	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		line-height:$line-height-large;
+		@include calc-line-height($font-size-h5,$line-height-large);
 	}
 }
 h6 {
@@ -99,12 +99,12 @@ h6 {
 	font-style:normal;
 	font-weight:700;
 	letter-spacing:0.025em;
-	line-height:$line-height-small;
+	@include calc-line-height($font-size-h6,$line-height-small);
 	margin-bottom:0;
 	margin-top:0;
 	text-transform:uppercase;
 	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		line-height:$line-height-large;
+		@include calc-line-height($font-size-h6,$line-height-large);
 	}
 }
 p {
@@ -112,11 +112,11 @@ p {
 	font-style:normal;
 	font-weight:400;
 	letter-spacing:0;
-	line-height:$line-height-small;
+	@include calc-line-height($font-size-p,$line-height-small);
 	margin-bottom:0;
 	margin-top:0;
 	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		line-height:$line-height-large;
+		@include calc-line-height($font-size-p,$line-height-large);
 	}
 }
 
@@ -128,9 +128,9 @@ p {
 * + h5,
 * + h6,
 * + p {
-	margin-top:$line-height-small;
+	margin-top:2*$line-height-small;
 	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:$line-height-large;
+		margin-top:2*$line-height-large;
 	}
 }
 h2 + p,
@@ -138,9 +138,9 @@ h3 + p,
 h4 + p,
 h5 + p,
 h6 + p {
-	margin-top:$line-height-small;
+	margin-top:2*$line-height-small;
 	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:$line-height-large;
+		margin-top:2*$line-height-large;
 	}
 }
 p + h1,
@@ -149,8 +149,8 @@ p + h3,
 p + h4,
 p + h5,
 p + h6 {
-	margin-top:$line-height-small*1.5;
+	margin-top:3*$line-height-small;
 	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:$line-height-large*1.5;
+		margin-top:3*$line-height-large;
 	}
 }

@@ -7,9 +7,10 @@ $symbol:FontAwesome;
 $break-lineheight-horizontal:40em;
 $break-lineheight-vertical:30em;
 
-// line heights
-$line-height-large:1.75rem;
-$line-height-small:1.5rem;
+// half line heights
+// the body text line height is 2x
+$line-height-large:0.875rem;
+$line-height-small:0.75rem;
 
 // colors
 $color-text-body:#222;
@@ -20,7 +21,7 @@ $color-link-active:complement($color-link-default);
 $color-text-body-reverse:invert($color-text-body);
 $color-text-head-reverse:invert($color-text-head);
 $color-text-light-reverse:invert($color-text-light);
-$color-link-default-reverse:saturate(lighten($color-link-default,30%),10%);
+$color-link-default-reverse:saturate(lighten($color-link-default,30%),30%);
 $color-link-active-reverse:complement($color-link-default-reverse);
 
 // modular scale

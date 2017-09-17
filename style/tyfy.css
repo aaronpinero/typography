@@ -53,7 +53,7 @@ h2 {
   margin-top: 0; }
   @media (min-width: 40em) and (min-height: 30em) {
     h2 {
-      line-height: 3.5rem; } }
+      line-height: 2.625rem; } }
 
 h3 {
   color: #343434;
@@ -62,12 +62,12 @@ h3 {
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 3rem;
+  line-height: 2.25rem;
   margin-bottom: 0;
   margin-top: 0; }
   @media (min-width: 40em) and (min-height: 30em) {
     h3 {
-      line-height: 3.5rem; } }
+      line-height: 2.625rem; } }
 
 h4 {
   color: #343434;
@@ -76,7 +76,7 @@ h4 {
   font-style: italic;
   font-weight: 700;
   letter-spacing: 0;
-  line-height: 3rem;
+  line-height: 2.25rem;
   margin-bottom: 0;
   margin-top: 0; }
   @media (min-width: 40em) and (min-height: 30em) {
@@ -210,7 +210,6 @@ ul {
 
 li {
   font-family: Merriweather;
-  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
@@ -313,9 +312,10 @@ ul.list-icons li {
   ul.list-icons li:before {
     color: #626262;
     font-family: FontAwesome;
+    margin-right: 0.875rem;
     position: absolute;
-    top: 0;
-    left: -1.5rem; }
+    right: 100%;
+    top: 0; }
 ul.list-icons.list-icons-angle li:before {
   content: "\f105"; }
 ul.list-icons.list-icons-caret li:before {
@@ -358,7 +358,7 @@ code {
   .reverse h6 a {
     color: #cbcbcb; }
   .reverse a[href] {
-    color: #8fc2f6; }
+    color: #86c2ff; }
   .reverse h1 a[href],
   .reverse h2 a[href],
   .reverse h3 a[href],
@@ -368,9 +368,9 @@ code {
     color: #cbcbcb; }
   .reverse a[href]:hover,
   .reverse a[href]:active {
-    color: #f6c38f; }
+    color: #ffc386; }
   .reverse .links-underlined a[href] {
-    border-bottom: 2px rgba(143, 194, 246, 0.5) solid; }
+    border-bottom: 2px rgba(134, 194, 255, 0.5) solid; }
   .reverse .links-underlined h1 a[href],
   .reverse .links-underlined h2 a[href],
   .reverse .links-underlined h3 a[href],
@@ -380,9 +380,9 @@ code {
     border-bottom: 2px rgba(203, 203, 203, 0.5) solid; }
   .reverse .links-underlined a[href]:hover,
   .reverse .links-underlined a[href]:active {
-    border-bottom: 2px #f6c38f solid; }
+    border-bottom: 2px #ffc386 solid; }
   .reverse.links-underlined a[href] {
-    border-bottom: 2px rgba(143, 194, 246, 0.5) solid; }
+    border-bottom: 2px rgba(134, 194, 255, 0.5) solid; }
   .reverse.links-underlined h1 a[href],
   .reverse.links-underlined h2 a[href],
   .reverse.links-underlined h3 a[href],
@@ -392,12 +392,12 @@ code {
     border-bottom: 2px rgba(203, 203, 203, 0.5) solid; }
   .reverse.links-underlined a[href]:hover,
   .reverse.links-underlined a[href]:active {
-    border-bottom: 2px #f6c38f solid; }
+    border-bottom: 2px #ffc386 solid; }
   .links-underlined .reverse a[href] {
-    border-bottom: 2px rgba(143, 194, 246, 0.5) solid; }
+    border-bottom: 2px rgba(134, 194, 255, 0.5) solid; }
   .links-underlined .reverse h1 a[href], .links-underlined .reverse h2 a[href], .links-underlined .reverse h3 a[href], .links-underlined .reverse h4 a[href], .links-underlined .reverse h5 a[href], .links-underlined .reverse h6 a[href] {
     border-bottom: 2px rgba(203, 203, 203, 0.5) solid; }
   .links-underlined .reverse a[href]:hover, .links-underlined .reverse a[href]:active {
-    border-bottom: 2px #f6c38f solid; }
+    border-bottom: 2px #ffc386 solid; }
 
 /*# sourceMappingURL=tyfy.css.map */

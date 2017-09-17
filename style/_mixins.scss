@@ -1,0 +1,8 @@
+@mixin calc-line-height($fontsize,$leading) {
+	@if $fontsize <= $leading {
+		line-height:$leading;
+	}
+	@else {
+		line-height:ceil($fontsize/$leading) * $leading;
+	}
+}
