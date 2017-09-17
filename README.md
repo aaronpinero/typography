@@ -25,3 +25,4 @@ I realize that without the benefit of work previously done by others, this proje
 * [Archetype](https://archetypeapp.com)
 * The [Columbia College](https://www.college.columbia.edu) Style Guide
 * [PureCSS](https://purecss.io)
+* [Better Web Type](https://betterwebtype.com)
