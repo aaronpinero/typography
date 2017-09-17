@@ -47,7 +47,7 @@
 	}
 	a[href]:hover,
 	a[href]:active {
-		color:$color-link-active;
+		color:$color-link-active-reverse;
 	}
 	
 	// underlined links inside reverse
@@ -65,7 +65,7 @@
 		}
 		a[href]:hover,
 		a[href]:active {
-			border-bottom:2px $color-link-active solid;
+			border-bottom:2px $color-link-active-reverse solid;
 		}
 	}
 	
@@ -84,7 +84,7 @@
 		}
 		a[href]:hover,
 		a[href]:active {
-			border-bottom:2px $color-link-active solid;
+			border-bottom:2px $color-link-active-reverse solid;
 		}
 	}
 	
@@ -102,6 +102,6 @@
 	}
 	.links-underlined & a[href]:hover,
 	.links-underlined & a[href]:active {
-		border-bottom:2px $color-link-active solid;
+		border-bottom:2px $color-link-active-reverse solid;
 	}
 }
