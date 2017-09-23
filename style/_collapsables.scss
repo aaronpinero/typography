@@ -6,7 +6,7 @@ h5.collapsable-processed,
 h6.collapsable-processed {
   background-color:transparent;
 	border:2px lighten($color-link-default,40%) solid;
-  border-bottom:none !important;
+  border-bottom:2px transparent solid;
   clear:both;
 	cursor:pointer;
   padding:1.5*$line-height-small 6*$line-height-small 1.5*$line-height-small 2*$line-height-small;
@@ -32,6 +32,7 @@ h6.collapsable-processed {
   }
   &.closed {
     background-color:lighten($color-link-default,40%);
+    border-bottom:2px lighten($color-link-default,40%) solid;
     &:before {
 	    content:unquote("\"#{ $fa-var-chevron-down }\"");
 	  }
@@ -51,6 +52,7 @@ h3.collapsable-processed {
   }
   &.closed {
     background-color:lighten($color-link-default,43%);
+    border-bottom:2px lighten($color-link-default,43%) solid;
   }
 }
 h4.collapsable-processed {
@@ -64,6 +66,7 @@ h4.collapsable-processed {
   }
   &.closed {
     background-color:lighten($color-link-default,46%);
+    border-bottom:2px lighten($color-link-default,46%) solid;
   }
 }
 h5.collapsable-processed {
@@ -77,6 +80,7 @@ h5.collapsable-processed {
   }
   &.closed {
     background-color:lighten($color-link-default,49%);
+    border-bottom:2px lighten($color-link-default,49%) solid;
   }
 }
 h6.collapsable-processed {
@@ -90,6 +94,7 @@ h6.collapsable-processed {
   }
   &.closed {
     background-color:lighten($color-link-default,52%);
+    border-bottom:2px lighten($color-link-default,52%) solid;
   }
 }
 h2.collapsable-processed,
@@ -97,6 +102,7 @@ h3.collapsable-processed,
 h4.collapsable-processed,
 h5.collapsable-processed,
 h6.collapsable-processed {
+  border-bottom-color:transparent;
   &:hover {
     border-color:$color-link-default;
 	  background-color:$color-link-default;

@@ -341,7 +341,7 @@ h5.collapsable-processed,
 h6.collapsable-processed {
   background-color: transparent;
   border: 2px #c2dcf6 solid;
-  border-bottom: none !important;
+  border-bottom: 2px transparent solid;
   clear: both;
   cursor: pointer;
   padding: 1.125rem 4.5rem 1.125rem 1.5rem;
@@ -381,7 +381,8 @@ h6.collapsable-processed {
   h4.collapsable-processed.closed,
   h5.collapsable-processed.closed,
   h6.collapsable-processed.closed {
-    background-color: #c2dcf6; }
+    background-color: #c2dcf6;
+    border-bottom: 2px #c2dcf6 solid; }
     h2.collapsable-processed.closed:before,
     h3.collapsable-processed.closed:before,
     h4.collapsable-processed.closed:before,
@@ -401,7 +402,8 @@ h3.collapsable-processed {
       h3.collapsable-processed:before {
         top: 0.875rem; } }
   h3.collapsable-processed.closed {
-    background-color: #cfe4f8; }
+    background-color: #cfe4f8;
+    border-bottom: 2px #cfe4f8 solid; }
 
 h4.collapsable-processed {
   border-color: #dcebfa;
@@ -412,7 +414,8 @@ h4.collapsable-processed {
       h4.collapsable-processed:before {
         top: 0.875rem; } }
   h4.collapsable-processed.closed {
-    background-color: #dcebfa; }
+    background-color: #dcebfa;
+    border-bottom: 2px #dcebfa solid; }
 
 h5.collapsable-processed {
   border-color: #eaf3fc;
@@ -423,7 +426,8 @@ h5.collapsable-processed {
       h5.collapsable-processed:before {
         top: 0.4375rem; } }
   h5.collapsable-processed.closed {
-    background-color: #eaf3fc; }
+    background-color: #eaf3fc;
+    border-bottom: 2px #eaf3fc solid; }
 
 h6.collapsable-processed {
   border-color: #f7fbfe;
@@ -434,22 +438,29 @@ h6.collapsable-processed {
       h6.collapsable-processed:before {
         top: 0.4375rem; } }
   h6.collapsable-processed.closed {
-    background-color: #f7fbfe; }
+    background-color: #f7fbfe;
+    border-bottom: 2px #f7fbfe solid; }
 
-h2.collapsable-processed:hover,
-h3.collapsable-processed:hover,
-h4.collapsable-processed:hover,
-h5.collapsable-processed:hover,
-h6.collapsable-processed:hover {
-  border-color: #1d75cf;
-  background-color: #1d75cf;
-  color: white; }
-  h2.collapsable-processed:hover:before,
-  h3.collapsable-processed:hover:before,
-  h4.collapsable-processed:hover:before,
-  h5.collapsable-processed:hover:before,
-  h6.collapsable-processed:hover:before {
+h2.collapsable-processed,
+h3.collapsable-processed,
+h4.collapsable-processed,
+h5.collapsable-processed,
+h6.collapsable-processed {
+  border-bottom-color: transparent; }
+  h2.collapsable-processed:hover,
+  h3.collapsable-processed:hover,
+  h4.collapsable-processed:hover,
+  h5.collapsable-processed:hover,
+  h6.collapsable-processed:hover {
+    border-color: #1d75cf;
+    background-color: #1d75cf;
     color: white; }
+    h2.collapsable-processed:hover:before,
+    h3.collapsable-processed:hover:before,
+    h4.collapsable-processed:hover:before,
+    h5.collapsable-processed:hover:before,
+    h6.collapsable-processed:hover:before {
+      color: white; }
 
 .collapsables {
   box-sizing: border-box;
