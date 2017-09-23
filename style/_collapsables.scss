@@ -1,0 +1,138 @@
+// collapsable areas
+h2.collapsable-processed,
+h3.collapsable-processed,
+h4.collapsable-processed,
+h5.collapsable-processed,
+h6.collapsable-processed {
+  background-color:transparent;
+	border:2px lighten($color-link-default,40%) solid;
+  border-bottom:none !important;
+  clear:both;
+	cursor:pointer;
+  padding:1.5*$line-height-small 6*$line-height-small 1.5*$line-height-small 2*$line-height-small;
+  position:relative;
+  transition-duration:$transition-duration-hover;
+  transition-property:background-color,border-color,color,padding-bottom,padding-top;
+  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+  	padding:1.5*$line-height-large 6*$line-height-large 1.5*$line-height-large 2*$line-height-large;
+  }
+  &:before {
+		content:unquote("\"#{ $fa-var-chevron-up }\"");
+		font-family:$symbol;
+	  font-size:1rem;
+	  font-style:normal;
+	  font-weight:normal;
+	  position:absolute;
+	  right:2*$line-height-small;
+	  top:1.5*$line-height-small;
+	  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+		  right:2*$line-height-large;
+		  top:1.5*$line-height-large;
+	  }
+  }
+  &.closed {
+    background-color:lighten($color-link-default,40%);
+    &:before {
+	    content:unquote("\"#{ $fa-var-chevron-down }\"");
+	  }
+  }
+}
+h3.collapsable-processed {
+  border-color:lighten($color-link-default,43%);
+  padding:$line-height-small 6*$line-height-small $line-height-small 2*$line-height-small;
+  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+  	padding:$line-height-large 6*$line-height-large $line-height-large 2*$line-height-large;
+  }
+  &:before {
+	  top:$line-height-small;
+	  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+		  top:$line-height-large;
+	  }
+  }
+  &.closed {
+    background-color:lighten($color-link-default,43%);
+  }
+}
+h4.collapsable-processed {
+  border-color:lighten($color-link-default,46%);
+  padding:$line-height-small 6*$line-height-small $line-height-small 2*$line-height-small;
+  &:before {
+	  top:$line-height-small;
+	  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+		  top:$line-height-large;
+	  }
+  }
+  &.closed {
+    background-color:lighten($color-link-default,46%);
+  }
+}
+h5.collapsable-processed {
+  border-color:lighten($color-link-default,49%);
+  padding:0.5*$line-height-small 6*$line-height-small 0.5*$line-height-small 2*$line-height-small;
+  &:before {
+	  top:0.5*$line-height-small;
+	  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+		  top:0.5*$line-height-large;
+	  }
+  }
+  &.closed {
+    background-color:lighten($color-link-default,49%);
+  }
+}
+h6.collapsable-processed {
+  border-color:lighten($color-link-default,52%);
+  padding:0.5*$line-height-small 6*$line-height-small 0.5*$line-height-small 2*$line-height-small;
+  &:before {
+	  top:0.5*$line-height-small;
+	  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+		  top:0.5*$line-height-large;
+	  }
+  }
+  &.closed {
+    background-color:lighten($color-link-default,52%);
+  }
+}
+h2.collapsable-processed,
+h3.collapsable-processed,
+h4.collapsable-processed,
+h5.collapsable-processed,
+h6.collapsable-processed {
+  &:hover {
+    border-color:$color-link-default;
+	  background-color:$color-link-default;
+	  color:white;
+	  &:before {
+	    color:white;
+	  }
+  }
+}
+
+.collapsables {
+	box-sizing:border-box;
+	border:2px lighten($color-link-default,40%) solid;
+	border-top:none !important;
+  overflow:hidden;
+  padding:$line-height-small 2*$line-height-small 2*$line-height-small 2*$line-height-small;
+  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+  	padding:$line-height-large 2*$line-height-large 2*$line-height-large 2*$line-height-large;
+  }
+  &.closed {
+	  border:none;
+	  height:1px;
+	  padding-bottom:0;
+	  padding-top:0;
+	  position:absolute;
+  }
+  h3.collapsable-processed + & {
+    border-color:lighten($color-link-default,43%);
+  }
+  h4.collapsable-processed + & {
+    border-color:lighten($color-link-default,46%);
+  }
+  h5.collapsable-processed + & {
+    border-color:lighten($color-link-default,49%);
+  }
+  h6.collapsable-processed + & {
+    border-color:lighten($color-link-default,52%);
+  }
+}

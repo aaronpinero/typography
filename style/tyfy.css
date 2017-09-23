@@ -334,6 +334,147 @@ code {
   font-weight: 500;
   letter-spacing: 0.1em; }
 
+h2.collapsable-processed,
+h3.collapsable-processed,
+h4.collapsable-processed,
+h5.collapsable-processed,
+h6.collapsable-processed {
+  background-color: transparent;
+  border: 2px #c2dcf6 solid;
+  border-bottom: none !important;
+  clear: both;
+  cursor: pointer;
+  padding: 1.125rem 4.5rem 1.125rem 1.5rem;
+  position: relative;
+  transition-duration: 0.25s;
+  transition-property: background-color,border-color,color,padding-bottom,padding-top; }
+  @media (min-width: 40em) and (min-height: 30em) {
+    h2.collapsable-processed,
+    h3.collapsable-processed,
+    h4.collapsable-processed,
+    h5.collapsable-processed,
+    h6.collapsable-processed {
+      padding: 1.3125rem 5.25rem 1.3125rem 1.75rem; } }
+  h2.collapsable-processed:before,
+  h3.collapsable-processed:before,
+  h4.collapsable-processed:before,
+  h5.collapsable-processed:before,
+  h6.collapsable-processed:before {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: normal;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.125rem; }
+    @media (min-width: 40em) and (min-height: 30em) {
+      h2.collapsable-processed:before,
+      h3.collapsable-processed:before,
+      h4.collapsable-processed:before,
+      h5.collapsable-processed:before,
+      h6.collapsable-processed:before {
+        right: 1.75rem;
+        top: 1.3125rem; } }
+  h2.collapsable-processed.closed,
+  h3.collapsable-processed.closed,
+  h4.collapsable-processed.closed,
+  h5.collapsable-processed.closed,
+  h6.collapsable-processed.closed {
+    background-color: #c2dcf6; }
+    h2.collapsable-processed.closed:before,
+    h3.collapsable-processed.closed:before,
+    h4.collapsable-processed.closed:before,
+    h5.collapsable-processed.closed:before,
+    h6.collapsable-processed.closed:before {
+      content: "\f078"; }
+
+h3.collapsable-processed {
+  border-color: #cfe4f8;
+  padding: 0.75rem 4.5rem 0.75rem 1.5rem; }
+  @media (min-width: 40em) and (min-height: 30em) {
+    h3.collapsable-processed {
+      padding: 0.875rem 5.25rem 0.875rem 1.75rem; } }
+  h3.collapsable-processed:before {
+    top: 0.75rem; }
+    @media (min-width: 40em) and (min-height: 30em) {
+      h3.collapsable-processed:before {
+        top: 0.875rem; } }
+  h3.collapsable-processed.closed {
+    background-color: #cfe4f8; }
+
+h4.collapsable-processed {
+  border-color: #dcebfa;
+  padding: 0.75rem 4.5rem 0.75rem 1.5rem; }
+  h4.collapsable-processed:before {
+    top: 0.75rem; }
+    @media (min-width: 40em) and (min-height: 30em) {
+      h4.collapsable-processed:before {
+        top: 0.875rem; } }
+  h4.collapsable-processed.closed {
+    background-color: #dcebfa; }
+
+h5.collapsable-processed {
+  border-color: #eaf3fc;
+  padding: 0.375rem 4.5rem 0.375rem 1.5rem; }
+  h5.collapsable-processed:before {
+    top: 0.375rem; }
+    @media (min-width: 40em) and (min-height: 30em) {
+      h5.collapsable-processed:before {
+        top: 0.4375rem; } }
+  h5.collapsable-processed.closed {
+    background-color: #eaf3fc; }
+
+h6.collapsable-processed {
+  border-color: #f7fbfe;
+  padding: 0.375rem 4.5rem 0.375rem 1.5rem; }
+  h6.collapsable-processed:before {
+    top: 0.375rem; }
+    @media (min-width: 40em) and (min-height: 30em) {
+      h6.collapsable-processed:before {
+        top: 0.4375rem; } }
+  h6.collapsable-processed.closed {
+    background-color: #f7fbfe; }
+
+h2.collapsable-processed:hover,
+h3.collapsable-processed:hover,
+h4.collapsable-processed:hover,
+h5.collapsable-processed:hover,
+h6.collapsable-processed:hover {
+  border-color: #1d75cf;
+  background-color: #1d75cf;
+  color: white; }
+  h2.collapsable-processed:hover:before,
+  h3.collapsable-processed:hover:before,
+  h4.collapsable-processed:hover:before,
+  h5.collapsable-processed:hover:before,
+  h6.collapsable-processed:hover:before {
+    color: white; }
+
+.collapsables {
+  box-sizing: border-box;
+  border: 2px #c2dcf6 solid;
+  border-top: none !important;
+  overflow: hidden;
+  padding: 0.75rem 1.5rem 1.5rem 1.5rem; }
+  @media (min-width: 40em) and (min-height: 30em) {
+    .collapsables {
+      padding: 0.875rem 1.75rem 1.75rem 1.75rem; } }
+  .collapsables.closed {
+    border: none;
+    height: 1px;
+    padding-bottom: 0;
+    padding-top: 0;
+    position: absolute; }
+  h3.collapsable-processed + .collapsables {
+    border-color: #cfe4f8; }
+  h4.collapsable-processed + .collapsables {
+    border-color: #dcebfa; }
+  h5.collapsable-processed + .collapsables {
+    border-color: #eaf3fc; }
+  h6.collapsable-processed + .collapsables {
+    border-color: #f7fbfe; }
+
 .reverse {
   color: #dddddd; }
   .reverse h1 {
