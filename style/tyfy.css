@@ -1,10 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900,900i|Montserrat:400,400i,500,500i,600,600i,700,700i|Overpass+Mono:400,700");
 html {
   font-size: 100%; }
 
 body {
   color: #222;
-  font-family: Merriweather;
+  font-family: Merriweather, serif;
   font-size: 1rem; }
+
+.font-size-sm {
+  font-size: 0.83333rem; }
 
 .font-size-p {
   font-size: 1rem; }
@@ -29,7 +33,7 @@ body {
 
 h1 {
   color: #343434;
-  font-family: Merriweather;
+  font-family: Merriweather, serif;
   font-size: 2.98598rem;
   font-style: normal;
   font-weight: 900;
@@ -43,7 +47,7 @@ h1 {
 
 h2 {
   color: #343434;
-  font-family: Roboto;
+  font-family: Montserrat, sans-serif;
   font-size: 2.48832rem;
   font-style: normal;
   font-weight: 700;
@@ -57,10 +61,10 @@ h2 {
 
 h3 {
   color: #343434;
-  font-family: Roboto;
+  font-family: Montserrat, sans-serif;
   font-size: 2.0736rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0;
   line-height: 2.25rem;
   margin-bottom: 0;
@@ -71,10 +75,10 @@ h3 {
 
 h4 {
   color: #343434;
-  font-family: Roboto;
+  font-family: Montserrat, sans-serif;
   font-size: 1.728rem;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0;
   line-height: 2.25rem;
   margin-bottom: 0;
@@ -85,7 +89,7 @@ h4 {
 
 h5 {
   color: #343434;
-  font-family: Roboto;
+  font-family: Montserrat, sans-serif;
   font-size: 1.44rem;
   font-style: italic;
   font-weight: 500;
@@ -99,10 +103,10 @@ h5 {
 
 h6 {
   color: #343434;
-  font-family: Roboto;
+  font-family: Montserrat, sans-serif;
   font-size: 1.2rem;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.025em;
   line-height: 1.5rem;
   margin-bottom: 0;
@@ -209,7 +213,7 @@ ul {
       padding-left: 2.625rem; } }
 
 li {
-  font-family: Merriweather;
+  font-family: Merriweather, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
@@ -325,13 +329,34 @@ ul.list-icons.list-icons-check li:before {
 ul.list-icons.list-icons-chevron li:before {
   content: "\f054"; }
 
-code {
-  background-color: rgba(34, 34, 34, 0.1); }
+b {
+  font-weight: 700; }
 
-.smallcaps {
+code {
+  background-color: rgba(34, 34, 34, 0.1);
+  font-family: "Overpass Mono", monospace; }
+
+pre {
+  font-family: "Overpass Mono", monospace; }
+
+small {
+  font-size: 0.83333rem; }
+
+strong {
+  font-weight: 700; }
+
+span.dropcap {
+  display: inline-block;
+  float: left;
+  font-size: 400%;
+  font-weight: bold;
+  line-height: 100%;
+  margin: 0 0.25em 0 0.125em;
+  text-align: center; }
+span.smallcaps {
   font-feature-settings: "c2sc", "smcp";
   font-variant-caps: all-small-caps;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.1em; }
 
 h2.collapsable-processed,
@@ -340,7 +365,7 @@ h4.collapsable-processed,
 h5.collapsable-processed,
 h6.collapsable-processed {
   background-color: transparent;
-  border: 2px #c2dcf6 solid;
+  border: 2px rgba(0, 0, 0, 0.13) solid;
   border-bottom: 2px transparent solid;
   clear: both;
   cursor: pointer;
@@ -381,8 +406,8 @@ h6.collapsable-processed {
   h4.collapsable-processed.closed,
   h5.collapsable-processed.closed,
   h6.collapsable-processed.closed {
-    background-color: #c2dcf6;
-    border-bottom: 2px #c2dcf6 solid; }
+    background-color: rgba(0, 0, 0, 0.13);
+    border-color: transparent; }
     h2.collapsable-processed.closed:before,
     h3.collapsable-processed.closed:before,
     h4.collapsable-processed.closed:before,
@@ -391,55 +416,24 @@ h6.collapsable-processed {
       content: "\f078"; }
 
 h3.collapsable-processed {
-  border-color: #cfe4f8;
-  padding: 0.75rem 4.5rem 0.75rem 1.5rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    h3.collapsable-processed {
-      padding: 0.875rem 5.25rem 0.875rem 1.75rem; } }
-  h3.collapsable-processed:before {
-    top: 0.75rem; }
-    @media (min-width: 40em) and (min-height: 30em) {
-      h3.collapsable-processed:before {
-        top: 0.875rem; } }
+  border-color: rgba(0, 0, 0, 0.11); }
   h3.collapsable-processed.closed {
-    background-color: #cfe4f8;
-    border-bottom: 2px #cfe4f8 solid; }
+    background-color: rgba(0, 0, 0, 0.11); }
 
 h4.collapsable-processed {
-  border-color: #dcebfa;
-  padding: 0.75rem 4.5rem 0.75rem 1.5rem; }
-  h4.collapsable-processed:before {
-    top: 0.75rem; }
-    @media (min-width: 40em) and (min-height: 30em) {
-      h4.collapsable-processed:before {
-        top: 0.875rem; } }
+  border-color: rgba(0, 0, 0, 0.09); }
   h4.collapsable-processed.closed {
-    background-color: #dcebfa;
-    border-bottom: 2px #dcebfa solid; }
+    background-color: rgba(0, 0, 0, 0.09); }
 
 h5.collapsable-processed {
-  border-color: #eaf3fc;
-  padding: 0.375rem 4.5rem 0.375rem 1.5rem; }
-  h5.collapsable-processed:before {
-    top: 0.375rem; }
-    @media (min-width: 40em) and (min-height: 30em) {
-      h5.collapsable-processed:before {
-        top: 0.4375rem; } }
+  border-color: rgba(0, 0, 0, 0.07); }
   h5.collapsable-processed.closed {
-    background-color: #eaf3fc;
-    border-bottom: 2px #eaf3fc solid; }
+    background-color: rgba(0, 0, 0, 0.07); }
 
 h6.collapsable-processed {
-  border-color: #f7fbfe;
-  padding: 0.375rem 4.5rem 0.375rem 1.5rem; }
-  h6.collapsable-processed:before {
-    top: 0.375rem; }
-    @media (min-width: 40em) and (min-height: 30em) {
-      h6.collapsable-processed:before {
-        top: 0.4375rem; } }
+  border-color: rgba(0, 0, 0, 0.05); }
   h6.collapsable-processed.closed {
-    background-color: #f7fbfe;
-    border-bottom: 2px #f7fbfe solid; }
+    background-color: rgba(0, 0, 0, 0.05); }
 
 h2.collapsable-processed,
 h3.collapsable-processed,
@@ -452,8 +446,8 @@ h6.collapsable-processed {
   h4.collapsable-processed:hover,
   h5.collapsable-processed:hover,
   h6.collapsable-processed:hover {
-    border-color: #1d75cf;
-    background-color: #1d75cf;
+    border-color: #cf771d;
+    background-color: #cf771d;
     color: white; }
     h2.collapsable-processed:hover:before,
     h3.collapsable-processed:hover:before,
@@ -464,7 +458,7 @@ h6.collapsable-processed {
 
 .collapsables {
   box-sizing: border-box;
-  border: 2px #c2dcf6 solid;
+  border: 2px rgba(0, 0, 0, 0.13) solid;
   border-top: none !important;
   overflow: hidden;
   padding: 0.75rem 1.5rem 1.5rem 1.5rem; }
@@ -478,13 +472,13 @@ h6.collapsable-processed {
     padding-top: 0;
     position: absolute; }
   h3.collapsable-processed + .collapsables {
-    border-color: #cfe4f8; }
+    border-color: rgba(0, 0, 0, 0.11); }
   h4.collapsable-processed + .collapsables {
-    border-color: #dcebfa; }
+    border-color: rbga(black, 0.09); }
   h5.collapsable-processed + .collapsables {
-    border-color: #eaf3fc; }
+    border-color: rbga(black, 0.07); }
   h6.collapsable-processed + .collapsables {
-    border-color: #f7fbfe; }
+    border-color: rbga(black, 0.05); }
 
 .reverse {
   color: #dddddd; }

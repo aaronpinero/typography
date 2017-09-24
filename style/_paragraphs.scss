@@ -1,4 +1,7 @@
 // font size styles
+.font-size-sm {
+	font-size:$font-size-sm;
+}
 .font-size-p {
 	font-size:$font-size-p;
 }
@@ -55,7 +58,7 @@ h3 {
 	font-family:$sans;
 	font-size:$font-size-h3;
 	font-style:normal;
-	font-weight:500;
+	font-weight:600;
 	letter-spacing:0;
 	@include calc-line-height($font-size-h3,$line-height-small);
 	margin-bottom:0;
@@ -69,7 +72,7 @@ h4 {
 	font-family:$sans;
 	font-size:$font-size-h4;
 	font-style:italic;
-	font-weight:700;
+	font-weight:600;
 	letter-spacing:0;
 	@include calc-line-height($font-size-h4,$line-height-small);
 	margin-bottom:0;
@@ -97,7 +100,7 @@ h6 {
 	font-family:$sans;
 	font-size:$font-size-h6;
 	font-style:normal;
-	font-weight:700;
+	font-weight:500;
 	letter-spacing:0.025em;
 	@include calc-line-height($font-size-h6,$line-height-small);
 	margin-bottom:0;

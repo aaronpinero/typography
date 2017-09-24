@@ -1,9 +1,33 @@
+b {
+	font-weight:700;
+}
 code {
 	background-color:rgba($color-text-body,0.1);
+	font-family:$mono;
 }
-.smallcaps {
-	font-feature-settings:"c2sc", "smcp";
-	font-variant-caps:all-small-caps;
-	font-weight:500;
-	letter-spacing:0.1em;
+pre {
+	font-family:$mono;
+}
+small {
+	font-size:$font-size-sm;
+}
+strong {
+	font-weight:700;
+}
+span {
+	&.dropcap {
+	  display:inline-block;
+	  float:left;
+	  font-size:400%;
+	  font-weight:bold;
+	  line-height:100%;
+	  margin:0 0.25em 0 0.125em;
+	  text-align:center;
+	}
+	&.smallcaps {
+		font-feature-settings:"c2sc", "smcp";
+		font-variant-caps:all-small-caps;
+		font-weight:600;
+		letter-spacing:0.1em;
+	}	
 }

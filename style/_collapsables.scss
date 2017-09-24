@@ -5,7 +5,7 @@ h4.collapsable-processed,
 h5.collapsable-processed,
 h6.collapsable-processed {
   background-color:transparent;
-	border:2px lighten($color-link-default,40%) solid;
+	border:2px rgba(black,0.13) solid;
   border-bottom:2px transparent solid;
   clear:both;
 	cursor:pointer;
@@ -31,70 +31,35 @@ h6.collapsable-processed {
 	  }
   }
   &.closed {
-    background-color:lighten($color-link-default,40%);
-    border-bottom:2px lighten($color-link-default,40%) solid;
+    background-color:rgba(black,0.13);
+    border-color:transparent;
     &:before {
 	    content:unquote("\"#{ $fa-var-chevron-down }\"");
 	  }
   }
 }
 h3.collapsable-processed {
-  border-color:lighten($color-link-default,43%);
-  padding:$line-height-small 6*$line-height-small $line-height-small 2*$line-height-small;
-  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-  	padding:$line-height-large 6*$line-height-large $line-height-large 2*$line-height-large;
-  }
-  &:before {
-	  top:$line-height-small;
-	  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		  top:$line-height-large;
-	  }
-  }
+  border-color:rgba(black,0.11);
   &.closed {
-    background-color:lighten($color-link-default,43%);
-    border-bottom:2px lighten($color-link-default,43%) solid;
+    background-color:rgba(black,0.11);
   }
 }
 h4.collapsable-processed {
-  border-color:lighten($color-link-default,46%);
-  padding:$line-height-small 6*$line-height-small $line-height-small 2*$line-height-small;
-  &:before {
-	  top:$line-height-small;
-	  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		  top:$line-height-large;
-	  }
-  }
+  border-color:rgba(black,0.09);
   &.closed {
-    background-color:lighten($color-link-default,46%);
-    border-bottom:2px lighten($color-link-default,46%) solid;
+    background-color:rgba(black,0.09);
   }
 }
 h5.collapsable-processed {
-  border-color:lighten($color-link-default,49%);
-  padding:0.5*$line-height-small 6*$line-height-small 0.5*$line-height-small 2*$line-height-small;
-  &:before {
-	  top:0.5*$line-height-small;
-	  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		  top:0.5*$line-height-large;
-	  }
-  }
+  border-color:rgba(black,0.07);
   &.closed {
-    background-color:lighten($color-link-default,49%);
-    border-bottom:2px lighten($color-link-default,49%) solid;
+    background-color:rgba(black,0.07);
   }
 }
 h6.collapsable-processed {
-  border-color:lighten($color-link-default,52%);
-  padding:0.5*$line-height-small 6*$line-height-small 0.5*$line-height-small 2*$line-height-small;
-  &:before {
-	  top:0.5*$line-height-small;
-	  @media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		  top:0.5*$line-height-large;
-	  }
-  }
+  border-color:rgba(black,0.05);
   &.closed {
-    background-color:lighten($color-link-default,52%);
-    border-bottom:2px lighten($color-link-default,52%) solid;
+    background-color:rgba(black,0.05);
   }
 }
 h2.collapsable-processed,
@@ -104,8 +69,8 @@ h5.collapsable-processed,
 h6.collapsable-processed {
   border-bottom-color:transparent;
   &:hover {
-    border-color:$color-link-default;
-	  background-color:$color-link-default;
+    border-color:$color-link-active;
+	  background-color:$color-link-active;
 	  color:white;
 	  &:before {
 	    color:white;
@@ -115,7 +80,7 @@ h6.collapsable-processed {
 
 .collapsables {
 	box-sizing:border-box;
-	border:2px lighten($color-link-default,40%) solid;
+	border:2px rgba(black,0.13) solid;
 	border-top:none !important;
   overflow:hidden;
   padding:$line-height-small 2*$line-height-small 2*$line-height-small 2*$line-height-small;
@@ -130,15 +95,15 @@ h6.collapsable-processed {
 	  position:absolute;
   }
   h3.collapsable-processed + & {
-    border-color:lighten($color-link-default,43%);
+    border-color:rgba(black,0.11);
   }
   h4.collapsable-processed + & {
-    border-color:lighten($color-link-default,46%);
+    border-color:rbga(black,0.09);
   }
   h5.collapsable-processed + & {
-    border-color:lighten($color-link-default,49%);
+    border-color:rbga(black,0.07);
   }
   h6.collapsable-processed + & {
-    border-color:lighten($color-link-default,52%);
+    border-color:rbga(black,0.05);
   }
 }
