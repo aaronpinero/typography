@@ -1,0 +1,61 @@
+blockquote {
+	color:lighten($color-text-body,20%);
+	font-family:$serif;
+	font-size:$font-size-p;
+	font-style:italic;
+	@include calc-line-height($font-size-p,$line-height-small);
+	margin:2*$line-height-small;
+	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+		@include calc-line-height($font-size-p,$line-height-large);
+		margin:2*$line-height-large 4*$line-height-large;
+	}
+	&.pullquote {
+		background-color:transparent;
+		border:none;
+		font-size:$font-size-h5;
+		@include calc-line-height($font-size-h5,$line-height-small);
+		margin:3*$line-height-small 0;
+		position:relative;
+		text-align:center;
+		@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+			font-size:$font-size-h4;
+			@include calc-line-height($font-size-h4,$line-height-large);
+			margin:4*$line-height-large;
+		}
+		&:before {
+			color:lighten($color-text-body,30%);
+			content:unquote("\"#{ $fa-var-quote-left }\"");
+			display:block;
+			font-family:$symbol;
+			font-size:$font-size-h5;
+			font-style:normal;
+			font-weight:normal;
+			@include calc-line-height($font-size-h5,$line-height-small);
+			text-align:center;
+			@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+				font-size:$font-size-h4;
+				@include calc-line-height($font-size-h4,$line-height-large);
+			}
+		}
+		&:after {
+			color:lighten($color-text-body,40%);
+			content:"———— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 ————";
+			display:block;
+			font-family:$symbol;
+			font-size:$font-size-h5;
+			font-style:normal;
+			font-weight:normal;
+			letter-spacing:-0.1em;
+			@include calc-line-height($font-size-h5,$line-height-small);
+			margin-left:-0.05em;
+			position:absolute;
+			text-align:center;
+			top:0;
+			width:100%;
+			@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+				font-size:$font-size-h4;
+				@include calc-line-height($font-size-h4,$line-height-large);
+			}
+		}
+	}
+}
