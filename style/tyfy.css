@@ -376,14 +376,14 @@ blockquote {
     border: none;
     font-size: 1.44rem;
     line-height: 2.25rem;
-    margin: 2.25rem 0;
+    margin: 1.5rem 0 2.25rem 0;
     position: relative;
     text-align: center; }
     @media (min-width: 40em) and (min-height: 30em) {
       blockquote.pullquote {
         font-size: 1.728rem;
         line-height: 2.625rem;
-        margin: 3.5rem; } }
+        margin: 2.625rem 3.5rem 3.5rem 3.5rem; } }
     blockquote.pullquote:before {
       color: #6f6f6f;
       content: "\f10d";

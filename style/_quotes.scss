@@ -14,13 +14,13 @@ blockquote {
 		border:none;
 		font-size:$font-size-h5;
 		@include calc-line-height($font-size-h5,$line-height-small);
-		margin:3*$line-height-small 0;
+		margin:2*$line-height-small 0 3*$line-height-small 0;
 		position:relative;
 		text-align:center;
 		@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 			font-size:$font-size-h4;
 			@include calc-line-height($font-size-h4,$line-height-large);
-			margin:4*$line-height-large;
+			margin:3*$line-height-large 4*$line-height-large 4*$line-height-large 4*$line-height-large;
 		}
 		&:before {
 			color:lighten($color-text-body,30%);
