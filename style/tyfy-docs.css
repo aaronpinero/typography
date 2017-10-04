@@ -1,7 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900,900i|Montserrat:400,400i,500,500i,600,600i,700,700i|Overpass+Mono:400,700");
 body {
-  margin: 0 0 2rem 0;
+  animation-duration: 1s;
+  animation-name: fadein;
+  margin: 0 0 1.5rem 0;
   padding: 0; }
+  @media (min-height: 30em) {
+    body {
+      margin: 0 0 1.75rem 0; } }
 
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .reverse {
   background-color: #222; }
 
@@ -10,27 +21,29 @@ header.brand h1 {
   line-height: 3rem;
   margin: 0 auto;
   max-width: 55rem;
-  padding: 0.75rem 1.5rem; }
+  padding: 0.75rem; }
   @media (min-width: 40em) {
     header.brand h1 {
-      padding-left: 3.5rem;
-      padding-right: 3.5rem; } }
+      padding-left: 1.75rem;
+      padding-right: 1.75rem; } }
   @media (min-width: 40em) and (min-height: 30em) {
     header.brand h1 {
-      line-height: 3.5rem; } }
+      padding-bottom: 0.875rem;
+      padding-top: 0.875rem;
+      line-height: 2.625rem; } }
 
 section.main {
   margin: 0 auto;
   max-width: 55rem;
-  padding: 1.5rem; }
+  padding: 0.75rem; }
   @media (min-width: 40em) {
     section.main {
-      padding-left: 3.5rem;
-      padding-right: 3.5rem; } }
+      padding-left: 1.75rem;
+      padding-right: 1.75rem; } }
   @media (min-height: 30em) {
     section.main {
-      padding-bottom: 3.5rem;
-      padding-top: 3.5rem; } }
+      padding-bottom: 1.75rem;
+      padding-top: 1.75rem; } }
 
 section.demo {
   background-color: #f3f3f3;

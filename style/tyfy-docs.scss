@@ -1,8 +1,23 @@
 @import "defaults";
+@import "mixins";
 
 body {
-	margin:0 0 2rem 0;
+  animation-duration:1s;
+  animation-name:fadein;
+	margin:0 0 2*$line-height-small 0;
 	padding:0;
+	@media (min-height:$break-lineheight-vertical) {
+		margin:0 0 2*$line-height-large 0;
+	}
+}
+
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .reverse {
@@ -12,16 +27,18 @@ body {
 header.brand {
 	h1 {
 		font-size:$font-size-h3;
-		line-height:$line-height-small*2;
+		@include calc-line-height($font-size-h3,$line-height-small);
 		margin:0 auto;
 		max-width:55rem;
-		padding:$line-height-small/2 $line-height-small;
+		padding:$line-height-small;
 		@media (min-width:$break-lineheight-horizontal) {
 			padding-left:$line-height-large*2;
 			padding-right:$line-height-large*2;
 		}
 		@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-			line-height:$line-height-large*2;
+		  padding-bottom:$line-height-large;
+		  padding-top:$line-height-large;
+			@include calc-line-height($font-size-h3,$line-height-large);
 		}
 	}
 }
