@@ -104,4 +104,17 @@
 	.links-underlined & a[href]:active {
 		border-bottom:2px $color-link-active-reverse solid;
 	}
+	
+	// quotes
+  blockquote {
+    &.pullquote {
+      color:saturate(lighten(complement($color-brand),20%),20%);
+      &:before {
+        color:darken($color-text-body-reverse,40%);
+      }
+      &:after {
+        color:darken($color-text-body-reverse,50%);
+      }
+    }
+  }
 }

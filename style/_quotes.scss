@@ -1,5 +1,4 @@
 blockquote {
-	color:lighten($color-text-body,20%);
 	font-family:$serif;
 	font-size:$font-size-p;
 	font-style:italic;
@@ -12,6 +11,7 @@ blockquote {
 	&.pullquote {
 		background-color:transparent;
 		border:none;
+		color:complement($color-brand);
 		font-size:$font-size-h5;
 		@include calc-line-height($font-size-h5,$line-height-small);
 		margin:2*$line-height-small 0 3*$line-height-small 0;
@@ -23,7 +23,7 @@ blockquote {
 			margin:3*$line-height-large 4*$line-height-large 4*$line-height-large 4*$line-height-large;
 		}
 		&:before {
-			color:lighten($color-text-body,30%);
+			color:lighten($color-text-body,50%);
 			content:unquote("\"#{ $fa-var-quote-left }\"");
 			display:block;
 			font-family:$symbol;
@@ -38,24 +38,68 @@ blockquote {
 			}
 		}
 		&:after {
-			color:lighten($color-text-body,40%);
+			color:lighten($color-text-body,60%);
 			content:"———— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 ————";
 			display:block;
 			font-family:$symbol;
 			font-size:$font-size-h5;
 			font-style:normal;
 			font-weight:normal;
+			left:0;
 			letter-spacing:-0.1em;
 			@include calc-line-height($font-size-h5,$line-height-small);
 			margin-left:-0.05em;
 			position:absolute;
 			text-align:center;
 			top:0;
+			white-space:nowrap;
 			width:100%;
 			@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
 				font-size:$font-size-h4;
 				@include calc-line-height($font-size-h4,$line-height-large);
 			}
 		}
+		&.left,
+		&.right {
+			@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+				box-sizing:border-box;
+				font-size:$font-size-h5;
+				@include calc-line-height($font-size-h4,$line-height-large);
+				margin-top:2*$line-height-large;
+				text-align:left;
+				width:50%;
+				&:before,
+				&:after {
+					font-size:$font-size-h5;
+					@include calc-line-height($font-size-h4,$line-height-large);
+				}
+			}
+		}
+		&.left {
+			@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+				float:left;
+				margin-left:0;
+				margin-right:2*$line-height-large;
+				padding-right:2*$line-height-large;
+				&:after {
+					box-sizing:border-box;
+					padding-right:2*$line-height-large;
+				}
+			}
+		}
+		&.right {
+			@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+				float:right;
+				margin-left:2*$line-height-large;
+				margin-right:0;
+				padding-left:2*$line-height-large;
+				&:after {
+					box-sizing:border-box;
+					padding-left:2*$line-height-large;
+				}
+			}
+		}
 	}
 }
+
+// note: what about a citation style?

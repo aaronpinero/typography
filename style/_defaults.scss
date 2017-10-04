@@ -16,10 +16,11 @@ $line-height-large:0.875rem;
 $line-height-small:0.75rem;
 
 // colors
+$color-brand:#418fde;
 $color-text-body:#222;
 $color-text-head:lighten($color-text-body,7%);
 $color-text-light:lighten($color-text-body,25%);
-$color-link-default:saturate(darken(#418fde,10%),5%);
+$color-link-default:saturate(darken($color-brand,10%),5%);
 $color-link-active:complement($color-link-default);
 $color-text-body-reverse:invert($color-text-body);
 $color-text-head-reverse:invert($color-text-head);

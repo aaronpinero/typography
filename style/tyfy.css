@@ -361,7 +361,6 @@ span.smallcaps {
   letter-spacing: 0.1em; }
 
 blockquote {
-  color: #555555;
   font-family: Merriweather, serif;
   font-size: 1rem;
   font-style: italic;
@@ -374,6 +373,7 @@ blockquote {
   blockquote.pullquote {
     background-color: transparent;
     border: none;
+    color: #de9041;
     font-size: 1.44rem;
     line-height: 2.25rem;
     margin: 1.5rem 0 2.25rem 0;
@@ -385,7 +385,7 @@ blockquote {
         line-height: 2.625rem;
         margin: 2.625rem 3.5rem 3.5rem 3.5rem; } }
     blockquote.pullquote:before {
-      color: #6f6f6f;
+      color: #a2a2a2;
       content: "\f10d";
       display: block;
       font-family: FontAwesome;
@@ -399,24 +399,55 @@ blockquote {
           font-size: 1.728rem;
           line-height: 2.625rem; } }
     blockquote.pullquote:after {
-      color: #888888;
+      color: #bbbbbb;
       content: "———— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 ————";
       display: block;
       font-family: FontAwesome;
       font-size: 1.44rem;
       font-style: normal;
       font-weight: normal;
+      left: 0;
       letter-spacing: -0.1em;
       line-height: 2.25rem;
       margin-left: -0.05em;
       position: absolute;
       text-align: center;
       top: 0;
+      white-space: nowrap;
       width: 100%; }
       @media (min-width: 40em) and (min-height: 30em) {
         blockquote.pullquote:after {
           font-size: 1.728rem;
           line-height: 2.625rem; } }
+    @media (min-width: 40em) and (min-height: 30em) {
+      blockquote.pullquote.left, blockquote.pullquote.right {
+        box-sizing: border-box;
+        font-size: 1.44rem;
+        line-height: 2.625rem;
+        margin-top: 1.75rem;
+        text-align: left;
+        width: 50%; }
+        blockquote.pullquote.left:before, blockquote.pullquote.left:after, blockquote.pullquote.right:before, blockquote.pullquote.right:after {
+          font-size: 1.44rem;
+          line-height: 2.625rem; } }
+    @media (min-width: 40em) and (min-height: 30em) {
+      blockquote.pullquote.left {
+        float: left;
+        margin-left: 0;
+        margin-right: 1.75rem;
+        padding-right: 1.75rem; }
+        blockquote.pullquote.left:after {
+          box-sizing: border-box;
+          padding-right: 1.75rem; } }
+    @media (min-width: 40em) and (min-height: 30em) {
+      blockquote.pullquote.right {
+        float: right;
+        margin-left: 1.75rem;
+        margin-right: 0;
+        padding-left: 1.75rem; }
+        blockquote.pullquote.right:after {
+          box-sizing: border-box;
+          padding-left: 1.75rem; } }
 
 h2.collapsable-processed,
 h3.collapsable-processed,
@@ -533,11 +564,11 @@ h6.collapsable-processed {
   h3.collapsable-processed + .collapsables {
     border-color: rgba(0, 0, 0, 0.11); }
   h4.collapsable-processed + .collapsables {
-    border-color: rbga(black, 0.09); }
+    border-color: rgba(0, 0, 0, 0.09); }
   h5.collapsable-processed + .collapsables {
-    border-color: rbga(black, 0.07); }
+    border-color: rgba(0, 0, 0, 0.07); }
   h6.collapsable-processed + .collapsables {
-    border-color: rbga(black, 0.05); }
+    border-color: rgba(0, 0, 0, 0.05); }
 
 .reverse {
   color: #dddddd; }
@@ -604,5 +635,11 @@ h6.collapsable-processed {
     border-bottom: 2px rgba(203, 203, 203, 0.5) solid; }
   .links-underlined .reverse a[href]:hover, .links-underlined .reverse a[href]:active {
     border-bottom: 2px #ffc386 solid; }
+  .reverse blockquote.pullquote {
+    color: #f9c38c; }
+    .reverse blockquote.pullquote:before {
+      color: #777777; }
+    .reverse blockquote.pullquote:after {
+      color: #5e5e5e; }
 
 /*# sourceMappingURL=tyfy.css.map */
