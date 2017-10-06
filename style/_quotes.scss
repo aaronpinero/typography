@@ -2,25 +2,36 @@ blockquote {
 	font-family:$serif;
 	font-size:$font-size-p;
 	font-style:italic;
-	@include calc-line-height($font-size-p,$line-height-small);
-	margin:2*$line-height-small;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		@include calc-line-height($font-size-p,$line-height-large);
-		margin:2*$line-height-large 4*$line-height-large;
+	@include calc-line-height($font-size-p,$grid-unit);
+	margin:2*$grid-unit;
+	p {
+		font-style:italic;
 	}
 	&.pullquote {
 		background-color:transparent;
 		border:none;
 		color:complement($color-brand);
 		font-size:$font-size-h5;
-		@include calc-line-height($font-size-h5,$line-height-small);
-		margin:2*$line-height-small 0 3*$line-height-small 0;
+		@include calc-line-height($font-size-h4,$grid-unit);
+		margin:2*$grid-unit 0 3*$grid-unit 0;
 		position:relative;
 		text-align:center;
-		@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+		@media (min-width:$break-pullquote-large) {
 			font-size:$font-size-h4;
-			@include calc-line-height($font-size-h4,$line-height-large);
-			margin:3*$line-height-large 4*$line-height-large 4*$line-height-large 4*$line-height-large;
+			@include calc-line-height($font-size-h3,$grid-unit);
+			margin:3*$grid-unit 4*$grid-unit 4*$grid-unit 4*$grid-unit;
+		}
+		p {
+			font-size:$font-size-h5;
+			@include calc-line-height($font-size-h4,$grid-unit);
+			@media (min-width:$break-pullquote-large) {
+				font-size:$font-size-h4;
+				@include calc-line-height($font-size-h3,$grid-unit);
+			}
+		}
+		cite {
+			font-size:$font-size-p;
+			@include calc-line-height($font-size-p,$grid-unit);
 		}
 		&:before {
 			color:lighten($color-text-body,50%);
@@ -30,11 +41,11 @@ blockquote {
 			font-size:$font-size-h5;
 			font-style:normal;
 			font-weight:normal;
-			@include calc-line-height($font-size-h5,$line-height-small);
+			@include calc-line-height($font-size-h4,$grid-unit);
 			text-align:center;
-			@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+			@media (min-width:$break-pullquote-large) {
 				font-size:$font-size-h4;
-				@include calc-line-height($font-size-h4,$line-height-large);
+				@include calc-line-height($font-size-h3,$grid-unit);
 			}
 		}
 		&:after {
@@ -47,59 +58,62 @@ blockquote {
 			font-weight:normal;
 			left:0;
 			letter-spacing:-0.1em;
-			@include calc-line-height($font-size-h5,$line-height-small);
+			@include calc-line-height($font-size-h4,$grid-unit);
 			margin-left:-0.05em;
 			position:absolute;
 			text-align:center;
 			top:0;
 			white-space:nowrap;
 			width:100%;
-			@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+			@media (min-width:$break-pullquote-large) {
 				font-size:$font-size-h4;
-				@include calc-line-height($font-size-h4,$line-height-large);
+				@include calc-line-height($font-size-h3,$grid-unit);
 			}
 		}
 		&.left,
 		&.right {
-			@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+			@media (min-width:$break-floats) {
 				box-sizing:border-box;
 				font-size:$font-size-h5;
-				@include calc-line-height($font-size-h4,$line-height-large);
-				margin-top:2*$line-height-large;
+				@include calc-line-height($font-size-h4,$grid-unit);
+				margin-bottom:3*$grid-unit;
+				margin-top:2*$grid-unit;
 				text-align:left;
 				width:50%;
 				&:before,
 				&:after {
 					font-size:$font-size-h5;
-					@include calc-line-height($font-size-h4,$line-height-large);
+					@include calc-line-height($font-size-h4,$grid-unit);
+				}
+				p {
+					font-size:$font-size-h5;
+					@include calc-line-height($font-size-h4,$grid-unit);
 				}
 			}
 		}
 		&.left {
-			@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+			@media (min-width:$break-floats) {
 				float:left;
 				margin-left:0;
-				margin-right:2*$line-height-large;
-				padding-right:2*$line-height-large;
+				margin-right:2*$grid-unit;
+				padding-right:2*$grid-unit;
 				&:after {
 					box-sizing:border-box;
-					padding-right:2*$line-height-large;
+					padding-right:2*$grid-unit;
 				}
 			}
 		}
 		&.right {
-			@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
+			@media (min-width:$break-floats) {
 				float:right;
-				margin-left:2*$line-height-large;
+				margin-left:2*$grid-unit;
 				margin-right:0;
-				padding-left:2*$line-height-large;
+				padding-left:2*$grid-unit;
 				&:after {
 					box-sizing:border-box;
-					padding-left:2*$line-height-large;
+					padding-left:2*$grid-unit;
 				}
 			}
 		}
 	}
 }
-
-// note: what about a citation style?

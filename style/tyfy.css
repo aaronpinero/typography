@@ -39,12 +39,9 @@ h1 {
   font-style: normal;
   font-weight: 900;
   letter-spacing: 0;
-  line-height: 3.75rem;
+  line-height: 3.5rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    h1 {
-      line-height: 3.5rem; } }
 
 h2 {
   color: #343434;
@@ -53,12 +50,9 @@ h2 {
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0;
-  line-height: 3rem;
+  line-height: 3.5rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    h2 {
-      line-height: 3.5rem; } }
 
 h3 {
   color: #343434;
@@ -67,12 +61,9 @@ h3 {
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 3rem;
+  line-height: 2.625rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    h3 {
-      line-height: 2.625rem; } }
 
 h4 {
   color: #343434;
@@ -81,12 +72,9 @@ h4 {
   font-style: italic;
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 2.25rem;
+  line-height: 2.625rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    h4 {
-      line-height: 2.625rem; } }
 
 h5 {
   color: #343434;
@@ -95,12 +83,9 @@ h5 {
   font-style: italic;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 2.25rem;
+  line-height: 1.75rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    h5 {
-      line-height: 1.75rem; } }
 
 h6 {
   color: #343434;
@@ -109,25 +94,19 @@ h6 {
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.025em;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   margin-bottom: 0;
   margin-top: 0;
   text-transform: uppercase; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    h6 {
-      line-height: 1.75rem; } }
 
 p {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    p {
-      line-height: 1.75rem; } }
 
 * + h1,
 * + h2,
@@ -136,30 +115,14 @@ p {
 * + h5,
 * + h6,
 * + p {
-  margin-top: 1.5rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    * + h1,
-    * + h2,
-    * + h3,
-    * + h4,
-    * + h5,
-    * + h6,
-    * + p {
-      margin-top: 1.75rem; } }
+  margin-top: 1.75rem; }
 
 h2 + p,
 h3 + p,
 h4 + p,
 h5 + p,
 h6 + p {
-  margin-top: 1.5rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    h2 + p,
-    h3 + p,
-    h4 + p,
-    h5 + p,
-    h6 + p {
-      margin-top: 1.75rem; } }
+  margin-top: 1.75rem; }
 
 p + h1,
 p + h2,
@@ -167,15 +130,7 @@ p + h3,
 p + h4,
 p + h5,
 p + h6 {
-  margin-top: 2.25rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    p + h1,
-    p + h2,
-    p + h3,
-    p + h4,
-    p + h5,
-    p + h6 {
-      margin-top: 2.625rem; } }
+  margin-top: 2.625rem; }
 
 a {
   color: #222;
@@ -203,49 +158,30 @@ a {
 
 ol,
 ul {
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   margin-bottom: 0;
   margin-top: 0;
-  padding-left: 2.25rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    ol,
-    ul {
-      line-height: 1.75rem;
-      padding-left: 2.625rem; } }
+  padding-left: 2.625rem; }
 
 li {
   font-family: Merriweather, serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
   margin-bottom: 0;
   margin-top: 0; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    li {
-      line-height: 1.75rem; } }
 
 * + ol,
 * + ul {
-  margin-top: 1.5rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    * + ol,
-    * + ul {
-      margin-top: 1.75rem; } }
+  margin-top: 1.75rem; }
 
 h2 + ol,
 h3 + ol,
 h4 + ol,
 h5 + ol,
 h6 + ol {
-  margin-top: 1.5rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    h2 + ol,
-    h3 + ol,
-    h4 + ol,
-    h5 + ol,
-    h6 + ol {
-      margin-top: 1.75rem; } }
+  margin-top: 1.75rem; }
 
 ol + h1,
 ol + h2,
@@ -253,29 +189,14 @@ ol + h3,
 ol + h4,
 ol + h5,
 ol + h6 {
-  margin-top: 2.25rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    ol + h1,
-    ol + h2,
-    ol + h3,
-    ol + h4,
-    ol + h5,
-    ol + h6 {
-      margin-top: 2.625rem; } }
+  margin-top: 2.625rem; }
 
 h2 + ul,
 h3 + ul,
 h4 + ul,
 h5 + ul,
 h6 + ul {
-  margin-top: 1.5rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    h2 + ul,
-    h3 + ul,
-    h4 + ul,
-    h5 + ul,
-    h6 + ul {
-      margin-top: 1.75rem; } }
+  margin-top: 1.75rem; }
 
 ul + h1,
 ul + h2,
@@ -283,33 +204,16 @@ ul + h3,
 ul + h4,
 ul + h5,
 ul + h6 {
-  margin-top: 2.25rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    ul + h1,
-    ul + h2,
-    ul + h3,
-    ul + h4,
-    ul + h5,
-    ul + h6 {
-      margin-top: 2.625rem; } }
+  margin-top: 2.625rem; }
 
 li + li {
-  margin-top: 0.75rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    li + li {
-      margin-top: 0.875rem; } }
+  margin-top: 0.875rem; }
 
 ol ol,
 ol ul,
 ul ol,
 ul ul {
-  margin-top: 0.75rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    ol ol,
-    ol ul,
-    ul ol,
-    ul ul {
-      margin-top: 0.875rem; } }
+  margin-top: 0.875rem; }
 
 ul.list-icons li {
   list-style-type: none;
@@ -364,26 +268,34 @@ blockquote {
   font-family: Merriweather, serif;
   font-size: 1rem;
   font-style: italic;
-  line-height: 1.5rem;
-  margin: 1.5rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    blockquote {
-      line-height: 1.75rem;
-      margin: 1.75rem 3.5rem; } }
+  line-height: 1.75rem;
+  margin: 1.75rem; }
+  blockquote p {
+    font-style: italic; }
   blockquote.pullquote {
     background-color: transparent;
     border: none;
     color: #de9041;
     font-size: 1.44rem;
-    line-height: 2.25rem;
-    margin: 1.5rem 0 2.25rem 0;
+    line-height: 2.625rem;
+    margin: 1.75rem 0 2.625rem 0;
     position: relative;
     text-align: center; }
-    @media (min-width: 40em) and (min-height: 30em) {
+    @media (min-width: 40em) {
       blockquote.pullquote {
         font-size: 1.728rem;
         line-height: 2.625rem;
         margin: 2.625rem 3.5rem 3.5rem 3.5rem; } }
+    blockquote.pullquote p {
+      font-size: 1.44rem;
+      line-height: 2.625rem; }
+      @media (min-width: 40em) {
+        blockquote.pullquote p {
+          font-size: 1.728rem;
+          line-height: 2.625rem; } }
+    blockquote.pullquote cite {
+      font-size: 1rem;
+      line-height: 1.75rem; }
     blockquote.pullquote:before {
       color: #a2a2a2;
       content: "\f10d";
@@ -392,9 +304,9 @@ blockquote {
       font-size: 1.44rem;
       font-style: normal;
       font-weight: normal;
-      line-height: 2.25rem;
+      line-height: 2.625rem;
       text-align: center; }
-      @media (min-width: 40em) and (min-height: 30em) {
+      @media (min-width: 40em) {
         blockquote.pullquote:before {
           font-size: 1.728rem;
           line-height: 2.625rem; } }
@@ -408,29 +320,33 @@ blockquote {
       font-weight: normal;
       left: 0;
       letter-spacing: -0.1em;
-      line-height: 2.25rem;
+      line-height: 2.625rem;
       margin-left: -0.05em;
       position: absolute;
       text-align: center;
       top: 0;
       white-space: nowrap;
       width: 100%; }
-      @media (min-width: 40em) and (min-height: 30em) {
+      @media (min-width: 40em) {
         blockquote.pullquote:after {
           font-size: 1.728rem;
           line-height: 2.625rem; } }
-    @media (min-width: 40em) and (min-height: 30em) {
+    @media (min-width: 40em) {
       blockquote.pullquote.left, blockquote.pullquote.right {
         box-sizing: border-box;
         font-size: 1.44rem;
         line-height: 2.625rem;
+        margin-bottom: 2.625rem;
         margin-top: 1.75rem;
         text-align: left;
         width: 50%; }
         blockquote.pullquote.left:before, blockquote.pullquote.left:after, blockquote.pullquote.right:before, blockquote.pullquote.right:after {
           font-size: 1.44rem;
+          line-height: 2.625rem; }
+        blockquote.pullquote.left p, blockquote.pullquote.right p {
+          font-size: 1.44rem;
           line-height: 2.625rem; } }
-    @media (min-width: 40em) and (min-height: 30em) {
+    @media (min-width: 40em) {
       blockquote.pullquote.left {
         float: left;
         margin-left: 0;
@@ -439,7 +355,7 @@ blockquote {
         blockquote.pullquote.left:after {
           box-sizing: border-box;
           padding-right: 1.75rem; } }
-    @media (min-width: 40em) and (min-height: 30em) {
+    @media (min-width: 40em) {
       blockquote.pullquote.right {
         float: right;
         margin-left: 1.75rem;
@@ -459,17 +375,10 @@ h6.collapsable-processed {
   border-bottom: 2px transparent solid;
   clear: both;
   cursor: pointer;
-  padding: 1.125rem 4.5rem 1.125rem 1.5rem;
+  padding: 1.3125rem 5.25rem 1.3125rem 1.75rem;
   position: relative;
   transition-duration: 0.25s;
   transition-property: background-color,border-color,color,padding-bottom,padding-top; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    h2.collapsable-processed,
-    h3.collapsable-processed,
-    h4.collapsable-processed,
-    h5.collapsable-processed,
-    h6.collapsable-processed {
-      padding: 1.3125rem 5.25rem 1.3125rem 1.75rem; } }
   h2.collapsable-processed:before,
   h3.collapsable-processed:before,
   h4.collapsable-processed:before,
@@ -481,16 +390,8 @@ h6.collapsable-processed {
     font-style: normal;
     font-weight: normal;
     position: absolute;
-    right: 1.5rem;
-    top: 1.125rem; }
-    @media (min-width: 40em) and (min-height: 30em) {
-      h2.collapsable-processed:before,
-      h3.collapsable-processed:before,
-      h4.collapsable-processed:before,
-      h5.collapsable-processed:before,
-      h6.collapsable-processed:before {
-        right: 1.75rem;
-        top: 1.3125rem; } }
+    right: 1.75rem;
+    top: 1.3125rem; }
   h2.collapsable-processed.closed,
   h3.collapsable-processed.closed,
   h4.collapsable-processed.closed,
@@ -551,10 +452,7 @@ h6.collapsable-processed {
   border: 2px rgba(0, 0, 0, 0.13) solid;
   border-top: none !important;
   overflow: hidden;
-  padding: 0.75rem 1.5rem 1.5rem 1.5rem; }
-  @media (min-width: 40em) and (min-height: 30em) {
-    .collapsables {
-      padding: 0.875rem 1.75rem 1.75rem 1.75rem; } }
+  padding: 0.875rem 1.75rem 1.75rem 1.75rem; }
   .collapsables.closed {
     border: none;
     height: 1px;

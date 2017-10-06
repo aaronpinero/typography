@@ -6,14 +6,12 @@ $sans:Montserrat,sans-serif;
 $mono:'Overpass Mono',monospace;
 $symbol:FontAwesome;
 
-// typographical breakpoint
-$break-lineheight-horizontal:40em;
-$break-lineheight-vertical:30em;
+// breakpoints
+$break-floats:40em;
+$break-pullquote-large:40em;
 
-// half line heights
-// the body text line height is 2x
-$line-height-large:0.875rem;
-$line-height-small:0.75rem;
+// grid unit -- should be half the default line height
+$grid-unit:0.875rem;
 
 // colors
 $color-brand:#418fde;

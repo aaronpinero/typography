@@ -1,45 +1,32 @@
 // font styles and line heights for lists
 ol,
 ul {
-	@include calc-line-height($font-size-p,$line-height-small);
+	@include calc-line-height($font-size-p,$grid-unit);
 	margin-bottom:0;
 	margin-top:0;
-	padding-left:3*$line-height-small;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		@include calc-line-height($font-size-p,$line-height-large);
-		padding-left:3*$line-height-large;
-	}
+	padding-left:3*$grid-unit;
 }
 li {
 	font-family:$serif;
 	font-style:normal;
 	font-weight:400;
 	letter-spacing:0;
-	@include calc-line-height($font-size-p,$line-height-small);
+	@include calc-line-height($font-size-p,$grid-unit);
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		@include calc-line-height($font-size-p,$line-height-large);
-	}
 }
 
 // margins for lists
 * + ol,
 * + ul {
-	margin-top:2*$line-height-small;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:2*$line-height-large;
-	}
+	margin-top:2*$grid-unit;
 }
 h2 + ol,
 h3 + ol,
 h4 + ol,
 h5 + ol,
 h6 + ol {
-	margin-top:2*$line-height-small;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:2*$line-height-large;
-	}
+	margin-top:2*$grid-unit;
 }
 ol + h1,
 ol + h2,
@@ -47,20 +34,14 @@ ol + h3,
 ol + h4,
 ol + h5,
 ol + h6 {
-	margin-top:3*$line-height-small;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:3*$line-height-large;
-	}
+	margin-top:3*$grid-unit;
 }
 h2 + ul,
 h3 + ul,
 h4 + ul,
 h5 + ul,
 h6 + ul {
-	margin-top:2*$line-height-small;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:2*$line-height-large;
-	}
+	margin-top:2*$grid-unit;
 }
 ul + h1,
 ul + h2,
@@ -68,16 +49,10 @@ ul + h3,
 ul + h4,
 ul + h5,
 ul + h6 {
-	margin-top:3*$line-height-small;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:3*$line-height-large;
-	}
+	margin-top:3*$grid-unit;
 }
 li + li {
-	margin-top:$line-height-small;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:$line-height-large;
-	}
+	margin-top:$grid-unit;
 }
 
 // nested lists
@@ -85,10 +60,7 @@ ol,
 ul {
 	ol,
 	ul {
-		margin-top:$line-height-small;
-		@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-			margin-top:$line-height-large;
-		}
+		margin-top:$grid-unit;
 	}
 }
 
@@ -100,7 +72,7 @@ ul.list-icons {
 		&:before {
 			color:$color-text-light;
 			font-family:$symbol;
-			margin-right:$line-height-large;
+			margin-right:$grid-unit;
 			position:absolute;
 			right:100%;
 			top:0;

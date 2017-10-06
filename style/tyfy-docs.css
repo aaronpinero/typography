@@ -1,12 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900,900i|Montserrat:400,400i,500,500i,600,600i,700,700i|Overpass+Mono:400,700");
 body {
-  animation-duration: 1s;
-  animation-name: fadein;
-  margin: 0 0 1.5rem 0;
+  animation: fadein 1s;
+  margin: 0 0 1.75rem 0;
   padding: 0; }
-  @media (min-height: 30em) {
-    body {
-      margin: 0 0 1.75rem 0; } }
 
 @keyframes fadein {
   from {
@@ -18,32 +14,22 @@ body {
 
 header.brand h1 {
   font-size: 2.0736rem;
-  line-height: 3rem;
+  line-height: 2.625rem;
   margin: 0 auto;
   max-width: 55rem;
-  padding: 0.75rem; }
+  padding: 0.875rem; }
   @media (min-width: 40em) {
     header.brand h1 {
       padding-left: 1.75rem;
       padding-right: 1.75rem; } }
-  @media (min-width: 40em) and (min-height: 30em) {
-    header.brand h1 {
-      padding-bottom: 0.875rem;
-      padding-top: 0.875rem;
-      line-height: 2.625rem; } }
 
 section.main {
   margin: 0 auto;
   max-width: 55rem;
-  padding: 0.75rem; }
+  padding: 0.875rem; }
   @media (min-width: 40em) {
     section.main {
-      padding-left: 1.75rem;
-      padding-right: 1.75rem; } }
-  @media (min-height: 30em) {
-    section.main {
-      padding-bottom: 1.75rem;
-      padding-top: 1.75rem; } }
+      padding: 1.75rem; } }
 
 section.demo {
   background-color: #f3f3f3;

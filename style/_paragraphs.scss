@@ -32,12 +32,9 @@ h1 {
 	font-style:normal;
 	font-weight:900;
 	letter-spacing:0;
-	@include calc-line-height($font-size-h1,$line-height-small);
+	@include calc-line-height($font-size-h1,$grid-unit);
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		@include calc-line-height($font-size-h1,$line-height-large);
-	}
 }
 h2 {
 	color:$color-text-head;
@@ -46,12 +43,9 @@ h2 {
 	font-style:normal;
 	font-weight:700;
 	letter-spacing:0;
-	@include calc-line-height($font-size-h2,$line-height-small);
+	@include calc-line-height($font-size-h2,$grid-unit);
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		@include calc-line-height($font-size-h2,$line-height-large);
-	}
 }
 h3 {
 	color:$color-text-head;
@@ -60,12 +54,9 @@ h3 {
 	font-style:normal;
 	font-weight:600;
 	letter-spacing:0;
-	@include calc-line-height($font-size-h3,$line-height-small);
+	@include calc-line-height($font-size-h3,$grid-unit);
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		@include calc-line-height($font-size-h3,$line-height-large);
-	}
 }
 h4 {
 	color:$color-text-head;
@@ -74,12 +65,9 @@ h4 {
 	font-style:italic;
 	font-weight:600;
 	letter-spacing:0;
-	@include calc-line-height($font-size-h4,$line-height-small);
+	@include calc-line-height($font-size-h4,$grid-unit);
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		@include calc-line-height($font-size-h4,$line-height-large);
-	}
 }
 h5 {
 	color:$color-text-head;
@@ -88,12 +76,9 @@ h5 {
 	font-style:italic;
 	font-weight:500;
 	letter-spacing:0;
-	@include calc-line-height($font-size-h5,$line-height-small);
+	@include calc-line-height($font-size-h5,$grid-unit);
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		@include calc-line-height($font-size-h5,$line-height-large);
-	}
 }
 h6 {
 	color:$color-text-head;
@@ -102,25 +87,19 @@ h6 {
 	font-style:normal;
 	font-weight:500;
 	letter-spacing:0.025em;
-	@include calc-line-height($font-size-h6,$line-height-small);
+	@include calc-line-height($font-size-h6,$grid-unit);
 	margin-bottom:0;
 	margin-top:0;
 	text-transform:uppercase;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		@include calc-line-height($font-size-h6,$line-height-large);
-	}
 }
 p {
 	font-size:$font-size-p;
 	font-style:normal;
 	font-weight:400;
 	letter-spacing:0;
-	@include calc-line-height($font-size-p,$line-height-small);
+	@include calc-line-height($font-size-p,$grid-unit);
 	margin-bottom:0;
 	margin-top:0;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		@include calc-line-height($font-size-p,$line-height-large);
-	}
 }
 
 // margins for paragraphs
@@ -131,20 +110,14 @@ p {
 * + h5,
 * + h6,
 * + p {
-	margin-top:2*$line-height-small;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:2*$line-height-large;
-	}
+	margin-top:2*$grid-unit;
 }
 h2 + p,
 h3 + p,
 h4 + p,
 h5 + p,
 h6 + p {
-	margin-top:2*$line-height-small;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:2*$line-height-large;
-	}
+	margin-top:2*$grid-unit;
 }
 p + h1,
 p + h2,
@@ -152,8 +125,5 @@ p + h3,
 p + h4,
 p + h5,
 p + h6 {
-	margin-top:3*$line-height-small;
-	@media (min-width:$break-lineheight-horizontal) and (min-height:$break-lineheight-vertical) {
-		margin-top:3*$line-height-large;
-	}
+	margin-top:3*$grid-unit;
 }
