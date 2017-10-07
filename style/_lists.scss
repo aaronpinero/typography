@@ -97,16 +97,24 @@ ul {
 			list-style-type:none;
 		}
 	}
+}
+ol,
+ul {
 	&.list-cols-2,
 	&.list-cols-3 {
 		@media (min-width:$break-list-cols-2) {
 			columns:2;
 			column-gap:3*$grid-unit;
-			padding-right:3*$grid-unit;
+			margin-bottom:-1*$grid-unit; // to balance out the bottom padding on the list items
+			padding-right:3*$grid-unit; // to balance the left padding and make the columns centered in the body
 			li {
 				-webkit-column-break-inside:avoid;
 				page-break-inside:avoid;
 				break-inside:avoid;
+				padding-bottom:$grid-unit;
+			}
+			li + li {
+				margin-top:0;	// override of the default margin;
 			}
 		}
 	}
@@ -115,6 +123,8 @@ ul {
 			columns:3;
 		}
 	}
+	
+	// TODO: a flexbox version of this, falling back to floats by checking for flexbox with modernizer
 	&.list-grid-2,
 	&.list-grid-3 {
 		@media (min-width:$break-list-cols-2) {
@@ -122,13 +132,13 @@ ul {
 			li {
 				box-sizing:border-box;
 				float:left;
-				padding-right:3*$grid-unit;
+				padding-right:3*$grid-unit; // to balance the left padding and make the columns centered in the body
 				width:50%;
 				&:nth-child(2) {
-					margin-top:0;
+					margin-top:0; // override of the default margin
 				}
 				&:nth-child(2n+1) {
-					clear:left;
+					clear:left; // to make sure each new row begins properly even when list items are not all the same height
 				}
 			}
 		}
@@ -138,15 +148,17 @@ ul {
 			li {
 				width:33.333%;
 				&:nth-child(3) {
-					margin-top:0;
+					margin-top:0; // override of the default margin
 				}
 				&:nth-child(2n+1) {
-					clear:none;
+					clear:none; // override the 2 column style
 				}
 				&:nth-child(3n+1) {
-					clear:left;
+					clear:left; // to make sure each new row begins properly even when list items are not all the same height
 				}
 			}
 		}
 	}
 }
+
+// TODO: definition lists
