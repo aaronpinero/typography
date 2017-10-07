@@ -108,12 +108,12 @@
 	// quotes
   blockquote {
     &.pullquote {
-      color:saturate(lighten(complement($color-brand),20%),20%);
+      color:$color-text-pullquote-reverse;
       &:before {
-        color:darken($color-text-body-reverse,40%);
+        color:$color-text-light-reverse;
       }
       &:after {
-        color:darken($color-text-body-reverse,50%);
+        color:darken($color-text-light-reverse,10%);
       }
     }
   }

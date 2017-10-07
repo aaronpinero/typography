@@ -5,7 +5,7 @@ html {
   font-size: 100%; }
 
 body {
-  color: #222;
+  color: #111;
   font-family: Merriweather, serif;
   font-size: 1rem; }
 
@@ -34,7 +34,7 @@ body {
   font-size: 2.48832rem; }
 
 h1 {
-  color: #343434;
+  color: #232323;
   font-family: Merriweather, serif;
   font-size: 2.48832rem;
   font-style: normal;
@@ -45,7 +45,7 @@ h1 {
   margin-top: 0; }
 
 h2 {
-  color: #343434;
+  color: #232323;
   font-family: Montserrat, sans-serif;
   font-size: 1.728rem;
   font-style: normal;
@@ -56,7 +56,7 @@ h2 {
   margin-top: 0; }
 
 h3 {
-  color: #343434;
+  color: #232323;
   font-family: Montserrat, sans-serif;
   font-size: 1.44rem;
   font-style: normal;
@@ -67,7 +67,7 @@ h3 {
   margin-top: 0; }
 
 h4 {
-  color: #343434;
+  color: #232323;
   font-family: Montserrat, sans-serif;
   font-size: 1.2rem;
   font-style: italic;
@@ -78,7 +78,7 @@ h4 {
   margin-top: 0; }
 
 h5 {
-  color: #343434;
+  color: #232323;
   font-family: Montserrat, sans-serif;
   font-size: 1rem;
   font-style: italic;
@@ -89,7 +89,7 @@ h5 {
   margin-top: 0; }
 
 h6 {
-  color: #343434;
+  color: #232323;
   font-family: Montserrat, sans-serif;
   font-size: 0.83333rem;
   font-style: normal;
@@ -134,16 +134,16 @@ p + h6 {
   margin-top: 2.625rem; }
 
 a {
-  color: #222;
+  color: #111;
   text-decoration: none;
   transition-duration: 0.25s;
   transition-property: border-color,color; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    color: #343434; }
+    color: #232323; }
   a[href] {
     color: #1d75cf; }
     h1 a[href], h2 a[href], h3 a[href], h4 a[href], h5 a[href], h6 a[href] {
-      color: #343434; }
+      color: #232323; }
     a[href]:hover, a[href]:active {
       color: #cf771d; }
       h1 a[href]:hover, h2 a[href]:hover, h3 a[href]:hover, h4 a[href]:hover, h5 a[href]:hover, h6 a[href]:hover, h1 a[href]:active, h2 a[href]:active, h3 a[href]:active, h4 a[href]:active, h5 a[href]:active, h6 a[href]:active {
@@ -153,7 +153,7 @@ a {
       .links-underlined a[href]:hover, .links-underlined a[href]:active {
         border-bottom: 2px #cf771d solid; }
     .links-underlined h1 a[href], .links-underlined h2 a[href], .links-underlined h3 a[href], .links-underlined h4 a[href], .links-underlined h5 a[href], .links-underlined h6 a[href] {
-      border-bottom: 2px rgba(52, 52, 52, 0.5) solid; }
+      border-bottom: 2px rgba(35, 35, 35, 0.5) solid; }
       .links-underlined h1 a[href]:hover, .links-underlined h1 a[href]:active, .links-underlined h2 a[href]:hover, .links-underlined h2 a[href]:active, .links-underlined h3 a[href]:hover, .links-underlined h3 a[href]:active, .links-underlined h4 a[href]:hover, .links-underlined h4 a[href]:active, .links-underlined h5 a[href]:hover, .links-underlined h5 a[href]:active, .links-underlined h6 a[href]:hover, .links-underlined h6 a[href]:active {
         border-bottom: 2px #cf771d solid; }
 
@@ -220,7 +220,7 @@ ul.list-icons li {
   list-style-type: none;
   position: relative; }
   ul.list-icons li:before {
-    color: #626262;
+    color: #919191;
     font-family: FontAwesome;
     margin-right: 0.875rem;
     position: absolute;
@@ -310,7 +310,7 @@ b {
   font-weight: 700; }
 
 code {
-  background-color: rgba(34, 34, 34, 0.1);
+  background-color: rgba(17, 17, 17, 0.1);
   font-family: "Overpass Mono", monospace; }
 
 pre {
@@ -367,7 +367,7 @@ blockquote {
     blockquote.pullquote * + cite {
       margin-top: 0.875rem; }
     blockquote.pullquote:before {
-      color: #626262;
+      color: #919191;
       content: "\f10d";
       display: block;
       font-family: FontAwesome;
@@ -375,7 +375,7 @@ blockquote {
       font-weight: normal;
       text-align: center; }
     blockquote.pullquote:after {
-      color: #7b7b7b;
+      color: #aaaaaa;
       content: "———— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 ————";
       display: block;
       font-family: FontAwesome;
@@ -421,19 +421,20 @@ h4.collapsable-processed,
 h5.collapsable-processed,
 h6.collapsable-processed {
   background-color: transparent;
-  border: 2px rgba(0, 0, 0, 0.13) solid;
+  border: 2px rgba(17, 17, 17, 0.13) solid;
   border-bottom: 2px transparent solid;
   clear: both;
   cursor: pointer;
-  padding: 1.3125rem 5.25rem 1.3125rem 1.75rem;
+  padding: 1.75rem 5.25rem 0.875rem 1.75rem;
   position: relative;
-  transition-duration: 0.25s;
-  transition-property: background-color,border-color,color,padding-bottom,padding-top; }
+  transition-duration: 0.5s;
+  transition-property: padding-top; }
   h2.collapsable-processed:before,
   h3.collapsable-processed:before,
   h4.collapsable-processed:before,
   h5.collapsable-processed:before,
   h6.collapsable-processed:before {
+    border-radius: 50%;
     content: "\f077";
     font-family: FontAwesome;
     font-size: 1rem;
@@ -441,40 +442,69 @@ h6.collapsable-processed {
     font-weight: normal;
     position: absolute;
     right: 1.75rem;
-    top: 1.3125rem; }
+    text-align: center;
+    top: 1.75rem;
+    transition-duration: 0.5s;
+    transition-property: background-color,color,top;
+    width: 2.625rem; }
   h2.collapsable-processed.closed,
   h3.collapsable-processed.closed,
   h4.collapsable-processed.closed,
   h5.collapsable-processed.closed,
   h6.collapsable-processed.closed {
-    background-color: rgba(0, 0, 0, 0.13);
-    border-color: transparent; }
+    border-bottom: 2px rgba(17, 17, 17, 0.13) solid;
+    padding-top: 0.875rem; }
     h2.collapsable-processed.closed:before,
     h3.collapsable-processed.closed:before,
     h4.collapsable-processed.closed:before,
     h5.collapsable-processed.closed:before,
     h6.collapsable-processed.closed:before {
-      content: "\f078"; }
+      content: "\f078";
+      top: 0.875rem; }
+  h2.collapsable-processed.transition,
+  h3.collapsable-processed.transition,
+  h4.collapsable-processed.transition,
+  h5.collapsable-processed.transition,
+  h6.collapsable-processed.transition {
+    padding-top: 0.875rem; }
+    h2.collapsable-processed.transition:before,
+    h3.collapsable-processed.transition:before,
+    h4.collapsable-processed.transition:before,
+    h5.collapsable-processed.transition:before,
+    h6.collapsable-processed.transition:before {
+      top: 0.875rem; }
+  h2.collapsable-processed.transition.closed,
+  h3.collapsable-processed.transition.closed,
+  h4.collapsable-processed.transition.closed,
+  h5.collapsable-processed.transition.closed,
+  h6.collapsable-processed.transition.closed {
+    padding-top: 1.75rem; }
+    h2.collapsable-processed.transition.closed:before,
+    h3.collapsable-processed.transition.closed:before,
+    h4.collapsable-processed.transition.closed:before,
+    h5.collapsable-processed.transition.closed:before,
+    h6.collapsable-processed.transition.closed:before {
+      top: 1.75rem; }
 
 h3.collapsable-processed {
   border-color: rgba(0, 0, 0, 0.11); }
-  h3.collapsable-processed.closed {
-    background-color: rgba(0, 0, 0, 0.11); }
+  h3.collapsable-processed:before {
+    width: 1.75rem; }
 
 h4.collapsable-processed {
   border-color: rgba(0, 0, 0, 0.09); }
-  h4.collapsable-processed.closed {
-    background-color: rgba(0, 0, 0, 0.09); }
+  h4.collapsable-processed:before {
+    width: 1.75rem; }
 
 h5.collapsable-processed {
   border-color: rgba(0, 0, 0, 0.07); }
-  h5.collapsable-processed.closed {
-    background-color: rgba(0, 0, 0, 0.07); }
+  h5.collapsable-processed:before {
+    width: 1.75rem; }
 
 h6.collapsable-processed {
   border-color: rgba(0, 0, 0, 0.05); }
-  h6.collapsable-processed.closed {
-    background-color: rgba(0, 0, 0, 0.05); }
+  h6.collapsable-processed:before {
+    width: 1.75rem; }
 
 h2.collapsable-processed,
 h3.collapsable-processed,
@@ -482,20 +512,19 @@ h4.collapsable-processed,
 h5.collapsable-processed,
 h6.collapsable-processed {
   border-bottom-color: transparent; }
-  h2.collapsable-processed:hover,
-  h3.collapsable-processed:hover,
-  h4.collapsable-processed:hover,
-  h5.collapsable-processed:hover,
-  h6.collapsable-processed:hover {
-    border-color: #cf771d;
+  h2.collapsable-processed.transition,
+  h3.collapsable-processed.transition,
+  h4.collapsable-processed.transition,
+  h5.collapsable-processed.transition,
+  h6.collapsable-processed.transition {
+    border-bottom-color: transparent; }
+  h2.collapsable-processed:hover:before,
+  h3.collapsable-processed:hover:before,
+  h4.collapsable-processed:hover:before,
+  h5.collapsable-processed:hover:before,
+  h6.collapsable-processed:hover:before {
     background-color: #cf771d;
     color: white; }
-    h2.collapsable-processed:hover:before,
-    h3.collapsable-processed:hover:before,
-    h4.collapsable-processed:hover:before,
-    h5.collapsable-processed:hover:before,
-    h6.collapsable-processed:hover:before {
-      color: white; }
 
 .collapsables {
   box-sizing: border-box;
@@ -519,28 +548,28 @@ h6.collapsable-processed {
     border-color: rgba(0, 0, 0, 0.05); }
 
 .reverse {
-  color: #dddddd; }
+  color: #eeeeee; }
   .reverse h1 {
-    color: #cbcbcb; }
+    color: gainsboro; }
   .reverse h2 {
-    color: #cbcbcb; }
+    color: gainsboro; }
   .reverse h3 {
-    color: #cbcbcb; }
+    color: gainsboro; }
   .reverse h4 {
-    color: #cbcbcb; }
+    color: gainsboro; }
   .reverse h5 {
-    color: #cbcbcb; }
+    color: gainsboro; }
   .reverse h6 {
-    color: #cbcbcb; }
+    color: gainsboro; }
   .reverse a {
-    color: #dddddd; }
+    color: #eeeeee; }
   .reverse h1 a,
   .reverse h2 a,
   .reverse h3 a,
   .reverse h4 a,
   .reverse h5 a,
   .reverse h6 a {
-    color: #cbcbcb; }
+    color: gainsboro; }
   .reverse a[href] {
     color: #86c2ff; }
   .reverse h1 a[href],
@@ -549,7 +578,7 @@ h6.collapsable-processed {
   .reverse h4 a[href],
   .reverse h5 a[href],
   .reverse h6 a[href] {
-    color: #cbcbcb; }
+    color: gainsboro; }
   .reverse a[href]:hover,
   .reverse a[href]:active {
     color: #ffc386; }
@@ -561,7 +590,7 @@ h6.collapsable-processed {
   .reverse .links-underlined h4 a[href],
   .reverse .links-underlined h5 a[href],
   .reverse .links-underlined h6 a[href] {
-    border-bottom: 2px rgba(203, 203, 203, 0.5) solid; }
+    border-bottom: 2px rgba(220, 220, 220, 0.5) solid; }
   .reverse .links-underlined a[href]:hover,
   .reverse .links-underlined a[href]:active {
     border-bottom: 2px #ffc386 solid; }
@@ -573,21 +602,21 @@ h6.collapsable-processed {
   .reverse.links-underlined h4 a[href],
   .reverse.links-underlined h5 a[href],
   .reverse.links-underlined h6 a[href] {
-    border-bottom: 2px rgba(203, 203, 203, 0.5) solid; }
+    border-bottom: 2px rgba(220, 220, 220, 0.5) solid; }
   .reverse.links-underlined a[href]:hover,
   .reverse.links-underlined a[href]:active {
     border-bottom: 2px #ffc386 solid; }
   .links-underlined .reverse a[href] {
     border-bottom: 2px rgba(134, 194, 255, 0.5) solid; }
   .links-underlined .reverse h1 a[href], .links-underlined .reverse h2 a[href], .links-underlined .reverse h3 a[href], .links-underlined .reverse h4 a[href], .links-underlined .reverse h5 a[href], .links-underlined .reverse h6 a[href] {
-    border-bottom: 2px rgba(203, 203, 203, 0.5) solid; }
+    border-bottom: 2px rgba(220, 220, 220, 0.5) solid; }
   .links-underlined .reverse a[href]:hover, .links-underlined .reverse a[href]:active {
     border-bottom: 2px #ffc386 solid; }
   .reverse blockquote.pullquote {
-    color: #f9c38c; }
+    color: #ffdcb9; }
     .reverse blockquote.pullquote:before {
-      color: #777777; }
+      color: #6e6e6e; }
     .reverse blockquote.pullquote:after {
-      color: #5e5e5e; }
+      color: #555555; }
 
 /*# sourceMappingURL=tyfy.css.map */

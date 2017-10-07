@@ -11,7 +11,7 @@ body {
   to {
     opacity: 1; } }
 .reverse {
-  background-color: #222; }
+  background-color: #111; }
 
 header.brand h1 {
   font-size: 1.44rem;
@@ -33,12 +33,12 @@ section.main {
       padding: 1.75rem; } }
 
 section.demo {
-  background-color: #f3f3f3;
-  border: 1px dashed #cdcdcd;
+  background-color: #f7f7f7;
+  border: 1px dashed #c4c4c4;
   border-radius: 1rem; }
 
 section.demo.reverse {
-  background-color: #222;
+  background-color: #111;
   border: none; }
 
 /*# sourceMappingURL=tyfy-docs.css.map */
