@@ -9,33 +9,23 @@ $symbol:FontAwesome;
 // breakpoints
 $break-floats:40em;
 $break-pullquote-large:40em;
+$break-list-cols-2:35em;
+$break-list-cols-3:55em;
 
 // grid unit -- should be half the default line height
 $grid-unit:0.875rem;
-
-// colors
-$color-brand:#418fde;
-$color-text-body:#222;
-$color-text-head:lighten($color-text-body,7%);
-$color-text-light:lighten($color-text-body,25%);
-$color-link-default:saturate(darken($color-brand,10%),5%);
-$color-link-active:complement($color-link-default);
-$color-text-body-reverse:invert($color-text-body);
-$color-text-head-reverse:invert($color-text-head);
-$color-text-light-reverse:invert($color-text-light);
-$color-link-default-reverse:saturate(lighten($color-link-default,30%),30%);
-$color-link-active-reverse:complement($color-link-default-reverse);
 
 // modular scale
 $font-size-scalar:1.2;
 $font-size-p:1rem;
 $font-size-sm:$font-size-p / $font-size-scalar;
-$font-size-h6:$font-size-p * $font-size-scalar;
-$font-size-h5:$font-size-h6 * $font-size-scalar;
+$font-size-h6:$font-size-p / $font-size-scalar;
+$font-size-h5:$font-size-p;
 $font-size-h4:$font-size-h5 * $font-size-scalar;
 $font-size-h3:$font-size-h4 * $font-size-scalar;
 $font-size-h2:$font-size-h3 * $font-size-scalar;
-$font-size-h1:$font-size-h2 * $font-size-scalar;
+$font-size-h1:$font-size-h2 * $font-size-scalar * $font-size-scalar;
+$font-size-pullquote:$font-size-p * $font-size-scalar;
 
 // transitions
 $transition-duration-hover:0.25s;

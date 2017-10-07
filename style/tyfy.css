@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900,900i|Montserrat:400,400i,500,500i,600,600i,700,700i|Overpass+Mono:400,700");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900,900i|Montserrat:400,400i,500,500i,600,600i,700,700i|Overpass+Mono:400,700");
 html {
   font-size: 100%; }
 
@@ -15,27 +16,27 @@ body {
   font-size: 1rem; }
 
 .font-size-h6 {
-  font-size: 1.2rem; }
+  font-size: 0.83333rem; }
 
 .font-size-h5 {
-  font-size: 1.44rem; }
+  font-size: 1rem; }
 
 .font-size-h4 {
-  font-size: 1.728rem; }
+  font-size: 1.2rem; }
 
 .font-size-h3 {
-  font-size: 2.0736rem; }
+  font-size: 1.44rem; }
 
 .font-size-h2 {
-  font-size: 2.48832rem; }
+  font-size: 1.728rem; }
 
 .font-size-h1 {
-  font-size: 2.98598rem; }
+  font-size: 2.48832rem; }
 
 h1 {
   color: #343434;
   font-family: Merriweather, serif;
-  font-size: 2.98598rem;
+  font-size: 2.48832rem;
   font-style: normal;
   font-weight: 900;
   letter-spacing: 0;
@@ -46,40 +47,40 @@ h1 {
 h2 {
   color: #343434;
   font-family: Montserrat, sans-serif;
-  font-size: 2.48832rem;
+  font-size: 1.728rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0;
-  line-height: 3.5rem;
+  line-height: 2.625rem;
   margin-bottom: 0;
   margin-top: 0; }
 
 h3 {
   color: #343434;
   font-family: Montserrat, sans-serif;
-  font-size: 2.0736rem;
+  font-size: 1.44rem;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 2.625rem;
+  line-height: 1.75rem;
   margin-bottom: 0;
   margin-top: 0; }
 
 h4 {
   color: #343434;
   font-family: Montserrat, sans-serif;
-  font-size: 1.728rem;
+  font-size: 1.2rem;
   font-style: italic;
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 2.625rem;
+  line-height: 1.75rem;
   margin-bottom: 0;
   margin-top: 0; }
 
 h5 {
   color: #343434;
   font-family: Montserrat, sans-serif;
-  font-size: 1.44rem;
+  font-size: 1rem;
   font-style: italic;
   font-weight: 500;
   letter-spacing: 0;
@@ -90,7 +91,7 @@ h5 {
 h6 {
   color: #343434;
   font-family: Montserrat, sans-serif;
-  font-size: 1.2rem;
+  font-size: 0.83333rem;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.025em;
@@ -233,6 +234,47 @@ ul.list-icons.list-icons-check li:before {
   content: "\f00c"; }
 ul.list-icons.list-icons-chevron li:before {
   content: "\f054"; }
+ul.no-bullet li {
+  list-style-type: none; }
+@media (min-width: 35em) {
+  ul.list-cols-2, ul.list-cols-3 {
+    columns: 2;
+    column-gap: 2.625rem;
+    padding-right: 2.625rem; }
+    ul.list-cols-2 li, ul.list-cols-3 li {
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid; } }
+@media (min-width: 55em) {
+  ul.list-cols-3 {
+    columns: 3; } }
+@media (min-width: 35em) {
+  ul.list-grid-2, ul.list-grid-3 {
+    *zoom: 1; }
+    ul.list-grid-2:before, ul.list-grid-2:after, ul.list-grid-3:before, ul.list-grid-3:after {
+      display: table;
+      content: "";
+      line-height: 0; }
+    ul.list-grid-2:after, ul.list-grid-3:after {
+      clear: both; }
+    ul.list-grid-2 li, ul.list-grid-3 li {
+      box-sizing: border-box;
+      float: left;
+      padding-right: 2.625rem;
+      width: 50%; }
+      ul.list-grid-2 li:nth-child(2), ul.list-grid-3 li:nth-child(2) {
+        margin-top: 0; }
+      ul.list-grid-2 li:nth-child(2n+1), ul.list-grid-3 li:nth-child(2n+1) {
+        clear: left; } }
+@media (min-width: 55em) {
+  ul.list-grid-3 li {
+    width: 33.333%; }
+    ul.list-grid-3 li:nth-child(3) {
+      margin-top: 0; }
+    ul.list-grid-3 li:nth-child(2n+1) {
+      clear: none; }
+    ul.list-grid-3 li:nth-child(3n+1) {
+      clear: left; } }
 
 b {
   font-weight: 700; }
@@ -276,76 +318,54 @@ blockquote {
     background-color: transparent;
     border: none;
     color: #de9041;
-    font-size: 1.44rem;
-    line-height: 2.625rem;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
     margin: 1.75rem 0 2.625rem 0;
     position: relative;
     text-align: center; }
     @media (min-width: 40em) {
       blockquote.pullquote {
-        font-size: 1.728rem;
-        line-height: 2.625rem;
         margin: 2.625rem 3.5rem 3.5rem 3.5rem; } }
     blockquote.pullquote p {
-      font-size: 1.44rem;
-      line-height: 2.625rem; }
-      @media (min-width: 40em) {
-        blockquote.pullquote p {
-          font-size: 1.728rem;
-          line-height: 2.625rem; } }
-    blockquote.pullquote cite {
-      font-size: 1rem;
+      font-size: 1.2rem;
       line-height: 1.75rem; }
+    blockquote.pullquote cite {
+      display: block;
+      font-size: 0.83333rem;
+      font-style: normal;
+      line-height: 1.75rem; }
+    blockquote.pullquote * + cite {
+      margin-top: 0.875rem; }
     blockquote.pullquote:before {
-      color: #a2a2a2;
+      color: #626262;
       content: "\f10d";
       display: block;
       font-family: FontAwesome;
-      font-size: 1.44rem;
       font-style: normal;
       font-weight: normal;
-      line-height: 2.625rem;
       text-align: center; }
-      @media (min-width: 40em) {
-        blockquote.pullquote:before {
-          font-size: 1.728rem;
-          line-height: 2.625rem; } }
     blockquote.pullquote:after {
-      color: #bbbbbb;
+      color: #7b7b7b;
       content: "———— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 ————";
       display: block;
       font-family: FontAwesome;
-      font-size: 1.44rem;
       font-style: normal;
       font-weight: normal;
       left: 0;
       letter-spacing: -0.1em;
-      line-height: 2.625rem;
       margin-left: -0.05em;
       position: absolute;
       text-align: center;
       top: 0;
       white-space: nowrap;
       width: 100%; }
-      @media (min-width: 40em) {
-        blockquote.pullquote:after {
-          font-size: 1.728rem;
-          line-height: 2.625rem; } }
     @media (min-width: 40em) {
       blockquote.pullquote.left, blockquote.pullquote.right {
         box-sizing: border-box;
-        font-size: 1.44rem;
-        line-height: 2.625rem;
         margin-bottom: 2.625rem;
         margin-top: 1.75rem;
         text-align: left;
-        width: 50%; }
-        blockquote.pullquote.left:before, blockquote.pullquote.left:after, blockquote.pullquote.right:before, blockquote.pullquote.right:after {
-          font-size: 1.44rem;
-          line-height: 2.625rem; }
-        blockquote.pullquote.left p, blockquote.pullquote.right p {
-          font-size: 1.44rem;
-          line-height: 2.625rem; } }
+        width: 50%; } }
     @media (min-width: 40em) {
       blockquote.pullquote.left {
         float: left;

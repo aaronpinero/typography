@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900,900i|Montserrat:400,400i,500,500i,600,600i,700,700i|Overpass+Mono:400,700");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900,900i|Montserrat:400,400i,500,500i,600,600i,700,700i|Overpass+Mono:400,700");
 body {
   animation: fadein 1s;
   margin: 0 0 1.75rem 0;
@@ -13,8 +14,8 @@ body {
   background-color: #222; }
 
 header.brand h1 {
-  font-size: 2.0736rem;
-  line-height: 2.625rem;
+  font-size: 1.44rem;
+  line-height: 1.75rem;
   margin: 0 auto;
   max-width: 55rem;
   padding: 0.875rem; }

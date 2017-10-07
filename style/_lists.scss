@@ -65,38 +65,88 @@ ul {
 }
 
 // unordered list variations
-ul.list-icons {
-	li {
-		list-style-type:none;
-		position:relative;
-		&:before {
-			color:$color-text-light;
-			font-family:$symbol;
-			margin-right:$grid-unit;
-			position:absolute;
-			right:100%;
-			top:0;
+ul {
+	&.list-icons {
+		li {
+			list-style-type:none;
+			position:relative;
+			&:before {
+				color:$color-text-light;
+				font-family:$symbol;
+				margin-right:$grid-unit;
+				position:absolute;
+				right:100%;
+				top:0;
+			}
+		}
+		&.list-icons-angle li:before {
+			content:unquote("\"#{ $fa-var-angle-right }\"");
+		}
+		&.list-icons-caret li:before {
+			content:unquote("\"#{ $fa-var-caret-right }\"");
+		}
+		&.list-icons-check li:before {
+			content:unquote("\"#{ $fa-var-check }\"");
+		}
+		&.list-icons-chevron li:before {
+			content:unquote("\"#{ $fa-var-chevron-right }\"");
 		}
 	}
-	&.list-icons-angle li:before {
-		content:unquote("\"#{ $fa-var-angle-right }\"");
+	&.no-bullet {
+		li {
+			list-style-type:none;
+		}
 	}
-	&.list-icons-caret li:before {
-		content:unquote("\"#{ $fa-var-caret-right }\"");
+	&.list-cols-2,
+	&.list-cols-3 {
+		@media (min-width:$break-list-cols-2) {
+			columns:2;
+			column-gap:3*$grid-unit;
+			padding-right:3*$grid-unit;
+			li {
+				-webkit-column-break-inside:avoid;
+				page-break-inside:avoid;
+				break-inside:avoid;
+			}
+		}
 	}
-	&.list-icons-check li:before {
-		content:unquote("\"#{ $fa-var-check }\"");
+	&.list-cols-3 {
+		@media (min-width:$break-list-cols-3) {
+			columns:3;
+		}
 	}
-	&.list-icons-chevron li:before {
-		content:unquote("\"#{ $fa-var-chevron-right }\"");
+	&.list-grid-2,
+	&.list-grid-3 {
+		@media (min-width:$break-list-cols-2) {
+			@include clearfix;
+			li {
+				box-sizing:border-box;
+				float:left;
+				padding-right:3*$grid-unit;
+				width:50%;
+				&:nth-child(2) {
+					margin-top:0;
+				}
+				&:nth-child(2n+1) {
+					clear:left;
+				}
+			}
+		}
 	}
-}
-ul.list-no-bullet {
-	
-}
-ul.list-cols-2 {
-	
-}
-ul.list-cols-3 {
-	
+	&.list-grid-3 {
+		@media (min-width:$break-list-cols-3) {
+			li {
+				width:33.333%;
+				&:nth-child(3) {
+					margin-top:0;
+				}
+				&:nth-child(2n+1) {
+					clear:none;
+				}
+				&:nth-child(3n+1) {
+					clear:left;
+				}
+			}
+		}
+	}
 }

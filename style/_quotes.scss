@@ -10,85 +10,61 @@ blockquote {
 	&.pullquote {
 		background-color:transparent;
 		border:none;
-		color:complement($color-brand);
-		font-size:$font-size-h5;
-		@include calc-line-height($font-size-h4,$grid-unit);
+		color:$color-text-pullquote;
+		font-size:$font-size-pullquote;
+		@include calc-line-height($font-size-pullquote,$grid-unit);
 		margin:2*$grid-unit 0 3*$grid-unit 0;
 		position:relative;
 		text-align:center;
 		@media (min-width:$break-pullquote-large) {
-			font-size:$font-size-h4;
-			@include calc-line-height($font-size-h3,$grid-unit);
 			margin:3*$grid-unit 4*$grid-unit 4*$grid-unit 4*$grid-unit;
 		}
 		p {
-			font-size:$font-size-h5;
-			@include calc-line-height($font-size-h4,$grid-unit);
-			@media (min-width:$break-pullquote-large) {
-				font-size:$font-size-h4;
-				@include calc-line-height($font-size-h3,$grid-unit);
-			}
+			font-size:$font-size-pullquote;
+			@include calc-line-height($font-size-pullquote,$grid-unit);
 		}
 		cite {
-			font-size:$font-size-p;
-			@include calc-line-height($font-size-p,$grid-unit);
+			display:block;
+			font-size:$font-size-sm;
+			font-style:normal;
+			@include calc-line-height($font-size-sm,$grid-unit);
+		}
+		* + cite {
+			margin-top:$grid-unit;
 		}
 		&:before {
-			color:lighten($color-text-body,50%);
+			color:$color-text-light;
 			content:unquote("\"#{ $fa-var-quote-left }\"");
 			display:block;
 			font-family:$symbol;
-			font-size:$font-size-h5;
 			font-style:normal;
 			font-weight:normal;
-			@include calc-line-height($font-size-h4,$grid-unit);
 			text-align:center;
-			@media (min-width:$break-pullquote-large) {
-				font-size:$font-size-h4;
-				@include calc-line-height($font-size-h3,$grid-unit);
-			}
 		}
 		&:after {
-			color:lighten($color-text-body,60%);
+			color:lighten($color-text-light,10%);
 			content:"———— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 ————";
 			display:block;
 			font-family:$symbol;
-			font-size:$font-size-h5;
 			font-style:normal;
 			font-weight:normal;
 			left:0;
 			letter-spacing:-0.1em;
-			@include calc-line-height($font-size-h4,$grid-unit);
 			margin-left:-0.05em;
 			position:absolute;
 			text-align:center;
 			top:0;
 			white-space:nowrap;
 			width:100%;
-			@media (min-width:$break-pullquote-large) {
-				font-size:$font-size-h4;
-				@include calc-line-height($font-size-h3,$grid-unit);
-			}
 		}
 		&.left,
 		&.right {
 			@media (min-width:$break-floats) {
 				box-sizing:border-box;
-				font-size:$font-size-h5;
-				@include calc-line-height($font-size-h4,$grid-unit);
 				margin-bottom:3*$grid-unit;
 				margin-top:2*$grid-unit;
 				text-align:left;
 				width:50%;
-				&:before,
-				&:after {
-					font-size:$font-size-h5;
-					@include calc-line-height($font-size-h4,$grid-unit);
-				}
-				p {
-					font-size:$font-size-h5;
-					@include calc-line-height($font-size-h4,$grid-unit);
-				}
 			}
 		}
 		&.left {
