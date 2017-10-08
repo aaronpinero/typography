@@ -127,3 +127,14 @@ p + h5,
 p + h6 {
 	margin-top:3*$grid-unit;
 }
+
+// justified
+.paragraphs-justified p,
+p.justified {
+	-moz-hyphens:auto;
+	-webkit-hyphens:auto;
+	hyphens:auto;
+	-webkit-hyphenate-limit-after:3;
+	-webkit-hyphenate-limit-before:3;
+	text-align:justify;
+}

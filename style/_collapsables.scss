@@ -26,6 +26,7 @@ h6.collapsable-processed {
 	  top:2*$grid-unit;
 	  transition-duration:$transition-duration-move;
 	  transition-property:background-color,color,top;
+	  transition-timing-function:ease-in-out;
 	  @include calc-line-height($font-size-h2,$grid-unit,width);
   }
   &.closed {

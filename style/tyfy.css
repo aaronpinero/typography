@@ -133,6 +133,15 @@ p + h5,
 p + h6 {
   margin-top: 2.625rem; }
 
+.paragraphs-justified p,
+p.justified {
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-before: 3;
+  text-align: justify; }
+
 a {
   color: #111;
   text-decoration: none;
@@ -446,6 +455,7 @@ h6.collapsable-processed {
     top: 1.75rem;
     transition-duration: 0.5s;
     transition-property: background-color,color,top;
+    transition-timing-function: ease-in-out;
     width: 2.625rem; }
   h2.collapsable-processed.closed,
   h3.collapsable-processed.closed,
