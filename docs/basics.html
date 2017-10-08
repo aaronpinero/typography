@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Tyfy - Basics</title>
+		<meta charset="utf8">
+		<script src="../resources/modernizr.js"></script>
+		<link rel="stylesheet" href="../resources/fontawesome/css/fontawesome-pro-solid.css">
+		<link rel="stylesheet" href="../resources/fontawesome/css/fontawesome-pro-core.css">
+		<link rel="stylesheet" href="../resources/normalize/normalize.css">
+		<link rel="stylesheet" href="../style/tyfy.css">
+		<link rel="stylesheet" href="../style/tyfy-docs.css">
+	</head>
+	<body class="">
+		<header class="brand reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+		</header>
+		<section class="main links-underlined">
+			<h1>Basics</h1>
+			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the base grid, colors, text sizes, fonts, breakpoints, and other characteristics. For this demonstration, I have selected fonts and colors that are common in my work as a Web Developer at <a href="https://www.college.columbia.edu">Columbia University</a>. FontAwesome 5, for which I purchased a pro license through the Kickstarter campaign, is the selected icon font. I highly recommend supporting <a href="https://fontawesome.com">FontAwesome</a>.</p>
+			<p>My goal with this project is to have as few variables as possible. This results in some key variables – such as the grid unit, brand color and font size scalar – that can quickly change the entire character of the project to which <strong class="tyfy">Tyfy</strong> is applied.</p>
+			<h2><span class="smallcaps">SASS</span> Variables</h2>
+			<h3>Colors</h3>
+			<dl>
+				<dt>$color-brand</dt>
+				<dd>The primary color, used for links and other elements</dd>
+				<dt>$color-text-body</dt>
+				<dd>The default text color for paragraphs and lists</dd>
+				<dt>$color-text-head</dt>
+				<dd>The default text color for headings</dd>
+				<dt>$color-text-light</dt>
+				<dd>A secondary text color used for labels and other places where contrast from the default color is useful</dd>
+				<dt>$color-text-pullquote</dt>
+				<dd>Color for pullquote text</dd>
+				<dt>$color-link-default</dt>
+				<dd>Default color for linked text and buttons</dd>
+				<dt>$color-link-active</dt>
+				<dd>The hover and active color for links and buttons</dd>
+			</dl>
+			<h3>Reverse Colors</h3>
+			<!--p>Sometimes it is necessary to have text appear on both light and dark backgrounds. Applying the <code>reverse</code> class to an element flips the colors to keep text readable. To simplify maintenance of the color values I've employed the <em>invert</em> and <em>lighten</em> <span class="smallcaps">SASS</span> functions. The reverse colors are calculated based on the values of the default text and link colors.</p-->
+			<dl>
+				<dt>$color-text-body-reverse</dt>
+				<dd>The reverse text color, defined as <code>invert($color-text-body)</code></dd>
+				<dt>$color-text-head-reverse</dt>
+				<dd>The reverse heading color, defined as <code>invert($color-text-head)</code></dd>
+				<dt>$color-text-light-reverse</dt>
+				<dd>The reverse secondary text color, defined as <code>invert($color-text-light)</code></dd>
+				<dt>$color-text-pullquote-reverse</dt>
+				<dd>The reverse pull quote text color, defined as <code>saturate(lighten($color-text-pullquote,30%),30%)</code></dd>
+				<dt>$color-link-default-reverse</dt>
+				<dd>The reverse default link color, defined as <code>saturate(lighten($color-link-default,30%),30%)</code></dd>
+				<dt>$color-link-active-reverse</dt>
+				<dd>The reverse hover and active link color, defined as <code>complement($color-link-default-reverse)</code></dd>
+			</dl>
+			<h3>Breakpoints</h3>
+			<dl>
+				<dt>$break-floats</dt>
+				<dd>Screen width above which position classes (float left and right) are applied</dd>
+				<dt>$break-pullquote-large</dt>
+				<dd>Screen width above which non-floated pull quotes receive increased padding
+				<dt>$break-list-cols-2</dt>
+				<dd>Screen width above which two column list styles are active</dd>
+				<dt>$break-list-cols-3</dt>
+				<dd>Screen width above which three column list styles are active</dd>
+			</dl>
+			<h3>Measures</h3>
+			<dl>
+				<dt>$grid-unit</dt>
+				<dd>Basic unit of the vertical grid and horizontal measures (such as element padding); represents half the default body text line height</dd>
+				<dt>$font-size-scalar</dt>
+				<dd>Value representing the ratio between type sizes in the <strong class="tyfy">Tyfy</strong> typographic scale; the default value is 1.2 (a minor third)</dd>
+				<dt>$font-size-p</dt>
+				<dd>The base size of the typographic scale; the default body text size</dd>
+				<dt>$font-size-sm</dt>
+				<dd>The size of small text, defined as <code>$font-size-p / $font-size-scalar</code></dd>
+				<dt>$font-size-h6</dt>
+				<dd>The size of a level 6 heading, defined as <code>$font-size-p / $font-size-scalar</code></dd>
+				<dt>$font-size-h5</dt>
+				<dd>The size of a level 5 heading, defined as <code>$font-size-p</code></dd>
+				<dt>$font-size-h4</dt>
+				<dd>The size of a level 4 heading, defined as <code>$font-size-h5 * $font-size-scalar</code></dd>
+				<dt>$font-size-h3</dt>
+				<dd>The size of a level 3 heading, defined as <code>$font-size-h4 * $font-size-scalar</code></dd>
+				<dt>$font-size-h2</dt>
+				<dd>The size of a level 2 heading, defined as <code>$font-size-h3 * $font-size-scalar</code></dd>
+				<dt>$font-size-h1</dt>
+				<dd>The size of a level 1 heading, defined as <code>$font-size-h2 * (2 * $font-size-scalar)</code></dd>
+				<dt>$font-size-pullquote</dt>
+				<dd>The size of pull quote text, defined as <code>$font-size-p * $font-size-scalar</code></dd>
+			</dl>
+		</section>
+	</body>
+</html>

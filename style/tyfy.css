@@ -182,9 +182,48 @@ li {
   margin-bottom: 0;
   margin-top: 0; }
 
+dl {
+  line-height: 1.75rem;
+  margin-bottom: 0;
+  margin-top: 0; }
+
+dt {
+  font-family: Merriweather, serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.75rem;
+  margin-bottom: 0;
+  margin-top: 0; }
+
+dd {
+  font-family: Merriweather, serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.75rem;
+  margin: 0;
+  padding-left: 2.625rem; }
+
+* + dl,
 * + ol,
 * + ul {
   margin-top: 1.75rem; }
+
+h2 + dl,
+h3 + dl,
+h4 + dl,
+h5 + dl,
+h6 + dl {
+  margin-top: 1.75rem; }
+
+dl + h1,
+dl + h2,
+dl + h3,
+dl + h4,
+dl + h5,
+dl + h6 {
+  margin-top: 2.625rem; }
 
 h2 + ol,
 h3 + ol,
@@ -217,6 +256,9 @@ ul + h6 {
   margin-top: 2.625rem; }
 
 li + li {
+  margin-top: 0.875rem; }
+
+* + dt {
   margin-top: 0.875rem; }
 
 ol ol,
@@ -342,7 +384,7 @@ span.dropcap {
 span.smallcaps {
   font-feature-settings: "c2sc", "smcp";
   font-variant-caps: all-small-caps;
-  font-weight: 600;
+  font-weight: bolder;
   letter-spacing: 0.1em; }
 
 blockquote {
