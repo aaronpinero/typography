@@ -671,4 +671,71 @@ h6.collapsable-processed {
     .reverse blockquote.pullquote:after {
       color: #555555; }
 
+table {
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum";
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  margin: 0; }
+
+th {
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum";
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  line-height: 1.75rem;
+  text-align: left;
+  vertical-align: top; }
+  th[scope="col"] {
+    vertical-align: bottom; }
+
+td {
+  font-size: 1rem;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum";
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  line-height: 1.75rem;
+  vertical-align: top; }
+
+* + table {
+  margin-top: 1.75rem; }
+
+h2 + table,
+h3 + table,
+h4 + table,
+h5 + table,
+h6 + table {
+  margin-top: 1.75rem; }
+
+table + h1,
+table + h2,
+table + h3,
+table + h4,
+table + h5,
+table + h6 {
+  margin-top: 2.625rem; }
+
+table.clean {
+  border-collapse: collapse;
+  width: 100%; }
+  table.clean td,
+  table.clean th {
+    border: none;
+    margin: 0;
+    padding-top: 0.4375rem;
+    padding-bottom: 0.4375rem; }
+  table.clean * + td,
+  table.clean * + th {
+    padding-left: 0.875rem; }
+
+table.striped td,
+table.striped th {
+  padding-left: 0.875rem;
+  padding-right: grid-unit; }
+table.striped tr:nth-child(2n) td {
+  background-color: rgba(17, 17, 17, 0.05); }
+
 /*# sourceMappingURL=tyfy.css.map */

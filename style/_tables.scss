@@ -1,0 +1,78 @@
+table {
+	font-variant-numeric:lining-nums;
+	font-feature-settings:"lnum";
+	font-variant-numeric:tabular-nums;
+	font-feature-settings:"tnum";
+	margin:0;
+}
+th {
+	font-family:$sans;
+	font-size:$font-size-p;
+	font-variant-numeric:lining-nums;
+	font-feature-settings:"lnum";
+	font-variant-numeric:tabular-nums;
+	font-feature-settings:"tnum";
+	@include calc-line-height($font-size-p,$grid-unit);
+	text-align:left;
+	vertical-align:top;
+	&[scope="col"] {
+		vertical-align:bottom;
+	}
+}
+td {
+	font-size:$font-size-p;
+	font-variant-numeric:lining-nums;
+	font-feature-settings:"lnum";
+	font-variant-numeric:tabular-nums;
+	font-feature-settings:"tnum";
+	@include calc-line-height($font-size-p,$grid-unit);
+	vertical-align:top;
+}
+
+* + table {
+	margin-top:2*$grid-unit;
+}
+h2 + table,
+h3 + table,
+h4 + table,
+h5 + table,
+h6 + table {
+	margin-top:2*$grid-unit;
+}
+table + h1,
+table + h2,
+table + h3,
+table + h4,
+table + h5,
+table + h6 {
+	margin-top:3*$grid-unit;
+}
+
+// plain table
+table.clean {
+	border-collapse:collapse;
+	width:100%;
+	td,
+	th {
+		border:none;
+		margin:0;
+		padding-top:0.5*$grid-unit;
+		padding-bottom:0.5*$grid-unit;
+	}
+	* + td,
+	* + th {
+		padding-left:$grid-unit;
+	}
+}
+table.striped {
+	td,
+	th {
+		padding-left:$grid-unit;
+		padding-right:grid-unit;
+	}
+	tr:nth-child(2n) {
+		td {
+			background-color:rgba($color-text-body,0.05);
+		}
+	}
+}
