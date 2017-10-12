@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title>Tyfy - Tables</title>
+		<title>Tyfy - Tabs</title>
 		<meta charset="utf8">
 		<script src="../resources/modernizr.js"></script>
 		<link rel="stylesheet" href="../resources/fontawesome/css/fontawesome-pro-solid.css">
@@ -9,91 +9,33 @@
 		<link rel="stylesheet" href="../resources/normalize/normalize.css">
 		<link rel="stylesheet" href="../style/tyfy.css">
 		<link rel="stylesheet" href="../style/tyfy-docs.css">
-		<style>
-			* + .tabs-container {
-				margin-top:2rem;
-			}
-			ul.tabs {
-				align-items:stretch;
-				border-bottom:2px rgba(0,0,0,0.2) solid;
-				display:flex;
-				margin:0;
-				padding:0;
-			}
-			ul.tabs li {
-				background-color:rgba(0,0,0,0.05);
-				border:2px rgba(0,0,0,0.2) solid;
-				border-bottom:0;
-				border-radius:0.25rem 0.25rem 0 0;
-				cursor:pointer;
-				display:block;
-				flex:1;
-				font-family:Montserrat, sans-serif;
-				margin:0 0 -2px 0;
-				padding:1rem;
-				text-align:center;
-				transition-property:background-color;
-				transition-duration:0.25s;
-			}
-			ul.tabs li:hover {
-				background-color:rgba(0,0,0,0.1);
-			}
-			ul.tabs li.open {
-				background-color:transparent;
-				border-bottom:2px rgba(255,255,255,0.7) solid;
-				font-weight:500;
-			}
-			ul.tabs li + li {
-				margin-top:0;
-				margin-left:0.5rem;
-			}
-			.tab-label {
-				display:none;
-			}
-			.tab-panel {
-				border:2px rgba(0,0,0,0.2) solid;
-				border-top:none;
-				border-radius:0 0 0.25rem 0.25rem;
-				display:none;
-				padding:2rem;
-			}
-			.tab-panel.open {
-				display:block;
-			}
-		</style>
 	</head>
 	<body class="">
 		<header class="brand reverse">
 			<h1><a href="index.html">Tyfy</a></h1>
 		</header>
 		<section class="main links-underlined">
-			<h1>Tables</h1>
+			<h1>Tabs</h1>
+			<p>It is occasionally useful to present content as a set of tabs. The available tabs are presented horizontally with the content of the selected tab appearing directly below the tabs.</p>
+			<p>Unfortunately, this tabs are not a good choice when the browser window is specially small or narrow, as on phones. This implementation of tabs is responsive. At narrow screen sizes, the tabs convert to <a href="collapsables.html">collapsable headings</a>.</p>
+			<p>Like the collapsable headings, tabs are defined by indicating the label for each tab with the <code>tab-label</code> class. All tab labels and tab content are enclosed in a block-level element with the <code>tabs-container</code> class. JavaScript is used to identify the contents of each tab panel and to generate the clickable tabs.</p> 
 		</section>
 		<section class="main links-underlined demo">
 			<h1>Demo</h1>
 			
 			<div class="tabs-container">
-				<ul class="tabs">
-					<li class="open">Lorem Ipsum</li>
-					<li>Dolor Sit Amet</li>
-					<li>Donec Scelerisque</li>
-				</ul>
 				<h2 class="tab-label">Lorem Ipsum</h2>
-				<div class="tab-panel open">
-					<p>Porro excepturi ad eligendi excepturi quam voluptate velit. Placeat modi animi natus est temporibus tenetur pariatur suscipit. Dolores sit id sit placeat consequatur temporibus accusamus et. Cumque voluptatum voluptatum delectus et sequi. Vero vitae officia eius ad. Consequatur impedit quam mollitia.</p>
-					<p>Aspernatur id nihil sit eveniet vero corporis necessitatibus sit. Magni quia vitae perferendis. Suscipit illo tempora minus officia nemo aut numquam. Qui et omnis velit repudiandae autem. Aperiam aut dolorem neque quis dolor est sunt.</p>
-				</div>
+				<p>Porro excepturi ad eligendi excepturi quam voluptate velit. Placeat modi animi natus est temporibus tenetur pariatur suscipit. Dolores sit id sit placeat consequatur temporibus accusamus et. Cumque voluptatum voluptatum delectus et sequi. Vero vitae officia eius ad. Consequatur impedit quam mollitia.</p>
+				<p>Aspernatur id nihil sit eveniet vero corporis necessitatibus sit. Magni quia vitae perferendis. Suscipit illo tempora minus officia nemo aut numquam. Qui et omnis velit repudiandae autem. Aperiam aut dolorem neque quis dolor est sunt.</p>
 				<h2 class="tab-label">Dolor Sit Amet</h2>
-				<div class="tab-panel">
-					<p>Facilis error corrupti dolor eaque. Occaecati illum sequi officia rerum nostrum. Iste in quo eveniet. Deserunt quaerat a adipisci magni consequatur nesciunt distinctio praesentium. Ipsum vel ut est vel veritatis fugiat perspiciatis.</p>
-					<p>Omnis dolores sit pariatur facilis odit magni. Totam excepturi incidunt dolorem assumenda neque dolorem. Dolorem odio consequatur quas corrupti sequi. Nihil ut nihil itaque non at molestiae corporis. Explicabo voluptate quis et.</p>
-				</div>
+				<p>Facilis error corrupti dolor eaque. Occaecati illum sequi officia rerum nostrum. Iste in quo eveniet. Deserunt quaerat a adipisci magni consequatur nesciunt distinctio praesentium. Ipsum vel ut est vel veritatis fugiat perspiciatis.</p>
+				<p>Omnis dolores sit pariatur facilis odit magni. Totam excepturi incidunt dolorem assumenda neque dolorem. Dolorem odio consequatur quas corrupti sequi. Nihil ut nihil itaque non at molestiae corporis. Explicabo voluptate quis et.</p>
 				<h2 class="tab-label">Donec Scelerisque</h2>
-				<div class="tab-panel">
-					<p>Curabitur non mauris sodales, tempor lacus ac, maximus felis. Vestibulum ultrices augue ut arcu mattis pellentesque. Maecenas ullamcorper lorem sit amet pretium pharetra. Nunc ipsum tellus, hendrerit vitae bibendum vel, scelerisque sit amet libero. Duis imperdiet massa placerat venenatis pharetra. Donec consectetur quis odio sit amet sollicitudin. Morbi at faucibus odio. Duis viverra lacus a odio pretium, quis suscipit tortor accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur egestas venenatis est vel hendrerit. Fusce molestie bibendum ex in suscipit.</p>
-				</div>
+				<p>Curabitur non mauris sodales, tempor lacus ac, maximus felis. Vestibulum ultrices augue ut arcu mattis pellentesque. Maecenas ullamcorper lorem sit amet pretium pharetra. Nunc ipsum tellus, hendrerit vitae bibendum vel, scelerisque sit amet libero. Duis imperdiet massa placerat venenatis pharetra. Donec consectetur quis odio sit amet sollicitudin. Morbi at faucibus odio. Duis viverra lacus a odio pretium, quis suscipit tortor accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur egestas venenatis est vel hendrerit. Fusce molestie bibendum ex in suscipit.</p>
 			</div>
 			
 		</section>
+		<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="../script/tabs.js"></script>
 	</body>
 </html>

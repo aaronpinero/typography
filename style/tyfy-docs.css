@@ -18,19 +18,12 @@ header.brand h1 {
   line-height: 1.75rem;
   margin: 0 auto;
   max-width: 55rem;
-  padding: 0.875rem; }
-  @media (min-width: 40em) {
-    header.brand h1 {
-      padding-left: 1.75rem;
-      padding-right: 1.75rem; } }
+  padding: 0.875rem 1.75rem; }
 
 section.main {
   margin: 0 auto;
   max-width: 55rem;
-  padding: 0.875rem; }
-  @media (min-width: 40em) {
-    section.main {
-      padding: 1.75rem; } }
+  padding: 1.75rem; }
 
 section.demo {
   background-color: #f7f7f7;

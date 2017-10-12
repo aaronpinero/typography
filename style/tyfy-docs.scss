@@ -3,8 +3,6 @@
 @import "defaults";
 @import "mixins";
 
-$break-padding-2x:40em;
-
 body {
   animation:fadein 1s;
 	margin:0 0 2*$grid-unit 0;
@@ -30,21 +28,14 @@ header.brand {
 		@include calc-line-height($font-size-h3,$grid-unit);
 		margin:0 auto;
 		max-width:55rem;
-		padding:$grid-unit;
-		@media (min-width:$break-padding-2x) {
-			padding-left:$grid-unit*2;
-			padding-right:$grid-unit*2;
-		}
+		padding:$grid-unit 2*$grid-unit;
 	}
 }
 
 section.main {
 	margin:0 auto;
 	max-width:55rem;
-	padding:$grid-unit;
-	@media (min-width:$break-padding-2x) {
-		padding:$grid-unit*2;
-	}
+	padding:$grid-unit*2;
 }
 section.demo {
 	background-color:lighten($color-text-body,90%);

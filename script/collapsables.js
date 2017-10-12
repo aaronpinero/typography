@@ -24,22 +24,24 @@ var animation_duration = 500;
 		    if (!$(this).hasClass('transition')) {
 		      var kids = $(this).next('.collapsables');
 		      kids.removeClass('closed');
-		      var fullHeight = kids.outerHeight();
+		      kids_fullHeight = kids.outerHeight();
+	        kids_paddingTop = kids.css('padding-top');
+	        kids_paddingBottom = kids.css('padding-bottom');
 		      $(this).addClass('transition');
 		      kids.addClass('transition');
 		
 		      if ($(this).hasClass('closed')) {
 			      grid_unit = parseInt(jQuery('p').eq(0).css('line-height'))/2;
 		        kids.css({'height':'0px','display':'block','padding-bottom':'0px','padding-top':'0px'}).animate({
-		          height:fullHeight+'px',
-		          paddingBottom:(grid_unit*2)+'px',
-		          paddingTop:grid_unit+'px',
+		          height:kids_fullHeight+'px',
+		          paddingBottom:kids_paddingBottom,
+		          paddingTop:kids_paddingTop,
 		        },animation_duration,function(){
 		          $('.transition').removeClass('transition').removeClass('closed').removeAttr('style');
 		        });
 		      }
 		      else {
-		        kids.css('height',fullHeight+'px').animate({
+		        kids.css('height',kids_fullHeight+'px').animate({
 		          height:'0px',
 		          paddingBottom:'0px',
 		          paddingTop:'0px',
