@@ -6,6 +6,8 @@ $color-text-light:lighten($color-text-body,50%);
 $color-text-pullquote:complement($color-brand);
 $color-link-default:saturate(darken($color-brand,10%),5%);
 $color-link-active:complement($color-link-default);
+$color-table-border:rgba(0,0,0,0.1);
+$color-table-stripe:rgba(0,0,0,0.05);
 
 // reverse colors
 $color-text-body-reverse:invert($color-text-body);

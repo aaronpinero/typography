@@ -1,19 +1,49 @@
-@mixin calc-line-height($fontsize,$grid-unit,$property:line-height,$adjustment_factor:0.9) {	
-	@if $fontsize <= ($grid-unit*$adjustment_factor) {
-		#{$property}:$grid-unit;
-	}
-	@else {
-		#{$property}:ceil($fontsize/($grid-unit*$adjustment_factor)) * $grid-unit;
-	}
+@mixin calc-line-height($fontsize,$grid-unit,$property:line-height,$adjustment_factor:0.9) {  
+  @if $fontsize <= ($grid-unit*$adjustment_factor) {
+    #{$property}:$grid-unit;
+  }
+  @else {
+    #{$property}:ceil($fontsize/($grid-unit*$adjustment_factor)) * $grid-unit;
+  }
 }
 
 @mixin clearfix {
-	*zoom:1;
-	&:before,
-	&:after {
-		display:table;
-		content:"";
-		line-height:0;
-	}
-	&:after { clear:both; }	
+  *zoom:1;
+  &:before,
+  &:after {
+    display:table;
+    content:"";
+    line-height:0;
+  }
+  &:after { clear:both; }  
+}
+
+@mixin visuallyhidden ($type:true) {
+  @if $type == false {
+    clip:auto;
+    height:auto !important;
+    margin:0;
+    overflow:visible;
+    position:static;
+    width:auto !important;
+  }
+  @else {
+    border:0;
+    clip:rect(0 0 0 0);
+    height:1px !important;
+    margin:-1px;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    width:1px !important;
+    &.focusable:active,
+    &.focusable:focus {
+      clip:auto;
+      height:auto;
+      margin:0;
+      overflow:visible;
+      position:static;
+      width:auto;
+    }
+  }
 }
