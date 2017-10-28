@@ -1,4 +1,5 @@
 # Tyfy
+
 My personal framework for applying typographic styles and options on the web.
 
 ## Why build *another* framework?
@@ -12,10 +13,16 @@ A framework is an expression of the values, preferences, priorities, and experie
 
 ## Dependencies
 
+### Other Projects
+
 Two additional repos are necessary for this project:
 
 * [FontAwesome Pro](https://github.com/FortAwesome/Font-Awesome-Pro) - clone to `dist/vendor/fontawesome`
 * [Normalize.css](https://github.com/necolas/normalize.css) - clone to `dist/vendor/normalize`
+
+### Build Tools
+
+This project is using npm for compiling the SCSS files into CSS. Included is a npm build script that can be run using the command `npm run build-css`.
 
 ## Additional thanks
 
