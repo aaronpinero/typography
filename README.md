@@ -2,7 +2,7 @@
 
 My personal framework for applying typographic styles and options on the web.
 
-## Why build *another* framework?
+## Why build another framework?
 
 There are two reasons:
 
@@ -22,7 +22,10 @@ Two additional repos are necessary for this project:
 
 ### Build Tools
 
-This project is using npm for compiling the SCSS files into CSS. Included is a npm build script that can be run using the command `npm run build-css`.
+This project uses node for compiling the SCSS files into CSS.
+
+* For production output, run `npm run build-css`. This outputs compressed CSS.
+* For development output, run `npm run build-css-dev`. This outputs readable CSS with source file comments.
 
 ## Additional thanks
 
