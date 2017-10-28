@@ -1,0 +1,31 @@
+{
+  "name": "typography.git",
+  "version": "1.0.0",
+  "description": "a framework for typographic structure and common content patterns",
+  "main": "docs/index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css":"./bin/build-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronpinero/typography.git"
+  },
+  "keywords": [
+    "css",
+    "typography"
+  ],
+  "author": "Aaron Pinero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronpinero/typography/issues"
+  },
+  "homepage": "https://github.com/aaronpinero/typography#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  }
+}

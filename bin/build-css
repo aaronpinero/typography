@@ -1,0 +1,2 @@
+node-sass --include-path scss source/scss/tyfy.scss dist/style/tyfy.css
+node-sass --include-path scss source/scss/tyfy-docs.scss dist/style/tyfy-docs.css

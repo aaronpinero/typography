@@ -14,8 +14,8 @@ A framework is an expression of the values, preferences, priorities, and experie
 
 Two additional repos are necessary for this project:
 
-* [FontAwesome Pro](https://github.com/FortAwesome/Font-Awesome-Pro) - clone to `resources/fontawesome`
-* [Normalize.css](https://github.com/necolas/normalize.css) - clone to `resources/normalize`
+* [FontAwesome Pro](https://github.com/FortAwesome/Font-Awesome-Pro) - clone to `dist/vendor/fontawesome`
+* [Normalize.css](https://github.com/necolas/normalize.css) - clone to `dist/vendor/normalize`
 
 ## Additional thanks
 
