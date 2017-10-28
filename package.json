@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css":"./bin/build-css"
+    "build-css": "./bin/build-css",
+    "build-css-dev": "./bin/build-css-dev"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
   "homepage": "https://github.com/aaronpinero/typography#readme",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.5.3"
+    "autoprefixer": "^7.1.6",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.1"
   }
 }
