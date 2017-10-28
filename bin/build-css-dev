@@ -1,1 +1,2 @@
 node-sass --source-comments source/scss/ -o dist/style/
+postcss dist/style/*.css --replace --config postcss.config.js

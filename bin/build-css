@@ -1,1 +1,2 @@
 node-sass --output-style compressed source/scss/ -o dist/style/
+postcss dist/style/*.css --replace --config postcss.config.js
