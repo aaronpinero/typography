@@ -1,6 +1,6 @@
 # Tyfy
 
-My personal framework for applying typographic styles and options on the web.
+My personal framework for applying typographic styles and options on the web. See the [online docs and demos](http://aaronpinero.net/tyfy/docs/index.html).
 
 ## Why build another framework?
 
