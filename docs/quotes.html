@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-32897472-1');
+		</script>
 		<title>Tyfy - Quotes</title>
 		<meta charset="utf8">
 		<script src="../dist/vendor/modernizr.js"></script>
@@ -16,7 +25,7 @@
 		</header>
 		<section class="main links-underlined">
 			<h1>Quotes</h1>
-			<p>The <code>&lt;blockquote&gt;</code> tag is commonly used for both long quotations and pull quotes. The basic <code>&lt;blockquote&gt;</code> style is intended for long quotations. A <code>pullquote</code> class can be applied to the <code>&lt;blockquote&gt;</code> tag for fancier quotes. Pull quotes can also be positioned to the left or right of the text by applying the respective class name. Positioning left or right is limited to larger screen sizes. At smaller screen sizes, the pull quotes are displayed at full width.</p>
+			<p>The <code>&lt;blockquote&gt;</code> tag is commonly used for both long quotations and pull quotes. The basic <code>&lt;blockquote&gt;</code> style is intended for long quotations. A <code>pullquote</code> class can be applied to the <code>&lt;blockquote&gt;</code> tag for fancier quotes. Pull quotes can also be positioned to the left or right of the text by applying the <code>float-left</code> and <code>float-right</code> classes. Positioning left or right is limited to larger screen sizes. At smaller screen sizes, the pull quotes are displayed at full width.</p>
 			<p>The pull quote style is inspired by the design of the <a href="https://www.college.columbia.edu/campaign">Core to Commencement Campaign</a> website that was designed by <a href="https://www.barrelny.com">Barrel</a>. This version omits the need for images or svg, instead using pseudo-elements and a FontAwesome icon (and it can be done without FontAwesome as well).</p>
 		</section>
 		<section class="main links-underlined demo">
@@ -32,13 +41,13 @@
 			</blockquote>
 			<p>Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas quis nisi sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.</p>
 			<h3>Et Omnis Officia Sint</h3>
-			<blockquote class="pullquote left">
+			<blockquote class="pullquote float-left">
 				“Dolorum nobis deleniti. Sunt nobis doloremque ab eveniet eum earum sunt. Iure dolorem libero dolorum labore ad et magni. Voluptatibus est reiciendis dignissimos laborum quia.”
 			</blockquote>
 			<p>Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
 			<p>In fringilla consectetur lorem varius bibendum. Pellentesque egestas eros lectus, eu gravida eros imperdiet vel. Nullam finibus quam eget nisi vehicula tempor. Etiam interdum odio ligula, ac imperdiet eros cursus sed. Aliquam a convallis orci, eu aliquam dui.</p>
 			<h2>Molestiae Soluta Repellat Rerum Commodi</h2>
-			<blockquote class="pullquote right">
+			<blockquote class="pullquote float-right">
 			  <p>”Et voluptatem sed sit alias sunt. Qui qui dolores ipsa aliquid est dolor. Labore totam sit repellendus illo quod. Mollitia id voluptatem rerum. Soluta asperiores dolores ullam deleniti provident.“</p>
 			  <cite>– Aaron Pinero, designer</cite>
 			</blockquote>

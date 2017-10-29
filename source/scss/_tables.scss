@@ -1,3 +1,4 @@
+// table basics
 table {
   font-variant-numeric:lining-nums;
   font-feature-settings:"lnum";
@@ -29,6 +30,7 @@ td {
   vertical-align:top;
 }
 
+// table spacing
 * + table {
   margin-top:2*$grid-unit;
 }
@@ -138,4 +140,40 @@ table.responsive {
       }
     }
   }
+}
+
+// floated table
+table {
+	&.float-left,
+	&.float-right {
+		@media (min-width:$break-floats) {
+			box-sizing:border-box;
+			margin-bottom:$grid-unit;
+			width:calc(50% - (2 * #{$grid-unit}));
+		}
+	}
+	&.float-left {
+		@media (min-width:$break-floats) {
+			clear:left;
+			float:left;
+			margin-right:4*$grid-unit;
+		}
+	}
+	&.float-right {
+		@media (min-width:$break-floats) {
+			clear:right;
+			float:right;
+			margin-left:4*$grid-unit;
+		}
+	}
+}
+table.float-right + table.float-left {
+	@media (min-width:$break-floats) {
+		margin-right:2*$grid-unit;
+	}
+}
+table.float-left + table.float-right {
+	@media (min-width:$break-floats) {
+		margin-left:2*$grid-unit;
+	}
 }

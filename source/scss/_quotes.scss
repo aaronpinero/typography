@@ -57,38 +57,30 @@ blockquote {
 			white-space:nowrap;
 			width:100%;
 		}
-		&.left,
-		&.right {
+		&.float-left,
+		&.float-right {
 			@media (min-width:$break-floats) {
 				box-sizing:border-box;
 				margin-bottom:3*$grid-unit;
 				margin-top:2*$grid-unit;
 				text-align:left;
-				width:50%;
+				width:calc(50% - (2 * #{$grid-unit}));
 			}
 		}
-		&.left {
+		&.float-left {
 			@media (min-width:$break-floats) {
+				clear:left;
 				float:left;
 				margin-left:0;
-				margin-right:2*$grid-unit;
-				padding-right:2*$grid-unit;
-				&:after {
-					box-sizing:border-box;
-					padding-right:2*$grid-unit;
-				}
+				margin-right:4*$grid-unit;
 			}
 		}
-		&.right {
+		&.float-right {
 			@media (min-width:$break-floats) {
+				clear:right;
 				float:right;
-				margin-left:2*$grid-unit;
+				margin-left:4*$grid-unit;
 				margin-right:0;
-				padding-left:2*$grid-unit;
-				&:after {
-					box-sizing:border-box;
-					padding-left:2*$grid-unit;
-				}
 			}
 		}
 	}
