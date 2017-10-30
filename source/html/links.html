@@ -1,32 +1,11 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<!-- COMMON HEAD TAGS -->
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'UA-32897472-1');
-		</script>
-		<meta charset="utf8">
-		<script src="../dist/vendor/modernizr.js"></script>
-		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-solid.css">
-		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-core.css">
-		<link rel="stylesheet" href="../dist/vendor/normalize/normalize.css">
-		<link rel="stylesheet" href="../dist/style/tyfy.css">
-		<link rel="stylesheet" href="../dist/style/tyfy-docs.css">
-		<!--/ COMMON HEAD TAGS -->
+		<%include head.html%>
 		<title>Tyfy - Links</title>
 	</head>
 	<body class="">
-		<!-- COMMON HEADER -->
-		<header class="brand reverse">
-			<h1><a href="index.html">Tyfy</a></h1>
-		</header>
-		<!--/ COMMON HEADER -->
+		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>Link Styles</h1>
 			<p>Links must have a style that is different from body text, but anchors should not. Because anchors and links share the <code>&lt;a&gt;</code> tag, it is necessary to progressively define styles for this tag. Here, the default appearance of the <code>&lt;a&gt;</code> tag is the same as for body text. Using an attribute selector, those elements that have an <code>href</code> attribute have link styles applied. For links, I have used <code>border-bottom</code> to apply an underline instead of <code>text-decoration</code>. This way, the underline can be styled and transitions can be employed. The framework includes <span class="smallcaps">SASS</span> variables to globally define transition speeds.</p>
@@ -42,10 +21,6 @@
 			<h3>Pariatur Alias <a href="http://aaronpinero.net">Reprehenderit</a> Soluta Dolor</h3>
 			<p>Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas <a href="http://aaronpinero.net">quis nisi</a> sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.</p>
 		</section>
-		<!-- COMMON FOOTER -->
-		<footer>
-			<p>&copy; Copyright 2017 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
-		</footer>
-		<!--/ COMMON FOOTER -->
+		<%include footer.html%>
 	</body>
 </html>

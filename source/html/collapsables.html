@@ -1,32 +1,11 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<!-- COMMON HEAD TAGS -->
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'UA-32897472-1');
-		</script>
-		<meta charset="utf8">
-		<script src="../dist/vendor/modernizr.js"></script>
-		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-solid.css">
-		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-core.css">
-		<link rel="stylesheet" href="../dist/vendor/normalize/normalize.css">
-		<link rel="stylesheet" href="../dist/style/tyfy.css">
-		<link rel="stylesheet" href="../dist/style/tyfy-docs.css">
-		<!--/ COMMON HEAD TAGS -->
+		<%include head.html%>
 		<title>Tyfy - Collapsable Headings</title>
 	</head>
 	<body class="">
-		<!-- COMMON HEADER -->
-		<header class="brand reverse">
-			<h1><a href="index.html">Tyfy</a></h1>
-		</header>
-		<!--/ COMMON HEADER -->
+		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>Collapsable Headings</h1>
 			<p>Collapsable headings are my implementation of an accordion pattern. Content authors can apply the pattern using single <span class="smallcaps">CSS</span> class applied to a heading (level 2 through 6). The associated JavaScript encapsulates all of the content belonging to that heading in a block element and applies a click event to the heading that toggles the display of the content.</p>
@@ -62,11 +41,7 @@
 			<p>eu dictum orci venenatis id. Pellentesque consectetur accumsan ex id lobortis. Duis eget blandit ante, in iaculis lacus. Sed justo ipsum, euismod et venenatis quis, pharetra eu dolor. In condimentum placerat augue vel consequat. Quisque euismod fringilla tristique. Nunc convallis lectus ut tellus finibus, sit amet efficitur tortor blandit.</p>
 			<p>Praesent at nibh quis est ullamcorper semper. Vestibulum tempor, lectus at scelerisque dictum, augue enim vehicula purus, eu dictum sapien neque a nibh. Maecenas id purus risus. Quisque pellentesque eros commodo porta cursus. Aenean non ipsum euismod velit blandit convallis.</p>
 		</section>
-		<!-- COMMON FOOTER -->
-		<footer>
-			<p>&copy; Copyright 2017 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
-		</footer>
-		<!--/ COMMON FOOTER -->
+		<%include footer.html%>
 		<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 		<script src="../dist/script/collapsables.js"></script>
 	</body>

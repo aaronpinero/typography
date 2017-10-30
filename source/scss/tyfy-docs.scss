@@ -46,3 +46,15 @@ section.demo.reverse {
 	background-color:$color-text-body;
 	border:none;
 }
+
+footer {
+	padding:4*$grid-unit 0 0 0;
+	p {
+		color:$color-text-light;
+		font-size:$font-size-sm;
+		@include calc-line-height($font-size-sm,$grid-unit);
+		margin:0 auto;
+		max-width:55rem;
+		padding:$grid-unit 2*$grid-unit;
+	}
+}
