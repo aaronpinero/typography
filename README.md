@@ -4,10 +4,11 @@ My personal framework for applying typographic styles and options on the web. Se
 
 ## Why build another framework?
 
-There are two reasons:
+There are three reasons:
 
 * To collect all of my best design and pattern work into one system.
 * To create a system that I can employ in future projects.
+* To learn something along the way.
 
 A framework is an expression of the values, preferences, priorities, and experience of the person or persons creating it. While I like some existing frameworks (Bootstrap 4, PureCSS), I want  something that reflects my values and the work that I do.
 
@@ -22,10 +23,11 @@ Two additional repos are necessary for this project:
 
 ### Build Tools
 
-This project uses node for compiling the SCSS files into CSS.
+This project uses node for compiling the SCSS files into CSS and for assembling the documentation pages
 
 * For production output, run `npm run build-css`. This outputs compressed CSS.
 * For development output, run `npm run build-css-dev`. This outputs readable CSS with source file comments.
+* For the docs, run `node docs.js`. This uses templatesjs to assemble the HTML pages and their includes.
 
 ## Additional thanks
 
