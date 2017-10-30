@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<script src="../dist/vendor/modernizr.js"></script>
+		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-solid.css">
+		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-core.css">
+		<link rel="stylesheet" href="../dist/vendor/normalize/normalize.css">
+		<link rel="stylesheet" href="../dist/style/tyfy.css">
+		<link rel="stylesheet" href="../dist/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - About</title>
+	</head>
+	<body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+		</header>
+		<!--/ COMMON HEADER -->
+		<section class="main links-underlined">
+			<h1>About Tyfy</h1>
+			<h2>Why build another framework?</h2>
+			<p>There are three reasons:</p>
+			<ol>
+				<li>To collect all of my best design and pattern work into one system.</li>
+				<li>To create a system that I can employ in future projects.</li>
+				<li>To learn something along the way.</li>
+			</ol>
+			<p>A framework is an expression of the values, preferences, priorities, and experience of the person or persons creating it. While I like some existing frameworks (Bootstrap 4, PureCSS), I want  something that reflects my values and the work that I do.</p>
+			<h2>Dependencies</h2>
+			<h3>Other Projects</h3>
+			<p>Two additional repos are needed for this project:</p>
+			<ul>
+				<li><a href="https://github.com/FortAwesome/Font-Awesome-Pro">FontAwesome Pro</a> - clone to <code>dist/vendor/fontawesome</code></li>
+				<li><a href="https://github.com/necolas/normalize.css">Normalize.css</a> - clone to <code>dist/vendor/normalize</code></li>
+			</ul>
+			<h3>Build Tools</h3>
+			<p>This project uses node for compiling the <span class="smallcaps">SCSS</span> files into <span class="smallcaps">CSS</span> and for assembling the documentation pages.</p>
+			<ul>
+				<li>For production output, run <code>npm run build-css</code>. This outputs compressed <span class="smallcaps">CSS</span>.</li>
+				<li>For development output, run <code>npm run build-css-dev</code>. This outputs readable <span class="smallcaps">CSS</span> with source file comments.</li>
+				<li>For the docs, run <code>node docs.js</code>. This uses templatesjs to assemble the <span class="smallcaps">HTML</span> pages and their includes.</li>
+			</ul>
+			<h2>Additional thanks</h2>
+			<p>I realize that without the benefit of work previously done by others, this project would not happen. Since those frameworks are part of my experience, my work reflects theirs as well. Tyfy is a combination of something old, something new, something borrowed, and something blue from some of the following works:</p>
+			<ul>
+				<li><a href="https://html5boilerplate.com">HTML5 Boilerplate</a></li>
+				<li><a href="https://archetypeapp.com">Archetype</a></li>
+				<li>The <a href="https://www.college.columbia.edu/">Columbia College</a> Style Guide</li>
+				<li><a href="https://purecss.io">PureCSS</a></li>
+				<li><a href="https://betterwebtype.com">Better Web Type</a></li>
+			</ul>
+		</section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+		<!--/ COMMON FOOTER -->
+	</body>
+</html>

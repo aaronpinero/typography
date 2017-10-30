@@ -1,32 +1,11 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<!-- COMMON HEAD TAGS -->
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'UA-32897472-1');
-		</script>
-		<meta charset="utf8">
-		<script src="../dist/vendor/modernizr.js"></script>
-		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-solid.css">
-		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-core.css">
-		<link rel="stylesheet" href="../dist/vendor/normalize/normalize.css">
-		<link rel="stylesheet" href="../dist/style/tyfy.css">
-		<link rel="stylesheet" href="../dist/style/tyfy-docs.css">
-		<!--/ COMMON HEAD TAGS -->
+		<%include head.html%>
 		<title>Tyfy - Reverse</title>
 	</head>
 	<body class="">
-		<!-- COMMON HEADER -->
-		<header class="brand reverse">
-			<h1><a href="index.html">Tyfy</a></h1>
-		</header>
-		<!--/ COMMON HEADER -->
+		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>Reverse Styles</h1>
 			<p>When foreground and background colors are reversed, the <code>reverse</code> class applies readable text, heading and link colors to child elements. The <code>reverse</code> class can contain, be contained by, or be applied to the same element as the <code>links-underlined</code> class.</p>
@@ -56,10 +35,6 @@
 			<p>Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
 			<p>In fringilla consectetur lorem varius bibendum. Pellentesque egestas eros lectus, eu gravida eros imperdiet vel. Nullam finibus quam eget nisi vehicula tempor. Etiam interdum odio ligula, ac imperdiet eros cursus sed. Aliquam a convallis orci, eu aliquam dui.</p>
 		</section>
-		<!-- COMMON FOOTER -->
-		<footer>
-			<p>&copy; Copyright 2017 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
-		</footer>
-		<!--/ COMMON FOOTER -->
+		<%include footer.html%>
 	</body>
 </html>

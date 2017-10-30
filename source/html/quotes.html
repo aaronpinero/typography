@@ -1,32 +1,11 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<!-- COMMON HEAD TAGS -->
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'UA-32897472-1');
-		</script>
-		<meta charset="utf8">
-		<script src="../dist/vendor/modernizr.js"></script>
-		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-solid.css">
-		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-core.css">
-		<link rel="stylesheet" href="../dist/vendor/normalize/normalize.css">
-		<link rel="stylesheet" href="../dist/style/tyfy.css">
-		<link rel="stylesheet" href="../dist/style/tyfy-docs.css">
-		<!--/ COMMON HEAD TAGS -->
+		<%include head.html%>
 		<title>Tyfy - Quotes</title>
 	</head>
 	<body class="">
-		<!-- COMMON HEADER -->
-		<header class="brand reverse">
-			<h1><a href="index.html">Tyfy</a></h1>
-		</header>
-		<!--/ COMMON HEADER -->
+		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>Quotes</h1>
 			<p>The <code>&lt;blockquote&gt;</code> tag is commonly used for both long quotations and pull quotes. The basic <code>&lt;blockquote&gt;</code> style is intended for long quotations. A <code>pullquote</code> class can be applied to the <code>&lt;blockquote&gt;</code> tag for fancier quotes. Pull quotes can also be positioned to the left or right of the text by applying the <code>float-left</code> and <code>float-right</code> classes. Positioning left or right is limited to larger screen sizes. At smaller screen sizes, the pull quotes are displayed at full width.</p>
@@ -58,10 +37,6 @@
 			<p>Etiam fermentum efficitur nisl, eu tempor eros lobortis et. Sed dapibus nisi eget euismod tincidunt. Aenean mattis imperdiet ex, gravida rutrum quam. Praesent condimentum, augue nec elementum ultricies, arcu magna convallis dui, id accumsan ex diam in tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur non metus et enim iaculis imperdiet.</p>
 			<p>Phasellus a metus nisl. Pellentesque condimentum lorem eu magna faucibus, ut volutpat felis pellentesque. Nulla a consectetur nisi. Sed eu nulla bibendum, tincidunt eros a, sodales sapien. Cras scelerisque vehicula massa, euismod hendrerit nunc suscipit in. Ut in tortor vitae ligula eleifend tristique ac vel ex.</p>
 		</section>
-		<!-- COMMON FOOTER -->
-		<footer>
-			<p>&copy; Copyright 2017 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
-		</footer>
-		<!--/ COMMON FOOTER -->
+		<%include footer.html%>
 	</body>
 </html>

@@ -1,4 +1,4 @@
 *.scssc
 .DS_Store
-resources/fontawesome
-resources/normalize
+dist/vendor/fontawesome
+dist/vendor/normalize

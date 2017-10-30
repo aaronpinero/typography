@@ -1,32 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-		<!-- COMMON HEAD TAGS -->
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'UA-32897472-1');
-		</script>
-		<meta charset="utf8">
-		<script src="../dist/vendor/modernizr.js"></script>
-		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-solid.css">
-		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-core.css">
-		<link rel="stylesheet" href="../dist/vendor/normalize/normalize.css">
-		<link rel="stylesheet" href="../dist/style/tyfy.css">
-		<link rel="stylesheet" href="../dist/style/tyfy-docs.css">
-		<!--/ COMMON HEAD TAGS -->
+		<%include head.html%>
 		<title>Tyfy - Tabs</title>
   </head>
   <body class="">
-		<!-- COMMON HEADER -->
-		<header class="brand reverse">
-			<h1><a href="index.html">Tyfy</a></h1>
-		</header>
-		<!--/ COMMON HEADER -->
+		<%include header.html%>
     <section class="main links-underlined">
       <h1>Tabs</h1>
       <p>It is occasionally useful to present content as a set of tabs. The available tabs are presented horizontally with the content of the selected tab appearing directly below the tabs.</p>
@@ -53,11 +32,7 @@
         <p>Curabitur non mauris sodales, tempor lacus ac, maximus felis. Vestibulum ultrices augue ut arcu mattis pellentesque. Maecenas ullamcorper lorem sit amet pretium pharetra. Nunc ipsum tellus, hendrerit vitae bibendum vel, scelerisque sit amet libero. Duis imperdiet massa placerat venenatis pharetra. Donec consectetur quis odio sit amet sollicitudin. Morbi at faucibus odio. Duis viverra lacus a odio pretium, quis suscipit tortor accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur egestas venenatis est vel hendrerit. Fusce molestie bibendum ex in suscipit.</p>
       </div>
     </section>
-		<!-- COMMON FOOTER -->
-		<footer>
-			<p>&copy; Copyright 2017 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
-		</footer>
-		<!--/ COMMON FOOTER -->
+		<%include footer.html%>
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="../dist/script/tabs.js"></script>
   </body>
