@@ -25,12 +25,39 @@
 		<!-- COMMON HEADER -->
 		<header class="brand reverse">
 			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="no-bullet list-grid-4">
+					<li><a href="basics.html">Basics</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="collapsables.html">Collapsable Headings</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="reverse.html">Reverse Styles</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
 		</header>
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Basics</h1>
 			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the base grid, colors, text sizes, fonts, breakpoints, and other characteristics. My goal with this project is to have as few variables as possible. This results in some key variables – such as the grid unit, brand color and font size scalar – that can quickly change the entire character of the project to which <strong class="tyfy">Tyfy</strong> is applied.</p>
 			<h2><span class="smallcaps">SASS</span> Variables</h2>
+			<h3>Typefaces</h3>
+			<p>There are only four variables available in <strong>Tyfy</strong> for typefaces. While there are many way in which typefaces could be organized – by type, by usage – I have selected the way which works for most of the projects I manage. My practice is to limit the number of typefaces involved in a project.</p>
+			<dl>
+				<dt>$serif</dt>
+				<dd>The serif font selection for the project</dd>
+				<dt>$sans</dt>
+				<dd>The sans-serif font selection for the project</dd>
+				<dt>$mono</dt>
+				<dd>The monospace font selection for the project</dd>
+				<dt>$symbol</dt>
+				<dd>The icon font for the project; for my projects, this typeface is almost always FontAwesome.</dd>
+			</dl>
 			<h3>Colors</h3>
 			<dl>
 				<dt>$color-brand</dt>
@@ -49,7 +76,6 @@
 				<dd>The hover and active color for links and buttons</dd>
 			</dl>
 			<h3>Reverse Colors</h3>
-			<!--p>Sometimes it is necessary to have text appear on both light and dark backgrounds. Applying the <code>reverse</code> class to an element flips the colors to keep text readable. To simplify maintenance of the color values I've employed the <em>invert</em> and <em>lighten</em> <span class="smallcaps">SASS</span> functions. The reverse colors are calculated based on the values of the default text and link colors.</p-->
 			<dl>
 				<dt>$color-text-body-reverse</dt>
 				<dd>The reverse text color, defined as <code>invert($color-text-body)</code></dd>
@@ -105,6 +131,7 @@
 		<footer>
 			<p>&copy; Copyright 2017 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
 		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 		<!--/ COMMON FOOTER -->
 	</body>
 </html>

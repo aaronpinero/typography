@@ -168,7 +168,8 @@ ul {
 	
 	// TODO: a flexbox version of this, falling back to floats by checking for flexbox with modernizer
 	&.list-grid-2,
-	&.list-grid-3 {
+	&.list-grid-3,
+	&.list-grid-4 {
 		@media (min-width:$break-list-cols-2) {
 			@include clearfix;
 			li {
@@ -185,7 +186,8 @@ ul {
 			}
 		}
 	}
-	&.list-grid-3 {
+	&.list-grid-3,
+	&.list-grid-4 {
 		@media (min-width:$break-list-cols-3) {
 			li {
 				width:33.333%;
@@ -196,6 +198,22 @@ ul {
 					clear:none; // override the 2 column style
 				}
 				&:nth-child(3n+1) {
+					clear:left; // to make sure each new row begins properly even when list items are not all the same height
+				}
+			}
+		}
+	}
+	&.list-grid-4 {
+		@media (min-width:$break-list-cols-4) {
+			li {
+				width:25%;
+				&:nth-child(4) {
+					margin-top:0; // override of the default margin
+				}
+				&:nth-child(3n+1) {
+					clear:none; // override the 3 column style
+				}
+				&:nth-child(4n+1) {
 					clear:left; // to make sure each new row begins properly even when list items are not all the same height
 				}
 			}
