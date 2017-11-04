@@ -1,95 +1,30 @@
 // font styles and line heights for lists
 ol,
 ul {
-	@include calc-line-height($font-size-p,$grid-unit);
-	margin-bottom:0;
-	margin-top:0;
+	@include calc-line-height($tyfy-font-size-base,$grid-unit);
 	padding-left:3*$grid-unit;
 }
 li {
-	font-family:$serif;
-	font-style:normal;
-	font-weight:400;
-	letter-spacing:0;
-	@include calc-line-height($font-size-p,$grid-unit);
+	@include calc-line-height($tyfy-font-size-base,$grid-unit);
 	margin-bottom:0;
 	margin-top:0;
 }
 dl {
-	@include calc-line-height($font-size-p,$grid-unit);
-	margin-bottom:0;
-	margin-top:0;
+	@include calc-line-height($tyfy-font-size-base,$grid-unit);
 }
 dt {
-	font-family:$serif;
-	font-style:normal;
 	font-weight:700;
-	letter-spacing:0;
-	@include calc-line-height($font-size-p,$grid-unit);
+	@include calc-line-height($tyfy-font-size-base,$grid-unit);
 	margin-bottom:0;
 	margin-top:0;
 }
 dd {
-	font-family:$serif;
-	font-style:normal;
-	font-weight:400;
-	letter-spacing:0;
-	@include calc-line-height($font-size-p,$grid-unit);
+	@include calc-line-height($tyfy-font-size-base,$grid-unit);
 	margin:0;
 	padding-left:3*$grid-unit;
 }
 
-// margins for lists
-* + dl,
-* + ol,
-* + ul {
-	margin-top:2*$grid-unit;
-}
-h2 + dl,
-h3 + dl,
-h4 + dl,
-h5 + dl,
-h6 + dl {
-	margin-top:2*$grid-unit;
-}
-dl + h1,
-dl + h2,
-dl + h3,
-dl + h4,
-dl + h5,
-dl + h6 {
-	margin-top:3*$grid-unit;
-}
-h2 + ol,
-h3 + ol,
-h4 + ol,
-h5 + ol,
-h6 + ol {
-	margin-top:2*$grid-unit;
-}
-ol + h1,
-ol + h2,
-ol + h3,
-ol + h4,
-ol + h5,
-ol + h6 {
-	margin-top:3*$grid-unit;
-}
-h2 + ul,
-h3 + ul,
-h4 + ul,
-h5 + ul,
-h6 + ul {
-	margin-top:2*$grid-unit;
-}
-ul + h1,
-ul + h2,
-ul + h3,
-ul + h4,
-ul + h5,
-ul + h6 {
-	margin-top:3*$grid-unit;
-}
+// margins for list items
 li + li {
 	margin-top:$grid-unit;
 }
@@ -101,7 +36,9 @@ li + li {
 ol,
 ul {
 	ol,
-	ul {
+	ul,
+	* + ol,
+	* + ul {
 		margin-top:$grid-unit;
 	}
 }
@@ -114,7 +51,7 @@ ul {
 			position:relative;
 			&:before {
 				color:$color-text-light;
-				font-family:$symbol;
+				font-family:$tyfy-symbol;
 				margin-right:$grid-unit;
 				position:absolute;
 				right:100%;

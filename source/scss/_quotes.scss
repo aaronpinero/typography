@@ -1,8 +1,7 @@
 blockquote {
-	font-family:$serif;
-	font-size:$font-size-p;
+	font-size:$tyfy-font-size-base;
 	font-style:italic;
-	@include calc-line-height($font-size-p,$grid-unit);
+	@include calc-line-height($tyfy-font-size-base,$grid-unit);
 	margin:2*$grid-unit;
 	p {
 		font-style:italic;
@@ -11,8 +10,9 @@ blockquote {
 		background-color:transparent;
 		border:none;
 		color:$color-text-pullquote;
-		font-size:$font-size-pullquote;
-		@include calc-line-height($font-size-pullquote,$grid-unit);
+		font-family:$tyfy-font-pullquote;
+		font-size:$tyfy-font-size-h5;
+		@include calc-line-height($tyfy-font-size-h5,$grid-unit);
 		margin:2*$grid-unit 0 3*$grid-unit 0;
 		position:relative;
 		text-align:center;
@@ -20,14 +20,14 @@ blockquote {
 			margin:3*$grid-unit 4*$grid-unit 4*$grid-unit 4*$grid-unit;
 		}
 		p {
-			font-size:$font-size-pullquote;
-			@include calc-line-height($font-size-pullquote,$grid-unit);
+			font-size:$tyfy-font-size-h5;
+			@include calc-line-height($tyfy-font-size-h5,$grid-unit);
 		}
 		cite {
 			display:block;
-			font-size:$font-size-sm;
+			font-size:$tyfy-font-size-sm;
 			font-style:normal;
-			@include calc-line-height($font-size-sm,$grid-unit);
+			@include calc-line-height($tyfy-font-size-sm,$grid-unit);
 		}
 		* + cite {
 			margin-top:$grid-unit;
@@ -36,7 +36,7 @@ blockquote {
 			color:$color-text-light;
 			content:unquote("\"#{ $fa-var-quote-left }\"");
 			display:block;
-			font-family:$symbol;
+			font-family:$tyfy-symbol;
 			font-style:normal;
 			font-weight:normal;
 			text-align:center;
@@ -45,7 +45,7 @@ blockquote {
 			color:lighten($color-text-light,10%);
 			content:"———— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 ————";
 			display:block;
-			font-family:$symbol;
+			font-family:$tyfy-symbol;
 			font-style:normal;
 			font-weight:normal;
 			left:0;

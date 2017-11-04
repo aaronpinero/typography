@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900,900i|Montserrat:400,400i,500,500i,600,600i,700,700i|Overpass+Mono:400,700");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,900,900i|Oswald:500,600,700|Overpass+Mono|Rubik:400,400i,700,700i");
 /* line 6, source/scss/tyfy-docs.scss */
 body {
   -webkit-animation: fadein 1s;
@@ -30,8 +30,8 @@ body {
 
 /* line 31, source/scss/tyfy-docs.scss */
 header.brand h1 {
-  font-size: 1.44rem;
-  line-height: 1.75rem;
+  font-size: 1.728rem;
+  line-height: 2.625rem;
   padding: 0.875rem 1.75rem; }
 
 /* line 37, source/scss/tyfy-docs.scss */
@@ -39,8 +39,8 @@ header.brand nav {
   padding: 0 1.75rem; }
   /* line 40, source/scss/tyfy-docs.scss */
   header.brand nav h2 {
-    font-size: 1.2rem;
-    line-height: 1.75rem; }
+    font-size: 1.44rem;
+    line-height: 2.625rem; }
   /* line 44, source/scss/tyfy-docs.scss */
   header.brand nav ul {
     margin-left: -0.875rem;
@@ -57,65 +57,64 @@ header.brand nav {
       header.brand nav ul li a {
         border-top: 0.21875rem #2b2b2b solid;
         display: block;
-        font-family: Montserrat, sans-serif;
         font-size: 0.83333rem;
         padding-top: 0.4375rem;
         padding-bottom: 0.4375rem; }
-  /* line 64, source/scss/tyfy-docs.scss */
+  /* line 63, source/scss/tyfy-docs.scss */
   header.brand nav.nav-processed {
     position: relative; }
-    /* line 66, source/scss/tyfy-docs.scss */
+    /* line 65, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed h2 {
       cursor: pointer;
-      height: 1.75rem;
+      height: 2.625rem;
       overflow: hidden;
       position: absolute;
       right: 1.75rem;
-      top: -2.625rem;
+      top: -3.5rem;
       transition-duration: 0.25s;
       transition-property: color;
-      width: 1.75rem; }
-      /* line 76, source/scss/tyfy-docs.scss */
+      width: 2.625rem; }
+      /* line 75, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed h2:before {
         content: "\f0c9";
         display: block;
-        font-family: FontAwesome;
-        height: 1.75rem;
+        font-family: "Font Awesome 5 Solid";
+        height: 2.625rem;
         text-align: center;
-        width: 1.75rem; }
-      /* line 84, source/scss/tyfy-docs.scss */
+        width: 2.625rem; }
+      /* line 83, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed h2:hover {
         color: #ffc386; }
-    /* line 88, source/scss/tyfy-docs.scss */
+    /* line 87, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed ul {
       height: 0;
       margin-top: 0;
       overflow: hidden;
       padding-bottom: 0; }
-    /* line 95, source/scss/tyfy-docs.scss */
+    /* line 94, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed.nav-open ul {
       height: auto;
       padding-bottom: 0.875rem; }
 
-/* line 104, source/scss/tyfy-docs.scss */
+/* line 103, source/scss/tyfy-docs.scss */
 section.main {
   padding: 1.75rem; }
 
-/* line 108, source/scss/tyfy-docs.scss */
+/* line 107, source/scss/tyfy-docs.scss */
 section.demo {
   background-color: #f7f7f7;
   border: 1px dashed #c4c4c4;
   border-radius: 1rem; }
 
-/* line 113, source/scss/tyfy-docs.scss */
+/* line 112, source/scss/tyfy-docs.scss */
 section.demo.reverse {
   background-color: #111;
   border: none; }
 
-/* line 118, source/scss/tyfy-docs.scss */
+/* line 117, source/scss/tyfy-docs.scss */
 footer {
   padding: 3.5rem 0 0 0; }
-  /* line 120, source/scss/tyfy-docs.scss */
+  /* line 119, source/scss/tyfy-docs.scss */
   footer p {
     color: #919191;
     font-size: 0.83333rem;

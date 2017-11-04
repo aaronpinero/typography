@@ -16,7 +16,7 @@ h6.collapsable-processed {
   &:before {
     border-radius:50%;
     content:unquote("\"#{ $fa-var-chevron-up }\"");
-    font-family:$symbol;
+    font-family:$tyfy-symbol;
     font-size:1rem;
     font-style:normal;
     font-weight:normal;
@@ -27,7 +27,7 @@ h6.collapsable-processed {
     transition-duration:$transition-duration-move;
     transition-property:background-color,color,top;
     transition-timing-function:ease-in-out;
-    @include calc-line-height($font-size-h2,$grid-unit,width);
+    @include calc-line-height($tyfy-font-size-h2,$grid-unit,width);
   }
   &.closed {
     border-bottom:2px rgba($color-text-body,0.13) solid;
@@ -53,25 +53,25 @@ h6.collapsable-processed {
 h3.collapsable-processed {
   border-color:rgba(black,0.11);
   &:before {
-    @include calc-line-height($font-size-h3,$grid-unit,width);
+    @include calc-line-height($tyfy-font-size-h3,$grid-unit,width);
   }
 }
 h4.collapsable-processed {
   border-color:rgba(black,0.09);
   &:before {
-    @include calc-line-height($font-size-h4,$grid-unit,width);
+    @include calc-line-height($tyfy-font-size-h4,$grid-unit,width);
   }
 }
 h5.collapsable-processed {
   border-color:rgba(black,0.07);
   &:before {
-    @include calc-line-height($font-size-h5,$grid-unit,width);
+    @include calc-line-height($tyfy-font-size-h5,$grid-unit,width);
   }
 }
 h6.collapsable-processed {
   border-color:rgba(black,0.05);
   &:before {
-    @include calc-line-height($font-size-h6,$grid-unit,width);
+    @include calc-line-height($tyfy-font-size-h6,$grid-unit,width);
   }
 }
 h2.collapsable-processed,

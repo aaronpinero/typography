@@ -30,16 +30,16 @@ body {
 header.brand {
 	h1 {
 		@extend .constrained;
-		font-size:$font-size-h3;
-		@include calc-line-height($font-size-h3,$grid-unit);
+		font-size:$tyfy-font-size-h3;
+		@include calc-line-height($tyfy-font-size-h3,$grid-unit);
 		padding:$grid-unit 2*$grid-unit;
 	}
 	nav {
 		@extend .constrained;
 		padding:0 2*$grid-unit;
 		h2 {
-			font-size:$font-size-h4;
-			@include calc-line-height($font-size-h3,$grid-unit);
+			font-size:$tyfy-font-size-h4;
+			@include calc-line-height($tyfy-font-size-h3,$grid-unit);
 		}
 		ul {
 			margin-left:-1*$grid-unit;
@@ -54,8 +54,7 @@ header.brand {
 				a {
 					border-top:0.25*$grid-unit lighten($color-text-body,10%) solid;
 					display:block;
-					font-family:$sans;
-					font-size:$font-size-sm;
+					font-size:$tyfy-font-size-sm;
 					padding-top:0.5*$grid-unit;
 					padding-bottom:0.5*$grid-unit;
 				}
@@ -65,21 +64,21 @@ header.brand {
 			position:relative;
 			h2 {
 				cursor:pointer;
-				@include calc-line-height($font-size-h3,$grid-unit,height);
+				@include calc-line-height($tyfy-font-size-h3,$grid-unit,height);
 				overflow:hidden;
 				position:absolute;
 				right:2*$grid-unit;
-				top:-3*$grid-unit;
+				top:-4*$grid-unit;
 				transition-duration:$transition-duration-hover;
 				transition-property:color;
-				@include calc-line-height($font-size-h3,$grid-unit,width);
+				@include calc-line-height($tyfy-font-size-h3,$grid-unit,width);
 				&:before {
 					content:unquote("\"#{ $fa-var-bars }\"");
 					display:block;
-					font-family:$symbol;
-					@include calc-line-height($font-size-h3,$grid-unit,height);
+					font-family:$tyfy-symbol;
+					@include calc-line-height($tyfy-font-size-h3,$grid-unit,height);
 					text-align:center;
-					@include calc-line-height($font-size-h3,$grid-unit,width);
+					@include calc-line-height($tyfy-font-size-h3,$grid-unit,width);
 				}
 				&:hover {
 					color:$color-link-active-reverse;
@@ -120,8 +119,8 @@ footer {
 	p {
 		@extend .constrained;
 		color:$color-text-light;
-		font-size:$font-size-sm;
-		@include calc-line-height($font-size-sm,$grid-unit);
+		font-size:$tyfy-font-size-sm;
+		@include calc-line-height($tyfy-font-size-sm,$grid-unit);
 		padding:$grid-unit 2*$grid-unit;
 	}
 }

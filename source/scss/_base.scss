@@ -4,6 +4,46 @@ html {
 }
 body {
 	color:$color-text-body;
-	font-family:$serif;
+	font-family:$tyfy-font-base;
 	font-size:1rem;
+	@include calc-line-height(1rem,$grid-unit);
+	margin:0;
+	padding:0;
+}
+
+// basic margins
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+ol,
+ul,
+blockquote,
+address,
+table {
+	margin-bottom:0;
+	margin-top:0;
+	* + & {
+		margin-top:2*$grid-unit;
+	}
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	p + &,
+	dl + &,
+	ol + &,
+	ul + &,
+	blockquote + &,
+	address + &,
+	table + & {
+		margin-top:3*$grid-unit;
+	}
 }

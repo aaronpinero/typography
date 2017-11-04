@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900,900i|Montserrat:400,400i,500,500i,600,600i,700,700i|Overpass+Mono:400,700");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,900,900i|Oswald:500,600,700|Overpass+Mono|Rubik:400,400i,700,700i");
 /* line 2, source/scss/_base.scss */
 html {
   font-size: 100%; }
@@ -7,8 +7,118 @@ html {
 /* line 5, source/scss/_base.scss */
 body {
   color: #111;
-  font-family: Merriweather, serif;
-  font-size: 1rem; }
+  font-family: "Rubic", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin: 0;
+  padding: 0; }
+
+/* line 15, source/scss/_base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+ol,
+ul,
+blockquote,
+address,
+table {
+  margin-bottom: 0;
+  margin-top: 0; }
+  /* line 30, source/scss/_base.scss */
+  * + h1, * +
+  h2, * +
+  h3, * +
+  h4, * +
+  h5, * +
+  h6, * +
+  p, * +
+  dl, * +
+  ol, * +
+  ul, * +
+  blockquote, * +
+  address, * +
+  table {
+    margin-top: 1.75rem; }
+
+/* line 40, source/scss/_base.scss */
+p + h1,
+dl + h1,
+ol + h1,
+ul + h1,
+blockquote + h1,
+address + h1,
+table + h1, p +
+h2,
+dl +
+h2,
+ol +
+h2,
+ul +
+h2,
+blockquote +
+h2,
+address +
+h2,
+table +
+h2, p +
+h3,
+dl +
+h3,
+ol +
+h3,
+ul +
+h3,
+blockquote +
+h3,
+address +
+h3,
+table +
+h3, p +
+h4,
+dl +
+h4,
+ol +
+h4,
+ul +
+h4,
+blockquote +
+h4,
+address +
+h4,
+table +
+h4, p +
+h5,
+dl +
+h5,
+ol +
+h5,
+ul +
+h5,
+blockquote +
+h5,
+address +
+h5,
+table +
+h5, p +
+h6,
+dl +
+h6,
+ol +
+h6,
+ul +
+h6,
+blockquote +
+h6,
+address +
+h6,
+table +
+h6 {
+  margin-top: 2.625rem; }
 
 /* line 2, source/scss/_paragraphs.scss */
 .font-size-sm {
@@ -20,139 +130,85 @@ body {
 
 /* line 8, source/scss/_paragraphs.scss */
 .font-size-h6 {
-  font-size: 0.83333rem; }
+  font-size: 1rem; }
 
 /* line 11, source/scss/_paragraphs.scss */
 .font-size-h5 {
-  font-size: 1rem; }
+  font-size: 1.2rem; }
 
 /* line 14, source/scss/_paragraphs.scss */
 .font-size-h4 {
-  font-size: 1.2rem; }
+  font-size: 1.44rem; }
 
 /* line 17, source/scss/_paragraphs.scss */
 .font-size-h3 {
-  font-size: 1.44rem; }
+  font-size: 1.728rem; }
 
 /* line 20, source/scss/_paragraphs.scss */
 .font-size-h2 {
-  font-size: 1.728rem; }
+  font-size: 2.0736rem; }
 
 /* line 23, source/scss/_paragraphs.scss */
 .font-size-h1 {
-  font-size: 2.48832rem; }
+  font-size: 2.98598rem; }
 
 /* line 28, source/scss/_paragraphs.scss */
-h1 {
-  color: #232323;
-  font-family: Merriweather, serif;
-  font-size: 2.48832rem;
-  font-style: normal;
-  font-weight: 900;
-  letter-spacing: 0;
-  line-height: 3.5rem;
-  margin-bottom: 0;
-  margin-top: 0; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #232323; }
 
-/* line 39, source/scss/_paragraphs.scss */
-h2 {
-  color: #232323;
-  font-family: Montserrat, sans-serif;
-  font-size: 1.728rem;
-  font-style: normal;
+/* line 38, source/scss/_paragraphs.scss */
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.98598rem;
   font-weight: 700;
-  letter-spacing: 0;
-  line-height: 2.625rem;
-  margin-bottom: 0;
-  margin-top: 0; }
+  line-height: 3.5rem; }
+
+/* line 44, source/scss/_paragraphs.scss */
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.0736rem;
+  font-weight: 700;
+  line-height: 2.625rem; }
 
 /* line 50, source/scss/_paragraphs.scss */
 h3 {
-  color: #232323;
-  font-family: Montserrat, sans-serif;
-  font-size: 1.44rem;
-  font-style: normal;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.728rem;
   font-weight: 600;
-  letter-spacing: 0;
-  line-height: 1.75rem;
-  margin-bottom: 0;
-  margin-top: 0; }
+  line-height: 1.75rem; }
 
-/* line 61, source/scss/_paragraphs.scss */
+/* line 56, source/scss/_paragraphs.scss */
 h4 {
-  color: #232323;
-  font-family: Montserrat, sans-serif;
-  font-size: 1.2rem;
-  font-style: italic;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.44rem;
   font-weight: 600;
-  letter-spacing: 0;
-  line-height: 1.75rem;
-  margin-bottom: 0;
-  margin-top: 0; }
+  line-height: 1.75rem; }
 
-/* line 72, source/scss/_paragraphs.scss */
+/* line 62, source/scss/_paragraphs.scss */
 h5 {
-  color: #232323;
-  font-family: Montserrat, sans-serif;
-  font-size: 1rem;
-  font-style: italic;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
   font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.75rem;
-  margin-bottom: 0;
-  margin-top: 0; }
+  line-height: 1.75rem; }
 
-/* line 83, source/scss/_paragraphs.scss */
+/* line 68, source/scss/_paragraphs.scss */
 h6 {
-  color: #232323;
-  font-family: Montserrat, sans-serif;
-  font-size: 0.83333rem;
-  font-style: normal;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 0.025em;
-  line-height: 1.75rem;
-  margin-bottom: 0;
-  margin-top: 0;
-  text-transform: uppercase; }
+  line-height: 1.75rem; }
 
-/* line 95, source/scss/_paragraphs.scss */
+/* line 76, source/scss/_paragraphs.scss */
 p {
   font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.75rem;
-  margin-bottom: 0;
-  margin-top: 0; }
+  line-height: 1.75rem; }
 
-/* line 106, source/scss/_paragraphs.scss */
-* + h1,
-* + h2,
-* + h3,
-* + h4,
-* + h5,
-* + h6,
-* + p {
-  margin-top: 1.75rem; }
-
-/* line 115, source/scss/_paragraphs.scss */
-h2 + p,
-h3 + p,
-h4 + p,
-h5 + p,
-h6 + p {
-  margin-top: 1.75rem; }
-
-/* line 122, source/scss/_paragraphs.scss */
-p + h1,
-p + h2,
-p + h3,
-p + h4,
-p + h5,
-p + h6 {
-  margin-top: 2.625rem; }
-
-/* line 132, source/scss/_paragraphs.scss */
+/* line 82, source/scss/_paragraphs.scss */
 .paragraphs-justified p,
 p.justified {
   -webkit-hyphens: auto;
@@ -166,7 +222,7 @@ a {
   color: #111;
   text-decoration: none;
   transition-duration: 0.25s;
-  transition-property: border-color,color; }
+  transition-property: background-color,border-color,color; }
   /* line 6, source/scss/_links.scss */
   h1 a,
   h2 a,
@@ -234,153 +290,85 @@ a {
 ol,
 ul {
   line-height: 1.75rem;
-  margin-bottom: 0;
-  margin-top: 0;
   padding-left: 2.625rem; }
 
-/* line 9, source/scss/_lists.scss */
+/* line 7, source/scss/_lists.scss */
 li {
-  font-family: Merriweather, serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
   line-height: 1.75rem;
   margin-bottom: 0;
   margin-top: 0; }
 
-/* line 18, source/scss/_lists.scss */
+/* line 12, source/scss/_lists.scss */
 dl {
-  line-height: 1.75rem;
-  margin-bottom: 0;
-  margin-top: 0; }
+  line-height: 1.75rem; }
 
-/* line 23, source/scss/_lists.scss */
+/* line 15, source/scss/_lists.scss */
 dt {
-  font-family: Merriweather, serif;
-  font-style: normal;
   font-weight: 700;
-  letter-spacing: 0;
   line-height: 1.75rem;
   margin-bottom: 0;
   margin-top: 0; }
 
-/* line 32, source/scss/_lists.scss */
+/* line 21, source/scss/_lists.scss */
 dd {
-  font-family: Merriweather, serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
   line-height: 1.75rem;
   margin: 0;
   padding-left: 2.625rem; }
 
-/* line 43, source/scss/_lists.scss */
-* + dl,
-* + ol,
-* + ul {
-  margin-top: 1.75rem; }
-
-/* line 48, source/scss/_lists.scss */
-h2 + dl,
-h3 + dl,
-h4 + dl,
-h5 + dl,
-h6 + dl {
-  margin-top: 1.75rem; }
-
-/* line 55, source/scss/_lists.scss */
-dl + h1,
-dl + h2,
-dl + h3,
-dl + h4,
-dl + h5,
-dl + h6 {
-  margin-top: 2.625rem; }
-
-/* line 63, source/scss/_lists.scss */
-h2 + ol,
-h3 + ol,
-h4 + ol,
-h5 + ol,
-h6 + ol {
-  margin-top: 1.75rem; }
-
-/* line 70, source/scss/_lists.scss */
-ol + h1,
-ol + h2,
-ol + h3,
-ol + h4,
-ol + h5,
-ol + h6 {
-  margin-top: 2.625rem; }
-
-/* line 78, source/scss/_lists.scss */
-h2 + ul,
-h3 + ul,
-h4 + ul,
-h5 + ul,
-h6 + ul {
-  margin-top: 1.75rem; }
-
-/* line 85, source/scss/_lists.scss */
-ul + h1,
-ul + h2,
-ul + h3,
-ul + h4,
-ul + h5,
-ul + h6 {
-  margin-top: 2.625rem; }
-
-/* line 93, source/scss/_lists.scss */
+/* line 28, source/scss/_lists.scss */
 li + li {
   margin-top: 0.875rem; }
 
-/* line 96, source/scss/_lists.scss */
+/* line 31, source/scss/_lists.scss */
 * + dt {
   margin-top: 0.875rem; }
 
-/* line 103, source/scss/_lists.scss */
+/* line 38, source/scss/_lists.scss */
 ol ol,
 ol ul,
+ol * + ol,
+ol * + ul,
 ul ol,
-ul ul {
+ul ul,
+ul * + ol,
+ul * + ul {
   margin-top: 0.875rem; }
 
-/* line 112, source/scss/_lists.scss */
+/* line 49, source/scss/_lists.scss */
 ul.list-icons li {
   list-style-type: none;
   position: relative; }
-  /* line 115, source/scss/_lists.scss */
+  /* line 52, source/scss/_lists.scss */
   ul.list-icons li:before {
     color: #919191;
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Solid";
     margin-right: 0.875rem;
     position: absolute;
     right: 100%;
     top: 0; }
 
-/* line 124, source/scss/_lists.scss */
+/* line 61, source/scss/_lists.scss */
 ul.list-icons.list-icons-angle li:before {
   content: "\f105"; }
 
-/* line 127, source/scss/_lists.scss */
+/* line 64, source/scss/_lists.scss */
 ul.list-icons.list-icons-caret li:before {
   content: "\f0da"; }
 
-/* line 130, source/scss/_lists.scss */
+/* line 67, source/scss/_lists.scss */
 ul.list-icons.list-icons-check li:before {
   content: "\f00c"; }
 
-/* line 133, source/scss/_lists.scss */
+/* line 70, source/scss/_lists.scss */
 ul.list-icons.list-icons-chevron li:before {
   content: "\f054"; }
 
-/* line 138, source/scss/_lists.scss */
+/* line 75, source/scss/_lists.scss */
 ul.no-bullet li {
   list-style-type: none; }
 
 @media (min-width: 35em) {
-  /* line 145, source/scss/_lists.scss */
+  /* line 82, source/scss/_lists.scss */
   ol.list-cols-2, ol.list-cols-3,
   ul.list-cols-2,
   ul.list-cols-3 {
@@ -390,28 +378,28 @@ ul.no-bullet li {
             column-gap: 2.625rem;
     margin-bottom: -0.875rem;
     padding-right: 2.625rem; }
-    /* line 152, source/scss/_lists.scss */
+    /* line 89, source/scss/_lists.scss */
     ol.list-cols-2 li, ol.list-cols-3 li,
     ul.list-cols-2 li,
     ul.list-cols-3 li {
       -webkit-column-break-inside: avoid;
       break-inside: avoid;
       padding-bottom: 0.875rem; }
-    /* line 158, source/scss/_lists.scss */
+    /* line 95, source/scss/_lists.scss */
     ol.list-cols-2 li + li, ol.list-cols-3 li + li,
     ul.list-cols-2 li + li,
     ul.list-cols-3 li + li {
       margin-top: 0; } }
 
 @media (min-width: 55em) {
-  /* line 163, source/scss/_lists.scss */
+  /* line 100, source/scss/_lists.scss */
   ol.list-cols-3,
   ul.list-cols-3 {
     -webkit-columns: 3;
             columns: 3; } }
 
 @media (min-width: 35em) {
-  /* line 170, source/scss/_lists.scss */
+  /* line 107, source/scss/_lists.scss */
   ol.list-grid-2, ol.list-grid-3, ol.list-grid-4,
   ul.list-grid-2,
   ul.list-grid-3,
@@ -434,7 +422,7 @@ ul.no-bullet li {
     ul.list-grid-3:after,
     ul.list-grid-4:after {
       clear: both; }
-    /* line 175, source/scss/_lists.scss */
+    /* line 112, source/scss/_lists.scss */
     ol.list-grid-2 li, ol.list-grid-3 li, ol.list-grid-4 li,
     ul.list-grid-2 li,
     ul.list-grid-3 li,
@@ -443,13 +431,13 @@ ul.no-bullet li {
       float: left;
       padding-right: 2.625rem;
       width: 50%; }
-      /* line 180, source/scss/_lists.scss */
+      /* line 117, source/scss/_lists.scss */
       ol.list-grid-2 li:nth-child(2), ol.list-grid-3 li:nth-child(2), ol.list-grid-4 li:nth-child(2),
       ul.list-grid-2 li:nth-child(2),
       ul.list-grid-3 li:nth-child(2),
       ul.list-grid-4 li:nth-child(2) {
         margin-top: 0; }
-      /* line 183, source/scss/_lists.scss */
+      /* line 120, source/scss/_lists.scss */
       ol.list-grid-2 li:nth-child(2n+1), ol.list-grid-3 li:nth-child(2n+1), ol.list-grid-4 li:nth-child(2n+1),
       ul.list-grid-2 li:nth-child(2n+1),
       ul.list-grid-3 li:nth-child(2n+1),
@@ -457,41 +445,41 @@ ul.no-bullet li {
         clear: left; } }
 
 @media (min-width: 55em) {
-  /* line 192, source/scss/_lists.scss */
+  /* line 129, source/scss/_lists.scss */
   ol.list-grid-3 li, ol.list-grid-4 li,
   ul.list-grid-3 li,
   ul.list-grid-4 li {
     width: 33.333%; }
-    /* line 194, source/scss/_lists.scss */
+    /* line 131, source/scss/_lists.scss */
     ol.list-grid-3 li:nth-child(3), ol.list-grid-4 li:nth-child(3),
     ul.list-grid-3 li:nth-child(3),
     ul.list-grid-4 li:nth-child(3) {
       margin-top: 0; }
-    /* line 197, source/scss/_lists.scss */
+    /* line 134, source/scss/_lists.scss */
     ol.list-grid-3 li:nth-child(2n+1), ol.list-grid-4 li:nth-child(2n+1),
     ul.list-grid-3 li:nth-child(2n+1),
     ul.list-grid-4 li:nth-child(2n+1) {
       clear: none; }
-    /* line 200, source/scss/_lists.scss */
+    /* line 137, source/scss/_lists.scss */
     ol.list-grid-3 li:nth-child(3n+1), ol.list-grid-4 li:nth-child(3n+1),
     ul.list-grid-3 li:nth-child(3n+1),
     ul.list-grid-4 li:nth-child(3n+1) {
       clear: left; } }
 
 @media (min-width: 75em) {
-  /* line 208, source/scss/_lists.scss */
+  /* line 145, source/scss/_lists.scss */
   ol.list-grid-4 li,
   ul.list-grid-4 li {
     width: 25%; }
-    /* line 210, source/scss/_lists.scss */
+    /* line 147, source/scss/_lists.scss */
     ol.list-grid-4 li:nth-child(4),
     ul.list-grid-4 li:nth-child(4) {
       margin-top: 0; }
-    /* line 213, source/scss/_lists.scss */
+    /* line 150, source/scss/_lists.scss */
     ol.list-grid-4 li:nth-child(3n+1),
     ul.list-grid-4 li:nth-child(3n+1) {
       clear: none; }
-    /* line 216, source/scss/_lists.scss */
+    /* line 153, source/scss/_lists.scss */
     ol.list-grid-4 li:nth-child(4n+1),
     ul.list-grid-4 li:nth-child(4n+1) {
       clear: left; } }
@@ -533,30 +521,30 @@ span.smallcaps {
           font-feature-settings: "c2sc", "smcp";
   font-variant-caps: all-small-caps;
   font-weight: bolder;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.05em; }
 
 /* line 1, source/scss/_quotes.scss */
 blockquote {
-  font-family: Merriweather, serif;
   font-size: 1rem;
   font-style: italic;
   line-height: 1.75rem;
   margin: 1.75rem; }
-  /* line 7, source/scss/_quotes.scss */
+  /* line 6, source/scss/_quotes.scss */
   blockquote p {
     font-style: italic; }
-  /* line 10, source/scss/_quotes.scss */
+  /* line 9, source/scss/_quotes.scss */
   blockquote.pullquote {
     background-color: transparent;
     border: none;
     color: #de9041;
+    font-family: "Merriweather", "Georgia", serif;
     font-size: 1.2rem;
     line-height: 1.75rem;
     margin: 1.75rem 0 2.625rem 0;
     position: relative;
     text-align: center; }
     @media (min-width: 40em) {
-      /* line 10, source/scss/_quotes.scss */
+      /* line 9, source/scss/_quotes.scss */
       blockquote.pullquote {
         margin: 2.625rem 3.5rem 3.5rem 3.5rem; } }
     /* line 22, source/scss/_quotes.scss */
@@ -577,7 +565,7 @@ blockquote {
       color: #919191;
       content: "\f10d";
       display: block;
-      font-family: FontAwesome;
+      font-family: "Font Awesome 5 Solid";
       font-style: normal;
       font-weight: normal;
       text-align: center; }
@@ -586,7 +574,7 @@ blockquote {
       color: #aaaaaa;
       content: "———— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 ————";
       display: block;
-      font-family: FontAwesome;
+      font-family: "Font Awesome 5 Solid";
       font-style: normal;
       font-weight: normal;
       left: 0;
@@ -643,7 +631,7 @@ h6.collapsable-processed {
   h6.collapsable-processed:before {
     border-radius: 50%;
     content: "\f077";
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Solid";
     font-size: 1rem;
     font-style: normal;
     font-weight: normal;
@@ -705,7 +693,7 @@ h3.collapsable-processed {
   border-color: rgba(0, 0, 0, 0.11); }
   /* line 55, source/scss/_collapsables.scss */
   h3.collapsable-processed:before {
-    width: 1.75rem; }
+    width: 2.625rem; }
 
 /* line 59, source/scss/_collapsables.scss */
 h4.collapsable-processed {
@@ -892,7 +880,7 @@ table {
 
 /* line 9, source/scss/_tables.scss */
 th {
-  font-family: Montserrat, sans-serif;
+  font-family: "Rubic", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   font-variant-numeric: lining-nums;
   -webkit-font-feature-settings: "lnum";
@@ -909,6 +897,7 @@ th {
 
 /* line 23, source/scss/_tables.scss */
 td {
+  font-family: "Rubic", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   font-variant-numeric: lining-nums;
   -webkit-font-feature-settings: "lnum";
@@ -919,11 +908,11 @@ td {
   line-height: 1.75rem;
   vertical-align: top; }
 
-/* line 34, source/scss/_tables.scss */
+/* line 35, source/scss/_tables.scss */
 * + table {
   margin-top: 1.75rem; }
 
-/* line 37, source/scss/_tables.scss */
+/* line 38, source/scss/_tables.scss */
 h2 + table,
 h3 + table,
 h4 + table,
@@ -931,7 +920,7 @@ h5 + table,
 h6 + table {
   margin-top: 1.75rem; }
 
-/* line 44, source/scss/_tables.scss */
+/* line 45, source/scss/_tables.scss */
 table + h1,
 table + h2,
 table + h3,
@@ -940,58 +929,58 @@ table + h5,
 table + h6 {
   margin-top: 2.625rem; }
 
-/* line 54, source/scss/_tables.scss */
+/* line 55, source/scss/_tables.scss */
 table.clean {
   border-collapse: collapse;
   width: 100%; }
-  /* line 57, source/scss/_tables.scss */
+  /* line 58, source/scss/_tables.scss */
   table.clean td,
   table.clean th {
     border: none;
     margin: 0;
     padding-top: 0.4375rem;
     padding-bottom: 0.4375rem; }
-  /* line 64, source/scss/_tables.scss */
+  /* line 65, source/scss/_tables.scss */
   table.clean * + td,
   table.clean * + th {
     padding-left: 0.875rem; }
 
-/* line 72, source/scss/_tables.scss */
+/* line 73, source/scss/_tables.scss */
 table.striped td,
 table.striped th {
   padding-left: 0.875rem;
   padding-right: grid-unit; }
 
-/* line 78, source/scss/_tables.scss */
+/* line 79, source/scss/_tables.scss */
 table.striped tr:nth-child(2n) td {
   background-color: rgba(0, 0, 0, 0.05); }
 
-/* line 85, source/scss/_tables.scss */
+/* line 86, source/scss/_tables.scss */
 table.horizontal-rules {
   border-top: 1px rgba(0, 0, 0, 0.1) solid; }
-  /* line 87, source/scss/_tables.scss */
+  /* line 88, source/scss/_tables.scss */
   table.horizontal-rules td,
   table.horizontal-rules th {
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid; }
-  /* line 91, source/scss/_tables.scss */
+  /* line 92, source/scss/_tables.scss */
   table.horizontal-rules th[scope="col"] {
     border-bottom: 2px rgba(0, 0, 0, 0.1) solid; }
 
-/* line 97, source/scss/_tables.scss */
+/* line 98, source/scss/_tables.scss */
 table.vertical-rules {
   border-left: 1px rgba(0, 0, 0, 0.1) solid; }
-  /* line 99, source/scss/_tables.scss */
+  /* line 100, source/scss/_tables.scss */
   table.vertical-rules td,
   table.vertical-rules th {
     border-right: 1px rgba(0, 0, 0, 0.1) solid;
     padding-left: 0.875rem;
     padding-right: 0.875rem; }
-  /* line 105, source/scss/_tables.scss */
+  /* line 106, source/scss/_tables.scss */
   table.vertical-rules th[scope="row"] {
     border-right: 2px rgba(0, 0, 0, 0.1) solid; }
 
 @media (max-width: 29.997em) {
-  /* line 112, source/scss/_tables.scss */
+  /* line 113, source/scss/_tables.scss */
   table.responsive thead,
   table.responsive th {
     border: 0;
@@ -1014,60 +1003,60 @@ table.vertical-rules {
       width: auto; } }
 
 @media (max-width: 29.997em) {
-  /* line 118, source/scss/_tables.scss */
+  /* line 119, source/scss/_tables.scss */
   table.responsive tbody tr + tr {
     border-top: 1px rgba(0, 0, 0, 0.1) solid; } }
 
 @media (max-width: 29.997em) {
-  /* line 123, source/scss/_tables.scss */
+  /* line 124, source/scss/_tables.scss */
   table.responsive td {
     display: block;
     padding-left: 9rem;
     position: relative; } }
 
-/* line 129, source/scss/_tables.scss */
+/* line 130, source/scss/_tables.scss */
 table.responsive td .td-label {
   color: #919191;
   display: block;
-  font-family: Montserrat, sans-serif;
+  font-family: "Rubic", "Helvetica", "Arial", sans-serif;
   font-size: 0.83333rem;
   left: 0;
   position: absolute;
   vertical-align: top;
   width: 8rem; }
   @media (min-width: 30em) {
-    /* line 129, source/scss/_tables.scss */
+    /* line 130, source/scss/_tables.scss */
     table.responsive td .td-label {
       display: none; } }
 
 @media (min-width: 40em) {
-  /* line 147, source/scss/_tables.scss */
+  /* line 148, source/scss/_tables.scss */
   table.float-left, table.float-right {
     box-sizing: border-box;
     margin-bottom: 0.875rem;
     width: calc(50% - (2 * 0.875rem)); } }
 
 @media (min-width: 40em) {
-  /* line 155, source/scss/_tables.scss */
+  /* line 156, source/scss/_tables.scss */
   table.float-left {
     clear: left;
     float: left;
     margin-right: 3.5rem; } }
 
 @media (min-width: 40em) {
-  /* line 162, source/scss/_tables.scss */
+  /* line 163, source/scss/_tables.scss */
   table.float-right {
     clear: right;
     float: right;
     margin-left: 3.5rem; } }
 
 @media (min-width: 40em) {
-  /* line 170, source/scss/_tables.scss */
+  /* line 171, source/scss/_tables.scss */
   table.float-right + table.float-left {
     margin-right: 1.75rem; } }
 
 @media (min-width: 40em) {
-  /* line 175, source/scss/_tables.scss */
+  /* line 176, source/scss/_tables.scss */
   table.float-left + table.float-right {
     margin-left: 1.75rem; } }
 
@@ -1106,7 +1095,7 @@ table.responsive td .td-label {
     display: block;
     -webkit-box-flex: 1;
             flex: 1;
-    font-family: Montserrat, sans-serif;
+    font-family: "Oswald", sans-serif;
     margin: 0 0 -2px 0;
     padding: 0.875rem 1.75rem;
     text-align: center;
@@ -1132,8 +1121,8 @@ table.responsive td .td-label {
   border-bottom: 2px transparent solid;
   clear: both;
   cursor: pointer;
-  font-size: 1.44rem;
-  line-height: 1.75rem;
+  font-size: 1.728rem;
+  line-height: 2.625rem;
   margin: 0;
   padding: 1.75rem 5.25rem 0.875rem 1.75rem;
   position: relative;
@@ -1143,7 +1132,7 @@ table.responsive td .td-label {
   .tabs-container.tabs-processed .tab-label:before {
     border-radius: 50%;
     content: "\f077";
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Solid";
     font-size: 1rem;
     font-style: normal;
     font-weight: normal;
@@ -1154,7 +1143,7 @@ table.responsive td .td-label {
     transition-duration: 0.5s;
     transition-property: background-color,color,top;
     transition-timing-function: ease-in-out;
-    width: 1.75rem; }
+    width: 2.625rem; }
   @media (min-width: 40em) {
     /* line 50, source/scss/_tabs.scss */
     .tabs-container.tabs-processed .tab-label {

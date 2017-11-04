@@ -10,18 +10,6 @@ $break-table:30em;
 // grid unit -- should be half the default line height
 $grid-unit:0.875rem;
 
-// modular scale
-$font-size-scalar:1.2;
-$font-size-p:1rem;
-$font-size-sm:$font-size-p / $font-size-scalar;
-$font-size-h6:$font-size-p / $font-size-scalar;
-$font-size-h5:$font-size-p;
-$font-size-h4:$font-size-h5 * $font-size-scalar;
-$font-size-h3:$font-size-h4 * $font-size-scalar;
-$font-size-h2:$font-size-h3 * $font-size-scalar;
-$font-size-h1:$font-size-h2 * $font-size-scalar * $font-size-scalar;
-$font-size-pullquote:$font-size-p * $font-size-scalar;
-
 // transitions
 $transition-duration-hover:0.25s;
 $transition-duration-move:0.5s;

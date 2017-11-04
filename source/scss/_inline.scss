@@ -3,13 +3,13 @@ b {
 }
 code {
 	background-color:rgba($color-text-body,0.1);
-	font-family:$mono;
+	font-family:$tyfy-mono;
 }
 pre {
-	font-family:$mono;
+	font-family:$tyfy-mono;
 }
 small {
-	font-size:$font-size-sm;
+	font-size:$tyfy-font-size-sm;
 }
 strong {
 	font-weight:700;
@@ -28,6 +28,6 @@ span {
 		font-feature-settings:"c2sc", "smcp";
 		font-variant-caps:all-small-caps;
 		font-weight:bolder;
-		letter-spacing:0.1em;
+		letter-spacing:0.05em;
 	}	
 }

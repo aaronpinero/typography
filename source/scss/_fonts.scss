@@ -1,8 +1,26 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i,900,900i|Montserrat:400,400i,500,500i,600,600i,700,700i|Overpass+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,900,900i|Oswald:500,600,700|Overpass+Mono|Rubik:400,400i,700,700i');
 @import "../../dist/vendor/fontawesome/scss/_variables.scss";
 
 // fonts
-$serif:Merriweather,serif;
-$sans:Montserrat,sans-serif;
-$mono:'Overpass Mono',monospace;
-$symbol:FontAwesome;
+$tyfy-serif:"Merriweather","Georgia",serif;
+$tyfy-sans:"Rubic","Helvetica","Arial",sans-serif;
+$tyfy-mono:'Overpass Mono',monospace;
+$tyfy-condensed:"Oswald",sans-serif;
+$tyfy-symbol:"Font Awesome 5 Solid";
+
+// font assignments
+$tyfy-font-base:$tyfy-sans;
+$tyfy-font-headings:$tyfy-condensed;
+$tyfy-font-pullquote:$tyfy-serif;
+$tyfy-font-table:$tyfy-sans;
+
+// typographic scale
+$tyfy-font-size-scalar:1.2;
+$tyfy-font-size-base:1rem;
+$tyfy-font-size-sm:$tyfy-font-size-base / $tyfy-font-size-scalar;
+$tyfy-font-size-h6:$tyfy-font-size-base;
+$tyfy-font-size-h5:$tyfy-font-size-h6 * $tyfy-font-size-scalar;
+$tyfy-font-size-h4:$tyfy-font-size-h5 * $tyfy-font-size-scalar;
+$tyfy-font-size-h3:$tyfy-font-size-h4 * $tyfy-font-size-scalar;
+$tyfy-font-size-h2:$tyfy-font-size-h3 * $tyfy-font-size-scalar;
+$tyfy-font-size-h1:$tyfy-font-size-h2 * $tyfy-font-size-scalar * $tyfy-font-size-scalar;

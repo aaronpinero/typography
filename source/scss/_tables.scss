@@ -7,13 +7,13 @@ table {
   margin:0;
 }
 th {
-  font-family:$sans;
-  font-size:$font-size-p;
+  font-family:$tyfy-font-table;
+  font-size:$tyfy-font-size-base;
   font-variant-numeric:lining-nums;
   font-feature-settings:"lnum";
   font-variant-numeric:tabular-nums;
   font-feature-settings:"tnum";
-  @include calc-line-height($font-size-p,$grid-unit);
+  @include calc-line-height($tyfy-font-size-base,$grid-unit);
   text-align:left;
   vertical-align:top;
   &[scope="col"] {
@@ -21,12 +21,13 @@ th {
   }
 }
 td {
-  font-size:$font-size-p;
+  font-family:$tyfy-font-table;
+  font-size:$tyfy-font-size-base;
   font-variant-numeric:lining-nums;
   font-feature-settings:"lnum";
   font-variant-numeric:tabular-nums;
   font-feature-settings:"tnum";
-  @include calc-line-height($font-size-p,$grid-unit);
+  @include calc-line-height($tyfy-font-size-base,$grid-unit);
   vertical-align:top;
 }
 
@@ -129,8 +130,8 @@ table.responsive {
     .td-label {
       color:$color-text-light;
       display:block;
-      font-family:$sans;
-      font-size:$font-size-sm;
+			font-family:$tyfy-font-table;
+      font-size:$tyfy-font-size-sm;
       left:0;
       position:absolute;
       vertical-align:top;
