@@ -24,7 +24,7 @@
 	font-size:$tyfy-font-size-h1;
 }
 
-// colors
+// font sizes, weight, and line height for headings
 h1,
 h2,
 h3,
@@ -32,44 +32,35 @@ h4,
 h5,
 h6 {
 	color:$color-text-head;
-}
-
-// font sizes, weight, and line height for headings
-h1 {
-	font-family:$tyfy-font-headings;
-	font-size:$tyfy-font-size-h1;
+	font-family:$tyfy-font-heading;
 	font-weight:700;
-	@include calc-line-height($tyfy-font-size-h1,$grid-unit,line-height,1);
+}
+h1 {
+	font-size:$tyfy-font-size-h1;
+	@include calc-line-height($tyfy-font-size-h1,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
 }
 h2 {
-	font-family:$tyfy-font-headings;
 	font-size:$tyfy-font-size-h2;
-	font-weight:700;
-	@include calc-line-height($tyfy-font-size-h2,$grid-unit,line-height,1);
+	@include calc-line-height($tyfy-font-size-h2,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
 }
 h3 {
-	font-family:$tyfy-font-headings;
 	font-size:$tyfy-font-size-h3;
-	font-weight:600;
-	@include calc-line-height($tyfy-font-size-h3,$grid-unit,line-height,1);
+	@include calc-line-height($tyfy-font-size-h3,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
 }
 h4 {
-	font-family:$tyfy-font-headings;
 	font-size:$tyfy-font-size-h4;
-	font-weight:600;
-	@include calc-line-height($tyfy-font-size-h4,$grid-unit,line-height,1);
+	@include calc-line-height($tyfy-font-size-h4,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
 }
 h5 {
-	font-family:$tyfy-font-headings;
 	font-size:$tyfy-font-size-h5;
-	font-weight:500;
-	@include calc-line-height($tyfy-font-size-h5,$grid-unit,line-height,1);
+	font-style:italic;
+	@include calc-line-height($tyfy-font-size-h5,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
 }
 h6 {
-	font-family:$tyfy-font-headings;
 	font-size:$tyfy-font-size-h6;
-	font-weight:500;
-	@include calc-line-height($tyfy-font-size-h6,$grid-unit,line-height,1);
+	letter-spacing:0.05em;
+	text-transform:uppercase;
+	@include calc-line-height($tyfy-font-size-h6,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
 }
 
 // paragraphs

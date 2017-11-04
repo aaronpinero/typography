@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,900,900i|Oswald:500,600,700|Overpass+Mono|Rubik:400,400i,700,700i");
-/* line 6, source/scss/tyfy-docs.scss */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i|Zilla+Slab:400,400i,500,500i,600,600i,700,700i|Overpass+Mono");
+@import url(../../dist/fonts/league/stylesheet.css);
+/* line 5, source/scss/tyfy-docs.scss */
 body {
   -webkit-animation: fadein 1s;
           animation: fadein 1s;
@@ -18,63 +19,68 @@ body {
   to {
     opacity: 1; } }
 
-/* line 21, source/scss/tyfy-docs.scss */
+/* line 20, source/scss/tyfy-docs.scss */
 .reverse {
   background-color: #111; }
 
-/* line 24, source/scss/tyfy-docs.scss */
+/* line 23, source/scss/tyfy-docs.scss */
 .constrained, header.brand h1, header.brand nav, section.main, footer p {
   margin-left: auto;
   margin-right: auto;
   max-width: 55rem; }
 
-/* line 31, source/scss/tyfy-docs.scss */
+/* line 28, source/scss/tyfy-docs.scss */
+h1 {
+  font-family: "League Gothic";
+  text-transform: uppercase; }
+
+/* line 34, source/scss/tyfy-docs.scss */
 header.brand h1 {
   font-size: 1.728rem;
-  line-height: 2.625rem;
+  line-height: 1.75rem;
   padding: 0.875rem 1.75rem; }
 
-/* line 37, source/scss/tyfy-docs.scss */
+/* line 40, source/scss/tyfy-docs.scss */
 header.brand nav {
   padding: 0 1.75rem; }
-  /* line 40, source/scss/tyfy-docs.scss */
+  /* line 43, source/scss/tyfy-docs.scss */
   header.brand nav h2 {
-    font-size: 1.44rem;
-    line-height: 2.625rem; }
-  /* line 44, source/scss/tyfy-docs.scss */
+    font-size: 1.2rem;
+    line-height: 1.75rem; }
+  /* line 47, source/scss/tyfy-docs.scss */
   header.brand nav ul {
     margin-left: -0.875rem;
     margin-right: -0.875rem;
     margin-top: 0.875rem;
     padding-bottom: 0.875rem;
     padding-left: 0; }
-    /* line 50, source/scss/tyfy-docs.scss */
+    /* line 53, source/scss/tyfy-docs.scss */
     header.brand nav ul li {
       margin: 0;
       padding-left: 0.875rem;
       padding-right: 0.875rem; }
-      /* line 54, source/scss/tyfy-docs.scss */
+      /* line 57, source/scss/tyfy-docs.scss */
       header.brand nav ul li a {
         border-top: 0.21875rem #2b2b2b solid;
         display: block;
         font-size: 0.83333rem;
         padding-top: 0.4375rem;
         padding-bottom: 0.4375rem; }
-  /* line 63, source/scss/tyfy-docs.scss */
+  /* line 66, source/scss/tyfy-docs.scss */
   header.brand nav.nav-processed {
     position: relative; }
-    /* line 65, source/scss/tyfy-docs.scss */
+    /* line 68, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed h2 {
       cursor: pointer;
-      height: 2.625rem;
+      height: 1.75rem;
       overflow: hidden;
       position: absolute;
       right: 1.75rem;
-      top: -3.5rem;
+      top: -2.625rem;
       transition-duration: 0.25s;
       transition-property: color;
-      width: 2.625rem; }
-      /* line 75, source/scss/tyfy-docs.scss */
+      width: 1.75rem; }
+      /* line 78, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed h2:before {
         content: "\f0c9";
         display: block;
@@ -82,39 +88,39 @@ header.brand nav {
         height: 2.625rem;
         text-align: center;
         width: 2.625rem; }
-      /* line 83, source/scss/tyfy-docs.scss */
+      /* line 86, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed h2:hover {
         color: #ffc386; }
-    /* line 87, source/scss/tyfy-docs.scss */
+    /* line 90, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed ul {
       height: 0;
       margin-top: 0;
       overflow: hidden;
       padding-bottom: 0; }
-    /* line 94, source/scss/tyfy-docs.scss */
+    /* line 97, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed.nav-open ul {
       height: auto;
       padding-bottom: 0.875rem; }
 
-/* line 103, source/scss/tyfy-docs.scss */
+/* line 106, source/scss/tyfy-docs.scss */
 section.main {
   padding: 1.75rem; }
 
-/* line 107, source/scss/tyfy-docs.scss */
+/* line 110, source/scss/tyfy-docs.scss */
 section.demo {
   background-color: #f7f7f7;
   border: 1px dashed #c4c4c4;
   border-radius: 1rem; }
 
-/* line 112, source/scss/tyfy-docs.scss */
+/* line 115, source/scss/tyfy-docs.scss */
 section.demo.reverse {
   background-color: #111;
   border: none; }
 
-/* line 117, source/scss/tyfy-docs.scss */
+/* line 120, source/scss/tyfy-docs.scss */
 footer {
   padding: 3.5rem 0 0 0; }
-  /* line 119, source/scss/tyfy-docs.scss */
+  /* line 122, source/scss/tyfy-docs.scss */
   footer p {
     color: #919191;
     font-size: 0.83333rem;

@@ -1,7 +1,6 @@
-@import "fonts";
-@import "colors";
-@import "defaults";
+@import "variables";
 @import "mixins";
+@import "../../dist/fonts/league/stylesheet.css";
 
 body {
   animation:fadein 1s;
@@ -26,20 +25,24 @@ body {
 	margin-right:auto;
 	max-width:55rem;
 }
+h1 {
+	font-family:"League Gothic";
+	text-transform:uppercase;
+}
 
 header.brand {
 	h1 {
 		@extend .constrained;
 		font-size:$tyfy-font-size-h3;
-		@include calc-line-height($tyfy-font-size-h3,$grid-unit);
+		@include calc-line-height($tyfy-font-size-h3,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
 		padding:$grid-unit 2*$grid-unit;
 	}
 	nav {
 		@extend .constrained;
 		padding:0 2*$grid-unit;
 		h2 {
-			font-size:$tyfy-font-size-h4;
-			@include calc-line-height($tyfy-font-size-h3,$grid-unit);
+			font-size:$tyfy-font-size-h5;
+			@include calc-line-height($tyfy-font-size-h5,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
 		}
 		ul {
 			margin-left:-1*$grid-unit;
@@ -64,14 +67,14 @@ header.brand {
 			position:relative;
 			h2 {
 				cursor:pointer;
-				@include calc-line-height($tyfy-font-size-h3,$grid-unit,height);
+				@include calc-line-height($tyfy-font-size-h3,$grid-unit,height,$tyfy-leading-adjustment-heading);
 				overflow:hidden;
 				position:absolute;
 				right:2*$grid-unit;
-				top:-4*$grid-unit;
+				top:-3*$grid-unit;
 				transition-duration:$transition-duration-hover;
 				transition-property:color;
-				@include calc-line-height($tyfy-font-size-h3,$grid-unit,width);
+				@include calc-line-height($tyfy-font-size-h3,$grid-unit,width,$tyfy-leading-adjustment-heading);
 				&:before {
 					content:unquote("\"#{ $fa-var-bars }\"");
 					display:block;

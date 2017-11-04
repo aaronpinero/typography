@@ -4,7 +4,6 @@ table {
   font-feature-settings:"lnum";
   font-variant-numeric:tabular-nums;
   font-feature-settings:"tnum";
-  margin:0;
 }
 th {
   font-family:$tyfy-font-table;
@@ -29,26 +28,6 @@ td {
   font-feature-settings:"tnum";
   @include calc-line-height($tyfy-font-size-base,$grid-unit);
   vertical-align:top;
-}
-
-// table spacing
-* + table {
-  margin-top:2*$grid-unit;
-}
-h2 + table,
-h3 + table,
-h4 + table,
-h5 + table,
-h6 + table {
-  margin-top:2*$grid-unit;
-}
-table + h1,
-table + h2,
-table + h3,
-table + h4,
-table + h5,
-table + h6 {
-  margin-top:3*$grid-unit;
 }
 
 // plain table

@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,900,900i|Oswald:500,600,700|Overpass+Mono|Rubik:400,400i,700,700i');
-@import "../../dist/vendor/fontawesome/scss/_variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i|Zilla+Slab:400,400i,500,500i,600,600i,700,700i|Overpass+Mono');
+@import "../../../dist/vendor/fontawesome/scss/_variables.scss";
 
 // fonts
-$tyfy-serif:"Merriweather","Georgia",serif;
-$tyfy-sans:"Rubic","Helvetica","Arial",sans-serif;
+$tyfy-serif:"Zilla Slab","Georgia",serif;
+$tyfy-sans:"Raleway","Helvetica","Arial",sans-serif;
 $tyfy-mono:'Overpass Mono',monospace;
-$tyfy-condensed:"Oswald",sans-serif;
 $tyfy-symbol:"Font Awesome 5 Solid";
 
 // font assignments
 $tyfy-font-base:$tyfy-sans;
-$tyfy-font-headings:$tyfy-condensed;
+$tyfy-font-heading:$tyfy-serif;
 $tyfy-font-pullquote:$tyfy-serif;
 $tyfy-font-table:$tyfy-sans;
 
@@ -24,3 +23,8 @@ $tyfy-font-size-h4:$tyfy-font-size-h5 * $tyfy-font-size-scalar;
 $tyfy-font-size-h3:$tyfy-font-size-h4 * $tyfy-font-size-scalar;
 $tyfy-font-size-h2:$tyfy-font-size-h3 * $tyfy-font-size-scalar;
 $tyfy-font-size-h1:$tyfy-font-size-h2 * $tyfy-font-size-scalar * $tyfy-font-size-scalar;
+
+// line height adjustment
+// these values adjust calculation of line-height based on the $grid-unit value
+$tyfy-leading-adjustment-base:0.9;
+$tyfy-leading-adjustment-heading:1;

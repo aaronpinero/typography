@@ -1,4 +1,4 @@
-@mixin calc-line-height($fontsize,$grid-unit,$property:line-height,$adjustment_factor:0.9) {  
+@mixin calc-line-height($fontsize,$grid-unit,$property:line-height,$adjustment_factor:$tyfy-leading-adjustment-base) {  
   @if $fontsize <= ($grid-unit*$adjustment_factor) {
     #{$property}:$grid-unit;
   }

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,900,900i|Oswald:500,600,700|Overpass+Mono|Rubik:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i|Zilla+Slab:400,400i,500,500i,600,600i,700,700i|Overpass+Mono");
 /* line 2, source/scss/_base.scss */
 html {
   font-size: 100%; }
@@ -7,7 +7,7 @@ html {
 /* line 5, source/scss/_base.scss */
 body {
   color: #111;
-  font-family: "Rubic", "Helvetica", "Arial", sans-serif;
+  font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.75rem;
   margin: 0;
@@ -43,7 +43,7 @@ table {
   blockquote, * +
   address, * +
   table {
-    margin-top: 1.75rem; }
+    margin-top: 0.875rem; }
 
 /* line 40, source/scss/_base.scss */
 p + h1,
@@ -118,7 +118,7 @@ address +
 h6,
 table +
 h6 {
-  margin-top: 2.625rem; }
+  margin-top: 1.75rem; }
 
 /* line 2, source/scss/_paragraphs.scss */
 .font-size-sm {
@@ -159,56 +159,49 @@ h3,
 h4,
 h5,
 h6 {
-  color: #232323; }
+  color: #232323;
+  font-family: "Zilla Slab", "Georgia", serif;
+  font-weight: 700; }
 
 /* line 38, source/scss/_paragraphs.scss */
 h1 {
-  font-family: "Oswald", sans-serif;
   font-size: 2.98598rem;
-  font-weight: 700;
   line-height: 3.5rem; }
 
-/* line 44, source/scss/_paragraphs.scss */
+/* line 42, source/scss/_paragraphs.scss */
 h2 {
-  font-family: "Oswald", sans-serif;
   font-size: 2.0736rem;
-  font-weight: 700;
   line-height: 2.625rem; }
 
-/* line 50, source/scss/_paragraphs.scss */
+/* line 46, source/scss/_paragraphs.scss */
 h3 {
-  font-family: "Oswald", sans-serif;
   font-size: 1.728rem;
-  font-weight: 600;
   line-height: 1.75rem; }
 
-/* line 56, source/scss/_paragraphs.scss */
+/* line 50, source/scss/_paragraphs.scss */
 h4 {
-  font-family: "Oswald", sans-serif;
   font-size: 1.44rem;
-  font-weight: 600;
   line-height: 1.75rem; }
 
-/* line 62, source/scss/_paragraphs.scss */
+/* line 54, source/scss/_paragraphs.scss */
 h5 {
-  font-family: "Oswald", sans-serif;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-style: italic;
   line-height: 1.75rem; }
 
-/* line 68, source/scss/_paragraphs.scss */
+/* line 59, source/scss/_paragraphs.scss */
 h6 {
-  font-family: "Oswald", sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   line-height: 1.75rem; }
 
-/* line 76, source/scss/_paragraphs.scss */
+/* line 67, source/scss/_paragraphs.scss */
 p {
   font-size: 1rem;
   line-height: 1.75rem; }
 
-/* line 82, source/scss/_paragraphs.scss */
+/* line 73, source/scss/_paragraphs.scss */
 .paragraphs-justified p,
 p.justified {
   -webkit-hyphens: auto;
@@ -537,7 +530,7 @@ blockquote {
     background-color: transparent;
     border: none;
     color: #de9041;
-    font-family: "Merriweather", "Georgia", serif;
+    font-family: "Zilla Slab", "Georgia", serif;
     font-size: 1.2rem;
     line-height: 1.75rem;
     margin: 1.75rem 0 2.625rem 0;
@@ -693,7 +686,7 @@ h3.collapsable-processed {
   border-color: rgba(0, 0, 0, 0.11); }
   /* line 55, source/scss/_collapsables.scss */
   h3.collapsable-processed:before {
-    width: 2.625rem; }
+    width: 1.75rem; }
 
 /* line 59, source/scss/_collapsables.scss */
 h4.collapsable-processed {
@@ -875,12 +868,11 @@ table {
           font-feature-settings: "lnum";
   font-variant-numeric: tabular-nums;
   -webkit-font-feature-settings: "tnum";
-          font-feature-settings: "tnum";
-  margin: 0; }
+          font-feature-settings: "tnum"; }
 
-/* line 9, source/scss/_tables.scss */
+/* line 8, source/scss/_tables.scss */
 th {
-  font-family: "Rubic", "Helvetica", "Arial", sans-serif;
+  font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   font-variant-numeric: lining-nums;
   -webkit-font-feature-settings: "lnum";
@@ -891,13 +883,13 @@ th {
   line-height: 1.75rem;
   text-align: left;
   vertical-align: top; }
-  /* line 19, source/scss/_tables.scss */
+  /* line 18, source/scss/_tables.scss */
   th[scope="col"] {
     vertical-align: bottom; }
 
-/* line 23, source/scss/_tables.scss */
+/* line 22, source/scss/_tables.scss */
 td {
-  font-family: "Rubic", "Helvetica", "Arial", sans-serif;
+  font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   font-variant-numeric: lining-nums;
   -webkit-font-feature-settings: "lnum";
@@ -908,79 +900,58 @@ td {
   line-height: 1.75rem;
   vertical-align: top; }
 
-/* line 35, source/scss/_tables.scss */
-* + table {
-  margin-top: 1.75rem; }
-
-/* line 38, source/scss/_tables.scss */
-h2 + table,
-h3 + table,
-h4 + table,
-h5 + table,
-h6 + table {
-  margin-top: 1.75rem; }
-
-/* line 45, source/scss/_tables.scss */
-table + h1,
-table + h2,
-table + h3,
-table + h4,
-table + h5,
-table + h6 {
-  margin-top: 2.625rem; }
-
-/* line 55, source/scss/_tables.scss */
+/* line 34, source/scss/_tables.scss */
 table.clean {
   border-collapse: collapse;
   width: 100%; }
-  /* line 58, source/scss/_tables.scss */
+  /* line 37, source/scss/_tables.scss */
   table.clean td,
   table.clean th {
     border: none;
     margin: 0;
     padding-top: 0.4375rem;
     padding-bottom: 0.4375rem; }
-  /* line 65, source/scss/_tables.scss */
+  /* line 44, source/scss/_tables.scss */
   table.clean * + td,
   table.clean * + th {
     padding-left: 0.875rem; }
 
-/* line 73, source/scss/_tables.scss */
+/* line 52, source/scss/_tables.scss */
 table.striped td,
 table.striped th {
   padding-left: 0.875rem;
   padding-right: grid-unit; }
 
-/* line 79, source/scss/_tables.scss */
+/* line 58, source/scss/_tables.scss */
 table.striped tr:nth-child(2n) td {
   background-color: rgba(0, 0, 0, 0.05); }
 
-/* line 86, source/scss/_tables.scss */
+/* line 65, source/scss/_tables.scss */
 table.horizontal-rules {
   border-top: 1px rgba(0, 0, 0, 0.1) solid; }
-  /* line 88, source/scss/_tables.scss */
+  /* line 67, source/scss/_tables.scss */
   table.horizontal-rules td,
   table.horizontal-rules th {
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid; }
-  /* line 92, source/scss/_tables.scss */
+  /* line 71, source/scss/_tables.scss */
   table.horizontal-rules th[scope="col"] {
     border-bottom: 2px rgba(0, 0, 0, 0.1) solid; }
 
-/* line 98, source/scss/_tables.scss */
+/* line 77, source/scss/_tables.scss */
 table.vertical-rules {
   border-left: 1px rgba(0, 0, 0, 0.1) solid; }
-  /* line 100, source/scss/_tables.scss */
+  /* line 79, source/scss/_tables.scss */
   table.vertical-rules td,
   table.vertical-rules th {
     border-right: 1px rgba(0, 0, 0, 0.1) solid;
     padding-left: 0.875rem;
     padding-right: 0.875rem; }
-  /* line 106, source/scss/_tables.scss */
+  /* line 85, source/scss/_tables.scss */
   table.vertical-rules th[scope="row"] {
     border-right: 2px rgba(0, 0, 0, 0.1) solid; }
 
 @media (max-width: 29.997em) {
-  /* line 113, source/scss/_tables.scss */
+  /* line 92, source/scss/_tables.scss */
   table.responsive thead,
   table.responsive th {
     border: 0;
@@ -1003,60 +974,60 @@ table.vertical-rules {
       width: auto; } }
 
 @media (max-width: 29.997em) {
-  /* line 119, source/scss/_tables.scss */
+  /* line 98, source/scss/_tables.scss */
   table.responsive tbody tr + tr {
     border-top: 1px rgba(0, 0, 0, 0.1) solid; } }
 
 @media (max-width: 29.997em) {
-  /* line 124, source/scss/_tables.scss */
+  /* line 103, source/scss/_tables.scss */
   table.responsive td {
     display: block;
     padding-left: 9rem;
     position: relative; } }
 
-/* line 130, source/scss/_tables.scss */
+/* line 109, source/scss/_tables.scss */
 table.responsive td .td-label {
   color: #919191;
   display: block;
-  font-family: "Rubic", "Helvetica", "Arial", sans-serif;
+  font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   font-size: 0.83333rem;
   left: 0;
   position: absolute;
   vertical-align: top;
   width: 8rem; }
   @media (min-width: 30em) {
-    /* line 130, source/scss/_tables.scss */
+    /* line 109, source/scss/_tables.scss */
     table.responsive td .td-label {
       display: none; } }
 
 @media (min-width: 40em) {
-  /* line 148, source/scss/_tables.scss */
+  /* line 127, source/scss/_tables.scss */
   table.float-left, table.float-right {
     box-sizing: border-box;
     margin-bottom: 0.875rem;
     width: calc(50% - (2 * 0.875rem)); } }
 
 @media (min-width: 40em) {
-  /* line 156, source/scss/_tables.scss */
+  /* line 135, source/scss/_tables.scss */
   table.float-left {
     clear: left;
     float: left;
     margin-right: 3.5rem; } }
 
 @media (min-width: 40em) {
-  /* line 163, source/scss/_tables.scss */
+  /* line 142, source/scss/_tables.scss */
   table.float-right {
     clear: right;
     float: right;
     margin-left: 3.5rem; } }
 
 @media (min-width: 40em) {
-  /* line 171, source/scss/_tables.scss */
+  /* line 150, source/scss/_tables.scss */
   table.float-right + table.float-left {
     margin-right: 1.75rem; } }
 
 @media (min-width: 40em) {
-  /* line 176, source/scss/_tables.scss */
+  /* line 155, source/scss/_tables.scss */
   table.float-left + table.float-right {
     margin-left: 1.75rem; } }
 
@@ -1095,7 +1066,7 @@ table.responsive td .td-label {
     display: block;
     -webkit-box-flex: 1;
             flex: 1;
-    font-family: "Oswald", sans-serif;
+    font-family: "Zilla Slab", "Georgia", serif;
     margin: 0 0 -2px 0;
     padding: 0.875rem 1.75rem;
     text-align: center;

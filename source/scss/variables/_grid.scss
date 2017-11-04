@@ -1,0 +1,9 @@
+// grid unit
+// helps define vertical and horizontal grid
+// should be half the base line-height
+$grid-unit:0.875rem;
+
+// line height adjustment
+// these values adjust calculation of line-height based on the $grid-unit value
+$tyfy-leading-adjustment-base:0.9;
+$tyfy-leading-adjustment-heading:1;
