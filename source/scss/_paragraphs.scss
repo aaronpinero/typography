@@ -24,7 +24,7 @@
 	font-size:$tyfy-font-size-h1;
 }
 
-// font sizes, weight, and line height for headings
+// headings
 h1,
 h2,
 h3,
@@ -37,36 +37,36 @@ h6 {
 }
 h1 {
 	font-size:$tyfy-font-size-h1;
-	@include calc-line-height($tyfy-font-size-h1,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
+	line-height:leading($tyfy-font-size-h1,heading);
 }
 h2 {
 	font-size:$tyfy-font-size-h2;
-	@include calc-line-height($tyfy-font-size-h2,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
+	line-height:leading($tyfy-font-size-h2,heading);
 }
 h3 {
 	font-size:$tyfy-font-size-h3;
-	@include calc-line-height($tyfy-font-size-h3,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
+	line-height:leading($tyfy-font-size-h3,heading);
 }
 h4 {
 	font-size:$tyfy-font-size-h4;
-	@include calc-line-height($tyfy-font-size-h4,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
+	line-height:leading($tyfy-font-size-h4,heading);
 }
 h5 {
 	font-size:$tyfy-font-size-h5;
 	font-style:italic;
-	@include calc-line-height($tyfy-font-size-h5,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
+	line-height:leading($tyfy-font-size-h5,heading);
 }
 h6 {
 	font-size:$tyfy-font-size-h6;
 	letter-spacing:0.05em;
 	text-transform:uppercase;
-	@include calc-line-height($tyfy-font-size-h6,$grid-unit,line-height,$tyfy-leading-adjustment-heading);
+	line-height:leading($tyfy-font-size-h6,heading);
 }
 
 // paragraphs
 p {
 	font-size:$tyfy-font-size-base;
-	@include calc-line-height($tyfy-font-size-base,$grid-unit);
+	line-height:leading($tyfy-font-size-base,base);
 }
 
 // justified

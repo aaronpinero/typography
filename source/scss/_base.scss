@@ -6,7 +6,7 @@ body {
 	color:$color-text-body;
 	font-family:$tyfy-font-base;
 	font-size:$tyfy-font-size-base;
-	@include calc-line-height($tyfy-font-size-base,$grid-unit);
+	line-height:leading($tyfy-font-size-base,base);
 	margin:0;
 	padding:0;
 }
@@ -28,7 +28,7 @@ table {
 	margin-bottom:0;
 	margin-top:0;
 	* + & {
-		margin-top:$grid-unit;
+		margin-top:2*$tyfy-grid-unit;
 	}
 }
 h1,
@@ -44,6 +44,6 @@ h6 {
 	blockquote + &,
 	address + &,
 	table + & {
-		margin-top:2*$grid-unit;
+		margin-top:3*$tyfy-grid-unit;
 	}
 }

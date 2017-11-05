@@ -1,8 +1,6 @@
 blockquote {
-	font-size:$tyfy-font-size-base;
 	font-style:italic;
-	@include calc-line-height($tyfy-font-size-base,$grid-unit);
-	margin:2*$grid-unit;
+	margin:2*$tyfy-grid-unit;
 	p {
 		font-style:italic;
 	}
@@ -11,26 +9,26 @@ blockquote {
 		border:none;
 		color:$color-text-pullquote;
 		font-family:$tyfy-font-pullquote;
-		font-size:$tyfy-font-size-h5;
-		@include calc-line-height($tyfy-font-size-h5,$grid-unit);
-		margin:2*$grid-unit 0 3*$grid-unit 0;
+		font-size:$tyfy-font-size-pullquote;
+		line-height:leading($tyfy-font-size-pullquote,tall);
+		margin:2*$tyfy-grid-unit 0 3*$tyfy-grid-unit 0;
 		position:relative;
 		text-align:center;
 		@media (min-width:$break-pullquote-large) {
-			margin:3*$grid-unit 4*$grid-unit 4*$grid-unit 4*$grid-unit;
+			margin:3*$tyfy-grid-unit 4*$tyfy-grid-unit 4*$tyfy-grid-unit 4*$tyfy-grid-unit;
 		}
 		p {
-			font-size:$tyfy-font-size-h5;
-			@include calc-line-height($tyfy-font-size-h5,$grid-unit);
+			font-size:$tyfy-font-size-pullquote;
+			line-height:leading($tyfy-font-size-pullquote,tall);
 		}
 		cite {
 			display:block;
 			font-size:$tyfy-font-size-sm;
 			font-style:normal;
-			@include calc-line-height($tyfy-font-size-sm,$grid-unit);
+			line-height:leading($tyfy-font-size-sm,tall);
 		}
 		* + cite {
-			margin-top:$grid-unit;
+			margin-top:$tyfy-grid-unit;
 		}
 		&:before {
 			color:$color-text-light;
@@ -61,10 +59,10 @@ blockquote {
 		&.float-right {
 			@media (min-width:$break-floats) {
 				box-sizing:border-box;
-				margin-bottom:3*$grid-unit;
-				margin-top:2*$grid-unit;
+				margin-bottom:3*$tyfy-grid-unit;
+				margin-top:2*$tyfy-grid-unit;
 				text-align:left;
-				width:calc(50% - (2 * #{$grid-unit}));
+				width:calc(50% - (2 * #{$tyfy-grid-unit}));
 			}
 		}
 		&.float-left {
@@ -72,14 +70,14 @@ blockquote {
 				clear:left;
 				float:left;
 				margin-left:0;
-				margin-right:4*$grid-unit;
+				margin-right:4*$tyfy-grid-unit;
 			}
 		}
 		&.float-right {
 			@media (min-width:$break-floats) {
 				clear:right;
 				float:right;
-				margin-left:4*$grid-unit;
+				margin-left:4*$tyfy-grid-unit;
 				margin-right:0;
 			}
 		}

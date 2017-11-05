@@ -9,7 +9,7 @@ h6.collapsable-processed {
   border-bottom:2px transparent solid;
   clear:both;
   cursor:pointer;
-  padding:2*$grid-unit 6*$grid-unit $grid-unit 2*$grid-unit;
+  padding:2*$tyfy-grid-unit 6*$tyfy-grid-unit $tyfy-grid-unit 2*$tyfy-grid-unit;
   position:relative;
   transition-duration:$transition-duration-move;
   transition-property:padding-top;
@@ -21,57 +21,57 @@ h6.collapsable-processed {
     font-style:normal;
     font-weight:normal;
     position:absolute;
-    right:2*$grid-unit;
+    right:2*$tyfy-grid-unit;
     text-align:center;
-    top:2*$grid-unit;
+    top:2*$tyfy-grid-unit;
     transition-duration:$transition-duration-move;
     transition-property:background-color,color,top;
     transition-timing-function:ease-in-out;
-    @include calc-line-height($tyfy-font-size-h2,$grid-unit,width,$tyfy-leading-adjustment-heading);
+    width:leading($tyfy-font-size-h2,heading);
   }
   &.closed {
     border-bottom:2px rgba($color-text-body,0.13) solid;
-    padding-top:$grid-unit;
+    padding-top:$tyfy-grid-unit;
     &:before {
       content:unquote("\"#{ $fa-var-chevron-down }\"");
-      top:$grid-unit;
+      top:$tyfy-grid-unit;
     }
   }
   &.transition {
-    padding-top:$grid-unit;
+    padding-top:$tyfy-grid-unit;
     &:before {
-      top:$grid-unit;
+      top:$tyfy-grid-unit;
     }
   }
   &.transition.closed {
-    padding-top:2*$grid-unit;
+    padding-top:2*$tyfy-grid-unit;
     &:before {
-      top:2*$grid-unit;
+      top:2*$tyfy-grid-unit;
     }
   }
 }
 h3.collapsable-processed {
   border-color:rgba(black,0.11);
   &:before {
-    @include calc-line-height($tyfy-font-size-h3,$grid-unit,width,$tyfy-leading-adjustment-heading);
+    width:leading($tyfy-font-size-h3,heading);
   }
 }
 h4.collapsable-processed {
   border-color:rgba(black,0.09);
   &:before {
-    @include calc-line-height($tyfy-font-size-h4,$grid-unit,width,$tyfy-leading-adjustment-heading);
+    width:leading($tyfy-font-size-h4,heading);
   }
 }
 h5.collapsable-processed {
   border-color:rgba(black,0.07);
   &:before {
-    @include calc-line-height($tyfy-font-size-h5,$grid-unit,width,$tyfy-leading-adjustment-heading);
+    width:leading($tyfy-font-size-h5,heading);
   }
 }
 h6.collapsable-processed {
   border-color:rgba(black,0.05);
   &:before {
-    @include calc-line-height($tyfy-font-size-h6,$grid-unit,width,$tyfy-leading-adjustment-heading);
+    width:leading($tyfy-font-size-h6,heading);
   }
 }
 h2.collapsable-processed,
@@ -96,7 +96,7 @@ h6.collapsable-processed {
   border:2px rgba(black,0.13) solid;
   border-top:none !important;
   overflow:hidden;
-  padding:$grid-unit 2*$grid-unit 2*$grid-unit 2*$grid-unit;
+  padding:$tyfy-grid-unit 2*$tyfy-grid-unit 2*$tyfy-grid-unit 2*$tyfy-grid-unit;
   &.closed {
     border:none;
     height:1px;

@@ -1,12 +1,3 @@
-@mixin calc-line-height($fontsize,$grid-unit,$property:line-height,$adjustment_factor:$tyfy-leading-adjustment-base) {  
-  @if $fontsize <= ($grid-unit*$adjustment_factor) {
-    #{$property}:$grid-unit;
-  }
-  @else {
-    #{$property}:ceil($fontsize/($grid-unit*$adjustment_factor)) * $grid-unit;
-  }
-}
-
 @mixin clearfix {
   *zoom:1;
   &:before,

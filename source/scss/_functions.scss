@@ -1,0 +1,20 @@
+// functions
+@function leading($font-size,$leading-style) {
+	$adjustment_factor:$tyfy-leading-adjustment-base;
+  @if $leading-style == tall {
+		$adjustment_factor:$tyfy-leading-adjustment-tall;
+  }
+  @else if $leading-style == heading {
+		$adjustment_factor:$tyfy-leading-adjustment-heading;
+  }
+  @else if $leading-style == short {
+		$adjustment_factor:$tyfy-leading-adjustment-short;
+  }
+  
+  @if $font-size <= ($tyfy-grid-unit*$adjustment_factor) {
+    @return $tyfy-grid-unit;
+  }
+  @else {
+    @return ceil($font-size/($tyfy-grid-unit*$adjustment_factor)) * $tyfy-grid-unit;
+  }
+}

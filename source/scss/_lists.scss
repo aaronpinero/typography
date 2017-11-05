@@ -1,35 +1,35 @@
 // font styles and line heights for lists
 ol,
 ul {
-	@include calc-line-height($tyfy-font-size-base,$grid-unit);
-	padding-left:3*$grid-unit;
+	line-height:leading($tyfy-font-size-base,base);
+	padding-left:3*$tyfy-grid-unit;
 }
 li {
-	@include calc-line-height($tyfy-font-size-base,$grid-unit);
+	line-height:leading($tyfy-font-size-base,base);
 	margin-bottom:0;
 	margin-top:0;
 }
 dl {
-	@include calc-line-height($tyfy-font-size-base,$grid-unit);
+	line-height:leading($tyfy-font-size-base,base);
 }
 dt {
 	font-weight:700;
-	@include calc-line-height($tyfy-font-size-base,$grid-unit);
+	line-height:leading($tyfy-font-size-base,base);
 	margin-bottom:0;
 	margin-top:0;
 }
 dd {
-	@include calc-line-height($tyfy-font-size-base,$grid-unit);
+	line-height:leading($tyfy-font-size-base,base);
 	margin:0;
-	padding-left:3*$grid-unit;
+	padding-left:3*$tyfy-grid-unit;
 }
 
 // margins for list items
 li + li {
-	margin-top:$grid-unit;
+	margin-top:$tyfy-grid-unit;
 }
 * + dt {
-	margin-top:$grid-unit;
+	margin-top:$tyfy-grid-unit;
 }
 
 // nested lists
@@ -39,7 +39,7 @@ ul {
 	ul,
 	* + ol,
 	* + ul {
-		margin-top:$grid-unit;
+		margin-top:$tyfy-grid-unit;
 	}
 }
 
@@ -52,7 +52,7 @@ ul {
 			&:before {
 				color:$color-text-light;
 				font-family:$tyfy-symbol;
-				margin-right:$grid-unit;
+				margin-right:$tyfy-grid-unit;
 				position:absolute;
 				right:100%;
 				top:0;
@@ -83,14 +83,14 @@ ul {
 	&.list-cols-3 {
 		@media (min-width:$break-list-cols-2) {
 			columns:2;
-			column-gap:3*$grid-unit;
-			margin-bottom:-1*$grid-unit; // to balance out the bottom padding on the list items
-			padding-right:3*$grid-unit; // to balance the left padding and make the columns centered in the body
+			column-gap:3*$tyfy-grid-unit;
+			margin-bottom:-1*$tyfy-grid-unit; // to balance out the bottom padding on the list items
+			padding-right:3*$tyfy-grid-unit; // to balance the left padding and make the columns centered in the body
 			li {
 				-webkit-column-break-inside:avoid;
 				page-break-inside:avoid;
 				break-inside:avoid;
-				padding-bottom:$grid-unit;
+				padding-bottom:$tyfy-grid-unit;
 			}
 			li + li {
 				margin-top:0;	// override of the default margin;
@@ -112,7 +112,7 @@ ul {
 			li {
 				box-sizing:border-box;
 				float:left;
-				padding-right:3*$grid-unit; // to balance the left padding and make the columns centered in the body
+				padding-right:3*$tyfy-grid-unit; // to balance the left padding and make the columns centered in the body
 				width:50%;
 				&:nth-child(2) {
 					margin-top:0; // override of the default margin
