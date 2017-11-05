@@ -1,18 +1,19 @@
 // colors
-$color-brand:#418fde;
-$color-text-body:#111;
-$color-text-head:lighten($color-text-body,7%);
-$color-text-light:lighten($color-text-body,50%);
-$color-text-pullquote:complement($color-brand);
-$color-link-default:saturate(darken($color-brand,10%),5%);
-$color-link-active:complement($color-link-default);
-$color-table-border:rgba(0,0,0,0.1);
-$color-table-stripe:rgba(0,0,0,0.05);
+$tyfy-color-background:white;
+$tyfy-color-brand:#418fde;
+$tyfy-color-text-body:#111;
+$tyfy-color-text-head:lighten($tyfy-color-text-body,7%);
+$tyfy-color-text-light:lighten($tyfy-color-text-body,50%);
+$tyfy-color-text-pullquote:complement($tyfy-color-brand);
+$tyfy-color-link-default:saturate(darken($tyfy-color-brand,10%),5%);
+$tyfy-color-link-active:complement($tyfy-color-link-default);
+$tyfy-color-table-border:rgba(0,0,0,0.1);
+$tyfy-color-table-stripe:rgba(0,0,0,0.05);
 
 // reverse colors
-$color-text-body-reverse:invert($color-text-body);
-$color-text-head-reverse:invert($color-text-head);
-$color-text-light-reverse:invert($color-text-light);
-$color-text-pullquote-reverse:saturate(lighten($color-text-pullquote,30%),30%);
-$color-link-default-reverse:saturate(lighten($color-link-default,30%),30%);
-$color-link-active-reverse:complement($color-link-default-reverse);
+$tyfy-color-text-body-reverse:invert($tyfy-color-text-body);
+$tyfy-color-text-head-reverse:invert($tyfy-color-text-head);
+$tyfy-color-text-light-reverse:invert($tyfy-color-text-light);
+$tyfy-color-text-pullquote-reverse:saturate(lighten($tyfy-color-text-pullquote,30%),30%);
+$tyfy-color-link-default-reverse:saturate(lighten($tyfy-color-link-default,30%),30%);
+$tyfy-color-link-active-reverse:complement($tyfy-color-link-default-reverse);

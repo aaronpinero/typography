@@ -1,4 +1,4 @@
-// functions
+// calculate leading for a given fontsize
 @function leading($font-size,$leading-style) {
 	$adjustment_factor:$tyfy-leading-adjustment-base;
   @if $leading-style == tall {
@@ -17,4 +17,9 @@
   @else {
     @return ceil($font-size/($tyfy-grid-unit*$adjustment_factor)) * $tyfy-grid-unit;
   }
+}
+
+// calculate a multiple of the base grid unit
+@function grid($multiplier) {
+	@return $tyfy-grid-unit * $multiplier;
 }

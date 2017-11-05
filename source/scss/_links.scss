@@ -1,56 +1,38 @@
 a {
-	color:$color-text-body;
+	color:$tyfy-color-text-body;
 	text-decoration:none;
-	transition-duration:$transition-duration-hover;
+	transition-duration:$tyfy-transition-duration-hover;
 	transition-property:background-color,border-color,color;
+	&[href] {
+		border-bottom-color:rgba($tyfy-color-link-default,0.5);
+		color:$tyfy-color-link-default;
+		&:hover,
+		&:active {
+			border-bottom-color:$tyfy-color-link-active;
+			color:$tyfy-color-link-active;
+		}
+	}
 	h1 &,
 	h2 &,
 	h3 &,
 	h4 &,
 	h5 &,
 	h6 & {
-		color:$color-text-head;
+		color:$tyfy-color-text-head;
+		&[href] {
+			border-bottom-color:rgba($tyfy-color-text-head,0.5);
+			color:$tyfy-color-text-head;
+			&:hover,
+			&:active {
+				border-bottom-color:$tyfy-color-link-active;
+				color:$tyfy-color-link-active;
+			}
+		}
 	}
-	&[href] {
-		color:$color-link-default;
-		h1 &,
-		h2 &,
-		h3 &,
-		h4 &,
-		h5 &,
-		h6 & {
-			color:$color-text-head;
-		}
-		&:hover,
-		&:active {
-			color:$color-link-active;
-			h1 &,
-			h2 &,
-			h3 &,
-			h4 &,
-			h5 &,
-			h6 & {
-				color:$color-link-active;
-			}
-		}
-		.links-underlined & {
-			border-bottom:2px rgba($color-link-default,0.5) solid;
-			&:hover,
-			&:active {
-				border-bottom:2px $color-link-active solid;
-			}
-		}
-		.links-underlined h1 &,
-		.links-underlined h2 &,
-		.links-underlined h3 &,
-		.links-underlined h4 &,
-		.links-underlined h5 &,
-		.links-underlined h6 & {
-			border-bottom:2px rgba($color-text-head,0.5) solid;
-			&:hover,
-			&:active {
-				border-bottom:2px $color-link-active solid;
-			}
+	.links-underlined & {
+		&[href] {
+			border-bottom-style:solid;
+			border-bottom-width:2px;
 		}
 	}
 }

@@ -3,9 +3,15 @@
 // should be half the base line-height
 $tyfy-grid-unit:0.8125rem;
 
-// line height adjustment
-// these values adjust calculation of line-height based on the $tyfy-grid-unit value
+// line height adjustments
+// used by the leading function to adjust calculation of line-height
 $tyfy-leading-adjustment-tall:0.8;
 $tyfy-leading-adjustment-base:0.9;
 $tyfy-leading-adjustment-heading:1;
 $tyfy-leading-adjustment-short:1.2;
+
+// element spacing
+$tyfy-spacing-standard:grid(2);
+$tyfy-spacing-large:grid(3);
+$tyfy-indent-standard:grid(3);
+$tyfy-indent-small:grid(2);

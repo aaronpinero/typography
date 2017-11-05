@@ -5,13 +5,13 @@ h4.collapsable-processed,
 h5.collapsable-processed,
 h6.collapsable-processed {
   background-color:transparent;
-  border:2px rgba($color-text-body,0.13) solid;
+  border:2px rgba($tyfy-color-text-body,0.13) solid;
   border-bottom:2px transparent solid;
   clear:both;
   cursor:pointer;
   padding:2*$tyfy-grid-unit 6*$tyfy-grid-unit $tyfy-grid-unit 2*$tyfy-grid-unit;
   position:relative;
-  transition-duration:$transition-duration-move;
+  transition-duration:$tyfy-transition-duration-move;
   transition-property:padding-top;
   &:before {
     border-radius:50%;
@@ -24,13 +24,13 @@ h6.collapsable-processed {
     right:2*$tyfy-grid-unit;
     text-align:center;
     top:2*$tyfy-grid-unit;
-    transition-duration:$transition-duration-move;
+    transition-duration:$tyfy-transition-duration-move;
     transition-property:background-color,color,top;
     transition-timing-function:ease-in-out;
     width:leading($tyfy-font-size-h2,heading);
   }
   &.closed {
-    border-bottom:2px rgba($color-text-body,0.13) solid;
+    border-bottom:2px rgba($tyfy-color-text-body,0.13) solid;
     padding-top:$tyfy-grid-unit;
     &:before {
       content:unquote("\"#{ $fa-var-chevron-down }\"");
@@ -85,7 +85,7 @@ h6.collapsable-processed {
   }
   &:hover {
     &:before {
-      background-color:$color-link-active;
+      background-color:$tyfy-color-link-active;
       color:white;
     }
   }

@@ -15,7 +15,7 @@
 		display:none;
 		margin:0;
 		padding:0;
-	  @media (min-width:$break-tabs) {
+	  @media (min-width:$tyfy-break-tabs) {
 	    display:flex;
 	  }
 	  li {
@@ -30,7 +30,7 @@
 	    margin:0 0 -2px 0;
 	    padding:$tyfy-grid-unit 2*$tyfy-grid-unit;
 	    text-align:center;
-	    transition-duration:$transition-duration-hover;
+	    transition-duration:$tyfy-transition-duration-hover;
 	    transition-property:background-color;
 	    &:hover {
 		    background-color:rgba(black,0.1);
@@ -58,7 +58,7 @@
 	    margin:0;
 	    padding:2*$tyfy-grid-unit 6*$tyfy-grid-unit $tyfy-grid-unit 2*$tyfy-grid-unit;
 	    position:relative;
-	    transition-duration:$transition-duration-move;
+	    transition-duration:$tyfy-transition-duration-move;
 	    transition-property:padding-top;
 	    &:before {
 	      border-radius:50%;
@@ -71,12 +71,12 @@
 			  right:2*$tyfy-grid-unit;
 			  text-align:center;
 			  top:2*$tyfy-grid-unit;
-			  transition-duration:$transition-duration-move;
+			  transition-duration:$tyfy-transition-duration-move;
 			  transition-property:background-color,color,top;
 			  transition-timing-function:ease-in-out;
 			  width:leading($tyfy-font-size-h3,heading);
 	    }
-	    @media (min-width:$break-tabs) {
+	    @media (min-width:$tyfy-break-tabs) {
 	      display:none;
 	    }
 	    &.collapsed {
@@ -102,7 +102,7 @@
 	    } 
 	    &:hover {
 		    &:before {
-			    background-color:$color-link-active;
+			    background-color:$tyfy-color-link-active;
 		      color:white;
 		    }
 	    }
@@ -116,7 +116,7 @@
 	    border-radius:0 0 0.25rem 0.25rem;
 	    overflow:hidden;
 	    padding:$tyfy-grid-unit 2*$tyfy-grid-unit 2*$tyfy-grid-unit;
-	    @media (min-width:$break-tabs) {
+	    @media (min-width:$tyfy-break-tabs) {
 	      display:none;
 	      padding-top:2*$tyfy-grid-unit;
 	    }
@@ -124,7 +124,7 @@
 	      display:block;
 	    }
 	    &.collapsed {
-	      @media (max-width:$break-tabs*0.9999) {
+	      @media (max-width:$tyfy-break-tabs*0.9999) {
 	        border:none;
 	        height:1px;
 	        padding-bottom:0;

@@ -1,30 +1,30 @@
 // root styles
 .reverse {
-	color:$color-text-body-reverse;
+	color:$tyfy-color-text-body-reverse;
 
 	// headings
 	h1 {
-		color:$color-text-head-reverse;
+		color:$tyfy-color-text-head-reverse;
 	}
 	h2 {
-		color:$color-text-head-reverse;
+		color:$tyfy-color-text-head-reverse;
 	}
 	h3 {
-		color:$color-text-head-reverse;
+		color:$tyfy-color-text-head-reverse;
 	}
 	h4 {
-		color:$color-text-head-reverse;
+		color:$tyfy-color-text-head-reverse;
 	}
 	h5 {
-		color:$color-text-head-reverse;
+		color:$tyfy-color-text-head-reverse;
 	}
 	h6 {
-		color:$color-text-head-reverse;
+		color:$tyfy-color-text-head-reverse;
 	}
 	
 	// links
 	a {
-		color:$color-text-body-reverse;
+		color:$tyfy-color-text-body-reverse;
 	}
 	h1 a,
 	h2 a,
@@ -32,10 +32,10 @@
 	h4 a,
 	h5 a,
 	h6 a {
-		color:$color-text-head-reverse;
+		color:$tyfy-color-text-head-reverse;
 	}
 	a[href] {
-		color:$color-link-default-reverse;
+		color:$tyfy-color-link-default-reverse;
 	}
 	h1 a[href],
 	h2 a[href],
@@ -43,17 +43,17 @@
 	h4 a[href],
 	h5 a[href],
 	h6 a[href] {
-		color:$color-text-head-reverse;
+		color:$tyfy-color-text-head-reverse;
 	}
 	a[href]:hover,
 	a[href]:active {
-		color:$color-link-active-reverse;
+		color:$tyfy-color-link-active-reverse;
 	}
 	
 	// underlined links inside reverse
 	.links-underlined {
 		a[href] {
-			border-bottom:2px rgba($color-link-default-reverse,0.5) solid;
+			border-bottom:2px rgba($tyfy-color-link-default-reverse,0.5) solid;
 		}
 		h1 a[href],
 		h2 a[href],
@@ -61,18 +61,18 @@
 		h4 a[href],
 		h5 a[href],
 		h6 a[href] {
-			border-bottom:2px rgba($color-text-head-reverse,0.5) solid;
+			border-bottom:2px rgba($tyfy-color-text-head-reverse,0.5) solid;
 		}
 		a[href]:hover,
 		a[href]:active {
-			border-bottom:2px $color-link-active-reverse solid;
+			border-bottom:2px $tyfy-color-link-active-reverse solid;
 		}
 	}
 	
 	// underlined links with reverse
 	&.links-underlined {
 		a[href] {
-			border-bottom:2px rgba($color-link-default-reverse,0.5) solid;
+			border-bottom:2px rgba($tyfy-color-link-default-reverse,0.5) solid;
 		}
 		h1 a[href],
 		h2 a[href],
@@ -80,17 +80,17 @@
 		h4 a[href],
 		h5 a[href],
 		h6 a[href] {
-			border-bottom:2px rgba($color-text-head-reverse,0.5) solid;
+			border-bottom:2px rgba($tyfy-color-text-head-reverse,0.5) solid;
 		}
 		a[href]:hover,
 		a[href]:active {
-			border-bottom:2px $color-link-active-reverse solid;
+			border-bottom:2px $tyfy-color-link-active-reverse solid;
 		}
 	}
 	
 	// underlined links outside reverse	
 	.links-underlined & a[href] {
-		border-bottom:2px rgba($color-link-default-reverse,0.5) solid;
+		border-bottom:2px rgba($tyfy-color-link-default-reverse,0.5) solid;
 	}
 	.links-underlined & h1 a[href],
 	.links-underlined & h2 a[href],
@@ -98,22 +98,22 @@
 	.links-underlined & h4 a[href],
 	.links-underlined & h5 a[href],
 	.links-underlined & h6 a[href] {
-		border-bottom:2px rgba($color-text-head-reverse,0.5) solid;
+		border-bottom:2px rgba($tyfy-color-text-head-reverse,0.5) solid;
 	}
 	.links-underlined & a[href]:hover,
 	.links-underlined & a[href]:active {
-		border-bottom:2px $color-link-active-reverse solid;
+		border-bottom:2px $tyfy-color-link-active-reverse solid;
 	}
 	
 	// quotes
   blockquote {
     &.pullquote {
-      color:$color-text-pullquote-reverse;
+      color:$tyfy-color-text-pullquote-reverse;
       &:before {
-        color:$color-text-light-reverse;
+        color:$tyfy-color-text-light-reverse;
       }
       &:after {
-        color:darken($color-text-light-reverse,10%);
+        color:darken($tyfy-color-text-light-reverse,10%);
       }
     }
   }

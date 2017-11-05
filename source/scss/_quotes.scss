@@ -7,14 +7,14 @@ blockquote {
 	&.pullquote {
 		background-color:transparent;
 		border:none;
-		color:$color-text-pullquote;
+		color:$tyfy-color-text-pullquote;
 		font-family:$tyfy-font-pullquote;
 		font-size:$tyfy-font-size-pullquote;
 		line-height:leading($tyfy-font-size-pullquote,tall);
 		margin:2*$tyfy-grid-unit 0 3*$tyfy-grid-unit 0;
 		position:relative;
 		text-align:center;
-		@media (min-width:$break-pullquote-large) {
+		@media (min-width:$tyfy-break-pullquote-large) {
 			margin:3*$tyfy-grid-unit 4*$tyfy-grid-unit 4*$tyfy-grid-unit 4*$tyfy-grid-unit;
 		}
 		p {
@@ -31,7 +31,7 @@ blockquote {
 			margin-top:$tyfy-grid-unit;
 		}
 		&:before {
-			color:$color-text-light;
+			color:$tyfy-color-text-light;
 			content:unquote("\"#{ $fa-var-quote-left }\"");
 			display:block;
 			font-family:$tyfy-symbol;
@@ -40,7 +40,7 @@ blockquote {
 			text-align:center;
 		}
 		&:after {
-			color:lighten($color-text-light,10%);
+			color:lighten($tyfy-color-text-light,10%);
 			content:"————— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 —————";
 			display:block;
 			font-family:$tyfy-symbol;
@@ -57,7 +57,7 @@ blockquote {
 		}
 		&.float-left,
 		&.float-right {
-			@media (min-width:$break-floats) {
+			@media (min-width:$tyfy-break-floats) {
 				box-sizing:border-box;
 				margin-bottom:3*$tyfy-grid-unit;
 				margin-top:2*$tyfy-grid-unit;
@@ -66,7 +66,7 @@ blockquote {
 			}
 		}
 		&.float-left {
-			@media (min-width:$break-floats) {
+			@media (min-width:$tyfy-break-floats) {
 				clear:left;
 				float:left;
 				margin-left:0;
@@ -74,7 +74,7 @@ blockquote {
 			}
 		}
 		&.float-right {
-			@media (min-width:$break-floats) {
+			@media (min-width:$tyfy-break-floats) {
 				clear:right;
 				float:right;
 				margin-left:4*$tyfy-grid-unit;

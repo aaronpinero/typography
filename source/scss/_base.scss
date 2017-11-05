@@ -3,7 +3,8 @@ html {
 	font-size:100%;
 }
 body {
-	color:$color-text-body;
+	background:$tyfy-color-background;
+	color:$tyfy-color-text-body;
 	font-family:$tyfy-font-base;
 	font-size:$tyfy-font-size-base;
 	line-height:leading($tyfy-font-size-base,base);
@@ -28,7 +29,7 @@ table {
 	margin-bottom:0;
 	margin-top:0;
 	* + & {
-		margin-top:2*$tyfy-grid-unit;
+		margin-top:$tyfy-spacing-standard;
 	}
 }
 h1,
@@ -44,6 +45,6 @@ h6 {
 	blockquote + &,
 	address + &,
 	table + & {
-		margin-top:3*$tyfy-grid-unit;
+		margin-top:$tyfy-spacing-large;
 	}
 }

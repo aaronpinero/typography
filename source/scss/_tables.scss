@@ -56,34 +56,34 @@ table.striped {
   }
   tr:nth-child(2n) {
     td {
-      background-color:$color-table-stripe;
+      background-color:$tyfy-color-table-stripe;
     }
   }
 }
 
 // horizontal borders
 table.horizontal-rules {
-  border-top:1px $color-table-border solid;
+  border-top:1px $tyfy-color-table-border solid;
   td,
   th {
-    border-bottom:1px $color-table-border solid;
+    border-bottom:1px $tyfy-color-table-border solid;
   }
   th[scope="col"] {
-    border-bottom:2px $color-table-border solid;
+    border-bottom:2px $tyfy-color-table-border solid;
   }
 }
 
 // vertical borders
 table.vertical-rules {
-  border-left:1px $color-table-border solid;
+  border-left:1px $tyfy-color-table-border solid;
   td,
   th {
-    border-right:1px $color-table-border solid;
+    border-right:1px $tyfy-color-table-border solid;
     padding-left:$tyfy-grid-unit;
     padding-right:$tyfy-grid-unit;
   }
   th[scope="row"] {
-    border-right:2px $color-table-border solid;
+    border-right:2px $tyfy-color-table-border solid;
   }
 }
 
@@ -91,23 +91,23 @@ table.vertical-rules {
 table.responsive {
   thead,
   th {
-    @media (max-width:$break-table*0.9999) {
+    @media (max-width:$tyfy-break-table*0.9999) {
       @include visuallyhidden;
     }
   }
   tbody tr + tr {
-    @media (max-width:$break-table*0.9999) {
-      border-top:1px $color-table-border solid;
+    @media (max-width:$tyfy-break-table*0.9999) {
+      border-top:1px $tyfy-color-table-border solid;
     }
   }
   td {
-    @media (max-width:$break-table*0.9999) {
+    @media (max-width:$tyfy-break-table*0.9999) {
       display:block;
       padding-left:9rem;
       position:relative;
     }
     .td-label {
-      color:$color-text-light;
+      color:$tyfy-color-text-light;
       display:block;
 			font-family:$tyfy-font-table;
       font-size:$tyfy-font-size-sm;
@@ -115,7 +115,7 @@ table.responsive {
       position:absolute;
       vertical-align:top;
       width:8rem;
-      @media (min-width:$break-table) {
+      @media (min-width:$tyfy-break-table) {
         display:none;
       }
     }
@@ -126,21 +126,21 @@ table.responsive {
 table {
 	&.float-left,
 	&.float-right {
-		@media (min-width:$break-floats) {
+		@media (min-width:$tyfy-break-floats) {
 			box-sizing:border-box;
 			margin-bottom:$tyfy-grid-unit;
 			width:calc(50% - (2 * #{$tyfy-grid-unit}));
 		}
 	}
 	&.float-left {
-		@media (min-width:$break-floats) {
+		@media (min-width:$tyfy-break-floats) {
 			clear:left;
 			float:left;
 			margin-right:4*$tyfy-grid-unit;
 		}
 	}
 	&.float-right {
-		@media (min-width:$break-floats) {
+		@media (min-width:$tyfy-break-floats) {
 			clear:right;
 			float:right;
 			margin-left:4*$tyfy-grid-unit;
@@ -148,12 +148,12 @@ table {
 	}
 }
 table.float-right + table.float-left {
-	@media (min-width:$break-floats) {
+	@media (min-width:$tyfy-break-floats) {
 		margin-right:2*$tyfy-grid-unit;
 	}
 }
 table.float-left + table.float-right {
-	@media (min-width:$break-floats) {
+	@media (min-width:$tyfy-break-floats) {
 		margin-left:2*$tyfy-grid-unit;
 	}
 }
