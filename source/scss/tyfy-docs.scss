@@ -71,10 +71,11 @@ header.brand {
 			h2 {
 				cursor:pointer;
 				height:leading($tyfy-font-size-h3,heading);
+				line-height:leading($tyfy-font-size-h3,heading);
 				overflow:hidden;
 				position:absolute;
 				right:2*$tyfy-grid-unit;
-				top:-3*$tyfy-grid-unit;
+				top:-4*$tyfy-grid-unit;
 				transition-duration:$transition-duration-hover;
 				transition-property:color;
 				width:leading($tyfy-font-size-h3,heading);

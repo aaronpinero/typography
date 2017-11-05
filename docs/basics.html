@@ -48,8 +48,8 @@
 		<section class="main links-underlined">
 			<h1>Basics</h1>
 			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the base grid, colors, text sizes, fonts, breakpoints, and other characteristics. My goal with this project is to have as few variables as possible. This results in some key variables – such as the grid unit, brand color and font size scalar – that can quickly change the entire character of the project to which <strong class="tyfy">Tyfy</strong> is applied.</p>
-			<h2><span class="smallcaps">SASS</span> Variables</h2>
-			<h3>Fonts</h3>
+			<p>Vertical rhythm is maintained by using the base grid unit to define line heights. Unlike other frameworks like Bootstrap, which set a relative line height for all elements, <strong class="tyfy">Tyfy</strong> line heights are multiples of the base grid unit. Calculation of grid-based line heights is aided by a custom <span class="smallcaps">SASS</span> function.</p>
+			<h2>Fonts</h2>
 			<p>There are four font selections for <strong>Tyfy</strong>. While there are many way in which typefaces could be selected and organized I have selected the way which works for most of the projects I manage. My practice is to limit the number of typefaces involved in a project.</p>
 			<dl>
 				<dt>$tyfy-serif</dt>
@@ -145,9 +145,26 @@
 				<dd>Screen width below which responsive tables convert default table structure to cell list</dd>
 			</dl>
 			<h3>Grid</h3>
+			<p>The grid unit value is used to calculate line heights, margins and paddings throughout <strong class="tyfy">Tyfy</strong>. Line height calculation is aided by the <code>leading()</code> function. The leading function takes two arguments: a font size and a line height option. The line height option can be:</p>
+			<ul>
+				<li><strong>base</strong>: a line height equal to some multiple of the grid unit that is greater than the font size.</li>
+				<li><strong>tall</strong>: a line height equal to some multiple of the grid unit that is much greater than the font size.</li>
+				<li><strong>heading</strong>: a line height equal to some multiple of the grid unit greater than or equal to the font size.</li>
+				<li><strong>short</strong>: a line height equal to some multiple of the grid unit that is more or less equal to the font size.</li>
+			</ul>
+			<p>The variations in line height style are calculated with the aid of an adjustment value. Changing the adjustment values will change the relationship between the font size and the resulting line-height.</p>
+			<p>The leading function can be used to calculate other style property values in cases where some measure (height, width, top, etc.) needs to equal a specific line height.</p>
 			<dl>
 				<dt>$tyfy-grid-unit</dt>
 				<dd>Basic unit of the vertical grid and horizontal measures (such as element padding); represents half the base line height</dd>
+				<dt>$tyfy-leading-adjustment-tall</dt>
+				<dd>A value used to modify line height calculations to result in larger values; set to 0.8</dd>
+				<dt>$tyfy-leading-adjustment-base</dt>
+				<dd>A value used to modify line height calculations, making sure the line height will always be more than the font size; set to 0.9</dd>
+				<dt>$tyfy-leading-adjustment-heading</dt>
+				<dd>A value used to modify line height calculations to allow slightly shorter line heights for headings; set to 1</dd>
+				<dt>$tyfy-leading-adjustment-short:1.2</dt>
+				<dd>A value used to modify line height calculations to allow line heights that are slightly shorter than the font size; set to 1.2</dd>
 			</dl>
 		</section>
 		<!-- COMMON FOOTER -->
