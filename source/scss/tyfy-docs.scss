@@ -19,7 +19,7 @@ body {
 }
 
 .reverse {
-	background-color:$color-text-body;
+	background-color:#333;
 }
 .constrained {
 	margin-left:auto;
@@ -32,6 +32,7 @@ h1 {
 }
 
 header.brand {
+	background:#333 url(../img/bg.gif);
 	h1 {
 		@extend .constrained;
 		font-size:$tyfy-font-size-h3;
@@ -56,7 +57,7 @@ header.brand {
 				padding-left:$tyfy-grid-unit;
 				padding-right:$tyfy-grid-unit;
 				a {
-					border-top:0.25*$tyfy-grid-unit lighten($color-text-body,10%) solid;
+					border-top:0.25*$tyfy-grid-unit rgba(white,0.05) solid;
 					display:block;
 					font-size:$tyfy-font-size-sm;
 					padding-top:0.5*$tyfy-grid-unit;

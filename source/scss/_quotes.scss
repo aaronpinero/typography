@@ -41,7 +41,7 @@ blockquote {
 		}
 		&:after {
 			color:lighten($color-text-light,10%);
-			content:"———— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 ————";
+			content:"————— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 —————";
 			display:block;
 			font-family:$tyfy-symbol;
 			font-style:normal;

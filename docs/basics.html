@@ -49,17 +49,48 @@
 			<h1>Basics</h1>
 			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the base grid, colors, text sizes, fonts, breakpoints, and other characteristics. My goal with this project is to have as few variables as possible. This results in some key variables – such as the grid unit, brand color and font size scalar – that can quickly change the entire character of the project to which <strong class="tyfy">Tyfy</strong> is applied.</p>
 			<h2><span class="smallcaps">SASS</span> Variables</h2>
-			<h3>Typefaces</h3>
-			<p>There are only four variables available in <strong>Tyfy</strong> for typefaces. While there are many way in which typefaces could be organized – by type, by usage – I have selected the way which works for most of the projects I manage. My practice is to limit the number of typefaces involved in a project.</p>
+			<h3>Fonts</h3>
+			<p>There are four font selections for <strong>Tyfy</strong>. While there are many way in which typefaces could be selected and organized I have selected the way which works for most of the projects I manage. My practice is to limit the number of typefaces involved in a project.</p>
 			<dl>
-				<dt>$serif</dt>
+				<dt>$tyfy-serif</dt>
 				<dd>The serif font selection for the project</dd>
-				<dt>$sans</dt>
+				<dt>$tyfy-sans</dt>
 				<dd>The sans-serif font selection for the project</dd>
-				<dt>$mono</dt>
+				<dt>$tyfy-mono</dt>
 				<dd>The monospace font selection for the project</dd>
-				<dt>$symbol</dt>
-				<dd>The icon font for the project; for my projects, this typeface is almost always FontAwesome.</dd>
+				<dt>$tyfy-symbol</dt>
+				<dd>The icon font for the project; for my projects, this typeface is almost always FontAwesome</dd>
+				<dt>$tyfy-font-base</dt>
+				<dd>The typeface assignment for the <code>&lt;body&gt;</code></dd>
+				<dt>$tyfy-font-heading</dt>
+				<dd>The typeface assignment for headings 1 to 6</dd>
+				<dt>$tyfy-font-pullquote</dt>
+				<dd>The typeface assignment for pull quotes</dd>
+				<dt>$tyfy-font-table</dt>
+				<dd>The typeface assignment for table cells</dd>
+				<dt>$tyfy-font-size-scalar</dt>
+				<dd>The value used as a multiplier for creating the typographic scale of font sizes</dd>
+			</dl>
+			<p>Font sizes are calculated using a scalar value, creating a typographic scale of font sizes that are proportionally related. The typographic scale can be easily adjusted by changing the scalar value and/or the base font size.</p>
+			<dl>
+				<dt>$tyfy-font-size-base</dt>
+				<dd>The font size of the <code>&lt;body&gt;</code>; needs to be specified in rem units</dd>
+				<dt>$tyfy-font-size-sm</dt>
+				<dd>The font size for small type, calculated as <code>$tyfy-font-size-base / $tyfy-font-size-scalar</code></dd>
+				<dt>$tyfy-font-size-h6</dt>
+				<dd>The font size for the level 6 heading, set to <code>$tyfy-font-size-base</code></dd>
+				<dt>$tyfy-font-size-h5</dt>
+				<dd>The font size for the level 5 heading, calculated as <code>$tyfy-font-size-h6 * $tyfy-font-size-scalar</code></dd>
+				<dt>$tyfy-font-size-h4</dt>
+				<dd>The font size for the level 4 heading, calculated as <code>$tyfy-font-size-h5 * $tyfy-font-size-scalar</code></dd>
+				<dt>$tyfy-font-size-h3</dt>
+				<dd>The font size for the level 3 heading, calculated as <code>$tyfy-font-size-h4 * $tyfy-font-size-scalar</code></dd>
+				<dt>$tyfy-font-size-h2</dt>
+				<dd>The font size for the level 2 heading, calculated as <code>$tyfy-font-size-h3 * $tyfy-font-size-scalar</code></dd>
+				<dt>$tyfy-font-size-h1</dt>
+				<dd>The font size for the level 1 heading, calculated as <code>$tyfy-font-size-h2 * $tyfy-font-size-scalar * $tyfy-font-size-scalar</code></dd>
+				<dt>$tyfy-font-size-pullquote</dt>
+				<dd>The font size for the level 6 heading, set to <code>$tyfy-font-size-h4</code></dd>
 			</dl>
 			<h3>Colors</h3>
 			<dl>
@@ -77,8 +108,13 @@
 				<dd>Default color for linked text and buttons</dd>
 				<dt>$color-link-active</dt>
 				<dd>The hover and active color for links and buttons</dd>
+				<dt>$color-table-border</dt>
+				<dd>Color for table cell borders</dd>
+				<dt>$color-table-stripe</dt>
+				<dd>When a table has the zebra-stripe style, the row colors alternate between transparent and this stripe color</dd>
+
 			</dl>
-			<h3>Reverse Colors</h3>
+			<p>Reverse colors are defined for use with the <code>reverse</code> class. This class applies the correct color styles in a context where the background color or brightness is inverted.</p>
 			<dl>
 				<dt>$color-text-body-reverse</dt>
 				<dd>The reverse text color, defined as <code>invert($color-text-body)</code></dd>
@@ -96,38 +132,22 @@
 			<h3>Breakpoints</h3>
 			<dl>
 				<dt>$break-floats</dt>
-				<dd>Screen width above which position classes (float left and right) are applied</dd>
+				<dd>Screen width above which position classes (float left and right) are active</dd>
 				<dt>$break-pullquote-large</dt>
 				<dd>Screen width above which non-floated pull quotes receive increased padding
 				<dt>$break-list-cols-2</dt>
 				<dd>Screen width above which two column list styles are active</dd>
 				<dt>$break-list-cols-3</dt>
 				<dd>Screen width above which three column list styles are active</dd>
+				<dt>$break-tabs</dt>
+				<dd>Screen width below which responsive tabs switch from tabs to collapsable sections</dd>
+				<dt>$break-table</dt>
+				<dd>Screen width below which responsive tables convert default table structure to cell list</dd>
 			</dl>
-			<h3>Measures</h3>
+			<h3>Grid</h3>
 			<dl>
-				<dt>$grid-unit</dt>
-				<dd>Basic unit of the vertical grid and horizontal measures (such as element padding); represents half the default body text line height</dd>
-				<dt>$font-size-scalar</dt>
-				<dd>Value representing the ratio between type sizes in the <strong class="tyfy">Tyfy</strong> typographic scale; the default value is 1.2 (a minor third)</dd>
-				<dt>$font-size-p</dt>
-				<dd>The base size of the typographic scale; the default body text size</dd>
-				<dt>$font-size-sm</dt>
-				<dd>The size of small text, defined as <code>$font-size-p / $font-size-scalar</code></dd>
-				<dt>$font-size-h6</dt>
-				<dd>The size of a level 6 heading, defined as <code>$font-size-p / $font-size-scalar</code></dd>
-				<dt>$font-size-h5</dt>
-				<dd>The size of a level 5 heading, defined as <code>$font-size-p</code></dd>
-				<dt>$font-size-h4</dt>
-				<dd>The size of a level 4 heading, defined as <code>$font-size-h5 * $font-size-scalar</code></dd>
-				<dt>$font-size-h3</dt>
-				<dd>The size of a level 3 heading, defined as <code>$font-size-h4 * $font-size-scalar</code></dd>
-				<dt>$font-size-h2</dt>
-				<dd>The size of a level 2 heading, defined as <code>$font-size-h3 * $font-size-scalar</code></dd>
-				<dt>$font-size-h1</dt>
-				<dd>The size of a level 1 heading, defined as <code>$font-size-h2 * (2 * $font-size-scalar)</code></dd>
-				<dt>$font-size-pullquote</dt>
-				<dd>The size of pull quote text, defined as <code>$font-size-p * $font-size-scalar</code></dd>
+				<dt>$tyfy-grid-unit</dt>
+				<dd>Basic unit of the vertical grid and horizontal measures (such as element padding); represents half the base line height</dd>
 			</dl>
 		</section>
 		<!-- COMMON FOOTER -->
