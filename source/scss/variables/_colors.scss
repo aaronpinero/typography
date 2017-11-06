@@ -10,15 +10,15 @@ $tyfy-color-text-light:mix($tyfy-color-foreground,$tyfy-color-background,45%) !d
 $tyfy-color-text-pullquote:adjust-hue($tyfy-color-primary,120deg) !default;
 $tyfy-color-link-default:color($tyfy-color-primary,(lightness($tyfy-color-primary)-15%)) !default;
 $tyfy-color-link-active:adjust-hue($tyfy-color-link-default,-120deg) !default;
-$tyfy-color-border:mix($tyfy-color-foreground,$tyfy-color-background,10%) !default;
+$tyfy-color-border:mix($tyfy-color-foreground,$tyfy-color-background,12%) !default;
 $tyfy-color-table-stripe:mix($tyfy-color-foreground,$tyfy-color-background,5%) !default;
 
 // reverse colors
 $tyfy-color-text-body-reverse:reverse($tyfy-color-text-body) !default;
 $tyfy-color-text-head-reverse:reverse($tyfy-color-text-head) !default;
-$tyfy-color-text-light-reverse:reverse($tyfy-color-text-light) !default;
+$tyfy-color-text-light-reverse:fade-out(reverse($tyfy-color-text-body),0.45) !default;
 $tyfy-color-text-pullquote-reverse:color(adjust-hue($tyfy-color-primary,120deg),(lightness($tyfy-color-primary)+15%)) !default;
 $tyfy-color-link-default-reverse:color($tyfy-color-primary,(lightness($tyfy-color-primary)+15%)) !default;
 $tyfy-color-link-active-reverse:adjust-hue($tyfy-color-link-default-reverse,-120deg) !default;
 $tyfy-color-border-reverse:fade-out(reverse($tyfy-color-text-body),0.85) !default;
-$tyfy-color-table-stripe-reverse:fade-out(reverse($tyfy-color-text-body),0.925) !default;
+$tyfy-color-table-stripe-reverse:fade-out(reverse($tyfy-color-text-body),0.95) !default;

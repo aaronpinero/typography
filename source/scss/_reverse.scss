@@ -57,4 +57,45 @@
       }
     }
   }
+  
+  // tables 
+	table.striped {
+	  tr:nth-child(2n) {
+	    td {
+	      background-color:$tyfy-color-table-stripe-reverse;
+	    }
+	  }
+	}
+	table.horizontal-rules {
+	  border-top-color:$tyfy-color-border-reverse;
+	  td,
+	  th {
+	    border-bottom-color:$tyfy-color-border-reverse;
+	  }
+	  th[scope="col"] {
+	    border-bottom-color:$tyfy-color-border-reverse;
+	  }
+	}
+	table.vertical-rules {
+	  border-left-color:$tyfy-color-border-reverse;
+	  td,
+	  th {
+	    border-right-color:$tyfy-color-border-reverse ;
+	  }
+	  th[scope="row"] {
+	    border-right-color:$tyfy-color-border-reverse;
+	  }
+	}
+	table.responsive {
+	  tbody tr + tr {
+	    @media (max-width:$tyfy-break-table*0.9999) {
+	      border-top-color:$tyfy-color-border-reverse;
+	    }
+	  }
+	  td {
+	    .td-label {
+	      color:$tyfy-color-text-light-reverse;
+	    }
+	  }
+	}
 }

@@ -38,12 +38,12 @@ table.clean {
   th {
     border:none;
     margin:0;
-    padding-top:0.5*$tyfy-grid-unit;
-    padding-bottom:0.5*$tyfy-grid-unit;
+    padding-top:grid(0.5);
+    padding-bottom:grid(0.5);
   }
   * + td,
   * + th {
-    padding-left:$tyfy-grid-unit;
+    padding-left:grid(1);
   }
 }
 
@@ -51,8 +51,8 @@ table.clean {
 table.striped {
   td,
   th {
-    padding-left:$tyfy-grid-unit;
-    padding-right:grid-unit;
+    padding-left:grid(1);
+    padding-right:grid(1);
   }
   tr:nth-child(2n) {
     td {
@@ -79,8 +79,8 @@ table.vertical-rules {
   td,
   th {
     border-right:1px $tyfy-color-border solid;
-    padding-left:$tyfy-grid-unit;
-    padding-right:$tyfy-grid-unit;
+    padding-left:grid(1);
+    padding-right:grid(1);
   }
   th[scope="row"] {
     border-right:2px $tyfy-color-border solid;
@@ -128,32 +128,32 @@ table {
 	&.float-right {
 		@media (min-width:$tyfy-break-floats) {
 			box-sizing:border-box;
-			margin-bottom:$tyfy-grid-unit;
-			width:calc(50% - (2 * #{$tyfy-grid-unit}));
+			margin-bottom:grid(1);
+			width:calc(50% - #{grid(2)});
 		}
 	}
 	&.float-left {
 		@media (min-width:$tyfy-break-floats) {
 			clear:left;
 			float:left;
-			margin-right:4*$tyfy-grid-unit;
+			margin-right:grid(4);
 		}
 	}
 	&.float-right {
 		@media (min-width:$tyfy-break-floats) {
 			clear:right;
 			float:right;
-			margin-left:4*$tyfy-grid-unit;
+			margin-left:grid(4);
 		}
 	}
 }
 table.float-right + table.float-left {
 	@media (min-width:$tyfy-break-floats) {
-		margin-right:2*$tyfy-grid-unit;
+		margin-right:grid(2);
 	}
 }
 table.float-left + table.float-right {
 	@media (min-width:$tyfy-break-floats) {
-		margin-left:2*$tyfy-grid-unit;
+		margin-left:grid(2);
 	}
 }
