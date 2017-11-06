@@ -1,16 +1,15 @@
 // primary colors
 $tyfy-color-background:white !default;
-$tyfy-color-primary:#ffa000 !default;
 $tyfy-color-foreground:#111 !default;
-$tyfy-color-secondary:#418fde !default;
+$tyfy-color-primary:#4185de !default;
 
 // calculated colors
 $tyfy-color-text-body:$tyfy-color-foreground !default;
 $tyfy-color-text-head:mix($tyfy-color-foreground,$tyfy-color-background,95%) !default;
-$tyfy-color-text-light:mix($tyfy-color-foreground,$tyfy-color-background) !default;
+$tyfy-color-text-light:mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;
 $tyfy-color-text-pullquote:$tyfy-color-primary !default;
-$tyfy-color-link-default:readable($tyfy-color-primary) !default;
-$tyfy-color-link-active:readable($tyfy-color-secondary) !default;
+$tyfy-color-link-default:color($tyfy-color-primary,(lightness($tyfy-color-primary)-15%)) !default;
+$tyfy-color-link-active:complement($tyfy-color-link-default) !default;
 $tyfy-color-border:mix($tyfy-color-foreground,$tyfy-color-background,10%) !default;
 $tyfy-color-table-stripe:mix($tyfy-color-foreground,$tyfy-color-background,5%) !default;
 
@@ -18,8 +17,8 @@ $tyfy-color-table-stripe:mix($tyfy-color-foreground,$tyfy-color-background,5%) !
 $tyfy-color-text-body-reverse:reverse($tyfy-color-text-body) !default;
 $tyfy-color-text-head-reverse:reverse($tyfy-color-text-head) !default;
 $tyfy-color-text-light-reverse:reverse($tyfy-color-text-light) !default;
-$tyfy-color-text-pullquote-reverse:reverse($tyfy-color-text-pullquote) !default;
-$tyfy-color-link-default-reverse:reverse($tyfy-color-link-default) !default;
-$tyfy-color-link-active-reverse:reverse($tyfy-color-link-active) !default;
-$tyfy-color-border-reverse:hsla(hue($tyfy-color-text-body),saturation($tyfy-color-text-body),(100% - lightness($tyfy-color-text-body)),0.15) !default;
-$tyfy-color-table-stripe-reverse:hsla(hue($tyfy-color-text-body),saturation($tyfy-color-text-body),(100% - lightness($tyfy-color-text-body)),0.075) !default;
+$tyfy-color-text-pullquote-reverse:color($tyfy-color-primary,(lightness($tyfy-color-primary)+20%)) !default;
+$tyfy-color-link-default-reverse:color($tyfy-color-primary,(lightness($tyfy-color-primary)+15%)) !default;
+$tyfy-color-link-active-reverse:complement($tyfy-color-link-default-reverse) !default;
+$tyfy-color-border-reverse:fade-out(reverse($tyfy-color-text-body),0.85) !default;
+$tyfy-color-table-stripe-reverse:fade-out(reverse($tyfy-color-text-body),0.925) !default;

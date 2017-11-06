@@ -219,12 +219,12 @@ a {
   transition-property: background-color,border-color,color; }
   /* line 6, source/scss/_links.scss */
   a[href] {
-    border-bottom-color: rgba(193, 121, 0, 0.5);
-    color: #c17900; }
+    border-bottom-color: rgba(31, 95, 179, 0.5);
+    color: #1f5fb3; }
     /* line 9, source/scss/_links.scss */
     a[href]:hover, a[href]:active {
-      border-bottom-color: rgba(28, 96, 164, 0.5);
-      color: #1c60a4; }
+      border-bottom-color: rgba(179, 115, 31, 0.5);
+      color: #b3731f; }
   /* line 15, source/scss/_links.scss */
   h1 a,
   h2 a,
@@ -254,8 +254,8 @@ a {
       h5 a[href]:active,
       h6 a[href]:hover,
       h6 a[href]:active {
-        border-bottom-color: rgba(28, 96, 164, 0.5);
-        color: #1c60a4; }
+        border-bottom-color: rgba(179, 115, 31, 0.5);
+        color: #b3731f; }
   /* line 33, source/scss/_links.scss */
   .links-underlined a[href] {
     border-bottom-style: solid;
@@ -315,7 +315,7 @@ ul.list-icons li {
   position: relative; }
   /* line 52, source/scss/_lists.scss */
   ul.list-icons li:before {
-    color: #888888;
+    color: #a0a0a0;
     font-family: "Font Awesome 5 Solid";
     margin-right: 0.8125rem;
     position: absolute;
@@ -517,7 +517,7 @@ blockquote {
   blockquote.pullquote {
     background-color: transparent;
     border: none;
-    color: #ffa000;
+    color: #4185de;
     font-family: "Zilla Slab", "Georgia", serif;
     font-size: 1.44rem;
     line-height: 2.4375rem;
@@ -690,7 +690,7 @@ h3.collapsable-processed:hover:before,
 h4.collapsable-processed:hover:before,
 h5.collapsable-processed:hover:before,
 h6.collapsable-processed:hover:before {
-  background-color: #1c60a4;
+  background-color: #b3731f;
   color: white; }
 
 /* line 86, source/scss/_collapsables.scss */
@@ -724,12 +724,12 @@ h6.collapsable-processed:hover:before {
     color: #eeeeee; }
     /* line 18, source/scss/_reverse.scss */
     .reverse a[href] {
-      border-bottom-color: rgba(255, 183, 62, 0.5);
-      color: #ffb73e; }
+      border-bottom-color: rgba(130, 175, 233, 0.5);
+      color: #82afe9; }
       /* line 21, source/scss/_reverse.scss */
       .reverse a[href]:hover, .reverse a[href]:active {
-        border-bottom-color: rgba(91, 158, 227, 0.5);
-        color: #5b9ee3; }
+        border-bottom-color: rgba(233, 189, 130, 0.5);
+        color: #e9bd82; }
   /* line 34, source/scss/_reverse.scss */
   .reverse h1 a,
   .reverse h2 a,
@@ -759,11 +759,11 @@ h6.collapsable-processed:hover:before {
       .reverse h5 a[href]:active,
       .reverse h6 a[href]:hover,
       .reverse h6 a[href]:active {
-        border-bottom-color: rgba(91, 158, 227, 0.5);
-        color: #5b9ee3; }
+        border-bottom-color: rgba(233, 189, 130, 0.5);
+        color: #e9bd82; }
   /* line 50, source/scss/_reverse.scss */
   .reverse blockquote.pullquote {
-    color: #ffa000; }
+    color: #98bded; }
     /* line 52, source/scss/_reverse.scss */
     .reverse blockquote.pullquote:before {
       color: rgba(238, 238, 238, 0.15); }
@@ -897,7 +897,7 @@ table.vertical-rules {
 
 /* line 109, source/scss/_tables.scss */
 table.responsive td .td-label {
-  color: #888888;
+  color: #a0a0a0;
   display: block;
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   font-size: 0.83333rem;
@@ -1052,7 +1052,7 @@ table.responsive td .td-label {
       top: 1.625rem; }
   /* line 104, source/scss/_tabs.scss */
   .tabs-container.tabs-processed .tab-label:hover:before {
-    background-color: #1c60a4;
+    background-color: #b3731f;
     color: white; }
 
 /* line 110, source/scss/_tabs.scss */

@@ -94,7 +94,7 @@ header.brand {
           width: 2.4375rem; }
         /* line 90, source/scss/tyfy-docs.scss */
         header.brand nav.nav-processed h2:hover {
-          color: reverse(readable(#418fde)); }
+          color: #e9bd82; }
       /* line 94, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed ul {
         height: 0;
@@ -125,7 +125,7 @@ footer {
   padding: 3.25rem 0 0 0; }
   /* line 125, source/scss/tyfy-docs.scss */
   footer p {
-    color: #888888;
+    color: #a0a0a0;
     font-size: 0.83333rem;
     line-height: 1.625rem;
     padding: 0.8125rem 1.625rem; }
