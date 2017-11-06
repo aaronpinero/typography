@@ -160,7 +160,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #1e1e1e;
+  color: #1d1d1d;
   font-family: "Zilla Slab", "Georgia", serif;
   font-weight: 700; }
 
@@ -219,12 +219,12 @@ a {
   transition-property: background-color,border-color,color; }
   /* line 6, source/scss/_links.scss */
   a[href] {
-    border-bottom-color: rgba(240, 128, 0, 0.5);
-    color: #f08000; }
+    border-bottom-color: rgba(193, 121, 0, 0.5);
+    color: #c17900; }
     /* line 9, source/scss/_links.scss */
     a[href]:hover, a[href]:active {
-      border-bottom-color: rgba(0, 112, 240, 0.5);
-      color: #0070f0; }
+      border-bottom-color: rgba(28, 96, 164, 0.5);
+      color: #1c60a4; }
   /* line 15, source/scss/_links.scss */
   h1 a,
   h2 a,
@@ -232,7 +232,7 @@ a {
   h4 a,
   h5 a,
   h6 a {
-    color: #1e1e1e; }
+    color: #1d1d1d; }
     /* line 22, source/scss/_links.scss */
     h1 a[href],
     h2 a[href],
@@ -240,8 +240,8 @@ a {
     h4 a[href],
     h5 a[href],
     h6 a[href] {
-      border-bottom-color: rgba(30, 30, 30, 0.5);
-      color: #1e1e1e; }
+      border-bottom-color: rgba(29, 29, 29, 0.5);
+      color: #1d1d1d; }
       /* line 25, source/scss/_links.scss */
       h1 a[href]:hover, h1 a[href]:active,
       h2 a[href]:hover,
@@ -254,8 +254,8 @@ a {
       h5 a[href]:active,
       h6 a[href]:hover,
       h6 a[href]:active {
-        border-bottom-color: rgba(0, 112, 240, 0.5);
-        color: #0070f0; }
+        border-bottom-color: rgba(28, 96, 164, 0.5);
+        color: #1c60a4; }
   /* line 33, source/scss/_links.scss */
   .links-underlined a[href] {
     border-bottom-style: solid;
@@ -315,7 +315,7 @@ ul.list-icons li {
   position: relative; }
   /* line 52, source/scss/_lists.scss */
   ul.list-icons li:before {
-    color: #aaaaaa;
+    color: #888888;
     font-family: "Font Awesome 5 Solid";
     margin-right: 0.8125rem;
     position: absolute;
@@ -517,7 +517,7 @@ blockquote {
   blockquote.pullquote {
     background-color: transparent;
     border: none;
-    color: #f08000;
+    color: #ffa000;
     font-family: "Zilla Slab", "Georgia", serif;
     font-size: 1.44rem;
     line-height: 2.4375rem;
@@ -544,7 +544,7 @@ blockquote {
       margin-top: 0.8125rem; }
     /* line 41, source/scss/_quotes.scss */
     blockquote.pullquote:before {
-      color: #e6e6e6;
+      color: #e7e7e7;
       content: "\f10d";
       display: block;
       font-family: "Font Awesome 5 Solid";
@@ -553,7 +553,7 @@ blockquote {
       text-align: center; }
     /* line 50, source/scss/_quotes.scss */
     blockquote.pullquote:after {
-      color: #e6e6e6;
+      color: #e7e7e7;
       content: "————— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 —————";
       display: block;
       font-family: "Font Awesome 5 Solid";
@@ -595,7 +595,7 @@ h4.collapsable-processed,
 h5.collapsable-processed,
 h6.collapsable-processed {
   background-color: transparent;
-  border: 2px #e6e6e6 solid;
+  border: 2px #e7e7e7 solid;
   border-bottom: 2px transparent solid;
   clear: both;
   cursor: pointer;
@@ -629,7 +629,7 @@ h6.collapsable-processed {
   h4.collapsable-processed.closed,
   h5.collapsable-processed.closed,
   h6.collapsable-processed.closed {
-    border-bottom: 2px #e6e6e6 solid;
+    border-bottom: 2px #e7e7e7 solid;
     padding-top: 0.8125rem; }
     /* line 35, source/scss/_collapsables.scss */
     h2.collapsable-processed.closed:before,
@@ -690,13 +690,13 @@ h3.collapsable-processed:hover:before,
 h4.collapsable-processed:hover:before,
 h5.collapsable-processed:hover:before,
 h6.collapsable-processed:hover:before {
-  background-color: #0070f0;
+  background-color: #1c60a4;
   color: white; }
 
 /* line 86, source/scss/_collapsables.scss */
 .collapsables {
   box-sizing: border-box;
-  border: 2px #e6e6e6 solid;
+  border: 2px #e7e7e7 solid;
   border-top: none !important;
   overflow: hidden;
   padding: 0.8125rem 1.625rem 1.625rem 1.625rem; }
@@ -712,103 +712,64 @@ h6.collapsable-processed:hover:before {
 .reverse {
   color: #eeeeee; }
   /* line 6, source/scss/_reverse.scss */
-  .reverse h1 {
-    color: #e1e1e1; }
-  /* line 9, source/scss/_reverse.scss */
-  .reverse h2 {
-    color: #e1e1e1; }
-  /* line 12, source/scss/_reverse.scss */
-  .reverse h3 {
-    color: #e1e1e1; }
-  /* line 15, source/scss/_reverse.scss */
-  .reverse h4 {
-    color: #e1e1e1; }
-  /* line 18, source/scss/_reverse.scss */
-  .reverse h5 {
-    color: #e1e1e1; }
-  /* line 21, source/scss/_reverse.scss */
+  .reverse h1,
+  .reverse h2,
+  .reverse h3,
+  .reverse h4,
+  .reverse h5,
   .reverse h6 {
-    color: #e1e1e1; }
-  /* line 26, source/scss/_reverse.scss */
+    color: #e2e2e2; }
+  /* line 16, source/scss/_reverse.scss */
   .reverse a {
     color: #eeeeee; }
-  /* line 29, source/scss/_reverse.scss */
+    /* line 18, source/scss/_reverse.scss */
+    .reverse a[href] {
+      border-bottom-color: rgba(255, 183, 62, 0.5);
+      color: #ffb73e; }
+      /* line 21, source/scss/_reverse.scss */
+      .reverse a[href]:hover, .reverse a[href]:active {
+        border-bottom-color: rgba(91, 158, 227, 0.5);
+        color: #5b9ee3; }
+  /* line 34, source/scss/_reverse.scss */
   .reverse h1 a,
   .reverse h2 a,
   .reverse h3 a,
   .reverse h4 a,
   .reverse h5 a,
   .reverse h6 a {
-    color: #e1e1e1; }
-  /* line 37, source/scss/_reverse.scss */
-  .reverse a[href] {
-    color: #ffc88a; }
-  /* line 40, source/scss/_reverse.scss */
-  .reverse h1 a[href],
-  .reverse h2 a[href],
-  .reverse h3 a[href],
-  .reverse h4 a[href],
-  .reverse h5 a[href],
-  .reverse h6 a[href] {
-    color: #e1e1e1; }
-  /* line 48, source/scss/_reverse.scss */
-  .reverse a[href]:hover,
-  .reverse a[href]:active {
-    color: #8ac1ff; }
-  /* line 55, source/scss/_reverse.scss */
-  .reverse .links-underlined a[href] {
-    border-bottom: 2px rgba(255, 200, 138, 0.5) solid; }
-  /* line 58, source/scss/_reverse.scss */
-  .reverse .links-underlined h1 a[href],
-  .reverse .links-underlined h2 a[href],
-  .reverse .links-underlined h3 a[href],
-  .reverse .links-underlined h4 a[href],
-  .reverse .links-underlined h5 a[href],
-  .reverse .links-underlined h6 a[href] {
-    border-bottom: 2px rgba(225, 225, 225, 0.5) solid; }
-  /* line 66, source/scss/_reverse.scss */
-  .reverse .links-underlined a[href]:hover,
-  .reverse .links-underlined a[href]:active {
-    border-bottom: 2px #8ac1ff solid; }
-  /* line 74, source/scss/_reverse.scss */
-  .reverse.links-underlined a[href] {
-    border-bottom: 2px rgba(255, 200, 138, 0.5) solid; }
-  /* line 77, source/scss/_reverse.scss */
-  .reverse.links-underlined h1 a[href],
-  .reverse.links-underlined h2 a[href],
-  .reverse.links-underlined h3 a[href],
-  .reverse.links-underlined h4 a[href],
-  .reverse.links-underlined h5 a[href],
-  .reverse.links-underlined h6 a[href] {
-    border-bottom: 2px rgba(225, 225, 225, 0.5) solid; }
-  /* line 85, source/scss/_reverse.scss */
-  .reverse.links-underlined a[href]:hover,
-  .reverse.links-underlined a[href]:active {
-    border-bottom: 2px #8ac1ff solid; }
-  /* line 92, source/scss/_reverse.scss */
-  .links-underlined .reverse a[href] {
-    border-bottom: 2px rgba(255, 200, 138, 0.5) solid; }
-  /* line 95, source/scss/_reverse.scss */
-  .links-underlined .reverse h1 a[href],
-  .links-underlined .reverse h2 a[href],
-  .links-underlined .reverse h3 a[href],
-  .links-underlined .reverse h4 a[href],
-  .links-underlined .reverse h5 a[href],
-  .links-underlined .reverse h6 a[href] {
-    border-bottom: 2px rgba(225, 225, 225, 0.5) solid; }
-  /* line 103, source/scss/_reverse.scss */
-  .links-underlined .reverse a[href]:hover,
-  .links-underlined .reverse a[href]:active {
-    border-bottom: 2px #8ac1ff solid; }
-  /* line 110, source/scss/_reverse.scss */
+    color: #e2e2e2; }
+    /* line 36, source/scss/_reverse.scss */
+    .reverse h1 a[href],
+    .reverse h2 a[href],
+    .reverse h3 a[href],
+    .reverse h4 a[href],
+    .reverse h5 a[href],
+    .reverse h6 a[href] {
+      border-bottom-color: rgba(226, 226, 226, 0.5);
+      color: #e2e2e2; }
+      /* line 39, source/scss/_reverse.scss */
+      .reverse h1 a[href]:hover, .reverse h1 a[href]:active,
+      .reverse h2 a[href]:hover,
+      .reverse h2 a[href]:active,
+      .reverse h3 a[href]:hover,
+      .reverse h3 a[href]:active,
+      .reverse h4 a[href]:hover,
+      .reverse h4 a[href]:active,
+      .reverse h5 a[href]:hover,
+      .reverse h5 a[href]:active,
+      .reverse h6 a[href]:hover,
+      .reverse h6 a[href]:active {
+        border-bottom-color: rgba(91, 158, 227, 0.5);
+        color: #5b9ee3; }
+  /* line 50, source/scss/_reverse.scss */
   .reverse blockquote.pullquote {
-    color: #ffc88a; }
-    /* line 112, source/scss/_reverse.scss */
+    color: #ffa000; }
+    /* line 52, source/scss/_reverse.scss */
     .reverse blockquote.pullquote:before {
-      color: #555555; }
-    /* line 115, source/scss/_reverse.scss */
+      color: rgba(238, 238, 238, 0.15); }
+    /* line 55, source/scss/_reverse.scss */
     .reverse blockquote.pullquote:after {
-      color: #3c3c3c; }
+      color: rgba(238, 238, 238, 0.15); }
 
 /* line 2, source/scss/_tables.scss */
 table {
@@ -873,31 +834,31 @@ table.striped th {
 
 /* line 58, source/scss/_tables.scss */
 table.striped tr:nth-child(2n) td {
-  background-color: white; }
+  background-color: #f3f3f3; }
 
 /* line 65, source/scss/_tables.scss */
 table.horizontal-rules {
-  border-top: 1px #e6e6e6 solid; }
+  border-top: 1px #e7e7e7 solid; }
   /* line 67, source/scss/_tables.scss */
   table.horizontal-rules td,
   table.horizontal-rules th {
-    border-bottom: 1px #e6e6e6 solid; }
+    border-bottom: 1px #e7e7e7 solid; }
   /* line 71, source/scss/_tables.scss */
   table.horizontal-rules th[scope="col"] {
-    border-bottom: 2px #e6e6e6 solid; }
+    border-bottom: 2px #e7e7e7 solid; }
 
 /* line 77, source/scss/_tables.scss */
 table.vertical-rules {
-  border-left: 1px #e6e6e6 solid; }
+  border-left: 1px #e7e7e7 solid; }
   /* line 79, source/scss/_tables.scss */
   table.vertical-rules td,
   table.vertical-rules th {
-    border-right: 1px #e6e6e6 solid;
+    border-right: 1px #e7e7e7 solid;
     padding-left: 0.8125rem;
     padding-right: 0.8125rem; }
   /* line 85, source/scss/_tables.scss */
   table.vertical-rules th[scope="row"] {
-    border-right: 2px #e6e6e6 solid; }
+    border-right: 2px #e7e7e7 solid; }
 
 @media (max-width: 29.997em) {
   /* line 92, source/scss/_tables.scss */
@@ -925,7 +886,7 @@ table.vertical-rules {
 @media (max-width: 29.997em) {
   /* line 98, source/scss/_tables.scss */
   table.responsive tbody tr + tr {
-    border-top: 1px #e6e6e6 solid; } }
+    border-top: 1px #e7e7e7 solid; } }
 
 @media (max-width: 29.997em) {
   /* line 103, source/scss/_tables.scss */
@@ -936,7 +897,7 @@ table.vertical-rules {
 
 /* line 109, source/scss/_tables.scss */
 table.responsive td .td-label {
-  color: #aaaaaa;
+  color: #888888;
   display: block;
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   font-size: 0.83333rem;
@@ -1091,7 +1052,7 @@ table.responsive td .td-label {
       top: 1.625rem; }
   /* line 104, source/scss/_tabs.scss */
   .tabs-container.tabs-processed .tab-label:hover:before {
-    background-color: #0070f0;
+    background-color: #1c60a4;
     color: white; }
 
 /* line 110, source/scss/_tabs.scss */

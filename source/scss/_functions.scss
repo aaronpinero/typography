@@ -23,3 +23,23 @@
 @function grid($multiplier) {
 	@return $tyfy-grid-unit * $multiplier;
 }
+
+// create a specific lightness of a color
+@function color($color) {
+	@return hsl(hue($color),saturation($color),$lightness);
+}
+
+// create a color with the reverse lightness
+@function reverse($color) {
+	@return hsl(hue($color),saturation($color),(100% - lightness($color)));
+}
+
+// create a color with readable lightness
+@function readable($color) {
+	@if lightness($tyfy-color-foreground) > lightness($tyfy-color-background) {
+		@return hsl(hue($color),saturation($color),(0.666*(lightness($tyfy-color-foreground) - lightness($tyfy-color-background))) + lightness($tyfy-color-background));
+	}
+	@else {
+		@return hsl(hue($color),saturation($color),(0.333*(lightness($tyfy-color-background) - lightness($tyfy-color-foreground))) + lightness($tyfy-color-foreground));
+	}
+}
