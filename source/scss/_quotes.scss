@@ -1,6 +1,13 @@
 blockquote {
 	font-style:italic;
-	margin:2*$tyfy-grid-unit;
+	margin-bottom:$tyfy-spacing-standard;
+	margin-left:$tyfy-indent-small;
+	margin-right:$tyfy-indent-small;
+	margin-top:$tyfy-spacing-standard;
+	@media (min-width:$tyfy-break-pullquote-large) {
+		margin-left:$tyfy-indent-standard;
+		margin-right:$tyfy-indent-standard;
+	}
 	p {
 		font-style:italic;
 	}
@@ -11,11 +18,12 @@ blockquote {
 		font-family:$tyfy-font-pullquote;
 		font-size:$tyfy-font-size-pullquote;
 		line-height:leading($tyfy-font-size-pullquote,tall);
-		margin:2*$tyfy-grid-unit 0 3*$tyfy-grid-unit 0;
+		margin:$tyfy-spacing-standard 0 $tyfy-spacing-large 0;
 		position:relative;
 		text-align:center;
 		@media (min-width:$tyfy-break-pullquote-large) {
-			margin:3*$tyfy-grid-unit 4*$tyfy-grid-unit 4*$tyfy-grid-unit 4*$tyfy-grid-unit;
+			margin-left:$tyfy-indent-standard;
+			margin-right:$tyfy-indent-standard;
 		}
 		p {
 			font-size:$tyfy-font-size-pullquote;
@@ -31,7 +39,7 @@ blockquote {
 			margin-top:$tyfy-grid-unit;
 		}
 		&:before {
-			color:$tyfy-color-text-light;
+			color:$tyfy-color-border;
 			content:unquote("\"#{ $fa-var-quote-left }\"");
 			display:block;
 			font-family:$tyfy-symbol;
@@ -40,7 +48,7 @@ blockquote {
 			text-align:center;
 		}
 		&:after {
-			color:lighten($tyfy-color-text-light,10%);
+			color:$tyfy-color-border;
 			content:"————— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 —————";
 			display:block;
 			font-family:$tyfy-symbol;
@@ -59,10 +67,8 @@ blockquote {
 		&.float-right {
 			@media (min-width:$tyfy-break-floats) {
 				box-sizing:border-box;
-				margin-bottom:3*$tyfy-grid-unit;
-				margin-top:2*$tyfy-grid-unit;
 				text-align:left;
-				width:calc(50% - (2 * #{$tyfy-grid-unit}));
+				width:calc(50% - #{grid(2)});
 			}
 		}
 		&.float-left {
@@ -70,14 +76,14 @@ blockquote {
 				clear:left;
 				float:left;
 				margin-left:0;
-				margin-right:4*$tyfy-grid-unit;
+				margin-right:grid(4);
 			}
 		}
 		&.float-right {
 			@media (min-width:$tyfy-break-floats) {
 				clear:right;
 				float:right;
-				margin-left:4*$tyfy-grid-unit;
+				margin-left:grid(4);
 				margin-right:0;
 			}
 		}

@@ -8,7 +8,7 @@ a {
 		color:$tyfy-color-link-default;
 		&:hover,
 		&:active {
-			border-bottom-color:$tyfy-color-link-active;
+			border-bottom-color:rgba($tyfy-color-link-active,0.5);
 			color:$tyfy-color-link-active;
 		}
 	}
@@ -24,7 +24,7 @@ a {
 			color:$tyfy-color-text-head;
 			&:hover,
 			&:active {
-				border-bottom-color:$tyfy-color-link-active;
+				border-bottom-color:rgba($tyfy-color-link-active,0.5);
 				color:$tyfy-color-link-active;
 			}
 		}

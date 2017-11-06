@@ -1,19 +1,20 @@
 // colors
-$tyfy-color-background:white;
-$tyfy-color-brand:#418fde;
-$tyfy-color-text-body:#111;
-$tyfy-color-text-head:lighten($tyfy-color-text-body,7%);
-$tyfy-color-text-light:lighten($tyfy-color-text-body,50%);
-$tyfy-color-text-pullquote:complement($tyfy-color-brand);
-$tyfy-color-link-default:saturate(darken($tyfy-color-brand,10%),5%);
-$tyfy-color-link-active:complement($tyfy-color-link-default);
-$tyfy-color-table-border:rgba(0,0,0,0.1);
-$tyfy-color-table-stripe:rgba(0,0,0,0.05);
+$tyfy-color-background:white !default;
+$tyfy-color-border:darken($tyfy-color-background,10%) !default;
+$tyfy-color-brand:#f08000 !default;
+$tyfy-color-text-body:#111 !default;
+$tyfy-color-text-head:lighten($tyfy-color-text-body,5%) !default;
+$tyfy-color-text-light:lighten($tyfy-color-text-body,60%) !default;
+$tyfy-color-text-pullquote:$tyfy-color-brand !default;
+$tyfy-color-link-default:$tyfy-color-brand !default;
+$tyfy-color-link-active:complement($tyfy-color-link-default) !default;
+$tyfy-color-table-border:$tyfy-color-border;
+$tyfy-color-table-stripe:lighten($tyfy-color-border,50%);
 
 // reverse colors
-$tyfy-color-text-body-reverse:invert($tyfy-color-text-body);
-$tyfy-color-text-head-reverse:invert($tyfy-color-text-head);
-$tyfy-color-text-light-reverse:invert($tyfy-color-text-light);
-$tyfy-color-text-pullquote-reverse:saturate(lighten($tyfy-color-text-pullquote,30%),30%);
-$tyfy-color-link-default-reverse:saturate(lighten($tyfy-color-link-default,30%),30%);
-$tyfy-color-link-active-reverse:complement($tyfy-color-link-default-reverse);
+$tyfy-color-text-body-reverse:invert($tyfy-color-text-body) !default;
+$tyfy-color-text-head-reverse:invert($tyfy-color-text-head) !default;
+$tyfy-color-text-light-reverse:invert($tyfy-color-text-light) !default;
+$tyfy-color-text-pullquote-reverse:saturate(lighten($tyfy-color-text-pullquote,30%),30%) !default;
+$tyfy-color-link-default-reverse:saturate(lighten($tyfy-color-link-default,30%),30%) !default;
+$tyfy-color-link-active-reverse:complement($tyfy-color-link-default-reverse) !default;

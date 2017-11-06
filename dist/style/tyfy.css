@@ -160,7 +160,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #232323;
+  color: #1e1e1e;
   font-family: "Zilla Slab", "Georgia", serif;
   font-weight: 700; }
 
@@ -219,12 +219,12 @@ a {
   transition-property: background-color,border-color,color; }
   /* line 6, source/scss/_links.scss */
   a[href] {
-    border-bottom-color: rgba(29, 117, 207, 0.5);
-    color: #1d75cf; }
+    border-bottom-color: rgba(240, 128, 0, 0.5);
+    color: #f08000; }
     /* line 9, source/scss/_links.scss */
     a[href]:hover, a[href]:active {
-      border-bottom-color: #cf771d;
-      color: #cf771d; }
+      border-bottom-color: rgba(0, 112, 240, 0.5);
+      color: #0070f0; }
   /* line 15, source/scss/_links.scss */
   h1 a,
   h2 a,
@@ -232,7 +232,7 @@ a {
   h4 a,
   h5 a,
   h6 a {
-    color: #232323; }
+    color: #1e1e1e; }
     /* line 22, source/scss/_links.scss */
     h1 a[href],
     h2 a[href],
@@ -240,8 +240,8 @@ a {
     h4 a[href],
     h5 a[href],
     h6 a[href] {
-      border-bottom-color: rgba(35, 35, 35, 0.5);
-      color: #232323; }
+      border-bottom-color: rgba(30, 30, 30, 0.5);
+      color: #1e1e1e; }
       /* line 25, source/scss/_links.scss */
       h1 a[href]:hover, h1 a[href]:active,
       h2 a[href]:hover,
@@ -254,8 +254,8 @@ a {
       h5 a[href]:active,
       h6 a[href]:hover,
       h6 a[href]:active {
-        border-bottom-color: #cf771d;
-        color: #cf771d; }
+        border-bottom-color: rgba(0, 112, 240, 0.5);
+        color: #0070f0; }
   /* line 33, source/scss/_links.scss */
   .links-underlined a[href] {
     border-bottom-style: solid;
@@ -315,7 +315,7 @@ ul.list-icons li {
   position: relative; }
   /* line 52, source/scss/_lists.scss */
   ul.list-icons li:before {
-    color: #919191;
+    color: #aaaaaa;
     font-family: "Font Awesome 5 Solid";
     margin-right: 0.8125rem;
     position: absolute;
@@ -501,15 +501,23 @@ span.smallcaps {
 /* line 1, source/scss/_quotes.scss */
 blockquote {
   font-style: italic;
-  margin: 1.625rem; }
-  /* line 4, source/scss/_quotes.scss */
+  margin-bottom: 1.625rem;
+  margin-left: 1.625rem;
+  margin-right: 1.625rem;
+  margin-top: 1.625rem; }
+  @media (min-width: 40em) {
+    /* line 1, source/scss/_quotes.scss */
+    blockquote {
+      margin-left: 2.4375rem;
+      margin-right: 2.4375rem; } }
+  /* line 11, source/scss/_quotes.scss */
   blockquote p {
     font-style: italic; }
-  /* line 7, source/scss/_quotes.scss */
+  /* line 14, source/scss/_quotes.scss */
   blockquote.pullquote {
     background-color: transparent;
     border: none;
-    color: #de9041;
+    color: #f08000;
     font-family: "Zilla Slab", "Georgia", serif;
     font-size: 1.44rem;
     line-height: 2.4375rem;
@@ -517,34 +525,35 @@ blockquote {
     position: relative;
     text-align: center; }
     @media (min-width: 40em) {
-      /* line 7, source/scss/_quotes.scss */
+      /* line 14, source/scss/_quotes.scss */
       blockquote.pullquote {
-        margin: 2.4375rem 3.25rem 3.25rem 3.25rem; } }
-    /* line 20, source/scss/_quotes.scss */
+        margin-left: 2.4375rem;
+        margin-right: 2.4375rem; } }
+    /* line 28, source/scss/_quotes.scss */
     blockquote.pullquote p {
       font-size: 1.44rem;
       line-height: 2.4375rem; }
-    /* line 24, source/scss/_quotes.scss */
+    /* line 32, source/scss/_quotes.scss */
     blockquote.pullquote cite {
       display: block;
       font-size: 0.83333rem;
       font-style: normal;
       line-height: 1.625rem; }
-    /* line 30, source/scss/_quotes.scss */
+    /* line 38, source/scss/_quotes.scss */
     blockquote.pullquote * + cite {
       margin-top: 0.8125rem; }
-    /* line 33, source/scss/_quotes.scss */
+    /* line 41, source/scss/_quotes.scss */
     blockquote.pullquote:before {
-      color: #919191;
+      color: #e6e6e6;
       content: "\f10d";
       display: block;
       font-family: "Font Awesome 5 Solid";
       font-style: normal;
       font-weight: normal;
       text-align: center; }
-    /* line 42, source/scss/_quotes.scss */
+    /* line 50, source/scss/_quotes.scss */
     blockquote.pullquote:after {
-      color: #aaaaaa;
+      color: #e6e6e6;
       content: "————— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 —————";
       display: block;
       font-family: "Font Awesome 5 Solid";
@@ -559,22 +568,20 @@ blockquote {
       white-space: nowrap;
       width: 100%; }
     @media (min-width: 40em) {
-      /* line 58, source/scss/_quotes.scss */
+      /* line 66, source/scss/_quotes.scss */
       blockquote.pullquote.float-left, blockquote.pullquote.float-right {
         box-sizing: border-box;
-        margin-bottom: 2.4375rem;
-        margin-top: 1.625rem;
         text-align: left;
-        width: calc(50% - (2 * 0.8125rem)); } }
+        width: calc(50% - 1.625rem); } }
     @media (min-width: 40em) {
-      /* line 68, source/scss/_quotes.scss */
+      /* line 74, source/scss/_quotes.scss */
       blockquote.pullquote.float-left {
         clear: left;
         float: left;
         margin-left: 0;
         margin-right: 3.25rem; } }
     @media (min-width: 40em) {
-      /* line 76, source/scss/_quotes.scss */
+      /* line 82, source/scss/_quotes.scss */
       blockquote.pullquote.float-right {
         clear: right;
         float: right;
@@ -588,7 +595,7 @@ h4.collapsable-processed,
 h5.collapsable-processed,
 h6.collapsable-processed {
   background-color: transparent;
-  border: 2px rgba(17, 17, 17, 0.13) solid;
+  border: 2px #e6e6e6 solid;
   border-bottom: 2px transparent solid;
   clear: both;
   cursor: pointer;
@@ -622,7 +629,7 @@ h6.collapsable-processed {
   h4.collapsable-processed.closed,
   h5.collapsable-processed.closed,
   h6.collapsable-processed.closed {
-    border-bottom: 2px rgba(17, 17, 17, 0.13) solid;
+    border-bottom: 2px #e6e6e6 solid;
     padding-top: 0.8125rem; }
     /* line 35, source/scss/_collapsables.scss */
     h2.collapsable-processed.closed:before,
@@ -661,105 +668,67 @@ h6.collapsable-processed {
     h6.collapsable-processed.transition.closed:before {
       top: 1.625rem; }
 
-/* line 53, source/scss/_collapsables.scss */
-h3.collapsable-processed {
-  border-color: rgba(0, 0, 0, 0.11); }
-  /* line 55, source/scss/_collapsables.scss */
-  h3.collapsable-processed:before {
-    width: 2.4375rem; }
+/* line 54, source/scss/_collapsables.scss */
+h3.collapsable-processed:before {
+  width: 2.4375rem; }
 
 /* line 59, source/scss/_collapsables.scss */
-h4.collapsable-processed {
-  border-color: rgba(0, 0, 0, 0.09); }
-  /* line 61, source/scss/_collapsables.scss */
-  h4.collapsable-processed:before {
-    width: 1.625rem; }
+h4.collapsable-processed:before {
+  width: 1.625rem; }
 
-/* line 65, source/scss/_collapsables.scss */
-h5.collapsable-processed {
-  border-color: rgba(0, 0, 0, 0.07); }
-  /* line 67, source/scss/_collapsables.scss */
-  h5.collapsable-processed:before {
-    width: 1.625rem; }
+/* line 64, source/scss/_collapsables.scss */
+h5.collapsable-processed:before {
+  width: 1.625rem; }
 
-/* line 71, source/scss/_collapsables.scss */
-h6.collapsable-processed {
-  border-color: rgba(0, 0, 0, 0.05); }
-  /* line 73, source/scss/_collapsables.scss */
-  h6.collapsable-processed:before {
-    width: 1.625rem; }
+/* line 69, source/scss/_collapsables.scss */
+h6.collapsable-processed:before {
+  width: 1.625rem; }
 
-/* line 77, source/scss/_collapsables.scss */
-h2.collapsable-processed,
-h3.collapsable-processed,
-h4.collapsable-processed,
-h5.collapsable-processed,
-h6.collapsable-processed {
-  border-bottom-color: transparent; }
-  /* line 83, source/scss/_collapsables.scss */
-  h2.collapsable-processed.transition,
-  h3.collapsable-processed.transition,
-  h4.collapsable-processed.transition,
-  h5.collapsable-processed.transition,
-  h6.collapsable-processed.transition {
-    border-bottom-color: transparent; }
-  /* line 87, source/scss/_collapsables.scss */
-  h2.collapsable-processed:hover:before,
-  h3.collapsable-processed:hover:before,
-  h4.collapsable-processed:hover:before,
-  h5.collapsable-processed:hover:before,
-  h6.collapsable-processed:hover:before {
-    background-color: #cf771d;
-    color: white; }
+/* line 79, source/scss/_collapsables.scss */
+h2.collapsable-processed:hover:before,
+h3.collapsable-processed:hover:before,
+h4.collapsable-processed:hover:before,
+h5.collapsable-processed:hover:before,
+h6.collapsable-processed:hover:before {
+  background-color: #0070f0;
+  color: white; }
 
-/* line 94, source/scss/_collapsables.scss */
+/* line 86, source/scss/_collapsables.scss */
 .collapsables {
   box-sizing: border-box;
-  border: 2px rgba(0, 0, 0, 0.13) solid;
+  border: 2px #e6e6e6 solid;
   border-top: none !important;
   overflow: hidden;
   padding: 0.8125rem 1.625rem 1.625rem 1.625rem; }
-  /* line 100, source/scss/_collapsables.scss */
+  /* line 92, source/scss/_collapsables.scss */
   .collapsables.closed {
     border: none;
     height: 1px;
     padding-bottom: 0;
     padding-top: 0;
     position: absolute; }
-  /* line 107, source/scss/_collapsables.scss */
-  h3.collapsable-processed + .collapsables {
-    border-color: rgba(0, 0, 0, 0.11); }
-  /* line 110, source/scss/_collapsables.scss */
-  h4.collapsable-processed + .collapsables {
-    border-color: rgba(0, 0, 0, 0.09); }
-  /* line 113, source/scss/_collapsables.scss */
-  h5.collapsable-processed + .collapsables {
-    border-color: rgba(0, 0, 0, 0.07); }
-  /* line 116, source/scss/_collapsables.scss */
-  h6.collapsable-processed + .collapsables {
-    border-color: rgba(0, 0, 0, 0.05); }
 
 /* line 2, source/scss/_reverse.scss */
 .reverse {
   color: #eeeeee; }
   /* line 6, source/scss/_reverse.scss */
   .reverse h1 {
-    color: gainsboro; }
+    color: #e1e1e1; }
   /* line 9, source/scss/_reverse.scss */
   .reverse h2 {
-    color: gainsboro; }
+    color: #e1e1e1; }
   /* line 12, source/scss/_reverse.scss */
   .reverse h3 {
-    color: gainsboro; }
+    color: #e1e1e1; }
   /* line 15, source/scss/_reverse.scss */
   .reverse h4 {
-    color: gainsboro; }
+    color: #e1e1e1; }
   /* line 18, source/scss/_reverse.scss */
   .reverse h5 {
-    color: gainsboro; }
+    color: #e1e1e1; }
   /* line 21, source/scss/_reverse.scss */
   .reverse h6 {
-    color: gainsboro; }
+    color: #e1e1e1; }
   /* line 26, source/scss/_reverse.scss */
   .reverse a {
     color: #eeeeee; }
@@ -770,10 +739,10 @@ h6.collapsable-processed {
   .reverse h4 a,
   .reverse h5 a,
   .reverse h6 a {
-    color: gainsboro; }
+    color: #e1e1e1; }
   /* line 37, source/scss/_reverse.scss */
   .reverse a[href] {
-    color: #86c2ff; }
+    color: #ffc88a; }
   /* line 40, source/scss/_reverse.scss */
   .reverse h1 a[href],
   .reverse h2 a[href],
@@ -781,14 +750,14 @@ h6.collapsable-processed {
   .reverse h4 a[href],
   .reverse h5 a[href],
   .reverse h6 a[href] {
-    color: gainsboro; }
+    color: #e1e1e1; }
   /* line 48, source/scss/_reverse.scss */
   .reverse a[href]:hover,
   .reverse a[href]:active {
-    color: #ffc386; }
+    color: #8ac1ff; }
   /* line 55, source/scss/_reverse.scss */
   .reverse .links-underlined a[href] {
-    border-bottom: 2px rgba(134, 194, 255, 0.5) solid; }
+    border-bottom: 2px rgba(255, 200, 138, 0.5) solid; }
   /* line 58, source/scss/_reverse.scss */
   .reverse .links-underlined h1 a[href],
   .reverse .links-underlined h2 a[href],
@@ -796,14 +765,14 @@ h6.collapsable-processed {
   .reverse .links-underlined h4 a[href],
   .reverse .links-underlined h5 a[href],
   .reverse .links-underlined h6 a[href] {
-    border-bottom: 2px rgba(220, 220, 220, 0.5) solid; }
+    border-bottom: 2px rgba(225, 225, 225, 0.5) solid; }
   /* line 66, source/scss/_reverse.scss */
   .reverse .links-underlined a[href]:hover,
   .reverse .links-underlined a[href]:active {
-    border-bottom: 2px #ffc386 solid; }
+    border-bottom: 2px #8ac1ff solid; }
   /* line 74, source/scss/_reverse.scss */
   .reverse.links-underlined a[href] {
-    border-bottom: 2px rgba(134, 194, 255, 0.5) solid; }
+    border-bottom: 2px rgba(255, 200, 138, 0.5) solid; }
   /* line 77, source/scss/_reverse.scss */
   .reverse.links-underlined h1 a[href],
   .reverse.links-underlined h2 a[href],
@@ -811,14 +780,14 @@ h6.collapsable-processed {
   .reverse.links-underlined h4 a[href],
   .reverse.links-underlined h5 a[href],
   .reverse.links-underlined h6 a[href] {
-    border-bottom: 2px rgba(220, 220, 220, 0.5) solid; }
+    border-bottom: 2px rgba(225, 225, 225, 0.5) solid; }
   /* line 85, source/scss/_reverse.scss */
   .reverse.links-underlined a[href]:hover,
   .reverse.links-underlined a[href]:active {
-    border-bottom: 2px #ffc386 solid; }
+    border-bottom: 2px #8ac1ff solid; }
   /* line 92, source/scss/_reverse.scss */
   .links-underlined .reverse a[href] {
-    border-bottom: 2px rgba(134, 194, 255, 0.5) solid; }
+    border-bottom: 2px rgba(255, 200, 138, 0.5) solid; }
   /* line 95, source/scss/_reverse.scss */
   .links-underlined .reverse h1 a[href],
   .links-underlined .reverse h2 a[href],
@@ -826,20 +795,20 @@ h6.collapsable-processed {
   .links-underlined .reverse h4 a[href],
   .links-underlined .reverse h5 a[href],
   .links-underlined .reverse h6 a[href] {
-    border-bottom: 2px rgba(220, 220, 220, 0.5) solid; }
+    border-bottom: 2px rgba(225, 225, 225, 0.5) solid; }
   /* line 103, source/scss/_reverse.scss */
   .links-underlined .reverse a[href]:hover,
   .links-underlined .reverse a[href]:active {
-    border-bottom: 2px #ffc386 solid; }
+    border-bottom: 2px #8ac1ff solid; }
   /* line 110, source/scss/_reverse.scss */
   .reverse blockquote.pullquote {
-    color: #ffdcb9; }
+    color: #ffc88a; }
     /* line 112, source/scss/_reverse.scss */
     .reverse blockquote.pullquote:before {
-      color: #6f6f6f; }
+      color: #555555; }
     /* line 115, source/scss/_reverse.scss */
     .reverse blockquote.pullquote:after {
-      color: #565656; }
+      color: #3c3c3c; }
 
 /* line 2, source/scss/_tables.scss */
 table {
@@ -904,31 +873,31 @@ table.striped th {
 
 /* line 58, source/scss/_tables.scss */
 table.striped tr:nth-child(2n) td {
-  background-color: rgba(0, 0, 0, 0.05); }
+  background-color: white; }
 
 /* line 65, source/scss/_tables.scss */
 table.horizontal-rules {
-  border-top: 1px rgba(0, 0, 0, 0.1) solid; }
+  border-top: 1px #e6e6e6 solid; }
   /* line 67, source/scss/_tables.scss */
   table.horizontal-rules td,
   table.horizontal-rules th {
-    border-bottom: 1px rgba(0, 0, 0, 0.1) solid; }
+    border-bottom: 1px #e6e6e6 solid; }
   /* line 71, source/scss/_tables.scss */
   table.horizontal-rules th[scope="col"] {
-    border-bottom: 2px rgba(0, 0, 0, 0.1) solid; }
+    border-bottom: 2px #e6e6e6 solid; }
 
 /* line 77, source/scss/_tables.scss */
 table.vertical-rules {
-  border-left: 1px rgba(0, 0, 0, 0.1) solid; }
+  border-left: 1px #e6e6e6 solid; }
   /* line 79, source/scss/_tables.scss */
   table.vertical-rules td,
   table.vertical-rules th {
-    border-right: 1px rgba(0, 0, 0, 0.1) solid;
+    border-right: 1px #e6e6e6 solid;
     padding-left: 0.8125rem;
     padding-right: 0.8125rem; }
   /* line 85, source/scss/_tables.scss */
   table.vertical-rules th[scope="row"] {
-    border-right: 2px rgba(0, 0, 0, 0.1) solid; }
+    border-right: 2px #e6e6e6 solid; }
 
 @media (max-width: 29.997em) {
   /* line 92, source/scss/_tables.scss */
@@ -956,7 +925,7 @@ table.vertical-rules {
 @media (max-width: 29.997em) {
   /* line 98, source/scss/_tables.scss */
   table.responsive tbody tr + tr {
-    border-top: 1px rgba(0, 0, 0, 0.1) solid; } }
+    border-top: 1px #e6e6e6 solid; } }
 
 @media (max-width: 29.997em) {
   /* line 103, source/scss/_tables.scss */
@@ -967,7 +936,7 @@ table.vertical-rules {
 
 /* line 109, source/scss/_tables.scss */
 table.responsive td .td-label {
-  color: #919191;
+  color: #aaaaaa;
   display: block;
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   font-size: 0.83333rem;
@@ -1122,7 +1091,7 @@ table.responsive td .td-label {
       top: 1.625rem; }
   /* line 104, source/scss/_tabs.scss */
   .tabs-container.tabs-processed .tab-label:hover:before {
-    background-color: #cf771d;
+    background-color: #0070f0;
     color: white; }
 
 /* line 110, source/scss/_tabs.scss */
