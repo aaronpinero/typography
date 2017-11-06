@@ -44,6 +44,7 @@ h6.collapsable-processed {
     }
   }
   &.transition.closed {
+	  border-bottom:2px transparent solid;
     padding-top:grid(2);
     &:before {
       top:grid(2);

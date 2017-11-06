@@ -223,8 +223,8 @@ a {
     color: #1f5fb3; }
     /* line 9, source/scss/_links.scss */
     a[href]:hover, a[href]:active {
-      border-bottom-color: rgba(179, 115, 31, 0.5);
-      color: #b3731f; }
+      border-bottom-color: rgba(95, 179, 31, 0.5);
+      color: #5fb31f; }
   /* line 15, source/scss/_links.scss */
   h1 a,
   h2 a,
@@ -254,8 +254,8 @@ a {
       h5 a[href]:active,
       h6 a[href]:hover,
       h6 a[href]:active {
-        border-bottom-color: rgba(179, 115, 31, 0.5);
-        color: #b3731f; }
+        border-bottom-color: rgba(95, 179, 31, 0.5);
+        color: #5fb31f; }
   /* line 33, source/scss/_links.scss */
   .links-underlined a[href] {
     border-bottom-style: solid;
@@ -315,7 +315,7 @@ ul.list-icons li {
   position: relative; }
   /* line 52, source/scss/_lists.scss */
   ul.list-icons li:before {
-    color: #a0a0a0;
+    color: #949494;
     font-family: "Font Awesome 5 Solid";
     margin-right: 0.8125rem;
     position: absolute;
@@ -517,7 +517,7 @@ blockquote {
   blockquote.pullquote {
     background-color: transparent;
     border: none;
-    color: #4185de;
+    color: #de4185;
     font-family: "Zilla Slab", "Georgia", serif;
     font-size: 1.44rem;
     line-height: 2.4375rem;
@@ -659,8 +659,9 @@ h6.collapsable-processed {
   h4.collapsable-processed.transition.closed,
   h5.collapsable-processed.transition.closed,
   h6.collapsable-processed.transition.closed {
+    border-bottom: 2px transparent solid;
     padding-top: 1.625rem; }
-    /* line 48, source/scss/_collapsables.scss */
+    /* line 49, source/scss/_collapsables.scss */
     h2.collapsable-processed.transition.closed:before,
     h3.collapsable-processed.transition.closed:before,
     h4.collapsable-processed.transition.closed:before,
@@ -668,39 +669,39 @@ h6.collapsable-processed {
     h6.collapsable-processed.transition.closed:before {
       top: 1.625rem; }
 
-/* line 54, source/scss/_collapsables.scss */
+/* line 55, source/scss/_collapsables.scss */
 h3.collapsable-processed:before {
   width: 2.4375rem; }
 
-/* line 59, source/scss/_collapsables.scss */
+/* line 60, source/scss/_collapsables.scss */
 h4.collapsable-processed:before {
   width: 1.625rem; }
 
-/* line 64, source/scss/_collapsables.scss */
+/* line 65, source/scss/_collapsables.scss */
 h5.collapsable-processed:before {
   width: 1.625rem; }
 
-/* line 69, source/scss/_collapsables.scss */
+/* line 70, source/scss/_collapsables.scss */
 h6.collapsable-processed:before {
   width: 1.625rem; }
 
-/* line 79, source/scss/_collapsables.scss */
+/* line 80, source/scss/_collapsables.scss */
 h2.collapsable-processed:hover:before,
 h3.collapsable-processed:hover:before,
 h4.collapsable-processed:hover:before,
 h5.collapsable-processed:hover:before,
 h6.collapsable-processed:hover:before {
-  background-color: #b3731f;
+  background-color: #5fb31f;
   color: white; }
 
-/* line 86, source/scss/_collapsables.scss */
+/* line 87, source/scss/_collapsables.scss */
 .collapsables {
   box-sizing: border-box;
   border: 2px #e7e7e7 solid;
   border-top: none !important;
   overflow: hidden;
   padding: 0.8125rem 1.625rem 1.625rem 1.625rem; }
-  /* line 92, source/scss/_collapsables.scss */
+  /* line 93, source/scss/_collapsables.scss */
   .collapsables.closed {
     border: none;
     height: 1px;
@@ -728,8 +729,8 @@ h6.collapsable-processed:hover:before {
       color: #82afe9; }
       /* line 21, source/scss/_reverse.scss */
       .reverse a[href]:hover, .reverse a[href]:active {
-        border-bottom-color: rgba(233, 189, 130, 0.5);
-        color: #e9bd82; }
+        border-bottom-color: rgba(175, 233, 130, 0.5);
+        color: #afe982; }
   /* line 34, source/scss/_reverse.scss */
   .reverse h1 a,
   .reverse h2 a,
@@ -759,11 +760,11 @@ h6.collapsable-processed:hover:before {
       .reverse h5 a[href]:active,
       .reverse h6 a[href]:hover,
       .reverse h6 a[href]:active {
-        border-bottom-color: rgba(233, 189, 130, 0.5);
-        color: #e9bd82; }
+        border-bottom-color: rgba(175, 233, 130, 0.5);
+        color: #afe982; }
   /* line 50, source/scss/_reverse.scss */
   .reverse blockquote.pullquote {
-    color: #98bded; }
+    color: #e982af; }
     /* line 52, source/scss/_reverse.scss */
     .reverse blockquote.pullquote:before {
       color: rgba(238, 238, 238, 0.15); }
@@ -897,7 +898,7 @@ table.vertical-rules {
 
 /* line 109, source/scss/_tables.scss */
 table.responsive td .td-label {
-  color: #a0a0a0;
+  color: #949494;
   display: block;
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   font-size: 0.83333rem;
@@ -1052,7 +1053,7 @@ table.responsive td .td-label {
       top: 1.625rem; }
   /* line 104, source/scss/_tabs.scss */
   .tabs-container.tabs-processed .tab-label:hover:before {
-    background-color: #b3731f;
+    background-color: #5fb31f;
     color: white; }
 
 /* line 110, source/scss/_tabs.scss */
