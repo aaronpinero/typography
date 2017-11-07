@@ -2,6 +2,13 @@
 
 My personal framework for applying typographic styles and options on the web. See the [online docs and demos](http://aaronpinero.net/tyfy/docs/index.html).
 
+## TODOs before version 1.0.0
+
+* Provide demo page for inline styles
+* Update documentation for new set of SASS variables
+* Provide documentation for SASS mixins and functions
+* Provide a start-up guide
+
 ## Why build another framework?
 
 There are three reasons:
