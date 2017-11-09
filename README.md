@@ -4,6 +4,7 @@ My personal framework for applying typographic styles and options on the web. Se
 
 ## TODOs before version 1.0.0
 
+* Make all SASS variables `!default`;
 * Provide demo page for inline styles
 * Update documentation for new set of SASS variables
 * Provide documentation for SASS mixins and functions
