@@ -1,0 +1,6 @@
+[submodule "dist/vendor/fontawesome"]
+	path = dist/vendor/fontawesome
+	url = git@github.com:FortAwesome/Font-Awesome-Pro.git
+[submodule "dist/vendor/normalize"]
+	path = dist/vendor/normalize
+	url = git@github.com:necolas/normalize.css.git
