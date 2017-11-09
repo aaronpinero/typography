@@ -58,13 +58,14 @@
 			<p>A framework is an expression of the values, preferences, priorities, and experience of the person or persons creating it. While I like some existing frameworks (Bootstrap 4, PureCSS), I want  something that reflects my values and the work that I do.</p>
 			<h2>Dependencies</h2>
 			<h3>Other Projects</h3>
-			<p>Two additional repos are needed for this project:</p>
+			<p>Two additional repos are included in this project as git submodules:</p>
 			<ul>
-				<li><a href="https://github.com/FortAwesome/Font-Awesome-Pro">FontAwesome Pro</a> - clone to <code>dist/vendor/fontawesome</code></li>
-				<li><a href="https://github.com/necolas/normalize.css">Normalize.css</a> - clone to <code>dist/vendor/normalize</code></li>
+				<li><a href="https://github.com/FortAwesome/Font-Awesome-Pro">FontAwesome Pro</a></li>
+				<li><a href="https://github.com/necolas/normalize.css">Normalize.css</a></li>
 			</ul>
+			<p>After cloning the repository, run <code>git submodule update --init</code> to checkout the submodules.</p>
 			<h3>Build Tools</h3>
-			<p>This project uses node for compiling the <span class="smallcaps">SCSS</span> files into <span class="smallcaps">CSS</span> and for assembling the documentation pages.</p>
+			<p>This project uses node for compiling the <span class="smallcaps">SCSS</span> files into <span class="smallcaps">CSS</span> and for assembling the documentation pages. You will need to run <code>npm install</code> to download all of the node modules on which the project depends.</p>
 			<ul>
 				<li>For production output, run <code>npm run build-css</code>. This outputs compressed <span class="smallcaps">CSS</span>.</li>
 				<li>For development output, run <code>npm run build-css-dev</code>. This outputs readable <span class="smallcaps">CSS</span> with source file comments.</li>

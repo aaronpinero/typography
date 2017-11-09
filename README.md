@@ -16,14 +16,16 @@ A framework is an expression of the values, preferences, priorities, and experie
 
 ### Other Projects
 
-Two additional repos are necessary for this project:
+Two additional repos are included in this project as git submodules:
 
-* [FontAwesome Pro](https://github.com/FortAwesome/Font-Awesome-Pro) - clone to `dist/vendor/fontawesome`
-* [Normalize.css](https://github.com/necolas/normalize.css) - clone to `dist/vendor/normalize`
+* [FontAwesome Pro](https://github.com/FortAwesome/Font-Awesome-Pro)
+* [Normalize.css](https://github.com/necolas/normalize.css)
+
+After cloning the repository, run `git submodule update --init` to checkout the submodules.
 
 ### Build Tools
 
-This project uses node for compiling the SCSS files into CSS and for assembling the documentation pages
+This project uses node for compiling the SCSS files into CSS and for assembling the documentation pages. You will need to run `npm install` to download all of the node modules on which the project depends.
 
 * For production output, run `npm run build-css`. This outputs compressed CSS.
 * For development output, run `npm run build-css-dev`. This outputs readable CSS with source file comments.
@@ -35,6 +37,7 @@ I realize that without the benefit of work previously done by others, this proje
 
 * [HTML5 Boilerplate](https://html5boilerplate.com)
 * [Archetype](https://archetypeapp.com)
+* [Bootstrap](https://getbootstrap.com)
 * The [Columbia College](https://www.college.columbia.edu) Style Guide
 * [PureCSS](https://purecss.io)
 * [Better Web Type](https://betterwebtype.com)
