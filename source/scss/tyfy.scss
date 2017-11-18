@@ -1,10 +1,13 @@
-// Tyfy Basics
+// Tyfy Foundation - Required
 @import "functions";
 @import "variables";
 @import "mixins";
 
-// Tyfy Styles
+// Tyfy Styles - Essential
 @import "base";
+@import "spacing";
+
+// Tyfy Styles - Optional
 @import "paragraphs";
 @import "links";
 @import "lists";

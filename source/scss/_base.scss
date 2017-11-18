@@ -1,4 +1,3 @@
-// root styles
 html {
 	font-size:100%;
 }
@@ -8,43 +7,4 @@ body {
 	font-family:$tyfy-font-base;
 	font-size:$tyfy-font-size-base;
 	line-height:leading($tyfy-font-size-base,base);
-	margin:0;
-	padding:0;
-}
-
-// basic margins
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-dl,
-ol,
-ul,
-blockquote,
-address,
-table {
-	margin-bottom:0;
-	margin-top:0;
-	* + & {
-		margin-top:$tyfy-spacing-standard;
-	}
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	p + &,
-	dl + &,
-	ol + &,
-	ul + &,
-	blockquote + &,
-	address + &,
-	table + & {
-		margin-top:$tyfy-spacing-large;
-	}
 }

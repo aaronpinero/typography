@@ -1,0 +1,37 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+ol,
+ul,
+blockquote,
+address,
+table,
+figure {
+	margin-bottom:0;
+	margin-top:0;
+	* + & {
+		margin-top:$tyfy-spacing-standard;
+	}
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	p + &,
+	dl + &,
+	ol + &,
+	ul + &,
+	blockquote + &,
+	address + &,
+	table + &,
+	figure + & {
+		margin-top:$tyfy-spacing-large;
+	}
+}
