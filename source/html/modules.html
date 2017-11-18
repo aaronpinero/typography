@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<%include head.html%>
+		<title>Tyfy - Modules</title>
+	</head>
+	<body class="">
+		<%include header.html%>
+		<section class="main links-underlined">
+			<h1>Modules</h1>
+			<p>The tyfy.scss file is an inventory of the modules that make up the framework. They are @imported in the following order.</p>
+			<h2>Required</h2>
+			<p>These modules are required to use <strong class="tyfy">Tyfy</strong>. They define the framework's variables, functions, and mixins.</p>
+			<dl>
+				<dt><code>@import "functions"</code></dt>
+				<dd>Functions facilitating use of the basic grid unit and primary color</dd>
+				<dt><code>@import "variables"</code></dt>
+				<dd>Default values for all variables; see the <a href="variables.html">variables</a> documentation for more</dd>
+				<dt><code>@import "mixins"</code></dt>
+				<dd>Useful mixins taken from <a href="https://html5boilerplate.com">HTML5 Boilerplate</a></dd>
+			</dl>
+			<h2>Essential</h2>
+			<p>These modules are not hard requirements for <strong class="tyfy">Tyfy</strong> but are highly recommended.</p>
+			<dl>
+				<dt><code>@import "base"</code></dt>
+				<dd>Apply the base colors, font styles, and line height</dd>
+				<dt><code>@import "spacing"</code></dt>
+				<dd>Apply grid-based vertical margins to <span class="smallcaps">HTML</span> elements</dd>
+			</dl>
+			<h2>Optional</h2>
+			<p>These optional modules provide specific typographic or presentation styles.</p> 
+			<dl>
+				<dt><code>@import "paragraphs"</code></dt>
+				<dd>Styles and utility classes for paragraphs and headings</dd>
+				<dt><code>@import "links"</code></dt>
+				<dd>Styles and utility classes for links</dd>
+				<dt><code>@import "lists"</code></dt>
+				<dd>Styles and utility classes for lists</dd>
+				<dt><code>@import "inline"</code></dt>
+				<dd>Styles and utility classes for inline-level elements</dd>
+				<dt><code>@import "quotes"</code></dt>
+				<dd>Styles and utility classes for blockquotes and pullquotes</dd>
+				<dt><code>@import "tables"</code></dt>
+				<dd>Styles and utility classes for tables; responsive tables requires tables.js</dd>
+				<dt><code>@import "reverse"</code></dt>
+				<dd>A utility class for reversed colors</dd>
+				<dt><code>@import "collapsables"</code></dt>
+				<dd>A presentation style for collapsable sections; requires collapsable.js</dd>
+				<dt><code>@import "tabs"</code></dt>
+				<dd>A presentation style for responsive tabs; requires tabs.js</dd>
+			</dl>
+		</section>
+		<%include footer.html%>
+	</body>
+</html>

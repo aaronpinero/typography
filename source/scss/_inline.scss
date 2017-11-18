@@ -2,8 +2,11 @@ b {
 	font-weight:700;
 }
 code {
-	background-color:rgba($tyfy-color-text-body,0.1);
+	background-color:rgba($tyfy-color-text-body,0.07);
+	color:$tyfy-color-text-code;
 	font-family:$tyfy-mono;
+	padding-left:0.25em;
+	padding-right:0.25em;
 }
 pre {
 	font-family:$tyfy-mono;

@@ -7,6 +7,7 @@ $tyfy-color-primary:#4185de !default;
 $tyfy-color-text-body:$tyfy-color-foreground !default;
 $tyfy-color-text-head:mix($tyfy-color-foreground,$tyfy-color-background,95%) !default;
 $tyfy-color-text-light:mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;
+$tyfy-color-text-code:mix($tyfy-color-foreground,$tyfy-color-primary,45%) !default;
 $tyfy-color-text-pullquote:adjust-hue($tyfy-color-primary,120deg) !default;
 $tyfy-color-link-default:color($tyfy-color-primary,(lightness($tyfy-color-primary)-15%)) !default;
 $tyfy-color-link-active:adjust-hue($tyfy-color-link-default,-120deg) !default;
