@@ -32,6 +32,9 @@ h1 {
 	font-weight:400;
 	text-transform:uppercase;
 }
+strong.tyfy {
+	color:adjust-hue($tyfy-color-primary,120deg);
+}
 
 header.brand {
 	background:#333 url(../img/bg.gif);
