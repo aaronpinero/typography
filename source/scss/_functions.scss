@@ -24,6 +24,25 @@
 	@return $tyfy-grid-unit * $multiplier;
 }
 
+// calculate a font size from the modular scale based on the base size and scalar value
+@function scale($exponent) {
+	$i:0;
+	$scale:$tyfy-font-size-base;
+	@if $exponent < 0 {
+		@while $i > $exponent {
+			$scale:$scale/$tyfy-font-size-scalar;
+			$i:$i - 1;
+		}
+	}
+	@else if $exponent > 0 {
+		@while $i < $exponent {
+			$scale:$scale*$tyfy-font-size-scalar;
+			$i:$i + 1;
+		}
+	}
+	@return $scale;
+}
+
 // create a specific lightness of a color
 @function color($color,$lightness) {
 	@return hsl(hue($color),saturation($color),$lightness);

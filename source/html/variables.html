@@ -2,130 +2,90 @@
 <html lang="en">
 	<head>
 		<%include head.html%>
-		<title>Tyfy - Basics</title>
+		<title>Tyfy - Variables</title>
 	</head>
 	<body class="">
 		<%include header.html%>
 		<section class="main links-underlined">
-			<h1>Basics</h1>
+			<h1>Variables</h1>
 			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the base grid, colors, text sizes, fonts, breakpoints, and other characteristics. My goal with this project is to have as few variables as possible. This results in some key variables – such as the grid unit, brand color and font size scalar – that can quickly change the entire character of the project to which <strong class="tyfy">Tyfy</strong> is applied.</p>
-			<p>Vertical rhythm is maintained by using the base grid unit to define line heights. Unlike other frameworks like Bootstrap, which set a relative line height for all elements, <strong class="tyfy">Tyfy</strong> line heights are multiples of the base grid unit. Calculation of grid-based line heights is aided by a custom <span class="smallcaps">SASS</span> function.</p>
-			<h2>Fonts</h2>
-			<p>There are four font selections for <strong>Tyfy</strong>. While there are many way in which typefaces could be selected and organized I have selected the way which works for most of the projects I manage. My practice is to limit the number of typefaces involved in a project.</p>
-			<dl>
-				<dt>$tyfy-serif</dt>
-				<dd>The serif font selection for the project</dd>
-				<dt>$tyfy-sans</dt>
-				<dd>The sans-serif font selection for the project</dd>
-				<dt>$tyfy-mono</dt>
-				<dd>The monospace font selection for the project</dd>
-				<dt>$tyfy-symbol</dt>
-				<dd>The icon font for the project; for my projects, this typeface is almost always FontAwesome</dd>
-				<dt>$tyfy-font-base</dt>
-				<dd>The typeface assignment for the <code>&lt;body&gt;</code></dd>
-				<dt>$tyfy-font-heading</dt>
-				<dd>The typeface assignment for headings 1 to 6</dd>
-				<dt>$tyfy-font-pullquote</dt>
-				<dd>The typeface assignment for pull quotes</dd>
-				<dt>$tyfy-font-table</dt>
-				<dd>The typeface assignment for table cells</dd>
-				<dt>$tyfy-font-size-scalar</dt>
-				<dd>The value used as a multiplier for creating the typographic scale of font sizes</dd>
-			</dl>
-			<p>Font sizes are calculated using a scalar value, creating a typographic scale of font sizes that are proportionally related. The typographic scale can be easily adjusted by changing the scalar value and/or the base font size.</p>
-			<dl>
-				<dt>$tyfy-font-size-base</dt>
-				<dd>The font size of the <code>&lt;body&gt;</code>; needs to be specified in rem units</dd>
-				<dt>$tyfy-font-size-sm</dt>
-				<dd>The font size for small type, calculated as <code>$tyfy-font-size-base / $tyfy-font-size-scalar</code></dd>
-				<dt>$tyfy-font-size-h6</dt>
-				<dd>The font size for the level 6 heading, set to <code>$tyfy-font-size-base</code></dd>
-				<dt>$tyfy-font-size-h5</dt>
-				<dd>The font size for the level 5 heading, calculated as <code>$tyfy-font-size-h6 * $tyfy-font-size-scalar</code></dd>
-				<dt>$tyfy-font-size-h4</dt>
-				<dd>The font size for the level 4 heading, calculated as <code>$tyfy-font-size-h5 * $tyfy-font-size-scalar</code></dd>
-				<dt>$tyfy-font-size-h3</dt>
-				<dd>The font size for the level 3 heading, calculated as <code>$tyfy-font-size-h4 * $tyfy-font-size-scalar</code></dd>
-				<dt>$tyfy-font-size-h2</dt>
-				<dd>The font size for the level 2 heading, calculated as <code>$tyfy-font-size-h3 * $tyfy-font-size-scalar</code></dd>
-				<dt>$tyfy-font-size-h1</dt>
-				<dd>The font size for the level 1 heading, calculated as <code>$tyfy-font-size-h2 * $tyfy-font-size-scalar * $tyfy-font-size-scalar</code></dd>
-				<dt>$tyfy-font-size-pullquote</dt>
-				<dd>The font size for the level 6 heading, set to <code>$tyfy-font-size-h4</code></dd>
-			</dl>
-			<h3>Colors</h3>
-			<dl>
-				<dt>$tyfy-color-link</dt>
-				<dd>The primary color, used for links and other elements</dd>
-				<dt>$tyfy-color-text-body</dt>
-				<dd>The default text color for paragraphs and lists</dd>
-				<dt>$tyfy-color-text-head</dt>
-				<dd>The default text color for headings</dd>
-				<dt>$tyfy-color-text-light</dt>
-				<dd>A secondary text color used for labels and other places where contrast from the default color is useful</dd>
-				<dt>$tyfy-color-text-pullquote</dt>
-				<dd>Color for pullquote text</dd>
-				<dt>$tyfy-color-link-default</dt>
-				<dd>Default color for linked text and buttons</dd>
-				<dt>$tyfy-color-link-active</dt>
-				<dd>The hover and active color for links and buttons</dd>
-				<dt>$tyfy-color-border</dt>
-				<dd>Color for table cell borders</dd>
-				<dt>$tyfy-color-table-stripe</dt>
-				<dd>When a table has the zebra-stripe style, the row colors alternate between transparent and this stripe color</dd>
-
-			</dl>
-			<p>Reverse colors are defined for use with the <code>reverse</code> class. This class applies the correct color styles in a context where the background color or brightness is inverted.</p>
-			<dl>
-				<dt>$tyfy-color-text-body-reverse</dt>
-				<dd>The reverse text color, defined as <code>invert($tyfy-color-text-body)</code></dd>
-				<dt>$tyfy-color-text-head-reverse</dt>
-				<dd>The reverse heading color, defined as <code>invert($tyfy-color-text-head)</code></dd>
-				<dt>$tyfy-color-text-light-reverse</dt>
-				<dd>The reverse secondary text color, defined as <code>invert($tyfy-color-text-light)</code></dd>
-				<dt>$tyfy-color-text-pullquote-reverse</dt>
-				<dd>The reverse pull quote text color, defined as <code>saturate(lighten($tyfy-color-text-pullquote,30%),30%)</code></dd>
-				<dt>$tyfy-color-link-default-reverse</dt>
-				<dd>The reverse default link color, defined as <code>saturate(lighten($tyfy-color-link-default,30%),30%)</code></dd>
-				<dt>$tyfy-color-link-active-reverse</dt>
-				<dd>The reverse hover and active link color, defined as <code>complement($tyfy-color-link-default-reverse)</code></dd>
-			</dl>
-			<h3>Breakpoints</h3>
-			<dl>
-				<dt>$tyfy-break-floats</dt>
-				<dd>Screen width above which position classes (float left and right) are active</dd>
-				<dt>$tyfy-break-pullquote-large</dt>
-				<dd>Screen width above which non-floated pull quotes receive increased padding
-				<dt>$tyfy-break-list-cols-2</dt>
-				<dd>Screen width above which two column list styles are active</dd>
-				<dt>$tyfy-break-list-cols-3</dt>
-				<dd>Screen width above which three column list styles are active</dd>
-				<dt>$tyfy-break-tabs</dt>
-				<dd>Screen width below which responsive tabs switch from tabs to collapsable sections</dd>
-				<dt>$tyfy-break-table</dt>
-				<dd>Screen width below which responsive tables convert default table structure to cell list</dd>
-			</dl>
-			<h3>Grid</h3>
-			<p>The grid unit value is used to calculate line heights, margins and paddings throughout <strong class="tyfy">Tyfy</strong>. Line height calculation is aided by the <code>leading()</code> function. The leading function takes two arguments: a font size and a line height option. The line height option can be:</p>
-			<ul>
-				<li><strong>base</strong>: a line height equal to some multiple of the grid unit that is greater than the font size.</li>
-				<li><strong>tall</strong>: a line height equal to some multiple of the grid unit that is much greater than the font size.</li>
-				<li><strong>heading</strong>: a line height equal to some multiple of the grid unit greater than or equal to the font size.</li>
-				<li><strong>short</strong>: a line height equal to some multiple of the grid unit that is more or less equal to the font size.</li>
-			</ul>
-			<p>The variations in line height style are calculated with the aid of an adjustment value. Changing the adjustment values will change the relationship between the font size and the resulting line-height.</p>
-			<p>The leading function can be used to calculate other style property values in cases where some measure (height, width, top, etc.) needs to equal a specific line height.</p>
+			<p>Variables are organized into five files for easier reading.</p>
+			<h2>variables/grid</h2>
 			<dl>
 				<dt>$tyfy-grid-unit</dt>
-				<dd>Basic unit of the vertical grid and horizontal measures (such as element padding); represents half the base line height</dd>
+				<dd>Base grid unit in rem units; I recommend this value be half the default line height</dd>
 				<dt>$tyfy-leading-adjustment-tall</dt>
-				<dd>A value used to modify line height calculations to result in larger values; set to 0.8</dd>
+				<dd>Unitless value used in by the leading function to calculate tall leading; values less than 1 result in larger leading</dd>
 				<dt>$tyfy-leading-adjustment-base</dt>
-				<dd>A value used to modify line height calculations, making sure the line height will always be more than the font size; set to 0.9</dd>
+				<dd>Unitless value used in by the leading function to calculate regular leading; values less than 1 result in larger leading</dd>
 				<dt>$tyfy-leading-adjustment-heading</dt>
-				<dd>A value used to modify line height calculations to allow slightly shorter line heights for headings; set to 1</dd>
+				<dd>Unitless value used in by the leading function to calculate heading leading; values less than 1 result in larger leading</dd>
 				<dt>$tyfy-leading-adjustment-short</dt>
-				<dd>A value used to modify line height calculations to allow line heights that are slightly shorter than the font size; set to 1.2</dd>
+				<dd>Unitless value used in by the leading function to calculate short leading; values greater than 1 result in smaller leading</dd>
+				<dt>$tyfy-spacing-standard</dt>
+				<dd>Standard spacing between <span class="smallcaps">HTML</span> elements defined as a number of grid units</dd>
+				<dt>$tyfy-spacing-large</dt>
+				<dd>Extra spacing between <span class="smallcaps">HTML</span> elements; used for spacing above headings</dd>
+				<dt>$tyfy-indent-standard</dt>
+				<dd>Standard indent distance for lists and blockquotes defined as a number of grid units</dd>
+				<dt>$tyfy-indent-small</dt>
+				<dd>Small indent distance for lists and blockquotes at small screen sizes</dd>
+			</dl>
+			<h2>variables/fonts</h2>
+			<dl>
+				<dt>$tyfy-serif</dt>
+				<dd>Serif font selection</dd>
+				<dt>$tyfy-sans</dt>
+				<dd>Sans-serif font selection</dd>
+				<dt>$tyfy-mono</dt>
+				<dd>Monospace font selection</dd>
+				<dt>$tyfy-symbol</dt>
+				<dd>Symbol font selection; should be FontAwesome Pro</dd>
+				<dt>$tyfy-font-base</dt>
+				<dd>Base font selection, used for body text</dd>
+				<dt>$tyfy-font-heading</dt>
+				<dd>Heading font selection</dd>
+				<dt>$tyfy-font-pullquote</dt>
+				<dd>Pullquote font selection</dd>
+				<dt>$tyfy-font-table</dt>
+				<dd>Table cell font selection</dd>
+				<dt>$tyfy-font-size-scalar</dt>
+				<dd>Unitless value that defines the proportion between sizes in the typographic scale</dd>
+				<dt>$tyfy-font-size-base</dt>
+				<dd>Fonts size applied to the <code>&lt;body&gt;</code> tag</dd>
+				<dt>$tyfy-font-size-sm</dt>
+				<dd>Small font size</dd>
+				<dt>$tyfy-font-size-h6</dt>
+				<dd>Level 6 heading font size</dd>
+				<dt>$tyfy-font-size-h5</dt>
+				<dd>Level 5 heading font size</dd>
+				<dt>$tyfy-font-size-h4</dt>
+				<dd>Level 4 heading font size</dd>
+				<dt>$tyfy-font-size-h3</dt>
+				<dd>Level 3 heading font size</dd>
+				<dt>$tyfy-font-size-h2</dt>
+				<dd>Level 2 heading font size</dd>
+				<dt>$tyfy-font-size-h1</dt>
+				<dd>Level 1 heading font size</dd>
+				<dt>$tyfy-font-size-pullquote</dt>
+				<dd>Pullquote font size</dd>
+			</dl>
+			<h2>variables/breakpoints</h2>
+			<dl>
+				<dt>$tyfy-break-floats</dt>
+				<dd>Below this width floated elements are not floated, instead shown at 100% width</dd>
+				<dt>$tyfy-break-pullquote-large</dt>
+				<dd>Above this width the margins around pullquotes increase</dd>
+				<dt>$tyfy-break-list-cols-2</dt>
+				<dd>Above this width lists can be 2 columns</dd>
+				<dt>$tyfy-break-list-cols-3</dt>
+				<dd>Above this width lists can be 3 columns</dd>
+				<dt>$tyfy-break-list-cols-4</dt>
+				<dd>Above this width lists can be 4 columns</dd>
+				<dt>$tyfy-break-tabs</dt>
+				<dd>Below this width responsive tabs convert to collapsable sections</dd>
+				<dt>$tyfy-break-table</dt>
+				<dd>Below this width responsive tables are converted to labeled lists</dd>
 			</dl>
 		</section>
 		<%include footer.html%>

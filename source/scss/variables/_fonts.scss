@@ -16,13 +16,13 @@ $tyfy-font-table:$tyfy-sans !default;
 // typographic scale
 $tyfy-font-size-scalar:1.2 !default;
 $tyfy-font-size-base:1rem !default;
-$tyfy-font-size-sm:$tyfy-font-size-base / $tyfy-font-size-scalar !default;
-$tyfy-font-size-h6:$tyfy-font-size-base !default;
-$tyfy-font-size-h5:$tyfy-font-size-h6 * $tyfy-font-size-scalar !default;
-$tyfy-font-size-h4:$tyfy-font-size-h5 * $tyfy-font-size-scalar !default;
-$tyfy-font-size-h3:$tyfy-font-size-h4 * $tyfy-font-size-scalar !default;
-$tyfy-font-size-h2:$tyfy-font-size-h3 * $tyfy-font-size-scalar !default;
-$tyfy-font-size-h1:$tyfy-font-size-h2 * $tyfy-font-size-scalar * $tyfy-font-size-scalar !default;
+$tyfy-font-size-sm:scale(-1) !default;
+$tyfy-font-size-h6:scale(0) !default;
+$tyfy-font-size-h5:scale(1) !default;
+$tyfy-font-size-h4:scale(2) !default;
+$tyfy-font-size-h3:scale(3) !default;
+$tyfy-font-size-h2:scale(4) !default;
+$tyfy-font-size-h1:scale(6) !default;
 
 // additional sizes
-$tyfy-font-size-pullquote:$tyfy-font-size-h4 !default;
+$tyfy-font-size-pullquote:scale(2) !default;

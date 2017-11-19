@@ -1,17 +1,17 @@
 // grid unit
 // helps define vertical and horizontal grid
 // should be half the base line-height
-$tyfy-grid-unit:0.8125rem;
+$tyfy-grid-unit:0.8125rem !default;
 
 // line height adjustments
 // used by the leading function to adjust calculation of line-height
-$tyfy-leading-adjustment-tall:0.8;
-$tyfy-leading-adjustment-base:0.9;
-$tyfy-leading-adjustment-heading:1;
-$tyfy-leading-adjustment-short:1.2;
+$tyfy-leading-adjustment-tall:0.8 !default;
+$tyfy-leading-adjustment-base:0.9 !default;
+$tyfy-leading-adjustment-heading:1 !default;
+$tyfy-leading-adjustment-short:1.2 !default;
 
 // element spacing
-$tyfy-spacing-standard:grid(2);
-$tyfy-spacing-large:grid(3);
-$tyfy-indent-standard:grid(3);
-$tyfy-indent-small:grid(2);
+$tyfy-spacing-standard:grid(2) !default;
+$tyfy-spacing-large:grid(3) !default;
+$tyfy-indent-standard:grid(3) !default;
+$tyfy-indent-small:grid(2) !default;
