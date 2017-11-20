@@ -9,7 +9,7 @@
 		<section class="main links-underlined">
 			<h1>Variables</h1>
 			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the base grid, colors, text sizes, fonts, breakpoints, and other characteristics. My goal with this project is to have as few variables as possible. This results in some key variables – such as the grid unit, brand color and font size scalar – that can quickly change the entire character of the project to which <strong class="tyfy">Tyfy</strong> is applied.</p>
-			<p>Variables are organized into five files for easier reading.</p>
+			<p>Variables are organized into five files for easier reading. All variables begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects.</p>
 			<h2>variables/grid</h2>
 			<dl>
 				<dt>$tyfy-grid-unit</dt>
@@ -86,6 +86,56 @@
 				<dd>Below this width responsive tabs convert to collapsable sections</dd>
 				<dt>$tyfy-break-table</dt>
 				<dd>Below this width responsive tables are converted to labeled lists</dd>
+			</dl>
+			<h2>variables/colors</h2>
+			<dl>
+				<dt>$tyfy-color-background</dt>
+				<dd>Background color of the <code>&lt;body&gt;</code> element</dd>
+				<dt>$tyfy-color-foreground</dt>
+				<dd>Color of the <code>&lt;body&gt;</code> element</dd>
+				<dt>$tyfy-color-primary</dt>
+				<dd>Your brand color</dd>
+				<dt>$tyfy-color-text-body</dt>
+				<dd>Default text color</dd>
+				<dt>$tyfy-color-text-head</dt>
+				<dd>Default heading text color</dd>
+				<dt>$tyfy-color-text-light</dt>
+				<dd>A light text color variant</dd>
+				<dt>$tyfy-color-text-code</dt>
+				<dd>Color of text in the <code>&lt;code&gt;</code> tag</dd>
+				<dt>$tyfy-color-text-pullquote</dt>
+				<dd>Color of text in pullquotes</dd>
+				<dt>$tyfy-color-link-default</dt>
+				<dd>Default link color</dd>
+				<dt>$tyfy-color-link-active</dt>
+				<dd>Color of links that are hovered or active</dd>
+				<dt>$tyfy-color-border</dt>
+				<dd>Default border color for tables, pullquotes, collapsable sections, etc.</dd>
+				<dt>$tyfy-color-table-stripe</dt>
+				<dd>Default stripe color for zebra-stripe tables</dd>
+				<dt>$tyfy-color-text-body-reverse</dt>
+				<dd>Reverse default text color, for use on backgrounds where the text colors need to be inverted to be legible</dd>
+				<dt>$tyfy-color-text-head-reverse</dt>
+				<dd>Reverse default heading text color</dd>
+				<dt>$tyfy-color-text-light-reverse</dt>
+				<dd>Reverse light text color variant</dd>
+				<dt>$tyfy-color-text-pullquote-reverse</dt>
+				<dd>Reverse text color for pullquotes</dd>
+				<dt>$tyfy-color-link-default-reverse</dt>
+				<dd>Reverse default link color</dd>
+				<dt>$tyfy-color-link-active-reverse</dt>
+				<dd>Reverse color of links that are hovered or active</dd>
+				<dt>$tyfy-color-border-reverse</dt>
+				<dd>Reverse default border color</dd>
+				<dt>$tyfy-color-table-stripe-reverse</dt>
+				<dd>Reverse color of stripes in zebra-stripe tables</dd>
+			</dl>
+			<h2>variables/timing</h2>
+			<dl>
+				<dt>$tyfy-transition-duration-hover</dt>
+				<dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions where colors are changing</dd>
+				<dt>$tyfy-transition-duration-move</dt>
+				<dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions where measures are changing</dd>
 			</dl>
 		</section>
 		<%include footer.html%>
