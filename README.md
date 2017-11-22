@@ -4,7 +4,6 @@ My personal framework for applying typographic styles and options on the web. Se
 
 ## TODOs before version 1.0.0
 
-* Provide demo page for inline styles
 * Provide documentation for SASS mixins and functions
 
 ## Why build another framework?

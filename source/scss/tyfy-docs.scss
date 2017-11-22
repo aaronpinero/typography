@@ -32,6 +32,10 @@ h1 {
 	font-weight:400;
 	text-transform:uppercase;
 }
+hr.demo {
+	margin-bottom:grid(1);
+	margin-top:grid(1);
+}
 strong.tyfy {
 	color:adjust-hue($tyfy-color-primary,120deg);
 }

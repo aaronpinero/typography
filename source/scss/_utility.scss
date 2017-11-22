@@ -8,6 +8,17 @@ code {
 	padding-left:0.25em;
 	padding-right:0.25em;
 }
+em {
+	font-style:italic;
+}
+hr {
+	border:none;
+	border-top:1px $tyfy-color-border solid;
+	height:0;
+}
+i {
+	font-style:italic;
+}
 pre {
 	font-family:$tyfy-mono;
 }
