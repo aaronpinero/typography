@@ -52,23 +52,14 @@ ul {
 			&:before {
 				color:$tyfy-color-text-light;
 				font-family:$tyfy-symbol;
-				margin-right:grid(1);
+				margin-right:grid(0.5);
 				position:absolute;
 				right:100%;
 				top:0;
 			}
 		}
 		&.list-icons-angle li:before {
-			content:unquote("\"#{ $fa-var-angle-right }\"");
-		}
-		&.list-icons-caret li:before {
-			content:unquote("\"#{ $fa-var-caret-right }\"");
-		}
-		&.list-icons-check li:before {
-			content:unquote("\"#{ $fa-var-check }\"");
-		}
-		&.list-icons-chevron li:before {
-			content:unquote("\"#{ $fa-var-chevron-right }\"");
+			content:$tyfyicons-angle-right-small;
 		}
 	}
 	&.no-bullet {

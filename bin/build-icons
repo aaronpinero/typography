@@ -1,0 +1,1 @@
+webfont './source/icons/*.svg' --dest ./dist/fonts/tyfyicons --template scss --font-name tyfyicons --css-template-class-name tyfyicons --css-template-font-path ../fonts/tyfyicons/

@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="no"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="tyfyicons" horiz-adv-x="64">
+    <font-face font-family="tyfyicons"
+      units-per-em="64" ascent="64"
+      descent="0" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="angle-down"
+      unicode="&#xEA01;"
+      horiz-adv-x="64" d=" M32 10L-1.43e-11 42L7 49L32 24L57 49L64 42z" />
+    <glyph glyph-name="angle-left"
+      unicode="&#xEA02;"
+      horiz-adv-x="64" d=" M10 32L42 63.9999999999998L49 57L24 32L49 7L42 0z" />
+    <glyph glyph-name="angle-right-small"
+      unicode="&#xEA03;"
+      horiz-adv-x="64" d=" M48 32L24 8L18 14L36 32L18 50L24 56z" />
+    <glyph glyph-name="angle-right"
+      unicode="&#xEA04;"
+      horiz-adv-x="64" d=" M54 32L22 0L15 7L40 32L15 57L22 64z" />
+    <glyph glyph-name="angle-up"
+      unicode="&#xEA05;"
+      horiz-adv-x="64" d=" M32 54L64 22L57 15L32 40L7 15L-1.51e-11 22z" />
+    <glyph glyph-name="bars"
+      unicode="&#xEA06;"
+      horiz-adv-x="64" d=" M0 57L64 57L64 48L2e-13 48z M0 16L64 16L64 7L2e-13 7z M0 36.5L64 36.5L64 27.5L2e-13 27.5z" />
+    <glyph glyph-name="dash"
+      unicode="&#xEA07;"
+      horiz-adv-x="64" d=" M0 39.5L64 39.5L64 30.5L2e-13 30.5z" />
+    <glyph glyph-name="quote-left"
+      unicode="&#xEA08;"
+      horiz-adv-x="64" d=" M29 6L3 6L3 26C3 37.1082357 9.66666667 46.441569 23 54L28 44C20 39.9026693 16 35.2360026 16 30L29 30L29 6z M61 6L35 6L35 26C35 37.1082357 41.6666667 46.441569 55 54L60 44C52 39.9026693 48 35.2360026 48 30L61 30L61 6z" />
+    <glyph glyph-name="quote-right"
+      unicode="&#xEA09;"
+      horiz-adv-x="64" d=" M3 50L29 50L29 30C29 18.8917643 22.3333333 9.558431 9 2L4 12C12 16.0973307 16 20.7639974 16 26L3 26L3 50z M35 50L61 50L61 30C61 18.8917643 54.3333333 9.558431 41 2L36 12C44 16.0973307 48 20.7639974 48 26L35 26L35 50z" />
+    <glyph glyph-name="x"
+      unicode="&#xEA0A;"
+      horiz-adv-x="64" d=" M39 32L62 9L55 2L32 25L9 2L2 9L25 32L2 55L9 62L32 39L55 62L62 55z" />
+  </font>
+</defs>
+</svg>

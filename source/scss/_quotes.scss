@@ -40,7 +40,7 @@ blockquote {
 		}
 		&:before {
 			color:$tyfy-color-border;
-			content:unquote("\"#{ $fa-var-quote-left }\"");
+			content:$tyfyicons-quote-left;
 			display:block;
 			font-family:$tyfy-symbol;
 			font-style:normal;
@@ -49,14 +49,13 @@ blockquote {
 		}
 		&:after {
 			color:$tyfy-color-border;
-			content:"————— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 —————";
+			content:"————— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 —————";
 			display:block;
-			font-family:$tyfy-symbol;
 			font-style:normal;
 			font-weight:normal;
 			left:0;
-			letter-spacing:-0.2em;
-			margin-left:-0.05em;
+			letter-spacing:-0.15em;
+			margin-left:-0.075em;
 			position:absolute;
 			text-align:center;
 			top:0;

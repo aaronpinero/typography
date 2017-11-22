@@ -56,21 +56,21 @@ header.brand {
 			line-height:leading($tyfy-font-size-h5,heading);
 		}
 		ul {
-			margin-left:-1*$tyfy-grid-unit;
-			margin-right:-1*$tyfy-grid-unit;
-			margin-top:$tyfy-grid-unit;
-			padding-bottom:$tyfy-grid-unit;
+			margin-left:grid(-1);
+			margin-right:grid(-1);
+			margin-top:grid(1);
+			padding-bottom:grid(1);
 			padding-left:0;
 			li {
 				margin:0;
-				padding-left:$tyfy-grid-unit;
-				padding-right:$tyfy-grid-unit;
+				padding-left:grid(1);
+				padding-right:grid(1);
 				a {
-					border-top:0.25*$tyfy-grid-unit rgba(white,0.05) solid;
+					border-top:grid(0.25) rgba(white,0.05) solid;
 					display:block;
 					font-size:$tyfy-font-size-sm;
-					padding-top:0.5*$tyfy-grid-unit;
-					padding-bottom:0.5*$tyfy-grid-unit;
+					padding-top:grid(0.5);
+					padding-bottom:grid(0.5);
 				}
 			}
 		}
@@ -82,13 +82,13 @@ header.brand {
 				line-height:leading($tyfy-font-size-h3,heading);
 				overflow:hidden;
 				position:absolute;
-				right:2*$tyfy-grid-unit;
-				top:-4*$tyfy-grid-unit;
+				right:grid(2);
+				top:grid(-4);
 				transition-duration:$tyfy-transition-duration-hover;
 				transition-property:color;
 				width:leading($tyfy-font-size-h3,heading);
 				&:before {
-					content:unquote("\"#{ $fa-var-bars }\"");
+					content:$tyfyicons-bars;
 					display:block;
 					font-family:$tyfy-symbol;
 					height:leading($tyfy-font-size-h3,heading);
@@ -108,7 +108,7 @@ header.brand {
 			&.nav-open {
 				ul {
 					height:auto;
-					padding-bottom:$tyfy-grid-unit;
+					padding-bottom:grid(1);
 				}
 			}
 		}

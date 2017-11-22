@@ -1,11 +1,11 @@
 // fontawesome variables
-@import "../../../dist/vendor/fontawesome/scss/_variables.scss";
+@import "../../../dist/fonts/tyfyicons/tyfyicons.scss";
 
 // fonts
 $tyfy-serif:"Zilla Slab","Georgia",serif !default;
 $tyfy-sans:"Overpass","Helvetica","Arial",sans-serif !default;
 $tyfy-mono:'Overpass Mono',monospace !default;
-$tyfy-symbol:"Font Awesome 5 Solid" !default;
+$tyfy-symbol:tyfyicons !default;
 
 // font assignments
 $tyfy-font-base:$tyfy-sans !default;

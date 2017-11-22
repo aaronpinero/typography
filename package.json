@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "./bin/build-css",
-    "build-css-dev": "./bin/build-css-dev"
+    "build-css-dev": "./bin/build-css-dev",
+    "build-icons": "./bin/build-icons"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "autoprefixer": "^7.1.6",
     "node-sass": "^4.5.3",
     "postcss-cli": "^4.1.1",
-    "templatesjs": "^2.0.0"
+    "templatesjs": "^2.0.0",
+    "webfont": "^7.1.4"
   }
 }

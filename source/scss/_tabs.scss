@@ -1,12 +1,12 @@
 * + .tabs-container {
-	margin-top:2*$tyfy-grid-unit;
+	margin-top:$tyfy-spacing-standard;
 }
 .tabs-container + h2,
 .tabs-container + h3,
 .tabs-container + h4,
 .tabs-container + h5,
 .tabs_container + h6 {
-	margin-top:3*$tyfy-grid-unit;
+	margin-top:$tyfy-spacing-large;
 }
 .tabs-container {
 	ul.tabs {
@@ -22,13 +22,13 @@
 	    background-color:rgba(black,0.05);
 	    border:2px rgba(black,0.2) solid;
 	    border-bottom:0;
-	    border-radius:0.25rem 0.25rem 0 0;
+	    border-radius:grid(0.25) grid(0.25) 0 0;
 	    cursor:pointer;
 	    display:block;
 	    flex:1;
 	    font-family:$tyfy-font-heading;
 	    margin:0 0 -2px 0;
-	    padding:$tyfy-grid-unit 2*$tyfy-grid-unit;
+	    padding:grid(1) grid(2);
 	    text-align:center;
 	    transition-duration:$tyfy-transition-duration-hover;
 	    transition-property:background-color;
@@ -43,7 +43,7 @@
 	  }
 	  li + li {
 		  margin-top:0;
-		  margin-left:$tyfy-grid-unit;
+		  margin-left:grid(1);
 	  }
 	}
 	&.tabs-processed {
@@ -56,21 +56,21 @@
 	    font-size:$tyfy-font-size-h3;
 	    line-height:leading($tyfy-font-size-h3,heading);
 	    margin:0;
-	    padding:2*$tyfy-grid-unit 6*$tyfy-grid-unit $tyfy-grid-unit 2*$tyfy-grid-unit;
+	    padding:grid(2) grid(6) grid(1) grid(2);
 	    position:relative;
 	    transition-duration:$tyfy-transition-duration-move;
 	    transition-property:padding-top;
 	    &:before {
 	      border-radius:50%;
-				content:unquote("\"#{ $fa-var-chevron-up }\"");
+				content:$tyfyicons-angle-up;
 				font-family:$tyfy-symbol;
 			  font-size:1rem;
 			  font-style:normal;
 			  font-weight:normal;
 			  position:absolute;
-			  right:2*$tyfy-grid-unit;
+			  right:grid(2);
 			  text-align:center;
-			  top:2*$tyfy-grid-unit;
+			  top:grid(2);
 			  transition-duration:$tyfy-transition-duration-move;
 			  transition-property:background-color,color,top;
 			  transition-timing-function:ease-in-out;
@@ -83,13 +83,13 @@
 	      border-bottom:2px rgba(black,0.2) solid;
 	      padding-top:$tyfy-grid-unit;
 	      &:before {
-			    content:unquote("\"#{ $fa-var-chevron-down }\"");
-			    top:$tyfy-grid-unit;
+			    content:$tyfyicons-angle-down;
+			    top:grid(1);
 	      }
 	    }
 	    &.transition {
 	      border-bottom-color:transparent;
-	      padding-top:$tyfy-grid-unit;
+	      padding-top:grid(1);
 	      &:before {
 		      top:$tyfy-grid-unit;
 		    }
