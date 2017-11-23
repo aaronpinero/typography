@@ -5,6 +5,7 @@ My personal framework for applying typographic styles and options on the web. Se
 ## TODOs before version 1.0.0
 
 * Provide documentation for SASS mixins and functions
+* Provide documentation for the icon webfont
 
 ## Why build another framework?
 
@@ -20,17 +21,13 @@ A framework is an expression of the values, preferences, priorities, and experie
 
 ### Other Projects
 
-Two additional repos are included in this project as git submodules:
-
-* [FontAwesome Pro](https://github.com/FortAwesome/Font-Awesome-Pro)
-* [Normalize.css](https://github.com/necolas/normalize.css)
-
-After cloning the repository, run `git submodule update --init` to checkout the submodules.
+[Normalize.css](https://github.com/necolas/normalize.css) is included in this project as a git submodule. After cloning the repository, run `git submodule update --init` to checkout the submodule.
 
 ### Build Tools
 
-This project uses node for compiling the SCSS files into CSS and for assembling the documentation pages. You will need to run `npm install` to download all of the node modules on which the project depends.
+This project uses node.js for assembling the icon webfont, compiling the SCSS files into CSS, and for assembling the documentation pages. You will need to run `npm install` to download all of the node modules on which the project depends.
 
+* For the icon webfont, run `npm run build-icons`. This outputs all of the webfont files and the .scss for the font.
 * For production output, run `npm run build-css`. This outputs compressed CSS.
 * For development output, run `npm run build-css-dev`. This outputs readable CSS with source file comments.
 * For the docs, run `node docs.js`. This uses templatesjs to assemble the HTML pages and their includes.
