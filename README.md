@@ -41,4 +41,5 @@ I realize that without the benefit of work previously done by others, this proje
 * [Bootstrap](https://getbootstrap.com)
 * The [Columbia College](https://www.college.columbia.edu) Style Guide
 * [PureCSS](https://purecss.io)
+* [Simpleicons](https://simpleicons.org)
 * [Better Web Type](https://betterwebtype.com)

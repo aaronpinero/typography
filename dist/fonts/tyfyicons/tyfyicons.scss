@@ -5,9 +5,16 @@ $tyfyicons-angle-right: "\ea04";
 $tyfyicons-angle-up: "\ea05";
 $tyfyicons-bars: "\ea06";
 $tyfyicons-dash: "\ea07";
-$tyfyicons-quote-left: "\ea08";
-$tyfyicons-quote-right: "\ea09";
-$tyfyicons-x: "\ea0a";
+$tyfyicons-facebook: "\ea08";
+$tyfyicons-instagram: "\ea09";
+$tyfyicons-linkedin: "\ea0a";
+$tyfyicons-quote-left: "\ea0b";
+$tyfyicons-quote-right: "\ea0c";
+$tyfyicons-search: "\ea0d";
+$tyfyicons-soundcloud: "\ea0e";
+$tyfyicons-twitter: "\ea0f";
+$tyfyicons-x: "\ea10";
+$tyfyicons-youtube: "\ea11";
 
 @font-face {
     font-family: tyfyicons;
@@ -86,14 +93,42 @@ $tyfyicons-x: "\ea0a";
     content: "\ea07";
 }
 
-.tyfyicons-quote-left::before {
+.tyfyicons-facebook::before {
     content: "\ea08";
 }
 
-.tyfyicons-quote-right::before {
+.tyfyicons-instagram::before {
     content: "\ea09";
 }
 
-.tyfyicons-x::before {
+.tyfyicons-linkedin::before {
     content: "\ea0a";
+}
+
+.tyfyicons-quote-left::before {
+    content: "\ea0b";
+}
+
+.tyfyicons-quote-right::before {
+    content: "\ea0c";
+}
+
+.tyfyicons-search::before {
+    content: "\ea0d";
+}
+
+.tyfyicons-soundcloud::before {
+    content: "\ea0e";
+}
+
+.tyfyicons-twitter::before {
+    content: "\ea0f";
+}
+
+.tyfyicons-x::before {
+    content: "\ea10";
+}
+
+.tyfyicons-youtube::before {
+    content: "\ea11";
 }

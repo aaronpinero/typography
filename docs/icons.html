@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<script src="../dist/vendor/modernizr.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Overpass:400,400i,600,600i,700,700i,800,800i|Zilla+Slab:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-solid.css">
+		<link rel="stylesheet" href="../dist/vendor/fontawesome/css/fontawesome-pro-core.css">
+		<link rel="stylesheet" href="../dist/vendor/normalize/normalize.css">
+		<link rel="stylesheet" href="../dist/style/tyfy.css">
+		<link rel="stylesheet" href="../dist/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Icons</title>
+	</head>
+	<body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="no-bullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+		<section class="main links-underlined">
+			<h1>Icons</h1>
+			<p>Originally, I wanted to make <a href="https://fontawesome.com">FontAwesome Pro</a> (my favorite icon font) part of <strong class="tyfy">Tyfy</strong>. It was one of the original dependencies, included as a .git submodule. Eventually, I realized it could be annoying to other users to require a FontAwesome Pro license. In addition, <strong class="tyfy">Tyfy</strong> only needs a handful of icons, so the exhaustive FontAwesome Pro library is not really needed.</p>
+			<p>Node.js and the <a href="https://www.npmjs.com/package/webfont">webfont</a> package are used to convert a set of .svg icons into an icon webfont called tyfyicons. The Sketch file used to create the .svgs is included in the repository.</p>
+			<table class="clean horizontal-rules">
+				<thead>
+					<tr>
+						<th scope="col">Icon</th>
+						<th scope="col">SASS variable</th>
+						<th scope="col">Character code</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td><span class="tyfyicons tyfyicons-angle-up"></span></td><td>$tyfyicons-angle-up</td><td>\ea05</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-angle-down"></span></td><td>$tyfyicons-angle-down</td><td>\ea01</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-angle-left"></span></td><td>$tyfyicons-angle-left</td><td>\ea02</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-angle-right"></span></td><td>$tyfyicons-angle-right</td><td>\ea04</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-angle-right-small"></span></td><td>$tyfyicons-angle-right-small</td><td>\ea03</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-bars"></span></td><td>$tyfyicons-bars</td><td>\ea06</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-x"></span></td><td>$tyfyicons-x</td><td>\ea10</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-dash"></span></td><td>$tyfyicons-dash</td><td>\ea07</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-quote-left"></span></td><td>$tyfyicons-quote-left</td><td>\ea0b</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-quote-right"></span></td><td>$tyfyicons-quote-right</td><td>\ea0c</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-search"></span></td><td>$tyfyicons-search</td><td>\ea0d</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-facebook"></span></td><td>$tyfyicons-facebook</td><td>\ea08</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-instagram"></span></td><td>$tyfyicons-instagram</td><td>\ea09</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-linkedin"></span></td><td>$tyfyicons-linkedin</td><td>\ea0a</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-soundcloud"></span></td><td>$tyfyicons-soundcloud</td><td>\ea0e</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-twitter"></span></td><td>$tyfyicons-twitter</td><td>\ea0f</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-youtube"></span></td><td>$tyfyicons-youtube</td><td>\ea11</td></tr>
+				</tbody>
+			</table>
+		</section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../dist/script/docs-nav.js"></script>
+		<!--/ COMMON FOOTER -->
+	</body>
+</html>
