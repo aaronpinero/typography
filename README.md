@@ -5,7 +5,6 @@ My personal framework for applying typographic styles and options on the web. Se
 ## TODOs before version 1.0.0
 
 * Provide documentation for SASS mixins and functions
-* Provide documentation for the icon webfont
 
 ## Why build another framework?
 
