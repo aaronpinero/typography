@@ -2,6 +2,12 @@
 
 My personal framework for applying typographic styles and options on the web. See the [online docs and demos](http://aaronpinero.net/tyfy/docs/index.html).
 
+## TODOs for next release
+
+* responsive iframe utility class
+* generic floated content utility classes
+* basic HTML form element styles and utility classes
+
 ## Why build another framework?
 
 There are three reasons:
