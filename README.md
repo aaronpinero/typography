@@ -7,6 +7,7 @@ My personal framework for applying typographic styles and options on the web. Se
 * responsive iframe utility class
 * generic floated content utility classes
 * basic HTML form element styles and utility classes
+* sticky table headers option
 
 ## Why build another framework?
 
