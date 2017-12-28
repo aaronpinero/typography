@@ -1,6 +1,10 @@
-@import "functions";
-@import "variables";
-@import "mixins";
+@import "../../dist/fonts/tyfyicons/tyfyicons.scss";
+
+@import "required/core";
+@import "required/functions";
+@import "required/settings";
+@import "required/mixins";
+
 @import "../../dist/fonts/league/stylesheet.css";
 // thank you to the League of Movable Type for the use of the League Gothic font
 

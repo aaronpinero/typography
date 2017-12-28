@@ -12,41 +12,43 @@
 			<h2>Required</h2>
 			<p>These modules are required to use <strong class="tyfy">Tyfy</strong>. They define the framework's variables, functions, and mixins.</p>
 			<dl>
-				<dt>@import "functions"</dt>
+				<dt>@import "required/core"</dt>
+				<dd>Default values for the core <strong class="tyfy">Tyfy</strong> variables; these variables are used in the calculation of many of the default settings and are required by the custom functions; see the <a href="variables.html">variables</a> documentation for more</dd>
+				<dt>@import "required/functions"</dt>
 				<dd>Functions facilitating use of the basic grid unit, modular typographic scale, and primary color</dd>
-				<dt>@import "variables"</dt>
-				<dd>Default values for all variables; see the <a href="variables.html">variables</a> documentation for more</dd>
-				<dt>@import "mixins"</dt>
+				<dt>@import "required/settings"</dt>
+				<dd>Default values for variables that define the projects colors, fonts, breakpoints, etc.; see the <a href="variables.html">variables</a> documentation for more</dd>
+				<dt>@import "required/mixins"</dt>
 				<dd>Useful mixins taken from <a href="https://html5boilerplate.com">HTML5 Boilerplate</a></dd>
 			</dl>
 			<h2>Essential</h2>
 			<p>These modules are not hard requirements for <strong class="tyfy">Tyfy</strong> but are highly recommended.</p>
 			<dl>
-				<dt>@import "base"</dt>
+				<dt>@import "essential/body"</dt>
 				<dd>Apply the base colors, font styles, and line height</dd>
-				<dt>@import "spacing"</dt>
+				<dt>@import "essential/spacing"</dt>
 				<dd>Apply grid-based vertical margins to <span class="smallcaps">HTML</span> elements</dd>
 			</dl>
 			<h2>Optional</h2>
 			<p>These optional modules provide specific typographic or presentation styles.</p> 
 			<dl>
-				<dt>@import "paragraphs"</dt>
+				<dt>@import "optional/paragraphs"</dt>
 				<dd>Styles and utility classes for paragraphs and headings</dd>
-				<dt>@import "links"</dt>
+				<dt>@import "optional/links"</dt>
 				<dd>Styles and utility classes for links</dd>
-				<dt>@import "lists"</dt>
+				<dt>@import "optional/lists"</dt>
 				<dd>Styles and utility classes for lists</dd>
-				<dt>@import "inline"</dt>
+				<dt>@import "optional/inline"</dt>
 				<dd>Styles and utility classes for inline-level elements</dd>
-				<dt>@import "quotes"</dt>
+				<dt>@import "optional/quotes"</dt>
 				<dd>Styles and utility classes for blockquotes and pullquotes</dd>
-				<dt>@import "tables"</dt>
+				<dt>@import "optional/tables"</dt>
 				<dd>Styles and utility classes for tables; responsive tables requires tables.js</dd>
-				<dt>@import "reverse"</dt>
+				<dt>@import "optional/reverse"</dt>
 				<dd>A utility class for reversed colors</dd>
-				<dt>@import "collapsables"</dt>
+				<dt>@import "optional/collapsables"</dt>
 				<dd>A presentation style for collapsable sections; requires collapsable.js</dd>
-				<dt>@import "tabs"</dt>
+				<dt>@import "optional/tabs"</dt>
 				<dd>A presentation style for responsive tabs; requires tabs.js</dd>
 			</dl>
 		</section>

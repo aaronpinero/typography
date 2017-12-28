@@ -1,0 +1,27 @@
+// grid unit
+// helps define vertical and horizontal grid
+// should be half the base line-height
+$tyfy-grid-unit:0.8125rem !default;
+
+// line height adjustments
+// used by the leading function to adjust calculation of line-height
+// smaller values result in larger line-heights
+$tyfy-leading-adjustment-tall:0.8 !default;
+$tyfy-leading-adjustment-base:0.9 !default;
+$tyfy-leading-adjustment-heading:1 !default;
+$tyfy-leading-adjustment-short:1.2 !default;
+
+// typographic scale
+$tyfy-font-size-scalar:1.2 !default;
+$tyfy-font-size-base:1rem !default;
+
+// fonts
+$tyfy-serif:"Zilla Slab","Georgia",serif !default;
+$tyfy-sans:"Overpass","Helvetica","Arial",sans-serif !default;
+$tyfy-mono:'Overpass Mono',monospace !default;
+$tyfy-symbol:tyfyicons !default;
+
+// primary colors
+$tyfy-color-background:white !default;
+$tyfy-color-foreground:#111 !default;
+$tyfy-color-primary:#4185de !default;

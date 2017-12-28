@@ -1,0 +1,57 @@
+// grid and spacing
+$tyfy-spacing-standard:				grid(2) !default;
+$tyfy-spacing-large:					grid(3) !default;
+$tyfy-indent-standard:				grid(3) !default;
+$tyfy-indent-small:						grid(2) !default;
+
+// font assignments
+$tyfy-font-base:							$tyfy-sans !default;
+$tyfy-font-heading:						$tyfy-serif !default;
+$tyfy-font-pullquote:					$tyfy-serif !default;
+$tyfy-font-table:							$tyfy-sans !default;
+
+// typographic scale
+$tyfy-font-size-sm:						scale(-1) !default;
+$tyfy-font-size-h6:						scale(0) !default;
+$tyfy-font-size-h5:						scale(1) !default;
+$tyfy-font-size-h4:						scale(2) !default;
+$tyfy-font-size-h3:						scale(3) !default;
+$tyfy-font-size-h2:						scale(4) !default;
+$tyfy-font-size-h1:						scale(6) !default;
+
+// additional sizes
+$tyfy-font-size-pullquote:		scale(2) !default;
+
+// breakpoints
+$tyfy-break-floats:						40em !default;
+$tyfy-break-pullquote-large:	40em !default;
+$tyfy-break-list-cols-2:			35em !default;
+$tyfy-break-list-cols-3:			55em !default;
+$tyfy-break-list-cols-4:			75em !default;
+$tyfy-break-tabs:							40em !default;
+$tyfy-break-table:						30em !default;
+
+// transitions
+$tyfy-transition-duration-hover:		0.25s !default;
+$tyfy-transition-duration-move:			0.5s !default;
+
+// site colors
+$tyfy-color-text-body:							$tyfy-color-foreground !default;
+$tyfy-color-text-head:							mix($tyfy-color-foreground,$tyfy-color-background,95%) !default;
+$tyfy-color-text-light:							mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;
+$tyfy-color-text-code:							mix($tyfy-color-foreground,$tyfy-color-primary,45%) !default;
+$tyfy-color-text-pullquote:					adjust-hue($tyfy-color-primary,120deg) !default;
+$tyfy-color-link-default:						color($tyfy-color-primary,(lightness($tyfy-color-primary)-15%)) !default;
+$tyfy-color-link-active:						adjust-hue($tyfy-color-link-default,-120deg) !default;
+$tyfy-color-border:									mix($tyfy-color-foreground,$tyfy-color-background,12%) !default;
+$tyfy-color-table-stripe:						mix($tyfy-color-foreground,$tyfy-color-background,5%) !default;
+
+// reverse colors
+$tyfy-color-text-body-reverse:			reverse($tyfy-color-text-body) !default;
+$tyfy-color-text-head-reverse:			reverse($tyfy-color-text-head) !default;
+$tyfy-color-text-light-reverse:			fade-out(reverse($tyfy-color-text-body),0.45) !default;
+$tyfy-color-text-pullquote-reverse:	color(adjust-hue($tyfy-color-primary,120deg),(lightness($tyfy-color-primary)+15%)) !default;
+$tyfy-color-link-default-reverse:		color($tyfy-color-primary,(lightness($tyfy-color-primary)+15%)) !default;
+$tyfy-color-link-active-reverse:		adjust-hue($tyfy-color-link-default-reverse,-120deg) !default;
+$tyfy-color-border-reverse:					fade-out(reverse($tyfy-color-text-body),0.85) !default;
+$tyfy-color-table-stripe-reverse:		fade-out(reverse($tyfy-color-text-body),0.95) !default;

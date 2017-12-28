@@ -1,19 +1,19 @@
-// Tyfy required modules 
-@import "functions";
-@import "variables";
-@import "mixins";
+@import "../../dist/fonts/tyfyicons/tyfyicons.scss";
 
-// Tyfy essential modules
-@import "base";
-@import "spacing";
+@import "required/core";
+@import "required/functions";
+@import "required/settings";
+@import "required/mixins";
 
-// Tyfy optional modules
-@import "paragraphs";
-@import "links";
-@import "lists";
-@import "utility";
-@import "quotes";
-@import "tables";
-@import "reverse";
-@import "collapsables";
-@import "tabs";
+@import "essential/body";
+@import "essential/spacing";
+
+@import "optional/paragraphs";
+@import "optional/links";
+@import "optional/lists";
+@import "optional/utility";
+@import "optional/quotes";
+@import "optional/tables";
+@import "optional/reverse";
+@import "optional/collapsables";
+@import "optional/tabs";
