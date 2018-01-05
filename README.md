@@ -4,7 +4,6 @@ My personal framework for applying typographic styles and options on the web. Se
 
 ## TODOs for next release
 
-* abstraction for symbols, so it's easy to switch between icon fonts
 * responsive iframe utility class
 * generic floated content utility classes
 * basic HTML form element styles and utility classes
