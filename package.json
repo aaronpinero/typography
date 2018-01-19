@@ -10,6 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "./bin/build-css",
     "build-css-dev": "./bin/build-css-dev",
+    "watch-css": "./bin/watch-css",
+    "watch-css-dev": "./bin/watch-css-dev",
     "build-icons": "./bin/build-icons"
   },
   "repository": {
@@ -30,6 +32,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "node-sass": "^4.5.3",
+    "nodemon": "^1.14.11",
     "postcss-cli": "^4.1.1",
     "templatesjs": "^2.0.0",
     "webfont": "^7.1.4"
