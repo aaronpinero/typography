@@ -50,6 +50,12 @@
 		<section class="main links-underlined">
 			<h1>Modules</h1>
 			<p>The tyfy.scss file is an inventory of the modules that make up the framework. They are @imported in the following order.</p>
+			<h2>Icon Font</h2>
+			<p>The <strong class="tyfy">Tyfy</strong> <a href="icons.html">custom icon webfont</a> appears first in the tyfy.scss file but is not required. You can use your own icon font or any of the freely available icon fonts.</p>
+			<dl>
+				<dt>@import "../../dist/fonts/tyfyicons/tyfyicons.scss"</dt>
+				<dd>Defines the font face, <span class="smallcaps">SASS</span> variables for the icon character codes, and utility classes for the icons.</dd>
+			</dl>
 			<h2>Required</h2>
 			<p>These modules are required to use <strong class="tyfy">Tyfy</strong>. They define the framework's variables, functions, and mixins.</p>
 			<dl>
@@ -65,6 +71,8 @@
 			<h2>Essential</h2>
 			<p>These modules are not hard requirements for <strong class="tyfy">Tyfy</strong> but are highly recommended.</p>
 			<dl>
+				<dt>@import "essential/normalize"</dt>
+				<dd>Selected styles from <a href="https://github.com/necolas/normalize.css/">normalize.css</a></dd>
 				<dt>@import "essential/body"</dt>
 				<dd>Apply the base colors, font styles, and line height</dd>
 				<dt>@import "essential/spacing"</dt>

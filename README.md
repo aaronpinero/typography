@@ -1,6 +1,6 @@
 # Tyfy
 
-My personal framework for applying typographic styles and options on the web. See the [online docs and demos](http://aaronpinero.net/tyfy/docs/index.html).
+My framework for applying elements of typographic style to web projects. See the [online docs and demos](http://aaronpinero.net/tyfy/docs/index.html).
 
 ## TODOs for next release
 
@@ -8,6 +8,7 @@ My personal framework for applying typographic styles and options on the web. Se
 * generic floated content utility classes
 * basic HTML form element styles and utility classes
 * sticky table headers option
+* remove jQuery dependency
 
 ## Why build another framework?
 
@@ -19,13 +20,7 @@ There are three reasons:
 
 A framework is an expression of the values, preferences, priorities, and experience of the person or persons creating it. While I like some existing frameworks (Bootstrap 4, PureCSS), I want  something that reflects my values and the work that I do.
 
-## Dependencies
-
-### Other Projects
-
-[Normalize.css](https://github.com/necolas/normalize.css) is included in this project as a git submodule. After cloning the repository, run `git submodule update --init` to checkout the submodule.
-
-### Build Tools
+## Build Tools
 
 This project uses node.js for assembling the icon webfont, compiling the SCSS files into CSS, and for assembling the documentation pages. You will need to run `npm install` to download all of the node modules on which the project depends.
 
