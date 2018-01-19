@@ -26,9 +26,7 @@
     "url": "https://github.com/aaronpinero/typography/issues"
   },
   "homepage": "https://github.com/aaronpinero/typography#readme",
-  "dependencies": {
-    "normalize.css": "^7.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "node-sass": "^4.5.3",

@@ -1,4 +1,3 @@
-@import "../../node_modules/normalize.css/normalize.css";
 @import "../../dist/fonts/tyfyicons/tyfyicons.scss";
 
 @import "required/core";
@@ -6,6 +5,7 @@
 @import "required/settings";
 @import "required/mixins";
 
+@import "essential/normalize";
 @import "essential/body";
 @import "essential/spacing";
 
