@@ -1,8 +1,7 @@
 {
-  "name": "typography.git",
+  "name": "tyfy",
   "version": "1.0.0",
   "description": "a framework for typographic structure and common content patterns",
-  "main": "docs/index.html",
   "directories": {
     "doc": "docs"
   },
