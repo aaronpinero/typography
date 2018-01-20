@@ -40,24 +40,8 @@
 }
 
 // based on css-tricks.com/lobotomized-owls/
-@mixin sibling-margins ($state:on) {
-	@if $state == on {
-		// everything
-		* + * {
-			margin-top:$tyfy-spacing-standard;
-		}
-		// lists
-		ul, ol, dl {
-			* + * {
-				margin-top:$tyfy-spacing-standard/2;
-			}
-			ol, ul, dl {
-				margin-top:$tyfy-spacing-standard/2; // because sometimes nested lists don't have a sibling
-			}
-			* + dd {
-				margin-top:0rem;
-			}
-		}
+@mixin set-sibling-margins ($context:all, $measure:$tyfy-spacing-standard) {
+	@if $context == headings {
 		// headings
 		:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
 		:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h2,
@@ -65,28 +49,34 @@
 		:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h4,
 		:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
 		:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
-			margin-top:$tyfy-spacing-large;
+			margin-top:$measure;
 		}
 	}
 	@else {
+		// everything
 		* + * {
-			margin-top:0rem;
-		}
-		ul, ol, dl {
-			* + * {
-				margin-top:0rem;
-			}
-			ol, ul, dl {
-				margin-top:0rem;
-			}
-		}
-		:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
-		:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h2,
-		:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h3,
-		:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h4,
-		:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
-		:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
-			margin-top:0rem;
+			margin-top:$measure;
 		}
 	}
 }
+@mixin sibling-margins ($state:on) {
+	@if $state == on {
+		// everything
+		@include set-sibling-margins(all,$tyfy-spacing-standard);
+		// lists
+		ul, ol, dl {
+			@include set-sibling-margins(all,$tyfy-spacing-standard/2);
+			* + dd {
+				margin-top:0rem;
+			}
+		}
+		// headings
+		@include set-sibling-margins(headings,$tyfy-spacing-large);
+	}
+	@else {
+		// everything
+		@include set-sibling-margins(all,0rem);
+	}
+}
+
+

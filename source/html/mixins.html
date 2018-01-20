@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<%include head.html%>
+		<title>Tyfy - Mixins</title>
+	</head>
+	<body class="">
+		<%include header.html%>
+		<section class="main links-underlined">
+			<h1>Mixins</h1>
+			<p><strong class="tyfy">Tyfy</strong> includes several <span class="smallcaps">SASS</span> mixins. Some mixins were copied or borrowed from <a href="https://html5boilerplate.com">HTML5 Boilerplate</a> and are generally useful for any project. The remaining mixins facilitate the application of the 'smart' vertical margins between adjacent siblings.</p>
+			<dl>
+				<dt>@mixin clearfix</dt>
+				<dd>Copied directly from HTML5 Boilerplate for dealing with floats.</dd>
+				<dt>@mixin visuallyhidden ($type:true)</dt>
+				<dd>A customization of a similar mixin from HTML5 Boilerplate for obscuring elements without using the more disruptive <code>display:none</code></dd>
+				<dt>@mixin set-sibling-margins ($context:all, $measure:$tyfy-spacing-standard)</dt>
+				<dd>A mixin for setting the value of the vertical margin between adjacent siblings. The <code>all</code> context employs the lobotomized owl selector for margins between all elements. The <code>headings</code> context applies margin between a heading and a preceding non-heading element.</dd>
+				<dt>@mixin sibling-margins ($state:on)</dt>
+				<dd>A mixin for turning the vertical margin between adjacent siblings on an off. It depends on the <code>set-sibling-margins</code> mixin.</dd>
+			</dl>
+		</section>
+		<%include footer.html%>
+	</body>
+</html>
