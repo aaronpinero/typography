@@ -6,8 +6,6 @@ ul {
 }
 li {
 	line-height:leading($tyfy-font-size-base,base);
-	margin-bottom:0;
-	margin-top:0;
 }
 dl {
 	line-height:leading($tyfy-font-size-base,base);
@@ -15,32 +13,12 @@ dl {
 dt {
 	font-weight:700;
 	line-height:leading($tyfy-font-size-base,base);
-	margin-bottom:0;
-	margin-top:0;
 }
 dd {
 	line-height:leading($tyfy-font-size-base,base);
-	margin:0;
+	margin-left:0;
+	margin-right:0;
 	padding-left:$tyfy-indent-standard;
-}
-
-// margins for list items
-li + li {
-	margin-top:grid(1);
-}
-* + dt {
-	margin-top:grid(1);
-}
-
-// nested lists
-ol,
-ul {
-	ol,
-	ul,
-	* + ol,
-	* + ul {
-		margin-top:grid(1);
-	}
 }
 
 // unordered list variations
@@ -73,6 +51,7 @@ ul {
 	&.list-cols-2,
 	&.list-cols-3 {
 		@media (min-width:$tyfy-break-list-cols-2) {
+			@include sibling-margins(off);
 			columns:2;
 			column-gap:$tyfy-spacing-large;
 			margin-bottom:grid(-1); // to balance out the bottom padding on the list items
@@ -82,9 +61,6 @@ ul {
 				page-break-inside:avoid;
 				break-inside:avoid;
 				padding-bottom:grid(1);
-			}
-			li + li {
-				margin-top:0;	// override of the default margin;
 			}
 		}
 	}

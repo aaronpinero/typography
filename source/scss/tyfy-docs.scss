@@ -121,19 +121,20 @@ header.brand {
 
 section.main {
 	@extend .constrained;
-	padding:grid(2);
+	margin-top:0;
+	padding:$tyfy-spacing-standard;
 }
 section.demo {
 	border:2px dashed darken($tyfy-color-background,10%);
 	border-radius:grid(1);
 	box-shadow:inset 0px 0px grid(2) rgba(0,0,0,0.05);
+	margin-top:$tyfy-spacing-standard;
 }
 section.demo.reverse {
 	border:none;
 }
 
 footer {
-	padding:grid(4) 0 0 0;
 	p {
 		@extend .constrained;
 		color:$tyfy-color-text-light;

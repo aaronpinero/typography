@@ -50,6 +50,9 @@ h6.collapsable-processed {
       top:grid(2);
     }
   }
+  * + & {
+	  margin-top:$tyfy-spacing-standard;
+  }
 }
 h3.collapsable-processed {
   &:before {
@@ -88,6 +91,7 @@ h6.collapsable-processed {
   box-sizing:border-box;
   border:2px $tyfy-color-border solid;
   border-top:none !important;
+  margin:0rem;
   overflow:hidden;
   padding:grid(1) grid(2) grid(2) grid(2);
   &.closed {
