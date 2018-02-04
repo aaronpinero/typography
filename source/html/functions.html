@@ -20,6 +20,8 @@
 				<dd>The function accepts a color (in rgb or hexadecimal format) and a lightness value (0% to 100%), and converts the given color to the specified lightness.</dd>
 				<dt>@function reverse($color)</dt>
 				<dd>The function accepts a color (in rgb or hexadecimal format) and returns the same color but with the lightness value reversed.</dd>
+				<dt>@function charcode($code)</dt>
+				<dd>The function accepts a character code without the preceding slash (“\”) and adds it; this is done to get around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> and allow icon character codes to be more easily customized for different icon fonts.</dd>
 			</dl>
 		</section>
 		<%include footer.html%>

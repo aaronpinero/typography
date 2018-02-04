@@ -52,3 +52,9 @@
 @function reverse($color) {
 	@return hsl(hue($color),saturation($color),(100% - lightness($color)));
 }
+
+// output character code strings properly for icon fonts
+// see https://github.com/sass/libsass/issues/1115
+@function charcode($code) {
+  @return unquote("\"") + unquote(str_insert($code,"\\",1)) + unquote("\"");
+}

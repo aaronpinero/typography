@@ -1,5 +1,3 @@
-@import "../../dist/fonts/tyfyicons/tyfyicons.scss";
-
 @import "required/core";
 @import "required/functions";
 @import "required/settings";
@@ -92,7 +90,7 @@ header.brand {
 				transition-property:color;
 				width:leading($tyfy-font-size-h3,heading);
 				&:before {
-					content:$tyfyicons-bars;
+					content:charcode($tyfyicons-bars);
 					display:block;
 					font-family:$tyfy-symbol;
 					height:leading($tyfy-font-size-h3,heading);

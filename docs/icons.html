@@ -50,14 +50,20 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Icons</h1>
-			<p>Originally, I wanted to make <a href="https://fontawesome.com">FontAwesome Pro</a> (my favorite icon font) part of <strong class="tyfy">Tyfy</strong>. It was one of the original dependencies, included as a .git submodule. Eventually, I realized it could be annoying to other users to require a FontAwesome Pro license. In addition, <strong class="tyfy">Tyfy</strong> only needs a handful of icons, so the exhaustive FontAwesome Pro library is not really needed.</p>
+			<p>Because <strong class="tyfy">Tyfy</strong> only needs a handful of icons, I've included a dozen or so common icons as a custom web font rather than recommend an extensive and weighty font library.</p>
 			<p>Node.js and the <a href="https://www.npmjs.com/package/webfont">webfont</a> package are used to convert a set of .svg icons into an icon webfont called tyfyicons. The Sketch file used to create the .svgs is included in the repository.</p>
-			<p>The tyfyicons font is included as part of Tyfy but it is not necessarily required. If you are using selected <strong class="tyfy">Tyfy</strong> <a href="modules.html">modules</a> and want to include the font, you will need to add the icon font scss file: <code>[path to tyfy]/dist/fonts/tyfyicons/tyfyicons.scss</code>. If you want to use a different icon font, I recommend customizing the values for the icon variables in the <code>required/settings</code> module to use character values for the selected font. Icons are used in styles for <a href="lists.html">lists</a>, <a href="quotes.html">blockquotes</a>, <a href="collapsables.html">collapsables</a>, and <a href="tabs.html">tabs</a>.</p>
+			<p>The tyfyicons font is not necessarily required. If you want to use a different icon font, you will need to customize the values for the icon character code variables in the <code>required/settings</code> module to use character values for the selected font. Tyfyicons are used in styles for <a href="lists.html">lists</a>, <a href="quotes.html">blockquotes</a>, <a href="collapsables.html">collapsables</a>, and <a href="tabs.html">tabs</a>. If you are not planning to use those modules, the icon font module can be omitted and the character code variables ignored.</p>
+			<h2>Using Icons in <span class="smallcaps">SCSS</span></h2>
+			<p>Because of an issue with <span class="smallcaps">SASS</span>, the icon font character codes are stored in the <code>required/settings</code> without their preceding slash:</p>
+			<pre><code>$tyfyicons-angle-up:"ea05";</code></pre>
+			<p>To properly apply the character codes in the <span class="smallcaps">CSS</span> <code>content</code> property, <strong class="tyfy">Tyfy</strong> has a <a href="functions.html">custom function</a> named <code>charcode</code> that accepts a character code variable and returns the correct character code string.</p>
+			<h2>Using Icons in <span class="smallcaps">HTML</span></h2>
+			<p>The <code>optional/icons</code> module includes utility classes for adding icons within the html. Those utility classes are employed in the following table.</p>
 			<table class="clean horizontal-rules">
 				<thead>
 					<tr>
 						<th scope="col">Icon</th>
-						<th scope="col">SASS variable</th>
+						<th scope="col"><span class="smallcaps">SASS</span> variable</th>
 						<th scope="col">Character code</th>
 					</tr>
 				</thead>

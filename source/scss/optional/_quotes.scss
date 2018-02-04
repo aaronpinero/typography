@@ -40,7 +40,7 @@ blockquote {
 		}
 		&:before {
 			color:$tyfy-color-border;
-			content:$tyfyicons-quote-left;
+			content:charcode($tyfyicons-quote-left);
 			display:block;
 			font-family:$tyfy-symbol;
 			font-style:normal;

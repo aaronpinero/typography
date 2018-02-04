@@ -56,24 +56,26 @@ $tyfy-color-link-active-reverse:		adjust-hue($tyfy-color-link-default-reverse,-1
 $tyfy-color-border-reverse:					fade-out(reverse($tyfy-color-text-body),0.85) !default;
 $tyfy-color-table-stripe-reverse:		fade-out(reverse($tyfy-color-text-body),0.95) !default;
 
-// icon character codes
-// these are copied from the scss file output by running npm build icons;
-// they are included here so tyfyicons is not a requirement for using tyfy
-// they can be overridden to allow a different icon font
-$tyfyicons-angle-down: 				"\ea01" !default;
-$tyfyicons-angle-left: 				"\ea02" !default;
-$tyfyicons-angle-right-small: "\ea03" !default;
-$tyfyicons-angle-right: 			"\ea04" !default;
-$tyfyicons-angle-up: 					"\ea05" !default;
-$tyfyicons-bars: 							"\ea06" !default;
-$tyfyicons-dash: 							"\ea07" !default;
-$tyfyicons-facebook: 					"\ea08" !default;
-$tyfyicons-instagram: 				"\ea09" !default;
-$tyfyicons-linkedin: 					"\ea0a" !default;
-$tyfyicons-quote-left: 				"\ea0b" !default;
-$tyfyicons-quote-right: 			"\ea0c" !default;
-$tyfyicons-search: 						"\ea0d" !default;
-$tyfyicons-soundcloud: 				"\ea0e" !default;
-$tyfyicons-twitter: 					"\ea0f" !default;
-$tyfyicons-x: 								"\ea10" !default;
-$tyfyicons-youtube: 					"\ea11" !default;
+// icon character codes 
+// these are copied from the scss file that is output by running `npm build icons`
+// they are included here so tyfyicons is not a requirement for using tyfy;
+// the initial slash (\) has been removed so the values are stored as strings rather than as the actual character;
+// the charcode($code) function can be used to output the string with the initial '\';
+// these values can be overridden to allow a different icon font
+$tyfyicons-angle-down: 				"ea01" !default;
+$tyfyicons-angle-left: 				"ea02" !default;
+$tyfyicons-angle-right-small: "ea03" !default;
+$tyfyicons-angle-right: 			"ea04" !default;
+$tyfyicons-angle-up: 					"ea05" !default;
+$tyfyicons-bars: 							"ea06" !default;
+$tyfyicons-dash: 							"ea07" !default;
+$tyfyicons-facebook: 					"ea08" !default;
+$tyfyicons-instagram: 				"ea09" !default;
+$tyfyicons-linkedin: 					"ea0a" !default;
+$tyfyicons-quote-left: 				"ea0b" !default;
+$tyfyicons-quote-right: 			"ea0c" !default;
+$tyfyicons-search: 						"ea0d" !default;
+$tyfyicons-soundcloud: 				"ea0e" !default;
+$tyfyicons-twitter: 					"ea0f" !default;
+$tyfyicons-x: 								"ea10" !default;
+$tyfyicons-youtube: 					"ea11" !default;

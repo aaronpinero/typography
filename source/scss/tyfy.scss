@@ -1,5 +1,3 @@
-@import "../../dist/fonts/tyfyicons/tyfyicons.scss";
-
 @import "required/core";
 @import "required/functions";
 @import "required/settings";
@@ -9,6 +7,7 @@
 @import "essential/body";
 @import "essential/spacing";
 
+@import "optional/icons";
 @import "optional/paragraphs";
 @import "optional/links";
 @import "optional/lists";

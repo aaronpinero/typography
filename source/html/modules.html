@@ -9,12 +9,6 @@
 		<section class="main links-underlined">
 			<h1>Modules</h1>
 			<p>The tyfy.scss file is an inventory of the modules that make up the framework. They are @imported in the following order.</p>
-			<h2>Icon Font</h2>
-			<p>The <strong class="tyfy">Tyfy</strong> <a href="icons.html">custom icon webfont</a> appears first in the tyfy.scss file but is not required. You can use your own icon font or any of the freely available icon fonts.</p>
-			<dl>
-				<dt>@import "../../dist/fonts/tyfyicons/tyfyicons.scss"</dt>
-				<dd>Defines the font face, <span class="smallcaps">SASS</span> variables for the icon character codes, and utility classes for the icons.</dd>
-			</dl>
 			<h2>Required</h2>
 			<p>These modules are required to use <strong class="tyfy">Tyfy</strong>. They define the framework's variables, functions, and mixins.</p>
 			<dl>
@@ -40,6 +34,8 @@
 			<h2>Optional</h2>
 			<p>These optional modules provide specific typographic or presentation styles.</p> 
 			<dl>
+				<dt>@import "optional/icons"</dt>
+				<dd>Defines the font face for the <a href="icons.html">custom icon webfont</a></dd>
 				<dt>@import "optional/paragraphs"</dt>
 				<dd>Styles and utility classes for paragraphs and headings</dd>
 				<dt>@import "optional/links"</dt>

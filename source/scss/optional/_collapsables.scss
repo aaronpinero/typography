@@ -15,7 +15,7 @@ h6.collapsable-processed {
   transition-property:padding-top;
   &:before {
     border-radius:50%;
-    content:$tyfyicons-angle-up;
+    content:charcode($tyfyicons-angle-up);
     font-family:$tyfy-symbol;
     font-size:$tyfy-font-size-base;
     font-style:normal;
@@ -33,7 +33,7 @@ h6.collapsable-processed {
     border-bottom:2px $tyfy-color-border solid;
     padding-top:grid(1);
     &:before {
-      content:$tyfyicons-angle-down;
+      content:charcode($tyfyicons-angle-down);
       top:grid(1);
     }
   }

@@ -37,7 +37,7 @@ ul {
 			}
 		}
 		&.list-icons-angle li:before {
-			content:$tyfyicons-angle-right-small;
+			content:charcode($tyfyicons-angle-right-small);
 		}
 	}
 	&.no-bullet {
