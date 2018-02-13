@@ -6,7 +6,9 @@
     content:"";
     line-height:0;
   }
-  &:after { clear:both; }  
+  &:after {
+    clear:both;
+  }
 }
 
 @mixin visuallyhidden ($type:true) {

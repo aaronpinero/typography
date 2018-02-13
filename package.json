@@ -77,8 +77,30 @@
           "except": ["empty"]
         }
       ],
+      "number-leading-zero": "always",
+      "number-no-trailing-zeros": true,
+      "string-quotes": [
+        "double",
+        { 
+          "avoidEscape": false
+        }
+      ],
+      "unit-case": "lower",
+      "value-keyword-case": "lower",
+      "value-list-max-empty-lines": 0,
+      "property-case": "lower",
+      "declaration-bang-space-after": "never",
+      "declaration-bang-space-before": "always",
+      "declaration-colon-space-after": "never",
       "declaration-colon-space-before": "never",
-      "declaration-colon-space-after": "never"
+      "declaration-block-semicolon-newline-after": "always-multi-line",
+      "declaration-block-semicolon-newline-before": "never-multi-line",
+      "declaration-block-semicolon-space-after": "always-single-line",
+      "declaration-block-semicolon-space-before": "never",
+      "declaration-block-trailing-semicolon": "always",
+      "block-closing-brace-empty-line-before": "never",
+      "block-closing-brace-newline-after": "always",
+      "block-closing-brace-newline-before": "always-multi-line"
     }
   }
 }
