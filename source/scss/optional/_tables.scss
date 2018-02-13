@@ -1,17 +1,13 @@
 // table basics
 table {
-  font-variant-numeric:lining-nums;
-  font-feature-settings:"lnum";
-  font-variant-numeric:tabular-nums;
-  font-feature-settings:"tnum";
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum", "tnum";
 }
 th {
   font-family:$tyfy-font-table;
   font-size:$tyfy-font-size-base;
-  font-variant-numeric:lining-nums;
-  font-feature-settings:"lnum";
-  font-variant-numeric:tabular-nums;
-  font-feature-settings:"tnum";
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum", "tnum";
   line-height:leading($tyfy-font-size-base,base);
   text-align:left;
   vertical-align:top;
@@ -22,10 +18,8 @@ th {
 td {
   font-family:$tyfy-font-table;
   font-size:$tyfy-font-size-base;
-  font-variant-numeric:lining-nums;
-  font-feature-settings:"lnum";
-  font-variant-numeric:tabular-nums;
-  font-feature-settings:"tnum";
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum", "tnum";
   line-height:leading($tyfy-font-size-base,base);
   vertical-align:top;
 }

@@ -33,7 +33,33 @@
     "node-sass": "^4.5.3",
     "nodemon": "^1.14.11",
     "postcss-cli": "^4.1.1",
+    "stylelint": "^8.4.0",
+    "stylelint-scss": "^2.3.0",
     "templatesjs": "^2.0.0",
     "webfont": "^7.1.4"
+  },
+  "stylelint": {
+    "rules": {
+      "color-no-invalid-hex": true,
+      "font-family-no-duplicate-names": true,
+      "function-calc-no-unspaced-operator": true,
+      "function-linear-gradient-no-nonstandard-direction": true,
+      "string-no-newline": true,
+      "unit-no-unknown": true,
+      "property-no-unknown": [
+        true,
+        {
+          "checkPrefixed": true
+        }
+      ],
+      "declaration-block-no-duplicate-properties": true,
+      "declaration-block-no-shorthand-property-overrides": true,
+      "selector-pseudo-class-no-unknown": true,
+      "selector-pseudo-element-no-unknown": true,
+      "comment-no-empty": true,
+      "declaration-colon-space-before": "never",
+      "declaration-colon-space-after": "never",
+      "function-comma-space-after": "never"
+    }
   }
 }

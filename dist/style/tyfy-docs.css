@@ -1,1 +1,138 @@
-@import url(../../dist/fonts/league/stylesheet.css);body{-webkit-animation:fadein 1s;animation:fadein 1s;margin:0 0 1.625rem 0;padding:0}@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}@keyframes fadein{from{opacity:0}to{opacity:1}}.reverse{background-color:#333}.constrained,header.brand h1,header.brand nav,section.main,footer p{margin-left:auto;margin-right:auto;max-width:55rem}h1{font-family:"League Gothic";font-weight:400;text-transform:uppercase}hr.demo{margin-bottom:.8125rem;margin-top:.8125rem}strong.tyfy{color:#de4185}header.brand{background:#333 url(../img/bg.gif)}header.brand h1{font-size:1.728rem;line-height:2.4375rem;padding:.8125rem 1.625rem}header.brand nav{padding:0 1.625rem}header.brand nav h2{font-size:1.2rem;line-height:1.625rem}header.brand nav ul{margin-left:-.8125rem;margin-right:-.8125rem;margin-top:.8125rem;padding-bottom:.8125rem;padding-left:0}header.brand nav ul li{margin:0;padding-left:.8125rem;padding-right:.8125rem}header.brand nav ul li a{border-top:.20312rem rgba(255,255,255,0.05) solid;display:block;font-size:.83333rem;padding-top:.40625rem;padding-bottom:.40625rem}header.brand nav.nav-processed{position:relative}header.brand nav.nav-processed h2{cursor:pointer;height:2.4375rem;line-height:2.4375rem;overflow:hidden;position:absolute;right:1.625rem;top:-3.25rem;transition-duration:.25s;transition-property:color;width:2.4375rem}header.brand nav.nav-processed h2:before{content:"\ea06";display:block;font-family:tyfyicons;height:2.4375rem;text-align:center;width:2.4375rem}header.brand nav.nav-processed h2:hover{color:#afe982}header.brand nav.nav-processed ul{height:0;margin-top:0;overflow:hidden;padding-bottom:0}header.brand nav.nav-processed.nav-open ul{height:auto;padding-bottom:.8125rem}section.main{margin-top:0;padding:1.625rem}section.demo{border:2px dashed #e6e6e6;border-radius:.8125rem;box-shadow:inset 0px 0px 1.625rem rgba(0,0,0,0.05);margin-top:1.625rem}section.demo.reverse{border:none}footer p{color:#949494;font-size:.83333rem;line-height:1.625rem;padding:.8125rem 1.625rem}
+@import url(../../dist/fonts/league/stylesheet.css);
+/* line 9, source/scss/tyfy-docs.scss */
+body {
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
+  margin: 0 0 1.625rem 0;
+  padding: 0; }
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* line 24, source/scss/tyfy-docs.scss */
+.reverse {
+  background-color: #333; }
+
+/* line 27, source/scss/tyfy-docs.scss */
+.constrained, header.brand h1, header.brand nav, section.main, footer p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 55rem; }
+
+/* line 32, source/scss/tyfy-docs.scss */
+h1 {
+  font-family: "League Gothic";
+  font-weight: 400;
+  text-transform: uppercase; }
+
+/* line 37, source/scss/tyfy-docs.scss */
+hr.demo {
+  margin-bottom: 0.8125rem;
+  margin-top: 0.8125rem; }
+
+/* line 41, source/scss/tyfy-docs.scss */
+strong.tyfy {
+  color: #de4185; }
+
+/* line 45, source/scss/tyfy-docs.scss */
+header.brand {
+  background: #333 url(../img/bg.gif); }
+  /* line 47, source/scss/tyfy-docs.scss */
+  header.brand h1 {
+    font-size: 1.728rem;
+    line-height: 2.4375rem;
+    padding: 0.8125rem 1.625rem; }
+  /* line 53, source/scss/tyfy-docs.scss */
+  header.brand nav {
+    padding: 0 1.625rem; }
+    /* line 56, source/scss/tyfy-docs.scss */
+    header.brand nav h2 {
+      font-size: 1.2rem;
+      line-height: 1.625rem; }
+    /* line 60, source/scss/tyfy-docs.scss */
+    header.brand nav ul {
+      margin-left: -0.8125rem;
+      margin-right: -0.8125rem;
+      margin-top: 0.8125rem;
+      padding-bottom: 0.8125rem;
+      padding-left: 0; }
+      /* line 66, source/scss/tyfy-docs.scss */
+      header.brand nav ul li {
+        margin: 0;
+        padding-left: 0.8125rem;
+        padding-right: 0.8125rem; }
+        /* line 70, source/scss/tyfy-docs.scss */
+        header.brand nav ul li a {
+          border-top: 0.20312rem rgba(255, 255, 255, 0.05) solid;
+          display: block;
+          font-size: 0.83333rem;
+          padding-top: 0.40625rem;
+          padding-bottom: 0.40625rem; }
+    /* line 79, source/scss/tyfy-docs.scss */
+    header.brand nav.nav-processed {
+      position: relative; }
+      /* line 81, source/scss/tyfy-docs.scss */
+      header.brand nav.nav-processed h2 {
+        cursor: pointer;
+        height: 2.4375rem;
+        line-height: 2.4375rem;
+        overflow: hidden;
+        position: absolute;
+        right: 1.625rem;
+        top: -3.25rem;
+        transition-duration: 0.25s;
+        transition-property: color;
+        width: 2.4375rem; }
+        /* line 92, source/scss/tyfy-docs.scss */
+        header.brand nav.nav-processed h2:before {
+          content: "\ea06";
+          display: block;
+          font-family: tyfyicons;
+          height: 2.4375rem;
+          text-align: center;
+          width: 2.4375rem; }
+        /* line 100, source/scss/tyfy-docs.scss */
+        header.brand nav.nav-processed h2:hover {
+          color: #afe982; }
+      /* line 104, source/scss/tyfy-docs.scss */
+      header.brand nav.nav-processed ul {
+        height: 0;
+        margin-top: 0;
+        overflow: hidden;
+        padding-bottom: 0; }
+      /* line 111, source/scss/tyfy-docs.scss */
+      header.brand nav.nav-processed.nav-open ul {
+        height: auto;
+        padding-bottom: 0.8125rem; }
+
+/* line 120, source/scss/tyfy-docs.scss */
+section.main {
+  margin-top: 0;
+  padding: 1.625rem; }
+
+/* line 125, source/scss/tyfy-docs.scss */
+section.demo {
+  border: 2px dashed #e6e6e6;
+  border-radius: 0.8125rem;
+  box-shadow: inset 0px 0px 1.625rem rgba(0, 0, 0, 0.05);
+  margin-top: 1.625rem; }
+
+/* line 131, source/scss/tyfy-docs.scss */
+section.demo.reverse {
+  border: none; }
+
+/* line 136, source/scss/tyfy-docs.scss */
+footer p {
+  color: #949494;
+  font-size: 0.83333rem;
+  line-height: 1.625rem;
+  padding: 0.8125rem 1.625rem; }

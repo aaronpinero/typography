@@ -56,5 +56,6 @@
 // output character code strings properly for icon fonts
 // see https://github.com/sass/libsass/issues/1115
 @function charcode($code) {
+  /* stylelint-disable-next-line string-no-newline */
   @return unquote("\"") + unquote(str_insert($code,"\\",1)) + unquote("\"");
 }
