@@ -74,7 +74,7 @@ function DetectAnchorLink (){
       selected_anchor_name = window.location.hash.substring(1);
       selected_anchor = $('a[name="'+selected_anchor_name+'"]');
     
-      if (selected_anchor) {
+      if (selected_anchor.length > 0) {
         parent_collapsables = selected_anchor.parents('.collapsables');
         parent_collapsables.each(function(){
           $(this).removeClass('closed');
