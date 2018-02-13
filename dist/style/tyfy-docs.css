@@ -45,7 +45,7 @@ strong.tyfy {
 
 /* line 45, source/scss/tyfy-docs.scss */
 header.brand {
-  background: #333 url(../img/bg.gif); }
+  background: #333 url("../img/bg.gif"); }
   /* line 47, source/scss/tyfy-docs.scss */
   header.brand h1 {
     font-size: 1.728rem;

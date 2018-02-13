@@ -57,9 +57,28 @@
       "selector-pseudo-class-no-unknown": true,
       "selector-pseudo-element-no-unknown": true,
       "comment-no-empty": true,
+      "no-duplicate-at-import-rules": true,
+      "no-empty-source": true,
+      "no-extra-semicolons": true,
+      "shorthand-property-no-redundant-values": true,
+      "declaration-block-single-line-max-declarations": 1,
+      "selector-max-empty-lines": 0,
+      "no-unknown-animations": true,
+      "color-hex-case": "lower",
+      "font-family-name-quotes": "always-where-recommended",
+      "function-comma-space-after": "never",
+      "function-comma-space-before": "never",
+      "function-max-empty-lines": 0,
+      "function-name-case": "lower",
+      "function-parentheses-space-inside": "never",
+      "function-url-quotes": [
+        "always",
+        {
+          "except": ["empty"]
+        }
+      ],
       "declaration-colon-space-before": "never",
-      "declaration-colon-space-after": "never",
-      "function-comma-space-after": "never"
+      "declaration-colon-space-after": "never"
     }
   }
 }

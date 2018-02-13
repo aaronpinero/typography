@@ -1173,6 +1173,9 @@ h6.collapsable-processed:hover:before {
       display: -webkit-box;
       display: flex; } }
   /* line 22, source/scss/optional/_tabs.scss */
+  .tabs-container ul.tabs li + li {
+    margin-left: 0.8125rem; }
+  /* line 25, source/scss/optional/_tabs.scss */
   .tabs-container ul.tabs li {
     background-color: rgba(0, 0, 0, 0.05);
     border: 2px rgba(0, 0, 0, 0.2) solid;
@@ -1188,19 +1191,20 @@ h6.collapsable-processed:hover:before {
     text-align: center;
     transition-duration: 0.25s;
     transition-property: background-color; }
-    /* line 36, source/scss/optional/_tabs.scss */
+    /* line 39, source/scss/optional/_tabs.scss */
     .tabs-container ul.tabs li:hover {
       background-color: rgba(0, 0, 0, 0.1); }
-    /* line 39, source/scss/optional/_tabs.scss */
+    /* line 42, source/scss/optional/_tabs.scss */
     .tabs-container ul.tabs li.open {
       background-color: transparent;
       border-bottom: 2px rgba(255, 255, 255, 0.7) solid;
       font-weight: 600; }
-  /* line 45, source/scss/optional/_tabs.scss */
-  .tabs-container ul.tabs li + li {
-    margin-left: 0.8125rem; }
 
 /* line 50, source/scss/optional/_tabs.scss */
+.tabs-container.tabs-processed * + .tab-label {
+  margin-top: 1.625rem; }
+
+/* line 53, source/scss/optional/_tabs.scss */
 .tabs-container.tabs-processed .tab-label {
   background-color: transparent;
   border: 2px rgba(0, 0, 0, 0.2) solid;
@@ -1214,7 +1218,7 @@ h6.collapsable-processed:hover:before {
   position: relative;
   transition-duration: 0.5s;
   transition-property: padding-top; }
-  /* line 63, source/scss/optional/_tabs.scss */
+  /* line 66, source/scss/optional/_tabs.scss */
   .tabs-container.tabs-processed .tab-label:before {
     border-radius: 50%;
     content: "\ea05";
@@ -1231,38 +1235,34 @@ h6.collapsable-processed:hover:before {
     transition-timing-function: ease-in-out;
     width: 2.4375rem; }
   @media (min-width: 40em) {
-    /* line 50, source/scss/optional/_tabs.scss */
+    /* line 53, source/scss/optional/_tabs.scss */
     .tabs-container.tabs-processed .tab-label {
       display: none; } }
-  /* line 82, source/scss/optional/_tabs.scss */
+  /* line 85, source/scss/optional/_tabs.scss */
   .tabs-container.tabs-processed .tab-label.collapsed {
     border-bottom: 2px rgba(0, 0, 0, 0.2) solid;
     padding-top: 0.8125rem; }
-    /* line 85, source/scss/optional/_tabs.scss */
+    /* line 88, source/scss/optional/_tabs.scss */
     .tabs-container.tabs-processed .tab-label.collapsed:before {
       content: "\ea01";
       top: 0.8125rem; }
-  /* line 90, source/scss/optional/_tabs.scss */
+  /* line 93, source/scss/optional/_tabs.scss */
   .tabs-container.tabs-processed .tab-label.transition {
     border-bottom-color: transparent;
     padding-top: 0.8125rem; }
-    /* line 93, source/scss/optional/_tabs.scss */
+    /* line 96, source/scss/optional/_tabs.scss */
     .tabs-container.tabs-processed .tab-label.transition:before {
       top: 0.8125rem; }
-  /* line 97, source/scss/optional/_tabs.scss */
+  /* line 100, source/scss/optional/_tabs.scss */
   .tabs-container.tabs-processed .tab-label.transition.collapsed {
     padding-top: 1.625rem; }
-    /* line 99, source/scss/optional/_tabs.scss */
+    /* line 102, source/scss/optional/_tabs.scss */
     .tabs-container.tabs-processed .tab-label.transition.collapsed:before {
       top: 1.625rem; }
-  /* line 104, source/scss/optional/_tabs.scss */
+  /* line 107, source/scss/optional/_tabs.scss */
   .tabs-container.tabs-processed .tab-label:hover:before {
     background-color: #5fb31f;
     color: white; }
-
-/* line 110, source/scss/optional/_tabs.scss */
-.tabs-container.tabs-processed * + .tab-label {
-  margin-top: 1.625rem; }
 
 /* line 113, source/scss/optional/_tabs.scss */
 .tabs-container.tabs-processed .tab-panel {

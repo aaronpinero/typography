@@ -43,7 +43,7 @@ strong.tyfy {
 }
 
 header.brand {
-	background:#333 url(../img/bg.gif);
+	background:#333 url('../img/bg.gif');
 	h1 {
 		@extend .constrained;
 		font-size:$tyfy-font-size-h3;

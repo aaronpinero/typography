@@ -19,6 +19,9 @@
 	  @media (min-width:$tyfy-break-tabs) {
 	    display:flex;
 	  }
+	  li + li {
+		  margin-left:grid(1);
+	  }
 	  li {
 	    background-color:rgba(black,0.05);
 	    border:2px rgba(black,0.2) solid;
@@ -42,11 +45,11 @@
 	      font-weight:600;
 	    }
 	  }
-	  li + li {
-		  margin-left:grid(1);
-	  }
 	}
 	&.tabs-processed {
+	  * + .tab-label {
+	    margin-top:$tyfy-spacing-standard;
+	  }
 	  .tab-label {
 	    background-color:transparent;
 	    border:2px rgba(black,0.2) solid;
@@ -106,9 +109,6 @@
 		      color:white;
 		    }
 	    }
-	  }
-	  * + .tab-label {
-	    margin-top:$tyfy-spacing-standard;
 	  }
 	  .tab-panel {
 	    border:2px rgba(0,0,0,0.2) solid;
