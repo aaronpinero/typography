@@ -483,7 +483,7 @@ ul.list-icons li {
   list-style-type: none;
   position: relative; }
   /* line 30, source/scss/optional/_lists.scss */
-  ul.list-icons li:before {
+  ul.list-icons li::before {
     color: #949494;
     font-family: tyfyicons;
     margin-right: 0.40625rem;
@@ -492,7 +492,7 @@ ul.list-icons li {
     top: 0; }
 
 /* line 39, source/scss/optional/_lists.scss */
-ul.list-icons.list-icons-angle li:before {
+ul.list-icons.list-icons-angle li::before {
   content: "\ea03"; }
 
 /* line 44, source/scss/optional/_lists.scss */
@@ -538,21 +538,21 @@ ul.no-bullet li {
   ul.list-grid-4 {
     *zoom: 1; }
     /* line 3, source/scss/required/_mixins.scss */
-    ol.list-grid-2:before, ol.list-grid-2:after, ol.list-grid-3:before, ol.list-grid-3:after, ol.list-grid-4:before, ol.list-grid-4:after,
-    ul.list-grid-2:before,
-    ul.list-grid-2:after,
-    ul.list-grid-3:before,
-    ul.list-grid-3:after,
-    ul.list-grid-4:before,
-    ul.list-grid-4:after {
+    ol.list-grid-2::before, ol.list-grid-2::after, ol.list-grid-3::before, ol.list-grid-3::after, ol.list-grid-4::before, ol.list-grid-4::after,
+    ul.list-grid-2::before,
+    ul.list-grid-2::after,
+    ul.list-grid-3::before,
+    ul.list-grid-3::after,
+    ul.list-grid-4::before,
+    ul.list-grid-4::after {
       display: table;
       content: "";
       line-height: 0; }
     /* line 9, source/scss/required/_mixins.scss */
-    ol.list-grid-2:after, ol.list-grid-3:after, ol.list-grid-4:after,
-    ul.list-grid-2:after,
-    ul.list-grid-3:after,
-    ul.list-grid-4:after {
+    ol.list-grid-2::after, ol.list-grid-3::after, ol.list-grid-4::after,
+    ul.list-grid-2::after,
+    ul.list-grid-3::after,
+    ul.list-grid-4::after {
       clear: both; }
     /* line 79, source/scss/optional/_lists.scss */
     ol.list-grid-2 li, ol.list-grid-3 li, ol.list-grid-4 li,
@@ -717,7 +717,7 @@ blockquote {
     blockquote.pullquote * + cite {
       margin-top: 0.8125rem; }
     /* line 41, source/scss/optional/_quotes.scss */
-    blockquote.pullquote:before {
+    blockquote.pullquote::before {
       color: #e2e2e2;
       content: "\ea0b";
       display: block;
@@ -726,7 +726,7 @@ blockquote {
       font-weight: normal;
       text-align: center; }
     /* line 50, source/scss/optional/_quotes.scss */
-    blockquote.pullquote:after {
+    blockquote.pullquote::after {
       color: #e2e2e2;
       content: "————— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 —————";
       display: block;
@@ -979,10 +979,10 @@ table.responsive td .td-label {
   .reverse blockquote.pullquote {
     color: #e982af; }
     /* line 52, source/scss/optional/_reverse.scss */
-    .reverse blockquote.pullquote:before {
+    .reverse blockquote.pullquote::before {
       color: rgba(238, 238, 238, 0.15); }
     /* line 55, source/scss/optional/_reverse.scss */
-    .reverse blockquote.pullquote:after {
+    .reverse blockquote.pullquote::after {
       color: rgba(238, 238, 238, 0.15); }
   /* line 64, source/scss/optional/_reverse.scss */
   .reverse table.striped tr:nth-child(2n) td {
@@ -1031,11 +1031,11 @@ h6.collapsable-processed {
   transition-duration: 0.5s;
   transition-property: padding-top; }
   /* line 16, source/scss/optional/_collapsables.scss */
-  h2.collapsable-processed:before,
-  h3.collapsable-processed:before,
-  h4.collapsable-processed:before,
-  h5.collapsable-processed:before,
-  h6.collapsable-processed:before {
+  h2.collapsable-processed::before,
+  h3.collapsable-processed::before,
+  h4.collapsable-processed::before,
+  h5.collapsable-processed::before,
+  h6.collapsable-processed::before {
     border-radius: 50%;
     content: "\ea05";
     font-family: tyfyicons;
@@ -1059,11 +1059,11 @@ h6.collapsable-processed {
     border-bottom: 2px #e2e2e2 solid;
     padding-top: 0.8125rem; }
     /* line 35, source/scss/optional/_collapsables.scss */
-    h2.collapsable-processed.closed:before,
-    h3.collapsable-processed.closed:before,
-    h4.collapsable-processed.closed:before,
-    h5.collapsable-processed.closed:before,
-    h6.collapsable-processed.closed:before {
+    h2.collapsable-processed.closed::before,
+    h3.collapsable-processed.closed::before,
+    h4.collapsable-processed.closed::before,
+    h5.collapsable-processed.closed::before,
+    h6.collapsable-processed.closed::before {
       content: "\ea01";
       top: 0.8125rem; }
   /* line 40, source/scss/optional/_collapsables.scss */
@@ -1074,11 +1074,11 @@ h6.collapsable-processed {
   h6.collapsable-processed.transition {
     padding-top: 0.8125rem; }
     /* line 42, source/scss/optional/_collapsables.scss */
-    h2.collapsable-processed.transition:before,
-    h3.collapsable-processed.transition:before,
-    h4.collapsable-processed.transition:before,
-    h5.collapsable-processed.transition:before,
-    h6.collapsable-processed.transition:before {
+    h2.collapsable-processed.transition::before,
+    h3.collapsable-processed.transition::before,
+    h4.collapsable-processed.transition::before,
+    h5.collapsable-processed.transition::before,
+    h6.collapsable-processed.transition::before {
       top: 0.8125rem; }
   /* line 46, source/scss/optional/_collapsables.scss */
   h2.collapsable-processed.transition.closed,
@@ -1089,11 +1089,11 @@ h6.collapsable-processed {
     border-bottom: 2px transparent solid;
     padding-top: 1.625rem; }
     /* line 49, source/scss/optional/_collapsables.scss */
-    h2.collapsable-processed.transition.closed:before,
-    h3.collapsable-processed.transition.closed:before,
-    h4.collapsable-processed.transition.closed:before,
-    h5.collapsable-processed.transition.closed:before,
-    h6.collapsable-processed.transition.closed:before {
+    h2.collapsable-processed.transition.closed::before,
+    h3.collapsable-processed.transition.closed::before,
+    h4.collapsable-processed.transition.closed::before,
+    h5.collapsable-processed.transition.closed::before,
+    h6.collapsable-processed.transition.closed::before {
       top: 1.625rem; }
   /* line 53, source/scss/optional/_collapsables.scss */
   * + h2.collapsable-processed, * +
@@ -1104,27 +1104,27 @@ h6.collapsable-processed {
     margin-top: 1.625rem; }
 
 /* line 58, source/scss/optional/_collapsables.scss */
-h3.collapsable-processed:before {
+h3.collapsable-processed::before {
   width: 2.4375rem; }
 
 /* line 63, source/scss/optional/_collapsables.scss */
-h4.collapsable-processed:before {
+h4.collapsable-processed::before {
   width: 1.625rem; }
 
 /* line 68, source/scss/optional/_collapsables.scss */
-h5.collapsable-processed:before {
+h5.collapsable-processed::before {
   width: 1.625rem; }
 
 /* line 73, source/scss/optional/_collapsables.scss */
-h6.collapsable-processed:before {
+h6.collapsable-processed::before {
   width: 1.625rem; }
 
 /* line 83, source/scss/optional/_collapsables.scss */
-h2.collapsable-processed:hover:before,
-h3.collapsable-processed:hover:before,
-h4.collapsable-processed:hover:before,
-h5.collapsable-processed:hover:before,
-h6.collapsable-processed:hover:before {
+h2.collapsable-processed:hover::before,
+h3.collapsable-processed:hover::before,
+h4.collapsable-processed:hover::before,
+h5.collapsable-processed:hover::before,
+h6.collapsable-processed:hover::before {
   background-color: #5fb31f;
   color: white; }
 
@@ -1219,7 +1219,7 @@ h6.collapsable-processed:hover:before {
   transition-duration: 0.5s;
   transition-property: padding-top; }
   /* line 66, source/scss/optional/_tabs.scss */
-  .tabs-container.tabs-processed .tab-label:before {
+  .tabs-container.tabs-processed .tab-label::before {
     border-radius: 50%;
     content: "\ea05";
     font-family: tyfyicons;
@@ -1243,7 +1243,7 @@ h6.collapsable-processed:hover:before {
     border-bottom: 2px rgba(0, 0, 0, 0.2) solid;
     padding-top: 0.8125rem; }
     /* line 88, source/scss/optional/_tabs.scss */
-    .tabs-container.tabs-processed .tab-label.collapsed:before {
+    .tabs-container.tabs-processed .tab-label.collapsed::before {
       content: "\ea01";
       top: 0.8125rem; }
   /* line 93, source/scss/optional/_tabs.scss */
@@ -1251,16 +1251,16 @@ h6.collapsable-processed:hover:before {
     border-bottom-color: transparent;
     padding-top: 0.8125rem; }
     /* line 96, source/scss/optional/_tabs.scss */
-    .tabs-container.tabs-processed .tab-label.transition:before {
+    .tabs-container.tabs-processed .tab-label.transition::before {
       top: 0.8125rem; }
   /* line 100, source/scss/optional/_tabs.scss */
   .tabs-container.tabs-processed .tab-label.transition.collapsed {
     padding-top: 1.625rem; }
     /* line 102, source/scss/optional/_tabs.scss */
-    .tabs-container.tabs-processed .tab-label.transition.collapsed:before {
+    .tabs-container.tabs-processed .tab-label.transition.collapsed::before {
       top: 1.625rem; }
   /* line 107, source/scss/optional/_tabs.scss */
-  .tabs-container.tabs-processed .tab-label:hover:before {
+  .tabs-container.tabs-processed .tab-label:hover::before {
     background-color: #5fb31f;
     color: white; }
 

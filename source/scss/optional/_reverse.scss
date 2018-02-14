@@ -49,10 +49,10 @@
   blockquote {
     &.pullquote {
       color:$tyfy-color-text-pullquote-reverse;
-      &:before {
+      &::before {
         color:$tyfy-color-border-reverse;
       }
-      &:after {
+      &::after {
         color:$tyfy-color-border-reverse;
       }
     }

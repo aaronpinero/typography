@@ -93,7 +93,7 @@ header.brand {
         transition-property: color;
         width: 2.4375rem; }
         /* line 92, source/scss/tyfy-docs.scss */
-        header.brand nav.nav-processed h2:before {
+        header.brand nav.nav-processed h2::before {
           content: "\ea06";
           display: block;
           font-family: tyfyicons;

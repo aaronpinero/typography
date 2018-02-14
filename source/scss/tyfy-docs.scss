@@ -89,7 +89,7 @@ header.brand {
 				transition-duration:$tyfy-transition-duration-hover;
 				transition-property:color;
 				width:leading($tyfy-font-size-h3,heading);
-				&:before {
+				&::before {
 					content:charcode($tyfyicons-bars);
 					display:block;
 					font-family:$tyfy-symbol;

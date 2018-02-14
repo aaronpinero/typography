@@ -27,7 +27,7 @@ ul {
 		li {
 			list-style-type:none;
 			position:relative;
-			&:before {
+			&::before {
 				color:$tyfy-color-text-light;
 				font-family:$tyfy-symbol;
 				margin-right:grid(0.5);
@@ -36,7 +36,7 @@ ul {
 				top:0;
 			}
 		}
-		&.list-icons-angle li:before {
+		&.list-icons-angle li::before {
 			content:charcode($tyfyicons-angle-right-small);
 		}
 	}

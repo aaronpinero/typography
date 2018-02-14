@@ -63,7 +63,7 @@
 	    position:relative;
 	    transition-duration:$tyfy-transition-duration-move;
 	    transition-property:padding-top;
-	    &:before {
+	    &::before {
 	      border-radius:50%;
 				content:charcode($tyfyicons-angle-up);
 				font-family:$tyfy-symbol;
@@ -85,7 +85,7 @@
 	    &.collapsed {
 	      border-bottom:2px rgba(black,0.2) solid;
 	      padding-top:grid(1);
-	      &:before {
+	      &::before {
 			    content:charcode($tyfyicons-angle-down);
 			    top:grid(1);
 	      }
@@ -93,18 +93,18 @@
 	    &.transition {
 	      border-bottom-color:transparent;
 	      padding-top:grid(1);
-	      &:before {
+	      &::before {
 		      top:grid(1);
 		    }
 	    }
 	    &.transition.collapsed {
 	      padding-top:grid(2);
-	      &:before {
+	      &::before {
 		      top:grid(2);
 		    }
 	    }
 	    &:hover {
-		    &:before {
+		    &::before {
 			    background-color:$tyfy-color-link-active;
 		      color:white;
 		    }

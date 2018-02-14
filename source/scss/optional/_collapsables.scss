@@ -13,7 +13,7 @@ h6.collapsable-processed {
   position:relative;
   transition-duration:$tyfy-transition-duration-move;
   transition-property:padding-top;
-  &:before {
+  &::before {
     border-radius:50%;
     content:charcode($tyfyicons-angle-up);
     font-family:$tyfy-symbol;
@@ -32,21 +32,21 @@ h6.collapsable-processed {
   &.closed {
     border-bottom:2px $tyfy-color-border solid;
     padding-top:grid(1);
-    &:before {
+    &::before {
       content:charcode($tyfyicons-angle-down);
       top:grid(1);
     }
   }
   &.transition {
     padding-top:grid(1);
-    &:before {
+    &::before {
       top:grid(1);
     }
   }
   &.transition.closed {
 	  border-bottom:2px transparent solid;
     padding-top:grid(2);
-    &:before {
+    &::before {
       top:grid(2);
     }
   }
@@ -55,22 +55,22 @@ h6.collapsable-processed {
   }
 }
 h3.collapsable-processed {
-  &:before {
+  &::before {
     width:leading($tyfy-font-size-h3,heading);
   }
 }
 h4.collapsable-processed {
-  &:before {
+  &::before {
     width:leading($tyfy-font-size-h4,heading);
   }
 }
 h5.collapsable-processed {
-  &:before {
+  &::before {
     width:leading($tyfy-font-size-h5,heading);
   }
 }
 h6.collapsable-processed {
-  &:before {
+  &::before {
     width:leading($tyfy-font-size-h6,heading);
   }
 }
@@ -80,7 +80,7 @@ h4.collapsable-processed,
 h5.collapsable-processed,
 h6.collapsable-processed {
   &:hover {
-    &:before {
+    &::before {
       background-color:$tyfy-color-link-active;
       color:white;
     }

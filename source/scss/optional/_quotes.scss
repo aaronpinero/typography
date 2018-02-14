@@ -38,7 +38,7 @@ blockquote {
 		* + cite {
 			margin-top:$tyfy-grid-unit;
 		}
-		&:before {
+		&::before {
 			color:$tyfy-color-border;
 			content:charcode($tyfyicons-quote-left);
 			display:block;
@@ -47,7 +47,7 @@ blockquote {
 			font-weight:normal;
 			text-align:center;
 		}
-		&:after {
+		&::after {
 			color:$tyfy-color-border;
 			content:"————— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 —————";
 			display:block;
