@@ -1,47 +1,47 @@
 b {
-	font-weight:700;
+  font-weight:700;
 }
 code {
-	background-color:rgba($tyfy-color-text-body,0.07);
-	color:$tyfy-color-text-code;
-	font-family:$tyfy-mono;
-	padding-left:0.25em;
-	padding-right:0.25em;
+  background-color:rgba($tyfy-color-text-body,0.07);
+  color:$tyfy-color-text-code;
+  font-family:$tyfy-mono;
+  padding-left:0.25em;
+  padding-right:0.25em;
 }
 em {
-	font-style:italic;
+  font-style:italic;
 }
 hr {
-	border:none;
-	border-top:1px $tyfy-color-border solid;
-	height:0;
+  border:none;
+  border-top:1px $tyfy-color-border solid;
+  height:0;
 }
 i {
-	font-style:italic;
+  font-style:italic;
 }
 pre {
-	font-family:$tyfy-mono;
+  font-family:$tyfy-mono;
 }
 small {
-	font-size:$tyfy-font-size-sm;
+  font-size:$tyfy-font-size-sm;
 }
 strong {
-	font-weight:700;
+  font-weight:700;
 }
 span {
-	&.dropcap {
-	  display:inline-block;
-	  float:left;
-	  font-size:400%;
-	  font-weight:bold;
-	  line-height:100%;
-	  margin:0 0.25em 0 0.125em;
-	  text-align:center;
-	}
-	&.smallcaps {
-		font-feature-settings:"c2sc", "smcp";
-		font-variant-caps:all-small-caps;
-		font-weight:bolder;
-		letter-spacing:0.05em;
+  &.dropcap {
+    display:inline-block;
+    float:left;
+    font-size:400%;
+    font-weight:bold;
+    line-height:100%;
+    margin:0 0.25em 0 0.125em;
+    text-align:center;
+  }
+  &.smallcaps {
+    font-feature-settings:"c2sc", "smcp";
+    font-variant-caps:all-small-caps;
+    font-weight:bolder;
+    letter-spacing:0.05em;
   }
 }

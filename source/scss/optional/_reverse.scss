@@ -1,51 +1,51 @@
 // root styles
 .reverse {
-	color:$tyfy-color-text-body-reverse;
+  color:$tyfy-color-text-body-reverse;
 
-	// headings
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		color:$tyfy-color-text-head-reverse;
-	}
-	
-	// links
-	a {
-		color:$tyfy-color-text-body-reverse;
-		&[href] {
-			border-bottom-color:rgba($tyfy-color-link-default-reverse,0.5);
-			color:$tyfy-color-link-default-reverse;
-			&:hover,
-			&:active {
-				border-bottom-color:rgba($tyfy-color-link-active-reverse,0.5);
-				color:$tyfy-color-link-active-reverse;
-			}
-		}
-	}
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		a {
-			color:$tyfy-color-text-head-reverse;
-			&[href] {
-				border-bottom-color:rgba($tyfy-color-text-head-reverse,0.5);
-				color:$tyfy-color-text-head-reverse;
-				&:hover,
-				&:active {
-					border-bottom-color:rgba($tyfy-color-link-active-reverse,0.5);
-					color:$tyfy-color-link-active-reverse;
-				}
-			}
-		}
-	}
-	
-	// quotes
+  // headings
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color:$tyfy-color-text-head-reverse;
+  }
+  
+  // links
+  a {
+    color:$tyfy-color-text-body-reverse;
+    &[href] {
+      border-bottom-color:rgba($tyfy-color-link-default-reverse,0.5);
+      color:$tyfy-color-link-default-reverse;
+      &:hover,
+      &:active {
+        border-bottom-color:rgba($tyfy-color-link-active-reverse,0.5);
+        color:$tyfy-color-link-active-reverse;
+      }
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      color:$tyfy-color-text-head-reverse;
+      &[href] {
+        border-bottom-color:rgba($tyfy-color-text-head-reverse,0.5);
+        color:$tyfy-color-text-head-reverse;
+        &:hover,
+        &:active {
+          border-bottom-color:rgba($tyfy-color-link-active-reverse,0.5);
+          color:$tyfy-color-link-active-reverse;
+        }
+      }
+    }
+  }
+  
+  // quotes
   blockquote {
     &.pullquote {
       color:$tyfy-color-text-pullquote-reverse;
@@ -59,43 +59,43 @@
   }
   
   // tables 
-	table.striped {
-	  tr:nth-child(2n) {
-	    td {
-	      background-color:$tyfy-color-table-stripe-reverse;
-	    }
-	  }
-	}
-	table.horizontal-rules {
-	  border-top-color:$tyfy-color-border-reverse;
-	  td,
-	  th {
-	    border-bottom-color:$tyfy-color-border-reverse;
-	  }
-	  th[scope="col"] {
-	    border-bottom-color:$tyfy-color-border-reverse;
-	  }
-	}
-	table.vertical-rules {
-	  border-left-color:$tyfy-color-border-reverse;
-	  td,
-	  th {
-	    border-right-color:$tyfy-color-border-reverse;
-	  }
-	  th[scope="row"] {
-	    border-right-color:$tyfy-color-border-reverse;
-	  }
-	}
-	table.responsive {
-	  tbody tr + tr {
-	    @media (max-width:$tyfy-break-table*0.9999) {
-	      border-top-color:$tyfy-color-border-reverse;
-	    }
-	  }
-	  td {
-	    .td-label {
-	      color:$tyfy-color-text-light-reverse;
-	    }
-	  }
-	}
+  table.striped {
+    tr:nth-child(2n) {
+      td {
+        background-color:$tyfy-color-table-stripe-reverse;
+      }
+    }
+  }
+  table.horizontal-rules {
+    border-top-color:$tyfy-color-border-reverse;
+    td,
+    th {
+      border-bottom-color:$tyfy-color-border-reverse;
+    }
+    th[scope="col"] {
+      border-bottom-color:$tyfy-color-border-reverse;
+    }
+  }
+  table.vertical-rules {
+    border-left-color:$tyfy-color-border-reverse;
+    td,
+    th {
+      border-right-color:$tyfy-color-border-reverse;
+    }
+    th[scope="row"] {
+      border-right-color:$tyfy-color-border-reverse;
+    }
+  }
+  table.responsive {
+    tbody tr + tr {
+      @media (max-width:$tyfy-break-table*0.9999) {
+        border-top-color:$tyfy-color-border-reverse;
+      }
+    }
+    td {
+      .td-label {
+        color:$tyfy-color-text-light-reverse;
+      }
+    }
+  }
 }

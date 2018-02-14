@@ -44,14 +44,14 @@ h6.collapsable-processed {
     }
   }
   &.transition.closed {
-	  border-bottom:2px transparent solid;
+    border-bottom:2px transparent solid;
     padding-top:grid(2);
     &::before {
       top:grid(2);
     }
   }
   * + & {
-	  margin-top:$tyfy-spacing-standard;
+    margin-top:$tyfy-spacing-standard;
   }
 }
 h3.collapsable-processed {

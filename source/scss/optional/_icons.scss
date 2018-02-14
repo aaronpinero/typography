@@ -1,13 +1,13 @@
-	// copied from the scss file that is output by running `npm build icons`
+// copied from the scss file that is output by running `npm build icons`
 
 @if $tyfy-symbol == tyfyicons {
-	@font-face {
-  	font-family:tyfyicons;
+  @font-face {
+    font-family:tyfyicons;
     src:url("../fonts/tyfyicons/tyfyicons.eot");
     src:url("../fonts/tyfyicons/tyfyicons.eot?#iefix") format("embedded-opentype"), url("../fonts/tyfyicons/tyfyicons.woff2") format("woff2"), url("../fonts/tyfyicons/tyfyicons.woff") format("woff"), url("../fonts/tyfyicons/tyfyicons.ttf") format("truetype"), url("../fonts/tyfyicons/tyfyicons.svg#tyfyicons") format("svg");
     font-style:normal;
     font-weight:400;
-	}
+  }
 }
 
 %tyfyicons {

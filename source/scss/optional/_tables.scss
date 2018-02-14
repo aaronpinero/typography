@@ -103,7 +103,7 @@ table.responsive {
     .td-label {
       color:$tyfy-color-text-light;
       display:block;
-			font-family:$tyfy-font-table;
+      font-family:$tyfy-font-table;
       font-size:$tyfy-font-size-sm;
       left:0;
       position:absolute;
@@ -118,36 +118,36 @@ table.responsive {
 
 // floated table
 table {
-	&.float-left,
-	&.float-right {
-		@media (min-width:$tyfy-break-floats) {
-			box-sizing:border-box;
-			margin-bottom:grid(1);
-			width:calc(50% - #{grid(2)});
-		}
-	}
-	&.float-left {
-		@media (min-width:$tyfy-break-floats) {
-			clear:left;
-			float:left;
-			margin-right:grid(4);
-		}
-	}
-	&.float-right {
-		@media (min-width:$tyfy-break-floats) {
-			clear:right;
-			float:right;
-			margin-left:grid(4);
-		}
-	}
+  &.float-left,
+  &.float-right {
+    @media (min-width:$tyfy-break-floats) {
+      box-sizing:border-box;
+      margin-bottom:grid(1);
+      width:calc(50% - #{grid(2)});
+    }
+  }
+  &.float-left {
+    @media (min-width:$tyfy-break-floats) {
+      clear:left;
+      float:left;
+      margin-right:grid(4);
+    }
+  }
+  &.float-right {
+    @media (min-width:$tyfy-break-floats) {
+      clear:right;
+      float:right;
+      margin-left:grid(4);
+    }
+  }
 }
 table.float-right + table.float-left {
-	@media (min-width:$tyfy-break-floats) {
-		margin-right:grid(2);
-	}
+  @media (min-width:$tyfy-break-floats) {
+    margin-right:grid(2);
+  }
 }
 table.float-left + table.float-right {
-	@media (min-width:$tyfy-break-floats) {
-		margin-left:grid(2);
-	}
+  @media (min-width:$tyfy-break-floats) {
+    margin-left:grid(2);
+  }
 }

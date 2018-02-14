@@ -1,38 +1,38 @@
 a {
-	color:$tyfy-color-text-body;
-	text-decoration:none;
-	transition-duration:$tyfy-transition-duration-hover;
-	transition-property:background-color,border-color,color;
-	&[href] {
-		border-bottom-color:rgba($tyfy-color-link-default,0.5);
-		color:$tyfy-color-link-default;
-		&:hover,
-		&:active {
-			border-bottom-color:rgba($tyfy-color-link-active,0.5);
-			color:$tyfy-color-link-active;
-		}
-	}
-	h1 &,
-	h2 &,
-	h3 &,
-	h4 &,
-	h5 &,
-	h6 & {
-		color:$tyfy-color-text-head;
-		&[href] {
-			border-bottom-color:rgba($tyfy-color-text-head,0.5);
-			color:$tyfy-color-text-head;
-			&:hover,
-			&:active {
-				border-bottom-color:rgba($tyfy-color-link-active,0.5);
-				color:$tyfy-color-link-active;
-			}
-		}
-	}
-	.links-underlined & {
-		&[href] {
-			border-bottom-style:solid;
-			border-bottom-width:2px;
-		}
-	}
+  color:$tyfy-color-text-body;
+  text-decoration:none;
+  transition-duration:$tyfy-transition-duration-hover;
+  transition-property:background-color,border-color,color;
+  &[href] {
+    border-bottom-color:rgba($tyfy-color-link-default,0.5);
+    color:$tyfy-color-link-default;
+    &:hover,
+    &:active {
+      border-bottom-color:rgba($tyfy-color-link-active,0.5);
+      color:$tyfy-color-link-active;
+    }
+  }
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 &,
+  h5 &,
+  h6 & {
+    color:$tyfy-color-text-head;
+    &[href] {
+      border-bottom-color:rgba($tyfy-color-text-head,0.5);
+      color:$tyfy-color-text-head;
+      &:hover,
+      &:active {
+        border-bottom-color:rgba($tyfy-color-link-active,0.5);
+        color:$tyfy-color-link-active;
+      }
+    }
+  }
+  .links-underlined & {
+    &[href] {
+      border-bottom-style:solid;
+      border-bottom-width:2px;
+    }
+  }
 }

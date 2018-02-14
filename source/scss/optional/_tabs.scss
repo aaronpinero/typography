@@ -1,138 +1,138 @@
 * + .tabs-container {
-	margin-top:$tyfy-spacing-standard;
+  margin-top:$tyfy-spacing-standard;
 }
 .tabs-container + h2,
 .tabs-container + h3,
 .tabs-container + h4,
 .tabs-container + h5,
 .tabs_container + h6 {
-	margin-top:$tyfy-spacing-large;
+  margin-top:$tyfy-spacing-large;
 }
 .tabs-container {
-	ul.tabs {
-		@include sibling-margins(off);
-		align-items:stretch;
-		border-bottom:2px rgba(black,0.2) solid;
-		display:none;
-		margin:0;
-		padding:0;
-	  @media (min-width:$tyfy-break-tabs) {
-	    display:flex;
-	  }
-	  li + li {
-		  margin-left:grid(1);
-	  }
-	  li {
-	    background-color:rgba(black,0.05);
-	    border:2px rgba(black,0.2) solid;
-	    border-bottom:0;
-	    border-radius:grid(0.25) grid(0.25) 0 0;
-	    cursor:pointer;
-	    display:block;
-	    flex:1;
-	    font-family:$tyfy-font-heading;
-	    margin:0 0 -2px 0;
-	    padding:grid(1) grid(2);
-	    text-align:center;
-	    transition-duration:$tyfy-transition-duration-hover;
-	    transition-property:background-color;
-	    &:hover {
-		    background-color:rgba(black,0.1);
-	    }
-	    &.open {
-	      background-color:transparent;
-	      border-bottom:2px rgba(white,0.7) solid;
-	      font-weight:600;
-	    }
-	  }
-	}
-	&.tabs-processed {
-	  * + .tab-label {
-	    margin-top:$tyfy-spacing-standard;
-	  }
-	  .tab-label {
-	    background-color:transparent;
-	    border:2px rgba(black,0.2) solid;
-	    border-bottom:2px transparent solid;
-	    clear:both;
-	    cursor:pointer;
-	    font-size:$tyfy-font-size-h3;
-	    line-height:leading($tyfy-font-size-h3,heading);
-	    margin:0;
-	    padding:grid(2) grid(6) grid(1) grid(2);
-	    position:relative;
-	    transition-duration:$tyfy-transition-duration-move;
-	    transition-property:padding-top;
-	    &::before {
-	      border-radius:50%;
-				content:charcode($tyfyicons-angle-up);
-				font-family:$tyfy-symbol;
-			  font-size:1rem;
-			  font-style:normal;
-			  font-weight:normal;
-			  position:absolute;
-			  right:grid(2);
-			  text-align:center;
-			  top:grid(2);
-			  transition-duration:$tyfy-transition-duration-move;
-			  transition-property:background-color,color,top;
-			  transition-timing-function:ease-in-out;
-			  width:leading($tyfy-font-size-h3,heading);
-	    }
-	    @media (min-width:$tyfy-break-tabs) {
-	      display:none;
-	    }
-	    &.collapsed {
-	      border-bottom:2px rgba(black,0.2) solid;
-	      padding-top:grid(1);
-	      &::before {
-			    content:charcode($tyfyicons-angle-down);
-			    top:grid(1);
-	      }
-	    }
-	    &.transition {
-	      border-bottom-color:transparent;
-	      padding-top:grid(1);
-	      &::before {
-		      top:grid(1);
-		    }
-	    }
-	    &.transition.collapsed {
-	      padding-top:grid(2);
-	      &::before {
-		      top:grid(2);
-		    }
-	    }
-	    &:hover {
-		    &::before {
-			    background-color:$tyfy-color-link-active;
-		      color:white;
-		    }
-	    }
-	  }
-	  .tab-panel {
-	    border:2px rgba(0,0,0,0.2) solid;
-	    border-top:none;
-	    border-radius:0 0 0.25rem 0.25rem;
-	    margin-top:0rem;
-	    overflow:hidden;
-	    padding:grid(1) grid(2) grid(2);
-	    @media (min-width:$tyfy-break-tabs) {
-	      display:none;
-	      padding-top:grid(2);
-	    }
-	    &.open {
-	      display:block;
-	    }
-	    &.collapsed {
-	      @media (max-width:$tyfy-break-tabs*0.9999) {
-	        border:none;
-	        height:1px;
-	        padding-bottom:0;
-	        padding-top:0;
-	        position:absolute;
-	      }
-	    }
-	  }
-	}
+  ul.tabs {
+    @include sibling-margins(off);
+    align-items:stretch;
+    border-bottom:2px rgba(black,0.2) solid;
+    display:none;
+    margin:0;
+    padding:0;
+    @media (min-width:$tyfy-break-tabs) {
+      display:flex;
+    }
+    li + li {
+      margin-left:grid(1);
+    }
+    li {
+      background-color:rgba(black,0.05);
+      border:2px rgba(black,0.2) solid;
+      border-bottom:0;
+      border-radius:grid(0.25) grid(0.25) 0 0;
+      cursor:pointer;
+      display:block;
+      flex:1;
+      font-family:$tyfy-font-heading;
+      margin:0 0 -2px 0;
+      padding:grid(1) grid(2);
+      text-align:center;
+      transition-duration:$tyfy-transition-duration-hover;
+      transition-property:background-color;
+      &:hover {
+        background-color:rgba(black,0.1);
+      }
+      &.open {
+        background-color:transparent;
+        border-bottom:2px rgba(white,0.7) solid;
+        font-weight:600;
+      }
+    }
+  }
+  &.tabs-processed {
+    * + .tab-label {
+      margin-top:$tyfy-spacing-standard;
+    }
+    .tab-label {
+      background-color:transparent;
+      border:2px rgba(black,0.2) solid;
+      border-bottom:2px transparent solid;
+      clear:both;
+      cursor:pointer;
+      font-size:$tyfy-font-size-h3;
+      line-height:leading($tyfy-font-size-h3,heading);
+      margin:0;
+      padding:grid(2) grid(6) grid(1) grid(2);
+      position:relative;
+      transition-duration:$tyfy-transition-duration-move;
+      transition-property:padding-top;
+      &::before {
+        border-radius:50%;
+        content:charcode($tyfyicons-angle-up);
+        font-family:$tyfy-symbol;
+        font-size:1rem;
+        font-style:normal;
+        font-weight:normal;
+        position:absolute;
+        right:grid(2);
+        text-align:center;
+        top:grid(2);
+        transition-duration:$tyfy-transition-duration-move;
+        transition-property:background-color,color,top;
+        transition-timing-function:ease-in-out;
+        width:leading($tyfy-font-size-h3,heading);
+      }
+      @media (min-width:$tyfy-break-tabs) {
+        display:none;
+      }
+      &.collapsed {
+        border-bottom:2px rgba(black,0.2) solid;
+        padding-top:grid(1);
+        &::before {
+          content:charcode($tyfyicons-angle-down);
+          top:grid(1);
+        }
+      }
+      &.transition {
+        border-bottom-color:transparent;
+        padding-top:grid(1);
+        &::before {
+          top:grid(1);
+        }
+      }
+      &.transition.collapsed {
+        padding-top:grid(2);
+        &::before {
+          top:grid(2);
+        }
+      }
+      &:hover {
+        &::before {
+          background-color:$tyfy-color-link-active;
+          color:white;
+        }
+      }
+    }
+    .tab-panel {
+      border:2px rgba(0,0,0,0.2) solid;
+      border-top:none;
+      border-radius:0 0 0.25rem 0.25rem;
+      margin-top:0rem;
+      overflow:hidden;
+      padding:grid(1) grid(2) grid(2);
+      @media (min-width:$tyfy-break-tabs) {
+        display:none;
+        padding-top:grid(2);
+      }
+      &.open {
+        display:block;
+      }
+      &.collapsed {
+        @media (max-width:$tyfy-break-tabs*0.9999) {
+          border:none;
+          height:1px;
+          padding-bottom:0;
+          padding-top:0;
+          position:absolute;
+        }
+      }
+    }
+  }
 }

@@ -1,20 +1,20 @@
 // base spacing styles
 * {
-	margin-top:0;
-	margin-bottom:0;
+  margin-top:0;
+  margin-bottom:0;
 }
 body {
-	@include sibling-margins(on);
+  @include sibling-margins(on);
 }
 hr {
-	margin-bottom:$tyfy-spacing-large;
-	margin-top:$tyfy-spacing-large;
+  margin-bottom:$tyfy-spacing-large;
+  margin-top:$tyfy-spacing-large;
 }
 
 // spacing style utility classes
 .sibling-margins-on {
-	@include sibling-margins(on);
+  @include sibling-margins(on);
 }
 .sibling-margins-off {
-	@include sibling-margins(off);
+  @include sibling-margins(off);
 }

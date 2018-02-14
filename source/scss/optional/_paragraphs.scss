@@ -1,27 +1,27 @@
 // font size styles
 .font-size-sm {
-	font-size:$tyfy-font-size-sm;
+  font-size:$tyfy-font-size-sm;
 }
 .font-size-p {
-	font-size:$tyfy-font-size-base;
+  font-size:$tyfy-font-size-base;
 }
 .font-size-h6 {
-	font-size:$tyfy-font-size-h6;
+  font-size:$tyfy-font-size-h6;
 }
 .font-size-h5 {
-	font-size:$tyfy-font-size-h5;
+  font-size:$tyfy-font-size-h5;
 }
 .font-size-h4 {
-	font-size:$tyfy-font-size-h4;
+  font-size:$tyfy-font-size-h4;
 }
 .font-size-h3 {
-	font-size:$tyfy-font-size-h3;
+  font-size:$tyfy-font-size-h3;
 }
 .font-size-h2 {
-	font-size:$tyfy-font-size-h2;
+  font-size:$tyfy-font-size-h2;
 }
 .font-size-h1 {
-	font-size:$tyfy-font-size-h1;
+  font-size:$tyfy-font-size-h1;
 }
 
 // headings
@@ -31,51 +31,51 @@ h3,
 h4,
 h5,
 h6 {
-	color:$tyfy-color-text-head;
-	font-family:$tyfy-font-heading;
-	font-weight:700;
+  color:$tyfy-color-text-head;
+  font-family:$tyfy-font-heading;
+  font-weight:700;
 }
 h1 {
-	font-size:$tyfy-font-size-h1;
-	line-height:leading($tyfy-font-size-h1,heading);
+  font-size:$tyfy-font-size-h1;
+  line-height:leading($tyfy-font-size-h1,heading);
 }
 h2 {
-	font-size:$tyfy-font-size-h2;
-	line-height:leading($tyfy-font-size-h2,heading);
+  font-size:$tyfy-font-size-h2;
+  line-height:leading($tyfy-font-size-h2,heading);
 }
 h3 {
-	font-size:$tyfy-font-size-h3;
-	line-height:leading($tyfy-font-size-h3,heading);
+  font-size:$tyfy-font-size-h3;
+  line-height:leading($tyfy-font-size-h3,heading);
 }
 h4 {
-	font-size:$tyfy-font-size-h4;
-	line-height:leading($tyfy-font-size-h4,heading);
+  font-size:$tyfy-font-size-h4;
+  line-height:leading($tyfy-font-size-h4,heading);
 }
 h5 {
-	font-size:$tyfy-font-size-h5;
-	font-style:italic;
-	line-height:leading($tyfy-font-size-h5,heading);
+  font-size:$tyfy-font-size-h5;
+  font-style:italic;
+  line-height:leading($tyfy-font-size-h5,heading);
 }
 h6 {
-	font-size:$tyfy-font-size-h6;
-	letter-spacing:0.05em;
-	text-transform:uppercase;
-	line-height:leading($tyfy-font-size-h6,heading);
+  font-size:$tyfy-font-size-h6;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  line-height:leading($tyfy-font-size-h6,heading);
 }
 
 // paragraphs
 p {
-	font-size:$tyfy-font-size-base;
-	line-height:leading($tyfy-font-size-base,base);
+  font-size:$tyfy-font-size-base;
+  line-height:leading($tyfy-font-size-base,base);
 }
 
 // justified
 .paragraphs-justified p,
 p.justified {
-	-moz-hyphens:auto;
-	-webkit-hyphens:auto;
-	hyphens:auto;
-	-webkit-hyphenate-limit-after:3;
-	-webkit-hyphenate-limit-before:3;
-	text-align:justify;
+  -moz-hyphens:auto;
+  -webkit-hyphens:auto;
+  hyphens:auto;
+  -webkit-hyphenate-limit-after:3;
+  -webkit-hyphenate-limit-before:3;
+  text-align:justify;
 }

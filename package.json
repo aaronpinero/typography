@@ -116,7 +116,25 @@
       "selector-pseudo-class-parentheses-space-inside": "never",
       "selector-pseudo-element-case": "lower",
       "selector-pseudo-element-colon-notation": "double",
-      "selector-type-case": "lower"
+      "selector-type-case": "lower",
+      "selector-list-comma-newline-after": "always-multi-line",
+      "selector-list-comma-space-before": "never",
+      "media-feature-colon-space-after": "never",
+      "media-feature-colon-space-before": "never",
+      "media-feature-name-case": "lower",
+      "media-feature-parentheses-space-inside": "never",
+      "at-rule-name-case": "lower",
+      "at-rule-name-space-after": "always-single-line",
+      "at-rule-semicolon-newline-after": "always",
+      "at-rule-semicolon-space-before": "never",
+      "indentation": 2,
+      "max-empty-lines": 1,
+      "no-eol-whitespace": [
+        true,
+        {
+          "ignore": ["empty-lines"]
+        }
+      ]
     }
   }
 }
