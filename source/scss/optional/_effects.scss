@@ -1,0 +1,11 @@
+$fades: (
+  fade-500ms:500ms,
+  fade-1s:1000ms,
+  fade-2s:2000ms,
+  fade-3s:2000ms
+);
+@each $name, $value in $fades {
+  .#{$name} {
+    @include fade-in($value);
+  }
+}

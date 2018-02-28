@@ -7,20 +7,10 @@
 // thank you to the League of Movable Type for the use of the League Gothic font
 
 body {
-  animation:fadein 1s;
+  @include fade-in(2000ms);
   margin:0 0 grid(2) 0;
   padding:0;
 }
-
-@keyframes fadein {
-  from {
-    opacity:0;
-  }
-  to {
-    opacity:1;
-  }
-}
-
 .reverse {
   background-color:#333;
 }

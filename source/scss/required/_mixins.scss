@@ -80,3 +80,17 @@
     @include set-sibling-margins(all,0rem);
   }
 }
+
+@mixin fade-in ($duration:1000ms) {
+  animation:fadein $duration;
+}
+
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
