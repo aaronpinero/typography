@@ -1,21 +1,16 @@
 // font styles and line heights for lists
 ol,
 ul {
-  line-height:leading($tyfy-font-size-base,base);
   padding-left:$tyfy-indent-standard;
-}
-li {
-  line-height:leading($tyfy-font-size-base,base);
-}
-dl {
-  line-height:leading($tyfy-font-size-base,base);
+  ol,
+  ul {
+    margin-top:$tyfy-spacing-standard/2;
+  }
 }
 dt {
   font-weight:700;
-  line-height:leading($tyfy-font-size-base,base);
 }
 dd {
-  line-height:leading($tyfy-font-size-base,base);
   margin-left:0;
   margin-right:0;
   padding-left:$tyfy-indent-standard;
@@ -41,8 +36,15 @@ ul {
     }
   }
   &.no-bullet {
+    padding-left:0;
     li {
       list-style-type:none;
+    }
+  }
+  &.indented {
+    li {
+      padding-left:$tyfy-indent-standard;
+      text-indent:-1 * $tyfy-indent-standard;
     }
   }
 }
@@ -61,6 +63,9 @@ ul {
         page-break-inside:avoid;
         break-inside:avoid;
         padding-bottom:grid(1);
+      }
+      &.no-bullet {
+        padding-right:0;
       }
     }
   }
