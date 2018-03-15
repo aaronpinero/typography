@@ -44,16 +44,27 @@ ul {
       content:charcode($tyfyicons-angle-right-small);
     }
   }
-  &.no-bullet {
+  &.list-nobullet {
     padding-left:0;
     li {
       list-style-type:none;
     }
+    &.list-cols-2,
+    &.list-cols-3 {
+      @media (min-width:$tyfy-break-list-cols-2) {
+        li {
+          margin-left:0;
+        }
+      }
+    }
   }
-  &.indented {
+  &.list-indented {
     li {
       padding-left:$tyfy-indent-standard;
       text-indent:-1 * $tyfy-indent-standard;
+    }
+    ol, ul {
+      margin-left:-1 * $tyfy-indent-standard;
     }
   }
 }
@@ -68,15 +79,19 @@ ul {
       columns:2;
       column-gap:$tyfy-spacing-large;
       margin-bottom:grid(-1); // to balance out the bottom padding on the list items
-      padding-right:$tyfy-indent-standard; // to balance the left padding and make the columns centered in the body
+      padding-left:0;
       li {
         -webkit-column-break-inside:avoid;
         page-break-inside:avoid;
         break-inside:avoid;
+        margin-left:$tyfy-indent-standard;
         padding-bottom:grid(1);
       }
-      &.no-bullet {
-        padding-right:0;
+      &.sibling-margins-off,
+      .sibling-margins-off & {
+        li {
+          padding-bottom:0;
+        }
       }
     }
   }

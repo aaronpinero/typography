@@ -13,30 +13,30 @@
   
   $("#list-class-icons").change(function(){
     if ($(this).is(':checked')) {
-      $("#list-class-nobullet").removeAttr('checked').attr('disabled','disabled').parent().addClass('disabled');
+      $("#list-class-nobullet, #list-class-indented").removeAttr('checked').attr('disabled','disabled').parent().addClass('disabled');
     }
     else {
-      $("#list-class-nobullet").removeAttr('disabled').parent().removeClass('disabled');
+      $("#list-class-nobullet, #list-class-indented").removeAttr('disabled').parent().removeClass('disabled');
     }
     SetClasses();
   });
 
   $("#list-class-cols2").change(function(){
     if ($(this).is(':checked')) {
-      $("#list-class-cols3, #list-class-grid2, #list-class-grid3, #list-class-grid4, #list-class-icons").removeAttr('checked').attr('disabled','disabled').parent().addClass('disabled');
+      $("#list-class-cols3, #list-class-grid2, #list-class-grid3, #list-class-grid4").removeAttr('checked').attr('disabled','disabled').parent().addClass('disabled');
     }
     else {
-      $("#list-class-cols3, #list-class-grid2, #list-class-grid3, #list-class-grid4, #list-class-icons").removeAttr('disabled').parent().removeClass('disabled');
+      $("#list-class-cols3, #list-class-grid2, #list-class-grid3, #list-class-grid4").removeAttr('disabled').parent().removeClass('disabled');
     }
     SetClasses();
   });
 
   $("#list-class-cols3").change(function(){
     if ($(this).is(':checked')) {
-      $("#list-class-cols2, #list-class-grid2, #list-class-grid3, #list-class-grid4, #list-class-icons").removeAttr('checked').attr('disabled','disabled').parent().addClass('disabled');
+      $("#list-class-cols2, #list-class-grid2, #list-class-grid3, #list-class-grid4").removeAttr('checked').attr('disabled','disabled').parent().addClass('disabled');
     }
     else {
-      $("#list-class-cols2, #list-class-grid2, #list-class-grid3, #list-class-grid4, #list-class-icons").removeAttr('disabled').parent().removeClass('disabled');
+      $("#list-class-cols2, #list-class-grid2, #list-class-grid3, #list-class-grid4").removeAttr('disabled').parent().removeClass('disabled');
     }
     SetClasses();
   });
