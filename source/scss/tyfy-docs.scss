@@ -136,6 +136,9 @@ section.demo.reverse {
     padding-bottom:grid(1);
     label {
       width:11rem;
+      &.disabled {
+        color:$tyfy-color-text-light;
+      }
     }
     &.form-control-type {
       @media (min-width:55em) {
