@@ -50,185 +50,82 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>List Styles</h1>
-			<p>Lists share many of the same styles as the paragraph elements. Combination selectors are also used with lists an list items to provide margins only in the necessary contexts.</p>
-			<p>Since lists are used in many situations and for many types of content, several variations on the default ordered, unordered, and definition lists are provided.</p>
+			<p>Ordered, unordered, and definition lists inherit styles from the essential/body and essential/spacing modules.</p>
+			<p>Since lists are used in many situations and for many types of content, <strong class="tyfy">Tyfy</strong> offers several list classes that create variations on the default HTML lists.</p>
+			<h2>Classes</h2>
+			<dl>
+  			<dt>.list-icons</dt>
+  			<dd>Applied to an unordered list to replace the default bullets with icons. A second class is required to identify the icon to be used. <strong class="tyfy">Tyfy</strong> includes the <code>list-icons-angle</code> class which uses the small angle right icon. A project can define additional icon classes based on <code>list-icons-angle</code>.</dd>
+  			<dt>.no-bullet</dt>
+  			<dd>Applied to an unordered list to remove the bullets and left-hand padding.</dd>
+  			<dt>.indented</dt>
+  			<dd>Primarily for use with <code>no-bullet</code>, this class indents all lines after the first line in each list item to make it easier to identify individual items.</dd>
+  			<dt>.list-cols-2, .list-cols-3</dt>
+  			<dd>Applied to ordered and unordered lists to display items in columns. These classes use CSS columns; columns are read top to bottom and then left to right. These classes can be used with the <code>no-bullet</code>, <code>indented</code>, and <code>list-icons</code> classes.</dd>
+  			<dt>.list-grid-2, .list-grid-3, .list-grid-4</dt>
+  			<dd>Applied to ordered and unordered lists to display items in rows. These classes use CSS floats; rows are read left to right and then top to bottom. These classes can be used with the <code>list-icons</code> class.</dd>
+			</dl>
+			<h2>Related Variables</h2>
+			<dl>
+  			<dt>$tyfy-font-size-base</dt>
+  			<dd>Lists inherit this font size from the <code>&lt;body&gt;</code>.</dd>
+  			<dt>$tyfy-color-foreground</dt>
+  			<dd>Lists inherit this font color from the <code>&lt;body&gt;</code>.</dd>
+  			<dt>$tyfy-spacing-standard</dt>
+  			<dd>$tyfy-spacing-standard is the margin between lists and other elements. Inside lists, $tyfy-spacing-standard/2 is the spacing between list items.</dd>
+  			<dt>$tyfy-indent-standard</dt>
+  			<dd>The amount of indentation for list items, definition list definitions, and indented text using the <code>indented</code> class; applied using padding-left.</dd>
+  			<dt>$tyfy-font-base</dt>
+  			<dd>Lists inherit this font family from the <code>&lt;body&gt;</code>.</dd>
+			</dl>
 		</section>
 		<section class="main links-underlined demo">
 			<h1>Demo</h1>
-			<h2>Unordered Lists</h2>
-			<h3>Default Unordered List</h3>
-			<ul>
-				<li>Dolorem id sapiente in sed.</li>
+			<h2>Un/ordered Lists</h2>
+			<form id="lists-demo">
+  			<div class="form-control form-control-type">
+    			<label>List Type</label>
+    			<label class="option" for="list-type-ordered"><input type="radio" name="list-type" id="list-type-ordered" value="ordered" checked="checked"> Ordered List</label>
+    			<label class="option" for="list-type-unordered"><input type="radio" name="list-type" id="list-type-unordered" value="unordered"> Unordered List</label>
+  			</div>
+  			<div class="form-control form-control-classes">
+    			<label>List Class</label>
+    			<label class="option" for="list-type-icons"><input type="checkbox" name="list-class" id="list-class-icons" value="list-icons"> .list-icons</label>
+    			<label class="option" for="list-type-nobullet"><input type="checkbox" name="list-class" id="list-class-nobullet" value="no-bullet"> .no-bullet</label>
+    			<label class="option" for="list-type-indented"><input type="checkbox" name="list-class" id="list-class-indented" value="indented"> .indented</label>
+    			<label class="option" for="list-class-cols2"><input type="checkbox" name="list-class" id="list-class-cols2" value="list-cols-2"> .list-cols-2</label>
+    			<label class="option" for="list-class-cols3"><input type="checkbox" name="list-class" id="list-class-cols3" value="list-cols-3"> .list-cols-3</label>
+    			<label class="option" for="list-class-grid2"><input type="checkbox" name="list-class" id="list-class-grid2" value="list-grid-2"> .list-grid-2</label>
+    			<label class="option" for="list-class-grid3"><input type="checkbox" name="list-class" id="list-class-grid3" value="list-grid-3"> .list-grid-3</label>
+    			<label class="option" for="list-class-grid4"><input type="checkbox" name="list-class" id="list-class-grid4" value="list-grid-4"> .list-grid-4</label>
+    			<label class="option" for="list-class-marginsoff"><input type="checkbox" name="list-class" id="list-class-marginsoff" value="sibling-margins-off"> .sibling-margins-off</label>
+  			</div>
+			</form>
+			<ul class="lists-demo-list">
+				<li>Ab hic tempora tempora dolor</li>
+				<li>Alias et nam voluptate</li>
 				<li>
-					Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus.
+				  Blanditiis voluptates ad
 					<ul>
 						<li>Cras odio mauris, varius nec tempor nec, elementum eget augue.</li>
 						<li>Vivamus pretium ante sed ex ultrices semper.</li>
 					</ul>
 				</li>
-				<li>Integer tincidunt felis luctus placerat fermentum.</li>
-				<li>Duis et felis mi. Mauris sed faucibus neque.</li>
-			</ul>
-			<h3>Using Icons</h3>
-			<p><span class="smallcaps">CSS</span> classes are applied to the <code>&lt;ul&gt;</code> element to replace the list style with web font-based icons.</p>
-			<ul class="list-icons list-icons-angle">
-				<li>Morbi facilisis blandit est, vel pellentesque nisi elementum ut.</li>
-				<li>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor.</li>
-				<li>Nunc ac diam diam.</li>
-			</ul>
-			<h3>List Without Bullets</h3>
-			<ul class="no-bullet">
-				<li>Morbi facilisis blandit est, vel pellentesque nisi elementum ut.</li>
-				<li>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor.</li>
-				<li>Nunc ac diam diam.</li>
-			</ul>
-			<h3>Two Column List</h3>
-			<p>Using <span class="smallcaps">CSS</span> columns, this list reads down and then left. At small screen sizes, the list becomes a single column. This style can be combined with the bullet-less or icon list styles (Note 10/7/2107: because of a rendering bug, combining the column lists with the icons lists will not work in Safari).</p> 
-			<ul class="list-cols-2">
-				<li>Ab hic tempora tempora dolor</li>
-				<li>Alias et nam voluptate</li>
-				<li>Blanditiis voluptates ad</li>
 				<li>Cumque tempora alias</li>
 				<li>Esse vel ut fugiat nisi</li>
 				<li>Est error placeat sit</li>
 				<li>Et placeat in suscipit et</li>
 				<li>Ex est similique fugit vitae</li>
-				<li>In eos saepe eos qui tempora</li>
-				<li>Ipsam omnis</li>
-				<li>Labore asperiores velit</li>
-			</ul>
-			<h3>Three Column List</h3>
-			<p>This is a three column option. At medium screen sizes, the list reduces to two columns. At the smallest screen sizes, the list is a single column.</p> 
-			<ul class="list-cols-3">
-				<li>Ab hic tempora</li>
-				<li>Alias et nam</li>
-				<li>Blanditiis voluptates</li>
-				<li>Cumque tempora</li>
-				<li>Esse vel ut fugiat</li>
-				<li>Est error placeat</li>
-				<li>Et placeat in et</li>
-				<li>Ex est similique</li>
-				<li>In eos saepe eos qui</li>
-				<li>Ipsam omnis</li>
-				<li>Labore asperiores</li>
-				<li>Laudantium eos</li>
-				<li>Modi sit quia rem</li>
-				<li>Molestiae et sunt</li>
-			</ul>
-			<h3>Two Column Grid</h3>
-			<p>Using the <code>inline-block</code> style results in a grid of list items that reads left and then down. At small screen sizes, the list becomes a single column. This style can be combined with the bullet-less or icon list styles.</p> 
-			<ul class="list-grid-2">
-				<li>Ab hic tempora tempora dolor</li>
-				<li>Alias et nam voluptate</li>
-				<li>Blanditiis voluptates ad</li>
-				<li>Cumque tempora alias</li>
-				<li>Esse vel ut fugiat nisi</li>
-				<li>Est error placeat sit</li>
-				<li>Et placeat in suscipit et</li>
-				<li>Ex est similique fugit vitae</li>
-				<li>In eos saepe eos qui tempora</li>
-				<li>Ipsam omnis</li>
-				<li>Labore asperiores velit</li>
-			</ul>
-			<h3>Three Column Grid</h3>
-			<p>This is a three column option for the grid. At medium screen sizes, the list reduces to two columns. At the smallest screen sizes, the list is a single column.</p> 
-			<ul class="list-grid-3 list-icons list-icons-angle">
-				<li>Ab hic tempora</li>
-				<li>Alias et nam</li>
-				<li>Blanditiis voluptates</li>
-				<li>Cumque tempora</li>
-				<li>Esse vel ut fugiat</li>
-				<li>Est error placeat</li>
-				<li>Et placeat in et</li>
-				<li>Ex est similique</li>
-				<li>In eos saepe eos qui</li>
-				<li>Ipsam omnis</li>
-				<li>Labore asperiores</li>
-				<li>Laudantium eos</li>
-				<li>Modi sit quia rem</li>
-				<li>Molestiae et sunt</li>
-			</ul>
-			<h2>Ordered Lists</h2>
-			<h3>Default Ordered List</h3>
-			<ol>
-				<li>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper.</li>
 				<li>
-					Est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla.
-					<ol type="a">
-						<li>Nam ornare interdum tincidunt. In a porta diam.</li>
-						<li>Phasellus id imperdiet sapien, mollis facilisis dui.</li>
-						<li>Aliquam sed euismod nibh.</li>
-					</ol>
+				  In eos saepe eos qui tempora
+					<ul>
+						<li>Integer tincidunt felis luctus placerat fermentum.</li>
+            <li>Duis et felis mi. Mauris sed faucibus neque.</li>
+					</ul>
 				</li>
-				<li>Maecenas quis nisi sed nisl luctus vehicula.</li>
-				<li>Aliquam vitae lacinia sem.</li>
-			</ol>
-			<h3>Two Column List</h3>
-			<p>Using <span class="smallcaps">CSS</span> columns, this list reads down and then left. At small screen sizes, the list becomes a single column.</p> 
-			<ol class="list-cols-2">
-				<li>Ab hic tempora tempora dolor</li>
-				<li>Alias et nam voluptate</li>
-				<li>Blanditiis voluptates ad</li>
-				<li>Cumque tempora alias</li>
-				<li>Esse vel ut fugiat nisi</li>
-				<li>Est error placeat sit</li>
-				<li>Et placeat in suscipit et</li>
-				<li>Ex est similique fugit vitae</li>
-				<li>In eos saepe eos qui tempora</li>
 				<li>Ipsam omnis</li>
 				<li>Labore asperiores velit</li>
-			</ol>
-			<h3>Three Column List</h3>
-			<p>This is a three column option. At medium screen sizes, the list reduces to two columns. At the smallest screen sizes, the list is a single column.</p> 
-			<ol class="list-cols-3">
-				<li>Ab hic tempora</li>
-				<li>Alias et nam</li>
-				<li>Blanditiis voluptates</li>
-				<li>Cumque tempora</li>
-				<li>Esse vel ut fugiat</li>
-				<li>Est error placeat</li>
-				<li>Et placeat in et</li>
-				<li>Ex est similique</li>
-				<li>In eos saepe eos qui</li>
-				<li>Ipsam omnis</li>
-				<li>Labore asperiores</li>
-				<li>Laudantium eos</li>
-				<li>Modi sit quia rem</li>
-				<li>Molestiae et sunt</li>
-			</ol>
-			<h3>Two Column Grid</h3>
-			<p>Using the <code>inline-block</code> style results in a grid of list items that reads left and then down. At small screen sizes, the list becomes a single column.</p> 
-			<ol class="list-grid-2">
-				<li>Ab hic tempora tempora dolor</li>
-				<li>Alias et nam voluptate</li>
-				<li>Blanditiis voluptates ad</li>
-				<li>Cumque tempora alias</li>
-				<li>Esse vel ut fugiat nisi</li>
-				<li>Est error placeat sit</li>
-				<li>Et placeat in suscipit et</li>
-				<li>Ex est similique fugit vitae</li>
-				<li>In eos saepe eos qui tempora</li>
-				<li>Ipsam omnis</li>
-				<li>Labore asperiores velit</li>
-			</ol>
-			<h3>Three Column Grid</h3>
-			<p>This is a three column option for the grid. At medium screen sizes, the list reduces to two columns. At the smallest screen sizes, the list is a single column.</p> 
-			<ol class="list-grid-3">
-				<li>Ab hic tempora</li>
-				<li>Alias et nam</li>
-				<li>Blanditiis voluptates</li>
-				<li>Cumque tempora</li>
-				<li>Esse vel ut fugiat</li>
-				<li>Est error placeat</li>
-				<li>Et placeat in et</li>
-				<li>Ex est similique</li>
-				<li>In eos saepe eos qui</li>
-				<li>Ipsam omnis</li>
-				<li>Labore asperiores</li>
-				<li>Laudantium eos</li>
-				<li>Modi sit quia rem</li>
-				<li>Molestiae et sunt</li>
-			</ol>
+			</ul>
 		</section>
 		<!-- COMMON FOOTER -->
 		<footer>
@@ -237,5 +134,6 @@
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="../dist/script/docs-nav.js"></script>
 		<!--/ COMMON FOOTER -->
+    <script src="../dist/script/docs-demo.js"></script>
 	</body>
 </html>

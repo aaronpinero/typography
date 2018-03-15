@@ -66,7 +66,10 @@
     // everything
     @include set-sibling-margins(all,$tyfy-spacing-standard);
     // lists
-    ul, ol, dl {
+    ol, ul {
+      @include set-sibling-margins(all,$tyfy-spacing-standard/2);
+    }
+    dl {
       @include set-sibling-margins(all,$tyfy-spacing-standard/2);
       * + dd {
         margin-top:0rem;

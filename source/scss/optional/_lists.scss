@@ -1,11 +1,7 @@
-// font styles and line heights for lists
+// default lists
 ol,
 ul {
   padding-left:$tyfy-indent-standard;
-  ol,
-  ul {
-    margin-top:$tyfy-spacing-standard/2;
-  }
 }
 dt {
   font-weight:700;
@@ -14,6 +10,19 @@ dd {
   margin-left:0;
   margin-right:0;
   padding-left:$tyfy-indent-standard;
+}
+
+// nested lists
+ol, ul {
+  ol, ul {
+    margin-top:$tyfy-spacing-standard/2;
+  }
+  .sibling-margins-off &,
+  &.sibling-margins-off {
+    ol, ul {
+      margin-top:0;
+    }
+  }
 }
 
 // unordered list variations
@@ -48,6 +57,8 @@ ul {
     }
   }
 }
+
+// ordered and unordered list variations
 ol,
 ul {
   &.list-cols-2,

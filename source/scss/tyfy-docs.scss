@@ -122,6 +122,50 @@ section.demo.reverse {
   border:none;
 }
 
+#lists-demo {
+  @include sibling-margins(off);
+  background-color:#f6f6f6;
+  border:1px #eee solid;
+  border-radius:grid(0.5);
+  display:flex;
+  flex-wrap:wrap;
+  padding:grid(1) grid(2);
+  .form-control {
+    display:block;
+    padding-top:grid(1);
+    padding-bottom:grid(1);
+    label {
+      width:11rem;
+    }
+    &.form-control-type {
+      @media (min-width:55em) {
+        border-right:1px #eee solid;
+      }
+    }
+    &.form-control-classes {
+      display:flex;
+      flex-wrap:wrap;
+      @media (min-width:55em) {
+        box-sizing:border-box;
+        padding-left:$tyfy-spacing-standard;
+        width:75%;
+      }
+      label {
+        &:first-child {
+          width:100%;
+        }
+      }
+    }
+  }
+  label {
+    display:block;
+    font-weight:bold;
+    &.option {
+      font-weight:normal;
+    }
+  }
+}
+
 footer {
   p {
     @extend .constrained;
