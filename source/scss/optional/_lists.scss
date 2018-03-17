@@ -71,6 +71,26 @@ ul {
       }
     }
   }
+  &.list-flex {
+    @include sibling-margins(off);
+    display:flex;
+    flex-wrap:wrap;
+    padding-left:0;
+    li {
+      margin-left:$tyfy-indent-standard;
+    }
+    &.list-flex-center {
+      justify-content:center;
+    }
+    &.list-flex-right {
+      justify-content:flex-end;
+    }
+    &.list-nobullet {
+      li {
+        margin-left:0;
+      }
+    }
+  }
 }
 
 // ordered and unordered list variations
