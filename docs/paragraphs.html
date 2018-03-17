@@ -35,6 +35,7 @@
 					<li><a href="mixins.html">Mixins</a></li>
 					<li><a href="icons.html">Icons</a></li>
 					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
 					<li><a href="links.html">Links</a></li>
 					<li><a href="lists.html">Lists</a></li>
 					<li><a href="utility.html">Utility</a></li>
@@ -49,28 +50,28 @@
 		</header>
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
-			<h1>Paragraph Styles</h1>
-			<p>Paragraph styles are applied to the <code>&lt;p&gt;</code> tag and heading levels 1 through 6. <span class="smallcaps">SASS</span> variables define the modular scale of font sizes and the vertical grit unit. Font sizes are available as both <span class="smallcaps">SASS</span> variables and <span class="smallcaps">CSS</span> classes.</p>
-			<p>My preference for the use of headings is to have each heading positioned closer to the text below than the text above. Default margins for paragraphs elements are zero, and combination selectors are used to define styles for paragraph and headings in context of other paragraph elements.</p>
-			<p>In my design work, I am often asked to balance the request for more contrast between heading levels with a limit on the size of the <code>&lt;h1&gt;</code> text. I have used style, weight, and text transforms in an effort to create contrast without relying only on font size.</p>
-			<p>There are two ways in which paragraph alignment can be justified: by applying the <code>paragraphs-justified</code> class to the containing element or by applying the <code>justified</code> class to an individual paragraph. The classes apply text alignment and hyphenation styles to the paragraph tag. For this demo, the <code>paragraphs-justified</code> class was used.</p>
+			<h1>Paragraphs</h1>
+			<p>Paragraphs inherit font size and line height from the <code>&lt;body&gt;</code>. Utility classes allow paragraphs to be used as a lede or as justified text.</p>
+			<h2>Classes</h2>
+			<dl>
+  			<dt>.paragraphs-justified</dt>
+  			<dd>Applied to a containing element to a make all child paragraphs justified.</dd>
+  			<dt>.justified</dt>
+  			<dd>Applied to a <code>&lt;p&gt;</code> tag to justify that paragraph.</dd>
+  			<dt>.lede</dt>
+  			<dd>Applied to a <code>&lt;p&gt;</code> tag to display the paragraph as a lede, with increased font size and line height. The line height and font size are the same as that for <a href="quotes.html">pull quotes</a>.</dd>
+			</dl>
 		</section>
-		<section class="main links-underlined demo paragraphs-justified">
+		<section class="main links-underlined demo">
 			<h1>Demo</h1>
-			<h2>Dolorem id Sapiente in Sed</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus. Cras odio mauris, varius nec tempor nec, elementum eget augue. Vivamus pretium ante sed ex ultrices semper. Donec ante diam, convallis at rutrum sit amet, sodales nec est. Integer tincidunt felis luctus placerat fermentum. Duis et felis mi. Mauris sed faucibus neque. Morbi facilisis blandit est, vel pellentesque nisi elementum ut.</p>
+			<h2>Lede</h2>
+			<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus. Cras odio mauris, varius nec tempor nec, elementum eget augue. Vivamus pretium ante sed ex ultrices semper. Donec ante diam, convallis at rutrum sit amet, sodales nec est. Integer tincidunt felis luctus placerat fermentum.</p>
+			<h2>Regular</h2>
 			<p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
-			<h3>Pariatur Alias Reprehenderit Soluta Dolor</h3>
 			<p>Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas quis nisi sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.</p>
-			<h4>Et Omnis Officia Sint</h4>
-			<p>Dolorum nobis deleniti. Sunt nobis doloremque ab eveniet eum earum sunt. Iure dolorem libero dolorum labore ad et magni. Voluptatibus est reiciendis dignissimos laborum quia.</p>
-			<p>Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
-			<h5>Molestiae Soluta Repellat Rerum Commodi</h5>
-			<p>In fringilla consectetur lorem varius bibendum. Pellentesque egestas eros lectus, eu gravida eros imperdiet vel. Nullam finibus quam eget nisi vehicula tempor. Etiam interdum odio ligula, ac imperdiet eros cursus sed. Aliquam a convallis orci, eu aliquam dui.</p>
-			<p>Etiam fermentum efficitur nisl, eu tempor eros lobortis et. Sed dapibus nisi eget euismod tincidunt. Aenean mattis imperdiet ex, gravida rutrum quam. Praesent condimentum, augue nec elementum ultricies, arcu magna convallis dui, id accumsan ex diam in tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur non metus et enim iaculis imperdiet.</p>
-			<h6>Repellendus Nesciunt Laboriosam Ut</h6>
-			<p>Et voluptatem sed sit alias sunt. Qui qui dolores ipsa aliquid est dolor. Labore totam sit repellendus illo quod. Mollitia id voluptatem rerum. Soluta asperiores dolores ullam deleniti provident.</p>
-			<p>Phasellus a metus nisl. Pellentesque condimentum lorem eu magna faucibus, ut volutpat felis pellentesque. Nulla a consectetur nisi. Sed eu nulla bibendum, tincidunt eros a, sodales sapien. Cras scelerisque vehicula massa, euismod hendrerit nunc suscipit in. Ut in tortor vitae ligula eleifend tristique ac vel ex.</p>
+			<h2>Justified</h2>
+			<p class="justified">Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
+			<p class="justified">Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
 		</section>
 		<!-- COMMON FOOTER -->
 		<footer>

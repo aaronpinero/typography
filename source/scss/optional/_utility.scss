@@ -22,7 +22,8 @@ i {
 pre {
   font-family:$tyfy-mono;
 }
-small {
+small,
+.font-size-sm {
   font-size:$tyfy-font-size-sm;
 }
 strong {
