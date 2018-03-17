@@ -3,8 +3,10 @@
   margin-top:0;
   margin-bottom:0;
 }
-body {
-  @include sibling-margins(on);
+@if $tyfy-margins-on {
+  body {
+    @include sibling-margins(on);
+  }
 }
 hr {
   margin-bottom:$tyfy-spacing-large;

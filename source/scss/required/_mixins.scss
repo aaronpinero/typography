@@ -54,6 +54,19 @@
       margin-top:$measure;
     }
   }
+  @else if $context == lists {
+    // lists
+    dl, ol, ul {
+      * + * {
+        margin-top:$measure;
+      }
+    }
+    dl {
+      * + dd {
+        margin-top:0;
+      }
+    }
+  }
   @else {
     // everything
     * + * {
@@ -66,21 +79,17 @@
     // everything
     @include set-sibling-margins(all,$tyfy-spacing-standard);
     // lists
-    ol, ul {
-      @include set-sibling-margins(all,$tyfy-spacing-standard/2);
-    }
-    dl {
-      @include set-sibling-margins(all,$tyfy-spacing-standard/2);
-      * + dd {
-        margin-top:0rem;
-      }
-    }
+    @include set-sibling-margins(lists,$tyfy-spacing-standard/2);
     // headings
     @include set-sibling-margins(headings,$tyfy-spacing-large);
   }
   @else {
     // everything
     @include set-sibling-margins(all,0rem);
+    // lists
+    @include set-sibling-margins(lists,0rem);
+    // headings
+    @include set-sibling-margins(headings,0rem);
   }
 }
 
