@@ -133,6 +133,7 @@ ul {
       flex-wrap:wrap;
       padding-left:0;
       li {
+        box-sizing:border-box;
         margin-left:$tyfy-indent-standard;
         width:calc(50% - #{$tyfy-indent-standard} - #{(0.5 * $tyfy-spacing-large)});
         &:nth-child(2) {

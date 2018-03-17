@@ -48,15 +48,10 @@ header.brand {
       line-height:leading($tyfy-font-size-h5,heading);
     }
     ul {
-      margin-left:grid(-1);
-      margin-right:grid(-1);
       margin-top:grid(1);
       padding-bottom:grid(1);
       padding-left:0;
       li {
-        margin:0;
-        padding-left:grid(1);
-        padding-right:grid(1);
         a {
           border-top:grid(0.25) rgba(white,0.05) solid;
           display:block;
