@@ -16,9 +16,9 @@
   			<dt>.list-nobullet</dt>
   			<dd>Applied to an unordered list to remove the bullets and left-hand padding. When using this class, you can add the <code>list-indented</code> class to more clearly identify individual list items. The <code>list-indented</code> class indents all lines after the first line in each list item.</dd>
   			<dt>.list-cols-2, .list-cols-3</dt>
-  			<dd>Applied to ordered and unordered lists to display items in columns. These classes use CSS columns; columns are read top to bottom and then left to right. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>.</dd>
+  			<dd>Applied to ordered and unordered lists to display items in columns. These classes use CSS columns; columns are read top to bottom and then left to right. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths.</dd>
   			<dt>.list-grid-2, .list-grid-3, .list-grid-4</dt>
-  			<dd>Applied to ordered and unordered lists to display items in rows. These classes use CSS flexbox; rows are read left to right and then top to bottom. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>.</dd>
+  			<dd>Applied to ordered and unordered lists to display items in rows. These classes use CSS flexbox; rows are read left to right and then top to bottom. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths.</dd>
 			</dl>
 			<h2>Related Variables</h2>
 			<dl>
@@ -29,9 +29,15 @@
   			<dt>$tyfy-spacing-standard</dt>
   			<dd>$tyfy-spacing-standard is the margin between lists and other elements. Inside lists, $tyfy-spacing-standard/2 is the spacing between list items.</dd>
   			<dt>$tyfy-indent-standard</dt>
-  			<dd>The amount of indentation for list items, definition list definitions, and indented text using the <code>indented</code> class; applied using padding-left.</dd>
+  			<dd>The amount of indentation for list items, definition list definitions, and indented text using the <code>list-indented</code> class.</dd>
   			<dt>$tyfy-font-base</dt>
   			<dd>Lists inherit this font family from the <code>&lt;body&gt;</code>.</dd>
+				<dt>$tyfy-break-list-cols-2</dt>
+				<dd>Above this em-based screen width grid and column lists can be 2 columns</dd>
+				<dt>$tyfy-break-list-cols-3</dt>
+				<dd>Above this em-based screen width grid and column lists can be 3 columns</dd>
+				<dt>$tyfy-break-list-cols-4</dt>
+				<dd>Above this em-based screen width grid and column lists can be 4 columns</dd>
 			</dl>
 		</section>
 		<section class="main links-underlined demo">

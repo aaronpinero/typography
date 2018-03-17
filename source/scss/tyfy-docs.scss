@@ -124,9 +124,9 @@ section.demo.reverse {
 
 #lists-demo {
   @include sibling-margins(off);
-  background-color:#f6f6f6;
-  border:1px #eee solid;
+  border:2px dashed darken($tyfy-color-background,10%);
   border-radius:grid(0.5);
+  box-shadow:inset 0px 0px grid(2) rgba(0,0,0,0.05);
   display:flex;
   flex-wrap:wrap;
   padding:grid(1) grid(2);
@@ -142,7 +142,7 @@ section.demo.reverse {
     }
     &.form-control-type {
       @media (min-width:55em) {
-        border-right:1px #eee solid;
+        border-right:2px dashed darken($tyfy-color-background,10%);
       }
     }
     &.form-control-classes {
