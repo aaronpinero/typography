@@ -18,6 +18,8 @@
 				<dd>A mixin for setting the value of the vertical margin between adjacent siblings. The <code>all</code> context employs the lobotomized owl selector for margins between all elements. The <code>headings</code> context applies margin between a heading and a preceding non-heading element. The <code>lists</code> context applies margin between child element of definition, ordered, and unordered lists.</dd>
 				<dt>@mixin sibling-margins ($state:on)</dt>
 				<dd>A mixin for turning the vertical margin between adjacent siblings on an off. It depends on the <code>set-sibling-margins</code> mixin.</dd>
+				<dt>@mixin button ($color_default:$tyfy-color-link-default,$color_active:darken($tyfy-color-link-default,10%))</dt>
+				<dd>A mixin for displaying a link or other tag as a button.</dd>
 			</dl>
 		</section>
 		<%include footer.html%>

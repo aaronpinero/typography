@@ -17,6 +17,8 @@
   			<dd>Applied to a <code>&lt;p&gt;</code> tag to justify that paragraph.</dd>
   			<dt>.lede</dt>
   			<dd>Applied to a <code>&lt;p&gt;</code> tag to display the paragraph as a lede, with increased font size and line height. The line height and font size are the same as that for <a href="quotes.html">pull quotes</a>.</dd>
+  			<dt>.cols-2</dt>
+  			<dd>Applied to a containing element to a make child content display in 2 columns using <span class="smallcaps">CSS</span> columns. The style is responsive and reduce to a single column for small screen widths.</dd>
 			</dl>
 		</section>
 		<section class="main links-underlined demo">
@@ -29,6 +31,11 @@
 			<h2>Justified</h2>
 			<p class="justified">Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
 			<p class="justified">Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
+			<h2>Two Columns</h2>
+			<div class="cols-2">
+			  <p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
+        <p>Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
+			</div>
 		</section>
 		<%include footer.html%>
 	</body>

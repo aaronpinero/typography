@@ -35,4 +35,7 @@ a {
       border-bottom-width:2px;
     }
   }
+  &[href].link-button {
+    @include button;
+  }
 }

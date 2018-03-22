@@ -74,6 +74,7 @@
     }
   }
 }
+
 @mixin sibling-margins ($state:on) {
   @if $state == on {
     // everything
@@ -106,3 +107,37 @@
   }
 }
 
+@mixin button($color_default:$tyfy-color-link-default,$color_active:darken($tyfy-color-link-default,10%)) {
+  background-color:$color_default;
+  border-radius:grid(0.25);
+  color:white;
+  cursor:pointer;
+  display:inline-block;
+  font-size:inherit;
+  line-height:inherit;
+  margin:0;
+  padding:grid(0.5) grid(1.5);
+  text-decoration:none;
+  text-shadow:0 1px 1px rgba(black,0.2);
+  transition:background-color 0.25s, box-shadow 0.25s;
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    border:none !important;
+    color:#fff;
+    text-decoration:none;
+  }
+  &:hover {
+    background-color:$color_active;
+    background-image:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+    filter:progid:dximagetransform.microsoft.gradient(startColorstr="#00000000",endColorstr="#1a000000",GradientType=0);
+  }
+  &:active {
+    background-color:$color_active;
+    box-shadow:0 0 0 1px rgba(0,0,0,0.15) inset, 0 0 6px rgba(0,0,0,0.2) inset;
+  }
+  &:focus {
+    outline:none;
+  }
+}

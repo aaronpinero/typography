@@ -46,3 +46,6 @@ span {
     letter-spacing:0.05em;
   }
 }
+.button {
+  @include button;
+}
