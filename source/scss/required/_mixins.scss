@@ -107,7 +107,7 @@
   }
 }
 
-@mixin button($color_default:$tyfy-color-link-default,$color_active:darken($tyfy-color-link-default,10%)) {
+@mixin button($color_default:$tyfy-color-link-default,$color_active:$tyfy-color-link-active) {
   background-color:$color_default;
   border-radius:grid(0.25);
   color:white;
