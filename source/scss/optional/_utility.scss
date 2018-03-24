@@ -22,9 +22,8 @@ i {
 pre {
   font-family:$tyfy-mono;
 }
-small,
-.font-size-sm {
-  font-size:$tyfy-font-size-sm;
+small {
+  font-size:100%/$tyfy-font-size-scalar;
 }
 strong {
   font-weight:700;
