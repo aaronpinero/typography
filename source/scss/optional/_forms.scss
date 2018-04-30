@@ -1,20 +1,14 @@
 // basic styles
-form {
-  display:block;
-  font-family:inherit;
-  font-size:$tyfy-font-size-base;
-}
 fieldset {
   border:grid(0.125) solid $tyfy-color-border;
   border-radius:4px;
   display:block;
-  font-family:inherit;
-  font-size:$tyfy-font-size-base;
   margin-left:0;
   margin-right:0;
   padding:grid(1.375) grid(1.875) grid(1.875) grid(1.875);
   legend {
     color:lighten($tyfy-color-foreground,25%);
+    font-family:$tyfy-sans;
     font-size:scale(1);
     font-weight:bold;
     line-height:leading(scale(1),base);
@@ -57,10 +51,18 @@ label {
   font-size:scale(0);
   font-weight:bold;
   line-height:leading(scale(0),base);
-  &.option {
-    display:inline-block;
+  &.label-option {
     font-weight:normal;
+  }
+  .label-option + &.label-option {
     margin-top:0;
+  }
+  &.label-inline {
+    display:inline-block;
+    margin-top:0;
+  }
+  form & + * {
+    margin-top:$tyfy-spacing-standard / 2;
   }
 }
 
@@ -69,12 +71,12 @@ label {
   border:grid(0.125) solid $tyfy-color-border;
   border-radius:2px;
   color:$tyfy-color-foreground;
+  font-family:$tyfy-sans;
 }
 %tyfy_form_textinput {
   background-color:white;
   box-shadow:0 1px 1px rgba(0,0,0,0.1) inset;
   color:$tyfy-color-foreground;
-  font-family:$tyfy-sans;
   line-height:leading(scale(0),base);
   padding:grid(0.625);
   transition:border $tyfy-transition-duration-hover, box-shadow $tyfy-transition-duration-hover;
@@ -104,9 +106,6 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
   @extend %tyfy_form_element;
-  label + & {
-    margin-top:$tyfy-spacing-standard / 2;
-  }
 }
 textarea,
 input[type="text"],
@@ -133,6 +132,7 @@ input[type="submit"] {
   @include button;
   border:none;
   display:inline-block;
+  font-family:$tyfy-sans;
   width:auto;
 }
 

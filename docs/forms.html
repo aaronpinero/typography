@@ -55,23 +55,25 @@
 			<h2>Classes</h2>
 			<dl>
   			<dt>.tyfy-select</dt>
-  			<dd>Apply to a <code>div</code> element that contains a <code>select</code> element.</dd>
-  			<dt>.option</dt>
-  			<dd>Apply to a <code>label</code> element is used adjacent to or to encapsulate a radio button or checkbox input.</dd>
+  			<dd>Apply to a <code>div</code> that contains a <code>select</code> element.</dd>
+  			<dt>.label-option</dt>
+  			<dd>Apply to a <code>label</code> when used adjacent to or to encapsulate a radio button or checkbox input.</dd>
+  			<dt>.label-inline</dt>
+  			<dd>Apply to a <code>label</code> to display as an inline-block instead of block element.</dd>
 			</dl>
 		</section>
 		<section class="main links-underlined demo">
 			<h1>Demo</h1>
 			<form>
-  			<div class="form-element">
+  			<div>
     			<label>Name</label>
     			<input type="text" name="name">
   			</div>
-  			<div class="form-element">
+  			<div>
     			<label>Age</label>
     			<input type="number" name="age">
   			</div>
-  			<div class="form-element">
+  			<div>
     			<label>Favorite Color</label>
     			<div class="tyfy-select">
       		  <select name="color">
@@ -90,10 +92,19 @@
   			</div>
   			<fieldset>
   			  <legend>True/False Questions</legend>
-    			<div class="form-element">
+    			<div>
       			<label>The sky is red.</label>
-      			<label class="option"><input type="radio" value="true"> True</label>
-      			<label class="option"><input type="radio" value="false"> False</label>
+      			<div>
+      			  <label class="label-option label-inline"><input type="radio" name="sky" value="true"> True</label>
+              <label class="label-option label-inline"><input type="radio" name="sky" value="false"> False</label>
+      			</div>
+    			</div>
+    			<div>
+      			<label>Roses are blue.</label>
+      			<ul class="list-nobullet sibling-margins-off">
+        			<li><label class="label-option"><input type="radio" name="roses" value="true"> True</label></li>
+              <li><label class="label-option"><input type="radio" name="roses" value="false"> False</label></li>
+      			</ul>
     			</div>
   			</fieldset>
   			<p><input type="submit" name="submit" value="Submit Form"></p>
