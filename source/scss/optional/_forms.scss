@@ -3,17 +3,13 @@ form {
   display:block;
   font-family:inherit;
   font-size:$tyfy-font-size-base;
-  margin:0;
-  padding:0;
 }
 fieldset {
   display:block;
   font-family:inherit;
   font-size:$tyfy-font-size-base;
-  margin:0;
-  padding:0;
   legend {
-    color:lighten($text-body,25%);
+    color:lighten($tyfy-color-foreground,25%);
     font-size:scale(0);
     font-weight:bold;
     line-height:leading(scale(0),base);
@@ -49,7 +45,7 @@ input[type="submit"] {
   width:100%;
 }
 label {
-  color:lighten($text-body,25%);
+  color:lighten($tyfy-color-foreground,25%);
   display:block;
   font-size:scale(0);
   font-weight:bold;
@@ -135,13 +131,13 @@ input[type="submit"] {
   @extend %tyfy_form_textinput;
   padding:grid(0.625);
   position:relative;
-  &:after {
+  &::after {
     content:charcode($tyfyicons-angle-down);
     font-family:$tyfy-symbol;
     position:absolute;
     right:grid(0.75);
     top:grid(0.75);
-    z-index: -1;
+    z-index:-1;
   }
   select {
     appearance:menulist-text;
