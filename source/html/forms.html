@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<%include head.html%>
+		<title>Tyfy - Forms</title>
+	</head>
+	<body class="">
+		<%include header.html%>
+		<section class="main links-underlined">
+			<h1>Forms</h1>
+			<p><strong class="tyfy">Tyfy</strong> provides basic styles for form elements. There are helper classes provided for styling <code>select</code> elements and labels that are used in conjunction with checkboxes and radio buttons.</p>
+			<h2>Classes</h2>
+			<dl>
+  			<dt>.tyfy-select</dt>
+  			<dd>Apply to a <code>div</code> element that contains a <code>select</code> element.</dd>
+  			<dt>.option</dt>
+  			<dd>Apply to a <code>label</code> element is used adjacent to or to encapsulate a radio button or checkbox input.</dd>
+			</dl>
+		</section>
+		<section class="main links-underlined demo">
+			<h1>Demo</h1>
+			<form>
+  			<div class="form-element">
+    			<label>Name</label>
+    			<input type="text" name="name">
+  			</div>
+  			<div class="form-element">
+    			<label>Age</label>
+    			<input type="number" name="age">
+  			</div>
+  			<div class="form-element">
+    			<label>Favorite Color</label>
+    			<div class="tyfy-select">
+      		  <select name="color">
+        		  <option value="red">Red</option>
+              <option value="orange">Orange</option>
+              <option value="yellow">Yellow</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="purple">Purple</option>
+              <option value="white">White</option>
+              <option value="gold">Gold</option>
+              <option value="silver">Silver</option>
+              <option value="black">Black</option>
+            </select>
+    			</div>
+  			</div>
+  			<fieldset>
+  			  <legend>True/False Questions</legend>
+    			<div class="form-element">
+      			<label>The sky is red.</label>
+      			<label class="option"><input type="radio" value="true"> True</label>
+      			<label class="option"><input type="radio" value="false"> False</label>
+    			</div>
+  			</fieldset>
+  			<p><input type="submit" name="submit" value="Submit Form"></p>
+			</form>
+		</section>
+		<%include footer.html%>
+	</body>
+</html>

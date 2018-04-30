@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link href="https://fonts.googleapis.com/css?family=Overpass+Mono|Overpass:400,400i,600,600i,700,700i,800,800i|Zilla+Slab:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="../dist/style/tyfy.css">
+		<link rel="stylesheet" href="../dist/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Forms</title>
+	</head>
+	<body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand sibling-margins-off reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="list-nobullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="mixins.html">Mixins</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+		<section class="main links-underlined">
+			<h1>Forms</h1>
+			<p><strong class="tyfy">Tyfy</strong> provides basic styles for form elements. There are helper classes provided for styling <code>select</code> elements and labels that are used in conjunction with checkboxes and radio buttons.</p>
+			<h2>Classes</h2>
+			<dl>
+  			<dt>.tyfy-select</dt>
+  			<dd>Apply to a <code>div</code> element that contains a <code>select</code> element.</dd>
+  			<dt>.option</dt>
+  			<dd>Apply to a <code>label</code> element is used adjacent to or to encapsulate a radio button or checkbox input.</dd>
+			</dl>
+		</section>
+		<section class="main links-underlined demo">
+			<h1>Demo</h1>
+			<form>
+  			<div class="form-element">
+    			<label>Name</label>
+    			<input type="text" name="name">
+  			</div>
+  			<div class="form-element">
+    			<label>Age</label>
+    			<input type="number" name="age">
+  			</div>
+  			<div class="form-element">
+    			<label>Favorite Color</label>
+    			<div class="tyfy-select">
+      		  <select name="color">
+        		  <option value="red">Red</option>
+              <option value="orange">Orange</option>
+              <option value="yellow">Yellow</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="purple">Purple</option>
+              <option value="white">White</option>
+              <option value="gold">Gold</option>
+              <option value="silver">Silver</option>
+              <option value="black">Black</option>
+            </select>
+    			</div>
+  			</div>
+  			<fieldset>
+  			  <legend>True/False Questions</legend>
+    			<div class="form-element">
+      			<label>The sky is red.</label>
+      			<label class="option"><input type="radio" value="true"> True</label>
+      			<label class="option"><input type="radio" value="false"> False</label>
+    			</div>
+  			</fieldset>
+  			<p><input type="submit" name="submit" value="Submit Form"></p>
+			</form>
+		</section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../dist/script/docs-nav.js"></script>
+		<!--/ COMMON FOOTER -->
+	</body>
+</html>
