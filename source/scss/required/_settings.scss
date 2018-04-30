@@ -58,6 +58,9 @@ $tyfy-color-link-active-reverse:		adjust-hue($tyfy-color-link-default-reverse,-1
 $tyfy-color-border-reverse:					fade-out(reverse($tyfy-color-text-body),0.85) !default;
 $tyfy-color-table-stripe-reverse:		fade-out(reverse($tyfy-color-text-body),0.95) !default;
 
+// icons
+$tyfyicons-path:              "../fonts" !default; // do not add a trailing /
+
 // icon character codes 
 // these are copied from the scss file that is output by running `npm build icons`
 // they are included here so tyfyicons is not a requirement for using tyfy;

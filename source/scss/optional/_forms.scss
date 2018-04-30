@@ -1,0 +1,153 @@
+// basic styles
+form {
+  display:block;
+  font-family:inherit;
+  font-size:$tyfy-font-size-base;
+  margin:0;
+  padding:0;
+}
+fieldset {
+  display:block;
+  font-family:inherit;
+  font-size:$tyfy-font-size-base;
+  margin:0;
+  padding:0;
+  legend {
+    color:lighten($text-body,25%);
+    font-size:scale(0);
+    font-weight:bold;
+    line-height:leading(scale(0),base);
+  }
+}
+button,
+select,
+textarea,
+input[type="text"],
+input[type="file"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  box-sizing:border-box;
+  display:block;
+  font-size:100%;
+  margin:0;
+  outline:none;
+  vertical-align:middle;
+  width:100%;
+}
+label {
+  color:lighten($text-body,25%);
+  display:block;
+  font-size:scale(0);
+  font-weight:bold;
+  line-height:leading(scale(0),base);
+  &.option {
+    display:inline-block;
+    font-weight:normal;
+    margin-top:0;
+  }
+}
+
+// placeholder selectors for forms
+%tyfy_form_element {
+  border:grid(0.125) solid $tyfy-color-border;
+  border-radius:2px;
+  color:$tyfy-color-foreground;
+}
+%tyfy_form_textinput {
+  background-color:white;
+  box-shadow:0 1px 1px rgba(0,0,0,0.1) inset;
+  color:$tyfy-color-foreground;
+  font-family:$tyfy-sans;
+  line-height:leading(scale(0),base);
+  padding:grid(0.625);
+  transition:border $tyfy-transition-duration-hover, box-shadow $tyfy-transition-duration-hover;
+  width:100%;
+  &:focus {
+    border:grid(0.125) solid $tyfy-color-link-active;
+    box-shadow:0 1px 1px rgba(0,0,0,0.2) inset;
+  }
+}
+
+// extended styles
+select,
+textarea,
+input[type="text"],
+input[type="file"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  @extend %tyfy_form_element;
+}
+textarea,
+input[type="text"],
+input[type="file"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  @extend %tyfy_form_textinput;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  @include button;
+  border:none;
+  display:inline-block;
+  width:auto;
+}
+
+// special select element
+.tyfy-select {
+  @extend %tyfy_form_textinput;
+  padding:grid(0.625);
+  position:relative;
+  &:after {
+    content:charcode($tyfyicons-angle-down);
+    font-family:$tyfy-symbol;
+    position:absolute;
+    right:grid(0.75);
+    top:grid(0.75);
+    z-index: -1;
+  }
+  select {
+    appearance:menulist-text;
+    -moz-appearance:menulist-text;
+    background:transparent;
+    border:none;
+  }
+}
+      
