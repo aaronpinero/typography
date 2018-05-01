@@ -1,72 +1,122 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<%include head.html%>
-		<title>Tyfy - Forms</title>
-	</head>
-	<body class="">
-		<%include header.html%>
-		<section class="main links-underlined">
-			<h1>Forms</h1>
-			<p><strong class="tyfy">Tyfy</strong> provides basic styles for form elements. There are helper classes provided for styling <code>select</code> elements and labels that are used in conjunction with checkboxes and radio buttons.</p>
-			<h2>Classes</h2>
-			<dl>
-  			<dt>.tyfy-select</dt>
-  			<dd>Apply to a <code>div</code> that contains a <code>select</code> element.</dd>
-  			<dt>.label-option</dt>
-  			<dd>Apply to a <code>label</code> when used adjacent to or to encapsulate a radio button or checkbox input.</dd>
-  			<dt>.label-inline</dt>
-  			<dd>Apply to a <code>label</code> to display as an inline-block instead of block element.</dd>
-			</dl>
-		</section>
-		<section class="main links-underlined demo">
-			<h1>Demo</h1>
-			<form>
-  			<div>
-    			<label>Name</label>
-    			<input type="text" name="name">
-  			</div>
-  			<div>
-    			<label>Age</label>
-    			<input type="number" name="age">
-  			</div>
-  			<div>
-    			<label>Favorite Color</label>
-    			<div class="tyfy-select">
-      		  <select name="color">
-        		  <option value="red">Red</option>
-              <option value="orange">Orange</option>
-              <option value="yellow">Yellow</option>
-              <option value="green">Green</option>
-              <option value="blue">Blue</option>
-              <option value="purple">Purple</option>
-              <option value="white">White</option>
-              <option value="gold">Gold</option>
-              <option value="silver">Silver</option>
-              <option value="black">Black</option>
-            </select>
-    			</div>
-  			</div>
-  			<fieldset>
-  			  <legend>True/False Questions</legend>
-    			<div>
-      			<label>The sky is red.</label>
-      			<div>
-      			  <label class="label-option label-inline"><input type="radio" name="sky" value="true"> True</label>
-              <label class="label-option label-inline"><input type="radio" name="sky" value="false"> False</label>
-      			</div>
-    			</div>
-    			<div>
-      			<label>Roses are blue.</label>
-      			<ul class="list-nobullet sibling-margins-off">
-        			<li><label class="label-option"><input type="radio" name="roses" value="true"> True</label></li>
-              <li><label class="label-option"><input type="radio" name="roses" value="false"> False</label></li>
-      			</ul>
-    			</div>
-  			</fieldset>
-  			<p><input type="submit" name="submit" value="Submit Form"></p>
-			</form>
-		</section>
-		<%include footer.html%>
-	</body>
+  <head>
+    <%include head.html%>
+    <title>Tyfy - Forms</title>
+  </head>
+  <body class="">
+    <%include header.html%>
+    <section class="main links-underlined">
+      <h1>Forms</h1>
+      <p><strong class="tyfy">Tyfy</strong> provides basic styles for form elements. The styles are intended for simple forms where each form element consists of a label-input pair. Standard element spacing has been adjusted so labels are positioned more closely to their associated input than to surrounding elements. There are helper classes for <code>select</code> and <code>label</code> elements that provide some presentation options.</p>
+      <h2>Classes</h2>
+      <dl>
+        <dt>.tyfy-select</dt>
+        <dd>Apply to a <code>div</code> that contains a <code>select</code> element.</dd>
+        <dt>.label-option</dt>
+        <dd>Apply to a <code>label</code> when used adjacent to or to encapsulate a radio button or checkbox input.</dd>
+        <dt>.label-inline</dt>
+        <dd>Apply to a <code>label</code> to display as an inline-block instead of block element.</dd>
+      </dl>
+    </section>
+    <section class="main links-underlined demo">
+      <h1>Demo</h1>
+      <div class="tabs-container">
+        <h2 class="tab-label">Example</h2>
+        <form>
+          <div>
+            <label>Name</label>
+            <input type="text" name="name">
+          </div>
+          <div>
+            <label>Age</label>
+            <input type="number" name="age">
+          </div>
+          <div>
+            <label>Favorite Color</label>
+            <div class="tyfy-select">
+              <select name="color">
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+                <option value="white">White</option>
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+                <option value="black">Black</option>
+              </select>
+            </div>
+          </div>
+          <fieldset>
+            <legend>True/False Questions</legend>
+            <div>
+              <label>The sky is red.</label>
+              <div>
+                <label class="label-option label-inline"><input type="radio" name="sky" value="true"> True</label>
+                <label class="label-option label-inline"><input type="radio" name="sky" value="false"> False</label>
+              </div>
+            </div>
+            <div>
+              <label>Roses are blue.</label>
+              <ul class="list-nobullet sibling-margins-off">
+                <li><label class="label-option"><input type="radio" name="roses" value="true"> True</label></li>
+                <li><label class="label-option"><input type="radio" name="roses" value="false"> False</label></li>
+              </ul>
+            </div>
+          </fieldset>
+          <p><input type="submit" name="submit" value="Submit Form"></p>
+        </form>
+        <h2 class="tab-label">Code</h2>
+        <pre style="width:100%; overflow:auto;"><code>&lt;form&gt;
+  &lt;div&gt;
+    &lt;label&gt;Name&lt;/label&gt;
+    &lt;input type="text" name="name"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label&gt;Age&lt;/label&gt;
+    &lt;input type="number" name="age"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label&gt;Favorite Color&lt;/label&gt;
+    &lt;div class="tyfy-select"&gt;
+      &lt;select name="color"&gt;
+        &lt;option value="red"&gt;Red&lt;/option&gt;
+        &lt;option value="orange"&gt;Orange&lt;/option&gt;
+        &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
+        &lt;option value="green"&gt;Green&lt;/option&gt;
+        &lt;option value="blue"&gt;Blue&lt;/option&gt;
+        &lt;option value="purple"&gt;Purple&lt;/option&gt;
+        &lt;option value="white"&gt;White&lt;/option&gt;
+        &lt;option value="gold"&gt;Gold&lt;/option&gt;
+        &lt;option value="silver"&gt;Silver&lt;/option&gt;
+        &lt;option value="black"&gt;Black&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;True/False Questions&lt;/legend&gt;
+    &lt;div&gt;
+      &lt;label&gt;The sky is red.&lt;/label&gt;
+      &lt;div&gt;
+        &lt;label class="label-option label-inline"&gt;&lt;input type="radio" name="sky" value="true"&gt; True&lt;/label&gt;
+        &lt;label class="label-option label-inline"&gt;&lt;input type="radio" name="sky" value="false"&gt; False&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;label&gt;Roses are blue.&lt;/label&gt;
+      &lt;ul class="list-nobullet sibling-margins-off"&gt;
+        &lt;li&gt;&lt;label class="label-option"&gt;&lt;input type="radio" name="roses" value="true"&gt; True&lt;/label&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;label class="label-option"&gt;&lt;input type="radio" name="roses" value="false"&gt; False&lt;/label&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+  &lt;p&gt;&lt;input type="submit" name="submit" value="Submit Form"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+    </section>
+    <%include footer.html%>
+    <script src="../dist/script/tabs.js"></script>
+  </body>
 </html>
