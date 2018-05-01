@@ -6,7 +6,6 @@ My framework for applying elements of typographic style to web projects. See the
 
 * responsive iframe utility class
 * generic floated content utility classes
-* basic HTML form element styles and utility classes
 * sticky table headers option
 * remove jQuery dependency
 
