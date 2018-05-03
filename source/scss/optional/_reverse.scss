@@ -24,6 +24,25 @@
         color:$tyfy-color-link-active-reverse;
       }
     }
+    &.button {
+      &[href] {
+        color:white;
+        &:hover,
+        &:active {
+          color:white;
+        }
+      }
+    }
+    &.button-outline {
+      @include button-outline($tyfy-color-link-default-reverse,$tyfy-color-link-active-reverse);
+      &[href] {
+        color:$tyfy-color-link-default-reverse;
+        &:hover,
+        &:active {
+          color:$tyfy-color-link-active-reverse;
+        }
+      }
+    }
   }
   h1,
   h2,

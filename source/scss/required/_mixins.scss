@@ -108,36 +108,59 @@
 }
 
 @mixin button($color_default:$tyfy-color-link-default,$color_active:$tyfy-color-link-active) {
-  background-color:$color_default;
-  border-radius:tygrid(0.25);
-  color:white;
-  cursor:pointer;
-  display:inline-block;
-  font-size:inherit;
-  line-height:inherit;
-  margin:0;
-  padding:tygrid(0.5) tygrid(1.5);
-  text-decoration:none;
-  text-shadow:0 1px 1px rgba(black,0.2);
-  transition:background-color 0.25s, box-shadow 0.25s;
-  &:link,
-  &:visited,
-  &:hover,
-  &:active {
-    border:none !important;
-    color:#fff;
+  &[href] {
+    background-color:$color_default;
+    border:none;
+    border-radius:tygrid(0.25);
+    color:white;
+    cursor:pointer;
+    display:inline-block;
+    font-size:inherit;
+    line-height:inherit;
+    margin:0;
+    padding:tygrid(0.5) tygrid(1.5);
     text-decoration:none;
+    text-shadow:0 1px 1px rgba(black,0.2);
+    transition:background-color $tyfy-transition-duration-hover, box-shadow $tyfy-transition-duration-hover;
+    vertical-align:middle;
+    &:hover {
+      background-color:$color_active;
+      background-image:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+      filter:progid:dximagetransform.microsoft.gradient(startColorstr="#00000000",endColorstr="#1a000000",GradientType=0);
+    }
+    &:active {
+      background-color:$color_active;
+      box-shadow:0 0 0 1px rgba(0,0,0,0.15) inset, 0 0 6px rgba(0,0,0,0.2) inset;
+    }
+    &:focus {
+      outline:none;
+    }
   }
-  &:hover {
-    background-color:$color_active;
-    background-image:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
-    filter:progid:dximagetransform.microsoft.gradient(startColorstr="#00000000",endColorstr="#1a000000",GradientType=0);
-  }
-  &:active {
-    background-color:$color_active;
-    box-shadow:0 0 0 1px rgba(0,0,0,0.15) inset, 0 0 6px rgba(0,0,0,0.2) inset;
-  }
-  &:focus {
-    outline:none;
+}
+
+@mixin button-outline($color_default:$tyfy-color-link-default,$color_active:$tyfy-color-link-active) {
+  &[href] {
+    background-color:transparent;
+    border:tygrid(0.13) $color_default solid;
+    border-radius:tygrid(0.25);
+    color:$tyfy-color-link-default;
+    cursor:pointer;
+    display:inline-block;
+    font-size:inherit;
+    line-height:inherit;
+    margin:0;
+    padding:tygrid(0.37) tygrid(1.37);
+    text-decoration:none;
+    transition:border-color $tyfy-transition-duration-hover, color $tyfy-transition-duration-hover, background-color $tyfy-transition-duration-hover;
+    vertical-align:middle;
+    &:hover,
+    &:active {
+      background-color:rgba($color_active,0.1);
+      border-color:$color_active;
+      color:$tyfy-color-link-active;
+    }
+    &:focus {
+      outline:none;
+    }
   }
 }
