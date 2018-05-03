@@ -1,21 +1,21 @@
 // basic styles
 fieldset {
-  border:grid(0.125) solid $tyfy-color-border;
+  border:tygrid(0.125) solid $tyfy-color-border;
   border-radius:4px;
   display:block;
   margin-left:0;
   margin-right:0;
-  padding:grid(1.375) grid(1.875) grid(1.875) grid(1.875);
+  padding:tygrid(1.375) tygrid(1.875) tygrid(1.875) tygrid(1.875);
   legend {
     color:lighten($tyfy-color-foreground,25%);
     font-family:$tyfy-sans;
-    font-size:scale(1);
+    font-size:tyscale(1);
     font-weight:bold;
-    line-height:leading(scale(1),base);
-    margin-left:grid(-1);
-    margin-right:grid(-1);
-    padding-left:grid(1);
-    padding-right:grid(1);
+    line-height:tylead(tyscale(1),base);
+    margin-left:tygrid(-1);
+    margin-right:tygrid(-1);
+    padding-left:tygrid(1);
+    padding-right:tygrid(1);
     & + * {
       margin-top:0;
     }
@@ -52,9 +52,9 @@ input[type="submit"] {
 label {
   color:lighten($tyfy-color-foreground,25%);
   display:block;
-  font-size:scale(0);
+  font-size:tyscale(0);
   font-weight:bold;
-  line-height:leading(scale(0),base);
+  line-height:tylead(tyscale(0),base);
   &.label-option {
     font-weight:normal;
   }
@@ -72,7 +72,7 @@ label {
 
 // placeholder selectors for forms
 %tyfy_form_element {
-  border:grid(0.125) solid $tyfy-color-border;
+  border:tygrid(0.125) solid $tyfy-color-border;
   border-radius:2px;
   color:$tyfy-color-foreground;
   font-family:$tyfy-sans;
@@ -81,12 +81,12 @@ label {
   background-color:white;
   box-shadow:0 1px 1px rgba(0,0,0,0.1) inset;
   color:$tyfy-color-foreground;
-  line-height:leading(scale(0),base);
-  padding:grid(0.625);
+  line-height:tylead(tyscale(0),base);
+  padding:tygrid(0.625);
   transition:border $tyfy-transition-duration-hover, box-shadow $tyfy-transition-duration-hover;
   width:100%;
   &:focus {
-    border:grid(0.125) solid $tyfy-color-link-active;
+    border:tygrid(0.125) solid $tyfy-color-link-active;
     box-shadow:0 1px 1px rgba(0,0,0,0.2) inset;
   }
 }
@@ -143,16 +143,16 @@ input[type="submit"] {
 // special select element
 .tyfy-select {
   @extend %tyfy_form_element;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
-  padding:grid(0.625);
+  background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+  padding:tygrid(0.625);
   position:relative;
   &::after {
-    content:charcode($tyfyicons-angle-down);
+    content:tychar($tyfyicons-angle-down);
     font-family:$tyfy-symbol;
-    line-height:leading(scale(0),base);
+    line-height:tylead(tyscale(0),base);
     position:absolute;
-    right:grid(0.75);
-    top:grid(0.75);
+    right:tygrid(0.75);
+    top:tygrid(0.75);
     z-index:-1;
   }
   select {
@@ -160,7 +160,7 @@ input[type="submit"] {
     -moz-appearance:menulist-text;
     background:transparent;
     border:none;
-    line-height:leading(scale(0),base);
+    line-height:tylead(tyscale(0),base);
   }
   label + & {
     margin-top:$tyfy-spacing-standard / 2;

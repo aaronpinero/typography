@@ -8,7 +8,7 @@ th {
   font-size:$tyfy-font-size-base;
   font-variant-numeric:lining-nums tabular-nums;
   font-feature-settings:"lnum", "tnum";
-  line-height:leading($tyfy-font-size-base,base);
+  line-height:tylead($tyfy-font-size-base,base);
   text-align:left;
   vertical-align:top;
   &[scope="col"] {
@@ -20,7 +20,7 @@ td {
   font-size:$tyfy-font-size-base;
   font-variant-numeric:lining-nums tabular-nums;
   font-feature-settings:"lnum", "tnum";
-  line-height:leading($tyfy-font-size-base,base);
+  line-height:tylead($tyfy-font-size-base,base);
   vertical-align:top;
 }
 
@@ -32,12 +32,12 @@ table.clean {
   th {
     border:none;
     margin:0;
-    padding-top:grid(0.5);
-    padding-bottom:grid(0.5);
+    padding-top:tygrid(0.5);
+    padding-bottom:tygrid(0.5);
   }
   * + td,
   * + th {
-    padding-left:grid(1);
+    padding-left:tygrid(1);
   }
 }
 
@@ -45,8 +45,8 @@ table.clean {
 table.striped {
   td,
   th {
-    padding-left:grid(1);
-    padding-right:grid(1);
+    padding-left:tygrid(1);
+    padding-right:tygrid(1);
   }
   tr:nth-child(2n) {
     td {
@@ -73,8 +73,8 @@ table.vertical-rules {
   td,
   th {
     border-right:1px $tyfy-color-border solid;
-    padding-left:grid(1);
-    padding-right:grid(1);
+    padding-left:tygrid(1);
+    padding-right:tygrid(1);
   }
   th[scope="row"] {
     border-right:2px $tyfy-color-border solid;
@@ -122,32 +122,32 @@ table {
   &.float-right {
     @media (min-width:$tyfy-break-floats) {
       box-sizing:border-box;
-      margin-bottom:grid(1);
-      width:calc(50% - #{grid(2)});
+      margin-bottom:tygrid(1);
+      width:calc(50% - #{tygrid(2)});
     }
   }
   &.float-left {
     @media (min-width:$tyfy-break-floats) {
       clear:left;
       float:left;
-      margin-right:grid(4);
+      margin-right:tygrid(4);
     }
   }
   &.float-right {
     @media (min-width:$tyfy-break-floats) {
       clear:right;
       float:right;
-      margin-left:grid(4);
+      margin-left:tygrid(4);
     }
   }
 }
 table.float-right + table.float-left {
   @media (min-width:$tyfy-break-floats) {
-    margin-right:grid(2);
+    margin-right:tygrid(2);
   }
 }
 table.float-left + table.float-right {
   @media (min-width:$tyfy-break-floats) {
-    margin-left:grid(2);
+    margin-left:tygrid(2);
   }
 }

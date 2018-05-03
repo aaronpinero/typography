@@ -31,28 +31,28 @@ h6 {
 }
 h1 {
   font-size:$tyfy-font-size-h1;
-  line-height:leading($tyfy-font-size-h1,heading);
+  line-height:tylead($tyfy-font-size-h1,heading);
 }
 h2 {
   font-size:$tyfy-font-size-h2;
-  line-height:leading($tyfy-font-size-h2,heading);
+  line-height:tylead($tyfy-font-size-h2,heading);
 }
 h3 {
   font-size:$tyfy-font-size-h3;
-  line-height:leading($tyfy-font-size-h3,heading);
+  line-height:tylead($tyfy-font-size-h3,heading);
 }
 h4 {
   font-size:$tyfy-font-size-h4;
-  line-height:leading($tyfy-font-size-h4,heading);
+  line-height:tylead($tyfy-font-size-h4,heading);
 }
 h5 {
   font-size:$tyfy-font-size-h5;
   font-style:italic;
-  line-height:leading($tyfy-font-size-h5,heading);
+  line-height:tylead($tyfy-font-size-h5,heading);
 }
 h6 {
   font-size:$tyfy-font-size-h6;
   letter-spacing:0.05em;
-  line-height:leading($tyfy-font-size-h6,heading);
+  line-height:tylead($tyfy-font-size-h6,heading);
   text-transform:uppercase;
 }

@@ -34,14 +34,14 @@ ul {
       &::before {
         color:$tyfy-color-text-light;
         font-family:$tyfy-symbol;
-        margin-right:grid(0.5);
+        margin-right:tygrid(0.5);
         position:absolute;
         right:100%;
         top:0;
       }
     }
     &.list-icons-angle li::before {
-      content:charcode($tyfyicons-angle-right-small);
+      content:tychar($tyfyicons-angle-right-small);
     }
   }
   &.list-nobullet {
@@ -102,14 +102,14 @@ ul {
       @include sibling-margins(off);
       columns:2;
       column-gap:$tyfy-spacing-large;
-      margin-bottom:grid(-1); // to balance out the bottom padding on the list items
+      margin-bottom:tygrid(-1); // to balance out the bottom padding on the list items
       padding-left:0;
       li {
         -webkit-column-break-inside:avoid;
         page-break-inside:avoid;
         break-inside:avoid;
         margin-left:$tyfy-indent-standard;
-        padding-bottom:grid(1);
+        padding-bottom:tygrid(1);
       }
       &.sibling-margins-off,
       .sibling-margins-off & {

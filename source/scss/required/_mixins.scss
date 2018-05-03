@@ -109,14 +109,14 @@
 
 @mixin button($color_default:$tyfy-color-link-default,$color_active:$tyfy-color-link-active) {
   background-color:$color_default;
-  border-radius:grid(0.25);
+  border-radius:tygrid(0.25);
   color:white;
   cursor:pointer;
   display:inline-block;
   font-size:inherit;
   line-height:inherit;
   margin:0;
-  padding:grid(0.5) grid(1.5);
+  padding:tygrid(0.5) tygrid(1.5);
   text-decoration:none;
   text-shadow:0 1px 1px rgba(black,0.2);
   transition:background-color 0.25s, box-shadow 0.25s;

@@ -1,5 +1,5 @@
 // calculate leading for a given fontsize
-@function leading($font-size,$leading-style) {
+@function tylead($font-size,$leading-style) {
   $adjustment_factor:$tyfy-leading-adjustment-base;
   @if $leading-style == tall {
     $adjustment_factor:$tyfy-leading-adjustment-tall;
@@ -20,12 +20,12 @@
 }
 
 // calculate a multiple of the base grid unit
-@function grid($multiplier) {
+@function tygrid($multiplier) {
   @return $tyfy-grid-unit * $multiplier;
 }
 
 // calculate a font size from the modular scale based on the base size and scalar value
-@function scale($exponent) {
+@function tyscale($exponent) {
   $i:0;
   $scale:$tyfy-font-size-base;
   @if $exponent < 0 {
@@ -44,18 +44,18 @@
 }
 
 // create a specific lightness of a color
-@function color($color,$lightness) {
+@function tycolor($color,$lightness) {
   @return hsl(hue($color),saturation($color),$lightness);
 }
 
 // create a color with the reverse lightness
-@function reverse($color) {
+@function tyreverse($color) {
   @return hsl(hue($color),saturation($color),(100% - lightness($color)));
 }
 
 // output character code strings properly for icon fonts
 // see https://github.com/sass/libsass/issues/1115
-@function charcode($code) {
+@function tychar($code) {
   /* stylelint-disable-next-line string-no-newline */
   @return unquote("\"") + unquote(str_insert($code,"\\",1)) + unquote("\"");
 }

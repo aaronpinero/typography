@@ -1,8 +1,8 @@
 // grid and spacing
-$tyfy-spacing-standard:				grid(2) !default;
-$tyfy-spacing-large:					grid(3) !default;
-$tyfy-indent-standard:				grid(3) !default;
-$tyfy-indent-small:						grid(2) !default;
+$tyfy-spacing-standard:				tygrid(2) !default;
+$tyfy-spacing-large:					tygrid(3) !default;
+$tyfy-indent-standard:				tygrid(3) !default;
+$tyfy-indent-small:						tygrid(2) !default;
 $tyfy-margins-on:             true !default;
 
 // font assignments
@@ -12,16 +12,16 @@ $tyfy-font-pullquote:					$tyfy-serif !default;
 $tyfy-font-table:							$tyfy-sans !default;
 
 // typographic scale
-$tyfy-font-size-sm:						scale(-1) !default;
-$tyfy-font-size-h6:						scale(0) !default;
-$tyfy-font-size-h5:						scale(1) !default;
-$tyfy-font-size-h4:						scale(2) !default;
-$tyfy-font-size-h3:						scale(3) !default;
-$tyfy-font-size-h2:						scale(4) !default;
-$tyfy-font-size-h1:						scale(6) !default;
+$tyfy-font-size-sm:						tyscale(-1) !default;
+$tyfy-font-size-h6:						tyscale(0) !default;
+$tyfy-font-size-h5:						tyscale(1) !default;
+$tyfy-font-size-h4:						tyscale(2) !default;
+$tyfy-font-size-h3:						tyscale(3) !default;
+$tyfy-font-size-h2:						tyscale(4) !default;
+$tyfy-font-size-h1:						tyscale(6) !default;
 
 // additional sizes
-$tyfy-font-size-pullquote:		scale(2) !default;
+$tyfy-font-size-pullquote:		tyscale(2) !default;
 
 // breakpoints
 $tyfy-break-floats:						40em !default;
@@ -43,20 +43,20 @@ $tyfy-color-text-head:							mix($tyfy-color-foreground,$tyfy-color-background,9
 $tyfy-color-text-light:							mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;
 $tyfy-color-text-code:							mix($tyfy-color-foreground,$tyfy-color-primary,45%) !default;
 $tyfy-color-text-pullquote:					adjust-hue($tyfy-color-primary,120deg) !default;
-$tyfy-color-link-default:						color($tyfy-color-primary,(lightness($tyfy-color-primary)-15%)) !default;
+$tyfy-color-link-default:						tycolor($tyfy-color-primary,(lightness($tyfy-color-primary)-15%)) !default;
 $tyfy-color-link-active:						adjust-hue($tyfy-color-link-default,-120deg) !default;
 $tyfy-color-border:									mix($tyfy-color-foreground,$tyfy-color-background,12%) !default;
 $tyfy-color-table-stripe:						mix($tyfy-color-foreground,$tyfy-color-background,5%) !default;
 
 // reverse colors
-$tyfy-color-text-body-reverse:			reverse($tyfy-color-text-body) !default;
-$tyfy-color-text-head-reverse:			reverse($tyfy-color-text-head) !default;
-$tyfy-color-text-light-reverse:			fade-out(reverse($tyfy-color-text-body),0.45) !default;
-$tyfy-color-text-pullquote-reverse:	color(adjust-hue($tyfy-color-primary,120deg),(lightness($tyfy-color-primary)+15%)) !default;
-$tyfy-color-link-default-reverse:		color($tyfy-color-primary,(lightness($tyfy-color-primary)+15%)) !default;
+$tyfy-color-text-body-reverse:			tyreverse($tyfy-color-text-body) !default;
+$tyfy-color-text-head-reverse:			tyreverse($tyfy-color-text-head) !default;
+$tyfy-color-text-light-reverse:			fade-out(tyreverse($tyfy-color-text-body),0.45) !default;
+$tyfy-color-text-pullquote-reverse:	tycolor(adjust-hue($tyfy-color-primary,120deg),(lightness($tyfy-color-primary)+15%)) !default;
+$tyfy-color-link-default-reverse:		tycolor($tyfy-color-primary,(lightness($tyfy-color-primary)+15%)) !default;
 $tyfy-color-link-active-reverse:		adjust-hue($tyfy-color-link-default-reverse,-120deg) !default;
-$tyfy-color-border-reverse:					fade-out(reverse($tyfy-color-text-body),0.85) !default;
-$tyfy-color-table-stripe-reverse:		fade-out(reverse($tyfy-color-text-body),0.95) !default;
+$tyfy-color-border-reverse:					fade-out(tyreverse($tyfy-color-text-body),0.85) !default;
+$tyfy-color-table-stripe-reverse:		fade-out(tyreverse($tyfy-color-text-body),0.95) !default;
 
 // icons
 $tyfyicons-path:              "../fonts" !default; // do not add a trailing /
@@ -65,7 +65,7 @@ $tyfyicons-path:              "../fonts" !default; // do not add a trailing /
 // these are copied from the scss file that is output by running `npm build icons`
 // they are included here so tyfyicons is not a requirement for using tyfy;
 // the initial slash (\) has been removed so the values are stored as strings rather than as the actual character;
-// the charcode($code) function can be used to output the string with the initial '\';
+// the tychar($code) function can be used to output the string with the initial '\';
 // these values can be overridden to allow a different icon font
 $tyfyicons-angle-down: 				"ea01" !default;
 $tyfyicons-angle-left: 				"ea02" !default;

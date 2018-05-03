@@ -54,18 +54,18 @@
 			<h1>Functions</h1>
 			<p><strong class="tyfy">Tyfy</strong> includes several custom <span class="smallcaps">SASS</span> functions. These functions were written to facilitate writing the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SCSS</span> files, but can also be used to help users who are including <strong class="tyfy">Tyfy</strong> in their web projects.</p>
 			<dl>
-				<dt>@function leading($font-size,$leading-style)</dt>
-				<dd>The leading function calculates a grid-based line height for a given font size and leading style option. The leading styles are <code>tall</code>, <code>base</code>, <code>heading</code>, and <code>short</code>. The font size provided must be in rem units, and the value returned is also in rem units.</dd>
-				<dt>@function grid($multiplier)</dt>
-				<dd>The grid function is used to make the <span class="smallcaps">SCSS</span> files easier to read. The function accepts a number and returns a value, in rem units, that is the base grid unit multiplied by the number provided.</dd>
-				<dt>@function scale($exponent)</dt>
-				<dd>The scale function facilitates use of the modular typographic scale by eliminating the task of calculating font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</dd>
-				<dt>@function color($color,$lightness)</dt>
-				<dd>The function accepts a color (in rgb or hexadecimal format) and a lightness value (0% to 100%), and converts the given color to the specified lightness.</dd>
-				<dt>@function reverse($color)</dt>
-				<dd>The function accepts a color (in rgb or hexadecimal format) and returns the same color but with the lightness value reversed.</dd>
-				<dt>@function charcode($code)</dt>
-				<dd>The function accepts a character code without the preceding slash (“\”) and adds it; this is done to get around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> and allow icon character codes to be more easily customized for different icon fonts.</dd>
+				<dt>@function tylead($font-size,$leading-style)</dt>
+				<dd>Accepts a font size and leading style option and calculates a grid-based line height. The leading style options are <code>tall</code>, <code>base</code>, <code>heading</code>, and <code>short</code>. The font size argument must be in rem units, and the value returned is also in rem units.</dd>
+				<dt>@function tygrid($multiplier)</dt>
+				<dd>Makes the <span class="smallcaps">SCSS</span> files easier to read. The function accepts a number and returns a value, in rem units, that is the base grid unit multiplied by the number argument.</dd>
+				<dt>@function tyscale($exponent)</dt>
+				<dd>Facilitates use of the modular typographic scale by eliminating the task of calculating font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</dd>
+				<dt>@function tycolor($color,$lightness)</dt>
+				<dd>Accepts a color (in rgb or hexadecimal format) and a lightness value (0% to 100%), and returns the given color converted to the specified lightness.</dd>
+				<dt>@function tyreverse($color)</dt>
+				<dd>Accepts a color (in rgb or hexadecimal format) and returns the same color with the lightness value reversed.</dd>
+				<dt>@function tychar($code)</dt>
+				<dd>Accepts a character code without the preceding slash (“\”) and adds it; this is done to get around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> and allow icon character codes to be more easily customized for different icon fonts.</dd>
 			</dl>
 		</section>
 		<!-- COMMON FOOTER -->

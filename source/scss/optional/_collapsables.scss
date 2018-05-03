@@ -9,45 +9,45 @@ h6.collapsable-processed {
   border-bottom:2px transparent solid;
   clear:both;
   cursor:pointer;
-  padding:grid(2) grid(6) grid(1) grid(2);
+  padding:tygrid(2) tygrid(6) tygrid(1) tygrid(2);
   position:relative;
   transition-duration:$tyfy-transition-duration-move;
   transition-property:padding-top;
   &::before {
     border-radius:50%;
-    content:charcode($tyfyicons-angle-up);
+    content:tychar($tyfyicons-angle-up);
     font-family:$tyfy-symbol;
     font-size:$tyfy-font-size-base;
     font-style:normal;
     font-weight:normal;
     position:absolute;
-    right:grid(2);
+    right:tygrid(2);
     text-align:center;
-    top:grid(2);
+    top:tygrid(2);
     transition-duration:$tyfy-transition-duration-move;
     transition-property:background-color,color,top;
     transition-timing-function:ease-in-out;
-    width:leading($tyfy-font-size-h2,heading);
+    width:tylead($tyfy-font-size-h2,heading);
   }
   &.closed {
     border-bottom:2px $tyfy-color-border solid;
-    padding-top:grid(1);
+    padding-top:tygrid(1);
     &::before {
-      content:charcode($tyfyicons-angle-down);
-      top:grid(1);
+      content:tychar($tyfyicons-angle-down);
+      top:tygrid(1);
     }
   }
   &.transition {
-    padding-top:grid(1);
+    padding-top:tygrid(1);
     &::before {
-      top:grid(1);
+      top:tygrid(1);
     }
   }
   &.transition.closed {
     border-bottom:2px transparent solid;
-    padding-top:grid(2);
+    padding-top:tygrid(2);
     &::before {
-      top:grid(2);
+      top:tygrid(2);
     }
   }
   * + & {
@@ -56,22 +56,22 @@ h6.collapsable-processed {
 }
 h3.collapsable-processed {
   &::before {
-    width:leading($tyfy-font-size-h3,heading);
+    width:tylead($tyfy-font-size-h3,heading);
   }
 }
 h4.collapsable-processed {
   &::before {
-    width:leading($tyfy-font-size-h4,heading);
+    width:tylead($tyfy-font-size-h4,heading);
   }
 }
 h5.collapsable-processed {
   &::before {
-    width:leading($tyfy-font-size-h5,heading);
+    width:tylead($tyfy-font-size-h5,heading);
   }
 }
 h6.collapsable-processed {
   &::before {
-    width:leading($tyfy-font-size-h6,heading);
+    width:tylead($tyfy-font-size-h6,heading);
   }
 }
 h2.collapsable-processed,
@@ -93,7 +93,7 @@ h6.collapsable-processed {
   border-top:none !important;
   margin:0rem;
   overflow:hidden;
-  padding:grid(1) grid(2) grid(2) grid(2);
+  padding:tygrid(1) tygrid(2) tygrid(2) tygrid(2);
   &.closed {
     border:none;
     height:1px;
