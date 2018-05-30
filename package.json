@@ -1,6 +1,6 @@
 {
   "name": "tyfy",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "a framework for typographic structure and common content patterns",
   "directories": {
     "doc": "docs"
