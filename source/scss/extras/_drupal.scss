@@ -12,7 +12,7 @@ $status-error-color:#aa3333;
 .element-hidden + *,
 .element-invisible + *,
 .skip-link + *,
-.contextual-links-wrapper + * {
+.contextual-links-wrapper:first-child + * {
   margin-top:0;
 }
 

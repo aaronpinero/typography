@@ -1,7 +1,7 @@
 // grid unit
 // helps define vertical and horizontal grid
 // should be half the base line-height
-$tyfy-grid-unit:0.75rem !default;
+$tyfy-grid-unit:0.8125rem !default;
 
 // line height adjustments
 // used by the leading function to adjust calculation of line-height
@@ -16,9 +16,11 @@ $tyfy-font-size-scalar:1.2 !default;
 $tyfy-font-size-base:1rem !default;
 
 // fonts
-$tyfy-serif:"Zilla Slab","Georgia",serif !default;
-$tyfy-sans:"Overpass","Helvetica","Arial",sans-serif !default;
-$tyfy-mono:"Overpass Mono",monospace !default;
+// from https://gist.github.com/don1138/5761014
+$tyfy-serif:Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif," "Bitstream Vera Serif", "Liberation Serif", Georgia, serif !default;
+$tyfy-sans:Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$tyfy-mono:Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !default;
+
 $tyfy-symbol:tyfyicons !default;
 
 // primary colors

@@ -5,11 +5,9 @@
 
 @import "extras/icons";
 
-@import "../../dist/fonts/league/stylesheet.css";
-// thank you to the League of Movable Type for the use of the League Gothic font
-
 body {
   @include fade-in(2000ms);
+  font-family:'IBM Plex Serif', serif;
   margin:0 0 tygrid(2) 0;
   padding:0;
 }
@@ -22,9 +20,14 @@ body {
   max-width:55rem;
 }
 h1 {
-  font-family:"League Gothic";
-  font-weight:400;
+  font-family:"IBM Plex Sans Condensed",sans-serif;
   text-transform:uppercase;
+}
+h2, h3, h4, h5, h6, dt, td, th, select, input, textarea, label, button, input[type="button"], input[type="reset"], input[type="submit"] {
+  font-family:"IBM Plex Sans",sans-serif;
+}
+code {
+  font-family:'IBM Plex Mono', monospace;
 }
 hr.demo {
   margin-bottom:tygrid(1);
@@ -50,6 +53,7 @@ header.brand {
       line-height:tylead($tyfy-font-size-h5,heading);
     }
     ul {
+      font-family:"IBM Plex Sans",sans-serif;
       margin-top:tygrid(1);
       padding-bottom:tygrid(1);
       padding-left:0;
