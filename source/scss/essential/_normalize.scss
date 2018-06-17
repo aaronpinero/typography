@@ -73,7 +73,8 @@ button:-moz-focusring,
   outline:1px dotted ButtonText;
 }
 fieldset {
-  padding:0.35em 0.75em 0.625em;
+  border-width:tygrid(0.125);
+  padding:tygrid(1.375) tygrid(1.875) tygrid(1.875) tygrid(1.875);
 }
 legend {
   box-sizing:border-box;
