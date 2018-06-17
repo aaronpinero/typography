@@ -1,5 +1,5 @@
 // calculate leading for a given fontsize
-@function tylead($font-size,$leading-style) {
+@function tylead($font-size,$leading-style:base) {
   $adjustment_factor:$tyfy-leading-adjustment-base;
   @if $leading-style == tall {
     $adjustment_factor:$tyfy-leading-adjustment-tall;
