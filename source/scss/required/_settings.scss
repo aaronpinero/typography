@@ -30,6 +30,7 @@ $tyfy-break-cols-2:           50em !default;
 $tyfy-break-list-cols-2:			35em !default;
 $tyfy-break-list-cols-3:			55em !default;
 $tyfy-break-list-cols-4:			75em !default;
+$tyfy-break-collapsables-pad: 50em !default;
 $tyfy-break-tabs:							40em !default;
 $tyfy-break-table:						30em !default;
 
@@ -61,7 +62,7 @@ $tyfy-color-table-stripe-reverse:		fade-out(tyreverse($tyfy-color-text-body),0.9
 // icons
 $tyfyicons-path:              "../fonts" !default; // do not add a trailing /
 
-// icon character codes 
+// icon character codes
 // these are copied from the scss file that is output by running `npm build icons`
 // they are included here so tyfyicons is not a requirement for using tyfy;
 // the initial slash (\) has been removed so the values are stored as strings rather than as the actual character;
