@@ -5,14 +5,11 @@ h4.collapsable-processed,
 h5.collapsable-processed,
 h6.collapsable-processed {
   background-color:transparent;
-  border:2px $tyfy-color-border solid;
-  border-bottom:2px transparent solid;
+  border-bottom:tygrid(0.125) transparent solid;
   clear:both;
   cursor:pointer;
-  padding:tygrid(2) tygrid(6) tygrid(1) tygrid(2);
+  padding:0 tygrid(4) tygrid(0.875) 0;
   position:relative;
-  transition-duration:$tyfy-transition-duration-move;
-  transition-property:padding-top;
   &::before {
     border-radius:50%;
     content:tychar($tyfyicons-angle-up);
@@ -21,36 +18,58 @@ h6.collapsable-processed {
     font-style:normal;
     font-weight:normal;
     position:absolute;
-    right:tygrid(2);
+    right:tygrid(0);
     text-align:center;
-    top:tygrid(2);
+    top:tygrid(0);
     transition-duration:$tyfy-transition-duration-move;
     transition-property:background-color,color,top;
     transition-timing-function:ease-in-out;
     width:tylead($tyfy-font-size-h2,heading);
   }
   &.closed {
-    border-bottom:2px $tyfy-color-border solid;
-    padding-top:tygrid(1);
+    border-bottom:tygrid(0.125) $tyfy-color-border solid;
     &::before {
       content:tychar($tyfyicons-angle-down);
-      top:tygrid(1);
-    }
-  }
-  &.transition {
-    padding-top:tygrid(1);
-    &::before {
-      top:tygrid(1);
     }
   }
   &.transition.closed {
-    border-bottom:2px transparent solid;
-    padding-top:tygrid(2);
+    border-bottom:tygrid(0.125) transparent solid;
+  }
+  @media (min-width:$tyfy-break-collapsables-pad) {
+    border:tygrid(0.125) $tyfy-color-border solid;
+    border-bottom:tygrid(0.125) transparent solid;
+    padding:tygrid(1.875) tygrid(5.875) tygrid(0.875) tygrid(1.875);
+    position:relative;
+    transition-duration:$tyfy-transition-duration-move;
+    transition-property:padding-top;
     &::before {
+      right:tygrid(2);
       top:tygrid(2);
     }
+    &.closed {
+      border-bottom:tygrid(0.125) $tyfy-color-border solid;
+      padding-top:tygrid(0.875);
+      &::before {
+        content:tychar($tyfyicons-angle-down);
+        top:tygrid(1);
+      }
+    }
+    &.transition {
+      padding-top:tygrid(0.875);
+      &::before {
+        top:tygrid(1);
+      }
+    }
+    &.transition.closed {
+      border-bottom:tygrid(0.125) transparent solid;
+      padding-top:tygrid(1.875);
+      &::before {
+        top:tygrid(2);
+      }
+    }
   }
-  * + & {
+  * + &,
+  .sibling-margins-on * + & {
     margin-top:$tyfy-spacing-standard;
   }
 }
@@ -89,14 +108,18 @@ h6.collapsable-processed {
 
 .collapsables {
   box-sizing:border-box;
-  border:2px $tyfy-color-border solid;
-  border-top:none !important;
+  border-bottom:tygrid(0.125) $tyfy-color-border solid;
   margin:0rem;
   overflow:hidden;
-  padding:tygrid(1) tygrid(2) tygrid(2) tygrid(2);
+  padding:tygrid(1) 0 tygrid(1.875) 0;
+  @media (min-width:$tyfy-break-collapsables-pad) {
+    border:tygrid(0.125) $tyfy-color-border solid;
+    border-top:none !important;
+    padding:tygrid(1) tygrid(1.875) tygrid(1.875);
+  }
   &.closed {
     border:none;
-    height:1px;
+    height:0;
     padding-bottom:0;
     padding-top:0;
     position:absolute;
