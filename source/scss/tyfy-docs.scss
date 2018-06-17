@@ -4,10 +4,11 @@
 @import "required/mixins";
 
 @import "extras/icons";
+@import "extras/responsive_text";
 
 body {
   @include fade-in(2000ms);
-  font-family:'IBM Plex Serif', serif;
+  font-family:"IBM Plex Serif", serif;
   margin:0 0 tygrid(2) 0;
   padding:0;
 }
@@ -27,7 +28,7 @@ h2, h3, h4, h5, h6, dt, td, th, select, input, textarea, label, button, input[ty
   font-family:"IBM Plex Sans",sans-serif;
 }
 code {
-  font-family:'IBM Plex Mono', monospace;
+  font-family:"IBM Plex Mono", monospace;
 }
 hr.demo {
   margin-bottom:tygrid(1);
