@@ -1,0 +1,147 @@
+// breakpoints for responsive text sizes
+$tyfy-break-font-small:40em !default;
+$tyfy-break-font-large:80em !default;
+$tyfy-font-size-base-small:$tyfy-font-size-base * 0.9;
+$tyfy-font-size-base-large:$tyfy-font-size-base / 0.9;
+
+// body
+body {
+  @media (max-width:$tyfy-break-font-small * 0.9999) {
+    font-size:$tyfy-font-size-base-small;
+    line-height:tylead($tyfy-font-size-base-small);
+  }
+  @media (min-width:$tyfy-break-font-large) {
+    font-size:$tyfy-font-size-base-large;
+    line-height:tylead($tyfy-font-size-base-large);
+  }
+}
+// headings
+h1 {
+  @media (max-width:$tyfy-break-font-small * 0.9999) {
+    font-size:tyscale(4);
+    line-height:tylead(tyscale(4),heading);
+  }
+  @media (min-width:$tyfy-break-font-large) {
+    font-size:tyscale(7);
+    line-height:tylead(tyscale(7),heading);
+  }
+}
+h2 {
+  @media (max-width:$tyfy-break-font-small * 0.9999) {
+    font-size:tyscale(3);
+    line-height:tylead(tyscale(3),heading);
+  }
+  @media (min-width:$tyfy-break-font-large) {
+    font-size:tyscale(5);
+    line-height:tylead(tyscale(5),heading);
+  }
+}
+h3 {
+  @media (max-width:$tyfy-break-font-small * 0.9999) {
+    font-size:tyscale(2);
+    line-height:tylead(tyscale(2),heading);
+  }
+  @media (min-width:$tyfy-break-font-large) {
+    font-size:tyscale(4);
+    line-height:tylead(tyscale(4),heading);
+  }
+}
+h4 {
+  @media (max-width:$tyfy-break-font-small * 0.9999) {
+    font-size:tyscale(1);
+    line-height:tylead(tyscale(1),heading);
+  }
+  @media (min-width:$tyfy-break-font-large) {
+    font-size:tyscale(3);
+    line-height:tylead(tyscale(3),heading);
+  }
+}
+h5 {
+  @media (max-width:$tyfy-break-font-small * 0.9999) {
+    font-size:tyscale(0);
+    line-height:tylead(tyscale(0),heading);
+  }
+  @media (min-width:$tyfy-break-font-large) {
+    font-size:tyscale(2);
+    line-height:tylead(tyscale(2),heading);
+  }
+}
+h6 {
+  @media (max-width:$tyfy-break-font-small * 0.9999) {
+    font-size:tyscale(-1);
+    line-height:tylead(tyscale(-1),heading);
+  }
+  @media (min-width:$tyfy-break-font-large) {
+    font-size:tyscale(1);
+    line-height:tylead(tyscale(1),heading);
+  }
+}
+pre {
+  @media (max-width:$tyfy-break-font-small * 0.9999) {
+    font-size:tyscale(-1);
+  }
+  @media (min-width:$tyfy-break-font-large) {
+    font-size:tyscale(1);
+  }
+}
+code,
+kbd,
+samp {
+  @media (max-width:$tyfy-break-font-small * 0.9999) {
+    font-size:$tyfy-font-size-base-small;
+  }
+  @media (min-width:$tyfy-break-font-large) {
+    font-size:$tyfy-font-size-base-large;
+  }
+}
+// collapsables
+h2.collapsable-processed {
+  &::before {
+    @media (max-width:$tyfy-break-font-small * 0.9999) {
+      width:tylead(tyscale(3),heading);
+    }
+    @media (min-width:$tyfy-break-font-large) {
+      width:tylead(tyscale(5),heading);
+    }
+  }
+}
+h3.collapsable-processed {
+  &::before {
+    @media (max-width:$tyfy-break-font-small * 0.9999) {
+      width:tylead(tyscale(2),heading);
+    }
+    @media (min-width:$tyfy-break-font-large) {
+      width:tylead(tyscale(4),heading);
+    }
+  }
+}
+h4.collapsable-processed {
+  &::before {
+    @media (max-width:$tyfy-break-font-small * 0.9999) {
+      width:tylead(tyscale(1),heading);
+    }
+    @media (min-width:$tyfy-break-font-large) {
+      width:tylead(tyscale(3),heading);
+    }
+  }
+}
+h5.collapsable-processed {
+  &::before {
+    @media (max-width:$tyfy-break-font-small * 0.9999) {
+      width:tylead(tyscale(0),heading);
+    }
+    @media (min-width:$tyfy-break-font-large) {
+      width:tylead(tyscale(2),heading);
+    }
+  }
+}
+h6.collapsable-processed {
+  &::before {
+    @media (max-width:$tyfy-break-font-small * 0.9999) {
+      width:tylead(tyscale(-1),heading);
+    }
+    @media (min-width:$tyfy-break-font-large) {
+      width:tylead(tyscale(1),heading);
+    }
+  }
+}
