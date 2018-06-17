@@ -1,7 +1,7 @@
 // colors
-$status-default-color:#33aa33;
-$status-warning-color:#aa8833;
-$status-error-color:#aa3333;
+$status-default-color:#33aa33 !default;
+$status-warning-color:#aa8833 !default;
+$status-error-color:#aa3333 !default;
 
 // invisible elements
 .element-invisible,
@@ -16,7 +16,7 @@ $status-error-color:#aa3333;
   margin-top:0;
 }
 
-// status messages 
+// status messages
 div.messages,
 div.status,
 div.warning,
