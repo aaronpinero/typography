@@ -53,12 +53,24 @@ header.brand {
       font-size:$tyfy-font-size-h5;
       line-height:tylead($tyfy-font-size-h5,heading);
     }
-    ul {
+    ul.list-grid-4 {
+      display:flex;
+      flex-wrap:wrap;
       font-family:"IBM Plex Sans",sans-serif;
       margin-top:tygrid(1);
       padding-bottom:tygrid(1);
       padding-left:0;
       li {
+        @media (max-width:$tyfy-break-list-cols-2 * 0.9999) {
+          box-sizing:border-box;
+          width:calc(50% - #{(0.5 * $tyfy-spacing-large)});
+          &:nth-child(2) {
+            margin-top:0; // override of the default margin
+          }
+          &:nth-child(2n+1) {
+            margin-right:$tyfy-spacing-large;
+          }
+        }
         a {
           border-top:tygrid(0.25) rgba(white,0.05) solid;
           display:block;

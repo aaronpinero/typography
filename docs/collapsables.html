@@ -45,6 +45,8 @@
 					<li><a href="collapsables.html">Collapsables</a></li>
 					<li><a href="tabs.html">Tabs</a></li>
 					<li><a href="forms.html">Forms</a></li>
+  				<li><a href="effects.html">Effects</a></li>
+  				<li><a href="extras.html">Extras</a></li>
 					<li><a href="about.html">About Tyfy</a></li>
 				</ul>
 			</nav>
@@ -52,13 +54,33 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Collapsable Headings</h1>
-			<p>Collapsable headings are my implementation of an accordion pattern. Content authors can apply the pattern using single <span class="smallcaps">CSS</span> class applied to a heading (level 2 through 6). The associated JavaScript encapsulates all of the content belonging to that heading in a block element and applies a click event to the heading that toggles the display of the content.</p>
-			<p>Collapsable headings can be nested, and the style varies with the heading level to emphasize the content hierarchy. Additional JavaScript automatically opens the correct collapsable areas in the case where an anchor link is referenced in the <code>window.location.href</code> string.</p>
-			<p><a href="#testanchor">Test anchor link</a></p>
-		</section>
-		<section class="main links-underlined demo">
-			<h1>Demo</h1>
+			<p>Collapsable headings are the <strong class="tyfy">Tyfy</strong> implementation of the accordion pattern. Content authors can apply the pattern using single <span class="smallcaps">CSS</span> class applied to a heading (level 2 through 6). The associated JavaScript encapsulates all of the content belonging to that heading in a block element and binds a click event to the heading that toggles the display of the content.</p>
+			<p>The collapsable headings are responsive. At small screen widths, the design changes to maximize horizontal space.</p>
+			<p>Collapsable headings can be nested. <strong class="tyfy">Tyfy</strong> collapsable headings also accommodate linking to anchors within tabs. The correct collapsable area will be opened to show the target of the anchor link.</p>
+      <h2><span class="smallcaps">HTML</span> Structure</h2>
+      <p>Collapsable headings are defined by adding the <code>collaspable</code> class to a heading (H2 through H6). JavaScript is used to identify the contents of belonging to the heading. The content of a collapsable section is defined as all the next sibling elements following the <code>collaspable</code> heading element up to the next heading of the same level.</p> 
+      <pre>&lt;h2 class="collapsable"&gt;Collapsable Heading 1&lt;/h2&gt;
+&lt;p&gt;[content of the collapsable section]&lt;/p&gt;
+&lt;p&gt;[content of the collapsable section]&lt;/p&gt;
 
+&lt;h2 class="collapsable"&gt;Collapsable Heading 2&lt;/h2&gt;
+&lt;p&gt;[content of the collapsable section]&lt;/p&gt;
+&lt;ul&gt;[content of the collapsable section]&lt;/ul&gt;</pre>
+      <h2>Related Variables</h2>
+      <dl>
+        <dt>$tyfy-break-collapsables-pad</dt>
+        <dd>Breakpoint at which the design changes to maximize horizontal space; !default value is <code>50em</code></dd>
+        <dt>$tyfy-width-border</dt>
+        <dd>Width of the border around tab labels and tab panels; !default value is <code>2px</code></dd>
+        <dt>$tyfy-color-border</dt>
+        <dd>Color of the borders around tab labels and tab panels; !default value is <code>mix($tyfy-color-foreground,$tyfy-color-background,12%)</code></dd>
+        <dt>$tyfyicons-angle-down</dt>
+        <dd>The character code for the angle-down icon; !default value is <code>"ea01"</code></dd>
+        <dt>$tyfyicons-angle-up</dt>
+        <dd>The character code for the angle-up icon; !default value is <code>"ea05"</code></dd>
+      </dl>
+			<h2>Example</h2>
+			<p><a href="#testanchor">Test anchor link</a></p>
 			<h2 class="collapsable">Lorem ipsum dolor sit amet</h2>
 			<p>Consectetur adipiscing elit. Maecenas euismod varius purus et accumsan. Suspendisse mollis augue sem, eu varius ex ornare at. Cras convallis lorem in malesuada porttitor. Integer malesuada, nisi vel gravida luctus, tellus mi finibus est, ac dignissim elit tortor quis erat.
 			<h3 class="collapsable">Aliquam sodales condimentum elementum</h3>
@@ -76,7 +98,7 @@
 			<h3>Pellentesque viverra felis non est vehicula</h3>
 			<p>A efficitur magna mollis. Vestibulum ultricies ligula vel suscipit pretium. Nullam varius bibendum nisi ac tempor. Morbi non nibh ac eros elementum vehicula sed a enim. Donec in venenatis libero. Integer convallis sapien sit amet est iaculis fringilla.</p>
 			<h4 class="collapsable">Morbi ac quam ac leo accumsan tempor sed in mauris</h4>
-			<p><a name="testanchor">Test anchor destination</a> lacinia congue. Quisque consectetur metus vitae aliquet pellentesque. Integer non accumsan augue, nec mollis quam. Sed congue diam quis est eleifend, sed pulvinar tellus ullamcorper. Phasellus ante velit, blandit id urna sit amet, sagittis tincidunt magna. Etiam turpis neque, dignissim vitae lacus sed, sagittis consequat sapien.</p>
+			<p><a name="testanchor"><em>Test anchor destination</em></a> lacinia congue. Quisque consectetur metus vitae aliquet pellentesque. Integer non accumsan augue, nec mollis quam. Sed congue diam quis est eleifend, sed pulvinar tellus ullamcorper. Phasellus ante velit, blandit id urna sit amet, sagittis tincidunt magna. Etiam turpis neque, dignissim vitae lacus sed, sagittis consequat sapien.</p>
 			<h4 class="collapsable">Quisque ultricies et ipsum ut posuere</h4>
 			<p>Nulla vitae massa et orci ornare convallis. Integer non aliquam eros. Aenean tempus iaculis malesuada. Proin lobortis quam ac erat dapibus, vitae dictum ex placerat. Aenean lobortis accumsan arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 			<h4 class="collapsable">Sed sed quam convallis</h4>
