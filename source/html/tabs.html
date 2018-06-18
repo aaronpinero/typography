@@ -8,19 +8,34 @@
 		<%include header.html%>
     <section class="main links-underlined">
       <h1>Tabs</h1>
-      <p>It is occasionally useful to present content as a set of tabs. The available tabs are presented horizontally with the content of the selected tab appearing directly below the tabs.</p>
-      <p>Unfortunately, tabs are not a good choice when the browser window is specially small or narrow, as on phones. Tyfy tabs are responsive. At narrow screen sizes, the tabs convert to <a href="collapsables.html">collapsable headings</a>.</p>
-      <p>Like the collapsable headings, tabs are defined by indicating the label for each tab with the <code>tab-label</code> class. All tab labels and tab content are enclosed in a block-level element with the <code>tabs-container</code> class. JavaScript is used to identify the contents of each tab panel and to generate the clickable tabs.</p> 
-      <p>This implementation also accounts for anchor links within tabs. Anchor links can also be used to link directly to a tab.</p>
+      <p>It is occasionally useful to present content as a set of tabs. Tabs are presented horizontally with the content of the selected tab appearing directly below the tabs.</p>
+      <p>Unfortunately, tabs are not a good choice when the browser window is specially small or narrow, as on phones. <strong class="tyfy">Tyfy</strong> tabs are responsive. At narrow screen sizes, the tabs convert to <a href="collapsables.html">collapsable headings</a>.</p>
+      <p><strong class="tyfy">Tyfy</strong> tabs accommodate linking to anchors within tabs. Each tab label is also given a unique id attribute, allowing for links that open a specific tab.</p>
+      <h2><span class="smallcaps">HTML</span> Structure</h2>
+      <p>All tab labels and tab content are enclosed in a block-level element with the <code>tabs-container</code> class. Individual tabs are defined by indicating the label for each tab with the <code>tab-label</code> class. JavaScript is used to identify the contents of each tab and to generate the clickable tabs. The content of a tab is defined as all the next sibling elements following the <code>tab-label</code> element up to the next <code>tab-label</code>.</p> 
+      <pre>&lt;div class="tabs-container"&gt;
+  &lt;h2 class="tab-label"&gt;Tab Label 1&lt;/h2&gt;
+  &lt;p&gt;[content of the tab]&lt;/p&gt;
+  &lt;p&gt;[content of the tab]&lt;/p&gt;
+  &lt;h2 class="tab-label"&gt;Tab Label 2&lt;/h2&gt;
+  &lt;p&gt;[content of the tab]&lt;/p&gt;
+  &lt;ul&gt;[content of the tab]&lt;/ul&gt;
+&lt;/div&gt;</pre>
+      <h2>Related Variables</h2>
+      <dl>
+        <dt>$tyfy-break-tabs</dt>
+        <dd>Breakpoint at which tabs transition from tabs to collapsables; !default value is 40em.</dd>
+        <dt>$tyfy-width-border</dt>
+        <dd>Width of the border around tab labels and tab panels; !default value is 2px.</dd>
+        <dt>$tyfy-color-border</dt>
+        <dd>Color of the borders around tab labels and tab panels; !default value <code>mix($tyfy-color-foreground,$tyfy-color-background,12%)</code>.</dd>
+      </dl>
+      <h2>Example</h2>
       <p>Test links to:</p>
       <ul>
         <li><a href="#anchor">An anchor in the second tab</a></li>
         <li><a href="#Donec Scelerisque">The third tab</a></li>
-      </ul>
-    </section>
-    <section class="main links-underlined demo">
-      <h1>Demo</h1>
-      
+      </ul>      
       <div class="tabs-container">
         <h2 class="tab-label">Lorem Ipsum</h2>
         <p>Porro excepturi ad eligendi excepturi quam voluptate velit. Placeat modi animi natus est temporibus tenetur pariatur suscipit. Dolores sit id sit placeat consequatur temporibus accusamus et. Cumque voluptatum voluptatum delectus et sequi. Vero vitae officia eius ad. Consequatur impedit quam mollitia.</p>

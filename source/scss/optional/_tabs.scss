@@ -37,7 +37,7 @@
       transition-duration:$tyfy-transition-duration-hover;
       transition-property:background-color;
       &:hover {
-        background-color:rgba(black,0.1);
+        background-color:rgba($tyfy-color-link-active,0.12);
         color:$tyfy-color-link-active;
       }
       &.open {
