@@ -23,6 +23,10 @@ body {
 h1 {
   font-family:"IBM Plex Sans Condensed",sans-serif;
   text-transform:uppercase;
+  small {
+    font-size:tyscale(1);
+    text-transform:none;
+  }
 }
 h2, h3, h4, h5, h6, dt, td, th, select, input, textarea, label, button, input[type="button"], input[type="reset"], input[type="submit"] {
   font-family:"IBM Plex Sans",sans-serif;
@@ -89,7 +93,7 @@ header.brand {
         overflow:hidden;
         position:absolute;
         right:tygrid(2);
-        top:tygrid(-4);
+        top:tygrid(-3);
         transition-duration:$tyfy-transition-duration-hover;
         transition-property:color;
         width:tylead($tyfy-font-size-h3,heading);

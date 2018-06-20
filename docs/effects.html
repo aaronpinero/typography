@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	<head>
+  <head>
 		<!-- COMMON HEAD TAGS -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
@@ -19,9 +19,9 @@
 		<link rel="stylesheet" href="../dist/style/tyfy.css">
 		<link rel="stylesheet" href="../dist/style/tyfy-docs.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy - Functions</title>
-	</head>
-	<body class="">
+		<title>Tyfy - Effects</title>
+  </head>
+  <body class="">
 		<!-- COMMON HEADER -->
 		<header class="brand sibling-margins-off reverse">
 			<h1><a href="index.html">Tyfy</a></h1>
@@ -52,24 +52,23 @@
 			</nav>
 		</header>
 		<!--/ COMMON HEADER -->
-		<section class="main links-underlined">
-			<h1>Functions</h1>
-			<p><strong class="tyfy">Tyfy</strong> includes several custom <span class="smallcaps">SASS</span> functions. These functions were written to facilitate writing the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SCSS</span> files, but can also be used to help users who are including <strong class="tyfy">Tyfy</strong> in their web projects.</p>
-			<dl>
-				<dt>@function tylead($font-size,$leading-style:base)</dt>
-				<dd>Accepts a font size and leading style option and calculates a grid-based line height. The leading style options are <code>tall</code>, <code>base</code>, <code>heading</code>, and <code>short</code>. The default is <code>base</code>. The font size argument must be in rem units, and the value returned is also in rem units.</dd>
-				<dt>@function tygrid($multiplier)</dt>
-				<dd>Makes the <span class="smallcaps">SCSS</span> files easier to read. The function accepts a number and returns a value, in rem units, that is the base grid unit multiplied by the number argument.</dd>
-				<dt>@function tyscale($exponent)</dt>
-				<dd>Facilitates use of the modular typographic scale by eliminating the task of calculating font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</dd>
-				<dt>@function tycolor($color,$lightness)</dt>
-				<dd>Accepts a color (in rgb or hexadecimal format) and a lightness value (0% to 100%), and returns the given color converted to the specified lightness.</dd>
-				<dt>@function tyreverse($color)</dt>
-				<dd>Accepts a color (in rgb or hexadecimal format) and returns the same color with the lightness value reversed.</dd>
-				<dt>@function tychar($code)</dt>
-				<dd>Accepts a character code without the preceding slash (“\”) and adds it; this is done to get around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> and allow icon character codes to be more easily customized for different icon fonts.</dd>
-			</dl>
-		</section>
+    <section class="main links-underlined">
+      <h1>Effects <em><small>Experimental</small></em></h1>
+      <p>I added this module because it was an opportunity to experiment with <a href="https://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184"><span class="smallcaps">SASS</span> maps</a>. In this case, I have used a sass map to generate a number of classes that, when applied to an element, cause that element to fade in when the page is loaded. The duration of the fade animation depends on the class used.</p>
+      <p>To apply a fade in animation of arbitrary duration, there is a mixin that accepts duration as a variable.</p>
+      <p>For now, this is the only effect available. I may add more effects at a later time. I welcome suggestions for particular effects.</p>
+      <h2>Classes</h2>
+      <dl>
+        <dt class="fade-500ms">.fade-500ms</dt>
+        <dd>Applies a fade in animation of 500ms duration.</dd>
+        <dt class="fade-1s">.fade-1s</dt>
+        <dd>Applies a fade in animation of 1000ms duration.</dd>
+        <dt class="fade-2s">.fade-2s</dt>
+        <dd>Applies a fade in animation of 2000ms duration.</dd>
+        <dt class="fade-3s">.fade-3s</dt>
+        <dd>Applies a fade in animation of 3000ms duration.</dd>
+      </dl>
+    </section>
 		<!-- COMMON FOOTER -->
 		<footer>
 			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
@@ -85,5 +84,6 @@
     </script>
     <script src="../dist/script/docs-nav.js"></script>
 		<!--/ COMMON FOOTER -->
-	</body>
+    <script src="../dist/script/tabs.js"></script>
+  </body>
 </html>

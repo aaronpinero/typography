@@ -10,8 +10,8 @@
 			<h1>Functions</h1>
 			<p><strong class="tyfy">Tyfy</strong> includes several custom <span class="smallcaps">SASS</span> functions. These functions were written to facilitate writing the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SCSS</span> files, but can also be used to help users who are including <strong class="tyfy">Tyfy</strong> in their web projects.</p>
 			<dl>
-				<dt>@function tylead($font-size,$leading-style)</dt>
-				<dd>Accepts a font size and leading style option and calculates a grid-based line height. The leading style options are <code>tall</code>, <code>base</code>, <code>heading</code>, and <code>short</code>. The font size argument must be in rem units, and the value returned is also in rem units.</dd>
+				<dt>@function tylead($font-size,$leading-style:base)</dt>
+				<dd>Accepts a font size and leading style option and calculates a grid-based line height. The leading style options are <code>tall</code>, <code>base</code>, <code>heading</code>, and <code>short</code>. The default is <code>base</code>. The font size argument must be in rem units, and the value returned is also in rem units.</dd>
 				<dt>@function tygrid($multiplier)</dt>
 				<dd>Makes the <span class="smallcaps">SCSS</span> files easier to read. The function accepts a number and returns a value, in rem units, that is the base grid unit multiplied by the number argument.</dd>
 				<dt>@function tyscale($exponent)</dt>
