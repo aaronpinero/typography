@@ -1,2 +1,4 @@
-node-sass --output-style compressed source/scss/ -o dist/style/
+node-sass --output-style compressed source/scss/tyfy-dist.scss dist/style/tyfy.css
+node-sass --output-style compressed source/scss/tyfy-docs.scss docs/resources/style/tyfy-docs.css
 postcss dist/style/*.css --replace --config config/postcss.config.js
+postcss docs/resources/style/*.css --replace --config config/postcss.config.js

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tyfy Documentation</title>
+  </head>
+  <body>
+    <h1>Outline</h1>
+    <ul>
+      <li>Get Started</li>
+      <li>
+        Key Benefits
+        <ul>
+          <li>Modular Scale</li>
+          <li>Baseline Grid</li>
+          <li>Smart Margins</li>
+        </ul>
+      </li>
+      <li>
+        Modules
+        <ul>
+          <li>
+            Required
+            <ul>
+              <li>Core</li>
+              <li>Functions</li>
+              <li>Settings</li>
+              <li>Mixins</li>
+            </ul>
+          </li>
+          <li>
+            Essential
+            <ul>
+              <li>Normalize</li>
+              <li>Body</li>
+              <li>Spacing</li>
+            </ul>
+          </li>
+          <li>
+            Optional
+            <ul>
+              <li>Paragraphs</li>
+              <li>Headings</li>
+              <li>Links</li>
+              <li>Lists</li>
+              <li>Typographic Utilities</li>
+              <li>Reverse</li>
+              <li>Tables</li>
+              <li>Collapsable Sections</li>
+              <li>Responsive Tabs</li>
+              <li>Forms</li>
+              <li>Effects</li>
+            </ul>
+          </li>
+          <li>
+            Extras
+            <ul>
+              <li>Responsive Text</li>
+              <li>Icons</li>
+              <li>Drupal</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>About Tyfy</li>
+    </ul>
+    <hr>
+    <section>
+      <h1>Get Started</h1>
+    </section>
+    <hr>
+    <section>
+      <h1>About Tyfy</h1>
+      <p><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to front-end development. I originally named this project “typography” for my effort to encode typographic rules and patterns. The name later became a short form of the made-up verb “typogrify” &mdash; the action of applying typographic style. So “<strong class="tyfy">Tyfy</strong>” rhymes with “WiFi” or “Sci-Fi”.</p>
+      <p>For more information about how <strong class="tyfy">Tyfy</strong> came to be, you can read <a href="https://medium.com/@aaronpinero/why-tyfy-1665e36b4f94">the Medium article</a>.</p>
+      <h2>Rationale</h2>
+      <p>There are three reasons why <strong class="tyfy">Tyfy</strong> was created:</p>
+      <ul>
+        <li>To collect all of my best design and pattern work into one system.</li>
+        <li>To create a system that I can employ in future projects.</li>
+        <li>To learn something along the way.</li>
+      </ul>
+      <p>A framework is an expression of the values, preferences, priorities, and experience of the person or persons creating it. While I embrace some existing frameworks (Bootstrap 4, PureCSS), I wanted to create something that reflects my values and the work that I do.</p>
+      <h2>Build Tools</h2>
+      <p>This project uses node.js for assembling the icon webfont, compiling the SCSS files into CSS, and for assembling the documentation pages. I use npm scripts to automate these tasks.</p>
+      <dl>
+        <dt><pre>&gt; npm run build-css
+&gt; npm run watch-css</pre></dt>
+        <dd>Creates compressed CSS. The watch script uses nodemon to check for changes to the SCSS files.</dd>
+        <dt><pre>&gt; npm run build-css-dev
+&gt; npm run watch-css-dev</pre></dt>
+        <dd>Creates readable CSS with source file comments. The watch script uses nodemon to check for changes to the SCSS files.</dd>
+        <dt><pre>&gt; npm run build-icons</pre></dt>
+        <dd>Creates the webfont and SCSS files for the icons.</dd>
+        <dt><pre>&gt; node docs.js</pre></dt>
+        <dd>Compiles documentation files using templatesjs to assemble the HTML pages and their includes.</dd>
+      </dl>
+      <h2>Thanks</h2>
+      <p>Without the examples of work done by others, this project would not happen. Since those frameworks are part of my experience, my work reflects theirs as well. <strong class="tyfy">Tyfy</strong> is a combination of something old, something new, something borrowed, and something blue from some of the following sources:</p>
+      <ul>
+        <li><a href="https://html5boilerplate.com">HTML5 Boilerplate</a></li>
+        <li><a href="https://archetypeapp.com">Archetype</a></li>
+        <li><a href="https://getbootstrap.com">Bootstrap</a></li>
+        <li><a href="https://www.college.columbia.edu">The Columbia College Style Guide</a></li>
+        <li><a href="https://purecss.io">PureCSS</a></li>
+        <li><a href="https://simpleicons.org">Simpleicons</a></li>
+        <li><a href="https://betterwebtype.com">Better Web Type</a></li>
+      </ul>
+    </section>
+  </body>
+</html>
