@@ -41,8 +41,7 @@ span {
   &.smallcaps {
     font-feature-settings:"c2sc", "smcp";
     font-variant-caps:all-small-caps;
-    font-weight:bolder;
-    letter-spacing:0.05em;
+    letter-spacing:0.075em;
   }
 }
 .button {

@@ -8,6 +8,15 @@
       body {
         padding:2rem;
       }
+      h2 small {
+        font-size:1rem;
+      }
+      .codebox {
+        background-color:#333;
+        border-radius:4px;
+        overflow:auto;
+        padding:1rem;
+      }
     </style>
   </head>
   <body class="links-underlined">
@@ -20,7 +29,7 @@
           <ul>
             <li>Modular Scale</li>
             <li>Baseline Grid</li>
-            <li>Smart Margins</li>
+            <li>Sensible Margins</li>
           </ul>
         </li>
         <li>
@@ -75,15 +84,45 @@
     <hr>
     <section class="main">
       <h1>Get Started</h1>
-    </section>
+      <p><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to your front-end development. It provides a <a href="#grid">baseline grid</a>, <a href="#scale">modular scale</a>, <a href="#margins">sensible margins</a>, and <a href="#optional">styles for common HTML elements and content patterns</a>.</p>
+      <p>To get started you can either <a href="#css">use the compiled <span class="smallcaps">CSS</span></a> or <a href="#scss">begin with the <span class="smallcaps">SCSS</span> files</a> and customize the framework by overriding the default variable values. The latter approach is recommended as it allows you to take full advantage of the <a href="#mixins">mixins</a> and <a href="#functions">functions</a> for the baseline grid and modular scale.</p>
+      <h2><a name="scss">Start with <span class="smallcaps">SCSS</span></a> <small>(recommended)</small></h2>
+      <h2><a name="css">Start with <span class="smallcaps">CSS</span></a></h2>
+      <p>The compiled <span class="smallcaps">CSS</span> includes all of the required, essential, and optional <strong class="tyfy">Tyfy</strong> modules. It also adds the <em>icons</em> module from the extras collection. Use this approach if you want to get started quickly and don't need any customization.</p>
+			<ol>
+				<li>Clone the github project or install using <code>npm install tyfy</code></li>
+				<li>Within the <em>tyfy</em> project folder, the <em>dist</em> directory contains the framework's compiled stylesheet, javascripts, and icon font. Move the <em>dist</em> directory into your project folder.</li>
+				<li>
+				  <p>Add the <strong class="tyfy">Tyfy</strong> stylesheet to the your <span class="smallcaps">HTML</span> <code>&lt;head&gt;</code>.</p>
+				  <div class="codebox reverse">
+  				  <pre>&lt;head&gt;
+  [head tag]
+  &lt;link rel="stylesheet" href="dist/style/tyfy.css"&gt;
+&lt;/head&gt;</pre>
+				  </div>
+        </li>
+				<li>
+				  <p>Add <a href="https://jquery.com">jQuery</a> (1.12.4 or above) and the <strong class="tyfy">Tyfy</strong> JavaScript files to the end of your <span class="smallcaps">HTML</span> <code>&lt;body&gt;</code>.</p>
+				  <div class="codebox reverse">
+  				  <pre>&lt;body&gt;
+  [content of page]
+  &lt;script src="http://code.jquery.com/jquery-1.12.4.min.js"&gt;&lt;/script&gt;
+  &lt;script src="dist/script/collapsables.js"&gt;&lt;/script&gt;
+  &lt;script src="dist/script/tables.js"&gt;&lt;/script&gt;
+  &lt;script src="dist/script/tabs.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</pre>
+				  </div>
+				</li>
+			</ol>
+		</section>
     <hr>
     <section class="main">
       <h1>About Tyfy</h1>
-      <p><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to front-end development. I first named this project “typography” for my effort to encode typographic rules and patterns. The name later changed to a short form of the portmanteau “typogrify”. So “<strong class="tyfy">Tyfy</strong>” rhymes with “WiFi” or “Sci-Fi”.</p>
+      <p><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to your front-end development. I first named this project “typography” for my effort to encode typographic rules and patterns. The name later changed to a short form of the portmanteau “typogrify”. So “<strong class="tyfy">Tyfy</strong>” rhymes with “WiFi” or “Sci-Fi”.</p>
       <p>For more information about how <strong class="tyfy">Tyfy</strong> came to be, you can read <a href="https://medium.com/@aaronpinero/why-tyfy-1665e36b4f94">the Medium article</a>.</p>
       <h2>Rationale</h2>
       <p>There are three reasons why <strong class="tyfy">Tyfy</strong> was created:</p>
-      <ul>
+      <ul class="sibling-margins-off">
         <li>To collect all of my best design and pattern work into one system.</li>
         <li>To create tolls that enhance my front-end development workflow.</li>
         <li>To learn something along the way.</li>
@@ -104,12 +143,11 @@
         <dd>Compiles documentation files using <em><a href="https://www.npmjs.com/package/templatesjs">templatesjs</a></em> to assemble the HTML pages and their includes.</dd>
       </dl>
       <h2>Thanks</h2>
-      <p>Without the examples of work done by others, this project would not happen. Since those frameworks are part of my experience, my work reflects theirs as well. <strong class="tyfy">Tyfy</strong> is a combination of something old, something new, something borrowed, and something blue from some of the following sources:</p>
+      <p>This project would not have happened without the benefit of work done by others. Their contributions to front-end development are part of my experience, and so my work reflects theirs. <strong class="tyfy">Tyfy</strong> has something old, something new, something borrowed, and something blue from the following sources:</p>
       <ul>
         <li><a href="https://html5boilerplate.com">HTML5 Boilerplate</a></li>
         <li><a href="https://archetypeapp.com">Archetype</a></li>
         <li><a href="https://getbootstrap.com">Bootstrap</a></li>
-        <li><a href="https://www.college.columbia.edu">The Columbia College Style Guide</a></li>
         <li><a href="https://purecss.io">PureCSS</a></li>
         <li><a href="https://simpleicons.org">Simpleicons</a></li>
         <li><a href="https://betterwebtype.com">Better Web Type</a></li>
