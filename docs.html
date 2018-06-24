@@ -40,17 +40,31 @@
         border-top:none;
         margin-top:0;
       }
+      dl dt code {
+        background-color:transparent;
+        display:block;
+        font-weight:normal;
+        padding:0;
+      }
+      dl dt code + code {
+        margin-top:0;
+      }
+      dl dt code em {
+        font-style:normal;
+        font-weight:bold;
+      }
     </style>
   </head>
   <body class="links-underlined">
     <section class="main">
       <h1>Outline</h1>
       <ul class="sibling-margins-off">
-        <li>Get Started</li>
+        <li><a href="start.html">Get Started</a></li>
+        <li>Customizing</li>
         <li>
           Key Benefits
           <ul>
-            <li>Modular Scale</li>
+            <li><a href="scale.html">Modular Scale</a></li>
             <li>Baseline Grid</li>
             <li>Sensible Margins</li>
           </ul>
@@ -76,9 +90,9 @@
               </ul>
             </li>
             <li>
-              Optional
+              <a href="optional.html">Optional</a>
               <ul>
-                <li>Paragraphs</li>
+                <li><a href="paragraphs.html">Paragraphs</a></li>
                 <li>Headings</li>
                 <li>Links</li>
                 <li>Lists</li>
@@ -102,10 +116,10 @@
           </ul>
         </li>
         <li>
-          About Tyfy
+          <a href="about.html">About Tyfy</a>
           <ul>
-            <li>Build Tools</li>
-            <li>Browser Compatability</li>
+            <li><a href="tools.html">Build Tools</a></li>
+            <li><a href="compatability.html">Browser Compatability</a></li>
           </ul>
         </li>
       </ul>
@@ -192,24 +206,42 @@ h4 {
     </section>
     <hr>
     <section class="main">
+      <h1>Optional Modules</h1>
+      <p>The optional modules are those that provides styles for <span class="smallcaps">HTML</span> element and <span class="smallcaps">CSS</span> classes for specific typographic styles. Because not every project will need all of these styles, the modules are optional. When customizing <strong class="tyfy">Tyfy</strong> for your project, you can select the optional modules that best fit your needs.</p>
+      <ul class="list-cols-2">
+        <li><a href="paragraphs.html">Paragraphs</a></li>
+        <li><a href="headings.html">Headings</a></li>
+        <li><a href="links.html">Links</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="utilities.html">Typographic Utilities</a></li>
+        <li><a href="reverse.html">Reverse</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="collapsables.html">Collapsable Sections</a></li>
+        <li><a href="tabs.html">Responsive Tabs</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="effects.html">Effects</a></li>
+      </ul>
+    </section>
+    <hr>
+    <section class="main">
       <h1>Paragraphs</h1>
 			<p>Paragraphs inherit font size and line height from the <code>&lt;body&gt;</code>. <strong class="tyfy">Tyfy</strong> provides <span class="smallcaps">CSS</span> classes for common style variations.</p>
 			<h2>Classes</h2>
 			<dl>
-  			<dt><pre>&lt;p class="<code>lede</code>"&gt;</pre></dt>
-  			<dd>Used to display a paragraph as a lede. Font size of a lede is equal to <code>$tyfy-font-size-lede</code>.</dd>
-  			<dt><pre>&lt;p class="<code>justified</code>"&gt;</pre></dt>
-  			<dd>Used to display a paragraph with justified text.</dd>
-  			<dt><pre>&lt;tag class="<code>paragraphs-justified</code>"&gt;</pre></dt>
-    		<dd>Used to display all child paragraphs with justified text.</dd>
-  			<dt><pre>&lt;tag class="<code>cols-2</code>"&gt;</pre></dt>
-    		<dd>Used to display content in two columns. The style is responsive and degrades to a single column when the screen width is less than the value of <code>$tyfy-break-cols-2</code>.</dd>
+  			<dt><code>&lt;p class="<em class="class">lede</em>"&gt;</code></dt>
+  			<dd>Display a paragraph as a lede. Font size of a lede is equal to <code>$tyfy-font-size-lede</code>.</dd>
+  			<dt><code>&lt;p class="<em class="class">justified</em>"&gt;</code></dt>
+  			<dd>Display a paragraph with justified text.</dd>
+  			<dt><code>&lt;tag class="<em class="class">paragraphs-justified</em>"&gt;</code></dt>
+    		<dd>Display all child paragraphs with justified text.</dd>
+  			<dt><code>&lt;tag class="<em class="class">cols-2</em>"&gt;</code></dt>
+    		<dd>Display content in two columns. The style is responsive and degrades to a single column when the screen width is less than the value of <code>$tyfy-break-cols-2</code>.</dd>
 			</dl>
 			<h2>Variables</h2>
 			<dl>
-  			<dt><pre>$tyfy-break-cols-2: 50em !default;</pre></dt>
+  			<dt><code><em class="var">$tyfy-break-cols-2</em>: 50em !default;</code></dt>
   			<dd>The breakpoint above which text inside an element with the <code>cols-2</code> class is displayed in two columns.</dd>
-  			<dt><pre>$tyfy-font-size-lede: tyscale(2) !default;</dt>
+  			<dt><code><em class="var">$tyfy-font-size-lede</em>: tyscale(2) !default;</code>
   			<dd>The font size applied to a paragraph with the <code>lede</code> class.</dd>
 			</dl>
 			<h2>Examples</h2>
@@ -246,6 +278,41 @@ h4 {
   		</figure>
 			<p><em><small>Sample text from <a href="http://forcemipsum.com">Forcem Ipsum</a>.</small></em></p>
     </section>
+    <hr>
+		<section class="main links-underlined">
+			<h1>Headings</h1>
+			<p>The font sizes for heading levels 1 through 6 are based on the <a href="scale.html">modular scale</a>. Heading font sizes are also available as <span class="smallcaps">SASS</span> variables and <span class="smallcaps">CSS</span> classes.</p>
+			<p>To emphasize the meaning of a heading, it should be positioned closer to the text that follows than the text preceding. Adjacent sibling selectors are used to define the margins for headings in context of other elements. If the element preceding a heading is not also a heading, the top margin for the heading will be larger than the standard margin. In <span class="smallcaps">CSS</span>, this is accomplished as follows:</p>
+			<pre class="codebox"><code>* + * {
+  margin-top: $tyfy-spacing-standard;
+}
+:not(h1) + h2 {
+  margin-top: $tyfy-spacing-large;
+}</code></pre>
+			<h2>Classes</h2>
+			<dl>
+  			<dt><code>&lt;tag class="<em class="class">font-size-h[x]</em>"&gt;</code></dt>
+  			<dd>Display an element using the font size of heading level x.</dd>  
+			</dl>
+			<h2>Variables</h2>
+			<dl>
+  			<dt>
+  			  <code><em class="var">$tyfy-font-size-h6</em>: tyscale(0) !default;</code>
+  			  <code><em class="var">$tyfy-font-size-h5</em>: tyscale(1) !default;</code>
+  			  <code><em class="var">$tyfy-font-size-h4</em>: tyscale(2) !default;</code>
+  			  <code><em class="var">$tyfy-font-size-h3</em>: tyscale(3) !default;</code>
+  			  <code><em class="var">$tyfy-font-size-h2</em>: tyscale(4) !default;</code>
+  			  <code><em class="var">$tyfy-font-size-h1</em>: tyscale(6) !default;</code>
+        </dt>
+  			<dd>The font size for heading levels 1 to 6.</dd>
+				<dt><code><em class="var">$tyfy-spacing-large</em>: tygrid(3) !default</code></dt>
+				<dd>The top margin of headings when the preceding element is not another heading.</dd>
+				<dt><code><em class="var">$tyfy-font-heading</em>: $tyfy-serif !default</code></dt>
+				<dd>The font family for headings.</dd>
+				<dt><code><em class="var">$tyfy-color-text-head</em>: mix($tyfy-color-foreground,$tyfy-color-background,95%) !default;</code></dt>
+				<dd>The text color for headings.</dd>
+			</dl>
+		</section>
     <hr>
     <section class="main">
       <h1>About Tyfy</h1>
@@ -303,6 +370,7 @@ h4 {
         <li><a href="https://caniuse.com/#feat=css-animation"><span class="smallcaps">CSS</span> Animation</a></li>
         <li><a href="https://caniuse.com/#feat=flexbox"><span class="smallcaps">CSS</span> Flexbox</a></li>
         <li><a href="https://caniuse.com/#feat=css-appearance"><span class="smallcaps">CSS</span> Appearance</a></li>
+        <li><a href="https://caniuse.com/#feat=css-sel3"><span class="smallcaps">CSS3</span> Selectors</a></li>
       </ul>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
