@@ -11,7 +11,7 @@
       h2 small {
         font-size:1rem;
       }
-      .codebox {
+      pre.codebox {
         background-color:#333;
         border-radius:4px;
         overflow:auto;
@@ -78,7 +78,13 @@
             </li>
           </ul>
         </li>
-        <li>About Tyfy</li>
+        <li>
+          About Tyfy
+          <ul>
+            <li>Build Tools</li>
+            <li>Browser Compatability</li>
+          </ul>
+        </li>
       </ul>
     </section>
     <hr>
@@ -94,25 +100,22 @@
 				<li>Within the <em>tyfy</em> project folder, the <em>dist</em> directory contains the framework's compiled stylesheet, javascripts, and icon font. Move the <em>dist</em> directory into your project folder.</li>
 				<li>
 				  <p>Add the <strong class="tyfy">Tyfy</strong> stylesheet to the your <span class="smallcaps">HTML</span> <code>&lt;head&gt;</code>.</p>
-				  <div class="codebox reverse">
-  				  <pre>&lt;head&gt;
+  				<pre class="codebox reverse">&lt;head&gt;
   [head tag]
   &lt;link rel="stylesheet" href="dist/style/tyfy.css"&gt;
 &lt;/head&gt;</pre>
-				  </div>
         </li>
 				<li>
 				  <p>Add <a href="https://jquery.com">jQuery</a> (1.12.4 or above) and the <strong class="tyfy">Tyfy</strong> JavaScript files to the end of your <span class="smallcaps">HTML</span> <code>&lt;body&gt;</code>.</p>
-				  <div class="codebox reverse">
-  				  <pre>&lt;body&gt;
+				  <pre class="codebox reverse">&lt;body&gt;
   [content of page]
   &lt;script src="http://code.jquery.com/jquery-1.12.4.min.js"&gt;&lt;/script&gt;
   &lt;script src="dist/script/collapsables.js"&gt;&lt;/script&gt;
   &lt;script src="dist/script/tables.js"&gt;&lt;/script&gt;
   &lt;script src="dist/script/tabs.js"&gt;&lt;/script&gt;
 &lt;/body&gt;</pre>
-				  </div>
 				</li>
+				<li>Now you’re ready to go. Check out the <a href="#modules">modules documentation</a> to learn more about <strong class="tyfy">Tyfy</strong> styles and <span class="smallcaps">CSS</span> classes.</li> 
 			</ol>
 		</section>
     <hr>
@@ -128,7 +131,20 @@
         <li>To learn something along the way.</li>
       </ul>
       <p>A framework is an expression of the values, preferences, priorities, and experience of the person or persons creating it. While I embrace some existing frameworks (Bootstrap 4, PureCSS), I wanted to create something that reflects my values and the work that I do.</p>
-      <h2>Build Tools</h2>
+      <h2>Thanks</h2>
+      <p>This project would not have happened without the benefit of work done by others. Their contributions to front-end development are part of my experience, and so my work reflects theirs. <strong class="tyfy">Tyfy</strong> has something old, something new, something borrowed, and something blue from the following sources:</p>
+      <ul class="list-cols-2">
+        <li><a href="https://html5boilerplate.com">HTML5 Boilerplate</a></li>
+        <li><a href="https://archetypeapp.com">Archetype</a></li>
+        <li><a href="https://getbootstrap.com">Bootstrap</a></li>
+        <li><a href="https://purecss.io">PureCSS</a></li>
+        <li><a href="https://simpleicons.org">Simpleicons</a></li>
+        <li><a href="https://betterwebtype.com">Better Web Type</a></li>
+      </ul>
+    </section>
+    <hr>
+    <section class="main">
+      <h1>Build Tools</h1>
       <p>This project uses node.js for assembling the icon webfont, compiling the SCSS files into CSS, and for assembling the documentation pages. These tasks are automated with npm scripts.</p>
       <dl>
         <dt><pre>&gt; npm run build-css
@@ -142,15 +158,22 @@
         <dt><pre>&gt; node docs.js</pre></dt>
         <dd>Compiles documentation files using <em><a href="https://www.npmjs.com/package/templatesjs">templatesjs</a></em> to assemble the HTML pages and their includes.</dd>
       </dl>
-      <h2>Thanks</h2>
-      <p>This project would not have happened without the benefit of work done by others. Their contributions to front-end development are part of my experience, and so my work reflects theirs. <strong class="tyfy">Tyfy</strong> has something old, something new, something borrowed, and something blue from the following sources:</p>
-      <ul>
-        <li><a href="https://html5boilerplate.com">HTML5 Boilerplate</a></li>
-        <li><a href="https://archetypeapp.com">Archetype</a></li>
-        <li><a href="https://getbootstrap.com">Bootstrap</a></li>
-        <li><a href="https://purecss.io">PureCSS</a></li>
-        <li><a href="https://simpleicons.org">Simpleicons</a></li>
-        <li><a href="https://betterwebtype.com">Better Web Type</a></li>
+    </section>
+    <hr>
+    <section class="main">
+      <h1>Browser Compatability</h1>
+      <p><strong class="tyfy">Tyfy</strong> depends on the support of the following  <span class="smallcaps">CSS</span> standards. Some styles may not work properly of your target web browser lacks the necessary support. Use the following links to assess support for each standard at <a href="https://caniuse.com/#home">caniuse.com</a>.</p>
+      <ul class="list-cols-2">
+        <li><a href="https://caniuse.com/#feat=css-mediaqueries"><span class="smallcaps">CSS</span> Media Queries</a></li>
+        <li><a href="https://caniuse.com/#search=calc">calc() as CSS unit value</a></li>
+        <li><a href="https://caniuse.com/#feat=css-gencontent">pseudo-elements</a></li>
+        <li><a href="https://caniuse.com/#feat=css-text-justify"><span class="smallcaps">CSS</span> text-justify</a></li>
+        <li><a href="https://caniuse.com/#feat=css-hyphens"><span class="smallcaps">CSS</span> Hyphenation</a></li>
+        <li><a href="https://caniuse.com/#feat=multicolumn"><span class="smallcaps">CSS3</span> Multiple column layout</a></li>
+        <li><a href="https://caniuse.com/#feat=css-transitions"><span class="smallcaps">CSS3</span> Transitions</a></li>
+        <li><a href="https://caniuse.com/#feat=css-animation"><span class="smallcaps">CSS</span> Animation</a></li>
+        <li><a href="https://caniuse.com/#feat=flexbox"><span class="smallcaps">CSS</span> Flexbox</a></li>
+        <li><a href="https://caniuse.com/#feat=css-appearance"><span class="smallcaps">CSS</span> Appearance</a></li>
       </ul>
     </section>
   </body>
