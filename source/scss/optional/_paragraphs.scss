@@ -9,8 +9,8 @@ p.justified {
   text-align:justify;
 }
 p.lede {
-  font-size:$tyfy-font-size-pullquote;
-  line-height:tylead($tyfy-font-size-pullquote,tall);
+  font-size:$tyfy-font-size-lede;
+  line-height:tylead($tyfy-font-size-lede,tall);
 }
 .cols-2 {
   @media (min-width:$tyfy-break-cols-2) {

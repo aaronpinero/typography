@@ -182,21 +182,21 @@ h4 {
 			<p>Paragraphs inherit font size and line height from the <code>&lt;body&gt;</code>. <strong class="tyfy">Tyfy</strong> provides <span class="smallcaps">CSS</span> classes for common style variations.</p>
 			<h2>Classes</h2>
 			<dl>
-  			<dt>cols-2</dt>
-  			<dd>Applied to a containing element to a make child content display in two columns using <span class="smallcaps">CSS</span> columns. The style is responsive and reduce to a single column for small screen widths. The breakpoint for two column text is <code>$tyfy-break-cols-2</code>.</dd>
-  			<dt>justified</dt>
-  			<dd>Applied to a <code>&lt;p&gt;</code> tag to justify that paragraph.</dd>
-  			<dt>lede</dt>
-  			<dd>Applied to a <code>&lt;p&gt;</code> tag to display the paragraph as a lede &mdash; with increased font size and line height. The font size for a lede uses the <code>$tyfy-font-size-pullquote</code> value, and the line height style (as applied using the <em>tylead</em> function) is “tall”.</dd>
-  			<dt>paragraphs-justified</dt>
-  			<dd>Applied to a containing element to a make all child paragraphs justified.</dd>
+  			<dt><pre>&lt;p class="<code>lede</code>"&gt;</pre></dt>
+  			<dd>Used to display a paragraph as a lede. Font size of a lede is equal to <code>$tyfy-font-size-lede</code>.</dd>
+  			<dt><pre>&lt;p class="<code>justified</code>"&gt;</pre></dt>
+  			<dd>Used to display a paragraph with justified text.</dd>
+  			<dt><pre>&lt;div class="<code>paragraphs-justified</code>"&gt;</pre></dt>
+    		<dd>Used to display all child paragraphs with justified text.</dd>
+  			<dt><pre>&lt;div class="<code>cols-2</code>"&gt;</pre></dt>
+    		<dd>Used to display content in two columns. The style is responsive and degrades to a single column when the screen width is less than the value of <code>$tyfy-break-cols-2</code>.</dd>
 			</dl>
 			<h2>Variables</h2>
 			<dl>
-  			<dt>$tyfy-break-cols-2</dt>
-  			<dd>The breakpoint above which text inside an element with the <code>cols-2</code> class is displayed in two columns; the !default value is <code>50em</code>.</dd>
-  			<dt>$tyfy-font-size-pullquote</dt>
-  			<dd>The font size applied to a paragraph with the <code>lede</code> class; the !default value is <code>tyscale(2)</code>.</dd>
+  			<dt><pre>$tyfy-break-cols-2: 50em !default;</pre></dt>
+  			<dd>The breakpoint above which text inside an element with the <code>cols-2</code> class is displayed in two columns.</dd>
+  			<dt><pre>$tyfy-font-size-lede: tyscale(2) !default;</dt>
+  			<dd>The font size applied to a paragraph with the <code>lede</code> class.</dd>
 			</dl>
 			<h2>Examples</h2>
 			<h3>Lede</h3>
@@ -214,7 +214,8 @@ h4 {
     <hr>
     <section class="main">
       <h1>About Tyfy</h1>
-      <p><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to your front-end development. I first named this project “typography” for my effort to encode typographic rules and patterns. The name later changed to a short form of the portmanteau “typogrify”. So “<strong class="tyfy">Tyfy</strong>” rhymes with “WiFi” or “Sci-Fi”.</p>
+      <p class="lede"><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to your front-end development.</p>
+      <p>I first named this project “typography” for my effort to encode typographic rules and patterns. The name later changed to a short form of the portmanteau “typogrify”. So “<strong class="tyfy">Tyfy</strong>” rhymes with “WiFi” or “Sci-Fi”.</p>
       <p>For more information about how <strong class="tyfy">Tyfy</strong> came to be, you can read <a href="https://medium.com/@aaronpinero/why-tyfy-1665e36b4f94">the Medium article</a>.</p>
       <h2>Rationale</h2>
       <p>There are three reasons why <strong class="tyfy">Tyfy</strong> was created:</p>
