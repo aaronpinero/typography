@@ -17,6 +17,15 @@
         overflow:auto;
         padding:1rem;
       }
+      pre.codebox.reverse .light {
+        color:#999;
+      }
+      strong.tyfy {
+        color:#c33;
+        letter-spacing: 0.075em;
+        margin-right:-0.0375em;
+        text-transform: uppercase;
+      }
     </style>
   </head>
   <body class="links-underlined">
@@ -118,6 +127,90 @@
 				<li>Now you’re ready to go. Check out the <a href="#modules">modules documentation</a> to learn more about <strong class="tyfy">Tyfy</strong> styles and <span class="smallcaps">CSS</span> classes.</li> 
 			</ol>
 		</section>
+    <hr>
+    <section class="main">
+      <h1>Modular Scale</h1>
+			<p><a href="http://tbrown.org" data-href="http://tbrown.org">Tim Brown</a>, Head of Typography at Adobe Typekit and co-developer of <a href="http://www.modularscale.com">modularscale.com</a> writes:</p>
+			<blockquote>“By basing the dimensions of our compositions on values from modular scales, we can achieve a visual harmony not found in layouts that use arbitrary, conventional, or easily divisible numbers.”</blockquote>
+			<p>More simply, <a href="https://en.wikipedia.org/wiki/Robert_Bringhurst">Robert Bringhurst</a> writes “don’t compose without a scale”. Is he talking about music or typgraphic design?</p>
+			<p><strong class="tyfy">Tyfy</strong> follows Bringhurst’s advice and uses a modular scale for font size values.</p> 
+			<h2>Selecting a Modular Scale</h2>
+			<p>The modular scale for your project depends on the value of two <strong class="tyfy">Tyfy</strong> variables: a base and a scalar (or ratio). The default value of these variables is defined in the <a href="#core">core</a> module.</p>
+			<pre class="codebox reverse">$tyfy-font-size-base: 1rem !default;
+$tyfy-font-size-scalar: 1.2 !default;</pre>
+      <p>The base of the scale is <code>$tyfy-font-size-base</code> (this is also the default font size for the <code>&lt;body&gt;</code> in <strong class="tyfy">Tyfy</strong>). Every step in the modular scale of font size values is calculated by multiplying the base value by <code>($tyfy-font-size-scalar)<sup>n</sup></code>, where <em>n</em> is the number of steps above or below the base value. The ratio between any two adjacent steps in the scale is the value of the scalar.</p>
+      <p>Using a modular scale for font sizes not only provides the visual harmony that Tim Brown described above, but also consistent and effective visual contrast between elements with different text sizes. The modular scale also takes the mystery out of how to select font sizes for elements like headings, subheadings, and pull quotes.</p>
+      <h2>The <em>tyscale</em> Function</h2>
+			<p><strong class="tyfy">Tyfy</strong> provides a modular scale function that makes it easy to assign font size values based the modular scale. No math required! The function is named <em>tyscale</em> and is defined in the <a href="#functions">functions</a> module.</p>
+			<pre class="codebox reverse">@function tyscale($exponent) {
+  $i:0;
+  $scale:$tyfy-font-size-base;
+  @if $exponent &lt; 0 { <em class="light">// negative values step down</em>
+    @while $i &gt; $exponent {
+      $scale:$scale/$tyfy-font-size-scalar;
+      $i:$i - 1;
+    }
+  }
+  @else if $exponent &gt; 0 { <em class="light">// positive values step up</em>
+    @while $i &lt; $exponent {
+      $scale:$scale*$tyfy-font-size-scalar;
+      $i:$i + 1;
+    }
+  }
+  @return $scale;
+}</pre>
+			<p>The <em>tyscale</em> function accepts an integer argument and returns a font size value. The integer argument specifies the number of steps up or down the modular scale from the base font size.</p>
+			<p>This function is used in <strong class="tyfy">Tyfy</strong> to set all font size values. For example:</p>
+			<pre class="codebox reverse">small {
+  font-size: tyscale(-1) !default; <em class="light">// 0.833rem; one scale step down from the base size</em>
+}
+h6 {
+  font-size: tyscale(0) !default;  <em class="light">// 1rem; using 0 as the exponent is the same as setting the value to the base size</em>
+}
+h5 {
+  font-size: tyscale(1) !default;  <em class="light">// 1.2rem; one scale step up from the base size</em>
+}
+h4 {
+  font-size: tyscale(2) !default;  <em class="light">// 1.44rem; two scale steps up from the base size</em>
+}
+[...]</pre>
+			<p>Since all font sizes in <strong class="tyfy">Tyfy</strong> are based on the modular scale, you can quickly change every element’s font size by modifying either the base size or the scalar value. In this way you can fine-tune the typographic design of your project.</p>
+    </section>
+    <hr>
+    <section class="main">
+      <h1>Paragraphs</h1>
+			<p>Paragraphs inherit font size and line height from the <code>&lt;body&gt;</code>. <strong class="tyfy">Tyfy</strong> provides <span class="smallcaps">CSS</span> classes for common style variations.</p>
+			<h2>Classes</h2>
+			<dl>
+  			<dt>cols-2</dt>
+  			<dd>Applied to a containing element to a make child content display in two columns using <span class="smallcaps">CSS</span> columns. The style is responsive and reduce to a single column for small screen widths. The breakpoint for two column text is <code>$tyfy-break-cols-2</code>.</dd>
+  			<dt>justified</dt>
+  			<dd>Applied to a <code>&lt;p&gt;</code> tag to justify that paragraph.</dd>
+  			<dt>lede</dt>
+  			<dd>Applied to a <code>&lt;p&gt;</code> tag to display the paragraph as a lede &mdash; with increased font size and line height. The font size for a lede uses the <code>$tyfy-font-size-pullquote</code> value, and the line height style (as applied using the <em>tylead</em> function) is “tall”.</dd>
+  			<dt>paragraphs-justified</dt>
+  			<dd>Applied to a containing element to a make all child paragraphs justified.</dd>
+			</dl>
+			<h2>Variables</h2>
+			<dl>
+  			<dt>$tyfy-break-cols-2</dt>
+  			<dd>The breakpoint above which text inside an element with the <code>cols-2</code> class is displayed in two columns; the !default value is <code>50em</code>.</dd>
+  			<dt>$tyfy-font-size-pullquote</dt>
+  			<dd>The font size applied to a paragraph with the <code>lede</code> class; the !default value is <code>tyscale(2)</code>.</dd>
+			</dl>
+			<h2>Examples</h2>
+			<h3>Lede</h3>
+			<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus. Cras odio mauris, varius nec tempor nec, elementum eget augue. Vivamus pretium ante sed ex ultrices semper. Donec ante diam, convallis at rutrum sit amet, sodales nec est. Integer tincidunt felis luctus placerat fermentum.</p>
+			<p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
+			<h3>Justified</h3>
+			<p class="justified">Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
+			<p class="justified">Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
+			<h3>Two Columns</h3>
+			<div class="cols-2">
+			  <p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
+        <p>Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
+			</div>
+    </section>
     <hr>
     <section class="main">
       <h1>About Tyfy</h1>
