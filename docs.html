@@ -9,12 +9,17 @@
         font-size:1rem;
       }
       pre.codebox {
-        background-color:#333;
-        border-radius:4px;
+        background-color:#f2f2f2;
+        border:2px #e6e6e6 solid;
+        box-shadow:0 0 0.875rem rgba(0,0,0,0.05) inset;
         overflow:auto;
-        padding:1rem;
+        padding:calc(1.75rem - 2px);
       }
-      pre.codebox.reverse .light {
+      pre.codebox code {
+        background-color:transparent;
+        padding:0;
+      }
+      pre.codebox .light {
         color:#999;
       }
       strong.tyfy {
@@ -23,6 +28,17 @@
         letter-spacing: 0.075em;
         margin-right:-0.0375em;
         text-transform: uppercase;
+      }
+      figure.example {
+        background-color:white;
+        border:2px #e6e6e6 solid;
+        margin-left:0;
+        margin-right:0;
+        padding:calc(1.75rem - 2px);
+      }
+      pre.codebox + figure.example {
+        border-top:none;
+        margin-top:0;
       }
     </style>
   </head>
@@ -107,20 +123,20 @@
 				<li>Within the <em>tyfy</em> project folder, the <em>dist</em> directory contains the framework's compiled stylesheet, javascripts, and icon font. Move the <em>dist</em> directory into your project folder.</li>
 				<li>
 				  <p>Add the <strong class="tyfy">Tyfy</strong> stylesheet to the your <span class="smallcaps">HTML</span> <code>&lt;head&gt;</code>.</p>
-  				<pre class="codebox reverse">&lt;head&gt;
-  [head tag]
+  				<pre class="codebox"><code>&lt;head&gt;
+  <em class="light">// head tags</em>
   &lt;link rel="stylesheet" href="dist/style/tyfy.css"&gt;
-&lt;/head&gt;</pre>
+&lt;/head&gt;</code></pre>
         </li>
 				<li>
 				  <p>Add <a href="https://jquery.com">jQuery</a> (1.12.4 or above) and the <strong class="tyfy">Tyfy</strong> JavaScript files to the end of your <span class="smallcaps">HTML</span> <code>&lt;body&gt;</code>.</p>
-				  <pre class="codebox reverse">&lt;body&gt;
-  [content of page]
+				  <pre class="codebox"><code>&lt;body&gt;
+  <em class="light">// content of page</em>
   &lt;script src="http://code.jquery.com/jquery-1.12.4.min.js"&gt;&lt;/script&gt;
   &lt;script src="dist/script/collapsables.js"&gt;&lt;/script&gt;
   &lt;script src="dist/script/tables.js"&gt;&lt;/script&gt;
   &lt;script src="dist/script/tabs.js"&gt;&lt;/script&gt;
-&lt;/body&gt;</pre>
+&lt;/body&gt;</code></pre>
 				</li>
 				<li>Now you’re ready to go. Check out the <a href="#modules">modules documentation</a> to learn more about <strong class="tyfy">Tyfy</strong> styles and <span class="smallcaps">CSS</span> classes.</li> 
 			</ol>
@@ -134,13 +150,13 @@
 			<p><strong class="tyfy">Tyfy</strong> follows Bringhurst’s advice and uses a modular scale for font size values.</p> 
 			<h2>Selecting a Modular Scale</h2>
 			<p>The modular scale for your project depends on the value of two <strong class="tyfy">Tyfy</strong> variables: a base and a scalar (or ratio). The default value of these variables is defined in the <a href="#core">core</a> module.</p>
-			<pre class="codebox reverse">$tyfy-font-size-base: 1rem !default;
-$tyfy-font-size-scalar: 1.2 !default;</pre>
+			<pre class="codebox"><code>$tyfy-font-size-base: 1rem !default;
+$tyfy-font-size-scalar: 1.2 !default;</code></pre>
       <p>The base of the scale is <code>$tyfy-font-size-base</code> (this is also the default font size for the <code>&lt;body&gt;</code> in <strong class="tyfy">Tyfy</strong>). Every step in the modular scale of font size values is calculated by multiplying the base value by <code>($tyfy-font-size-scalar)<sup>n</sup></code>, where <em>n</em> is the number of steps above or below the base value. The ratio between any two adjacent steps in the scale is the value of the scalar.</p>
       <p>Using a modular scale for font sizes not only provides the visual harmony that Tim Brown described above, but also consistent and effective visual contrast between elements with different text sizes. The modular scale also takes the mystery out of how to select font sizes for elements like headings, subheadings, and pull quotes.</p>
       <h2>The <em>tyscale</em> Function</h2>
 			<p><strong class="tyfy">Tyfy</strong> provides a modular scale function that makes it easy to assign font size values based the modular scale. No math required! The function is named <em>tyscale</em> and is defined in the <a href="#functions">functions</a> module.</p>
-			<pre class="codebox reverse">@function tyscale($exponent) {
+			<pre class="codebox"><code>@function tyscale($exponent) {
   $i:0;
   $scale:$tyfy-font-size-base;
   @if $exponent &lt; 0 { <em class="light">// negative values step down</em>
@@ -156,10 +172,10 @@ $tyfy-font-size-scalar: 1.2 !default;</pre>
     }
   }
   @return $scale;
-}</pre>
+}</code></pre>
 			<p>The <em>tyscale</em> function accepts an integer argument and returns a font size value. The integer argument specifies the number of steps up or down the modular scale from the base font size.</p>
 			<p>This function is used in <strong class="tyfy">Tyfy</strong> to set all font size values. For example:</p>
-			<pre class="codebox reverse">small {
+			<pre class="codebox"><code>small {
   font-size: tyscale(-1) !default; <em class="light">// 0.833rem; one scale step down from the base size</em>
 }
 h6 {
@@ -171,7 +187,7 @@ h5 {
 h4 {
   font-size: tyscale(2) !default;  <em class="light">// 1.44rem; two scale steps up from the base size</em>
 }
-[...]</pre>
+[...]</code></pre>
 			<p>Since all font sizes in <strong class="tyfy">Tyfy</strong> are based on the modular scale, you can quickly change every element’s font size by modifying either the base size or the scalar value. In this way you can fine-tune the typographic design of your project.</p>
     </section>
     <hr>
@@ -184,9 +200,9 @@ h4 {
   			<dd>Used to display a paragraph as a lede. Font size of a lede is equal to <code>$tyfy-font-size-lede</code>.</dd>
   			<dt><pre>&lt;p class="<code>justified</code>"&gt;</pre></dt>
   			<dd>Used to display a paragraph with justified text.</dd>
-  			<dt><pre>&lt;div class="<code>paragraphs-justified</code>"&gt;</pre></dt>
+  			<dt><pre>&lt;tag class="<code>paragraphs-justified</code>"&gt;</pre></dt>
     		<dd>Used to display all child paragraphs with justified text.</dd>
-  			<dt><pre>&lt;div class="<code>cols-2</code>"&gt;</pre></dt>
+  			<dt><pre>&lt;tag class="<code>cols-2</code>"&gt;</pre></dt>
     		<dd>Used to display content in two columns. The style is responsive and degrades to a single column when the screen width is less than the value of <code>$tyfy-break-cols-2</code>.</dd>
 			</dl>
 			<h2>Variables</h2>
@@ -198,16 +214,37 @@ h4 {
 			</dl>
 			<h2>Examples</h2>
 			<h3>Lede</h3>
-			<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus. Cras odio mauris, varius nec tempor nec, elementum eget augue. Vivamus pretium ante sed ex ultrices semper. Donec ante diam, convallis at rutrum sit amet, sodales nec est. Integer tincidunt felis luctus placerat fermentum.</p>
-			<p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
+			<pre class="codebox"><code>&lt;p class="lede"&gt;Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.&lt;/p&gt;
+&lt;p&gt;I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. May the Force be with you.&lt;/p&gt;</code></pre>
+			<figure class="example">
+			  <p class="lede">Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.</p>
+        <p>I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. May the Force be with you.</p>
+			</figure>
 			<h3>Justified</h3>
-			<p class="justified">Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
-			<p class="justified">Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
+			<pre class="codebox"><code>&lt;p class="justified"&gt;I heard the command center had been hit. You got your clearance to leave. Don’t worry. I’ll leave. First I’m going to get you to your ship. Your Highness, we must take this last transport. It’s our only hope. Send all troops in sector twelve to the south slope to protect the fighters. Imperial troops have entered the base. Come on… that’s it. Give the evacuation code signal.&lt;/p&gt;
+&lt;div class="paragraphs-justified"&gt;
+  &lt;p&gt;Hokey religions and ancient weapons are no match for a good blaster at your side, kid. You don’t believe in the Force, do you? Kid, I’ve flown from one side of this galaxy to the other. I’ve seen a lot of strange stuff, but I’ve never seen anything to make me believe there’s one all-powerful force controlling everything.&lt;/p&gt;
+  &lt;p&gt;There’s no mystical energy field that controls my destiny. It’s all a lot of simple tricks and nonsense. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. With the blast shield down, I can’t even see. How am I supposed to fight? Your eyes can deceive you. Don’t trust them.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+			<figure class="example">
+			  <p class="justified">I heard the command center had been hit. You got your clearance to leave. Don’t worry. I’ll leave. First I’m going to get you to your ship. Your Highness, we must take this last transport. It’s our only hope. Send all troops in sector twelve to the south slope to protect the fighters. Imperial troops have entered the base. Come on… that’s it. Give the evacuation code signal.</p>
+			  <div class="paragraphs-justified">
+  			  <p>Hokey religions and ancient weapons are no match for a good blaster at your side, kid. You don’t believe in the Force, do you? Kid, I’ve flown from one side of this galaxy to the other. I’ve seen a lot of strange stuff, but I’ve never seen anything to make me believe there’s one all-powerful force controlling everything.</p>
+  			  <p>There’s no mystical energy field that controls my destiny. It’s all a lot of simple tricks and nonsense. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. With the blast shield down, I can’t even see. How am I supposed to fight? Your eyes can deceive you. Don’t trust them.</p>
+			  </div>
+			</figure>
 			<h3>Two Columns</h3>
-			<div class="cols-2">
-			  <p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
-        <p>Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
-			</div>
+			<pre class="codebox"><code>&lt;div class="cols-2"&gt;
+  &lt;p&gt;I want to come with you to Alderaan. There’s nothing here for me now. I want to learn the ways of the Force and become a Jedi like my father.&lt;/p&gt;
+  &lt;p&gt;Mos Eisley Spaceport. You will never find a more wretched hive of scum and villainy. We must be cautious. How long have you had these droids? About three or four seasons. They’re for sale if you want them.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+  		<figure class="example">
+  			<div class="cols-2">
+    			<p>I want to come with you to Alderaan. There’s nothing here for me now. I want to learn the ways of the Force and become a Jedi like my father.</p>
+          <p>Mos Eisley Spaceport. You will never find a more wretched hive of scum and villainy. We must be cautious. How long have you had these droids? About three or four seasons. They’re for sale if you want them.</p>
+        </div>
+  		</figure>
+			<p><em><small>Sample text from <a href="http://forcemipsum.com">Forcem Ipsum</a>.</small></em></p>
     </section>
     <hr>
     <section class="main">
