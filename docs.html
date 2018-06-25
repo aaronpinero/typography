@@ -5,6 +5,11 @@
     <title>Tyfy Documentation</title>
     <link rel="stylesheet" href="docs/resources/style/tyfy-docs.css">
     <style>
+      h1.demo {
+        font-family:"IBM Plex Sans",sans-serif;
+        letter-spacing:0;
+        text-transform:none;
+      }
       h2 small {
         font-size:1rem;
       }
@@ -130,6 +135,7 @@
       <p><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to your front-end development. It provides a <a href="#grid">baseline grid</a>, <a href="#scale">modular scale</a>, <a href="#margins">sensible margins</a>, and <a href="#optional">styles for common HTML elements and content patterns</a>.</p>
       <p>To get started you can either <a href="#css">use the compiled <span class="smallcaps">CSS</span></a> or <a href="#scss">begin with the <span class="smallcaps">SCSS</span> files</a> and customize the framework by overriding the default variable values. The latter approach is recommended as it allows you to take full advantage of the <a href="#mixins">mixins</a> and <a href="#functions">functions</a> for the baseline grid and modular scale.</p>
       <h2><a name="scss">Start with <span class="smallcaps">SCSS</span></a> <small>(recommended)</small></h2>
+      <p>The main <span class="smallcaps">SCSS</span> file includes all of the required, essential and optional <strong class="tyfy">Tyfy</strong> modules. If you are not using your own icon font, you will want to also add the <em>icons</em> module from the extras collection. Use this approach if you want to customize <strong class="tyfy">Tyfy</strong> and use the framework as a foundation for your project.</p>
       <h2><a name="css">Start with <span class="smallcaps">CSS</span></a></h2>
       <p>The compiled <span class="smallcaps">CSS</span> includes all of the required, essential, and optional <strong class="tyfy">Tyfy</strong> modules. It also adds the <em>icons</em> module from the extras collection. Use this approach if you want to get started quickly and don't need any customization.</p>
 			<ol>
@@ -240,9 +246,9 @@ h4 {
 			<h2>Variables</h2>
 			<dl>
   			<dt><code><em class="var">$tyfy-break-cols-2</em>: 50em !default;</code></dt>
-  			<dd>The breakpoint above which text inside an element with the <code>cols-2</code> class is displayed in two columns.</dd>
+  			<dd>Breakpoint above which text inside an element with the <code>cols-2</code> class is displayed in two columns.</dd>
   			<dt><code><em class="var">$tyfy-font-size-lede</em>: tyscale(2) !default;</code>
-  			<dd>The font size applied to a paragraph with the <code>lede</code> class.</dd>
+  			<dd>Font size applied to a paragraph with the <code>lede</code> class.</dd>
 			</dl>
 			<h2>Examples</h2>
 			<h3>Lede</h3>
@@ -281,8 +287,8 @@ h4 {
     <hr>
 		<section class="main links-underlined">
 			<h1>Headings</h1>
-			<p>The font sizes for heading levels 1 through 6 are based on the <a href="scale.html">modular scale</a>. Heading font sizes are also available as <span class="smallcaps">SASS</span> variables and <span class="smallcaps">CSS</span> classes.</p>
-			<p>To emphasize the meaning of a heading, it should be positioned closer to the text that follows than the text preceding. Adjacent sibling selectors are used to define the margins for headings in context of other elements. If the element preceding a heading is not also a heading, the top margin for the heading will be larger than the standard margin. In <span class="smallcaps">CSS</span>, this is accomplished as follows:</p>
+			<p>Font sizes for heading levels 1 through 6 are based on the <a href="scale.html">modular scale</a>. Heading font sizes are also available as <span class="smallcaps">SASS</span> variables and <span class="smallcaps">CSS</span> classes.</p>
+			<p><strong class="tyfy">Tyfy</strong> headings are positioned closer to the text following the heading than the text preceding. <a href="margins.html">Adjacent sibling selectors</a> are used to define the margins for headings in context of other elements. If the element preceding a heading is not also a heading, the top margin for the heading will be larger than the standard margin. In <span class="smallcaps">CSS</span>, this is accomplished as follows:</p>
 			<pre class="codebox"><code>* + * {
   margin-top: $tyfy-spacing-standard;
 }
@@ -304,14 +310,35 @@ h4 {
   			  <code><em class="var">$tyfy-font-size-h2</em>: tyscale(4) !default;</code>
   			  <code><em class="var">$tyfy-font-size-h1</em>: tyscale(6) !default;</code>
         </dt>
-  			<dd>The font size for heading levels 1 to 6.</dd>
+  			<dd>Font sizes for heading levels 1 to 6.</dd>
 				<dt><code><em class="var">$tyfy-spacing-large</em>: tygrid(3) !default</code></dt>
-				<dd>The top margin of headings when the preceding element is not another heading.</dd>
+				<dd>Top margin for headings when the preceding element is not another heading.</dd>
 				<dt><code><em class="var">$tyfy-font-heading</em>: $tyfy-serif !default</code></dt>
-				<dd>The font family for headings.</dd>
+				<dd>Font family for headings.</dd>
 				<dt><code><em class="var">$tyfy-color-text-head</em>: mix($tyfy-color-foreground,$tyfy-color-background,95%) !default;</code></dt>
-				<dd>The text color for headings.</dd>
+				<dd>Text color for headings.</dd>
 			</dl>
+			<h2>Example</h2>
+			<pre class="codebox"><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;p&gt;Anakin was a good friend. When I first knew him, your father was already a great pilot. But I was amazed how strongly the Force was with him. I took it upon myself to train him as a Jedi. I thought that I could instruct him just as well as Yoda. I was wrong. There's still good in him. He is more machine now than man. Twisted and evil.&lt;/p&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;p&gt;I can't do it, Ben. You cannot escape your destiny. I can't kill my own father. Then the Emperor has already won. You were our only hope. Yoda spoke of another. The other he spoke of is your twin sister. But I have no sister. To protect you both from the Emperor, you were hidden from your father when you were born.&lt;/p&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+&lt;p&gt;Well, they're on their way. Artoo, are you sure this was a good idea? Freeze! Don't move! We surrender. Ohhh! Stand back, Artoo. The code's changed. We need Artoo! Here's the terminal. Artoo, where are you? We need you at the bunker right away.&lt;/p&gt;</code></pre>
+			<figure class="example">
+			  <h1 class="demo">Heading 1</h1>
+			  <h2>Heading 2</h2>
+			  <p>Anakin was a good friend. When I first knew him, your father was already a great pilot. But I was amazed how strongly the Force was with him. I took it upon myself to train him as a Jedi. I thought that I could instruct him just as well as Yoda. I was wrong. There's still good in him. He is more machine now than man. Twisted and evil.</p>
+			  <h3>Heading 3</h3>
+			  <h4>Heading 4</h4>
+			  <p>I can't do it, Ben. You cannot escape your destiny. I can't kill my own father. Then the Emperor has already won. You were our only hope. Yoda spoke of another. The other he spoke of is your twin sister. But I have no sister. To protect you both from the Emperor, you were hidden from your father when you were born.</p>
+			  <h5>Heading 5</h5>
+			  <h6>Heading 6</h6>
+			  <p>Well, they're on their way. Artoo, are you sure this was a good idea? Freeze! Don't move! We surrender. Ohhh! Stand back, Artoo. The code's changed. We need Artoo! Here's the terminal. Artoo, where are you? We need you at the bunker right away.</p>
+			</figure>
 		</section>
     <hr>
     <section class="main">
