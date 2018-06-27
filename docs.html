@@ -132,21 +132,64 @@
     <hr>
     <section class="main">
       <h1>Get Started</h1>
-      <p><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to your front-end development. It provides a <a href="#grid">baseline grid</a>, <a href="#scale">modular scale</a>, <a href="#margins">sensible margins</a>, and <a href="#optional">styles for common HTML elements and content patterns</a>.</p>
-      <p>To get started you can either <a href="#css">use the compiled <span class="smallcaps">CSS</span></a> or <a href="#scss">begin with the <span class="smallcaps">SCSS</span> files</a> and customize the framework by overriding the default variable values. The latter approach is recommended as it allows you to take full advantage of the <a href="#mixins">mixins</a> and <a href="#functions">functions</a> for the baseline grid and modular scale.</p>
+      <p><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to your front-end development. It provides a <a href="grid.html">baseline grid</a>, <a href="scale.html">modular scale</a>, <a href="margins.html">sensible margins</a>, and <a href="optional.html">styles for common HTML elements and content patterns</a>.</p>
+      <p>To get started you can either <a href="#css">use the compiled <span class="smallcaps">CSS</span></a> or <a href="#scss">begin with the <span class="smallcaps">SCSS</span> files</a> and customize the framework by overriding the default variable values. The latter approach is recommended as it allows you to take full advantage of the <a href="mixins.html">mixins</a> and <a href="functions.html">functions</a> for the baseline grid and modular scale.</p>
       <h2><a name="scss">Start with <span class="smallcaps">SCSS</span></a> <small>(recommended)</small></h2>
-      <p>The main <span class="smallcaps">SCSS</span> file includes all of the required, essential and optional <strong class="tyfy">Tyfy</strong> modules. If you are not using your own icon font, you will want to also add the <em>icons</em> module from the extras collection. Use this approach if you want to customize <strong class="tyfy">Tyfy</strong> and use the framework as a foundation for your project.</p>
-      <h2><a name="css">Start with <span class="smallcaps">CSS</span></a></h2>
-      <p>The compiled <span class="smallcaps">CSS</span> includes all of the required, essential, and optional <strong class="tyfy">Tyfy</strong> modules. It also adds the <em>icons</em> module from the extras collection. Use this approach if you want to get started quickly and don't need any customization.</p>
+      <p>Use this approach if you want to customize <strong class="tyfy">Tyfy</strong> and use the framework as a foundation for your project.</p>
 			<ol>
 				<li>Clone the github project or install using <code>npm install tyfy</code></li>
-				<li>Within the <em>tyfy</em> project folder, the <em>dist</em> directory contains the framework's compiled stylesheet, javascripts, and icon font. Move the <em>dist</em> directory into your project folder.</li>
+				<li>
+				  <p>If you want to customize any of the <strong class="tyfy">Tyfy</strong> variable values, declare the custom values at the top of your <span class="smallcaps">SCSS</span> file. Begin with the <a href="core.html">core</a> values and then any <a href="settings.html">settings</a> values. The following sample comes from the <span class="smallcaps">SCSS</span> file for this documentation:</p>
+				  <pre class="codebox"><code><em class="light">// custom core variable values</em>
+$tyfy-serif:"IBM Plex Serif", serif;
+$tyfy-sans:"IBM Plex Sans", sans-serif;
+$tyfy-mono:"IBM Plex Mono", monospace;
+
+<em class="light">// custom settings variable values</em>
+$tyfy-font-base:$tyfy-serif;
+$tyfy-font-heading:$tyfy-sans;</code></pre>
+				</li>
+				<li>
+				  <p>Import the main <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SCSS</span> file.</p>
+				  <pre class="codebox"><code>@import "[path to tyfy]/source/scss/tyfy.scss";</code></pre>
+				  <p>The main <span class="smallcaps">SCSS</span> file includes all of the <a href="required.html">required</a>, <a href="essential.html">essential</a> and <a href="optional.html">optional</a> <strong class="tyfy">Tyfy</strong> modules.</p>
+				</li>
+				<li>
+				  <p>Import any <a href="extras.html">extras</a> modules you may need for your project. If you are not using an icon font, you will need to add the <em>icons</em> module.</p>
+				  <pre class="codebox"><code>@import "[path to tyfy]/source/scss/extras/icons";</code></pre>
+				</li>
+				<li>
+				  <p>Add <a href="https://jquery.com">jQuery</a> (1.12.4 or above) and the <strong class="tyfy">Tyfy</strong> JavaScript files to the end of your <span class="smallcaps">HTML</span>.</p>
+				  <pre class="codebox"><code>&lt;body&gt;
+  <em class="light">// content of page</em>
+  &lt;script src="http://code.jquery.com/jquery-1.12.4.min.js"&gt;&lt;/script&gt;
+  &lt;script src="[path to tyfy]/dist/script/collapsables.js"&gt;&lt;/script&gt;
+  &lt;script src="[path to tyfy]/dist/script/tables.js"&gt;&lt;/script&gt;
+  &lt;script src="[path to tyfy]/dist/script/tabs.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+				</li>
+				<li>
+				  Now you’re ready to begin development. Review the documentation to learn more about:
+				  <ul class="sibling-margins-off">
+  				  <li><a href="customization.html">customizing</a> the framework for your project</li>
+  				  <li>using the <a href="mixins.html">mixins</a> and <a href="functions.html">functions</a></li>
+  				  <li>styles, variables, and classes provided by the <a href="#modules">modules</a></li>
+  				  <li><a href="tools.html">build tools</a> that can be used with <strong class="tyfy">Tyfy</strong></li>
+				  </ul>
+				</li>
+			</ol>
+      <h2><a name="css">Start with <span class="smallcaps">CSS</span></a></h2>
+      <p>Use this approach if you want to get started quickly and will not need to customize or extend the framework.</p>
+			<ol>
+				<li>Clone the github project or install using <code>npm install tyfy</code></li>
+				<li>Within the <em>tyfy</em> project folder, the <em>dist</em> directory contains the framework's compiled stylesheet, JavaScript files, and icon font. Move the <em>dist</em> directory into your project folder.</li>
 				<li>
 				  <p>Add the <strong class="tyfy">Tyfy</strong> stylesheet to the your <span class="smallcaps">HTML</span> <code>&lt;head&gt;</code>.</p>
   				<pre class="codebox"><code>&lt;head&gt;
   <em class="light">// head tags</em>
   &lt;link rel="stylesheet" href="dist/style/tyfy.css"&gt;
 &lt;/head&gt;</code></pre>
+				  <p>The compiled <span class="smallcaps">CSS</span> includes all of the required, essential, and optional <strong class="tyfy">Tyfy</strong> modules. It also adds the <em>icons</em> module from the extras collection.</p>
         </li>
 				<li>
 				  <p>Add <a href="https://jquery.com">jQuery</a> (1.12.4 or above) and the <strong class="tyfy">Tyfy</strong> JavaScript files to the end of your <span class="smallcaps">HTML</span> <code>&lt;body&gt;</code>.</p>
@@ -158,7 +201,7 @@
   &lt;script src="dist/script/tabs.js"&gt;&lt;/script&gt;
 &lt;/body&gt;</code></pre>
 				</li>
-				<li>Now you’re ready to go. Check out the <a href="#modules">modules documentation</a> to learn more about <strong class="tyfy">Tyfy</strong> styles and <span class="smallcaps">CSS</span> classes.</li> 
+				<li>Now you’re ready to go. Review the <a href="#modules">modules documentation</a> to learn more about <strong class="tyfy">Tyfy</strong> styles and <span class="smallcaps">CSS</span> classes.</li> 
 			</ol>
 		</section>
     <hr>
