@@ -64,6 +64,12 @@
     }
   }
   
+  // utility
+  code {
+    background-color:rgba($tyfy-color-text-body-reverse,0.07);
+    color:$tyfy-color-text-code-reverse;
+  }
+  
   // quotes
   blockquote {
     &.pullquote {
