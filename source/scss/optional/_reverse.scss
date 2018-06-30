@@ -11,7 +11,7 @@
   h6 {
     color:$tyfy-color-text-head-reverse;
   }
-  
+
   // links
   a {
     color:$tyfy-color-text-body-reverse;
@@ -63,13 +63,13 @@
       }
     }
   }
-  
+
   // utility
   code {
     background-color:rgba($tyfy-color-text-body-reverse,0.07);
-    color:tyreverse($tyfy-color-text-code);
+    color:$tyfy-color-text-code-reverse;
   }
-  
+
   // quotes
   blockquote {
     &.pullquote {
@@ -82,8 +82,8 @@
       }
     }
   }
-  
-  // tables 
+
+  // tables
   table.striped {
     tr:nth-child(2n) {
       td {

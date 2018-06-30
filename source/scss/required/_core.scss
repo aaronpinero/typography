@@ -16,10 +16,9 @@ $tyfy-font-size-scalar:1.2 !default;
 $tyfy-font-size-base:1rem !default;
 
 // fonts
-// from https://gist.github.com/don1138/5761014
-$tyfy-serif:"Lucida Bright", lucidabright, "Lucida Serif", lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", georgia, serif !default;
-$tyfy-sans:frutiger, "Frutiger Linotype", univers, calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", tahoma, geneva, "Helvetica Neue", helvetica, arial, sans-serif !default;
-$tyfy-mono:consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", monaco, "Courier New", courier, monospace !default;
+$tyfy-serif:georgia, serif !default;
+$tyfy-sans:helvetica, arial, sans-serif !default;
+$tyfy-mono:monaco, courier, monospace !default;
 
 $tyfy-symbol:tyfyicons !default;
 

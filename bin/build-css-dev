@@ -1,5 +1,7 @@
 stylelint --syntax scss "source/scss/**/*.scss"
 node-sass --source-comments source/scss/tyfy-dist.scss dist/style/tyfy.css
 node-sass --source-comments source/scss/tyfy-docs.scss docs/resources/style/tyfy-docs.css
+node-sass --source-comments source/scss/tyfy-test.scss test/tyfy-test.css
 postcss dist/style/*.css --replace --config config/postcss.config.js
 postcss docs/resources/style/*.css --replace --config config/postcss.config.js
+postcss test/*.css --replace --config config/postcss.config.js
