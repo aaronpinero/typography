@@ -66,6 +66,9 @@ $tyfy-color-link-default:mix($tyfy-color-primary,$tyfy-color-foreground,92%);
 $tyfy-color-link-active:adjust-hue($tyfy-color-link-default,-120deg);
 $tyfy-color-border:mix($tyfy-color-foreground,$tyfy-color-background,12%);
 $tyfy-color-table-stripe:mix($tyfy-color-foreground,$tyfy-color-background,5%);
+$tyfy-color-foreground-reverse:$tyfy-color-background;
+$tyfy-color-background-reverse:$tyfy-color-foreground;
+$tyfy-color-primary-reverse:ighten($tyfy-color-primary,30%);
 $tyfy-color-text-body-reverse:white;
 $tyfy-color-text-head-reverse:white;
 $tyfy-color-text-light-reverse:mix(white,#333);
@@ -75,14 +78,28 @@ $tyfy-color-link-default-reverse:mix($tyfy-color-primary,white);
 $tyfy-color-link-active-reverse:adjust-hue($tyfy-color-link-default-reverse,-120deg);
 $tyfy-color-border-reverse:mix(#333,white,85%);
 $tyfy-color-table-stripe-reverse:mix(#333,white,95%);
-$tyfyicons-path:"../fonts/tyfyicons";
+$tyfyicons-path:"../dist/fonts/tyfyicons";
+$tyfyicons-angle-down:"ea01";
+$tyfyicons-angle-left:"ea02";
+$tyfyicons-angle-right-small:"ea03";
+$tyfyicons-angle-right:"ea04";
+$tyfyicons-angle-up:"ea05";
+$tyfyicons-bars:"ea06";
+$tyfyicons-dash:"ea07";
+$tyfyicons-facebook:"ea08";
+$tyfyicons-instagram:"ea09";
+$tyfyicons-linkedin:"ea0a";
+$tyfyicons-quote-left:"ea0b";
+$tyfyicons-quote-right:"ea0c";
+$tyfyicons-search:"ea0d";
+$tyfyicons-soundcloud:"ea0e";
+$tyfyicons-twitter:"ea0f";
+$tyfyicons-x:"ea10";
+$tyfyicons-youtube:"ea11";
 @import "tyfy.scss";
 body {
   margin-left:auto;
   margin-right:auto;
   max-width:tygrid(60);
   padding:tygrid(2);
-}
-.reverse {
-  background-color:#333;
 }

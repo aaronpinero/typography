@@ -1,7 +1,7 @@
 $tyfy-serif:"IBM Plex Serif", "Lucida Bright", lucidabright, "Lucida Serif", lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", georgia, serif;
 $tyfy-sans:"IBM Plex Sans", frutiger, "Frutiger Linotype", univers, calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", tahoma, geneva, "Helvetica Neue", helvetica, arial, sans-serif;
 $tyfy-mono:"IBM Plex Mono", consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", monaco, "Courier New", courier, monospace;
-$tyfyicons-path:"../../../dist/fonts"; // do not add a trailing /
+$tyfyicons-path:"../../../dist/fonts/tyfyicons"; // do not add a trailing /
 $tyfy-font-base:$tyfy-serif;
 $tyfy-font-heading:$tyfy-sans;
 
@@ -13,9 +13,6 @@ body {
   @include fade-in(2000ms);
   margin:0 0 tygrid(2) 0;
   padding:0;
-}
-.reverse {
-  background-color:#333;
 }
 .constrained {
   margin-left:auto;

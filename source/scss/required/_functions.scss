@@ -43,16 +43,6 @@
   @return $scale;
 }
 
-// create a specific lightness of a color
-@function tycolor($color,$lightness) {
-  @return hsl(hue($color),saturation($color),$lightness);
-}
-
-// create a color with the reverse lightness
-@function tyreverse($color) {
-  @return hsl(hue($color),saturation($color),(100% - lightness($color)));
-}
-
 // output character code strings properly for icon fonts
 // see https://github.com/sass/libsass/issues/1115
 @function tychar($code) {

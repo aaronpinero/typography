@@ -160,3 +160,140 @@
     outline:none;
   }
 }
+
+// a mixin based on the reverse module that can allow easy color changes on an element and it's children
+@mixin mod-colors($foreground:$tyfy-color-foreground-reverse,$background:$tyfy-color-background-reverse,$primary:$tyfy-color-primary-reverse) {
+  // derivative colors
+  $head:mix($foreground,$background,95%);
+  $light:mix($foreground,$background,45%);
+  $code:mix($foreground,$primary,40%);
+  $pullquote:adjust-hue($primary,120deg);
+  $link-default:lighten($primary,3%);
+  $link-active:adjust-hue($link-default,-120deg);
+  $border:mix($foreground,$background,12%);
+  $table-stripe:mix($foreground,$background,5%);
+
+  background-color:$background;
+  color:$foreground;
+  // headings
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color:$head;
+  }
+
+  // links
+  a {
+    color:$foreground;
+    &[href] {
+      border-bottom-color:rgba($link-default,0.5);
+      color:$link-default;
+      &:hover,
+      &:active {
+        border-bottom-color:rgba($link-active,0.5);
+        color:$link-active;
+      }
+    }
+    &.button {
+      &[href] {
+        color:white;
+        &:hover,
+        &:active {
+          color:white;
+        }
+      }
+    }
+    &.button-outline {
+      @include button-outline($link-default,$link-active);
+      &[href] {
+        color:$link-default;
+        &:hover,
+        &:active {
+          color:$link-active;
+        }
+      }
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      color:$head;
+      &[href] {
+        border-bottom-color:rgba($head,0.5);
+        color:$head;
+        &:hover,
+        &:active {
+          border-bottom-color:rgba($link-active,0.5);
+          color:$link-active;
+        }
+      }
+    }
+  }
+
+  // utility
+  code {
+    background-color:rgba($foreground,0.07);
+    color:$code;
+  }
+
+  // quotes
+  blockquote {
+    &.pullquote {
+      color:$pullquote;
+      &::before {
+        color:$border;
+      }
+      &::after {
+        color:$border;
+      }
+    }
+  }
+
+  // tables
+  table.striped {
+    tr:nth-child(2n) {
+      td {
+        background-color:$table-stripe;
+      }
+    }
+  }
+  table.horizontal-rules {
+    border-top-color:$border;
+    td,
+    th {
+      border-bottom-color:$border;
+    }
+    th[scope="col"] {
+      border-bottom-color:$border;
+    }
+  }
+  table.vertical-rules {
+    border-left-color:$border;
+    td,
+    th {
+      border-right-color:$border;
+    }
+    th[scope="row"] {
+      border-right-color:$border;
+    }
+  }
+  table.responsive {
+    tbody tr + tr {
+      @media (max-width:$tyfy-break-table*0.9999) {
+        border-top-color:$border;
+      }
+    }
+    td {
+      .td-label {
+        color:$light;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
-// root styles
+// reverse styles use the reverse colors defined in the settings module
 .reverse {
+  background-color:$tyfy-color-background-reverse;
   color:$tyfy-color-text-body-reverse;
 
   // headings
