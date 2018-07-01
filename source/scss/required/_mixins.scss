@@ -138,7 +138,7 @@
 
 @mixin button-outline($color_default:$tyfy-color-link-default,$color_active:$tyfy-color-link-active,$border_radius:tygrid(0.25)) {
   background-color:transparent;
-  border:tygrid(0.13) $color_default solid;
+  border:$tyfy-width-border $color_default solid;
   border-radius:$border_radius;
   color:$tyfy-color-link-default;
   cursor:pointer;
@@ -146,7 +146,7 @@
   font-size:inherit;
   line-height:inherit;
   margin:0;
-  padding:tygrid(0.37) tygrid(1.37);
+  padding:calc(#{tygrid(0.5)} - #{$tyfy-width-border}) calc(#{tygrid(1.5)} - #{$tyfy-width-border});
   text-decoration:none;
   transition:border-color $tyfy-transition-duration-hover, color $tyfy-transition-duration-hover, background-color $tyfy-transition-duration-hover;
   vertical-align:middle;
@@ -193,7 +193,7 @@
       color:$link-default;
       &:hover,
       &:active {
-        border-bottom-color:rgba($link-active,0.5);
+        border-bottom-color:rgba($link-active,0.9);
         color:$link-active;
       }
     }
@@ -230,7 +230,7 @@
         color:$head;
         &:hover,
         &:active {
-          border-bottom-color:rgba($link-active,0.5);
+          border-bottom-color:rgba($link-active,0.9);
           color:$link-active;
         }
       }
@@ -241,6 +241,20 @@
   code {
     background-color:rgba($foreground,0.07);
     color:$code;
+  }
+  hr {
+    border-top-color:$border;
+  }
+
+  // unordered list variations
+  ul {
+    &.list-icons {
+      li {
+        &::before {
+          color:$light;
+        }
+      }
+    }
   }
 
   // quotes
