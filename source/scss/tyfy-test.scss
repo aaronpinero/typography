@@ -12,7 +12,7 @@ $tyfy-mono:monaco, courier, monospace;
 $tyfy-symbol:tyfyicons;
 $tyfy-color-background:white;
 $tyfy-color-foreground:black;
-$tyfy-color-primary:red;
+$tyfy-color-primary:#c33;
 
 // tyfy settings overrides
 $tyfy-spacings: (
@@ -97,9 +97,13 @@ $tyfyicons-twitter:"ea0f";
 $tyfyicons-x:"ea10";
 $tyfyicons-youtube:"ea11";
 @import "tyfy.scss";
+@import "extras/icons";
 body {
   margin-left:auto;
   margin-right:auto;
-  max-width:tygrid(60);
+  max-width:tygrid(70);
   padding:tygrid(2);
+}
+section.reverse {
+  padding:tygrid(4);
 }
