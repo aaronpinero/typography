@@ -786,7 +786,7 @@ blockquote {
   blockquote.pullquote {
     background-color: transparent;
     border: none;
-    color: #33cc33;
+    color: #36c;
     font-family: georgia, serif;
     font-size: 1.75781rem;
     line-height: 2.25rem;
@@ -1118,7 +1118,7 @@ table.responsive td .td-label {
     color: #999999; }
   /* line 90, source/scss/optional/_reverse.scss */
   .reverse blockquote.pullquote {
-    color: #99e699; }
+    color: #69f; }
     /* line 92, source/scss/optional/_reverse.scss */
     .reverse blockquote.pullquote::before {
       color: #525252; }
@@ -1830,3 +1830,65 @@ body {
 /* line 107, source/scss/tyfy-test.scss */
 section.reverse {
   padding: 3rem; }
+
+/* line 110, source/scss/tyfy-test.scss */
+.swatch {
+  border-radius: 50%;
+  display: inline-block;
+  height: 2.25rem;
+  vertical-align: middle;
+  width: 2.25rem; }
+  /* line 116, source/scss/tyfy-test.scss */
+  .swatch.text-body {
+    background-color: black; }
+    /* line 118, source/scss/tyfy-test.scss */
+    .reverse .swatch.text-body {
+      background-color: white; }
+  /* line 122, source/scss/tyfy-test.scss */
+  .swatch.text-head {
+    background-color: #0d0d0d; }
+    /* line 124, source/scss/tyfy-test.scss */
+    .reverse .swatch.text-head {
+      background-color: white; }
+  /* line 128, source/scss/tyfy-test.scss */
+  .swatch.text-light {
+    background-color: #8c8c8c; }
+    /* line 130, source/scss/tyfy-test.scss */
+    .reverse .swatch.text-light {
+      background-color: #999999; }
+  /* line 134, source/scss/tyfy-test.scss */
+  .swatch.text-code {
+    background-color: #7a1f1f; }
+    /* line 136, source/scss/tyfy-test.scss */
+    .reverse .swatch.text-code {
+      background-color: #ebadad; }
+  /* line 140, source/scss/tyfy-test.scss */
+  .swatch.text-pullquote {
+    background-color: #36c; }
+    /* line 142, source/scss/tyfy-test.scss */
+    .reverse .swatch.text-pullquote {
+      background-color: #69f; }
+  /* line 146, source/scss/tyfy-test.scss */
+  .swatch.link-default {
+    background-color: #bc2f2f; }
+    /* line 148, source/scss/tyfy-test.scss */
+    .reverse .swatch.link-default {
+      background-color: #e69999; }
+  /* line 152, source/scss/tyfy-test.scss */
+  .swatch.link-active {
+    background-color: #2f2fbc; }
+    /* line 154, source/scss/tyfy-test.scss */
+    .reverse .swatch.link-active {
+      background-color: #9999e6; }
+  /* line 158, source/scss/tyfy-test.scss */
+  .swatch.border {
+    background-color: #e0e0e0; }
+    /* line 160, source/scss/tyfy-test.scss */
+    .reverse .swatch.border {
+      background-color: #525252; }
+  /* line 164, source/scss/tyfy-test.scss */
+  .swatch.table-stripe {
+    background-color: #f2f2f2; }
+    /* line 166, source/scss/tyfy-test.scss */
+    .reverse .swatch.table-stripe {
+      background-color: #3d3d3d; }
