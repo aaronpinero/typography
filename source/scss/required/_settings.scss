@@ -85,7 +85,7 @@ $tyfy-color-table-stripe:           mix($tyfy-color-foreground,$tyfy-color-backg
 // reverse colors
 $tyfy-color-foreground-reverse:     $tyfy-color-background !default;
 $tyfy-color-background-reverse:     $tyfy-color-foreground !default;
-$tyfy-color-primary-reverse:        lighten($tyfy-color-primary,30%) !default;
+$tyfy-color-primary-reverse:        saturate(lighten($tyfy-color-primary,30%),30%) !default;
 $tyfy-color-text-body-reverse:      $tyfy-color-foreground-reverse !default;
 $tyfy-color-text-head-reverse:      mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,95%) !default;
 $tyfy-color-text-light-reverse:     mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,45%) !default;

@@ -1034,12 +1034,12 @@ table.responsive td .td-label {
     color: white; }
     /* line 19, source/scss/optional/_reverse.scss */
     .reverse a[href] {
-      border-bottom-color: rgba(208, 225, 247, 0.5);
-      color: #d0e1f7; }
+      border-bottom-color: rgba(200, 224, 255, 0.5);
+      color: #c8e0ff; }
       /* line 22, source/scss/optional/_reverse.scss */
       .reverse a[href]:hover, .reverse a[href]:active {
-        border-bottom-color: rgba(225, 247, 208, 0.9);
-        color: #e1f7d0; }
+        border-bottom-color: rgba(224, 255, 200, 0.9);
+        color: #e0ffc8; }
     /* line 29, source/scss/optional/_reverse.scss */
     .reverse a.button[href] {
       color: white; }
@@ -1049,7 +1049,7 @@ table.responsive td .td-label {
     /* line 37, source/scss/optional/_reverse.scss */
     .reverse a.button-outline {
       background-color: transparent;
-      border: 2px #d0e1f7 solid;
+      border: 2px #c8e0ff solid;
       border-radius: 0.21875rem;
       color: #2572d6;
       cursor: pointer;
@@ -1063,18 +1063,18 @@ table.responsive td .td-label {
       vertical-align: middle; }
       /* line 153, source/scss/required/_mixins.scss */
       .reverse a.button-outline:hover, .reverse a.button-outline:active {
-        background-color: rgba(225, 247, 208, 0.1);
-        border-color: #e1f7d0;
+        background-color: rgba(224, 255, 200, 0.1);
+        border-color: #e0ffc8;
         color: #72d625; }
       /* line 159, source/scss/required/_mixins.scss */
       .reverse a.button-outline:focus {
         outline: none; }
       /* line 39, source/scss/optional/_reverse.scss */
       .reverse a.button-outline[href] {
-        color: #d0e1f7; }
+        color: #c8e0ff; }
         /* line 41, source/scss/optional/_reverse.scss */
         .reverse a.button-outline[href]:hover, .reverse a.button-outline[href]:active {
-          color: #e1f7d0; }
+          color: #e0ffc8; }
   /* line 54, source/scss/optional/_reverse.scss */
   .reverse h1 a,
   .reverse h2 a,
@@ -1104,12 +1104,12 @@ table.responsive td .td-label {
       .reverse h5 a[href]:active,
       .reverse h6 a[href]:hover,
       .reverse h6 a[href]:active {
-        border-bottom-color: rgba(225, 247, 208, 0.9);
-        color: #e1f7d0; }
+        border-bottom-color: rgba(224, 255, 200, 0.9);
+        color: #e0ffc8; }
   /* line 69, source/scss/optional/_reverse.scss */
   .reverse code {
     background-color: rgba(255, 255, 255, 0.07);
-    color: #dbe8f9; }
+    color: #d5e7ff; }
   /* line 73, source/scss/optional/_reverse.scss */
   .reverse hr {
     border-top-color: #2e2e2e; }
@@ -1118,7 +1118,7 @@ table.responsive td .td-label {
     color: #7c7c7c; }
   /* line 90, source/scss/optional/_reverse.scss */
   .reverse blockquote.pullquote {
-    color: #f5c3d9; }
+    color: #ffb9d7; }
     /* line 92, source/scss/optional/_reverse.scss */
     .reverse blockquote.pullquote::before {
       color: #2e2e2e; }

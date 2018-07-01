@@ -198,6 +198,7 @@
       }
     }
     &.button {
+      @include button($link-default,$link-active);
       &[href] {
         color:white;
         &:hover,
