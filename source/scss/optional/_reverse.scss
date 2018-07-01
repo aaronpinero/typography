@@ -21,7 +21,7 @@
       color:$tyfy-color-link-default-reverse;
       &:hover,
       &:active {
-        border-bottom-color:rgba($tyfy-color-link-active-reverse,0.5);
+        border-bottom-color:rgba($tyfy-color-link-active-reverse,0.9);
         color:$tyfy-color-link-active-reverse;
       }
     }
@@ -58,7 +58,7 @@
         color:$tyfy-color-text-head-reverse;
         &:hover,
         &:active {
-          border-bottom-color:rgba($tyfy-color-link-active-reverse,0.5);
+          border-bottom-color:rgba($tyfy-color-link-active-reverse,0.9);
           color:$tyfy-color-link-active-reverse;
         }
       }
@@ -69,6 +69,20 @@
   code {
     background-color:rgba($tyfy-color-text-body-reverse,0.07);
     color:$tyfy-color-text-code-reverse;
+  }
+  hr {
+    border-top-color:$tyfy-color-border-reverse;
+  }
+
+  // unordered list variations
+  ul {
+    &.list-icons {
+      li {
+        &::before {
+          color:$tyfy-color-text-light-reverse;
+        }
+      }
+    }
   }
 
   // quotes
