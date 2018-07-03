@@ -16,6 +16,12 @@ $tyfy-indent-small:                 tygrid(map-get($tyfy-indents,"small")) !defa
 // toggle for adjacent sibling margins
 $tyfy-margins-on:                   true !default;
 
+// fonts
+$tyfy-serif:                        georgia, serif !default;
+$tyfy-sans:                         helvetica, arial, sans-serif !default;
+$tyfy-mono:                         monaco, courier, monospace !default;
+$tyfy-symbol:                       tyfyicons !default;
+
 // font assignments
 $tyfy-font-base:                    $tyfy-serif !default;
 $tyfy-font-heading:                 $tyfy-sans !default;
@@ -71,30 +77,16 @@ $fades: (
   "3s":         3000ms
 ) !default;
 
-// site colors
-$tyfy-color-text-body:              $tyfy-color-foreground !default;
-$tyfy-color-text-head:              mix($tyfy-color-foreground,$tyfy-color-background,95%) !default;
-$tyfy-color-text-light:             mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;
-$tyfy-color-text-code:              mix($tyfy-color-foreground,$tyfy-color-primary,40%) !default;
-$tyfy-color-text-pullquote:         adjust-hue($tyfy-color-primary,120deg) !default;
-$tyfy-color-link-default:           darken($tyfy-color-primary,7%) !default;
-$tyfy-color-link-active:            adjust-hue($tyfy-color-link-default,-120deg) !default;
-$tyfy-color-border:                 mix($tyfy-color-foreground,$tyfy-color-background,12%) !default;
-$tyfy-color-table-stripe:           mix($tyfy-color-foreground,$tyfy-color-background,5%) !default;
-
-// reverse colors
-$tyfy-color-foreground-reverse:     $tyfy-color-background !default;
-$tyfy-color-background-reverse:     $tyfy-color-foreground !default;
-$tyfy-color-primary-reverse:        saturate(lighten($tyfy-color-primary,30%),30%) !default;
-$tyfy-color-text-body-reverse:      $tyfy-color-foreground-reverse !default;
-$tyfy-color-text-head-reverse:      mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,95%) !default;
-$tyfy-color-text-light-reverse:     mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,45%) !default;
-$tyfy-color-text-code-reverse:      mix($tyfy-color-foreground-reverse,$tyfy-color-primary-reverse,40%) !default;
-$tyfy-color-text-pullquote-reverse: adjust-hue($tyfy-color-primary-reverse,120deg) !default;
-$tyfy-color-link-default-reverse:   lighten($tyfy-color-primary-reverse,3%) !default;
-$tyfy-color-link-active-reverse:    adjust-hue($tyfy-color-link-default-reverse,-120deg) !default;
-$tyfy-color-border-reverse:         mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,12%) !default;
-$tyfy-color-table-stripe-reverse:   mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,5%) !default;
+// colors
+$tyfy-color-background:             white !default;
+$tyfy-color-text-body:              #111 !default;
+$tyfy-color-text-head:              #111 !default;
+$tyfy-color-text-light:             mix($tyfy-color-text-body,$tyfy-color-background,45%) !default;
+$tyfy-color-text-pullquote:         #2966a3 !default;
+$tyfy-color-link-default:           #3380cc !default;
+$tyfy-color-link-active:            #2eb872 !default;
+$tyfy-color-border:                 mix($tyfy-color-text-body,$tyfy-color-background,10%) !default;
+$tyfy-color-shade:                  mix($tyfy-color-text-body,$tyfy-color-background,5%) !default;
 
 // icons
 $tyfyicons-path:                    "../fonts/tyfyicons" !default; // do not add a trailing /
