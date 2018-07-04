@@ -1,0 +1,25 @@
+// reverse colors
+$tyfy-color-background-reverse:     #333 !default;
+$tyfy-color-text-body-reverse:      #eee !default;
+$tyfy-color-text-head-reverse:      #eee !default;
+$tyfy-color-text-light-reverse:     mix($tyfy-color-text-body-reverse,$tyfy-color-background-reverse,45%) !default;
+$tyfy-color-text-pullquote-reverse: #cccc33 !default;
+$tyfy-color-link-default-reverse:   #91bbe4 !default;
+$tyfy-color-link-active-reverse:    #dc72a7 !default;
+$tyfy-color-border-reverse:         mix($tyfy-color-text-body-reverse,$tyfy-color-background-reverse,10%) !default;
+$tyfy-color-shade-reverse:          mix($tyfy-color-text-body-reverse,$tyfy-color-background-reverse,5%) !default;
+
+// class
+.reverse {
+  @include mod-colors(
+    $tyfy-color-background-reverse,
+    $tyfy-color-text-body-reverse,
+    $tyfy-color-text-head-reverse,
+    $tyfy-color-text-light-reverse,
+    $tyfy-color-text-pullquote-reverse,
+    $tyfy-color-link-default-reverse,
+    $tyfy-color-link-active-reverse,
+    $tyfy-color-border-reverse,
+    $tyfy-color-shade-reverse
+  );
+}

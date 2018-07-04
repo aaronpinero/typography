@@ -44,6 +44,9 @@ ul {
     &.list-icons-angle li::before {
       content:tychar($tyfyicons-angle-right-small);
     }
+    &.list-icons-dash li::before {
+      content:tychar($tyfyicons-dash);
+    }
   }
   &.list-nobullet {
     padding-left:0;
@@ -125,7 +128,7 @@ ul {
       columns:3;
     }
   }
-  
+
   &.list-grid-2,
   &.list-grid-3,
   &.list-grid-4 {

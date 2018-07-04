@@ -1,17 +1,16 @@
 // basic styles
 fieldset {
-  border:tygrid(0.125) solid $tyfy-color-border;
+  border:$tyfy-width-border solid $tyfy-color-border;
   border-radius:4px;
   display:block;
   margin-left:0;
   margin-right:0;
-  padding:tygrid(1.375) tygrid(1.875) tygrid(1.875) tygrid(1.875);
   legend {
-    color:lighten($tyfy-color-foreground,25%);
+    color:mix($tyfy-color-text-body,$tyfy-color-background,75%);
     font-family:$tyfy-sans;
     font-size:tyscale(1);
     font-weight:bold;
-    line-height:tylead(tyscale(1),base);
+    line-height:tylead(tyscale(1));
     margin-left:tygrid(-1);
     margin-right:tygrid(-1);
     padding-left:tygrid(1);
@@ -50,11 +49,11 @@ input[type="submit"] {
   width:100%;
 }
 label {
-  color:lighten($tyfy-color-foreground,25%);
+  color:mix($tyfy-color-text-body,$tyfy-color-background,75%);
   display:block;
   font-size:tyscale(0);
   font-weight:bold;
-  line-height:tylead(tyscale(0),base);
+  line-height:tylead(tyscale(0));
   &.label-option {
     font-weight:normal;
   }
@@ -72,21 +71,21 @@ label {
 
 // placeholder selectors for forms
 %tyfy_form_element {
-  border:tygrid(0.125) solid $tyfy-color-border;
+  border:$tyfy-width-border solid $tyfy-color-border;
   border-radius:2px;
-  color:$tyfy-color-foreground;
+  color:$tyfy-color-text-body;
   font-family:$tyfy-sans;
 }
 %tyfy_form_textinput {
-  background-color:white;
+  background-color:$tyfy-color-background;
   box-shadow:0 1px 1px rgba(0,0,0,0.1) inset;
-  color:$tyfy-color-foreground;
-  line-height:tylead(tyscale(0),base);
-  padding:tygrid(0.625);
+  color:$tyfy-color-text-body;
+  line-height:tylead(tyscale(0));
+  padding:calc(#{tygrid(0.75)} - #{$tyfy-width-border});
   transition:border $tyfy-transition-duration-hover, box-shadow $tyfy-transition-duration-hover;
   width:100%;
   &:focus {
-    border:tygrid(0.125) solid $tyfy-color-link-active;
+    border:$tyfy-width-border solid $tyfy-color-link-active;
     box-shadow:0 1px 1px rgba(0,0,0,0.2) inset;
   }
 }
@@ -149,7 +148,7 @@ input[type="submit"] {
   &::after {
     content:tychar($tyfyicons-angle-down);
     font-family:$tyfy-symbol;
-    line-height:tylead(tyscale(0),base);
+    line-height:tylead(tyscale(0));
     position:absolute;
     right:tygrid(0.75);
     top:tygrid(0.75);
@@ -160,10 +159,9 @@ input[type="submit"] {
     -moz-appearance:menulist-text;
     background:transparent;
     border:none;
-    line-height:tylead(tyscale(0),base);
+    line-height:tylead(tyscale(0));
   }
   label + & {
     margin-top:$tyfy-spacing-standard / 2;
   }
 }
-      

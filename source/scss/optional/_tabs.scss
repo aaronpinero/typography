@@ -1,13 +1,3 @@
-* + .tabs-container {
-  margin-top:$tyfy-spacing-standard;
-}
-.tabs-container + h2,
-.tabs-container + h3,
-.tabs-container + h4,
-.tabs-container + h5,
-.tabs_container + h6 {
-  margin-top:$tyfy-spacing-large;
-}
 .tabs-container {
   ul.tabs {
     @include sibling-margins(off);
@@ -43,7 +33,7 @@
       &.open {
         background-color:$tyfy-color-background;
         border-bottom:$tyfy-width-border $tyfy-color-background solid;
-        color:$tyfy-color-foreground;
+        color:$tyfy-color-text-body;
         font-weight:600;
       }
     }

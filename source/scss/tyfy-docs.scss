@@ -2,12 +2,10 @@ $tyfy-serif:"IBM Plex Serif", "Lucida Bright", lucidabright, "Lucida Serif", luc
 $tyfy-sans:"IBM Plex Sans", frutiger, "Frutiger Linotype", univers, calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", tahoma, geneva, "Helvetica Neue", helvetica, arial, sans-serif;
 $tyfy-mono:"IBM Plex Mono", consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", monaco, "Courier New", courier, monospace;
 $tyfyicons-path:"../../../dist/fonts/tyfyicons"; // do not add a trailing /
-$tyfy-font-base:$tyfy-serif;
-$tyfy-font-heading:$tyfy-sans;
-
 @import "tyfy.scss";
 @import "extras/icons";
 @import "extras/responsive_text";
+@import "extras/reverse";
 
 body {
   @include fade-in(2000ms);
@@ -32,7 +30,7 @@ hr.demo {
   margin-top:tygrid(1);
 }
 strong.tyfy {
-  color:adjust-hue($tyfy-color-primary,120deg);
+  color:adjust-hue($tyfy-color-link-default,120deg);
 }
 header.brand {
   background:#333 url("../img/bg.gif");
@@ -68,7 +66,7 @@ header.brand {
           }
         }
         a {
-          border-top:tygrid(0.25) rgba(white,0.05) solid;
+          border-top:$tyfy-width-border $tyfy-color-border-reverse solid;
           display:block;
           font-size:$tyfy-font-size-sm;
           padding-top:tygrid(0.5);
@@ -122,7 +120,7 @@ section.main {
   padding:$tyfy-spacing-standard;
 }
 section.demo {
-  border:2px dashed darken($tyfy-color-background,10%);
+  border:$tyfy-width-border dashed darken($tyfy-color-background,10%);
   border-radius:tygrid(1);
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
   margin-top:$tyfy-spacing-standard;
@@ -132,7 +130,7 @@ section.demo.reverse {
 }
 #lists-demo {
   @include sibling-margins(off);
-  border:2px dashed darken($tyfy-color-background,10%);
+  border:$tyfy-width-border dashed $tyfy-color-shade;
   border-radius:tygrid(0.5);
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
   display:flex;

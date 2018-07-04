@@ -84,9 +84,9 @@ $tyfy-color-text-head:              #111 !default;
 $tyfy-color-text-light:             mix($tyfy-color-text-body,$tyfy-color-background,45%) !default;
 $tyfy-color-text-pullquote:         #2966a3 !default;
 $tyfy-color-link-default:           #3380cc !default;
-$tyfy-color-link-active:            #2eb872 !default;
-$tyfy-color-border:                 mix($tyfy-color-text-body,$tyfy-color-background,10%) !default;
-$tyfy-color-shade:                  mix($tyfy-color-text-body,$tyfy-color-background,5%) !default;
+$tyfy-color-link-active:            #cc3380 !default;
+$tyfy-color-border:                 mix($tyfy-color-text-body,$tyfy-color-background,12.5%) !default;
+$tyfy-color-shade:                  mix($tyfy-color-text-body,$tyfy-color-background,7.5%) !default;
 
 // icons
 $tyfyicons-path:                    "../fonts/tyfyicons" !default; // do not add a trailing /

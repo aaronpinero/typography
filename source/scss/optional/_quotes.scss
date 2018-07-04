@@ -18,7 +18,8 @@ blockquote {
     font-family:$tyfy-font-pullquote;
     font-size:$tyfy-font-size-pullquote;
     line-height:tylead($tyfy-font-size-pullquote,tall);
-    margin:$tyfy-spacing-standard 0 $tyfy-spacing-large 0;
+    margin-left:0;
+    margin-right:0;
     position:relative;
     text-align:center;
     @media (min-width:$tyfy-break-pullquote-large) {
@@ -36,7 +37,7 @@ blockquote {
       line-height:tylead($tyfy-font-size-sm,tall);
     }
     * + cite {
-      margin-top:$tyfy-grid-unit;
+      margin-top:tygrid(1);
     }
     &::before {
       color:$tyfy-color-border;

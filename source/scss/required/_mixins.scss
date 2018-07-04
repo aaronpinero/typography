@@ -217,7 +217,7 @@
   }
   .button {
     @include button($default,$active);
-    color:$background;
+    color:$bg;
   }
   .button-outline {
     @include button-outline($default,$active);
