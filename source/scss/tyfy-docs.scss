@@ -1,6 +1,10 @@
 $tyfy-serif:"IBM Plex Serif", "Lucida Bright", lucidabright, "Lucida Serif", lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", georgia, serif;
 $tyfy-sans:"IBM Plex Sans", frutiger, "Frutiger Linotype", univers, calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", tahoma, geneva, "Helvetica Neue", helvetica, arial, sans-serif;
 $tyfy-mono:"IBM Plex Mono", consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", monaco, "Courier New", courier, monospace;
+$tyfy-spacings: (
+  "standard":2,
+  "large":4,
+);
 $tyfyicons-path:"../../../dist/fonts/tyfyicons"; // do not add a trailing /
 @import "tyfy.scss";
 @import "extras/icons";
@@ -21,16 +25,28 @@ h1 {
   font-family:"IBM Plex Sans Condensed",sans-serif;
   text-transform:uppercase;
   small {
-    font-size:tyscale(1);
+    font-size:tyscale(0);
     text-transform:none;
   }
+  &.demo {
+    font-family:"IBM Plex Sans",sans-serif;
+    letter-spacing:0;
+    text-transform:none;
+  }
+}
+h2 small {
+  font-size:tyscale(0);
 }
 hr.demo {
   margin-bottom:tygrid(1);
   margin-top:tygrid(1);
 }
 strong.tyfy {
-  color:adjust-hue($tyfy-color-link-default,120deg);
+  color:$tyfy-color-link-active;
+  font-family:"IBM Plex Sans Condensed",sans-serif;
+  letter-spacing: 0.075em;
+  margin-right:-0.0375em;
+  text-transform: uppercase;
 }
 header.brand {
   background:#333 url("../img/bg.gif");
@@ -119,14 +135,42 @@ section.main {
   margin-top:0;
   padding:$tyfy-spacing-standard;
 }
-section.demo {
-  border:$tyfy-width-border dashed darken($tyfy-color-background,10%);
-  border-radius:tygrid(1);
-  box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
-  margin-top:$tyfy-spacing-standard;
+pre.codebox {
+  background-color:$tyfy-color-shade;
+  border:$tyfy-width-border $tyfy-color-border solid;
+  box-shadow:0 0 0.875rem rgba(0,0,0,0.05) inset;
+  overflow:auto;
+  padding:calc(#{tygrid(2)} - #{$tyfy-width-border});
+  code {
+    background-color:transparent;
+    padding:0;
+  }
 }
-section.demo.reverse {
-  border:none;
+figure.example {
+  background-color:white;
+  border:$tyfy-width-border $tyfy-color-border solid;
+  margin-left:0;
+  margin-right:0;
+  padding:calc(#{tygrid(2)} - #{$tyfy-width-border});
+}
+pre.codebox + figure.example {
+  border-top:none;
+  margin-top:0;
+}
+dl dt {
+  code {
+    background-color:transparent;
+    display:block;
+    font-weight:normal;
+    padding:0;
+    em {
+      font-style:normal;
+      font-weight:bold;
+    }
+  }
+  code + code {
+    margin-top:0;
+  }
 }
 #lists-demo {
   @include sibling-margins(off);
