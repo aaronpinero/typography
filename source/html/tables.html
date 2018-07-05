@@ -25,7 +25,7 @@
       </dl>
       <h2>Variables</h2>
       <dl>
-  			<dt><code><em class="var">$tyfy-break-table</em>: 30em !default;</code></dt>
+  			<dt><code><em class="var">$tyfy-break-table</em>: 40em !default;</code></dt>
   			<dd>Breakpoint below which a responsive table is displayed as a list of labeled values.</dd>
         <dt><code><em class="var">$tyfy-color-border</em>: mix($tyfy-color-text-body,$tyfy-color-background,12.5%) !default;</code>
   			<dd>The color of borders for tables with the <code>horizontal-rules</code> or <code>vertical-rules</code> classes</dd>
@@ -36,264 +36,398 @@
         <dt><code><em class="var">$tyfy-width-border</em>: 2px !default;</code>
   			<dd>The width of borders for tables with the <code>horizontal-rules</code> or <code>vertical-rules</code> classes. The width of borders separating table header cells from table data cells is twice the value of <code>$tyfy-width-border</code>.</dd>
 			</dl>
-      <h1>Demo</h1>
-      <h2>Default (no style)</h2>
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Examples</h2>
+      <h3>Default Appearance</h3>
+      <pre class="codebox"><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Quisque&lt;/th&gt;
+      &lt;th scope="col"&gt;Finibus&lt;/th&gt;
+      &lt;th scope="col"&gt;Nisl et Luctus&lt;/th&gt;
+      &lt;th scope="col"&gt;Velit&lt;/th&gt;
+      &lt;th scope="col"&gt;Commodo Sem&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dolorum nobis deleniti&lt;/td&gt;
+      &lt;td&gt;8971&lt;/td&gt;
+      &lt;td&gt;513&lt;/td&gt;
+      &lt;td&gt;9435&lt;/td&gt;
+      &lt;td&gt;235&lt;/td&gt;
+    &lt;/tr&gt;
+    <em class="light">// additional rows</em>
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      <figure class="example">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Quisque</th>
+              <th scope="col">Finibus</th>
+              <th scope="col">Nisl et Luctus</th>
+              <th scope="col">Velit</th>
+              <th scope="col">Commodo Sem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dolorum nobis deleniti</td>
+              <td>8971</td>
+              <td>513</td>
+              <td>9435</td>
+              <td>235</td>
+            </tr>
+            <tr>
+              <td>Sunt nobis doloremque</td>
+              <td>205</td>
+              <td>29580</td>
+              <td>95</td>
+              <td>349</td>
+            </tr>
+            <tr>
+              <td>Iure dolorem libero</td>
+              <td>3069</td>
+              <td>395</td>
+              <td>9358</td>
+              <td>284</td>
+            </tr>
+            <tr>
+              <td>Voluptatibus est reiciendis</td>
+              <td>5468</td>
+              <td>4352</td>
+              <td>43</td>
+              <td>6346</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
 
-      <h2>Clean</h2>
-      <table class="clean">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Clean, Striped</h2>
-      <table class="clean striped">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Clean, Striped, Horizontal Rules</h2>
-      <table class="clean striped horizontal-rules">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Clean, Horizontal Rules, Vertical Rules</h2>
-      <table class="clean horizontal-rules vertical-rules">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Clean, Horizontal Rules, Responsive</h2>
-      <table class="clean horizontal-rules responsive">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
+      <h3>Clean Class</h3>
+      <pre class="codebox"><code>&lt;table class="clean"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Quisque&lt;/th&gt;
+      &lt;th scope="col"&gt;Finibus&lt;/th&gt;
+      &lt;th scope="col"&gt;Nisl et Luctus&lt;/th&gt;
+      &lt;th scope="col"&gt;Velit&lt;/th&gt;
+      &lt;th scope="col"&gt;Commodo Sem&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dolorum nobis deleniti&lt;/td&gt;
+      &lt;td&gt;8971&lt;/td&gt;
+      &lt;td&gt;513&lt;/td&gt;
+      &lt;td&gt;9435&lt;/td&gt;
+      &lt;td&gt;235&lt;/td&gt;
+    &lt;/tr&gt;
+    <em class="light">// additional rows</em>
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      <figure class="example">
+        <table class="clean">
+          <thead>
+            <tr>
+              <th scope="col">Quisque</th>
+              <th scope="col">Finibus</th>
+              <th scope="col">Nisl et Luctus</th>
+              <th scope="col">Velit</th>
+              <th scope="col">Commodo Sem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dolorum nobis deleniti</td>
+              <td>8971</td>
+              <td>513</td>
+              <td>9435</td>
+              <td>235</td>
+            </tr>
+            <tr>
+              <td>Sunt nobis doloremque</td>
+              <td>205</td>
+              <td>29580</td>
+              <td>95</td>
+              <td>349</td>
+            </tr>
+            <tr>
+              <td>Iure dolorem libero</td>
+              <td>3069</td>
+              <td>395</td>
+              <td>9358</td>
+              <td>284</td>
+            </tr>
+            <tr>
+              <td>Voluptatibus est reiciendis</td>
+              <td>5468</td>
+              <td>4352</td>
+              <td>43</td>
+              <td>6346</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h3>Clean and Striped Classes</h3>
+      <pre class="codebox"><code>&lt;table class="clean striped"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Quisque&lt;/th&gt;
+      &lt;th scope="col"&gt;Finibus&lt;/th&gt;
+      &lt;th scope="col"&gt;Nisl et Luctus&lt;/th&gt;
+      &lt;th scope="col"&gt;Velit&lt;/th&gt;
+      &lt;th scope="col"&gt;Commodo Sem&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dolorum nobis deleniti&lt;/td&gt;
+      &lt;td&gt;8971&lt;/td&gt;
+      &lt;td&gt;513&lt;/td&gt;
+      &lt;td&gt;9435&lt;/td&gt;
+      &lt;td&gt;235&lt;/td&gt;
+    &lt;/tr&gt;
+    <em class="light">// additional rows</em>
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      <figure class="example">
+        <table class="clean striped">
+          <thead>
+            <tr>
+              <th scope="col">Quisque</th>
+              <th scope="col">Finibus</th>
+              <th scope="col">Nisl et Luctus</th>
+              <th scope="col">Velit</th>
+              <th scope="col">Commodo Sem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dolorum nobis deleniti</td>
+              <td>8971</td>
+              <td>513</td>
+              <td>9435</td>
+              <td>235</td>
+            </tr>
+            <tr>
+              <td>Sunt nobis doloremque</td>
+              <td>205</td>
+              <td>29580</td>
+              <td>95</td>
+              <td>349</td>
+            </tr>
+            <tr>
+              <td>Iure dolorem libero</td>
+              <td>3069</td>
+              <td>395</td>
+              <td>9358</td>
+              <td>284</td>
+            </tr>
+            <tr>
+              <td>Voluptatibus est reiciendis</td>
+              <td>5468</td>
+              <td>4352</td>
+              <td>43</td>
+              <td>6346</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h3>Clean, Striped, and Horizontal Rules Classes</h3>
+      <pre class="codebox"><code>&lt;table class="clean striped horizontal-rules"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Quisque&lt;/th&gt;
+      &lt;th scope="col"&gt;Finibus&lt;/th&gt;
+      &lt;th scope="col"&gt;Nisl et Luctus&lt;/th&gt;
+      &lt;th scope="col"&gt;Velit&lt;/th&gt;
+      &lt;th scope="col"&gt;Commodo Sem&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dolorum nobis deleniti&lt;/td&gt;
+      &lt;td&gt;8971&lt;/td&gt;
+      &lt;td&gt;513&lt;/td&gt;
+      &lt;td&gt;9435&lt;/td&gt;
+      &lt;td&gt;235&lt;/td&gt;
+    &lt;/tr&gt;
+    <em class="light">// additional rows</em>
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      <figure class="example">
+        <table class="clean striped horizontal-rules">
+          <thead>
+            <tr>
+              <th scope="col">Quisque</th>
+              <th scope="col">Finibus</th>
+              <th scope="col">Nisl et Luctus</th>
+              <th scope="col">Velit</th>
+              <th scope="col">Commodo Sem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dolorum nobis deleniti</td>
+              <td>8971</td>
+              <td>513</td>
+              <td>9435</td>
+              <td>235</td>
+            </tr>
+            <tr>
+              <td>Sunt nobis doloremque</td>
+              <td>205</td>
+              <td>29580</td>
+              <td>95</td>
+              <td>349</td>
+            </tr>
+            <tr>
+              <td>Iure dolorem libero</td>
+              <td>3069</td>
+              <td>395</td>
+              <td>9358</td>
+              <td>284</td>
+            </tr>
+            <tr>
+              <td>Voluptatibus est reiciendis</td>
+              <td>5468</td>
+              <td>4352</td>
+              <td>43</td>
+              <td>6346</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h3>Clean, Horizontal Rules, and Vertical Rules Classes</h3>
+      <pre class="codebox"><code>&lt;table class="clean horizontal-rules vertical-rules"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Quisque&lt;/th&gt;
+      &lt;th scope="col"&gt;Finibus&lt;/th&gt;
+      &lt;th scope="col"&gt;Nisl et Luctus&lt;/th&gt;
+      &lt;th scope="col"&gt;Velit&lt;/th&gt;
+      &lt;th scope="col"&gt;Commodo Sem&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dolorum nobis deleniti&lt;/td&gt;
+      &lt;td&gt;8971&lt;/td&gt;
+      &lt;td&gt;513&lt;/td&gt;
+      &lt;td&gt;9435&lt;/td&gt;
+      &lt;td&gt;235&lt;/td&gt;
+    &lt;/tr&gt;
+    <em class="light">// additional rows</em>
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      <figure class="example">
+        <table class="clean horizontal-rules vertical-rules">
+          <thead>
+            <tr>
+              <th scope="col">Quisque</th>
+              <th scope="col">Finibus</th>
+              <th scope="col">Nisl et Luctus</th>
+              <th scope="col">Velit</th>
+              <th scope="col">Commodo Sem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dolorum nobis deleniti</td>
+              <td>8971</td>
+              <td>513</td>
+              <td>9435</td>
+              <td>235</td>
+            </tr>
+            <tr>
+              <td>Sunt nobis doloremque</td>
+              <td>205</td>
+              <td>29580</td>
+              <td>95</td>
+              <td>349</td>
+            </tr>
+            <tr>
+              <td>Iure dolorem libero</td>
+              <td>3069</td>
+              <td>395</td>
+              <td>9358</td>
+              <td>284</td>
+            </tr>
+            <tr>
+              <td>Voluptatibus est reiciendis</td>
+              <td>5468</td>
+              <td>4352</td>
+              <td>43</td>
+              <td>6346</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h2>Responsive Table</h2>
+      <pre class="codebox"><code>&lt;table class="clean horizontal-rules responsive"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Quisque&lt;/th&gt;
+      &lt;th scope="col"&gt;Finibus&lt;/th&gt;
+      &lt;th scope="col"&gt;Nisl et Luctus&lt;/th&gt;
+      &lt;th scope="col"&gt;Velit&lt;/th&gt;
+      &lt;th scope="col"&gt;Commodo Sem&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dolorum nobis deleniti&lt;/td&gt;
+      &lt;td&gt;8971&lt;/td&gt;
+      &lt;td&gt;513&lt;/td&gt;
+      &lt;td&gt;9435&lt;/td&gt;
+      &lt;td&gt;235&lt;/td&gt;
+    &lt;/tr&gt;
+    <em class="light">// additional rows</em>
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      <figure class="example">
+        <table class="clean horizontal-rules responsive">
+          <thead>
+            <tr>
+              <th scope="col">Quisque</th>
+              <th scope="col">Finibus</th>
+              <th scope="col">Nisl et Luctus</th>
+              <th scope="col">Velit</th>
+              <th scope="col">Commodo Sem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dolorum nobis deleniti</td>
+              <td>8971</td>
+              <td>513</td>
+              <td>9435</td>
+              <td>235</td>
+            </tr>
+            <tr>
+              <td>Sunt nobis doloremque</td>
+              <td>205</td>
+              <td>29580</td>
+              <td>95</td>
+              <td>349</td>
+            </tr>
+            <tr>
+              <td>Iure dolorem libero</td>
+              <td>3069</td>
+              <td>395</td>
+              <td>9358</td>
+              <td>284</td>
+            </tr>
+            <tr>
+              <td>Voluptatibus est reiciendis</td>
+              <td>5468</td>
+              <td>4352</td>
+              <td>43</td>
+              <td>6346</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
       <h2>Floated Tables</h2>
       <table class="clean horizontal-rules striped float-right">
         <thead>
