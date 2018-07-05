@@ -45,7 +45,7 @@ $tyfy-break-list-cols-3:55em;
 $tyfy-break-list-cols-4:75em;
 $tyfy-break-collapsables-pad:50em;
 $tyfy-break-tabs:40em;
-$tyfy-break-table:30em;
+$tyfy-break-table:40em;
 $tyfy-transition-duration-hover:0.25s;
 $tyfy-transition-duration-move:0.5s;
 $fades: (
@@ -120,4 +120,8 @@ body {
   &.shade {
     background-color:$tyfy-color-shade;
   }
+}
+hr.demo {
+  margin-bottom:tygrid(0.5);
+  margin-top:tygrid(0.5);
 }

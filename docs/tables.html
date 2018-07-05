@@ -20,43 +20,37 @@
     <title>Tyfy - Tables</title>
   </head>
   <body class="">
-		<!-- COMMON HEADER -->
-		<header class="brand sibling-margins-off reverse">
-			<h1><a href="index.html">Tyfy</a></h1>
-			<nav>
-				<h2>Contents</h2>
-				<ul class="list-nobullet list-grid-4">
-					<li><a href="startup.html">Get Started</a></li>
-					<li><a href="modules.html">Modules</a></li>
-					<li><a href="variables.html">Variables</a></li>
-					<li><a href="functions.html">Functions</a></li>
-					<li><a href="mixins.html">Mixins</a></li>
-					<li><a href="icons.html">Icons</a></li>
-					<li><a href="paragraphs.html">Paragraphs</a></li>
-					<li><a href="headings.html">Headings</a></li>
-					<li><a href="links.html">Links</a></li>
-					<li><a href="lists.html">Lists</a></li>
-					<li><a href="utility.html">Utility</a></li>
-					<li><a href="quotes.html">Quotes</a></li>
-					<li><a href="tables.html">Tables</a></li>
-					<li><a href="reverse.html">Reverse</a></li>
-					<li><a href="collapsables.html">Collapsables</a></li>
-					<li><a href="tabs.html">Tabs</a></li>
-					<li><a href="forms.html">Forms</a></li>
-  				<li><a href="effects.html">Effects</a></li>
-  				<li><a href="extras.html">Extras</a></li>
-					<li><a href="about.html">About Tyfy</a></li>
-				</ul>
-			</nav>
-		</header>
-		<!--/ COMMON HEADER -->
     <section class="main links-underlined">
       <h1>Tables</h1>
-      <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic, required class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and a few lines of JavaScript.</p>
+      <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic, required class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and JavaScript.</p>
       <p>Proper application of styles and the responsive behavior depends on semantically correct structure of the tables. Tables should use the <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> tabs. Table headers should have the <code>scope</code> attribute to indicate how the headers should be interpreted.</p>
       <p>Using the <code>float-left</code> and <code>float-right</code> classes, a table can be positioned to the left or right of the main text. Positioning left or right is limited to larger screen sizes. At smaller screen sizes, the styled tables are displayed at full width.</p>
-    </section>
-    <section class="main links-underlined demo paragraphs-justified">
+      <h2>Classes</h2>
+      <dl>
+        <dt><code>&lt;table class="<em class="class">clean</em>"&gt;</code></dt>
+        <dd>Display a table using <strong class="tyfy">Tyfy</strong> style rules. A table with this class has width set to 100% and properly padded table cells.</dd>
+        <dt><code>&lt;table class="<em class="class">horizontal-rules</em>"&gt;</code></dt>
+        <dd>Display a table with horizontal rules separating the rows.</dd>
+        <dt><code>&lt;table class="<em class="class">responsive</em>"&gt;</code></dt>
+        <dd>Display a responsive table. At browser window widths less than the <code>$tyfy-break-table</code> breakpoint, the table is displayed as a list of labeled values.</dd>
+        <dt><code>&lt;table class="<em class="class">striped</em>"&gt;</code></dt>
+        <dd>Display table rows with "zebra" striping. The variable <code>$tyfy-color-shade</code> defines the stripe color.</dd>
+        <dt><code>&lt;table class="<em class="class">vertical-rules</em>"&gt;</code></dt>
+        <dd>Display a table with vertical rules separating the columns</dd>
+      </dl>
+      <h2>Variables</h2>
+      <dl>
+  			<dt><code><em class="var">$tyfy-break-table</em>: 30em !default;</code></dt>
+  			<dd>Breakpoint below which a responsive table is displayed as a list of labeled values.</dd>
+        <dt><code><em class="var">$tyfy-color-border</em>: mix($tyfy-color-text-body,$tyfy-color-background,12.5%) !default;</code>
+  			<dd>The color of borders for tables with the <code>horizontal-rules</code> or <code>vertical-rules</code> classes</dd>
+        <dt><code><em class="var">$tyfy-color-shade</em>: mix($tyfy-color-text-body,$tyfy-color-background,7.5%) !default;</code>
+  			<dd>The color of zebra stripes for tables with the <code>striped</code> class.</dd>
+        <dt><code><em class="var">$tyfy-font-table</em>: $tyfy-sans !default;</code>
+  			<dd>The font family to use for table cells.</dd>
+        <dt><code><em class="var">$tyfy-width-border</em>: 2px !default;</code>
+  			<dd>The width of borders for tables with the <code>horizontal-rules</code> or <code>vertical-rules</code> classes. The width of borders separating table header cells from table data cells is twice the value of <code>$tyfy-width-border</code>.</dd>
+			</dl>
       <h1>Demo</h1>
       <h2>Default (no style)</h2>
       <table>
@@ -100,7 +94,7 @@
           </tr>
         </tbody>
       </table>
-        
+
       <h2>Clean</h2>
       <table class="clean">
         <thead>
@@ -143,7 +137,7 @@
           </tr>
         </tbody>
       </table>
-        
+
       <h2>Clean, Striped</h2>
       <table class="clean striped">
         <thead>
@@ -186,7 +180,7 @@
           </tr>
         </tbody>
       </table>
-      
+
       <h2>Clean, Striped, Horizontal Rules</h2>
       <table class="clean striped horizontal-rules">
         <thead>
@@ -229,7 +223,7 @@
           </tr>
         </tbody>
       </table>
-      
+
       <h2>Clean, Horizontal Rules, Vertical Rules</h2>
       <table class="clean horizontal-rules vertical-rules">
         <thead>
