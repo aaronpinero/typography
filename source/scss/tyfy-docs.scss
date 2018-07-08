@@ -19,7 +19,7 @@ body {
 .constrained {
   margin-left:auto;
   margin-right:auto;
-  max-width:55rem;
+  max-width:45em;
 }
 h1 {
   font-family:"IBM Plex Sans Condensed",sans-serif;
@@ -141,6 +141,11 @@ pre.codebox {
   box-shadow:0 0 0.875rem rgba(0,0,0,0.05) inset;
   overflow:auto;
   padding:calc(#{tygrid(2)} - #{$tyfy-width-border});
+  &.mini {
+    box-shadow:0 0 0.375rem rgba(0,0,0,0.05) inset;
+    max-height:tygrid(8);
+    padding:calc(#{tygrid(1)} - #{$tyfy-width-border});
+  }
   code {
     background-color:transparent;
     padding:0;
@@ -170,6 +175,20 @@ dl dt {
   }
   code + code {
     margin-top:0;
+  }
+}
+nav.nav-inpage {
+  border-left:solid $tyfy-width-border $tyfy-color-border;
+  display:none;
+  margin-left:calc(45em + #{tygrid(2)});
+  padding-left:tygrid(2);
+  position:fixed;
+  width:10em;
+  ul {
+    font-size:tyscale(-1);
+  }
+  @media (min-width:70em) {
+    display:block;
   }
 }
 #lists-demo {
@@ -219,11 +238,11 @@ dl dt {
   }
 }
 footer {
+  @extend .constrained;
+  padding:tygrid(3) 0;
   p {
-    @extend .constrained;
     color:$tyfy-color-text-light;
     font-size:$tyfy-font-size-sm;
-    line-height:tylead($tyfy-font-size-sm,heading);
-    padding:tygrid(1) tygrid(2);
+    line-height:tylead($tyfy-font-size-sm,base);
   }
 }

@@ -2,6 +2,9 @@
 ol,
 ul {
   padding-left:$tyfy-indent-standard;
+  @media (max-width:$tyfy-break-indents * 0.9999) {
+    padding-left:$tyfy-indent-small;
+  }
 }
 dt {
   font-family:$tyfy-font-heading;
@@ -11,6 +14,9 @@ dd {
   margin-left:0;
   margin-right:0;
   padding-left:$tyfy-indent-standard;
+  @media (max-width:$tyfy-break-indents * 0.9999) {
+    padding-left:$tyfy-indent-small;
+  }
 }
 
 // nested lists
@@ -58,9 +64,16 @@ ul {
         box-sizing:border-box;
         padding-left:$tyfy-indent-standard;
         text-indent:-1 * $tyfy-indent-standard;
+        @media (max-width:$tyfy-break-indents * 0.9999) {
+          padding-left:$tyfy-indent-small;
+          text-indent:-1 * $tyfy-indent-small;
+        }
       }
       ol, ul {
         margin-left:-1 * $tyfy-indent-standard;
+        @media (max-width:$tyfy-break-indents * 0.9999) {
+          margin-left:-1 * $tyfy-indent-small;
+        }
       }
     }
     &.list-cols-2,
@@ -82,6 +95,9 @@ ul {
     padding-left:0;
     li {
       margin-left:$tyfy-indent-standard;
+      @media (max-width:$tyfy-break-indents * 0.9999) {
+        margin-left:$tyfy-indent-small;
+      }
     }
     &.list-flex-center {
       justify-content:center;
