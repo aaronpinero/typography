@@ -7,108 +7,132 @@
 	<body class="">
 		<section class="main links-underlined">
 			<h1>Mixins</h1>
-			<p><strong class="tyfy">Tyfy</strong> includes several <span class="smallcaps">SASS</span> mixins that facilitate the use of the framework and provide commonly used styles and effects.</p>
-			<nav class="nav-inpage">
-				<h2 class="font-size-h6 light">@mixins</h2>
+			<nav class="nav-inpage sibling-margins-off">
+				<h2 class="font-size-h6"><a href="#">Mixins</a></h2>
 				<ul class="list-nobullet">
 					<li><a href="#mixin-button">button</a></li>
 					<li><a href="#mixin-button-outline">button-outline</a></li>
 					<li><a href="#mixin-clearfix">clearfix</a></li>
 					<li><a href="#mixin-fadein">fadein</a></li>
+					<li><a href="#mixin-mod-colors">mod-colors</a></li>
 					<li><a href="#mixin-set-sibling-margins">set-sibling-margins</a></li>
 					<li><a href="#mixin-sibling-margins">sibling-margins</a></li>
 					<li><a href="#mixin-visuallyhidden">visuallyhidden</a></li>
 				</ul>
 			</nav>
+			<p class="lede"><strong class="tyfy">Tyfy</strong> includes several <span class="smallcaps">SASS</span> mixins that facilitate the use of the framework and provide commonly used styles and effects.</p>
+			<h2 id="mixin-button">@mixin button</h2>
+			<p>Display a link or other tag as a button. The text color of the button is the default background color. To apply the button class to a link, use the [href] attribute selector. See the <a href="links.html">links</a> and <a href="utility.html">utility</a> modules documetation for more information.</p>
+			<h3 class="font-size-h5">Arguments</h3>
 			<dl>
-				<dt id="mixin-button"><code>@mixin <em class="var">button</em></code></dt>
-				<dd>
-					<dl>
-						<dt>Arguments</dt>
-						<dd>
-							<dl>
-								<dt><code><em class="var">$color_default</em></code></dt>
-								<dd>Default button color; must be rgb, named color, or hexidecimal</dd>
-								<dd>Default value is <code>$tyfy-color-link-default</code></dd>
-								<dt><code><em class="var">$color_active</em></code></dt>
-								<dd>Hovered and active button color; must be rgb, named color, or hexidecimal</dd>
-								<dd>Default value is <code>$tyfy-color-link-active</code></dd>
-								<dt><code><em class="var">$border_radius</em></code></dt>
-								<dd>Border radius of the button; all unit values allowed</dd>
-								<dd>Default value is <code>tygrid(0.25)</code></dd>
-							</dl>
-						</dd>
-						<dt>Purpose</dt>
-						<dd>Display a link or other tag as a button. The text color of the button is the default background color. To apply the button class to a link, use the [href] attribute selector.</dd>
-						<dt>Example</dt>
-						<dd><pre class="codebox mini"><code>tag.class {
+				<dt><code><em class="var">$color_default</em></code></dt>
+				<dd>Default button color; must be rgb, named color, or hexidecimal</dd>
+				<dd>Default value is <code>$tyfy-color-link-default</code></dd>
+				<dt><code><em class="var">$color_active</em></code></dt>
+				<dd>Hovered and active button color; must be rgb, named color, or hexidecimal</dd>
+				<dd>Default value is <code>$tyfy-color-link-active</code></dd>
+				<dt><code><em class="var">$border_radius</em></code></dt>
+				<dd>Border radius of the button; all unit values allowed</dd>
+				<dd>Default value is <code>tygrid(0.25)</code></dd>
+			</dl>
+			<h3 class="font-size-h5">Examples</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code>tag.button {
   @include button;
 }
-a.class[href] {
+a.button[href] {
   @include button(red,blue,0px);
-}</code></pre></dd>
-					</dl>
-				</dd>
-				<dt id="mixin-button-outline"><code>@mixin <em class="var">button-outline</em></code></dt>
-				<dd>
-					<dl>
-						<dt>Arguments</dt>
-						<dd>
-							<dl>
-								<dt><code><em class="var">$color_default</em></code></dt>
-								<dd>Default button color; must be rgb, named color, or hexidecimal</dd>
-								<dd>Default value is <code>$tyfy-color-link-default</code></dd>
-								<dt><code><em class="var">$color_active</em></code></dt>
-								<dd>Hovered and active button color; must be rgb, named color, or hexidecimal</dd>
-								<dd>Default value is <code>$tyfy-color-link-active</code></dd>
-								<dt><code><em class="var">$border_radius</em></code></dt>
-								<dd>Border radius of the button; all unit values allowed</dd>
-								<dd>Default value is <code>tygrid(0.25)</code></dd>
-							</dl>
-						</dd>
-						<dt>Purpose</dt>
-						<dd>Display a link or other tag as an outlined button. To apply the button class to a link, use the [href] attribute selector.</dd>
-						<dt>Example</dt>
-						<dd><pre class="codebox mini"><code>tag.class {
+}</code></pre>
+			<h2 id="mixin-button-outline">@mixin button-outline</h2>
+			<p>Display a link or other tag as an outlined button. To apply the button class to a link, use the [href] attribute selector. See the <a href="links.html">links</a> and <a href="utility.html">utility</a> modules documetation for more information.</p>
+			<h3 class="font-size-h5">Arguments</h3>
+			<dl>
+				<dt><code><em class="var">$color_default</em></code></dt>
+				<dd>Default button color; must be rgb, named color, or hexidecimal</dd>
+				<dd>Default value is <code>$tyfy-color-link-default</code></dd>
+				<dt><code><em class="var">$color_active</em></code></dt>
+				<dd>Hovered and active button color; must be rgb, named color, or hexidecimal</dd>
+				<dd>Default value is <code>$tyfy-color-link-active</code></dd>
+				<dt><code><em class="var">$border_radius</em></code></dt>
+				<dd>Border radius of the button; all unit values allowed</dd>
+				<dd>Default value is <code>tygrid(0.25)</code></dd>
+			</dl>
+			<h3 class="font-size-h5">Examples</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code>tag.button-outline {
   @include button-outline;
 }
-a.class[href] {
+a.button-outline[href] {
   @include button-outline(red,blue,0px);
-}</code></pre></dd>
-					</dl>
-				</dd>
-				<dt id="mixin-clearfix"><code>@mixin <em class="var">clearfix</em></code></dt>
-				<dd>
-					<dl>
-						<dt>Arguments</dt>
-						<dd><em>None</em></dd>
-						<dt>Purpose</dt>
-						<dd>Clear floats within an element; code from <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>.</dd>
-						<dt>Example</dt>
-						<dd><pre class="codebox mini"><code>tag.class {
+}</code></pre>
+			<h2 id="mixin-clearfix">@mixin clearfix</h2>
+			<p>Clear floats within an element. This mixin does not accept any arguments. Code comes from <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>.</p>
+			<h3 class="font-size-h5">Example</h3>
+      <pre class="codebox mini" data-lang="SCSS"><code>tag.class {
   @include clearfix;
-}</code></pre></dd>
-					</dl>
-				</dd>
-				<dt id="mixin-fadein"><code>@mixin <em class="var">fade-in</em></code></dt>
-				<dd>
-					<dl>
-						<dt>Arguments</dt>
-						<dd>
-							<dl>
-								<dt><code><em class="var">$duration</em></code></dt>
-								<dd>Duration in seconds or milliseconds</dd>
-								<dd>Default value is <code>1000ms</code></dd>
-							</dl>
-						</dd>
-						<dt>Purpose</dt>
-						<dd>Apply a (non-looping) fade-in animation to an element with the given animation duration.</dd>
-						<dt>Example</dt>
-						<dd><pre class="codebox mini"><code>tag.class {
+}</code></pre>
+			<h2 id="mixin-fadein">@mixin fade-in</h2>
+			<p>Apply a non-looping fade in animation to an element with the given animation duration.</p>
+			<h3 class="font-size-h5">Arguments</h3>
+			<dl>
+				<dt><code><em class="var">$duration</em></code></dt>
+				<dd>Duration in seconds or milliseconds</dd>
+				<dd>Default value is <code>1000ms</code></dd>
+			</dl>
+			<h3 class="font-size-h5">Example</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code>tag.class {
   @include fade-in(2s);
-}</code></pre></dd>
-					</dl>
-				</dd>
+}</code></pre>
+			<h2 id="mixin-mod-colors">@mixin mod-colors</h2>
+			<p>Change the framework’s colors within a specific context. There are no default values for this mixin; all color values must be specified. This mixin is used in the <a href="reverse.html">reverse colors</a> module.</p>
+			<h3 class="font-size-h5">Arguments</h3>
+			<p>All values are colors; must be rgb, named color, or hexidecimal</p>
+			<dl>
+				<dt><code><em class="var">$bg</em></code></dt>
+				<dd>Background color for this context</dd>
+				<dt><code><em class="var">$body</em></code></dt>
+				<dd>Text color for this context</dd>
+				<dt><code><em class="var">$head</em></code></dt>
+				<dd>Text color of any headings in this context</dd>
+				<dt><code><em class="var">$light</em></code></dt>
+				<dd>Text color for the <code>light</code> class in this context</dd>
+				<dt><code><em class="var">$quote</em></code></dt>
+				<dd>Text color for the <code>pullquote</code> class in this context</dd>
+				<dt><code><em class="var">$default</em></code></dt>
+				<dd>Link and button color in this context</dd>
+				<dt><code><em class="var">$active</em></code></dt>
+				<dd>Active link and button color in this context</dd>
+				<dt><code><em class="var">$border</em></code></dt>
+				<dd>Border color in this context</dd>
+				<dt><code><em class="var">$shade</em></code></dt>
+				<dd>Background shade color in this context</dd>
+			</dl>
+			<h3 class="font-size-h5">Example</h3>
+			<p>From the <a href="reverse.html">reverse colors</a> module.</p>
+			<pre class="codebox mini" data-lang="SCSS"><code><em class="light">// reverse colors</em>
+$tyfy-color-background-reverse:     #333 !default;
+$tyfy-color-text-body-reverse:      #eee !default;
+$tyfy-color-text-head-reverse:      #eee !default;
+$tyfy-color-text-light-reverse:     mix($tyfy-color-text-body-reverse,$tyfy-color-background-reverse,45%) !default;
+$tyfy-color-text-pullquote-reverse: #cccc33 !default;
+$tyfy-color-link-default-reverse:   #91bbe4 !default;
+$tyfy-color-link-active-reverse:    #dc72a7 !default;
+$tyfy-color-border-reverse:         mix($tyfy-color-text-body-reverse,$tyfy-color-background-reverse,10%) !default;
+$tyfy-color-shade-reverse:          mix($tyfy-color-text-body-reverse,$tyfy-color-background-reverse,5%) !default;
+
+<em class="light">// class</em>
+.reverse {
+  @include mod-colors(
+    $tyfy-color-background-reverse,
+    $tyfy-color-text-body-reverse,
+    $tyfy-color-text-head-reverse,
+    $tyfy-color-text-light-reverse,
+    $tyfy-color-text-pullquote-reverse,
+    $tyfy-color-link-default-reverse,
+    $tyfy-color-link-active-reverse,
+    $tyfy-color-border-reverse,
+    $tyfy-color-shade-reverse
+  );
+}</code></pre>
+			<dl>
 				<dt id="mixin-set-sibling-margins"><code>@mixin <em class="var">set-sibling-margins</em></code></dt>
 				<dd>
 					<dl>
@@ -126,7 +150,7 @@ a.class[href] {
 						<dt>Purpose</dt>
 						<dd>Set the size of adjacent sibling margins in a given context. The <code>all</code> context sets the value for all tags; the <code>headings</code> context sets the value only for headings; the <code>lists</code> context sets the value only inside of ordered, unordered, and definition lists. For more information, see the <a href="margins.html">Margins</a> documentation.</dd>
 						<dt>Example</dt>
-						<dd><pre class="codebox mini"><code>tag.class {
+						<dd><pre class="codebox mini" data-lang="SCSS"><code>tag.class {
   @include set-sibling-margins(all,tygrid(1));
 }</code></pre></dd>
 					</dl>
@@ -145,14 +169,33 @@ a.class[href] {
 						<dt>Purpose</dt>
 						<dd>Turn adjacent sibling margins on or off within a specific context. If the state is <code>on</code>, the margins are set to the <strong class="tyfy">Tyfy</strong> default values. To override with specific values, use the <code>set-sibling-margins</code> mixin.</dd>
 						<dt>Example</dt>
-						<dd><pre class="codebox mini"><code>tag.class {
+						<dd><pre class="codebox mini" data-lang="SCSS"><code>tag.class {
   @include sibling-margins(off);
 }</code></pre></dd>
 					</dl>
 				</dd>
-				<dt id="mixin-visuallyhidden"><code>@mixin <em class="var">visuallyhidden</em> ($type:true)</code></dt>
-				<dd>Customized from HTML5 Boilerplate; the element is not visually rendered, but the data is still present for screen readers and search indices.</dd>
-
+				<dt id="mixin-visuallyhidden"><code>@mixin <em class="var">visuallyhidden</em></code></dt>
+				<dd>
+					<dl>
+						<dt>Arguments</dt>
+						<dd>
+							<dl>
+								<dt><code><em class="var">$state</em></code></dt>
+								<dd>Allowed values are <code>true</code> or <code>false</code></dd>
+								<dd>Default value is <code>true</code></dd>
+							</dl>
+						</dd>
+						<dt>Purpose</dt>
+						<dd>Visually hide an element, but allow screen readers and search engines to read the element’s content. The default <code>true</code> argument hides the element. The <code>false</code> argument is used to override the default styles. Code is adapted from <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>.</dd>
+						<dt>Example</dt>
+						<dd><pre class="codebox mini" data-lang="SCSS"><code>tag.hide-me {
+  @include visuallyhidden;
+  &amp;.show-me {
+    @include visuallyhidden(false);
+  }
+}</code></pre></dd>
+					</dl>
+				</dd>
 			</dl>
 		</section>
 		<%include footer.html%>

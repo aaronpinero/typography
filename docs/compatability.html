@@ -50,6 +50,16 @@
         }
       });
     </script>
+		<script>
+			var codeboxes = document.getElementsByClassName('codebox');
+			var x;
+			for(x=0;x<codeboxes.length;x++) {
+				lang = codeboxes[x].getAttribute('data-lang');
+				if (lang != null && lang != '') {
+					codeboxes[x].insertAdjacentHTML('afterbegin','<div class="label">'+lang+'</div>');
+				}
+			}
+		</script>
     <script src="resources/script/docs-nav.js"></script>
 		<!--/ COMMON FOOTER -->
 	</body>

@@ -11,8 +11,8 @@
   }
 }
 
-@mixin visuallyhidden ($type:true) {
-  @if $type == false {
+@mixin visuallyhidden ($state:true) {
+  @if $state == false {
     clip:auto;
     height:auto !important;
     margin:0;
