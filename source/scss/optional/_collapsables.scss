@@ -35,7 +35,7 @@ h6.collapsable-processed {
   &.transition.closed {
     border-bottom:$tyfy-width-border transparent solid;
   }
-  @media (min-width:$tyfy-break-collapsables-pad) {
+  @media (min-width:$tyfy-break-collapsables) {
     border:$tyfy-width-border $tyfy-color-border solid;
     border-bottom:$tyfy-width-border transparent solid;
     padding:calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(6)} - #{$tyfy-width-border}) calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
@@ -112,7 +112,7 @@ h6.collapsable-processed {
   margin:0rem;
   overflow:hidden;
   padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tyfy-width-border}) 0;
-  @media (min-width:$tyfy-break-collapsables-pad) {
+  @media (min-width:$tyfy-break-collapsables) {
     border:$tyfy-width-border $tyfy-color-border solid;
     border-top:none !important;
     padding:calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});

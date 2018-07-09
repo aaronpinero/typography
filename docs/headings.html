@@ -22,22 +22,31 @@
 	<body class="">
 		<section class="main links-underlined">
 			<h1>Headings</h1>
-			<p>Font sizes for heading levels 1 through 6 are based on the <a href="scale.html">modular scale</a>. Heading font sizes are also available as <span class="smallcaps">SASS</span> variables and <span class="smallcaps">CSS</span> classes.</p>
+			<nav class="nav-inpage sibling-margins-off">
+				<h2 class="font-size-h6"><a href="#">Headings</a></h2>
+				<ul class="list-nobullet">
+					<li><a href="#classes">Classes</a></li>
+					<li><a href="#sizes">Heading Sizes</a></li>
+					<li><a href="#variables">Variables</a></li>
+					<li><a href="#examples">Examples</a></li>
+				</ul>
+			</nav>
+			<p class="lede">Font sizes for heading levels 1 through 6 are based on the <a href="scale.html">modular scale</a>. Heading font sizes are also available as <span class="smallcaps">SASS</span> variables and <span class="smallcaps">CSS</span> classes.</p>
 			<p><strong class="tyfy">Tyfy</strong> headings are positioned closer to the text following the heading than the text preceding. <a href="margins.html">Adjacent sibling selectors</a> are used to define the margins for headings in context of other elements. If the element preceding a heading is not also a heading, the top margin for the heading will be larger than the standard margin. In <span class="smallcaps">CSS</span>, this is accomplished as follows:</p>
-			<pre class="codebox"><code>* + * {
+			<pre class="codebox" data-lang="SCSS"><code>* + * {
   margin-top: $tyfy-spacing-standard;
 }
 :not(h1) + h2 {
   margin-top: $tyfy-spacing-large;
 }</code></pre>
-			<h2>Classes</h2>
+			<h2 id="classes">Classes</h2>
 			<dl>
   			<dt><code>&lt;tag class="<em class="class">font-size-h[x]</em>"&gt;</code></dt>
   			<dd>Display an element using the font size and line height of heading level x.</dd>
 			</dl>
-			<h2>Heading Size Variables</h2>
+			<h2 id="sizes">Heading Size Variables</h2>
 			<p>A <span class="smallcaps">SASS</span> map is used to set heading font sizes based on the modular scale. Map values are integers indicating a number of steps up or down the scale from the base font size. The default map values (which include sizes for headings and other elements) are shown below.</p>
-			<pre class="codebox"><code>$tyfy-font-sizes: (
+			<pre class="codebox" data-lang="SCSS"><code>$tyfy-font-sizes: (
 "sm":         -1,
 "h6":         0,
 "h5":         1,
@@ -49,13 +58,13 @@
 "lede":       2
 ) !default;</code></pre>
 			<p>Font size variables for headings are calculated using the values in the <span class="smallcaps">SASS</span> map and the <a href="scale.html"><em>tyscale</em></a> function.</p>
-			<pre class="codebox"><code>$tyfy-font-size-h6: tyscale(map-get($tyfy-font-sizes,"h6")) !default;
+			<pre class="codebox" data-lang="SCSS"><code>$tyfy-font-size-h6: tyscale(map-get($tyfy-font-sizes,"h6")) !default;
 $tyfy-font-size-h5: tyscale(map-get($tyfy-font-sizes,"h5")) !default;
 $tyfy-font-size-h4: tyscale(map-get($tyfy-font-sizes,"h4")) !default;
 $tyfy-font-size-h3: tyscale(map-get($tyfy-font-sizes,"h3")) !default;
 $tyfy-font-size-h2: tyscale(map-get($tyfy-font-sizes,"h2")) !default;
 $tyfy-font-size-h1: tyscale(map-get($tyfy-font-sizes,"h1")) !default;</code></pre>
-			<h2>Other Variables</h2>
+			<h2 id="variables">Other Variables</h2>
 			<dl>
 				<dt><code><em class="var">$tyfy-spacing-large</em>: tygrid(map-get($tyfy-spacings,"large")) !default;</code></dt>
 				<dd>Top margin for headings when the preceding element is not another heading.</dd>
@@ -64,9 +73,9 @@ $tyfy-font-size-h1: tyscale(map-get($tyfy-font-sizes,"h1")) !default;</code></pr
 				<dt><code><em class="var">$tyfy-color-text-head</em>: #111 !default;</code></dt>
 				<dd>Text color for headings.</dd>
 			</dl>
-			<h2>Examples</h2>
+			<h2 id="examples">Examples</h2>
 			<h3>Headings</h3>
-			<pre class="codebox"><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+			<pre class="codebox" data-lang="HTML"><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
 &lt;h2&gt;Heading 2&lt;/h2&gt;
 &lt;p&gt;Anakin was a good friend. When I first knew him, your father was already a great pilot. But I was amazed how strongly the Force was with him. I took it upon myself to train him as a Jedi. I thought that I could instruct him just as well as Yoda. I was wrong. There's still good in him. He is more machine now than man. Twisted and evil.&lt;/p&gt;
 &lt;h3&gt;Heading 3&lt;/h3&gt;
@@ -87,7 +96,7 @@ $tyfy-font-size-h1: tyscale(map-get($tyfy-font-sizes,"h1")) !default;</code></pr
 			  <p>Well, they're on their way. Artoo, are you sure this was a good idea? Freeze! Don't move! We surrender. Ohhh! Stand back, Artoo. The code's changed. We need Artoo! Here's the terminal. Artoo, where are you? We need you at the bunker right away.</p>
 			</figure>
 			<h3>Heading Size Classes</h3>
-			<pre class="codebox"><code>&lt;div class="font-size-h1"&gt;Div at Heading 1 Size&lt;/div&gt;
+			<pre class="codebox" data-lang="HTML"><code>&lt;div class="font-size-h1"&gt;Div at Heading 1 Size&lt;/div&gt;
 &lt;div class="font-size-h2"&gt;Div at Heading 2 Size&lt;/div&gt;
 &lt;div class="font-size-h3"&gt;Div at Heading 3 Size&lt;/div&gt;
 &lt;div class="font-size-h4"&gt;Div at Heading 4 Size&lt;/div&gt;
@@ -133,7 +142,7 @@ $tyfy-font-size-h1: tyscale(map-get($tyfy-font-sizes,"h1")) !default;</code></pr
 			for(x=0;x<codeboxes.length;x++) {
 				lang = codeboxes[x].getAttribute('data-lang');
 				if (lang != null && lang != '') {
-					codeboxes[x].insertAdjacentHTML('afterbegin','<div class="label">'+lang+'</div>');
+					codeboxes[x].insertAdjacentHTML('beforebegin','<div class="codebox-label">'+lang+'</div>');
 				}
 			}
 		</script>

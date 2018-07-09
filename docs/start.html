@@ -113,7 +113,7 @@ $tyfy-font-heading:$tyfy-sans;</code></pre>
 			for(x=0;x<codeboxes.length;x++) {
 				lang = codeboxes[x].getAttribute('data-lang');
 				if (lang != null && lang != '') {
-					codeboxes[x].insertAdjacentHTML('afterbegin','<div class="label">'+lang+'</div>');
+					codeboxes[x].insertAdjacentHTML('beforebegin','<div class="codebox-label">'+lang+'</div>');
 				}
 			}
 		</script>
