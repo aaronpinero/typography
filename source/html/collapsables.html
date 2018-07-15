@@ -25,7 +25,7 @@
 				<li><strong>Collapsable headings accommodate linking to anchors</strong>. The correct collapsable section will be opened to show the target of an anchor link.</li>
 			</ul>
       <h2 id="structure"><span class="smallcaps">HTML</span> Structure</h2>
-      <p>Collapsable headings are defined by adding the <code>collaspable</code> class to a heading (H2 through H6). JavaScript is used to identify the contents of belonging to the heading. The content of a collapsable section is defined as all the next sibling elements following the <code>collaspable</code> heading element up to the next heading of the same level.</p>
+      <p>Collapsable headings are defined by adding the <code>collaspable</code> class to a heading (H2 through H6). JavaScript is used to identify the content belonging to the heading. The content of a collapsable section is defined as all the next sibling elements following the <code>collaspable</code> heading element up to the next heading of the same or higher level.</p>
       <pre class="codebox" data-lang="HTML"><code>&lt;h2 class="collapsable"&gt;Collapsable Heading 1&lt;/h2&gt;
 &lt;p&gt;[content of the collapsable section]&lt;/p&gt;
 &lt;p&gt;[content of the collapsable section]&lt;/p&gt;
@@ -34,6 +34,7 @@
 &lt;p&gt;[content of the collapsable section]&lt;/p&gt;
 &lt;ul&gt;[content of the collapsable section]&lt;/ul&gt;</code></pre>
       <h2 id="variables">Variables</h2>
+			<p>The following variables are defined in the required <a href="settings.html">settings</a> module.</p>
       <dl>
 				<dt><code><em class="var">$tyfy-break-collapsables</em>: 50em !default;</code></dt>
         <dd>Breakpoint below which the design changes to maximize horizontal space</dd>
@@ -47,7 +48,7 @@
         <dd>The character code for the angle-up icon</dd>
       </dl>
 			<h2 id="example">Example</h2>
-			<pre class="codebox" data-lang="HTML"><code>&lt;p&gt;&lt;a href="#testanchor"&gt;Test anchor link&lt;/a&gt;&lt;/p&gt;
+			<pre class="codebox small" data-lang="HTML"><code>&lt;p&gt;&lt;a href="#testanchor"&gt;Test anchor link&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class="collapsable"&gt;Lorem ipsum dolor sit amet&lt;/h2&gt;
 &lt;p&gt;Consectetur adipiscing elit. Maecenas euismod varius purus et accumsan. Suspendisse mollis augue sem, eu varius ex ornare at. Cras convallis lorem in malesuada porttitor. Integer malesuada, nisi vel gravida luctus, tellus mi finibus est, ac dignissim elit tortor quis erat.
@@ -58,10 +59,6 @@
 &lt;h3 class="collapsable"&gt;Curabitur in libero arcu&lt;/h3&gt;
 &lt;p&gt;&lt;a name="testanchor"&gt;Test anchor&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Cras nec mattis elit. Nam eget lacinia erat. Nam dignissim, enim nec dictum aliquam, magna tortor fringilla metus, sit amet fringilla felis quam ornare arcu. Duis est augue, posuere vel ultricies quis, pharetra nec nunc. Ut et nisi sit amet velit dictum tempus. Ut tincidunt vitae orci eget viverra. Mauris ipsum metus, consectetur sit amet purus elementum, dapibus tincidunt leo. Nullam lacinia sem at mollis vestibulum. Curabitur at nisi finibus, ullamcorper sapien sed, placerat neque.&lt;/p&gt;
-
-&lt;h3 class="collapsable"&gt;Phasellus tempor sagittis est semper pellentesque&lt;/h3&gt;
-&lt;p&gt;Duis varius sodales elit, in rhoncus sem volutpat sed. Donec volutpat sed massa vel porta. Suspendisse facilisis bibendum quam, non dignissim massa mollis id.&lt;/p&gt;
-&lt;p&gt;Maecenas cursus enim et metus ornare, vitae rutrum sapien lacinia. Nam sodales nisi ligula, vel congue augue porta in. Maecenas hendrerit ornare felis vel tempus. Aenean eleifend fermentum hendrerit. Fusce nec elit eu libero vehicula rhoncus ut at ipsum.&lt;/p&gt;
 
 &lt;h2 class="collapsable"&gt;Praesent accumsan&lt;/h2&gt;
 &lt;p&gt;Ligula volutpat luctus volutpat, arcu enim sagittis mi, scelerisque placerat felis ipsum ut tellus. Phasellus eget augue sit amet mauris lacinia fermentum et id ligula. Duis in odio velit. Proin tempor dolor non ultrices aliquam.&lt;/p&gt;
@@ -84,9 +81,6 @@
 				<h3 class="collapsable">Curabitur in libero arcu</h3>
 				<p><a name="testanchor">Test anchor</a></p>
 				<p>Cras nec mattis elit. Nam eget lacinia erat. Nam dignissim, enim nec dictum aliquam, magna tortor fringilla metus, sit amet fringilla felis quam ornare arcu. Duis est augue, posuere vel ultricies quis, pharetra nec nunc. Ut et nisi sit amet velit dictum tempus. Ut tincidunt vitae orci eget viverra. Mauris ipsum metus, consectetur sit amet purus elementum, dapibus tincidunt leo. Nullam lacinia sem at mollis vestibulum. Curabitur at nisi finibus, ullamcorper sapien sed, placerat neque.</p>
-				<h3 class="collapsable">Phasellus tempor sagittis est semper pellentesque</h3>
-				<p>Duis varius sodales elit, in rhoncus sem volutpat sed. Donec volutpat sed massa vel porta. Suspendisse facilisis bibendum quam, non dignissim massa mollis id.</p>
-				<p>Maecenas cursus enim et metus ornare, vitae rutrum sapien lacinia. Nam sodales nisi ligula, vel congue augue porta in. Maecenas hendrerit ornare felis vel tempus. Aenean eleifend fermentum hendrerit. Fusce nec elit eu libero vehicula rhoncus ut at ipsum.</p>
 				<h2 class="collapsable">Praesent accumsan</h2>
 				<p>Ligula volutpat luctus volutpat, arcu enim sagittis mi, scelerisque placerat felis ipsum ut tellus. Phasellus eget augue sit amet mauris lacinia fermentum et id ligula. Duis in odio velit. Proin tempor dolor non ultrices aliquam.</p>
 				<h3>Vestibulum consequat erat orci</h3>
