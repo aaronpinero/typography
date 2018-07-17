@@ -1,0 +1,10 @@
+.grid-2 {
+  @media (min-width:$tyfy-break-cols-2) {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:tygrid(2);
+    & > * {
+      margin-top:0;
+    }
+  }
+}

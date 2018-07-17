@@ -10,6 +10,7 @@ $tyfyicons-path:"../../../dist/fonts/tyfyicons"; // do not add a trailing /
 @import "extras/icons";
 @import "extras/responsive_text";
 @import "extras/reverse";
+@import "extras/grid";
 
 body {
   @include fade-in(2000ms);
@@ -267,16 +268,6 @@ nav.nav-inpage {
     font-weight:bold;
     &.option {
       font-weight:normal;
-    }
-  }
-}
-.grid-2 {
-  @media (min-width:$tyfy-break-cols-2) {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    grid-gap:tygrid(2);
-    & > *:nth-child(2) {
-      margin-top:0;
     }
   }
 }
