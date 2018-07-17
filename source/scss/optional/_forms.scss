@@ -72,7 +72,7 @@ label {
 // placeholder selectors for forms
 %tyfy_form_element {
   border:$tyfy-width-border solid $tyfy-color-border;
-  border-radius:2px;
+  border-radius:4px;
   color:$tyfy-color-text-body;
   font-family:$tyfy-sans;
 }
@@ -140,28 +140,17 @@ input[type="submit"] {
 }
 
 // special select element
-.tyfy-select {
+.tyfy-select select,
+select.tyfy-select, {
   @extend %tyfy_form_element;
-  background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
-  padding:tygrid(0.625);
-  position:relative;
-  &::after {
-    content:tychar($tyfyicons-angle-down);
-    font-family:$tyfy-symbol;
-    line-height:tylead(tyscale(0));
-    position:absolute;
-    right:tygrid(0.75);
-    top:tygrid(0.75);
-    z-index:-1;
-  }
-  select {
-    appearance:menulist-text;
-    -moz-appearance:menulist-text;
-    background:transparent;
-    border:none;
-    line-height:tylead(tyscale(0));
-  }
-  label + & {
-    margin-top:$tyfy-spacing-standard / 2;
+  @extend %tyfy_form_textinput;
+  appearance:none;
+  background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{$tyfy-color-text-light}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{$tyfy-color-text-light}'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:calc(100% - #{tygrid(0.5)}) center;
+  background-size:tygrid(1.25) auto;
+  box-shadow:none;
+  &:focus {
+    box-shadow:none;
   }
 }
