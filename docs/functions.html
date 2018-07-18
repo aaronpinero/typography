@@ -20,42 +20,54 @@
 		<title>Tyfy - Functions</title>
 	</head>
 	<body class="">
-		<!-- COMMON HEADER -->
-		<header class="brand sibling-margins-off reverse">
-			<h1><a href="index.html">Tyfy</a></h1>
-			<nav>
-				<h2>Contents</h2>
-				<ul class="list-nobullet list-grid-4">
-					<li><a href="startup.html">Get Started</a></li>
-					<li><a href="modules.html">Modules</a></li>
-					<li><a href="variables.html">Variables</a></li>
-					<li><a href="functions.html">Functions</a></li>
-					<li><a href="mixins.html">Mixins</a></li>
-					<li><a href="icons.html">Icons</a></li>
-					<li><a href="paragraphs.html">Paragraphs</a></li>
-					<li><a href="headings.html">Headings</a></li>
-					<li><a href="links.html">Links</a></li>
-					<li><a href="lists.html">Lists</a></li>
-					<li><a href="utility.html">Utility</a></li>
-					<li><a href="quotes.html">Quotes</a></li>
-					<li><a href="tables.html">Tables</a></li>
-					<li><a href="reverse.html">Reverse</a></li>
-					<li><a href="collapsables.html">Collapsables</a></li>
-					<li><a href="tabs.html">Tabs</a></li>
-					<li><a href="forms.html">Forms</a></li>
-  				<li><a href="effects.html">Effects</a></li>
-  				<li><a href="extras.html">Extras</a></li>
-					<li><a href="about.html">About Tyfy</a></li>
-				</ul>
-			</nav>
-		</header>
-		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Functions</h1>
+			<nav class="nav-inpage sibling-margins-off">
+				<h2 class="font-size-h6"><a href="#">Functions</a></h2>
+				<ul class="list-nobullet">
+					<li><a href="#fn-tylead">tylead</a></li>
+					<li><a href="#mixin-button-outline">button-outline</a></li>
+					<li><a href="#mixin-clearfix">clearfix</a></li>
+					<li><a href="#mixin-fadein">fadein</a></li>
+					<li><a href="#mixin-mod-colors">mod-colors</a></li>
+					<li><a href="#mixin-set-sibling-margins">set-sibling-margins</a></li>
+					<li><a href="#mixin-sibling-margins">sibling-margins</a></li>
+					<li><a href="#mixin-visuallyhidden">visuallyhidden</a></li>
+				</ul>
+			</nav>
 			<p><strong class="tyfy">Tyfy</strong> includes several custom <span class="smallcaps">SASS</span> functions. These functions were written to facilitate writing the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SCSS</span> files, but can also be used to help users who are including <strong class="tyfy">Tyfy</strong> in their web projects.</p>
+			<h2 id="fn-tylead">@function tylead</h2>
+			<p>Calculates a <a href="grid.html">grid-based</a> line height value based on a font size and (optionally) a line height style. This function helps maintain the baseline grid by facilitating the calculation of appropriate line heights.</p>
+			<h3 class="font-size-h5">Arguments</h3>
 			<dl>
-				<dt>@function tylead($font-size,$leading-style:base)</dt>
-				<dd>Accepts a font size and leading style option and calculates a grid-based line height. The leading style options are <code>tall</code>, <code>base</code>, <code>heading</code>, and <code>short</code>. The default is <code>base</code>. The font size argument must be in rem units, and the value returned is also in rem units.</dd>
+				<dt><code><em class="var">$font-size</em></code></dt>
+				<dd>Font size value in rem units</dd>
+				<dt><code><em class="var">$leading-style</em></code></dt>
+				<dd>Accepted value are <code>base</code>, <code>heading</code>, <code>tall</code>, or <code>short</code>.</dd>
+				<dd>Default value is <code>base</code></dd>
+			</dl>
+			<h3 class="font-size-h5">Examples</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code>p {
+  font-size:1rem;
+  line-height:tylead(1rem);
+}
+p.special {
+  font-size:1.2rem;
+  line-height:tylead(1.2rem,tall);
+}</code></pre>
+			<h2 id="fn-tygrid">@function tygrid</h2>
+			<p>Calculates a grid-based length value. This function facilitates the use of the $tyfy-grid-unit variable by making <span class="smallcaps">CSS</span> easier to read and write.</p>
+			<h3 class="font-size-h5">Arguments</h3>
+			<dl>
+				<dt><code><em class="var">$multiplier</em></code></dt>
+				<dd>A floating point value to be multipled by the grid unit value to calculate the desired length.</dd>
+			</dl>
+			<h3 class="font-size-h5">Examples</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code>div {
+  margin-bottom:tygrid(1.5); <em class="light">// 1.5 times the default grid unit length</em>
+  width:tygrid(50); <em class="light">// 50 times the default grid unit length</em>
+}</code></pre>
+<dl>
 				<dt>@function tygrid($multiplier)</dt>
 				<dd>Makes the <span class="smallcaps">SCSS</span> files easier to read. The function accepts a number and returns a value, in rem units, that is the base grid unit multiplied by the number argument.</dd>
 				<dt>@function tyscale($exponent)</dt>
