@@ -11,13 +11,8 @@
 				<h2 class="font-size-h6"><a href="#">Functions</a></h2>
 				<ul class="list-nobullet">
 					<li><a href="#fn-tylead">tylead</a></li>
-					<li><a href="#mixin-button-outline">button-outline</a></li>
-					<li><a href="#mixin-clearfix">clearfix</a></li>
-					<li><a href="#mixin-fadein">fadein</a></li>
-					<li><a href="#mixin-mod-colors">mod-colors</a></li>
-					<li><a href="#mixin-set-sibling-margins">set-sibling-margins</a></li>
-					<li><a href="#mixin-sibling-margins">sibling-margins</a></li>
-					<li><a href="#mixin-visuallyhidden">visuallyhidden</a></li>
+					<li><a href="#fn-tygrid">tygrid</a></li>
+					<li><a href="#fn-tyscale">tyscale</a></li>
 				</ul>
 			</nav>
 			<p><strong class="tyfy">Tyfy</strong> includes several custom <span class="smallcaps">SASS</span> functions. These functions were written to facilitate writing the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SCSS</span> files, but can also be used to help users who are including <strong class="tyfy">Tyfy</strong> in their web projects.</p>
@@ -52,15 +47,33 @@ p.special {
   margin-bottom:tygrid(1.5); <em class="light">// 1.5 times the default grid unit length</em>
   width:tygrid(50); <em class="light">// 50 times the default grid unit length</em>
 }</code></pre>
+			<h2 id="fn-tyscale">@function tyscale</h2>
+			<p>Facilitates use of the <a href="scale.html">modular typographic scale</a> by simplifying the calculation of font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</p>
+			<h3 class="font-size-h5">Arguments</h3>
+			<dl>
+				<dt><code><em class="var">$exponent</em></code></dt>
+				<dd>Integer representing a number of steps from the base font size on the modular scale to calculate; positive and negative values allowed.</dd>
+			</dl>
+			<h3 class="font-size-h5">Examples</h3>
+			<pre class="codebox mini"><code>small {
+  font-size: tyscale(-1) !default; <em class="light">// 0.833rem; one scale step down from the base size</em>
+}
+h6 {
+  font-size: tyscale(0) !default;  <em class="light">// 1rem; using 0 as the exponent is the same as setting the value to the base size</em>
+}
+h5 {
+  font-size: tyscale(1) !default;  <em class="light">// 1.2rem; one scale step up from the base size</em>
+}
+h4 {
+  font-size: tyscale(2) !default;  <em class="light">// 1.44rem; two scale steps up from the base size</em>
+}
+[...]</code></pre>
+
 <dl>
 				<dt>@function tygrid($multiplier)</dt>
 				<dd>Makes the <span class="smallcaps">SCSS</span> files easier to read. The function accepts a number and returns a value, in rem units, that is the base grid unit multiplied by the number argument.</dd>
 				<dt>@function tyscale($exponent)</dt>
 				<dd>Facilitates use of the modular typographic scale by eliminating the task of calculating font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</dd>
-				<dt>@function tycolor($color,$lightness)</dt>
-				<dd>Accepts a color (in rgb or hexadecimal format) and a lightness value (0% to 100%), and returns the given color converted to the specified lightness.</dd>
-				<dt>@function tyreverse($color)</dt>
-				<dd>Accepts a color (in rgb or hexadecimal format) and returns the same color with the lightness value reversed.</dd>
 				<dt>@function tychar($code)</dt>
 				<dd>Accepts a character code without the preceding slash (“\”) and adds it; this is done to get around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> and allow icon character codes to be more easily customized for different icon fonts.</dd>
 			</dl>
