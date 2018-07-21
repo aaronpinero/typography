@@ -34,6 +34,17 @@ h1 {
     letter-spacing:0;
     text-transform:none;
   }
+  &.pagetitle {
+    background-color:$tyfy-color-link-active;
+    box-shadow:0 0 tygrid(2) rgba(black,0.1) inset;
+    color:white;
+    padding:tygrid(2);
+    text-align:center;
+    text-shadow:0 0 tygrid(0.5) rgba(black,0.15);
+    @media (min-width:20em) {
+      padding:tygrid(4) tygrid(2);
+    }
+  }
 }
 h2 small {
   font-size:tyscale(0);
@@ -223,6 +234,9 @@ nav.nav-inpage {
   }
   @media (min-width:70em) {
     display:block;
+  }
+  & + * {
+    margin-top:0;
   }
 }
 #lists-demo {
