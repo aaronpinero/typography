@@ -13,18 +13,19 @@
 					<li><a href="#fn-tylead">tylead</a></li>
 					<li><a href="#fn-tygrid">tygrid</a></li>
 					<li><a href="#fn-tyscale">tyscale</a></li>
+					<li><a href="#fn-tychar">tychar</a></li>
 				</ul>
 			</nav>
-			<p><strong class="tyfy">Tyfy</strong> includes several custom <span class="smallcaps">SASS</span> functions. These functions were written to facilitate writing the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SCSS</span> files, but can also be used to help users who are including <strong class="tyfy">Tyfy</strong> in their web projects.</p>
+			<p class="lede"><strong class="tyfy">Tyfy</strong> includes four custom <span class="smallcaps">SASS</span> functions to facilitate use of the framework for front-end development.</p>
 			<h2 id="fn-tylead">@function tylead</h2>
-			<p>Calculates a <a href="grid.html">grid-based</a> line height value based on a font size and (optionally) a line height style. This function helps maintain the baseline grid by facilitating the calculation of appropriate line heights.</p>
+			<p>Calculates a <a href="grid.html">grid-based</a> line height value based on a font size and (optionally) a line height style. This function helps maintain the baseline grid by automating the calculation of appropriate line heights.</p>
 			<h3 class="font-size-h5">Arguments</h3>
 			<dl>
 				<dt><code><em class="var">$font-size</em></code></dt>
-				<dd>Font size value in rem units</dd>
+				<dd>Font size value in rem units.</dd>
 				<dt><code><em class="var">$leading-style</em></code></dt>
 				<dd>Accepted value are <code>base</code>, <code>heading</code>, <code>tall</code>, or <code>short</code>.</dd>
-				<dd>Default value is <code>base</code></dd>
+				<dd>Default value is <code>base</code>.</dd>
 			</dl>
 			<h3 class="font-size-h5">Examples</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code>p {
@@ -36,7 +37,7 @@ p.special {
   line-height:tylead(1.2rem,tall);
 }</code></pre>
 			<h2 id="fn-tygrid">@function tygrid</h2>
-			<p>Calculates a grid-based length value. This function facilitates the use of the $tyfy-grid-unit variable by making <span class="smallcaps">CSS</span> easier to read, write, and maintain.</p>
+			<p>Calculates a grid-based length value. This function facilitates the use of the $tyfy-grid-unit variable by making your <span class="smallcaps">SCSS</span> easier to read, write, and maintain.</p>
 			<h3 class="font-size-h5">Arguments</h3>
 			<dl>
 				<dt><code><em class="var">$multiplier</em></code></dt>
@@ -48,14 +49,15 @@ p.special {
   width:tygrid(50); <em class="light">// 50 times the default grid unit length</em>
 }</code></pre>
 			<h2 id="fn-tyscale">@function tyscale</h2>
-			<p>Facilitates use of the <a href="scale.html">modular typographic scale</a> by simplifying the calculation of font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</p>
+			<p>Facilitates use of the <a href="scale.html">modular typographic scale</a> by automating the calculation of font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</p>
 			<h3 class="font-size-h5">Arguments</h3>
 			<dl>
 				<dt><code><em class="var">$exponent</em></code></dt>
 				<dd>Integer representing a number of steps from the base font size on the modular scale to calculate; positive and negative values allowed.</dd>
 			</dl>
 			<h3 class="font-size-h5">Examples</h3>
-			<pre class="codebox mini"><code>small {
+			<pre class="codebox mini" data-lang="SCSS"><code>$tyfy-font-size-base: 1rem;
+small {
   font-size: tyscale(-1) !default; <em class="light">// 0.833rem; one scale step down from the base size</em>
 }
 h6 {
@@ -63,20 +65,18 @@ h6 {
 }
 h5 {
   font-size: tyscale(1) !default;  <em class="light">// 1.2rem; one scale step up from the base size</em>
-}
-h4 {
-  font-size: tyscale(2) !default;  <em class="light">// 1.44rem; two scale steps up from the base size</em>
-}
-[...]</code></pre>
-
-<dl>
-				<dt>@function tygrid($multiplier)</dt>
-				<dd>Makes the <span class="smallcaps">SCSS</span> files easier to read. The function accepts a number and returns a value, in rem units, that is the base grid unit multiplied by the number argument.</dd>
-				<dt>@function tyscale($exponent)</dt>
-				<dd>Facilitates use of the modular typographic scale by eliminating the task of calculating font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</dd>
-				<dt>@function tychar($code)</dt>
-				<dd>Accepts a character code without the preceding slash (“\”) and adds it; this is done to get around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> and allow icon character codes to be more easily customized for different icon fonts.</dd>
+}</code></pre>
+			<h2 id="fn-tychar">@function tychar</h2>
+			<p>Facilitates the use of the <strong>tyfyicons</strong> custom font by working around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> related to character codes. This function properly applies icons when used in the <em>content</em> attribute of a pseudo-element.</p>
+			<h3 class="font-size-h5">Arguments</h3>
+			<dl>
+				<dt><code><em class="var">$code</em></code></dt>
+				<dd>A character code without the preceding slash (“\”). For use with the <strong>tyfyicons</strong>, there are <a href="settings.html"><span class="smallcaps">SASS</span> variables for each of the character codes</a>.</dd>
 			</dl>
+			<h3 class="font-size-h5">Examples</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code>div::before {
+  content: tychar($tyfyicons-angle-left);
+}</code></pre>
 		</section>
 		<%include footer.html%>
 	</body>
