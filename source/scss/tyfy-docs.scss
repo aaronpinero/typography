@@ -18,9 +18,10 @@ body {
   padding:0;
 }
 .constrained {
+  box-sizing:border-box;
   margin-left:auto;
   margin-right:auto;
-  max-width:45em;
+  max-width:50rem;
 }
 h1 {
   font-family:"IBM Plex Sans Condensed",sans-serif;
@@ -56,62 +57,70 @@ hr.demo {
 strong.tyfy {
   color:$tyfy-color-link-active;
   font-family:"IBM Plex Sans Condensed",sans-serif;
-  letter-spacing: 0.075em;
+  letter-spacing:0.075em;
   margin-right:-0.0375em;
-  text-transform: uppercase;
+  text-transform:uppercase;
 }
+
+$break-nav:620px;
+
 header.brand {
-  background:#333 url("../img/bg.gif");
-  h1 {
+  position:relative;
+  .headgrid {
     @extend .constrained;
+    display:grid;
+    grid-template-columns:tygrid(6) auto;
+    grid-gap:$tyfy-spacing-standard;
+    padding:0 $tyfy-spacing-standard;
+  }
+  h1 {
     font-size:$tyfy-font-size-h3;
     line-height:tylead($tyfy-font-size-h3,heading);
-    padding:tygrid(1) tygrid(2);
+    padding:$tyfy-spacing-standard/2 0;
   }
   nav {
-    @extend .constrained;
-    padding:0 tygrid(2);
     h2 {
+      display:none;
       font-size:$tyfy-font-size-h5;
       line-height:tylead($tyfy-font-size-h5,heading);
     }
-    ul.list-grid-4 {
+    ul {
+      padding:0;
+    }
+    & > ul {
       display:flex;
       flex-wrap:wrap;
       font-family:"IBM Plex Sans",sans-serif;
-      margin-top:tygrid(1);
-      padding-bottom:tygrid(1);
-      padding-left:0;
       li {
-        @media (max-width:$tyfy-break-list-cols-2 * 0.9999) {
-          box-sizing:border-box;
-          width:calc(50% - #{(0.5 * $tyfy-spacing-large)});
-          &:nth-child(2) {
-            margin-top:0; // override of the default margin
-          }
-          &:nth-child(2n+1) {
-            margin-right:$tyfy-spacing-large;
-          }
-        }
         a {
-          border-top:$tyfy-width-border $tyfy-color-border-reverse solid;
           display:block;
-          font-size:$tyfy-font-size-sm;
-          padding-top:tygrid(0.5);
-          padding-bottom:tygrid(0.5);
+          padding:$tyfy-spacing-standard/2;
+        }
+        .navtab {
+          background-color:lighten($tyfy-color-background-reverse,10%);
+          display:none;
+          left:0;
+          padding:0;
+          position:absolute;
+          top:100%;
+          width:100%;
+        }
+        .navtab-content {
+          @extend .constrained;
+
+          padding:$tyfy-spacing-standard/4 $tyfy-spacing-standard;
+          a {
+            padding:$tyfy-spacing-standard/4 $tyfy-spacing-standard/2;
+          }
         }
       }
     }
     &.nav-processed {
-      position:relative;
       h2 {
         cursor:pointer;
         height:tylead($tyfy-font-size-h3,heading);
         line-height:tylead($tyfy-font-size-h3,heading);
         overflow:hidden;
-        position:absolute;
-        right:tygrid(2);
-        top:tygrid(-3);
         transition-duration:$tyfy-transition-duration-hover;
         transition-property:color;
         width:tylead($tyfy-font-size-h3,heading);
@@ -127,12 +136,12 @@ header.brand {
           color:$tyfy-color-link-active-reverse;
         }
       }
-      ul {
-        height:0;
-        margin-top:0;
-        overflow:hidden;
-        padding-bottom:0;
-      }
+      // ul {
+      //   height:0;
+      //   margin-top:0;
+      //   overflow:hidden;
+      //   padding-bottom:0;
+      // }
       &.nav-open {
         ul {
           height:auto;
@@ -140,6 +149,9 @@ header.brand {
         }
       }
     }
+  }
+  & + * {
+    margin-top:0;
   }
 }
 section.main {
@@ -216,9 +228,9 @@ dl dt {
 nav.nav-inpage {
   box-sizing:border-box;
   display:none;
-  margin-left:48em;
+  margin-left:50rem;
   position:fixed;
-  width:9em;
+  width:8rem;
   h2 {
     border-bottom:solid $tyfy-width-border $tyfy-color-border;
     margin-bottom:tygrid(1);
@@ -232,7 +244,7 @@ nav.nav-inpage {
     border-bottom-width:0px;
     font-family:$tyfy-sans;
   }
-  @media (min-width:70em) {
+  @media (min-width:72em) {
     display:block;
   }
   & + * {

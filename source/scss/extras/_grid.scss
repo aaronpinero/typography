@@ -1,4 +1,9 @@
-.grid-2 {
+$tyfy-break-cols-3: 60em !default;
+$tyfy-break-cols-4: 70em !default;
+
+.grid-2,
+.grid-3,
+.grid-4 {
   @media (min-width:$tyfy-break-cols-2) {
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -6,5 +11,16 @@
     & > * {
       margin-top:0;
     }
+  }
+}
+.grid-3,
+.grid-4 {
+  @media (min-width:$tyfy-break-cols-3) {
+    grid-template-columns:1fr 1fr 1fr;
+  }
+}
+.grid-4 {
+  @media (min-width:$tyfy-break-cols-4) {
+    grid-template-columns:1fr 1fr 1fr 1fr;
   }
 }
