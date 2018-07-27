@@ -66,6 +66,7 @@ $break-nav:680px;
 
 header.brand {
   position:relative;
+  z-index:5;
   .headgrid {
     @extend .constrained;
     display:grid;
