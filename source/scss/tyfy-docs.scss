@@ -62,7 +62,7 @@ strong.tyfy {
   text-transform:uppercase;
 }
 
-$break-nav:620px;
+$break-nav:680px;
 
 header.brand {
   position:relative;
@@ -76,76 +76,136 @@ header.brand {
   h1 {
     font-size:$tyfy-font-size-h3;
     line-height:tylead($tyfy-font-size-h3,heading);
-    padding:$tyfy-spacing-standard/2 0;
+    padding:tygrid(1) 0;
   }
   nav {
+    line-height:0;
     h2 {
-      display:none;
       font-size:$tyfy-font-size-h5;
       line-height:tylead($tyfy-font-size-h5,heading);
     }
     ul {
-      padding:0;
-    }
-    & > ul {
-      display:flex;
-      flex-wrap:wrap;
       font-family:"IBM Plex Sans",sans-serif;
-      li {
-        a {
-          display:block;
-          padding:$tyfy-spacing-standard/2;
-        }
-        .navtab {
-          background-color:lighten($tyfy-color-background-reverse,10%);
-          display:none;
-          left:0;
-          padding:0;
-          position:absolute;
-          top:100%;
-          width:100%;
-        }
-        .navtab-content {
-          @extend .constrained;
-
-          padding:$tyfy-spacing-standard/4 $tyfy-spacing-standard;
-          a {
-            padding:$tyfy-spacing-standard/4 $tyfy-spacing-standard/2;
-          }
-        }
+      font-size:tyscale(0);
+      line-height:tylead(tyscale(0));
+    }
+    .navtab-content {
+      h3 {
+        font-size:tyscale(0);
+        line-height:tylead(tyscale(0));
+        text-transform:uppercase;
+      }
+      * + h3 {
+        margin-top:tygrid(1);
       }
     }
     &.nav-processed {
+      @media (max-width:$break-nav * 0.9999) {
+        text-align:right;
+      }
       h2 {
         cursor:pointer;
-        height:tylead($tyfy-font-size-h3,heading);
-        line-height:tylead($tyfy-font-size-h3,heading);
+        display:inline-block;
+        height:tylead($tyfy-font-size-h3,heading) + tygrid(2);
+        line-height:tylead($tyfy-font-size-h3,heading) + tygrid(2);
         overflow:hidden;
         transition-duration:$tyfy-transition-duration-hover;
         transition-property:color;
-        width:tylead($tyfy-font-size-h3,heading);
+        width:tygrid(2);
         &::before {
           content:tychar($tyfyicons-bars);
           display:block;
           font-family:$tyfy-symbol;
-          height:tylead($tyfy-font-size-h3,heading);
+          height:tylead($tyfy-font-size-h3,heading) + tygrid(2);
           text-align:center;
-          width:tylead($tyfy-font-size-h3,heading);
+          width:tygrid(2);
         }
         &:hover {
           color:$tyfy-color-link-active-reverse;
         }
+        @media (min-width:$break-nav) {
+          display:none;
+        }
       }
-      // ul {
-      //   height:0;
-      //   margin-top:0;
-      //   overflow:hidden;
-      //   padding-bottom:0;
-      // }
+      ul {
+        padding:0;
+        text-align:left;
+        @media (min-width:$break-nav) {
+          display:flex;
+          flex-wrap:wrap;
+        }
+      }
+      & > ul {
+        @media (max-width:$break-nav * 0.9999) {
+          background-color:$tyfy-color-background-reverse;
+          display:none;
+          left:0;
+          position:absolute;
+          top:100%;
+          width:100%;
+        }
+      }
+      li {
+        @media (max-width:$break-nav * 0.9999) {
+          border-top:$tyfy-width-border rgba(white,0.05) solid;
+        }
+        &.navtab-open {
+          & > a {
+            position:relative;
+            &::after {
+              @media (min-width:$break-nav) {
+                content:"";
+                display:block;
+                position:absolute;
+              }
+            }
+          }
+          .navtab {
+            display:block;
+          }
+        }
+      }
+      a {
+        display:block;
+        padding:tygrid(1) $tyfy-spacing-standard;
+        @media (min-width:$break-nav) {
+          padding:tygrid(1);
+        }
+      }
+      .navtab {
+        background-color:lighten($tyfy-color-background-reverse,10%);
+        display:none;
+        @media (min-width:$break-nav) {
+          left:0;
+          position:absolute;
+          top:100%;
+          width:100%;
+        }
+      }
+      .navtab-content {
+        @extend .constrained;
+        padding:tygrid(0.75) 0;
+        a {
+          padding:tygrid(0.25) $tyfy-spacing-standard;
+        }
+        h3 {
+          display:inline-block;
+        }
+        @media (min-width:$break-nav) {
+          padding:tygrid(0.75) $tyfy-spacing-standard tygrid(0.75) (tygrid(6) + (2*$tyfy-spacing-standard));
+          a {
+            padding:tygrid(0.25) tygrid(1);
+          }
+        }
+      }
       &.nav-open {
-        ul {
-          height:auto;
-          padding-bottom:tygrid(1);
+        h2::before {
+          content:tychar($tyfyicons-x);
+        }
+        @media (max-width:$break-nav * 0.9999) {
+          ul {
+            display:block;
+          }
         }
       }
     }
