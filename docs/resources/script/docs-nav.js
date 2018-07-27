@@ -5,6 +5,9 @@ var nav_btn = nav[0].getElementsByTagName('h2');
 var nav_tabs = nav[0].getElementsByClassName('navtab');
 var nav_initial_class = (nav[0].getAttribute('class') == null) ? '' : nav[0].getAttribute('class');
 
+// what kind of animation event?
+var animationEvent = whichAnimationEvent();
+
 // initial processing of menu
 if (nav_initial_class.indexOf('nav-processed') == -1) {
 	// has not yet been processed by javascript; do so now
@@ -33,8 +36,6 @@ function ToggleNavOpen() {
 	}
 }
 
-var open_navtab = false;
-
 // hover nav tab
 function NavtabHoverOn(event) {
 	// sometimes the event target will be the list item, sometimes it will be a child element; need to account for both
@@ -56,8 +57,9 @@ function NavtabHoverOn(event) {
 		navoption = parent;
 		navoption_class = parent_class;
 	}
-	if (navoption_class.indexOf('navtab-hover') == -1) {
-		AddClass(navoption,'navtab-hover');
+	if (navoption_class.indexOf('navtab-hover-on') == -1) {
+		RemoveClass(navoption,'navtab-hover-off');
+		AddClass(navoption,'navtab-hover-on');
 		document.addEventListener('mouseover',NavtabHoverOff,true);
 	}
 }
@@ -65,18 +67,21 @@ function NavtabHoverOn(event) {
 // close nav tab
 function NavtabHoverOff(event) {
 	var target = event.target;
-	var hovered = document.getElementsByClassName('navtab-hover'); console.log('hovered count is: ' + hovered.length);
+	var hovered = document.getElementsByClassName('navtab-hover-on');
 	var y;
 	for (y=0; y<hovered.length; y++) {
 		var nav_option = hovered[y];
 		is_contained = nav_option.contains(target);
-		// console.log('target is contained:' + is_contained);
 		if (!is_contained) {
-			RemoveClass(nav_option,'navtab-hover');
+			RemoveClass(nav_option,'navtab-hover-on');
+			AddClass(nav_option,'navtab-hover-off');
 			nav_option.addEventListener('mouseover',NavtabHoverOn,{once:true});
+			nav_option.addEventListener(animationEvent,function(e){
+				RemoveClass(e.target.parentNode,'navtab-hover-off');
+			},{once:true});
 		}
 	}
-	var now_hovered = document.getElementsByClassName('navtab-hover'); console.log('new hovered count is: ' + now_hovered.length);
+	var now_hovered = document.getElementsByClassName('navtab-hover-on');
 	if (now_hovered.length === 0) {
 		document.removeEventListener('mouseover',NavtabHoverOff,true);
 	}
@@ -96,4 +101,21 @@ function RemoveClass(el,oldclass) {
 	current_class_atr = (el.getAttribute('class') == null) ? '' : el.getAttribute('class');
 	new_class_atr = current_class_atr.replace(oldclass,'');
 	el.setAttribute('class',new_class_atr);
+}
+
+/* From Modernizr */
+function whichAnimationEvent(){
+	var a;
+	var el = document.createElement('fakeelement');
+	var animations = {
+	  'animation':'animationend',
+	  'OAnimation':'oAnimationEnd',
+	  'MozAnimation':'animationend',
+	  'WebkitAnimation':'webkitAnimationEnd'
+	}
+	for (a in animations){
+    if( el.style[a] !== undefined ){
+      return animations[a];
+    }
+	}
 }

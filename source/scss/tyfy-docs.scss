@@ -132,6 +132,9 @@ header.brand {
         @media (min-width:$break-nav) {
           display:flex;
           flex-wrap:wrap;
+          ul ul {
+            display:block;
+          }
         }
       }
       & > ul {
@@ -148,7 +151,7 @@ header.brand {
         @media (max-width:$break-nav * 0.9999) {
           border-top:$tyfy-width-border rgba(white,0.05) solid;
         }
-        &.navtab-hover {
+        &.navtab-hover-on {
           @media (min-width:$break-nav) {
             & > a {
               position:relative;
@@ -165,7 +168,15 @@ header.brand {
               }
             }
             .navtab {
-              @include fade-in(250ms);
+              @include fade-in(500ms);
+              display:block;
+            }
+          }
+        }
+        &.navtab-hover-off {
+          @media (min-width:$break-nav) {
+            .navtab {
+              @include fade-out(500ms);
               display:block;
             }
           }
@@ -192,12 +203,14 @@ header.brand {
       }
       .navtab-content {
         @extend .constrained;
-        padding:tygrid(0.75) 0;
+        padding:0;
         a {
           padding:tygrid(0.25) $tyfy-spacing-standard;
         }
         h3 {
-          display:inline-block;
+          @media (max-width:$break-nav*0.9999) {
+            margin-top:tygrid(0.25);
+          }
         }
         @media (min-width:$break-nav) {
           padding:tygrid(0.75) $tyfy-spacing-standard tygrid(0.75) (tygrid(6) + $tyfy-spacing-standard);
