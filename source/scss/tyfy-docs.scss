@@ -154,9 +154,15 @@ header.brand {
             position:relative;
             &::after {
               @media (min-width:$break-nav) {
+                background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 12'%3E%3Cpolygon points='12 0 24 12 0 12' fill='#{lighten($tyfy-color-background-reverse,10%)}'/%3E%3C/svg%3E");
+                bottom:0;
                 content:"";
                 display:block;
+                height:12px;
+                left:50%;
+                margin-left:-12px;
                 position:absolute;
+                width:24px;
               }
             }
           }
