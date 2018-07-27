@@ -5,6 +5,12 @@
   to {
     opacity: 1; } }
 
+@keyframes fadeout {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
 /* line 3, source/scss/essential/_normalize.scss */
 html {
   -ms-text-size-adjust: 100%;
@@ -370,15 +376,15 @@ a {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     transition: background-color 0.25s, box-shadow 0.25s;
     vertical-align: middle; }
-    /* line 125, source/scss/required/_mixins.scss */
+    /* line 135, source/scss/required/_mixins.scss */
     a[href].button:hover {
       background-color: #cc3380;
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%); }
-    /* line 129, source/scss/required/_mixins.scss */
+    /* line 139, source/scss/required/_mixins.scss */
     a[href].button:active {
       background-color: #cc3380;
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 133, source/scss/required/_mixins.scss */
+    /* line 143, source/scss/required/_mixins.scss */
     a[href].button:focus {
       outline: none; }
   /* line 41, source/scss/optional/_links.scss */
@@ -396,12 +402,12 @@ a {
     text-decoration: none;
     transition: border-color 0.25s, color 0.25s, background-color 0.25s;
     vertical-align: middle; }
-    /* line 152, source/scss/required/_mixins.scss */
+    /* line 162, source/scss/required/_mixins.scss */
     a[href].button-outline:hover, a[href].button-outline:active {
       background-color: rgba(204, 51, 128, 0.1);
       border-color: #cc3380;
       color: #cc3380; }
-    /* line 158, source/scss/required/_mixins.scss */
+    /* line 168, source/scss/required/_mixins.scss */
     a[href].button-outline:focus {
       outline: none; }
 
@@ -749,15 +755,15 @@ strong {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   transition: background-color 0.25s, box-shadow 0.25s;
   vertical-align: middle; }
-  /* line 125, source/scss/required/_mixins.scss */
+  /* line 135, source/scss/required/_mixins.scss */
   .button:hover {
     background-color: #cc3380;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%); }
-  /* line 129, source/scss/required/_mixins.scss */
+  /* line 139, source/scss/required/_mixins.scss */
   .button:active {
     background-color: #cc3380;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-  /* line 133, source/scss/required/_mixins.scss */
+  /* line 143, source/scss/required/_mixins.scss */
   .button:focus {
     outline: none; }
 
@@ -776,12 +782,12 @@ strong {
   text-decoration: none;
   transition: border-color 0.25s, color 0.25s, background-color 0.25s;
   vertical-align: middle; }
-  /* line 152, source/scss/required/_mixins.scss */
+  /* line 162, source/scss/required/_mixins.scss */
   .button-outline:hover, .button-outline:active {
     background-color: rgba(204, 51, 128, 0.1);
     border-color: #cc3380;
     color: #cc3380; }
-  /* line 158, source/scss/required/_mixins.scss */
+  /* line 168, source/scss/required/_mixins.scss */
   .button-outline:focus {
     outline: none; }
 
@@ -1570,21 +1576,21 @@ input[type="submit"] {
   display: inline-block;
   font-family: helvetica, arial, sans-serif;
   width: auto; }
-  /* line 125, source/scss/required/_mixins.scss */
+  /* line 135, source/scss/required/_mixins.scss */
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
     background-color: #cc3380;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%); }
-  /* line 129, source/scss/required/_mixins.scss */
+  /* line 139, source/scss/required/_mixins.scss */
   button:active,
   input[type="button"]:active,
   input[type="reset"]:active,
   input[type="submit"]:active {
     background-color: #cc3380;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-  /* line 133, source/scss/required/_mixins.scss */
+  /* line 143, source/scss/required/_mixins.scss */
   button:focus,
   input[type="button"]:focus,
   input[type="reset"]:focus,
@@ -1735,7 +1741,7 @@ select.tyfy-select {
 .reverse {
   background-color: #333;
   color: #eee; }
-  /* line 168, source/scss/required/_mixins.scss */
+  /* line 178, source/scss/required/_mixins.scss */
   .reverse h1,
   .reverse h2,
   .reverse h3,
@@ -1743,18 +1749,18 @@ select.tyfy-select {
   .reverse h5,
   .reverse h6 {
     color: #eee; }
-  /* line 178, source/scss/required/_mixins.scss */
+  /* line 188, source/scss/required/_mixins.scss */
   .reverse a {
     color: #eee; }
-    /* line 180, source/scss/required/_mixins.scss */
+    /* line 190, source/scss/required/_mixins.scss */
     .reverse a[href] {
       border-bottom-color: rgba(145, 187, 228, 0.5);
       color: #91bbe4; }
-      /* line 183, source/scss/required/_mixins.scss */
+      /* line 193, source/scss/required/_mixins.scss */
       .reverse a[href]:hover, .reverse a[href]:active {
         border-bottom-color: rgba(220, 114, 167, 0.9);
         color: #dc72a7; }
-  /* line 196, source/scss/required/_mixins.scss */
+  /* line 206, source/scss/required/_mixins.scss */
   .reverse h1 a,
   .reverse h2 a,
   .reverse h3 a,
@@ -1762,7 +1768,7 @@ select.tyfy-select {
   .reverse h5 a,
   .reverse h6 a {
     color: #eee; }
-    /* line 198, source/scss/required/_mixins.scss */
+    /* line 208, source/scss/required/_mixins.scss */
     .reverse h1 a[href],
     .reverse h2 a[href],
     .reverse h3 a[href],
@@ -1771,7 +1777,7 @@ select.tyfy-select {
     .reverse h6 a[href] {
       border-bottom-color: rgba(238, 238, 238, 0.5);
       color: #eee; }
-      /* line 201, source/scss/required/_mixins.scss */
+      /* line 211, source/scss/required/_mixins.scss */
       .reverse h1 a[href]:hover, .reverse h1 a[href]:active,
       .reverse h2 a[href]:hover,
       .reverse h2 a[href]:active,
@@ -1785,14 +1791,14 @@ select.tyfy-select {
       .reverse h6 a[href]:active {
         border-bottom-color: rgba(220, 114, 167, 0.9);
         color: #dc72a7; }
-  /* line 211, source/scss/required/_mixins.scss */
+  /* line 221, source/scss/required/_mixins.scss */
   .reverse code {
     background-color: #3c3c3c;
     color: #e5b0cb; }
-  /* line 215, source/scss/required/_mixins.scss */
+  /* line 225, source/scss/required/_mixins.scss */
   .reverse hr {
     border-top-color: #464646; }
-  /* line 218, source/scss/required/_mixins.scss */
+  /* line 228, source/scss/required/_mixins.scss */
   .reverse .button {
     background-color: #91bbe4;
     border: none;
@@ -1809,18 +1815,18 @@ select.tyfy-select {
     transition: background-color 0.25s, box-shadow 0.25s;
     vertical-align: middle;
     color: #333; }
-    /* line 125, source/scss/required/_mixins.scss */
+    /* line 135, source/scss/required/_mixins.scss */
     .reverse .button:hover {
       background-color: #dc72a7;
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%); }
-    /* line 129, source/scss/required/_mixins.scss */
+    /* line 139, source/scss/required/_mixins.scss */
     .reverse .button:active {
       background-color: #dc72a7;
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 133, source/scss/required/_mixins.scss */
+    /* line 143, source/scss/required/_mixins.scss */
     .reverse .button:focus {
       outline: none; }
-  /* line 222, source/scss/required/_mixins.scss */
+  /* line 232, source/scss/required/_mixins.scss */
   .reverse .button-outline {
     background-color: transparent;
     border: 2px #91bbe4 solid;
@@ -1835,56 +1841,56 @@ select.tyfy-select {
     text-decoration: none;
     transition: border-color 0.25s, color 0.25s, background-color 0.25s;
     vertical-align: middle; }
-    /* line 152, source/scss/required/_mixins.scss */
+    /* line 162, source/scss/required/_mixins.scss */
     .reverse .button-outline:hover, .reverse .button-outline:active {
       background-color: rgba(220, 114, 167, 0.1);
       border-color: #dc72a7;
       color: #dc72a7; }
-    /* line 158, source/scss/required/_mixins.scss */
+    /* line 168, source/scss/required/_mixins.scss */
     .reverse .button-outline:focus {
       outline: none; }
-  /* line 225, source/scss/required/_mixins.scss */
+  /* line 235, source/scss/required/_mixins.scss */
   .reverse .light {
     color: #878787; }
-  /* line 233, source/scss/required/_mixins.scss */
+  /* line 243, source/scss/required/_mixins.scss */
   .reverse ul.list-icons li::before {
     color: #878787; }
-  /* line 242, source/scss/required/_mixins.scss */
+  /* line 252, source/scss/required/_mixins.scss */
   .reverse blockquote.pullquote {
     color: #cccc33; }
-    /* line 244, source/scss/required/_mixins.scss */
+    /* line 254, source/scss/required/_mixins.scss */
     .reverse blockquote.pullquote::before {
       color: #464646; }
-    /* line 247, source/scss/required/_mixins.scss */
+    /* line 257, source/scss/required/_mixins.scss */
     .reverse blockquote.pullquote::after {
       color: #464646; }
-  /* line 256, source/scss/required/_mixins.scss */
+  /* line 266, source/scss/required/_mixins.scss */
   .reverse table.striped tr:nth-child(2n) td {
     background-color: #3c3c3c; }
-  /* line 261, source/scss/required/_mixins.scss */
+  /* line 271, source/scss/required/_mixins.scss */
   .reverse table.horizontal-rules {
     border-top-color: #464646; }
-    /* line 263, source/scss/required/_mixins.scss */
+    /* line 273, source/scss/required/_mixins.scss */
     .reverse table.horizontal-rules td,
     .reverse table.horizontal-rules th {
       border-bottom-color: #464646; }
-    /* line 267, source/scss/required/_mixins.scss */
+    /* line 277, source/scss/required/_mixins.scss */
     .reverse table.horizontal-rules th[scope="col"] {
       border-bottom-color: #464646; }
-  /* line 271, source/scss/required/_mixins.scss */
+  /* line 281, source/scss/required/_mixins.scss */
   .reverse table.vertical-rules {
     border-left-color: #464646; }
-    /* line 273, source/scss/required/_mixins.scss */
+    /* line 283, source/scss/required/_mixins.scss */
     .reverse table.vertical-rules td,
     .reverse table.vertical-rules th {
       border-right-color: #464646; }
-    /* line 277, source/scss/required/_mixins.scss */
+    /* line 287, source/scss/required/_mixins.scss */
     .reverse table.vertical-rules th[scope="row"] {
       border-right-color: #464646; }
   @media (max-width: 39.996em) {
-    /* line 282, source/scss/required/_mixins.scss */
+    /* line 292, source/scss/required/_mixins.scss */
     .reverse table.responsive tbody tr + tr {
       border-top-color: #464646; } }
-  /* line 288, source/scss/required/_mixins.scss */
+  /* line 298, source/scss/required/_mixins.scss */
   .reverse table.responsive td .td-label {
     color: #878787; }

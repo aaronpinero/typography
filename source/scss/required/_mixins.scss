@@ -97,13 +97,23 @@
 @mixin fade-in ($duration:1000ms) {
   animation:fadein $duration;
 }
-
 @keyframes fadein {
   from {
     opacity:0;
   }
   to {
     opacity:1;
+  }
+}
+@mixin fade-out ($duration:1000ms) {
+  animation:fadeout $duration;
+}
+@keyframes fadeout {
+  from {
+    opacity:1;
+  }
+  to {
+    opacity:0;
   }
 }
 

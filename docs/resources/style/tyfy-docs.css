@@ -5,6 +5,12 @@
   to {
     opacity: 1; } }
 
+@keyframes fadeout {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
 /* line 3, source/scss/essential/_normalize.scss */
 html {
   -ms-text-size-adjust: 100%;
@@ -370,15 +376,15 @@ a {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     transition: background-color 0.25s, box-shadow 0.25s;
     vertical-align: middle; }
-    /* line 125, source/scss/required/_mixins.scss */
+    /* line 135, source/scss/required/_mixins.scss */
     a[href].button:hover {
       background-color: #cc3380;
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%); }
-    /* line 129, source/scss/required/_mixins.scss */
+    /* line 139, source/scss/required/_mixins.scss */
     a[href].button:active {
       background-color: #cc3380;
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 133, source/scss/required/_mixins.scss */
+    /* line 143, source/scss/required/_mixins.scss */
     a[href].button:focus {
       outline: none; }
   /* line 41, source/scss/optional/_links.scss */
@@ -396,12 +402,12 @@ a {
     text-decoration: none;
     transition: border-color 0.25s, color 0.25s, background-color 0.25s;
     vertical-align: middle; }
-    /* line 152, source/scss/required/_mixins.scss */
+    /* line 162, source/scss/required/_mixins.scss */
     a[href].button-outline:hover, a[href].button-outline:active {
       background-color: rgba(204, 51, 128, 0.1);
       border-color: #cc3380;
       color: #cc3380; }
-    /* line 158, source/scss/required/_mixins.scss */
+    /* line 168, source/scss/required/_mixins.scss */
     a[href].button-outline:focus {
       outline: none; }
 
@@ -749,15 +755,15 @@ strong {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   transition: background-color 0.25s, box-shadow 0.25s;
   vertical-align: middle; }
-  /* line 125, source/scss/required/_mixins.scss */
+  /* line 135, source/scss/required/_mixins.scss */
   .button:hover {
     background-color: #cc3380;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%); }
-  /* line 129, source/scss/required/_mixins.scss */
+  /* line 139, source/scss/required/_mixins.scss */
   .button:active {
     background-color: #cc3380;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-  /* line 133, source/scss/required/_mixins.scss */
+  /* line 143, source/scss/required/_mixins.scss */
   .button:focus {
     outline: none; }
 
@@ -776,12 +782,12 @@ strong {
   text-decoration: none;
   transition: border-color 0.25s, color 0.25s, background-color 0.25s;
   vertical-align: middle; }
-  /* line 152, source/scss/required/_mixins.scss */
+  /* line 162, source/scss/required/_mixins.scss */
   .button-outline:hover, .button-outline:active {
     background-color: rgba(204, 51, 128, 0.1);
     border-color: #cc3380;
     color: #cc3380; }
-  /* line 158, source/scss/required/_mixins.scss */
+  /* line 168, source/scss/required/_mixins.scss */
   .button-outline:focus {
     outline: none; }
 
@@ -1570,21 +1576,21 @@ input[type="submit"] {
   display: inline-block;
   font-family: "IBM Plex Sans", frutiger, "Frutiger Linotype", univers, calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", tahoma, geneva, "Helvetica Neue", helvetica, arial, sans-serif;
   width: auto; }
-  /* line 125, source/scss/required/_mixins.scss */
+  /* line 135, source/scss/required/_mixins.scss */
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
     background-color: #cc3380;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%); }
-  /* line 129, source/scss/required/_mixins.scss */
+  /* line 139, source/scss/required/_mixins.scss */
   button:active,
   input[type="button"]:active,
   input[type="reset"]:active,
   input[type="submit"]:active {
     background-color: #cc3380;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-  /* line 133, source/scss/required/_mixins.scss */
+  /* line 143, source/scss/required/_mixins.scss */
   button:focus,
   input[type="button"]:focus,
   input[type="reset"]:focus,
@@ -1909,7 +1915,7 @@ select.tyfy-select {
 .reverse {
   background-color: #333;
   color: #eee; }
-  /* line 168, source/scss/required/_mixins.scss */
+  /* line 178, source/scss/required/_mixins.scss */
   .reverse h1,
   .reverse h2,
   .reverse h3,
@@ -1917,18 +1923,18 @@ select.tyfy-select {
   .reverse h5,
   .reverse h6 {
     color: #eee; }
-  /* line 178, source/scss/required/_mixins.scss */
+  /* line 188, source/scss/required/_mixins.scss */
   .reverse a {
     color: #eee; }
-    /* line 180, source/scss/required/_mixins.scss */
+    /* line 190, source/scss/required/_mixins.scss */
     .reverse a[href] {
       border-bottom-color: rgba(145, 187, 228, 0.5);
       color: #91bbe4; }
-      /* line 183, source/scss/required/_mixins.scss */
+      /* line 193, source/scss/required/_mixins.scss */
       .reverse a[href]:hover, .reverse a[href]:active {
         border-bottom-color: rgba(220, 114, 167, 0.9);
         color: #dc72a7; }
-  /* line 196, source/scss/required/_mixins.scss */
+  /* line 206, source/scss/required/_mixins.scss */
   .reverse h1 a,
   .reverse h2 a,
   .reverse h3 a,
@@ -1936,7 +1942,7 @@ select.tyfy-select {
   .reverse h5 a,
   .reverse h6 a {
     color: #eee; }
-    /* line 198, source/scss/required/_mixins.scss */
+    /* line 208, source/scss/required/_mixins.scss */
     .reverse h1 a[href],
     .reverse h2 a[href],
     .reverse h3 a[href],
@@ -1945,7 +1951,7 @@ select.tyfy-select {
     .reverse h6 a[href] {
       border-bottom-color: rgba(238, 238, 238, 0.5);
       color: #eee; }
-      /* line 201, source/scss/required/_mixins.scss */
+      /* line 211, source/scss/required/_mixins.scss */
       .reverse h1 a[href]:hover, .reverse h1 a[href]:active,
       .reverse h2 a[href]:hover,
       .reverse h2 a[href]:active,
@@ -1959,14 +1965,14 @@ select.tyfy-select {
       .reverse h6 a[href]:active {
         border-bottom-color: rgba(220, 114, 167, 0.9);
         color: #dc72a7; }
-  /* line 211, source/scss/required/_mixins.scss */
+  /* line 221, source/scss/required/_mixins.scss */
   .reverse code {
     background-color: #3c3c3c;
     color: #e5b0cb; }
-  /* line 215, source/scss/required/_mixins.scss */
+  /* line 225, source/scss/required/_mixins.scss */
   .reverse hr {
     border-top-color: #464646; }
-  /* line 218, source/scss/required/_mixins.scss */
+  /* line 228, source/scss/required/_mixins.scss */
   .reverse .button {
     background-color: #91bbe4;
     border: none;
@@ -1983,18 +1989,18 @@ select.tyfy-select {
     transition: background-color 0.25s, box-shadow 0.25s;
     vertical-align: middle;
     color: #333; }
-    /* line 125, source/scss/required/_mixins.scss */
+    /* line 135, source/scss/required/_mixins.scss */
     .reverse .button:hover {
       background-color: #dc72a7;
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%); }
-    /* line 129, source/scss/required/_mixins.scss */
+    /* line 139, source/scss/required/_mixins.scss */
     .reverse .button:active {
       background-color: #dc72a7;
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 133, source/scss/required/_mixins.scss */
+    /* line 143, source/scss/required/_mixins.scss */
     .reverse .button:focus {
       outline: none; }
-  /* line 222, source/scss/required/_mixins.scss */
+  /* line 232, source/scss/required/_mixins.scss */
   .reverse .button-outline {
     background-color: transparent;
     border: 2px #91bbe4 solid;
@@ -2009,57 +2015,57 @@ select.tyfy-select {
     text-decoration: none;
     transition: border-color 0.25s, color 0.25s, background-color 0.25s;
     vertical-align: middle; }
-    /* line 152, source/scss/required/_mixins.scss */
+    /* line 162, source/scss/required/_mixins.scss */
     .reverse .button-outline:hover, .reverse .button-outline:active {
       background-color: rgba(220, 114, 167, 0.1);
       border-color: #dc72a7;
       color: #dc72a7; }
-    /* line 158, source/scss/required/_mixins.scss */
+    /* line 168, source/scss/required/_mixins.scss */
     .reverse .button-outline:focus {
       outline: none; }
-  /* line 225, source/scss/required/_mixins.scss */
+  /* line 235, source/scss/required/_mixins.scss */
   .reverse .light {
     color: #878787; }
-  /* line 233, source/scss/required/_mixins.scss */
+  /* line 243, source/scss/required/_mixins.scss */
   .reverse ul.list-icons li::before {
     color: #878787; }
-  /* line 242, source/scss/required/_mixins.scss */
+  /* line 252, source/scss/required/_mixins.scss */
   .reverse blockquote.pullquote {
     color: #cccc33; }
-    /* line 244, source/scss/required/_mixins.scss */
+    /* line 254, source/scss/required/_mixins.scss */
     .reverse blockquote.pullquote::before {
       color: #464646; }
-    /* line 247, source/scss/required/_mixins.scss */
+    /* line 257, source/scss/required/_mixins.scss */
     .reverse blockquote.pullquote::after {
       color: #464646; }
-  /* line 256, source/scss/required/_mixins.scss */
+  /* line 266, source/scss/required/_mixins.scss */
   .reverse table.striped tr:nth-child(2n) td {
     background-color: #3c3c3c; }
-  /* line 261, source/scss/required/_mixins.scss */
+  /* line 271, source/scss/required/_mixins.scss */
   .reverse table.horizontal-rules {
     border-top-color: #464646; }
-    /* line 263, source/scss/required/_mixins.scss */
+    /* line 273, source/scss/required/_mixins.scss */
     .reverse table.horizontal-rules td,
     .reverse table.horizontal-rules th {
       border-bottom-color: #464646; }
-    /* line 267, source/scss/required/_mixins.scss */
+    /* line 277, source/scss/required/_mixins.scss */
     .reverse table.horizontal-rules th[scope="col"] {
       border-bottom-color: #464646; }
-  /* line 271, source/scss/required/_mixins.scss */
+  /* line 281, source/scss/required/_mixins.scss */
   .reverse table.vertical-rules {
     border-left-color: #464646; }
-    /* line 273, source/scss/required/_mixins.scss */
+    /* line 283, source/scss/required/_mixins.scss */
     .reverse table.vertical-rules td,
     .reverse table.vertical-rules th {
       border-right-color: #464646; }
-    /* line 277, source/scss/required/_mixins.scss */
+    /* line 287, source/scss/required/_mixins.scss */
     .reverse table.vertical-rules th[scope="row"] {
       border-right-color: #464646; }
   @media (max-width: 39.996em) {
-    /* line 282, source/scss/required/_mixins.scss */
+    /* line 292, source/scss/required/_mixins.scss */
     .reverse table.responsive tbody tr + tr {
       border-top-color: #464646; } }
-  /* line 288, source/scss/required/_mixins.scss */
+  /* line 298, source/scss/required/_mixins.scss */
   .reverse table.responsive td .td-label {
     color: #878787; }
 
@@ -2151,38 +2157,37 @@ header.brand {
   header.brand .headgrid {
     display: grid;
     grid-template-columns: 5.25rem auto;
-    grid-gap: 1.75rem;
     padding: 0 1.75rem; }
-  /* line 76, source/scss/tyfy-docs.scss */
+  /* line 75, source/scss/tyfy-docs.scss */
   header.brand h1 {
     font-size: 1.728rem;
     line-height: 1.75rem;
     padding: 0.875rem 0; }
-  /* line 81, source/scss/tyfy-docs.scss */
+  /* line 80, source/scss/tyfy-docs.scss */
   header.brand nav {
     line-height: 0; }
-    /* line 83, source/scss/tyfy-docs.scss */
+    /* line 82, source/scss/tyfy-docs.scss */
     header.brand nav h2 {
       font-size: 1.2rem;
       line-height: 1.75rem; }
-    /* line 87, source/scss/tyfy-docs.scss */
+    /* line 86, source/scss/tyfy-docs.scss */
     header.brand nav ul {
       font-family: "IBM Plex Sans",sans-serif;
       font-size: 1rem;
       line-height: 1.75rem; }
-    /* line 93, source/scss/tyfy-docs.scss */
+    /* line 92, source/scss/tyfy-docs.scss */
     header.brand nav .navtab-content h3 {
       font-size: 1rem;
       line-height: 1.75rem;
       text-transform: uppercase; }
-    /* line 98, source/scss/tyfy-docs.scss */
+    /* line 97, source/scss/tyfy-docs.scss */
     header.brand nav .navtab-content * + h3 {
       margin-top: 0.875rem; }
     @media (max-width: 679.932px) {
-      /* line 102, source/scss/tyfy-docs.scss */
+      /* line 101, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed {
         text-align: right; } }
-    /* line 106, source/scss/tyfy-docs.scss */
+    /* line 105, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed h2 {
       cursor: pointer;
       display: inline-block;
@@ -2192,7 +2197,7 @@ header.brand {
       transition-duration: 0.25s;
       transition-property: color;
       width: 1.75rem; }
-      /* line 115, source/scss/tyfy-docs.scss */
+      /* line 114, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed h2::before {
         content: "\ea06";
         display: block;
@@ -2200,24 +2205,24 @@ header.brand {
         height: 3.5rem;
         text-align: center;
         width: 1.75rem; }
-      /* line 123, source/scss/tyfy-docs.scss */
+      /* line 122, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed h2:hover {
         color: #dc72a7; }
       @media (min-width: 680px) {
-        /* line 106, source/scss/tyfy-docs.scss */
+        /* line 105, source/scss/tyfy-docs.scss */
         header.brand nav.nav-processed h2 {
           display: none; } }
-    /* line 130, source/scss/tyfy-docs.scss */
+    /* line 129, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed ul {
       padding: 0;
       text-align: left; }
       @media (min-width: 680px) {
-        /* line 130, source/scss/tyfy-docs.scss */
+        /* line 129, source/scss/tyfy-docs.scss */
         header.brand nav.nav-processed ul {
           display: flex;
           flex-wrap: wrap; } }
     @media (max-width: 679.932px) {
-      /* line 138, source/scss/tyfy-docs.scss */
+      /* line 137, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed > ul {
         background-color: #333;
         display: none;
@@ -2226,15 +2231,15 @@ header.brand {
         top: 100%;
         width: 100%; } }
     @media (max-width: 679.932px) {
-      /* line 148, source/scss/tyfy-docs.scss */
+      /* line 147, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed li {
         border-top: 2px rgba(255, 255, 255, 0.05) solid; } }
-    /* line 153, source/scss/tyfy-docs.scss */
-    header.brand nav.nav-processed li.navtab-open > a {
-      position: relative; }
-      @media (min-width: 680px) {
+    @media (min-width: 680px) {
+      /* line 153, source/scss/tyfy-docs.scss */
+      header.brand nav.nav-processed li.navtab-hover > a {
+        position: relative; }
         /* line 155, source/scss/tyfy-docs.scss */
-        header.brand nav.nav-processed li.navtab-open > a::after {
+        header.brand nav.nav-processed li.navtab-hover > a::after {
           background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 12'%3E%3Cpolygon points='12 0 24 12 0 12' fill='#4d4d4d'/%3E%3C/svg%3E");
           bottom: 0;
           content: "";
@@ -2243,10 +2248,11 @@ header.brand {
           left: 50%;
           margin-left: -12px;
           position: absolute;
-          width: 24px; } }
-    /* line 169, source/scss/tyfy-docs.scss */
-    header.brand nav.nav-processed li.navtab-open .navtab {
-      display: block; }
+          width: 24px; }
+      /* line 167, source/scss/tyfy-docs.scss */
+      header.brand nav.nav-processed li.navtab-hover .navtab {
+        animation: fadein 250ms;
+        display: block; } }
     /* line 174, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed a {
       display: block;
@@ -2258,47 +2264,49 @@ header.brand {
     /* line 181, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed .navtab {
       background-color: #4d4d4d;
-      display: none; }
+      display: none;
+      transition: opacity 0.5s; }
       @media (min-width: 680px) {
         /* line 181, source/scss/tyfy-docs.scss */
         header.brand nav.nav-processed .navtab {
+          box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
           left: 0;
           position: absolute;
           top: 100%;
           width: 100%; } }
-    /* line 191, source/scss/tyfy-docs.scss */
+    /* line 193, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed .navtab-content {
       padding: 0.65625rem 0; }
-      /* line 194, source/scss/tyfy-docs.scss */
+      /* line 196, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed .navtab-content a {
         padding: 0.21875rem 1.75rem; }
-      /* line 197, source/scss/tyfy-docs.scss */
+      /* line 199, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed .navtab-content h3 {
         display: inline-block; }
       @media (min-width: 680px) {
-        /* line 191, source/scss/tyfy-docs.scss */
+        /* line 193, source/scss/tyfy-docs.scss */
         header.brand nav.nav-processed .navtab-content {
-          padding: 0.65625rem 1.75rem 0.65625rem 8.75rem; }
-          /* line 202, source/scss/tyfy-docs.scss */
+          padding: 0.65625rem 1.75rem 0.65625rem 7rem; }
+          /* line 204, source/scss/tyfy-docs.scss */
           header.brand nav.nav-processed .navtab-content a {
             padding: 0.21875rem 0.875rem; } }
-    /* line 208, source/scss/tyfy-docs.scss */
+    /* line 210, source/scss/tyfy-docs.scss */
     header.brand nav.nav-processed.nav-open h2::before {
       content: "\ea10"; }
     @media (max-width: 679.932px) {
-      /* line 212, source/scss/tyfy-docs.scss */
+      /* line 214, source/scss/tyfy-docs.scss */
       header.brand nav.nav-processed.nav-open ul {
         display: block; } }
-  /* line 219, source/scss/tyfy-docs.scss */
+  /* line 221, source/scss/tyfy-docs.scss */
   header.brand + * {
     margin-top: 0; }
 
-/* line 223, source/scss/tyfy-docs.scss */
+/* line 225, source/scss/tyfy-docs.scss */
 section.main {
   margin-top: 0;
   padding: 1.75rem; }
 
-/* line 228, source/scss/tyfy-docs.scss */
+/* line 230, source/scss/tyfy-docs.scss */
 .codebox-label {
   color: rgba(0, 0, 0, 0.4);
   font-family: "IBM Plex Mono", consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", monaco, "Courier New", courier, monospace;
@@ -2310,11 +2318,11 @@ section.main {
   text-align: right;
   z-index: 5; }
 
-/* line 239, source/scss/tyfy-docs.scss */
+/* line 241, source/scss/tyfy-docs.scss */
 .codebox-label + pre.codebox {
   margin-top: 0; }
 
-/* line 242, source/scss/tyfy-docs.scss */
+/* line 244, source/scss/tyfy-docs.scss */
 pre.codebox {
   background-color: #ededed;
   border: 2px #e1e1e1 solid;
@@ -2323,27 +2331,27 @@ pre.codebox {
   padding: calc(0.875rem - 2px);
   position: relative; }
   @media (min-width: 45em) {
-    /* line 242, source/scss/tyfy-docs.scss */
+    /* line 244, source/scss/tyfy-docs.scss */
     pre.codebox {
       box-shadow: 0 0 0.875rem rgba(0, 0, 0, 0.05) inset;
       padding: calc(1.75rem - 2px); } }
-  /* line 253, source/scss/tyfy-docs.scss */
+  /* line 255, source/scss/tyfy-docs.scss */
   pre.codebox.small {
     max-height: 14rem; }
-  /* line 256, source/scss/tyfy-docs.scss */
+  /* line 258, source/scss/tyfy-docs.scss */
   pre.codebox.mini {
     max-height: 7rem; }
     @media (min-width: 45em) {
-      /* line 256, source/scss/tyfy-docs.scss */
+      /* line 258, source/scss/tyfy-docs.scss */
       pre.codebox.mini {
         box-shadow: 0 0 0.375rem rgba(0, 0, 0, 0.05) inset;
         padding: calc(0.875rem - 2px); } }
-  /* line 263, source/scss/tyfy-docs.scss */
+  /* line 265, source/scss/tyfy-docs.scss */
   pre.codebox code {
     background-color: transparent;
     padding: 0; }
 
-/* line 268, source/scss/tyfy-docs.scss */
+/* line 270, source/scss/tyfy-docs.scss */
 figure.example {
   background-color: white;
   border: 2px #e1e1e1 solid;
@@ -2351,55 +2359,55 @@ figure.example {
   margin-right: 0;
   padding: calc(1.75rem - 2px); }
 
-/* line 275, source/scss/tyfy-docs.scss */
+/* line 277, source/scss/tyfy-docs.scss */
 pre.codebox + figure.example {
   border-top: none;
   margin-top: 0; }
 
-/* line 280, source/scss/tyfy-docs.scss */
+/* line 282, source/scss/tyfy-docs.scss */
 dl dt code {
   background-color: transparent;
   display: block;
   font-weight: normal;
   padding: 0; }
-  /* line 285, source/scss/tyfy-docs.scss */
+  /* line 287, source/scss/tyfy-docs.scss */
   dl dt code em {
     font-style: normal;
     font-weight: bold; }
 
-/* line 290, source/scss/tyfy-docs.scss */
+/* line 292, source/scss/tyfy-docs.scss */
 dl dt code + code {
   margin-top: 0; }
 
-/* line 294, source/scss/tyfy-docs.scss */
+/* line 296, source/scss/tyfy-docs.scss */
 nav.nav-inpage {
   box-sizing: border-box;
   display: none;
   margin-left: 50rem;
   position: fixed;
   width: 8rem; }
-  /* line 300, source/scss/tyfy-docs.scss */
+  /* line 302, source/scss/tyfy-docs.scss */
   nav.nav-inpage h2 {
     border-bottom: solid 2px #e1e1e1;
     margin-bottom: 0.875rem;
     padding-bottom: 0.875rem; }
-  /* line 305, source/scss/tyfy-docs.scss */
+  /* line 307, source/scss/tyfy-docs.scss */
   nav.nav-inpage ul {
     font-size: 0.83333rem; }
-  /* line 308, source/scss/tyfy-docs.scss */
+  /* line 310, source/scss/tyfy-docs.scss */
   nav.nav-inpage a[href] {
     border-bottom-style: none;
     border-bottom-width: 0px;
     font-family: "IBM Plex Sans", frutiger, "Frutiger Linotype", univers, calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", tahoma, geneva, "Helvetica Neue", helvetica, arial, sans-serif; }
   @media (min-width: 72em) {
-    /* line 294, source/scss/tyfy-docs.scss */
+    /* line 296, source/scss/tyfy-docs.scss */
     nav.nav-inpage {
       display: block; } }
-  /* line 316, source/scss/tyfy-docs.scss */
+  /* line 318, source/scss/tyfy-docs.scss */
   nav.nav-inpage + * {
     margin-top: 0; }
 
-/* line 320, source/scss/tyfy-docs.scss */
+/* line 322, source/scss/tyfy-docs.scss */
 #lists-demo {
   border: 2px dashed #ededed;
   border-radius: 0.4375rem;
@@ -2424,46 +2432,46 @@ nav.nav-inpage {
   #lists-demo :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
   #lists-demo :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
     margin-top: 0rem; }
-  /* line 328, source/scss/tyfy-docs.scss */
+  /* line 330, source/scss/tyfy-docs.scss */
   #lists-demo .form-control {
     display: block;
     padding-top: 0.875rem;
     padding-bottom: 0.875rem; }
-    /* line 332, source/scss/tyfy-docs.scss */
+    /* line 334, source/scss/tyfy-docs.scss */
     #lists-demo .form-control label {
       width: 11rem; }
-      /* line 334, source/scss/tyfy-docs.scss */
+      /* line 336, source/scss/tyfy-docs.scss */
       #lists-demo .form-control label.disabled {
         color: #949494; }
     @media (min-width: 55em) {
-      /* line 338, source/scss/tyfy-docs.scss */
+      /* line 340, source/scss/tyfy-docs.scss */
       #lists-demo .form-control.form-control-type {
         border-right: 2px dashed #e6e6e6; } }
-    /* line 343, source/scss/tyfy-docs.scss */
+    /* line 345, source/scss/tyfy-docs.scss */
     #lists-demo .form-control.form-control-classes {
       display: flex;
       flex-wrap: wrap; }
       @media (min-width: 55em) {
-        /* line 343, source/scss/tyfy-docs.scss */
+        /* line 345, source/scss/tyfy-docs.scss */
         #lists-demo .form-control.form-control-classes {
           box-sizing: border-box;
           padding-left: 1.75rem;
           width: 75%; } }
-      /* line 352, source/scss/tyfy-docs.scss */
+      /* line 354, source/scss/tyfy-docs.scss */
       #lists-demo .form-control.form-control-classes label:first-child {
         width: 100%; }
-  /* line 358, source/scss/tyfy-docs.scss */
+  /* line 360, source/scss/tyfy-docs.scss */
   #lists-demo label {
     display: block;
     font-weight: bold; }
-    /* line 361, source/scss/tyfy-docs.scss */
+    /* line 363, source/scss/tyfy-docs.scss */
     #lists-demo label.option {
       font-weight: normal; }
 
-/* line 366, source/scss/tyfy-docs.scss */
+/* line 368, source/scss/tyfy-docs.scss */
 footer {
   padding: 2.625rem 0; }
-  /* line 369, source/scss/tyfy-docs.scss */
+  /* line 371, source/scss/tyfy-docs.scss */
   footer p {
     color: #949494;
     font-size: 0.83333rem;
