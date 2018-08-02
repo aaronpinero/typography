@@ -5,7 +5,7 @@ var nav_btn = nav[0].getElementsByTagName('h2');
 var nav_tabs = nav[0].getElementsByClassName('navtab');
 var nav_initial_class = (nav[0].getAttribute('class') == null) ? '' : nav[0].getAttribute('class');
 
-// what kind of animation event?
+// what kind of animation end event trigger?
 var animationEvent = whichAnimationEvent();
 
 // initial processing of menu
@@ -44,10 +44,12 @@ function NavtabHoverOn(event) {
 	var navoption;
 	var navoption_class;
 	if (target_class.indexOf('has-navtab') != -1) {
+		// the target was the list item
 		navoption = target;
 		navoption_class = target_class;
 	}
 	else {
+		// one of the ancestors is the list item
 		var parent = target.parentNode;
 		var parent_class = (parent.getAttribute('class') == null) ? '' : parent.getAttribute('class');
 		while (parent_class.indexOf('has-navtab') == -1) {
@@ -58,6 +60,7 @@ function NavtabHoverOn(event) {
 		navoption_class = parent_class;
 	}
 	if (navoption_class.indexOf('navtab-hover-on') == -1) {
+		// adjust the state classes and add an event listener for when we later mouse away from the option
 		RemoveClass(navoption,'navtab-hover-off');
 		AddClass(navoption,'navtab-hover-on');
 		document.addEventListener('mouseover',NavtabHoverOff,true);
@@ -66,6 +69,7 @@ function NavtabHoverOn(event) {
 
 // close nav tab
 function NavtabHoverOff(event) {
+	// we are checking to see when we mouse away from the hovered item
 	var target = event.target;
 	var hovered = document.getElementsByClassName('navtab-hover-on');
 	var y;
@@ -81,6 +85,7 @@ function NavtabHoverOff(event) {
 			},{once:true});
 		}
 	}
+	// if there are no remaining hovered items, remove the event listener
 	var now_hovered = document.getElementsByClassName('navtab-hover-on');
 	if (now_hovered.length === 0) {
 		document.removeEventListener('mouseover',NavtabHoverOff,true);
@@ -103,7 +108,7 @@ function RemoveClass(el,oldclass) {
 	el.setAttribute('class',new_class_atr);
 }
 
-/* From Modernizr */
+// fron modernizr, figure out the name of the current browser's css animation end event trigger
 function whichAnimationEvent(){
 	var a;
 	var el = document.createElement('fakeelement');

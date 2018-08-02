@@ -381,7 +381,7 @@ nav.nav-inpage {
 }
 footer {
   @extend .constrained;
-  padding:tygrid(3) 0;
+  padding:$tyfy-spacing-large $tyfy-spacing-standard;
   p {
     color:$tyfy-color-text-light;
     font-size:$tyfy-font-size-sm;
