@@ -1,28 +1,76 @@
-$tyfy-serif:"IBM Plex Serif", "Lucida Bright", lucidabright, "Lucida Serif", lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", georgia, serif;
-$tyfy-sans:"IBM Plex Sans", frutiger, "Frutiger Linotype", univers, calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", tahoma, geneva, "Helvetica Neue", helvetica, arial, sans-serif;
-$tyfy-mono:"IBM Plex Mono", consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", monaco, "Courier New", courier, monospace;
+// tyfy overrides
+$tyfy-serif:"IBM Plex Serif", georgia, serif;
+$tyfy-sans:"IBM Plex Sans", helvetica, arial, sans-serif;
+$tyfy-mono:"IBM Plex Mono", monaco, courier, monospace;
 $tyfy-spacings: (
   "standard":2,
   "large":4,
 );
+$tyfy-color-text-light:#999;
 $tyfyicons-path:"../../../dist/fonts/tyfyicons"; // do not add a trailing /
+
+// tyfy
 @import "tyfy.scss";
 @import "extras/icons";
 @import "extras/responsive_text";
 @import "extras/reverse";
 @import "extras/grid";
 
+// vars
+$shade:#f2f2f2;
+$purple:#78498B;
+$condensed:"IBM Plex Sans Condensed",sans-serif;
+
+// elements styles
 body {
   @include fade-in(2000ms);
   margin:0 0 tygrid(2) 0;
   padding:0;
 }
+code {
+  background-color:$shade;
+  color:$purple;
+}
+h1 {
+  small {
+    font-size:tyscale(0);
+    text-transform:none;
+  }
+  &.pagetitle {
+    background-color:$tyfy-color-link-active;
+    box-shadow:0 0 tygrid(2) rgba(black,0.15) inset;
+    color:white;
+    font-family:$condensed;
+    padding:tygrid(4) tygrid(2);
+    text-align:center;
+    text-shadow:0 1px tygrid(0.5) rgba(black,0.25);
+    text-transform:uppercase;
+    @media (min-width:800px) {
+      padding-left:tygrid(4);
+      padding-right:tygrid(4);
+    }
+    @media (min-height:840px) {
+      padding-bottom:tygrid(6);
+      padding-top:tygrid(6);
+    }
+  }
+}
+
+// classes
 .constrained {
   box-sizing:border-box;
   margin-left:auto;
   margin-right:auto;
-  max-width:50rem;
+  max-width:tygrid(16);
 }
+.constrained {
+  box-sizing:border-box;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:tygrid(16);
+}
+
+
 h1 {
   font-family:"IBM Plex Sans Condensed",sans-serif;
   text-transform:uppercase;
@@ -57,8 +105,6 @@ hr.demo {
 strong.tyfy {
   color:$tyfy-color-link-active;
   font-family:"IBM Plex Sans Condensed",sans-serif;
-  letter-spacing:0.075em;
-  margin-right:-0.0375em;
   text-transform:uppercase;
 }
 
@@ -91,6 +137,7 @@ header.brand {
     }
     .navtab-content {
       h3 {
+        font-family:"IBM Plex Sans Condensed",sans-serif;
         font-size:tyscale(0);
         line-height:tylead(tyscale(0));
         text-transform:uppercase;

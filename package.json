@@ -11,7 +11,8 @@
     "build-css-dev": "./bin/build-css-dev",
     "watch-css": "./bin/watch-css",
     "watch-css-dev": "./bin/watch-css-dev",
-    "build-icons": "./bin/build-icons"
+    "build-icons": "./bin/build-icons",
+    "fractal-start": "fractal start --sync"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "homepage": "https://github.com/aaronpinero/typography#readme",
   "dependencies": {},
   "devDependencies": {
+    "@frctl/fractal": "^1.1.7",
     "autoprefixer": "^7.2.6",
     "node-sass": "^4.9.0",
     "nodemon": "^1.17.3",

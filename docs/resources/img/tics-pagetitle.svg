@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="97px" height="18px" viewBox="0 0 97 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>tics</title>
+  <g id="tics" stroke="none" stroke-width="1" fill="#FFFFFF" opacity="0.2">
+    <rect x="0" y="0" width="2" height="10"></rect>
+    <rect x="5" y="0" width="2" height="10"></rect>
+    <rect x="10" y="0" width="2" height="18"></rect>
+    <rect x="25" y="0" width="2" height="18"></rect>
+    <rect x="15" y="0" width="2" height="10"></rect>
+    <rect x="20" y="0" width="2" height="10"></rect>
+    <rect x="30" y="0" width="2" height="10"></rect>
+    <rect x="35" y="0" width="2" height="10"></rect>
+    <rect x="40" y="0" width="2" height="18"></rect>
+    <rect x="45" y="0" width="2" height="10"></rect>
+    <rect x="50" y="0" width="2" height="10"></rect>
+    <rect x="55" y="0" width="2" height="18"></rect>
+    <rect x="70" y="0" width="2" height="18"></rect>
+    <rect x="60" y="0" width="2" height="10"></rect>
+    <rect x="65" y="0" width="2" height="10"></rect>
+    <rect x="75" y="0" width="2" height="10"></rect>
+    <rect x="80" y="0" width="2" height="10"></rect>
+    <rect x="85" y="0" width="2" height="18"></rect>
+    <rect x="90" y="0" width="2" height="10"></rect>
+    <rect x="95" y="0" width="2" height="10"></rect>
+  </g>
+</svg>
