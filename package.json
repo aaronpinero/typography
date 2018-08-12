@@ -9,10 +9,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "./bin/build-css",
     "build-css-dev": "./bin/build-css-dev",
-    "watch-css": "./bin/watch-css",
-    "watch-css-dev": "./bin/watch-css-dev",
+    "build-docs-css-dev": "./bin/build-docs-css-dev",
+    "build-docs-js": "./bin/build-docs-js",
     "build-icons": "./bin/build-icons",
-    "fractal-start": "fractal start --sync"
+    "fractal-start": "fractal start --sync",
+    "watch-css": "./bin/watch-css",
+    "watch-css-dev": "./bin/watch-css-dev"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,7 @@
   "devDependencies": {
     "@frctl/fractal": "^1.1.7",
     "autoprefixer": "^7.2.6",
+    "glob": "^7.1.2",
     "node-sass": "^4.9.0",
     "nodemon": "^1.17.3",
     "postcss-cli": "^4.1.1",

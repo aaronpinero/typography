@@ -1,3 +1,4 @@
+// list demo
 (function($) {
   $('#lists-demo input[type="radio"][name="list-type"]').change(function(){
     demo = $('.lists-demo-list');
@@ -10,7 +11,7 @@
       demo.replaceWith('<ol class="'+classes+'">' + demo.html() + '</ol>');
     }
   });
-  
+
   $("#list-class-icons").change(function(){
     if ($(this).is(':checked')) {
       $("#list-class-nobullet").removeAttr('checked').attr('disabled','disabled').parent().addClass('disabled');
@@ -40,7 +41,7 @@
     }
     SetClasses();
   });
-  
+
   $("#list-class-nobullet").change(function(){
     if ($(this).is(':checked')) {
       $("#list-class-icons").removeAttr('checked').attr('disabled','disabled').parent().addClass('disabled');
@@ -118,7 +119,7 @@
   $("#list-class-indented, #list-class-marginsoff").change(function(){
     SetClasses();
   });
-  
+
   function SetClasses() {
     demo = $('.lists-demo-list');
     classes = "lists-demo-list";

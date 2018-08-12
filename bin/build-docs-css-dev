@@ -1,0 +1,4 @@
+stylelint --syntax scss "docs/resources/scss/tyfy-docs.scss"
+stylelint --syntax scss "docs/patterns/components/**/*.scss"
+node docs-css.js
+postcss docs/resources/style/tyfy-docs.css --replace --config config/postcss.config.js

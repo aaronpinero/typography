@@ -1,0 +1,1 @@
+uglifyjs ./docs/patterns/components/*/*.js -c -o ./docs/resources/script/tyfy-docs.js

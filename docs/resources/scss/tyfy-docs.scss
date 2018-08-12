@@ -10,15 +10,15 @@ $tyfy-color-text-light:#999;
 $tyfyicons-path:"../../../dist/fonts/tyfyicons"; // do not add a trailing /
 
 // tyfy
-@import "tyfy.scss";
-@import "extras/icons";
-@import "extras/responsive_text";
-@import "extras/reverse";
-@import "extras/grid";
+@import "../../../source/scss/tyfy.scss";
+@import "../../../source/scss/extras/icons";
+@import "../../../source/scss/extras/responsive_text";
+@import "../../../source/scss/extras/reverse";
+@import "../../../source/scss/extras/grid";
 
 // vars
 $shade:#f2f2f2;
-$purple:#78498B;
+$purple:#78498b;
 $condensed:"IBM Plex Sans Condensed",sans-serif;
 
 // elements styles
@@ -63,14 +63,6 @@ h1 {
   margin-right:auto;
   max-width:tygrid(16);
 }
-.constrained {
-  box-sizing:border-box;
-  margin-left:auto;
-  margin-right:auto;
-  max-width:tygrid(16);
-}
-
-
 h1 {
   font-family:"IBM Plex Sans Condensed",sans-serif;
   text-transform:uppercase;
