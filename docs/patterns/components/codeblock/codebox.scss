@@ -1,0 +1,39 @@
+div.codebox-label {
+  color:rgba(black,0.4);
+  font-family:$tyfy-mono;
+  font-size:tyscale(-2);
+  height:0;
+  line-height:3;
+  padding-right:tygrid(1);
+  position:relative;
+  text-align:right;
+  z-index:5;
+}
+pre.codebox {
+  background-color:$tyfy-color-shade;
+  border:$tyfy-width-border $tyfy-color-border solid;
+  box-shadow:0 0 tygrid(0.5) rgba(black,0.05) inset;
+  overflow:auto;
+  padding:calc(#{tygrid(1)} - #{$tyfy-width-border});
+  position:relative;
+  z-index:4;
+  &.small {
+    max-height:tygrid(16);
+  }
+  &.mini {
+    max-height:tygrid(8);
+  }
+  &:not(.mini) {
+    @media (min-width:45em) {
+      box-shadow:0 0 tygrid(1) rgba(0,0,0,0.05) inset;
+      padding:calc(#{tygrid(2)} - #{$tyfy-width-border});
+    }
+  }
+  code {
+    background-color:transparent;
+    padding:0;
+  }
+  .codebox-label + & {
+    margin-top:0;
+  }
+}
