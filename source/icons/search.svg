@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
-    <title>search</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="search" fill="#000000">
-            <path d="M27,50 C14.2974508,50 4,39.7025492 4,27 C4,14.2974508 14.2974508,4 27,4 C39.7025492,4 50,14.2974508 50,27 C50,39.7025492 39.7025492,50 27,50 Z M27,42 C35.2842712,42 42,35.2842712 42,27 C42,18.7157288 35.2842712,12 27,12 C18.7157288,12 12,18.7157288 12,27 C12,35.2842712 18.7157288,42 27,42 Z" id="Combined-Shape"></path>
-            <polygon id="Rectangle" points="38 44 44 38 62 56 56 62"></polygon>
-        </g>
-    </g>
+  <g fill="#000000">
+    <path d="M27,50 C14.2974508,50 4,39.7025492 4,27 C4,14.2974508 14.2974508,4 27,4 C39.7025492,4 50,14.2974508 50,27 C50,39.7025492 39.7025492,50 27,50 Z M27,42 C35.2842712,42 42,35.2842712 42,27 C42,18.7157288 35.2842712,12 27,12 C18.7157288,12 12,18.7157288 12,27 C12,35.2842712 18.7157288,42 27,42 Z"></path>
+    <polygon points="38 44 44 38 62 56 56 62"></polygon>
+  </g>
 </svg>

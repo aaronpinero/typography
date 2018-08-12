@@ -2,11 +2,11 @@
 
 @if $tyfy-symbol == tyfyicons {
   @font-face {
-    font-family:tyfyicons;
-    src:url("#{$tyfyicons-path}/tyfyicons.eot");
-    src:url("#{$tyfyicons-path}/tyfyicons.eot?#iefix") format("embedded-opentype"), url("#{$tyfyicons-path}/tyfyicons.woff2") format("woff2"), url("#{$tyfyicons-path}/tyfyicons.woff") format("woff"), url("#{$tyfyicons-path}/tyfyicons.ttf") format("truetype"), url("#{$tyfyicons-path}/tyfyicons.svg#tyfyicons") format("svg");
-    font-style:normal;
-    font-weight:400;
+    font-family: tyfyicons;
+    src: url("../fonts/tyfyicons/tyfyicons.eot");
+    src: url("../fonts/tyfyicons/tyfyicons.eot?#iefix") format("embedded-opentype"), url("../fonts/tyfyicons/tyfyicons.woff2") format("woff2"), url("../fonts/tyfyicons/tyfyicons.woff") format("woff"), url("../fonts/tyfyicons/tyfyicons.ttf") format("truetype"), url("../fonts/tyfyicons/tyfyicons.svg#tyfyicons") format("svg");
+    font-style: normal;
+    font-weight: 400;
   }
 }
 
@@ -49,69 +49,53 @@
 }
 
 .tyfyicons-angle-down::before {
-  content:"\ea01";
+  content: "\ea01";
+}
+
+.tyfyicons-angle-left-small::before {
+  content: "\ea02";
 }
 
 .tyfyicons-angle-left::before {
-  content:"\ea02";
+  content: "\ea03";
 }
 
 .tyfyicons-angle-right-small::before {
-  content:"\ea03";
+  content: "\ea04";
 }
 
 .tyfyicons-angle-right::before {
-  content:"\ea04";
+  content: "\ea05";
 }
 
 .tyfyicons-angle-up::before {
-  content:"\ea05";
+  content: "\ea06";
 }
 
 .tyfyicons-bars::before {
-  content:"\ea06";
+  content: "\ea07";
 }
 
 .tyfyicons-dash::before {
-  content:"\ea07";
-}
-
-.tyfyicons-facebook::before {
-  content:"\ea08";
-}
-
-.tyfyicons-instagram::before {
-  content:"\ea09";
-}
-
-.tyfyicons-linkedin::before {
-  content:"\ea0a";
+  content: "\ea08";
 }
 
 .tyfyicons-quote-left::before {
-  content:"\ea0b";
+  content: "\ea09";
 }
 
 .tyfyicons-quote-right::before {
-  content:"\ea0c";
+  content: "\ea0a";
+}
+
+.tyfyicons-quote-roof::before {
+  content: "\ea0b";
 }
 
 .tyfyicons-search::before {
-  content:"\ea0d";
-}
-
-.tyfyicons-soundcloud::before {
-  content:"\ea0e";
-}
-
-.tyfyicons-twitter::before {
-  content:"\ea0f";
+  content: "\ea0c";
 }
 
 .tyfyicons-x::before {
-  content:"\ea10";
-}
-
-.tyfyicons-youtube::before {
-  content:"\ea11";
+  content: "\ea0d";
 }
