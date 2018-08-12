@@ -3,8 +3,8 @@
 @if $tyfy-symbol == tyfyicons {
   @font-face {
     font-family: tyfyicons;
-    src: url("../fonts/tyfyicons/tyfyicons.eot");
-    src: url("../fonts/tyfyicons/tyfyicons.eot?#iefix") format("embedded-opentype"), url("../fonts/tyfyicons/tyfyicons.woff2") format("woff2"), url("../fonts/tyfyicons/tyfyicons.woff") format("woff"), url("../fonts/tyfyicons/tyfyicons.ttf") format("truetype"), url("../fonts/tyfyicons/tyfyicons.svg#tyfyicons") format("svg");
+    src: url("#{$tyfyicons-path}/tyfyicons.eot");
+    src: url("#{$tyfyicons-path}/tyfyicons.eot?#iefix") format("embedded-opentype"), url("#{$tyfyicons-path}/tyfyicons.woff2") format("woff2"), url("#{$tyfyicons-path}/tyfyicons.woff") format("woff"), url("#{$tyfyicons-path}/tyfyicons.ttf") format("truetype"), url("#{$tyfyicons-path}/tyfyicons.svg#tyfyicons") format("svg");
     font-style: normal;
     font-weight: 400;
   }
