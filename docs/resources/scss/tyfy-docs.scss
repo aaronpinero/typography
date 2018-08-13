@@ -36,24 +36,6 @@ h1 {
     font-size:tyscale(0);
     text-transform:none;
   }
-  &.pagetitle {
-    background-color:$tyfy-color-link-active;
-    box-shadow:0 0 tygrid(2) rgba(black,0.15) inset;
-    color:white;
-    font-family:$condensed;
-    padding:tygrid(4) tygrid(2);
-    text-align:center;
-    text-shadow:0 1px tygrid(0.5) rgba(black,0.25);
-    text-transform:uppercase;
-    @media (min-width:800px) {
-      padding-left:tygrid(4);
-      padding-right:tygrid(4);
-    }
-    @media (min-height:840px) {
-      padding-bottom:tygrid(6);
-      padding-top:tygrid(6);
-    }
-  }
 }
 
 // classes
@@ -61,30 +43,12 @@ h1 {
   box-sizing:border-box;
   margin-left:auto;
   margin-right:auto;
-  max-width:tygrid(16);
+  max-width:tygrid(80);
 }
 h1 {
-  font-family:"IBM Plex Sans Condensed",sans-serif;
-  text-transform:uppercase;
   small {
     font-size:tyscale(0);
     text-transform:none;
-  }
-  &.demo {
-    font-family:"IBM Plex Sans",sans-serif;
-    letter-spacing:0;
-    text-transform:none;
-  }
-  &.pagetitle {
-    background-color:$tyfy-color-link-active;
-    box-shadow:0 0 tygrid(2) rgba(black,0.1) inset;
-    color:white;
-    padding:tygrid(2);
-    text-align:center;
-    text-shadow:0 0 tygrid(0.5) rgba(black,0.15);
-    @media (min-width:20em) {
-      padding:tygrid(4) tygrid(2);
-    }
   }
 }
 h2 small {

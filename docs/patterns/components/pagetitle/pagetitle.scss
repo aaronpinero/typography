@@ -1,0 +1,20 @@
+h1 {
+  &.pagetitle {
+    background-color:$tyfy-color-link-active;
+    box-shadow:0 0 tygrid(2) rgba(black,0.15) inset;
+    color:white;
+    font-family:$condensed;
+    padding:tygrid(4) tygrid(2);
+    text-align:center;
+    text-shadow:0 1px tygrid(0.5) rgba(black,0.25);
+    text-transform:uppercase;
+    @media (min-width:800px) {
+      padding-left:tygrid(4);
+      padding-right:tygrid(4);
+    }
+    @media (min-height:840px) {
+      padding-bottom:tygrid(6);
+      padding-top:tygrid(6);
+    }
+  }
+}
