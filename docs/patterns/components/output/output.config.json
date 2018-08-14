@@ -1,0 +1,10 @@
+{
+  "title": "Code Sample with Output",
+  "notes": "Code sample with output",
+  "context": {
+    "output": "<p class=\"lede\">Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.</p><p>I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. May the Force be with you.</p>",
+    "modifier": "default",
+    "lang": "HTML",
+    "code": "<p class=\"lede\">Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.</p>\n<p>I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. May the Force be with you.</p>"
+  }
+}

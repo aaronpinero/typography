@@ -1,0 +1,14 @@
+figure.codebox-output {
+  background-color:white;
+  border:$tyfy-width-border $tyfy-color-border solid;
+  margin-left:0;
+  margin-right:0;
+  padding:calc(#{tygrid(1)} - #{$tyfy-width-border});
+  @media (min-width:480px) {
+    padding:calc(#{tygrid(2)} - #{$tyfy-width-border});
+  }
+  pre.codebox + & {
+    border-top:none;
+    margin-top:0;
+  }
+}

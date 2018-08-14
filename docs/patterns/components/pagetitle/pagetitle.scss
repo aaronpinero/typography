@@ -1,6 +1,9 @@
 h1 {
   &.pagetitle {
     background-color:$tyfy-color-link-active;
+    background-image:url("../img/tics-pagetitle.svg");
+    background-position:bottom calc(#{tygrid(4)} - 18px) center;
+    background-repeat:no-repeat;
     box-shadow:0 0 tygrid(2) rgba(black,0.15) inset;
     color:white;
     font-family:$condensed;
@@ -8,11 +11,15 @@ h1 {
     text-align:center;
     text-shadow:0 1px tygrid(0.5) rgba(black,0.25);
     text-transform:uppercase;
+    @media (max-width:479px) {
+      font-size:$tyfy-font-size-h1/$tyfy-font-size-scalar;
+    }
     @media (min-width:800px) {
       padding-left:tygrid(4);
       padding-right:tygrid(4);
     }
     @media (min-height:840px) {
+      background-position:bottom calc(#{tygrid(6)} - 18px) center;
       padding-bottom:tygrid(6);
       padding-top:tygrid(6);
     }
