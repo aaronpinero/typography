@@ -22,7 +22,7 @@
 	<body class="">
 		<!-- COMMON HEADER -->
 		<header class="brand sibling-margins-off reverse">
-			<div class="headgrid">
+			<div class="headgrid constrained">
 				<h1><a href="index.html">Tyfy</a></h1>
 				<nav>
 					<h2>Contents</h2>
@@ -173,8 +173,10 @@
 			</dl>
 		</section>
 		<!-- COMMON FOOTER -->
-		<footer>
-			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		<footer class="constrained links-underlined">
+			<div>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></div>
+			<div><a href="">Fork on Github</a></div>
+			<div><a href=""><code>npm install tyfy</code></a></div>
 		</footer>
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -185,16 +187,7 @@
         }
       });
     </script>
-		<script>
-			var codeboxes = document.getElementsByClassName('codebox');
-			var x;
-			for(x=0;x<codeboxes.length;x++) {
-				lang = codeboxes[x].getAttribute('data-lang');
-				if (lang != null && lang != '') {
-					codeboxes[x].insertAdjacentHTML('beforebegin','<div class="codebox-label">'+lang+'</div>');
-				}
-			}
-		</script>
+		<script src="resources/script/tyfy-docs.js"></script>
     <script src="resources/script/docs-nav.js"></script>
 		<!--/ COMMON FOOTER -->
 	</body>

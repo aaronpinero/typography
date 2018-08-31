@@ -43,7 +43,7 @@ h1 {
   box-sizing:border-box;
   margin-left:auto;
   margin-right:auto;
-  max-width:tygrid(80);
+  max-width:tygrid(70);
 }
 h1 {
   small {
@@ -240,7 +240,6 @@ header.brand {
   }
 }
 section.main {
-  @extend .constrained;
   margin-top:0;
   padding:$tyfy-spacing-standard;
 }
@@ -332,11 +331,38 @@ nav.nav-inpage {
   }
 }
 footer {
-  @extend .constrained;
   padding:$tyfy-spacing-large $tyfy-spacing-standard;
-  p {
+  div {
     color:$tyfy-color-text-light;
     font-size:$tyfy-font-size-sm;
     line-height:tylead($tyfy-font-size-sm,base);
+    @media (min-width:40em) {
+      display:inline-block;
+    }
+  }
+  div + div {
+    margin-top:tygrid(1);
+    @media (min-width:40em) {
+      margin-top:0;
+      margin-left:$tyfy-spacing-standard;
+    }
+  }
+  code {
+    background-color:transparent;
+    color:$tyfy-color-text-light;
+    font-size:$tyfy-font-size-sm;
+    line-height:tylead($tyfy-font-size-sm,base);
+  }
+  a[href] {
+    border-bottom-color:rgba($tyfy-color-text-light,0.2);
+    color:$tyfy-color-text-light;
+    &:hover,
+    &:active {
+      border-bottom-color:rgba($tyfy-color-link-active,0.9);
+      color:$tyfy-color-link-active;
+      code {
+        color:$tyfy-color-link-active;
+      }
+    }
   }
 }
