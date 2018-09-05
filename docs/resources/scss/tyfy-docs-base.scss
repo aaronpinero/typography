@@ -1,0 +1,22 @@
+// tyfy overrides
+$tyfy-serif:"IBM Plex Serif", georgia, serif;
+$tyfy-sans:"IBM Plex Sans", helvetica, arial, sans-serif;
+$tyfy-mono:"IBM Plex Mono", monaco, courier, monospace;
+$tyfy-spacings: (
+  "standard":2,
+  "large":4,
+);
+$tyfy-color-text-light:#999;
+$tyfyicons-path:"../../../dist/fonts/tyfyicons"; // do not add a trailing /
+
+// tyfy
+@import "../../../source/scss/tyfy.scss";
+@import "../../../source/scss/extras/icons";
+@import "../../../source/scss/extras/responsive_text";
+@import "../../../source/scss/extras/reverse";
+@import "../../../source/scss/extras/grid";
+
+// vars
+$shade:#f2f2f2;
+$purple:#78498b;
+$condensed:"IBM Plex Sans Condensed",sans-serif;

@@ -1,0 +1,8 @@
+{
+  "title": "Light Link",
+  "notes": "Light text version of a regular link",
+  "context": {
+    "linktext": "Link Text",
+    "linkurl": "http://aaronpinero.net"
+  }
+}

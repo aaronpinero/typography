@@ -1,26 +1,3 @@
-// tyfy overrides
-$tyfy-serif:"IBM Plex Serif", georgia, serif;
-$tyfy-sans:"IBM Plex Sans", helvetica, arial, sans-serif;
-$tyfy-mono:"IBM Plex Mono", monaco, courier, monospace;
-$tyfy-spacings: (
-  "standard":2,
-  "large":4,
-);
-$tyfy-color-text-light:#999;
-$tyfyicons-path:"../../../dist/fonts/tyfyicons"; // do not add a trailing /
-
-// tyfy
-@import "../../../source/scss/tyfy.scss";
-@import "../../../source/scss/extras/icons";
-@import "../../../source/scss/extras/responsive_text";
-@import "../../../source/scss/extras/reverse";
-@import "../../../source/scss/extras/grid";
-
-// vars
-$shade:#f2f2f2;
-$purple:#78498b;
-$condensed:"IBM Plex Sans Condensed",sans-serif;
-
 // elements styles
 body {
   @include fade-in(2000ms);
@@ -332,6 +309,11 @@ nav.nav-inpage {
 }
 footer {
   padding:$tyfy-spacing-large $tyfy-spacing-standard;
+  hr {
+    border:none;
+    height:18px;
+    margin:0;
+  }
   div {
     color:$tyfy-color-text-light;
     font-size:$tyfy-font-size-sm;
@@ -348,21 +330,10 @@ footer {
     }
   }
   code {
-    background-color:transparent;
-    color:$tyfy-color-text-light;
     font-size:$tyfy-font-size-sm;
     line-height:tylead($tyfy-font-size-sm,base);
   }
-  a[href] {
-    border-bottom-color:rgba($tyfy-color-text-light,0.2);
-    color:$tyfy-color-text-light;
-    &:hover,
-    &:active {
-      border-bottom-color:rgba($tyfy-color-link-active,0.9);
-      color:$tyfy-color-link-active;
-      code {
-        color:$tyfy-color-link-active;
-      }
-    }
+  a {
+    @include link-light;
   }
 }

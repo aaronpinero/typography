@@ -8,6 +8,11 @@ code {
   font-family:$tyfy-mono;
   padding-left:0.125em;
   padding-right:0.125em;
+  &.no-bg {
+    background-color:transparent;
+    padding-left:0;
+    padding-right:0;
+  }
 }
 em {
   font-style:italic;

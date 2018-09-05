@@ -711,34 +711,39 @@ code {
   font-family: monaco, courier, monospace;
   padding-left: 0.125em;
   padding-right: 0.125em; }
+  /* line 11, source/scss/optional/_utility.scss */
+  code.no-bg {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0; }
 
-/* line 12, source/scss/optional/_utility.scss */
+/* line 17, source/scss/optional/_utility.scss */
 em {
   font-style: italic; }
 
-/* line 15, source/scss/optional/_utility.scss */
+/* line 20, source/scss/optional/_utility.scss */
 hr {
   border: none;
   border-top: 2px #e1e1e1 solid;
   height: 0; }
 
-/* line 20, source/scss/optional/_utility.scss */
+/* line 25, source/scss/optional/_utility.scss */
 i {
   font-style: italic; }
 
-/* line 23, source/scss/optional/_utility.scss */
+/* line 28, source/scss/optional/_utility.scss */
 pre {
   font-family: monaco, courier, monospace; }
 
-/* line 26, source/scss/optional/_utility.scss */
+/* line 31, source/scss/optional/_utility.scss */
 small {
   font-size: 80%; }
 
-/* line 29, source/scss/optional/_utility.scss */
+/* line 34, source/scss/optional/_utility.scss */
 strong {
   font-weight: 700; }
 
-/* line 32, source/scss/optional/_utility.scss */
+/* line 37, source/scss/optional/_utility.scss */
 .button {
   background-color: #3380cc;
   border: none;
@@ -766,7 +771,7 @@ strong {
   .button:focus {
     outline: none; }
 
-/* line 35, source/scss/optional/_utility.scss */
+/* line 40, source/scss/optional/_utility.scss */
 .button-outline {
   background-color: transparent;
   border: 2px #3380cc solid;
@@ -790,7 +795,7 @@ strong {
   .button-outline:focus {
     outline: none; }
 
-/* line 38, source/scss/optional/_utility.scss */
+/* line 43, source/scss/optional/_utility.scss */
 .clearfix {
   *zoom: 1; }
   /* line 3, source/scss/required/_mixins.scss */
@@ -802,7 +807,7 @@ strong {
   .clearfix::after {
     clear: both; }
 
-/* line 41, source/scss/optional/_utility.scss */
+/* line 46, source/scss/optional/_utility.scss */
 .dropcap {
   display: inline-block;
   float: left;
@@ -812,11 +817,11 @@ strong {
   margin: 0 0.25em 0 0.125em;
   text-align: center; }
 
-/* line 50, source/scss/optional/_utility.scss */
+/* line 55, source/scss/optional/_utility.scss */
 .light {
   color: #949494; }
 
-/* line 53, source/scss/optional/_utility.scss */
+/* line 58, source/scss/optional/_utility.scss */
 .smallcaps {
   -webkit-font-feature-settings: "c2sc", "smcp";
           font-feature-settings: "c2sc", "smcp";
@@ -824,7 +829,7 @@ strong {
   letter-spacing: 0.075em;
   margin-right: -0.0375em; }
 
-/* line 59, source/scss/optional/_utility.scss */
+/* line 64, source/scss/optional/_utility.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);

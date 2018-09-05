@@ -8,7 +8,7 @@ var glob = require("glob");
 var sass = require('node-sass');
 
 // variable that will hold the contents of the concatenated scss
-var scss = fs.readFileSync('./docs/resources/scss/tyfy-docs.scss');
+var scss = fs.readFileSync('./docs/resources/scss/tyfy-docs-base.scss');;
 
 // read components directory for scss files; do everything in this function because async
 glob("./docs/patterns/components/**/*.scss", function(err, files){
@@ -20,6 +20,9 @@ glob("./docs/patterns/components/**/*.scss", function(err, files){
 		for (x=0;x<files.length;x++) {
 			scss += "\n" + fs.readFileSync(files[x]);
 		}
+
+		// add the main tyfy docs class
+		scss += "\n" + fs.readFileSync('./docs/resources/scss/tyfy-docs.scss');
 
 		// write a temporary file that contains all the scss
 		fs.writeFileSync('./docs/resources/scss/tyfy-docs-all.scss',scss);
@@ -39,4 +42,3 @@ glob("./docs/patterns/components/**/*.scss", function(err, files){
 		});
 	}
 });
-

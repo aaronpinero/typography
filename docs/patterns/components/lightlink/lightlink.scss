@@ -1,0 +1,21 @@
+@mixin link-light {
+  color:$tyfy-color-text-light;
+  &[href] {
+    border-bottom-color:rgba($tyfy-color-text-light,0.2);
+    color:$tyfy-color-text-light;
+    code {
+      color:$tyfy-color-text-light;
+    }
+    &:hover,
+    &:active {
+      border-bottom-color:rgba($tyfy-color-link-active,0.9);
+      color:$tyfy-color-link-active;
+      code {
+        color:$tyfy-color-link-active;
+      }
+    }
+  }
+}
+a.light {
+  @include link-light;
+}
