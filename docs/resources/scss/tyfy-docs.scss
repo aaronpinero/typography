@@ -310,9 +310,33 @@ nav.nav-inpage {
 footer {
   padding:$tyfy-spacing-large $tyfy-spacing-standard;
   hr {
+    background-image:url("../img/tics-footer.svg");
+    background-position:right calc(#{tygrid(9)} - 42px) top 0px;
+    background-repeat:no-repeat;
     border:none;
     height:18px;
     margin:0;
+    position:relative;
+    &::before {
+      background-color:$tyfy-color-link-active;
+      bottom:0;
+      content:"";
+      display:block;
+      height:2px;
+      left:0;
+      position:absolute;
+      width:calc(100% - #{tygrid(9)} - 3px);
+    }
+    &::after {
+      background-color:$tyfy-color-link-active;
+      bottom:0;
+      content:"";
+      display:block;
+      height:2px;
+      right:0;
+      position:absolute;
+      width:calc(#{tygrid(9)} - 45px);
+    }
   }
   div {
     color:$tyfy-color-text-light;

@@ -712,7 +712,7 @@ code {
   padding-left: 0.125em;
   padding-right: 0.125em; }
   /* line 11, source/scss/optional/_utility.scss */
-  code.no-bg {
+  code.code-nobg {
     background-color: transparent;
     padding-left: 0;
     padding-right: 0; }
@@ -2499,31 +2499,55 @@ footer {
   padding: 3.5rem 1.75rem; }
   /* line 440, docs/resources/scss/tyfy-docs-all.scss */
   footer hr {
+    background-image: url("../img/tics-footer.svg");
+    background-position: right calc(7.875rem - 42px) top 0px;
+    background-repeat: no-repeat;
     border: none;
     height: 18px;
-    margin: 0; }
-  /* line 445, docs/resources/scss/tyfy-docs-all.scss */
+    margin: 0;
+    position: relative; }
+    /* line 448, docs/resources/scss/tyfy-docs-all.scss */
+    footer hr::before {
+      background-color: #cc3380;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: calc(100% - 7.875rem - 3px); }
+    /* line 458, docs/resources/scss/tyfy-docs-all.scss */
+    footer hr::after {
+      background-color: #cc3380;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      right: 0;
+      position: absolute;
+      width: calc(7.875rem - 45px); }
+  /* line 469, docs/resources/scss/tyfy-docs-all.scss */
   footer div {
     color: #999;
     font-size: 0.83333rem;
     line-height: 1.75rem; }
     @media (min-width: 40em) {
-      /* line 445, docs/resources/scss/tyfy-docs-all.scss */
+      /* line 469, docs/resources/scss/tyfy-docs-all.scss */
       footer div {
         display: inline-block; } }
-  /* line 453, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 477, docs/resources/scss/tyfy-docs-all.scss */
   footer div + div {
     margin-top: 0.875rem; }
     @media (min-width: 40em) {
-      /* line 453, docs/resources/scss/tyfy-docs-all.scss */
+      /* line 477, docs/resources/scss/tyfy-docs-all.scss */
       footer div + div {
         margin-top: 0;
         margin-left: 1.75rem; } }
-  /* line 460, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 484, docs/resources/scss/tyfy-docs-all.scss */
   footer code {
     font-size: 0.83333rem;
     line-height: 1.75rem; }
-  /* line 464, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 488, docs/resources/scss/tyfy-docs-all.scss */
   footer a {
     color: #999; }
     /* line 67, docs/resources/scss/tyfy-docs-all.scss */

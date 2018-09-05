@@ -712,7 +712,7 @@ code {
   padding-left: 0.125em;
   padding-right: 0.125em; }
   /* line 11, source/scss/optional/_utility.scss */
-  code.no-bg {
+  code.code-nobg {
     background-color: transparent;
     padding-left: 0;
     padding-right: 0; }
