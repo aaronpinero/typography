@@ -22,7 +22,7 @@ body {
 /* line 10, source/scss/essential/_normalize.scss */
 pre {
   font-family: monaco, courier, monospace;
-  font-size: 1rem; }
+  font-size: inherit; }
 
 /* line 14, source/scss/essential/_normalize.scss */
 a {
@@ -44,7 +44,7 @@ code,
 kbd,
 samp {
   font-family: monaco, courier, monospace;
-  font-size: 1rem; }
+  font-size: inherit; }
 
 /* line 32, source/scss/essential/_normalize.scss */
 sub,

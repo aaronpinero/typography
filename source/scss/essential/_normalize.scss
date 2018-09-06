@@ -9,7 +9,7 @@ body {
 }
 pre {
   font-family:$tyfy-mono;
-  font-size:$tyfy-font-size-base;
+  font-size:inherit;
 }
 a {
   background-color:transparent;
@@ -27,7 +27,7 @@ code,
 kbd,
 samp {
   font-family:$tyfy-mono;
-  font-size:$tyfy-font-size-base;
+  font-size:inherit;
 }
 sub,
 sup {

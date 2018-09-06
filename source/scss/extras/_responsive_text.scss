@@ -15,18 +15,6 @@ body {
     line-height:tylead($tyfy-font-size-base-large);
   }
 }
-// nomalize styles
-pre,
-code,
-kbd,
-samp {
-  @media (max-width:$tyfy-break-font-small * 0.9999) {
-    font-size:$tyfy-font-size-base-small;
-  }
-  @media (min-width:$tyfy-break-font-large) {
-    font-size:$tyfy-font-size-base-large;
-  }
-}
 // paragraphs
 p.lede {
   @media (max-width:$tyfy-break-font-small * 0.9999) {
