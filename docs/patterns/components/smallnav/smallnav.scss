@@ -1,0 +1,23 @@
+nav.nav-small {
+  box-sizing:border-box;
+  display:inline-block;
+  font-family:$tyfy-sans;
+  font-size:$tyfy-font-size-sm;
+  h2 {
+    font-size:$tyfy-font-size-sm;
+    line-height:tygrid(2);
+    text-transform:uppercase;
+    &::after {
+      background-color:rgba($tyfy-color-link-active,0.5);
+      content:"";
+      display:block;
+      height:2px;
+      margin-bottom:tygrid(0.5);
+      margin-top:tygrid(0.5);
+      width:18px;
+    }
+  }
+  a[href] {
+    border-bottom-width:0px;
+  }
+}

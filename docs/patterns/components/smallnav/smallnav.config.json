@@ -1,0 +1,15 @@
+{
+  "title": "Small Nav",
+  "notes": "A simple, small nav",
+  "context": {
+    "section_name": "Subject Area",
+    "link1_url": "http://aaronpinero.net",
+    "link2_url": "http://aaronpinero.net",
+    "link3_url": "http://aaronpinero.net",
+    "link4_url": "http://aaronpinero.net",
+    "link1_text": "Option 1",
+    "link2_text": "Option 2",
+    "link3_text": "Option 3",
+    "link4_text": "Option 4"
+  }
+}

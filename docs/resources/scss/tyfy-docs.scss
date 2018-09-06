@@ -227,25 +227,11 @@ dl dt {
     margin-top:0;
   }
 }
-nav.nav-inpage {
-  box-sizing:border-box;
+nav.nav-inpage { // adds onto nav-small style
   display:none;
   margin-left:$width-constrained - tygrid(9) - $tyfy-spacing-standard - $tyfy-spacing-standard;
   position:fixed;
   width:tygrid(9);
-  h2 {
-    border-bottom:solid $tyfy-width-border $tyfy-color-border;
-    margin-bottom:tygrid(1);
-    padding-bottom:tygrid(1);
-  }
-  ul {
-    font-size:tyscale(-1);
-  }
-  a[href] {
-    border-bottom-style:none;
-    border-bottom-width:0px;
-    font-family:$tyfy-sans;
-  }
   @media (min-width:62em) {
     display:block;
   }
