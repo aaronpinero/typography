@@ -1,9 +1,9 @@
-nav.nav-small {
+.nav-small {
   box-sizing:border-box;
   display:inline-block;
   font-family:$tyfy-sans;
   font-size:$tyfy-font-size-sm;
-  h2 {
+  .nav-small-head {
     font-size:$tyfy-font-size-sm;
     line-height:tygrid(2);
     text-transform:uppercase;

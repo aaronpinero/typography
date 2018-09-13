@@ -3,18 +3,18 @@ var header = document.getElementsByClassName('brand');
 var nav = header[0].getElementsByTagName('nav');
 var nav_btn = nav[0].getElementsByTagName('h2');
 var nav_tabs = nav[0].getElementsByClassName('navtab');
-var nav_initial_class = (nav[0].getAttribute('class') == null) ? '' : nav[0].getAttribute('class');
+var header_initial_class = (header[0].getAttribute('class') == null) ? '' : nav[0].getAttribute('class');
 
 // what kind of animation end event trigger?
 var animationEvent = whichAnimationEvent();
 
 // initial processing of menu
-if (nav_initial_class.indexOf('nav-processed') == -1) {
+if (header_initial_class.indexOf('nav-processed') == -1) {
 	// has not yet been processed by javascript; do so now
 
 	// add event listener for mobile nav button
 	nav_btn[0].addEventListener('click',ToggleNavOpen);
-	nav[0].setAttribute('class',('nav-processed ' + nav_initial_class));
+	header[0].setAttribute('class',('nav-processed ' + nav_initial_class));
 
 	// add event listeners for expandable menu options
 	var x;

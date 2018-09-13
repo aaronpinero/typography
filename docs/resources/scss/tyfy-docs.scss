@@ -30,17 +30,115 @@ strong.tyfy {
   text-transform:uppercase;
 }
 
+// header and nav with no js
+$break-nav:700px;
+header.brand {
+  .headgrid {
+    @extend .constrained;
+    padding:0 $tyfy-spacing-standard;
+    @media (min-width:$break-nav) {
+      display:grid;
+      grid-gap:tygrid(2);
+      grid-template-columns:101px auto;
+      padding-bottom:0;
+    }
+  }
+  h1 { // logo
+    background-image:url("../img/tyfy-logo.svg");
+    background-position:center center;
+    background-repeat:no-repeat;
+    font-family:$condensed;
+    font-size:$tyfy-font-size-h3;
+    height:tygrid(4);
+    line-height:tygrid(4);
+    overflow:hidden;
+    padding:0;
+    text-indent:102px;
+    text-transform:uppercase;
+    white-space:nowrap;
+    width:101px;
+  }
+  nav {
+    h2 {
+      @include visuallyhidden;
+      font-size:$tyfy-font-size-h5;
+      line-height:tylead($tyfy-font-size-h5,heading);
+    }
+    ul {
+      font-family:$tyfy-sans;
+      font-size:tyscale(0);
+      line-height:tylead(tyscale(0));
+    }
+    & > ul { // first level list
+      @media (min-width:$break-nav) {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:flex-end;
+      }
+      & > li > a[href] { // first level links
+        color:$tyfy-color-text-body;
+        display:block;
+        line-height:tygrid(4);
+        position:relative;
+        &::before {
+          background-color:$tyfy-color-border;
+          content:"";
+          display:block;
+          height:2px;
+          left:0;
+          position:absolute;
+          top:-1px;
+          width:18px;
+        }
+        &:hover,
+        &:active {
+          color:$tyfy-color-link-active;
+        }
+        @media (min-width:$break-nav) {
+          padding:0 tygrid(1);
+          &::before {
+            content:none;
+          }
+        }
+      }
+      & > li + li > a[href] { // first level adjacent sibling links
+        @media (min-width:$break-nav) {
+          &::before {
+            background-color:$tyfy-color-border;
+            content:"";
+            display:block;
+            height:18px;
+            left:-1px;
+            margin-top:-9px;
+            top:50%;
+            width:2px;
+          }
+        }
+      }
+    }
+    .navtab {
+      @include visuallyhidden;
+    }
+  }
+  & + * {
+    margin-top:0;
+  }
+}
+
+/* header and nav with js
 $break-nav:680px;
+
+
 
 header.brand {
   position:relative;
   z-index:5;
   .headgrid {
     @extend .constrained;
-    display:grid;
-    grid-gap:tygrid(2);
-    grid-template-columns:101px auto;
-    padding:0 $tyfy-spacing-standard;
+    // display:grid;
+    // grid-gap:tygrid(2);
+    // grid-template-columns:101px auto;
+    padding:0 $tyfy-spacing-standard $tyfy-spacing-standard;
   }
   h1 {
     background-image:url("../img/tyfy-logo.svg");
@@ -63,13 +161,13 @@ header.brand {
       line-height:tylead($tyfy-font-size-h5,heading);
     }
     ul {
-      font-family:"IBM Plex Sans",sans-serif;
+      font-family:$tyfy-sans;
       font-size:tyscale(0);
       line-height:tylead(tyscale(0));
     }
     .navtab-content {
       h3 {
-        font-family:"IBM Plex Sans Condensed",sans-serif;
+        font-family:$condensed;
         font-size:tyscale(0);
         line-height:tylead(tyscale(0));
         text-transform:uppercase;
@@ -220,6 +318,9 @@ header.brand {
     margin-top:0;
   }
 }
+
+*/
+
 section.main {
   margin-top:0;
   padding:$tyfy-spacing-standard;
