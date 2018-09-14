@@ -30,9 +30,8 @@ strong.tyfy {
   text-transform:uppercase;
 }
 
-// header and nav with no js
 $break-nav:700px;
-header.brand {
+header.brand { // header and nav with no js
   .headgrid {
     @extend .constrained;
     padding:0 $tyfy-spacing-standard;
@@ -122,6 +121,68 @@ header.brand {
   }
   & + * {
     margin-top:0;
+  }
+  &.nav-processed { // header and nav with js
+    nav {
+      h2 { // styles to turn the nav heading into a display toggle in mobile context
+        @media (max-width:$break-nav * 0.9999) {
+          @include visuallyhidden(false);
+          cursor:pointer;
+          display:inline-block;
+          height:tygrid(4) !important;
+          line-height:tygrid(4);
+          overflow:hidden;
+          position:absolute;
+          right:0;
+          top:0;
+          transition-duration:$tyfy-transition-duration-hover;
+          transition-property:color,background-color;
+          width:tygrid(4) !important;
+          &::before {
+            content:tychar($tyfyicons-bars);
+            display:block;
+            font-family:$tyfy-symbol;
+            height:tygrid(4);
+            text-align:center;
+            width:tygrid(4);
+          }
+          &:hover {
+            background-color:$tyfy-color-link-active;
+            color:white;
+          }
+        }
+      }
+      & > ul { // styles for first level menu for mobile
+        @media (max-width:$break-nav * 0.9999) {
+          background-color:white;
+          box-shadow:0 2px 1px rgba(black,0.2);
+          display:none;
+          left:0;
+          position:absolute;
+          top:calc(#{tygrid(4)} - 1px); // minus one to account for possible visual bug
+          width:100%;
+        }
+        & > li > a[href] { // first level links
+          @media (max-width:$break-nav * 0.9999) {
+            padding-left:tygrid(2);
+            padding-right:tygrid(2);
+            &::before {
+              left:tygrid(2);
+            }
+          }
+        }
+      }
+      &.nav-open { // class applied to nav element to show the nav in mobile context
+        h2::before {
+          content:tychar($tyfyicons-x);
+        }
+        @media (max-width:$break-nav * 0.9999) {
+          ul {
+            display:block;
+          }
+        }
+      }
+    }
   }
 }
 

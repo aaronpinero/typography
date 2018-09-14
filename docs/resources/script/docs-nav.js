@@ -3,7 +3,7 @@ var header = document.getElementsByClassName('brand');
 var nav = header[0].getElementsByTagName('nav');
 var nav_btn = nav[0].getElementsByTagName('h2');
 var nav_tabs = nav[0].getElementsByClassName('navtab');
-var header_initial_class = (header[0].getAttribute('class') == null) ? '' : nav[0].getAttribute('class');
+var header_initial_class = (header[0].getAttribute('class') == null) ? '' : header[0].getAttribute('class');
 
 // what kind of animation end event trigger?
 var animationEvent = whichAnimationEvent();
@@ -14,14 +14,14 @@ if (header_initial_class.indexOf('nav-processed') == -1) {
 
 	// add event listener for mobile nav button
 	nav_btn[0].addEventListener('click',ToggleNavOpen);
-	header[0].setAttribute('class',('nav-processed ' + nav_initial_class));
+	header[0].setAttribute('class',('nav-processed ' + header_initial_class));
 
-	// add event listeners for expandable menu options
+	/* add event listeners for expandable menu options
 	var x;
 	for (x=0; x<nav_tabs.length; x++) {
 		AddClass(nav_tabs[x].parentNode,'has-navtab');
 		nav_tabs[x].parentNode.addEventListener('mouseover',NavtabHoverOn,{once:true});
-	}
+	}*/
 }
 
 // toggling open and close of menu for mobile case
@@ -36,7 +36,7 @@ function ToggleNavOpen() {
 	}
 }
 
-// hover nav tab
+/* hover nav tab
 function NavtabHoverOn(event) {
 	// sometimes the event target will be the list item, sometimes it will be a child element; need to account for both
 	var target = event.target;
@@ -90,7 +90,7 @@ function NavtabHoverOff(event) {
 	if (now_hovered.length === 0) {
 		document.removeEventListener('mouseover',NavtabHoverOff,true);
 	}
-}
+}*/
 
 // add a class name to an element class attribute
 function AddClass(el,newclass) {
