@@ -1,7 +1,22 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<%include head.html%>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
 		<title>Tyfy - Modular Scale</title>
 	</head>
 	<body class="">
@@ -53,6 +68,24 @@ h4 {
 [...]</code></pre>
 			<p>Since all font sizes in <strong class="tyfy">Tyfy</strong> are based on the modular scale, you can quickly change every element’s font size by modifying either the base size or the scalar value. In this way you can fine-tune the typographic design of your project.</p>
     </section>
-		<%include footer.html%>
+		<!-- COMMON FOOTER -->
+		<footer class="constrained links-underlined">
+			<hr>
+			<div>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></div>
+			<div><a href="https://github.com/aaronpinero/typography">Fork on Github</a></div>
+			<div><a href="https://www.npmjs.com/package/tyfy"><code class="code-nobg">npm install tyfy</code></a></div>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i,700,700i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+		<script src="../resources/script/tyfy-docs.js"></script>
+    <script src="../resources/script/docs-nav.js"></script>
+		<!--/ COMMON FOOTER -->
 	</body>
 </html>

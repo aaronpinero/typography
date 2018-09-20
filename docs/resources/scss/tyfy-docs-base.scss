@@ -20,5 +20,6 @@ $tyfyicons-path:"../../../dist/fonts/tyfyicons"; // do not add a trailing /
 $shade:#f2f2f2;
 $purple:#78498b;
 $condensed:"IBM Plex Sans Condensed",sans-serif;
-$width-constrained:tygrid(70);
+$width-page-max:tygrid(70);
 $width-text-max:tygrid(50);
+$break-nav:700px;

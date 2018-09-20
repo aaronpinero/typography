@@ -18,7 +18,7 @@ h1 {
   box-sizing:border-box;
   margin-left:auto;
   margin-right:auto;
-  max-width:$width-constrained;
+  max-width:$width-page-max;
 }
 hr.demo {
   margin-bottom:tygrid(1);
@@ -30,8 +30,8 @@ strong.tyfy {
   text-transform:uppercase;
 }
 
-$break-nav:700px;
-header.brand { // header and nav with no js
+// header and nav with no js
+header.brand {
   .headgrid {
     @extend .constrained;
     padding:0 $tyfy-spacing-standard;
@@ -42,7 +42,8 @@ header.brand { // header and nav with no js
       padding-bottom:0;
     }
   }
-  h1 { // logo
+  // logo
+  h1 {
     background-image:url("../img/tyfy-logo.svg");
     background-position:center center;
     background-repeat:no-repeat;
@@ -68,13 +69,15 @@ header.brand { // header and nav with no js
       font-size:tyscale(0);
       line-height:tylead(tyscale(0));
     }
-    & > ul { // first level list
+    // first level list
+    & > ul {
       @media (min-width:$break-nav) {
         display:flex;
         flex-wrap:wrap;
         justify-content:flex-end;
       }
-      & > li > a[href] { // first level links
+      // first level links
+      & > li > a[href] {
         color:$tyfy-color-text-body;
         display:block;
         line-height:tygrid(4);
@@ -100,7 +103,8 @@ header.brand { // header and nav with no js
           }
         }
       }
-      & > li + li > a[href] { // first level adjacent sibling links
+      // first level adjacent sibling links
+      & > li + li > a[href] {
         @media (min-width:$break-nav) {
           &::before {
             background-color:$tyfy-color-border;
@@ -122,9 +126,11 @@ header.brand { // header and nav with no js
   & + * {
     margin-top:0;
   }
-  &.nav-processed { // header and nav with js
+  // header and nav with js
+  &.nav-processed {
     nav {
-      h2 { // styles to turn the nav heading into a display toggle in mobile context
+      // styles to turn the nav heading into a display toggle in mobile context
+      h2 {
         @media (max-width:$break-nav * 0.9999) {
           @include visuallyhidden(false);
           cursor:pointer;
@@ -152,7 +158,8 @@ header.brand { // header and nav with no js
           }
         }
       }
-      & > ul { // styles for first level menu for mobile
+      // styles for first level menu for mobile
+      & > ul {
         @media (max-width:$break-nav * 0.9999) {
           background-color:white;
           box-shadow:0 2px 1px rgba(black,0.2);
@@ -162,7 +169,8 @@ header.brand { // header and nav with no js
           top:calc(#{tygrid(4)} - 1px); // minus one to account for possible visual bug
           width:100%;
         }
-        & > li > a[href] { // first level links
+        // first level links
+        & > li > a[href] {
           @media (max-width:$break-nav * 0.9999) {
             padding-left:tygrid(2);
             padding-right:tygrid(2);
@@ -172,7 +180,8 @@ header.brand { // header and nav with no js
           }
         }
       }
-      &.nav-open { // class applied to nav element to show the nav in mobile context
+      // class applied to nav element to show the nav in mobile context
+      &.nav-open {
         h2::before {
           content:tychar($tyfyicons-x);
         }
@@ -385,8 +394,15 @@ header.brand {
 section.main {
   margin-top:0;
   padding:$tyfy-spacing-standard;
-  * {
+  *:not(.nav-inpage) {
+    margin-left:auto;
+    margin-right:auto;
     max-width:$width-text-max;
+  }
+  &.has-pagenav {
+    *:not(.nav-inpage) {
+      margin-left:0;
+    }
   }
 }
 dl dt {
@@ -406,7 +422,7 @@ dl dt {
 }
 nav.nav-inpage { // adds onto nav-small style
   display:none;
-  margin-left:$width-constrained - tygrid(9) - $tyfy-spacing-standard - $tyfy-spacing-standard;
+  margin-left:$width-page-max - tygrid(9) - $tyfy-spacing-standard - $tyfy-spacing-standard;
   position:fixed;
   width:tygrid(9);
   @media (min-width:62em) {

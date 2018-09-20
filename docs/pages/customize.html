@@ -1,11 +1,113 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<%include head.html%>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
 		<title>Tyfy - Customize</title>
 	</head>
 	<body class="">
-		<%include header.html%>
+		<!-- COMMON HEADER -->
+		<header class="brand sibling-margins-off">
+			<div class="headgrid constrained">
+				<h1><a href="index.html">Tyfy</a></h1>
+				<nav>
+					<h2>Contents</h2>
+					<ul class="list-nobullet">
+		        <li><a href="start.html">Get Started</a></li>
+		        <li><a href="customize.html">Customize</a></li>
+		        <li>
+		          <a href="benefits.html">Benefits</a>
+							<div class="navtab reverse">
+								<div class="navtab-content">
+				          <ul>
+				            <li><a href="scale.html">Modular Scale</a></li>
+				            <li><a href="grid.html">Baseline Grid</a></li>
+				            <li><a href="margins.html">Sensible Margins</a></li>
+				          </ul>
+								</div>
+							</div>
+		        </li>
+		        <li>
+		          <a href="modules.html">Modules</a>
+							<div class="navtab reverse">
+								<div class="navtab-content">
+									<ul>
+										<li class="nav-small">
+											<h3 class="nav-small-head"><a href="required.html">Required</a></h3>
+				              <ul>
+				                <li><a href="core.html">Core</a></li>
+				                <li><a href="functions.html">Functions</a></li>
+				                <li><a href="settings.html">Settings</a></li>
+				                <li><a href="mixins.html">Mixins</a></li>
+				              </ul>
+										</li>
+										<li>
+											<h3><a href="essential.html">Essential</a></h3>
+				              <ul>
+				                <li><a href="normalize.html">Normalize</a></li>
+				                <li><a href="body.html">Body</a></li>
+				                <li><a href="spacing.html">Spacing</a></li>
+				              </ul>
+										</li>
+										<li>
+						          <h3><a href="optional.html">Optional</a></h3>
+				              <ul>
+				                <li><a href="paragraphs.html">Paragraphs</a></li>
+				                <li><a href="headings.html">Headings</a></li>
+				                <li><a href="links.html">Links</a></li>
+				                <li><a href="lists.html">Lists</a></li>
+				                <li><a href="styles.html">Styles</a></li>
+				                <li><a href="tables.html">Tables</a></li>
+				                <li><a href="collapsables.html">Collapsables</a></li>
+				                <li><a href="tabs.html">Tabs</a></li>
+				                <li><a href="forms.html">Forms</a></li>
+				              </ul>
+										</li>
+										<li>
+						          <h3><a href="effects.html">Extras</a></h3>
+				              <ul>
+												<li><a href="drupal.html">Drupal</a></li>
+												<li><a href="effects.html">Effects</a></li>
+												<li><a href="icons.html">Icons</a></li>
+				                <li><a href="responsive_text.html">Responsive Text</a></li>
+												<li><a href="reverse.html">Reverse Colors</a></li>
+				              </ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+		        </li>
+		        <li>
+		          <a href="about.html">About Tyfy</a>
+							<div class="navtab reverse">
+								<div class="navtab-content">
+									<ul>
+										<li><a href="about.html">Overview</a></li>
+				            <li><a href="tools.html">Build Tools</a></li>
+				            <li><a href="compatability.html">Browser Compatability</a></li>
+				          </ul>
+								</div>
+							</div>
+		        </li>
+		      </ul>
+				</nav>
+			</div>
+		</header>
+		<!--/ COMMON HEADER -->
 		<h1 class="pagetitle">Customize TYFY</h1>
 		<section class="main links-underlined">
 			<p class="lede">You can customize <strong class="tyfy">Tyfy</strong> by adding or removing modules or by changing the value of the framework's variables.</p>
@@ -72,6 +174,24 @@ $tyfy-font-heading:$tyfy-sans;
 </code></pre>
 			<p>For a full list of variables and their default values, see the documentation for the <a href="core.html">core</a> and <a href="settings.html">settings</a> modules.</p>
 		</section>
-		<%include footer.html%>
+		<!-- COMMON FOOTER -->
+		<footer class="constrained links-underlined">
+			<hr>
+			<div>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></div>
+			<div><a href="https://github.com/aaronpinero/typography">Fork on Github</a></div>
+			<div><a href="https://www.npmjs.com/package/tyfy"><code class="code-nobg">npm install tyfy</code></a></div>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i,700,700i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+		<script src="../resources/script/tyfy-docs.js"></script>
+    <script src="../resources/script/docs-nav.js"></script>
+		<!--/ COMMON FOOTER -->
 	</body>
 </html>
