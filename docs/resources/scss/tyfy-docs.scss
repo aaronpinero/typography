@@ -71,6 +71,12 @@ header.brand {
     }
     // first level list
     & > ul {
+      @media (max-width:$break-nav * 0.9999) {
+        background-color:white;
+        box-shadow:0 2px 1px rgba(black,0.2);
+        margin-left:$tyfy-spacing-standard * -1;
+        margin-right:$tyfy-spacing-standard * -1;
+      }
       @media (min-width:$break-nav) {
         display:flex;
         flex-wrap:wrap;
@@ -80,14 +86,14 @@ header.brand {
       & > li > a[href] {
         color:$tyfy-color-text-body;
         display:block;
-        line-height:tygrid(4);
+        padding:tygrid(1) $tyfy-spacing-standard;
         position:relative;
         &::before {
           background-color:$tyfy-color-border;
           content:"";
           display:block;
           height:2px;
-          left:0;
+          left:$tyfy-spacing-standard;
           position:absolute;
           top:-1px;
           width:18px;
@@ -119,8 +125,35 @@ header.brand {
         }
       }
     }
-    .navtab {
-      @include visuallyhidden;
+    ul.navtab {
+      // @include visuallyhidden;
+      background-color:$tyfy-color-background-reverse;
+      border:tygrid(0.5) white solid;
+      border-top:none;
+      box-sizing:border-box;
+      padding:0;
+      transition:opacity $tyfy-transition-duration-move;
+      @media (min-width:$break-nav) {
+        box-shadow:0 2px 1px rgba(black,0.2);
+        left:0;
+        position:absolute;
+        top:100%;
+        width:100%;
+      }
+      .navtab-content {
+        @extend .constrained;
+        padding:tygrid(0.5) 0;
+        a {
+          display:block;
+          padding:tygrid(0.5) tygrid(1.5);
+        }
+        @media (min-width:$break-nav) {
+          padding:tygrid(0.75) $tyfy-spacing-standard tygrid(0.75) calc(101px + $tyfy-spacing-standard);
+          a {
+            padding:tygrid(0.25) tygrid(1);
+          }
+        }
+      }
     }
   }
   & + * {
@@ -161,23 +194,13 @@ header.brand {
       // styles for first level menu for mobile
       & > ul {
         @media (max-width:$break-nav * 0.9999) {
-          background-color:white;
-          box-shadow:0 2px 1px rgba(black,0.2);
           display:none;
           left:0;
+          margin-left:0;
+          margin-right:0;
           position:absolute;
           top:calc(#{tygrid(4)} - 1px); // minus one to account for possible visual bug
           width:100%;
-        }
-        // first level links
-        & > li > a[href] {
-          @media (max-width:$break-nav * 0.9999) {
-            padding-left:tygrid(2);
-            padding-right:tygrid(2);
-            &::before {
-              left:tygrid(2);
-            }
-          }
         }
       }
       // class applied to nav element to show the nav in mobile context
