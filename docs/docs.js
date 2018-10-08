@@ -1,10 +1,10 @@
 var fs = require('fs');
 var templatesjs = require('templatesjs');
-templatesjs.dir = "./source/includes/";
+templatesjs.dir = "./docs/includes/";
 
 var filepath = {};
-filepath.source = './source/html/';
-filepath.dest = './docs/';
+filepath.source = './docs/content/';
+filepath.dest = './docs/pages/';
 
 var dir = fs.readdir(filepath.source,function(err,files){
 	if (err) throw err;

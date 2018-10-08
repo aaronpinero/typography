@@ -1,10 +1,10 @@
-@import "required/core";
-@import "required/functions";
-@import "required/settings";
-@import "required/mixins";
+@import "../../../source/scss/required/core";
+@import "../../../source/scss/required/functions";
+@import "../../../source/scss/required/settings";
+@import "../../../source/scss/required/mixins";
 
-@import "extras/icons";
-@import "extras/responsive_text";
+@import "../../../source/scss/extras/icons";
+@import "../../../source/scss/extras/responsive_text";
 
 body {
   @include fade-in(2000ms);
