@@ -1,5 +1,4 @@
 // copied from the scss file that is output by running `npm build icons`
-
 @if $tyfy-symbol == tyfyicons {
   @font-face {
     font-family:tyfyicons;
@@ -9,109 +8,76 @@
     font-weight:400;
   }
 }
-
 %tyfyicons {
   display:inline-block;
   font-family:tyfyicons;
-  font-weight:400;
   font-size:inherit;
+  font-weight:400;
+  text-rendering:auto;
+  transform:translate(0, 0);
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-font-smoothing:antialiased;
 }
-
 .tyfyicons {
   @extend %tyfyicons;
 }
-
 .tyfyicons-lg {
   vertical-align:-15%;
   line-height:0.75em;
   font-size:1.33333333em;
 }
-
 .tyfyicons-2x {
   font-size:2em;
 }
-
 .tyfyicons-3x {
   font-size:3em;
 }
-
 .tyfyicons-4x {
   font-size:4em;
 }
-
 .tyfyicons-5x {
   font-size:5em;
 }
-
 .tyfyicons-fw {
   width:1.28571429em;
   text-align:center;
 }
-
 .tyfyicons-angle-down::before {
   content:"\ea01";
 }
-
-.tyfyicons-angle-left::before {
+.tyfyicons-angle-left-small::before {
   content:"\ea02";
 }
-
+.tyfyicons-angle-left::before {
+  content:"\ea04";
+}
 .tyfyicons-angle-right-small::before {
   content:"\ea03";
 }
-
 .tyfyicons-angle-right::before {
-  content:"\ea04";
-}
-
-.tyfyicons-angle-up::before {
   content:"\ea05";
 }
-
-.tyfyicons-bars::before {
-  content:"\ea06";
-}
-
-.tyfyicons-dash::before {
-  content:"\ea07";
-}
-
-.tyfyicons-facebook::before {
+.tyfyicons-angle-up::before {
   content:"\ea08";
 }
-
-.tyfyicons-instagram::before {
-  content:"\ea09";
+.tyfyicons-bars::before {
+  content:"\ea07";
 }
-
-.tyfyicons-linkedin::before {
+.tyfyicons-dash::before {
+  content:"\ea06";
+}
+.tyfyicons-quote-left::before {
   content:"\ea0a";
 }
-
-.tyfyicons-quote-left::before {
+.tyfyicons-quote-right::before {
+  content:"\ea09";
+}
+.tyfyicons-quote-roof::before {
   content:"\ea0b";
 }
-
-.tyfyicons-quote-right::before {
+.tyfyicons-search::before {
   content:"\ea0c";
 }
-
-.tyfyicons-search::before {
-  content:"\ea0d";
-}
-
-.tyfyicons-soundcloud::before {
-  content:"\ea0e";
-}
-
-.tyfyicons-twitter::before {
-  content:"\ea0f";
-}
-
 .tyfyicons-x::before {
-  content:"\ea10";
-}
-
-.tyfyicons-youtube::before {
-  content:"\ea11";
+  content:"\ea0d";
 }

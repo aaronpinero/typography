@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
     <title>bars</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="bars" fill="#000000">
-            <polygon id="Combined-Shape" points="0 7 64 7 64 16 2.23820962e-13 16"></polygon>
-            <polygon id="Combined-Shape" points="0 48 64 48 64 57 2.23820962e-13 57"></polygon>
-            <polygon id="Combined-Shape" points="0 27.5 64 27.5 64 36.5 2.23820962e-13 36.5"></polygon>
-        </g>
+    <g id="bars" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Combined-Shape" fill="#000000" points="0 7 64 7 64 16 2.23820962e-13 16"></polygon>
+        <polygon id="Combined-Shape" fill="#000000" points="0 48 64 48 64 57 2.23820962e-13 57"></polygon>
+        <polygon id="Combined-Shape" fill="#000000" points="0 27.5 64 27.5 64 36.5 2.23820962e-13 36.5"></polygon>
     </g>
 </svg>
