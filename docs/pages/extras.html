@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../../dist/style/tyfy.css">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Extras</title>
+	</head>
+	<body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand sibling-margins-off reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="list-nobullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="mixins.html">Mixins</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="forms.html">Forms</a></li>
+  				<li><a href="effects.html">Effects</a></li>
+  				<li><a href="extras.html">Extras</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+		<section class="main links-underlined">
+			<h1>Extras</h1>
+			<p>Extras provide enhancements that might not be necessary for every project. Therefore, they are not included as part of the default <strong class="tyfy">Tyfy</strong> stylesheet. If useful for your project, they can be @included in your <span class="smallcaps">SCSS</span> file after the other <strong class="tyfy">Tyfy</strong> modules. The available extras are:</p>
+			<ul>
+				<li><a href="#icons">Icons</a></li>
+				<li><a href="#icons">Drupal Styles</a></li>
+				<li><a href="#text">Responsive Text</a></li>
+			</ul>
+		</section>
+		<hr>
+		<section class="main links-underlined" id="icons">
+      <h2>Icons</h2>
+      <p><code>@include "[path to tyfy]/source/scss/extras/icons"</code></p>
+			<p>Because <strong class="tyfy">Tyfy</strong> only needs a handful of icons, I've included a dozen or so common icons as a custom web font rather than recommend an existing font library.</p>
+			<p>Node.js and the <a href="https://www.npmjs.com/package/webfont">webfont</a> package are used to convert a set of .svg icons into an icon webfont called tyfyicons. The Sketch file used to create the .svgs is included in the git repository for <strong class="tyfy">Tyfy</strong>.</p>
+			<p>The tyfyicons font is not necessarily required. If you want to use a different icon font, you will need to customize the values for the icon character code variables in the <code>required/settings</code> module to use character values for the selected font. Tyfyicons are used in styles for <a href="lists.html">lists</a>, <a href="quotes.html">blockquotes</a>, <a href="collapsables.html">collapsables</a>, and <a href="tabs.html">tabs</a>. If you are not planning to use those modules, the icon font module can be omitted and the character code variables ignored.</p>
+			<h3>Using Icons in <span class="smallcaps">SCSS</span></h3>
+			<p>Because of an issue with <span class="smallcaps">SASS</span>, the icon font character codes are stored in the <code>required/settings</code> without their preceding slash:</p>
+			<pre><code>$tyfyicons-angle-up:"ea05";</code></pre>
+			<p>To properly apply the character codes in the <span class="smallcaps">CSS</span> <code>content</code> property, <strong class="tyfy">Tyfy</strong> has a <a href="functions.html">custom function</a> named <code>charcode</code> that accepts a character code variable and returns the correct character code string.</p>
+			<h3>Using Icons in <span class="smallcaps">HTML</span></h3>
+			<p>The <code>optional/icons</code> module includes utility classes for adding icons within the html. Those utility classes are employed in the following table.</p>
+			<table class="clean horizontal-rules">
+				<thead>
+					<tr>
+						<th scope="col">Icon</th>
+						<th scope="col"><span class="smallcaps">SASS</span> variable</th>
+						<th scope="col">Character code</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td><span class="tyfyicons tyfyicons-angle-up"></span></td><td>$tyfyicons-angle-up</td><td>\ea05</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-angle-down"></span></td><td>$tyfyicons-angle-down</td><td>\ea01</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-angle-left"></span></td><td>$tyfyicons-angle-left</td><td>\ea02</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-angle-right"></span></td><td>$tyfyicons-angle-right</td><td>\ea04</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-angle-right-small"></span></td><td>$tyfyicons-angle-right-small</td><td>\ea03</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-bars"></span></td><td>$tyfyicons-bars</td><td>\ea06</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-x"></span></td><td>$tyfyicons-x</td><td>\ea10</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-dash"></span></td><td>$tyfyicons-dash</td><td>\ea07</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-quote-left"></span></td><td>$tyfyicons-quote-left</td><td>\ea0b</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-quote-right"></span></td><td>$tyfyicons-quote-right</td><td>\ea0c</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-search"></span></td><td>$tyfyicons-search</td><td>\ea0d</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-facebook"></span></td><td>$tyfyicons-facebook</td><td>\ea08</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-instagram"></span></td><td>$tyfyicons-instagram</td><td>\ea09</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-linkedin"></span></td><td>$tyfyicons-linkedin</td><td>\ea0a</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-soundcloud"></span></td><td>$tyfyicons-soundcloud</td><td>\ea0e</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-twitter"></span></td><td>$tyfyicons-twitter</td><td>\ea0f</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-youtube"></span></td><td>$tyfyicons-youtube</td><td>\ea11</td></tr>
+				</tbody>
+			</table>
+		</section>
+		<hr>
+		<section class="main links-underlined" id="drupal">
+  		<h2>Drupal Styles</h2>
+      <p><code>@include "[path to tyfy]/source/scss/extras/drupal"</code></p>
+  		<p>Much of the front-end development work that I perform is for Drupal. Therefore, it is useful to me to have a set of <strong class="tyfy">Tyfy</strong>-based styles to use with Drupal. This module provides the following Drupal style overrides:</p> 
+  		<ul>
+    		<li>styles for status message</li>
+    		<li>styles for primary tabs</li>
+    		<li>styles to identify unpublished node pages</li>
+    		<li>styles for invisible and hidden elements</li>
+    		<li>removal of Drupal's custom menu list item bullets</li>
+    		<li>removal of default block margins</li>
+    		<li>proper styling for the admin module menu when using <strong class="tyfy">Tyfy</strong></li>
+  		</ul>
+  		<h3>Variables</h3>
+  		<dl>
+    		<dt>$status-default-color</dt>
+    		<dd>Color for status messages; !default value is <code>#33aa33</code></dd>
+        <dt>$status-warning-color</dt>
+        <dd>Color for warning messages; !default value is <code>#aa8833</code></dd>
+        <dt>$status-error-color</dt>
+        <dd>Color for error messages; !default value is <code>#aa3333</code></dd>
+  		</dl>
+		</section>
+		<hr>
+		<section class="main links-underlined" id="text">
+  		<h2>Responsive Text</h2>
+      <p><code>@include "[path to tyfy]/source/scss/extras/responsive_text"</code></p>
+  		<p>Some responsive website designs will vary the text sizes depending on the screen width. On mobile, it may be desirable to fit more text into the limited horizontal space; on large desktop screens, larger text may be easier to read and more comfortably fill the screen. This module adjusts text sizes according to viewing context. The elements for which text is adjusted are:</p>
+  		<ul>
+    		<li><code>&lt;body&gt;</code> and all child elements for which a font-size override has not been defined</li>
+    		<li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, including collapsable headings</li>
+    		<li><code>&lt;pre&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;kdb&gt;</code>, and <code>&lt;samp&gt;</code>; these elements have a font size override in the normalize module and are not affected by the font-size changes to <code>&lt;body&gt;</code></li>
+  		</ul>
+  		<h3>Variables</h3>
+  		<p>Several new variables are defined in this module. There are no variables for the responsive heading sizes. Those sizes are based on the default modular scale with scale step decreases for small screen headings and scale step increases for larger screen headings.</p>
+  		<dl>
+    		<dt>$tyfy-break-font-small</dt>
+    		<dd>Breakpoint below which text sizes are reduced; !default value is <code>40em</code></dd>
+    		<dt>$tyfy-break-font-large</dt>
+    		<dd>Breakpoint above which text sizes are increased; !default value is <code>80em</code></dd>
+    		<dt>$tyfy-font-size-base-small</dt>
+    		<dd>The base font size for small screens; !default value is <code>$tyfy-font-size-base * 0.9</code></dd>
+    		<dt>$tyfy-font-size-base-large</dt>
+    		<dd>The base font size for large screens; !default value is <code>$tyfy-font-size-base / 0.9</code></dd>
+  		</dl>
+  		<h3>Example</h3>
+  		<p>These documentation pages utilize the responsive text module. You can adjust the size of your browser window to see the changes to the font sizes.</p>
+		</section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="../resources/script/docs-nav.js"></script>
+		<!--/ COMMON FOOTER -->
+	</body>
+</html>

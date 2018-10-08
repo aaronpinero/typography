@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../../dist/style/tyfy.css">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Functions</title>
+	</head>
+	<body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand sibling-margins-off reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="list-nobullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="mixins.html">Mixins</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="forms.html">Forms</a></li>
+  				<li><a href="effects.html">Effects</a></li>
+  				<li><a href="extras.html">Extras</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+		<section class="main links-underlined">
+			<h1>Functions</h1>
+			<p><strong class="tyfy">Tyfy</strong> includes several custom <span class="smallcaps">SASS</span> functions. These functions were written to facilitate writing the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SCSS</span> files, but can also be used to help users who are including <strong class="tyfy">Tyfy</strong> in their web projects.</p>
+			<dl>
+				<dt>@function tylead($font-size,$leading-style:base)</dt>
+				<dd>Accepts a font size and leading style option and calculates a grid-based line height. The leading style options are <code>tall</code>, <code>base</code>, <code>heading</code>, and <code>short</code>. The default is <code>base</code>. The font size argument must be in rem units, and the value returned is also in rem units.</dd>
+				<dt>@function tygrid($multiplier)</dt>
+				<dd>Makes the <span class="smallcaps">SCSS</span> files easier to read. The function accepts a number and returns a value, in rem units, that is the base grid unit multiplied by the number argument.</dd>
+				<dt>@function tyscale($exponent)</dt>
+				<dd>Facilitates use of the modular typographic scale by eliminating the task of calculating font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</dd>
+				<dt>@function tycolor($color,$lightness)</dt>
+				<dd>Accepts a color (in rgb or hexadecimal format) and a lightness value (0% to 100%), and returns the given color converted to the specified lightness.</dd>
+				<dt>@function tyreverse($color)</dt>
+				<dd>Accepts a color (in rgb or hexadecimal format) and returns the same color with the lightness value reversed.</dd>
+				<dt>@function tychar($code)</dt>
+				<dd>Accepts a character code without the preceding slash (“\”) and adds it; this is done to get around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> and allow icon character codes to be more easily customized for different icon fonts.</dd>
+			</dl>
+		</section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="../resources/script/docs-nav.js"></script>
+		<!--/ COMMON FOOTER -->
+	</body>
+</html>

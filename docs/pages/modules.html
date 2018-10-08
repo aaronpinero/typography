@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../../dist/style/tyfy.css">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Modules</title>
+	</head>
+	<body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand sibling-margins-off reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="list-nobullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="mixins.html">Mixins</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="forms.html">Forms</a></li>
+  				<li><a href="effects.html">Effects</a></li>
+  				<li><a href="extras.html">Extras</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+		<section class="main links-underlined">
+			<h1>Modules</h1>
+			<p>The tyfy.scss file is an inventory of the modules that make up the framework. The required, essential, and optional modules are are @imported in the following order. The extras modules are not, by default, part of <strong class="tyfy">Tyfy</strong> but can be added if desired.</p>
+			<h2>Required</h2>
+			<p>These modules are required to use <strong class="tyfy">Tyfy</strong>. They define the framework's variables, functions, and mixins.</p>
+			<dl>
+				<dt>@import "required/core"</dt>
+				<dd>Default values for the core <strong class="tyfy">Tyfy</strong> variables; these variables are used in the calculation of many of the default settings and are required by the custom functions; see the <a href="variables.html">variables</a> documentation for more</dd>
+				<dt>@import "required/functions"</dt>
+				<dd>Functions facilitating use of the basic grid unit, modular typographic scale, and primary color</dd>
+				<dt>@import "required/settings"</dt>
+				<dd>Default values for variables that define the projects colors, fonts, breakpoints, etc.; see the <a href="variables.html">variables</a> documentation for more</dd>
+				<dt>@import "required/mixins"</dt>
+				<dd>Mixins for vertical margins between adjacent sibling elements; also includes useful mixins taken from <a href="https://html5boilerplate.com">HTML5 Boilerplate</a>; see the <a href="mixins.html">mixins</a> documentation for more</dd>
+			</dl>
+			<h2>Essential</h2>
+			<p>These modules are not hard requirements for <strong class="tyfy">Tyfy</strong> but are highly recommended.</p>
+			<dl>
+				<dt>@import "essential/normalize"</dt>
+				<dd>Selected styles from <a href="https://github.com/necolas/normalize.css/">normalize.css</a></dd>
+				<dt>@import "essential/body"</dt>
+				<dd>Apply the base colors, font styles, and line height</dd>
+				<dt>@import "essential/spacing"</dt>
+				<dd>Apply 'smart' vertical margins between all adjacent sibling <span class="smallcaps">HTML</span> elements; also contains utility classes for turning on and off the adjacent sibling margins</dd>
+			</dl>
+			<h2>Optional</h2>
+			<p>These optional modules provide specific typographic or presentation styles.</p> 
+			<dl>
+				<dt>@import "optional/paragraphs"</dt>
+				<dd>Styles and utility classes for paragraphs</dd>
+				<dt>@import "optional/headings"</dt>
+				<dd>Styles and utility classes for headings</dd>
+				<dt>@import "optional/links"</dt>
+				<dd>Styles and utility classes for links</dd>
+				<dt>@import "optional/lists"</dt>
+				<dd>Styles and utility classes for lists</dd>
+				<dt>@import "optional/inline"</dt>
+				<dd>Styles and utility classes for inline-level elements</dd>
+				<dt>@import "optional/quotes"</dt>
+				<dd>Styles and utility classes for blockquotes and pullquotes</dd>
+				<dt>@import "optional/tables"</dt>
+				<dd>Styles and utility classes for tables; responsive tables requires tables.js</dd>
+				<dt>@import "optional/reverse"</dt>
+				<dd>A utility class for reversed colors</dd>
+				<dt>@import "optional/collapsables"</dt>
+				<dd>A presentation style for collapsable sections; requires collapsable.js</dd>
+				<dt>@import "optional/tabs"</dt>
+				<dd>A presentation style for responsive tabs; requires tabs.js</dd>
+				<dt>@import "optional/forms" <em class="small"><small>beta</small></em></dt>
+				<dd>Styles and utility classes for form elements</dd>
+				<dt>@import "optional/effects" <em class="small"><small>experimental</small></em></dt>
+				<dd>A <span class="smallcaps">SASS</span> map that generates classes for <span class="smallcaps">CSS</span> animations</dd>
+			</dl>
+			<h2>Extras</h2>
+			<p>These modules are not part of the default <strong class="tyfy">Tyfy</strong> stylesheet but can be added if desired. They provide additional functionality that might not be needed in every case. See the <a href="extras.html">Extras documentation</a> for more information.</p>
+			<dl>
+				<dt>@import "extras/icons"</dt>
+				<dd>Defines the font face and classes for a custom icon webfont</dd>
+				<dt>@import "extras/drupal"</dt>
+				<dd><strong class="tyfy">Tyfy</strong>-based style overrides for user interface elements in Drupal</dd>
+				<dt>@import "extras/responsive_text"</dt>
+				<dd>Text size adjustments for small and large screens</dd>
+			</dl>
+		</section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="../resources/script/docs-nav.js"></script>
+		<!--/ COMMON FOOTER -->
+	</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../../dist/style/tyfy.css">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Effects</title>
+  </head>
+  <body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand sibling-margins-off reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="list-nobullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="mixins.html">Mixins</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="forms.html">Forms</a></li>
+  				<li><a href="effects.html">Effects</a></li>
+  				<li><a href="extras.html">Extras</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+    <section class="main links-underlined">
+      <h1>Effects <em><small>Experimental</small></em></h1>
+      <p>I added this module because it was an opportunity to experiment with <a href="https://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184"><span class="smallcaps">SASS</span> maps</a>. In this case, I have used a sass map to generate a number of classes that, when applied to an element, cause that element to fade in when the page is loaded. The duration of the fade animation depends on the class used.</p>
+      <p>To apply a fade in animation of arbitrary duration, there is a mixin that accepts duration as a variable.</p>
+      <p>For now, this is the only effect available. I may add more effects at a later time. I welcome suggestions for particular effects.</p>
+      <h2>Classes</h2>
+      <dl>
+        <dt class="fade-500ms">.fade-500ms</dt>
+        <dd>Applies a fade in animation of 500ms duration.</dd>
+        <dt class="fade-1s">.fade-1s</dt>
+        <dd>Applies a fade in animation of 1000ms duration.</dd>
+        <dt class="fade-2s">.fade-2s</dt>
+        <dd>Applies a fade in animation of 2000ms duration.</dd>
+        <dt class="fade-3s">.fade-3s</dt>
+        <dd>Applies a fade in animation of 3000ms duration.</dd>
+      </dl>
+    </section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="../resources/script/docs-nav.js"></script>
+		<!--/ COMMON FOOTER -->
+    <script src="../dist/script/tabs.js"></script>
+  </body>
+</html>

@@ -1,1 +1,1 @@
-nodemon -V -C -w source/scss -e scss -x "npm run build-css"
+nodemon -V -C -w source/scss -w docs/resources/scss -e scss -x "npm run build-css"

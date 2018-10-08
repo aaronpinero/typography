@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../../dist/style/tyfy.css">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Variables</title>
+	</head>
+	<body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand sibling-margins-off reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="list-nobullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="mixins.html">Mixins</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="forms.html">Forms</a></li>
+  				<li><a href="effects.html">Effects</a></li>
+  				<li><a href="extras.html">Extras</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+		<section class="main links-underlined">
+			<h1>Variables</h1>
+			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the base grid, colors, text sizes, fonts, breakpoints, and other characteristics. My goal with this project is to have as few variables as possible. This results in some core variables – such as the grid unit, brand color and font size scalar – that can quickly change the entire character of the project to which <strong class="tyfy">Tyfy</strong> is applied. These core values are stored in the required/core file.</p>
+			<p>The remainder of the variables, most of which are defined as a function of a core value, are stored in the required/settings file.</p>
+			<p>All variables begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects.</p>
+			<h2>required/core</h2>
+			<dl>
+				<dt>$tyfy-grid-unit</dt>
+				<dd>Base grid unit in rem units; I recommend this value be half the default line height</dd>
+				<dt>$tyfy-leading-adjustment-tall</dt>
+				<dd>Unitless value used in by the leading function to calculate tall leading; values less than 1 result in larger leading</dd>
+				<dt>$tyfy-leading-adjustment-base</dt>
+				<dd>Unitless value used in by the leading function to calculate regular leading; values less than 1 result in larger leading</dd>
+				<dt>$tyfy-leading-adjustment-heading</dt>
+				<dd>Unitless value used in by the leading function to calculate heading leading; values less than 1 result in larger leading</dd>
+				<dt>$tyfy-leading-adjustment-short</dt>
+				<dd>Unitless value used in by the leading function to calculate short leading; values greater than 1 result in smaller leading</dd>
+				<dt>$tyfy-font-size-scalar</dt>
+				<dd>Unitless value that defines the proportion between sizes in the typographic scale</dd>
+				<dt>$tyfy-font-size-base</dt>
+				<dd>Fonts size applied to the <code>&lt;body&gt;</code> tag</dd>
+				<dt>$tyfy-serif</dt>
+				<dd>Serif font selection</dd>
+				<dt>$tyfy-sans</dt>
+				<dd>Sans-serif font selection</dd>
+				<dt>$tyfy-mono</dt>
+				<dd>Monospace font selection</dd>
+				<dt>$tyfy-symbol</dt>
+				<dd>Symbol font; set to the <strong class="tyfy">Tyfy</strong> <a href="icons.html">icon webfont</a></dd>
+				<dt>$tyfy-color-background</dt>
+				<dd>Background color of the <code>&lt;body&gt;</code> element</dd>
+				<dt>$tyfy-color-foreground</dt>
+				<dd>Color of the <code>&lt;body&gt;</code> element</dd>
+				<dt>$tyfy-color-primary</dt>
+				<dd>Your brand color</dd>
+			</dl>
+			<h2>required/settings</h2>
+			<h3>// grid and spacing</h3>
+			<dl>
+				<dt>$tyfy-spacing-standard</dt>
+				<dd>Standard spacing between <span class="smallcaps">HTML</span> elements defined as a number of grid units</dd>
+				<dt>$tyfy-spacing-large</dt>
+				<dd>Extra spacing between <span class="smallcaps">HTML</span> elements; used for spacing above headings</dd>
+				<dt>$tyfy-indent-standard</dt>
+				<dd>Standard indent distance for lists and blockquotes defined as a number of grid units</dd>
+				<dt>$tyfy-indent-small</dt>
+				<dd>Small indent distance for lists and blockquotes at small screen sizes</dd>
+				<dt>$tyfy-margins-on</dt>
+				<dd>Determines if adjacent sibling margins should be on; default is <code>true</code></dd>
+			</dl>
+			<h3>// font assignments</h3>
+			<dl>
+				<dt>$tyfy-font-base</dt>
+				<dd>Base font selection, used for body text</dd>
+				<dt>$tyfy-font-heading</dt>
+				<dd>Heading font selection</dd>
+				<dt>$tyfy-font-pullquote</dt>
+				<dd>Pullquote font selection</dd>
+				<dt>$tyfy-font-table</dt>
+				<dd>Table cell font selection</dd>
+			</dl>
+			<h3>// typographic scale</h3>
+			<dl>
+				<dt>$tyfy-font-size-sm</dt>
+				<dd>Small font size, used in the quotes and tables modules; defaults to one scale step down from the base font size</dd>
+				<dt>$tyfy-font-size-h6</dt>
+				<dd>Level 6 heading font size</dd>
+				<dt>$tyfy-font-size-h5</dt>
+				<dd>Level 5 heading font size</dd>
+				<dt>$tyfy-font-size-h4</dt>
+				<dd>Level 4 heading font size</dd>
+				<dt>$tyfy-font-size-h3</dt>
+				<dd>Level 3 heading font size</dd>
+				<dt>$tyfy-font-size-h2</dt>
+				<dd>Level 2 heading font size</dd>
+				<dt>$tyfy-font-size-h1</dt>
+				<dd>Level 1 heading font size</dd>
+			</dl>
+			<h3>// additional sizes</h3>
+			<dl>
+				<dt>$tyfy-font-size-pullquote</dt>
+				<dd>Pullquote font size; !default value is <code>tyscale(2)</code></dd>
+			</dl>
+			<h3>// measures</h3>
+			<dl>
+				<dt>$tyfy-width-border</dt>
+				<dd>Default thickness for borders; !default value is <code>2px</code></dd>
+			</dl>
+			<h3>// breakpoints</h3>
+			<dl>
+				<dt>$tyfy-break-floats</dt>
+				<dd>Below this width floated elements are not floated, instead shown at 100% width</dd>
+				<dt>$tyfy-break-pullquote-large</dt>
+				<dd>Above this width the margins around pullquotes increase</dd>
+				<dt>$tyfy-break-cols-2</dt>
+				<dd>Above this width content using the <code>cols-2</code> class can be 2 columns; !default value is <code>50em</code></dd>
+				<dt>$tyfy-break-list-cols-2</dt>
+				<dd>Above this width lists can be 2 columns</dd>
+				<dt>$tyfy-break-list-cols-3</dt>
+				<dd>Above this width lists can be 3 columns</dd>
+				<dt>$tyfy-break-list-cols-4</dt>
+				<dd>Above this width lists can be 4 columns</dd>
+				<dt>$tyfy-break-collapsables-pad</dt>
+				<dd>Below this screen width, the style of collapsables changes to maximize horizontal space; !default value is <code>50em</code></dd>
+				<dt>$tyfy-break-tabs</dt>
+				<dd>Below this width responsive tabs convert to collapsable sections</dd>
+				<dt>$tyfy-break-table</dt>
+				<dd>Below this width responsive tables are converted to labeled lists</dd>
+			</dl>
+			<h3>// transitions</h3>
+			<dl>
+				<dt>$tyfy-transition-duration-hover</dt>
+				<dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions where colors are changing</dd>
+				<dt>$tyfy-transition-duration-move</dt>
+				<dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions where measures are changing</dd>
+			</dl>
+			<h3>// site colors</h3>
+			<dl>
+				<dt>$tyfy-color-text-body</dt>
+				<dd>Default text color</dd>
+				<dt>$tyfy-color-text-head</dt>
+				<dd>Default heading text color</dd>
+				<dt>$tyfy-color-text-light</dt>
+				<dd>A light text color variant</dd>
+				<dt>$tyfy-color-text-code</dt>
+				<dd>Color of text in the <code>&lt;code&gt;</code> tag</dd>
+				<dt>$tyfy-color-text-pullquote</dt>
+				<dd>Color of text in pullquotes</dd>
+				<dt>$tyfy-color-link-default</dt>
+				<dd>Default link color</dd>
+				<dt>$tyfy-color-link-active</dt>
+				<dd>Color of links that are hovered or active</dd>
+				<dt>$tyfy-color-border</dt>
+				<dd>Default border color for tables, pullquotes, collapsable sections, etc.</dd>
+				<dt>$tyfy-color-table-stripe</dt>
+				<dd>Default stripe color for zebra-stripe tables</dd>
+			</dl>
+			<h3>// reverse colors</h3>
+			<dl>
+				<dt>$tyfy-color-text-body-reverse</dt>
+				<dd>Reverse default text color, for use on backgrounds where the text colors need to be inverted to be legible</dd>
+				<dt>$tyfy-color-text-head-reverse</dt>
+				<dd>Reverse default heading text color</dd>
+				<dt>$tyfy-color-text-light-reverse</dt>
+				<dd>Reverse light text color variant</dd>
+				<dt>$tyfy-color-text-pullquote-reverse</dt>
+				<dd>Reverse text color for pullquotes</dd>
+				<dt>$tyfy-color-link-default-reverse</dt>
+				<dd>Reverse default link color</dd>
+				<dt>$tyfy-color-link-active-reverse</dt>
+				<dd>Reverse color of links that are hovered or active</dd>
+				<dt>$tyfy-color-border-reverse</dt>
+				<dd>Reverse default border color</dd>
+				<dt>$tyfy-color-table-stripe-reverse</dt>
+				<dd>Reverse color of stripes in zebra-stripe tables</dd>
+			</dl>
+			<h3>// icons</h3>
+			<dl>
+  			<dt>$tyfyicons-path</dt>
+  			<dd>Define the path to the tyfyicons folder where the web font files will be kept for your project; defaults to "../fonts"</dd>
+			</dl>
+			<h3>// icon character codes</h3>
+			<dl>
+				<dt>$tyfyicons-angle-down</dt>
+				<dd>Character code for a down angle character in the selected icon font</dd>
+				<dt>$tyfyicons-angle-left</dt>
+				<dd>Character code for a left angle character in the selected icon font</dd>
+				<dt>$tyfyicons-angle-right-small</dt>
+				<dd>Character code for a small right angle character in the selected icon font</dd>
+				<dt>$tyfyicons-angle-right</dt>
+				<dd>Character code for a right angle character in the selected icon font</dd>
+				<dt>$tyfyicons-angle-up</dt>
+				<dd>Character code for a up angle character in the selected icon font</dd>
+				<dt>$tyfyicons-bars</dt>
+				<dd>Character code for a bars (hamburger icon) character in the selected icon font</dd>
+				<dt>$tyfyicons-dash</dt>
+				<dd>Character code for a long dash character in the selected icon font</dd>
+				<dt>$tyfyicons-facebook</dt>
+				<dd>Character code for a Facebook icon character in the selected icon font</dd>
+				<dt>$tyfyicons-instagram</dt>
+				<dd>Character code for a Instagram icon character in the selected icon font</dd>
+				<dt>$tyfyicons-linkedin</dt>
+				<dd>Character code for a LinkedIn icon character in the selected icon font</dd>
+				<dt>$tyfyicons-quote-left</dt>
+				<dd>Character code for a left double quote character in the selected icon font</dd>
+				<dt>$tyfyicons-quote-right</dt>
+				<dd>Character code for a right double quote character in the selected icon font</dd>
+				<dt>$tyfyicons-search</dt>
+				<dd>Character code for a magnifying glass icon character in the selected icon font</dd>
+				<dt>$tyfyicons-soundcloud</dt>
+				<dd>Character code for a SoundCloud icon character in the selected icon font</dd>
+				<dt>$tyfyicons-twitter</dt>
+				<dd>Character code for a Twitter icon character in the selected icon font</dd>
+				<dt>$tyfyicons-x</dt>
+				<dd>Character code for an x (remove) character in the selected icon font</dd>
+				<dt>$tyfyicons-youtube</dt>
+				<dd>Character code for a YouTube icon character in the selected icon font</dd>
+			</dl>
+		</section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="../resources/script/docs-nav.js"></script>
+		<!--/ COMMON FOOTER -->
+	</body>
+</html>

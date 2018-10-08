@@ -1,7 +1,2 @@
 # ignore all documentation related stuff for the npm package
 docs
-docs.js
-source/html
-source/includes
-source/scss/tyfy-docs.scss
-dist/img

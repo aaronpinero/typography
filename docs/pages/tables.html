@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../../dist/style/tyfy.css">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
+    <title>Tyfy - Tables</title>
+  </head>
+  <body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand sibling-margins-off reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="list-nobullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="mixins.html">Mixins</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="forms.html">Forms</a></li>
+  				<li><a href="effects.html">Effects</a></li>
+  				<li><a href="extras.html">Extras</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+    <section class="main links-underlined">
+      <h1>Tables</h1>
+      <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic, required class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and a few lines of JavaScript.</p>
+      <p>Proper application of styles and the responsive behavior depends on semantically correct structure of the tables. Tables should use the <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> tabs. Table headers should have the <code>scope</code> attribute to indicate how the headers should be interpreted.</p>
+      <p>Using the <code>float-left</code> and <code>float-right</code> classes, a table can be positioned to the left or right of the main text. Positioning left or right is limited to larger screen sizes. At smaller screen sizes, the styled tables are displayed at full width.</p>
+    </section>
+    <section class="main links-underlined demo paragraphs-justified">
+      <h1>Demo</h1>
+      <h2>Default (no style)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Quisque</th>
+            <th scope="col">Finibus</th>
+            <th scope="col">Nisl et Luctus</th>
+            <th scope="col">Velit</th>
+            <th scope="col">Commodo Sem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dolorum nobis deleniti</td>
+            <td>8971</td>
+            <td>513</td>
+            <td>9435</td>
+            <td>235</td>
+          </tr>
+          <tr>
+            <td>Sunt nobis doloremque</td>
+            <td>205</td>
+            <td>29580</td>
+            <td>95</td>
+            <td>349</td>
+          </tr>
+          <tr>
+            <td>Iure dolorem libero</td>
+            <td>3069</td>
+            <td>395</td>
+            <td>9358</td>
+            <td>284</td>
+          </tr>
+          <tr>
+            <td>Voluptatibus est reiciendis</td>
+            <td>5468</td>
+            <td>4352</td>
+            <td>43</td>
+            <td>6346</td>
+          </tr>
+        </tbody>
+      </table>
+        
+      <h2>Clean</h2>
+      <table class="clean">
+        <thead>
+          <tr>
+            <th scope="col">Quisque</th>
+            <th scope="col">Finibus</th>
+            <th scope="col">Nisl et Luctus</th>
+            <th scope="col">Velit</th>
+            <th scope="col">Commodo Sem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dolorum nobis deleniti</td>
+            <td>8971</td>
+            <td>513</td>
+            <td>9435</td>
+            <td>235</td>
+          </tr>
+          <tr>
+            <td>Sunt nobis doloremque</td>
+            <td>205</td>
+            <td>29580</td>
+            <td>95</td>
+            <td>349</td>
+          </tr>
+          <tr>
+            <td>Iure dolorem libero</td>
+            <td>3069</td>
+            <td>395</td>
+            <td>9358</td>
+            <td>284</td>
+          </tr>
+          <tr>
+            <td>Voluptatibus est reiciendis</td>
+            <td>5468</td>
+            <td>4352</td>
+            <td>43</td>
+            <td>6346</td>
+          </tr>
+        </tbody>
+      </table>
+        
+      <h2>Clean, Striped</h2>
+      <table class="clean striped">
+        <thead>
+          <tr>
+            <th scope="col">Quisque</th>
+            <th scope="col">Finibus</th>
+            <th scope="col">Nisl et Luctus</th>
+            <th scope="col">Velit</th>
+            <th scope="col">Commodo Sem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dolorum nobis deleniti</td>
+            <td>8971</td>
+            <td>513</td>
+            <td>9435</td>
+            <td>235</td>
+          </tr>
+          <tr>
+            <td>Sunt nobis doloremque</td>
+            <td>205</td>
+            <td>29580</td>
+            <td>95</td>
+            <td>349</td>
+          </tr>
+          <tr>
+            <td>Iure dolorem libero</td>
+            <td>3069</td>
+            <td>395</td>
+            <td>9358</td>
+            <td>284</td>
+          </tr>
+          <tr>
+            <td>Voluptatibus est reiciendis</td>
+            <td>5468</td>
+            <td>4352</td>
+            <td>43</td>
+            <td>6346</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h2>Clean, Striped, Horizontal Rules</h2>
+      <table class="clean striped horizontal-rules">
+        <thead>
+          <tr>
+            <th scope="col">Quisque</th>
+            <th scope="col">Finibus</th>
+            <th scope="col">Nisl et Luctus</th>
+            <th scope="col">Velit</th>
+            <th scope="col">Commodo Sem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dolorum nobis deleniti</td>
+            <td>8971</td>
+            <td>513</td>
+            <td>9435</td>
+            <td>235</td>
+          </tr>
+          <tr>
+            <td>Sunt nobis doloremque</td>
+            <td>205</td>
+            <td>29580</td>
+            <td>95</td>
+            <td>349</td>
+          </tr>
+          <tr>
+            <td>Iure dolorem libero</td>
+            <td>3069</td>
+            <td>395</td>
+            <td>9358</td>
+            <td>284</td>
+          </tr>
+          <tr>
+            <td>Voluptatibus est reiciendis</td>
+            <td>5468</td>
+            <td>4352</td>
+            <td>43</td>
+            <td>6346</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h2>Clean, Horizontal Rules, Vertical Rules</h2>
+      <table class="clean horizontal-rules vertical-rules">
+        <thead>
+          <tr>
+            <th scope="col">Quisque</th>
+            <th scope="col">Finibus</th>
+            <th scope="col">Nisl et Luctus</th>
+            <th scope="col">Velit</th>
+            <th scope="col">Commodo Sem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dolorum nobis deleniti</td>
+            <td>8971</td>
+            <td>513</td>
+            <td>9435</td>
+            <td>235</td>
+          </tr>
+          <tr>
+            <td>Sunt nobis doloremque</td>
+            <td>205</td>
+            <td>29580</td>
+            <td>95</td>
+            <td>349</td>
+          </tr>
+          <tr>
+            <td>Iure dolorem libero</td>
+            <td>3069</td>
+            <td>395</td>
+            <td>9358</td>
+            <td>284</td>
+          </tr>
+          <tr>
+            <td>Voluptatibus est reiciendis</td>
+            <td>5468</td>
+            <td>4352</td>
+            <td>43</td>
+            <td>6346</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Clean, Horizontal Rules, Responsive</h2>
+      <table class="clean horizontal-rules responsive">
+        <thead>
+          <tr>
+            <th scope="col">Quisque</th>
+            <th scope="col">Finibus</th>
+            <th scope="col">Nisl et Luctus</th>
+            <th scope="col">Velit</th>
+            <th scope="col">Commodo Sem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dolorum nobis deleniti</td>
+            <td>8971</td>
+            <td>513</td>
+            <td>9435</td>
+            <td>235</td>
+          </tr>
+          <tr>
+            <td>Sunt nobis doloremque</td>
+            <td>205</td>
+            <td>29580</td>
+            <td>95</td>
+            <td>349</td>
+          </tr>
+          <tr>
+            <td>Iure dolorem libero</td>
+            <td>3069</td>
+            <td>395</td>
+            <td>9358</td>
+            <td>284</td>
+          </tr>
+          <tr>
+            <td>Voluptatibus est reiciendis</td>
+            <td>5468</td>
+            <td>4352</td>
+            <td>43</td>
+            <td>6346</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Floated Tables</h2>
+      <table class="clean horizontal-rules striped float-right">
+        <thead>
+          <tr>
+            <th scope="col">Quisque</th>
+            <th scope="col">Finibus</th>
+            <th scope="col">Luctus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>513</td>
+            <td>9435</td>
+            <td>235</td>
+          </tr>
+          <tr>
+            <td>29580</td>
+            <td>95</td>
+            <td>349</td>
+          </tr>
+          <tr>
+            <td>395</td>
+            <td>9358</td>
+            <td>284</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>The House of Representatives shall be composed of Members chosen every second Year by the People of the several States, and the Electors in each State shall have the Qualifications requisite for Electors of the most numerous Branch of the State Legislature.</p>
+      <p>No Person shall be a Representative who shall not have attained to the Age of twenty five Years, and been seven Years a Citizen of the United States, and who shall not, when elected, be an Inhabitant of that State in which he shall be chosen.</p>
+      <table class="clean horizontal-rules float-left">
+        <thead>
+          <tr>
+            <th scope="col">Quisque</th>
+            <th scope="col">Finibus</th>
+            <th scope="col">Luctus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>513</td>
+            <td>9435</td>
+            <td>235</td>
+          </tr>
+          <tr>
+            <td>29580</td>
+            <td>95</td>
+            <td>349</td>
+          </tr>
+          <tr>
+            <td>395</td>
+            <td>9358</td>
+            <td>284</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Representatives and direct Taxes shall be apportioned among the several States which may be included within this Union, according to their respective Numbers, which shall be determined by adding to the whole Number of free Persons, including those bound to Service for a Term of Years, and excluding Indians not taxed, three fifths of all other Persons. The actual Enumeration shall be made within three Years after the first Meeting of the Congress of the United States, and within every subsequent Term of ten Years, in such Manner as they shall by Law direct. The Number of Representatives shall not exceed one for every thirty Thousand, but each State shall have at Least one Representative; and until such enumeration shall be made, the State of New Hampshire shall be entitled to chuse three, Massachusetts eight, Rhode-Island and Providence Plantations one, Connecticut five, New-York six, New Jersey four, Pennsylvania eight, Delaware one, Maryland six, Virginia ten, North Carolina five, South Carolina five, and Georgia three.</p>
+    </section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="../resources/script/docs-nav.js"></script>
+		<!--/ COMMON FOOTER -->
+    <script src="../../dist/script/tables.js"></script>
+  </body>
+</html>
