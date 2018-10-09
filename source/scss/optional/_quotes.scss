@@ -1,9 +1,7 @@
 blockquote {
   font-style:italic;
-  margin-bottom:$tyfy-spacing-standard;
   margin-left:$tyfy-indent-small;
   margin-right:$tyfy-indent-small;
-  margin-top:$tyfy-spacing-standard;
   @media (min-width:$tyfy-break-pullquote-large) {
     margin-left:$tyfy-indent-standard;
     margin-right:$tyfy-indent-standard;
@@ -14,17 +12,12 @@ blockquote {
   &.pullquote {
     background-color:transparent;
     border:none;
-    color:$tyfy-color-text-pullquote;
-    font-family:$tyfy-font-pullquote;
     font-size:$tyfy-font-size-pullquote;
     line-height:tylead($tyfy-font-size-pullquote,tall);
-    margin:$tyfy-spacing-standard 0 $tyfy-spacing-large 0;
+    margin-left:0;
+    margin-right:0;
     position:relative;
     text-align:center;
-    @media (min-width:$tyfy-break-pullquote-large) {
-      margin-left:$tyfy-indent-standard;
-      margin-right:$tyfy-indent-standard;
-    }
     p {
       font-size:$tyfy-font-size-pullquote;
       line-height:tylead($tyfy-font-size-pullquote,tall);
@@ -36,38 +29,33 @@ blockquote {
       line-height:tylead($tyfy-font-size-sm,tall);
     }
     * + cite {
-      margin-top:$tyfy-grid-unit;
+      margin-top:tygrid(1);
     }
-    &::before {
+    &.pullquote-roof-fixed::before {
       color:$tyfy-color-border;
-      content:tychar($tyfyicons-quote-left);
+      content:tychar($tyfyicons-quote-roof);
       display:block;
       font-family:$tyfy-symbol;
       font-style:normal;
       font-weight:normal;
       text-align:center;
     }
-    &::after {
-      color:$tyfy-color-border;
-      content:"————— \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 —————";
+    &.pullquote-roof-full::before {
+      background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22640px%22%20height%3D%2264px%22%20viewBox%3D%220%200%20640%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#{$tyfy-color-border}%22%3E%3Cpath%20d%3D%22M291%2C14%20L317%2C14%20L317%2C34%20C317%2C45.1082357%20310.333333%2C54.441569%20297%2C62%20L292%2C52%20C300%2C47.9026693%20304%2C43.2360026%20304%2C38%20L291%2C38%20L291%2C14%20Z%22%3E%3C%2Fpath%3E%3Cpolygon%20points%3D%220%2025%20272%2025%20272%2034%200%2034%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22368%2025%20640%2025%20640%2034%20368%2034%22%3E%3C%2Fpolygon%3E%3Cpath%20d%3D%22M323%2C14%20L349%2C14%20L349%2C34%20C349%2C45.1082357%20342.333333%2C54.441569%20329%2C62%20L324%2C52%20C332%2C47.9026693%20336%2C43.2360026%20336%2C38%20L323%2C38%20L323%2C14%20Z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      background-size:contain;
+      background-position:center center;
+      background-repeat:no-repeat;
+      content:"";
       display:block;
-      font-style:normal;
-      font-weight:normal;
-      left:0;
-      letter-spacing:-0.15em;
-      margin-left:-0.075em;
-      position:absolute;
-      text-align:center;
-      top:0;
-      white-space:nowrap;
-      width:100%;
+      height:tylead($tyfy-font-size-pullquote,tall);
     }
     &.float-left,
     &.float-right {
       @media (min-width:$tyfy-break-floats) {
         box-sizing:border-box;
         text-align:left;
-        width:calc(50% - #{tygrid(2)});
+        margin-bottom:$tyfy-spacing-standard;
+        width:calc(50% - #{$tyfy-spacing-standard});
       }
     }
     &.float-left {
@@ -75,14 +63,14 @@ blockquote {
         clear:left;
         float:left;
         margin-left:0;
-        margin-right:tygrid(4);
+        margin-right:2 * $tyfy-spacing-standard;
       }
     }
     &.float-right {
       @media (min-width:$tyfy-break-floats) {
         clear:right;
         float:right;
-        margin-left:tygrid(4);
+        margin-left:2 * $tyfy-spacing-standard;
         margin-right:0;
       }
     }

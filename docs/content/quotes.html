@@ -8,8 +8,33 @@
 		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>Quotes</h1>
-			<p>The <code>&lt;blockquote&gt;</code> tag is commonly used for both long quotations and pull quotes. The basic <code>&lt;blockquote&gt;</code> style is intended for long quotations. A <code>pullquote</code> class can be applied to the <code>&lt;blockquote&gt;</code> tag for fancier quotes. Pull quotes can also be positioned to the left or right of the text by applying the <code>float-left</code> and <code>float-right</code> classes. Positioning left or right is limited to larger screen sizes. At smaller screen sizes, the pull quotes are displayed at full width.</p>
-			<p>The pull quote style is inspired by the design of the <a href="https://www.college.columbia.edu/campaign">Core to Commencement Campaign</a> website that was designed by <a href="https://www.barrelny.com">Barrel</a>. This version omits the need for images or svg, instead using pseudo-elements and a <a href="icons.html">icon webfont</a>.</p>
+			<p>The <code>&lt;blockquote&gt;</code> tag is commonly used for both long quotations and pull quotes. <strong class="tyfy">Tyfy</strong> provides classes that allow the basic <code>&lt;blockquote&gt;</code> to also be used for fancier pull quotes.</p>
+			<h2>Classes</h2>
+			<dl>
+  			<dt>.pullquote</dt>
+  			<dd>Applied to a <code>&lt;blockquote&gt;</code> to render as a pull quote. </dd>
+  			<dt>.pullquote-roof-fixed</dt>
+  			<dd>Added to the <code>pullquote</code> class to display a decorative, fixed-width border element above the pullquote; the decorative border is the <code>$tyfy-quote-roof</code> icon.</dd>
+  			<dt>.pullquote-roof-full</dt>
+				<dd>Added to the <code>pullquote</code> class to display a decorative, relative-width border element above the pullquote; the decorative border is a background svg based on the the <code>$tyfy-quote-roof</code> icon.</dd>
+  			<dt>.float-left</dt>
+  			<dd>Added to the <code>pullquote</code> class to position the pull quote float-left. This degrades to a regular pull quote at screen widths smaller than <code>$tyfy-break-floats</code>.</dd>
+  			<dt>.float-right</dt>
+				<dd>Added to the <code>pullquote</code> class to position the pull quote float-right. This degrades to a regular pull quote at screen widths smaller than <code>$tyfy-break-floats</code>.</dd>
+			</dl>
+			<h2>Related Variables</h2>
+			<dl>
+  			<dt>$tyfy-font-size-pullquote</dt>
+  			<dd>Font size for <code>&lt;blockquote&gt;</code> with the <code>pullquote</code> class.</dd>
+  			<dt>$tyfy-color-border</dt>
+  			<dd>Color of the decorative border on pullquotes using the <code>pullquote-roof-fixed</code> or <code>pullquote-roof-full</code> class.</dd>
+				<dt>$tyfy-indent-standard</dt>
+  			<dd>Horizontal margin for <code>&lt;blockquote&gt;</code> elements. This margin reduces to <code>$tyfy-indent-standard</code> at screen widths below below <code>$tyfy-break-pullquote-large</code>.</dd>
+				<dt>$tyfy-break-floats</dt>
+  			<dd>Screen width breakpoint above which the float classes take effect.</dd>
+				<dt>$tyfy-break-floats</dt>
+				<dd>Screen width breakpoint above which quotes have increased margin.</dd>
+			</dl>
 		</section>
 		<section class="main links-underlined demo">
 			<h1>Demo</h1>
@@ -23,14 +48,19 @@
 				“A block quote as pull quote donec nulla sem, porta nec dolor a, facilisis gravida nibh. Mauris vel dolor metus. Integer ut pharetra lacus.”
 			</blockquote>
 			<p>Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas quis nisi sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.</p>
+			<blockquote class="pullquote pullquote-roof-fixed">
+				<p>Quis natus excepturi consectetur necessitatibus. Pariatur culpa rerum saepe aperiam molestiae. Optio aut recusandae amet aperiam.</p>
+			</blockquote>
+			<p>Laborum accusantium in aut molestias voluptas exercitationem sint fugiat. Ea ratione eligendi dolor autem nemo nesciunt porro facere. Facere asperiores sequi quibusdam molestiae. Voluptas maxime nihil nesciunt est. Quo fugiat reiciendis laudantium voluptatem. Et quia consequatur autem qui sapiente.</p>
+
 			<h3>Et Omnis Officia Sint</h3>
-			<blockquote class="pullquote float-left">
+			<blockquote class="pullquote float-left pullquote-roof-full">
 				“Dolorum nobis deleniti. Sunt nobis doloremque ab eveniet eum earum sunt. Iure dolorem libero dolorum labore ad et magni. Voluptatibus est reiciendis dignissimos laborum quia.”
 			</blockquote>
 			<p>Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
 			<p>In fringilla consectetur lorem varius bibendum. Pellentesque egestas eros lectus, eu gravida eros imperdiet vel. Nullam finibus quam eget nisi vehicula tempor. Etiam interdum odio ligula, ac imperdiet eros cursus sed. Aliquam a convallis orci, eu aliquam dui.</p>
 			<h2>Molestiae Soluta Repellat Rerum Commodi</h2>
-			<blockquote class="pullquote float-right">
+			<blockquote class="pullquote float-right pullquote-roof-full">
 			  <p>“Et voluptatem sed sit alias sunt. Qui qui dolores ipsa aliquid est dolor. Labore totam sit repellendus illo quod. Mollitia id voluptatem rerum. Soluta asperiores dolores ullam deleniti provident.”</p>
 			  <cite>– Aaron Pinero, designer</cite>
 			</blockquote>
