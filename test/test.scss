@@ -1,0 +1,116 @@
+// tyfy core overrides
+$tyfy-grid-unit:0.75rem;
+$tyfy-leading-adjustment-tall:0.8;
+$tyfy-leading-adjustment-base:0.9;
+$tyfy-leading-adjustment-heading:1;
+$tyfy-leading-adjustment-short:1.2;
+$tyfy-font-size-scalar:1.25;
+$tyfy-font-size-base:1.125rem;
+$tyfy-serif:georgia, serif;
+$tyfy-sans:helvetica, arial, sans-serif;
+$tyfy-mono:monaco, courier, monospace;
+$tyfy-symbol:tyfyicons;
+$tyfy-color-background:white;
+$tyfy-color-foreground:#111;
+$tyfy-color-primary:#4185de;
+
+// tyfy settings overrides
+$tyfy-spacings: (
+  "standard":2,
+  "large":4,
+);
+$tyfy-indents: (
+  "standard":3,
+  "small":2,
+);
+$tyfy-margins-on:true;
+$tyfy-serif:georgia, serif;
+$tyfy-sans:helvetica, arial, sans-serif;
+$tyfy-mono:monaco, courier, monospace;
+$tyfy-symbol:tyfyicons;
+$tyfy-font-base:$tyfy-serif;
+$tyfy-font-heading:$tyfy-sans;
+$tyfy-font-table:$tyfy-sans;
+$tyfy-font-sizes: (
+  "sm":-1,
+  "h6":-1,
+  "h5":0,
+  "h4":1,
+  "h3":2,
+  "h2":3,
+  "h1":5,
+  "pullquote":2,
+  "lede":2
+);
+$tyfy-width-border:2px;
+$tyfy-break-floats:40em;
+$tyfy-break-pullquote-large:40em;
+$tyfy-break-cols-2:50em;
+$tyfy-break-list-cols-2:35em;
+$tyfy-break-list-cols-3:55em;
+$tyfy-break-list-cols-4:75em;
+$tyfy-break-collapsables-pad:50em;
+$tyfy-break-tabs:40em;
+$tyfy-break-table:40em;
+$tyfy-transition-duration-hover:0.25s;
+$tyfy-transition-duration-move:0.5s;
+$fades: (
+  "500ms":500ms,
+  "1s":1000ms,
+  "2s":2000ms,
+  "3s":3000ms
+);
+$tyfyicons-path:"../dist/fonts/tyfyicons";
+$tyfyicons-angle-down:"ea01";
+$tyfyicons-angle-left:"ea02";
+$tyfyicons-angle-right:"ea03";
+$tyfyicons-angle-up-down:"ea04";
+$tyfyicons-angle-up:"ea05";
+$tyfyicons-bars:"ea06";
+$tyfyicons-check:"ea07";
+$tyfyicons-dash:"ea08";
+$tyfyicons-quote-left:"ea09";
+$tyfyicons-quote-right:"ea0a";
+$tyfyicons-quote-roof:"ea0b";
+$tyfyicons-search:"ea0c";
+$tyfyicons-x:"ea0d";
+@import "../source/scss/tyfy.scss";
+@import "../source/scss/extras/icons";
+body {
+  margin-left:auto;
+  margin-right:auto;
+  max-width:tygrid(70);
+  padding:$tyfy-spacing-standard;
+}
+.swatch {
+  border-radius:50%;
+  display:inline-block;
+  height:tygrid(3);
+  vertical-align:middle;
+  width:tygrid(3);
+  &.text-body {
+    background-color:$tyfy-color-text-body;
+  }
+  &.text-head {
+    background-color:$tyfy-color-text-head;
+  }
+  &.text-light {
+    background-color:$tyfy-color-text-light;
+  }
+  &.link-default {
+    background-color:$tyfy-color-link-default;
+  }
+  &.link-active {
+    background-color:$tyfy-color-link-active;
+  }
+  &.border {
+    background-color:$tyfy-color-border;
+  }
+  &.table-stripe {
+    background-color:$tyfy-color-table-stripe;
+  }
+}
+hr.demo {
+  margin-bottom:tygrid(0.5);
+  margin-top:tygrid(0.5);
+}

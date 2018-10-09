@@ -9,10 +9,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "./bin/build-css",
     "build-css-dev": "./bin/build-css-dev",
+    "build-css-test": "./bin/build-css-test",
     "build-icons": "./bin/build-icons",
     "build-docs-html": "node docs/docs.js",
     "watch-css": "./bin/watch-css",
-    "watch-css-dev": "./bin/watch-css-dev"
+    "watch-css-dev": "./bin/watch-css-dev",
+    "watch-css-test": "./bin/watch-css-test"
   },
   "repository": {
     "type": "git",
