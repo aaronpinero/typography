@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
     <title>angle-up</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="angle-up" fill="#000000">
-            <polygon id="Combined-Shape" points="32 10 64 42 57 49 32 24 7 49 -1.5138113e-11 42"></polygon>
-        </g>
+    <g id="angle-up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Combined-Shape" fill="#000000" points="32 10 64 42 57 49 32 24 7 49 -1.5138113e-11 42"></polygon>
     </g>
 </svg>

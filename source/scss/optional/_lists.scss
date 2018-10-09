@@ -35,6 +35,7 @@ ul {
       &::before {
         color:$tyfy-color-text-light;
         font-family:$tyfy-symbol;
+        font-size:66%;
         margin-right:tygrid(0.5);
         position:absolute;
         right:100%;
@@ -42,7 +43,14 @@ ul {
       }
     }
     &.list-icons-angle li::before {
-      content:tychar($tyfyicons-angle-right-small);
+      content:tychar($tyfyicons-angle-right);
+    }
+    &.list-icons-dash li::before {
+      content:tychar($tyfyicons-dash);
+      margin-top:0.1em;
+    }
+    &.list-icons-check li::before {
+      content:tychar($tyfyicons-check);
     }
   }
   &.list-nobullet {
@@ -125,7 +133,7 @@ ul {
       columns:3;
     }
   }
-  
+
   &.list-grid-2,
   &.list-grid-3,
   &.list-grid-4 {

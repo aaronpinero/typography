@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
     <title>quote-right</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="quote-right" fill="#000000">
-            <path d="M3,14 L29,14 L29,34 C29,45.1082357 22.3333333,54.441569 9,62 L4,52 C12,47.9026693 16,43.2360026 16,38 L3,38 L3,14 Z" id="Path"></path>
-            <path d="M35,14 L61,14 L61,34 C61,45.1082357 54.3333333,54.441569 41,62 L36,52 C44,47.9026693 48,43.2360026 48,38 L35,38 L35,14 Z" id="Path"></path>
-        </g>
+    <g id="quote-right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M3,14 L29,14 L29,34 C29,45.1082357 22.3333333,54.441569 9,62 L4,52 C12,47.9026693 16,43.2360026 16,38 L3,38 L3,14 Z" id="Path" fill="#000000"></path>
+        <path d="M35,14 L61,14 L61,34 C61,45.1082357 54.3333333,54.441569 41,62 L36,52 C44,47.9026693 48,43.2360026 48,38 L35,38 L35,14 Z" id="Path" fill="#000000"></path>
     </g>
 </svg>

@@ -53,9 +53,41 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Icons</h1>
-			<p>Because <strong class="tyfy">Tyfy</strong> only needs a handful of icons, I've included a dozen or so common icons as a custom web font rather than recommend an extensive and weighty font library.</p>
-			<p>Node.js and the <a href="https://www.npmjs.com/package/webfont">webfont</a> package are used to convert a set of .svg icons into an icon webfont called tyfyicons. The Sketch file used to create the .svgs is included in the repository.</p>
-			<p>The tyfyicons font is not necessarily required. If you want to use a different icon font, you will need to customize the values for the icon character code variables in the <code>required/settings</code> module to use character values for the selected font. Tyfyicons are used in styles for <a href="lists.html">lists</a>, <a href="quotes.html">blockquotes</a>, <a href="collapsables.html">collapsables</a>, and <a href="tabs.html">tabs</a>. If you are not planning to use those modules, the icon font module can be omitted and the character code variables ignored.</p>
+			<p>Because <strong class="tyfy">Tyfy</strong> only needs a handful of icons, I've included a dozen or so common icons as a custom web font. Node.js and the <a href="https://www.npmjs.com/package/webfont">webfont</a> package are used to convert a set of .svg icons into an icon webfont called tyfyicons. The Sketch file used to create the .svgs is included in the <strong class="tyfy">Tyfy</strong> repository.</p>
+			<h2>Do I Need This Font?</h2>
+			<p>The tyfyicons font is not required. If you want to use a different icon font, customize the values for the icon character code variables in the <code>required/settings</code> module to use character values for your preferred font. Icons are used in styles for:</p>
+			<ul>
+  			<li>
+  			  <a href="lists.html">lists</a>
+  			  <ul>
+    			  <li><code>$tyfyicons-angle-right</code></li>
+						<li><code>$tyfyicons-dash</code></li>
+						<li><code>$tyfyicons-check</code></li>
+  			  </ul>
+  			</li>
+  			<li>
+  			  <a href="quotes.html">blockquotes</a>
+  			  <ul>
+    			  <li><code>$tyfyicons-dash</code></li>
+    			  <li><code>$tyfyicons-quote-right</code></li>
+  			  </ul>
+  		  </li>
+        <li>
+          <a href="collapsables.html">collapsables</a>
+  			  <ul>
+    			  <li><code>$tyfyicons-angle-down</code></li>
+    			  <li><code>$tyfyicons-angle-up</code></li>
+  			  </ul>
+        </li>
+        <li>
+          <a href="tabs.html">tabs</a>
+  			  <ul>
+    			  <li><code>$tyfyicons-angle-down</code></li>
+    			  <li><code>$tyfyicons-angle-up</code></li>
+  			  </ul>
+        </li>
+			</ul>
+			<p>If you are not planning to use those modules, <strong class="tyfy">Tyfy</strong> will not need icons and the character code variables ignored.</p>
 			<h2>Using Icons in <span class="smallcaps">SCSS</span></h2>
 			<p>Because of an issue with <span class="smallcaps">SASS</span>, the icon font character codes are stored in the <code>required/settings</code> without their preceding slash:</p>
 			<pre><code>$tyfyicons-angle-up:"ea05";</code></pre>
@@ -74,20 +106,16 @@
 					<tr><td><span class="tyfyicons tyfyicons-angle-up"></span></td><td>$tyfyicons-angle-up</td><td>\ea05</td></tr>
 					<tr><td><span class="tyfyicons tyfyicons-angle-down"></span></td><td>$tyfyicons-angle-down</td><td>\ea01</td></tr>
 					<tr><td><span class="tyfyicons tyfyicons-angle-left"></span></td><td>$tyfyicons-angle-left</td><td>\ea02</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-angle-right"></span></td><td>$tyfyicons-angle-right</td><td>\ea04</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-angle-right-small"></span></td><td>$tyfyicons-angle-right-small</td><td>\ea03</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-angle-right"></span></td><td>$tyfyicons-angle-right</td><td>\ea03</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-angle-up-down"></span></td><td>$tyfyicons-angle-up-down</td><td>\ea04</td></tr>
 					<tr><td><span class="tyfyicons tyfyicons-bars"></span></td><td>$tyfyicons-bars</td><td>\ea06</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-x"></span></td><td>$tyfyicons-x</td><td>\ea10</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-dash"></span></td><td>$tyfyicons-dash</td><td>\ea07</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-quote-left"></span></td><td>$tyfyicons-quote-left</td><td>\ea0b</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-quote-right"></span></td><td>$tyfyicons-quote-right</td><td>\ea0c</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-search"></span></td><td>$tyfyicons-search</td><td>\ea0d</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-facebook"></span></td><td>$tyfyicons-facebook</td><td>\ea08</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-instagram"></span></td><td>$tyfyicons-instagram</td><td>\ea09</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-linkedin"></span></td><td>$tyfyicons-linkedin</td><td>\ea0a</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-soundcloud"></span></td><td>$tyfyicons-soundcloud</td><td>\ea0e</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-twitter"></span></td><td>$tyfyicons-twitter</td><td>\ea0f</td></tr>
-					<tr><td><span class="tyfyicons tyfyicons-youtube"></span></td><td>$tyfyicons-youtube</td><td>\ea11</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-x"></span></td><td>$tyfyicons-x</td><td>\ea0d</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-check"></span></td><td>$tyfyicons-check</td><td>\ea07</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-dash"></span></td><td>$tyfyicons-dash</td><td>\ea08</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-quote-left"></span></td><td>$tyfyicons-quote-left</td><td>\ea09</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-quote-right"></span></td><td>$tyfyicons-quote-right</td><td>\ea0a</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-quote-roof"></span></td><td>$tyfyicons-quote-roof</td><td>\ea0b</td></tr>
+					<tr><td><span class="tyfyicons tyfyicons-search"></span></td><td>$tyfyicons-search</td><td>\ea0c</td></tr>
 				</tbody>
 			</table>
 		</section>

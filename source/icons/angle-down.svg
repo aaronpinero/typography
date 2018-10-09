@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
     <title>angle-down</title>
-    <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="angle-down" fill="#000000">
-            <polygon id="Combined-Shape" points="32 54 -1.43494105e-11 22 7 15 32 40 57 15 64 22"></polygon>
-        </g>
+    <g id="angle-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Combined-Shape" fill="#000000" points="32 54 -1.43494105e-11 22 7 15 32 40 57 15 64 22"></polygon>
     </g>
 </svg>

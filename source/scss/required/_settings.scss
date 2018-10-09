@@ -94,6 +94,7 @@ $tyfy-color-border-reverse:         fade-out(tyreverse($tyfy-color-text-body),0.
 $tyfy-color-table-stripe-reverse:   fade-out(tyreverse($tyfy-color-text-body),0.95) !default;
 
 // icons
+// path to icon fonts
 $tyfyicons-path:                    "../fonts/tyfyicons" !default; // do not add a trailing /
 
 // icon character codes
@@ -104,18 +105,14 @@ $tyfyicons-path:                    "../fonts/tyfyicons" !default; // do not add
 // these values can be overridden to allow a different icon font
 $tyfyicons-angle-down:              "ea01" !default;
 $tyfyicons-angle-left:              "ea02" !default;
-$tyfyicons-angle-right-small:       "ea03" !default;
-$tyfyicons-angle-right:             "ea04" !default;
+$tyfyicons-angle-right:             "ea03" !default;
+$tyfyicons-angle-up-down:           "ea04" !default;
 $tyfyicons-angle-up:                "ea05" !default;
 $tyfyicons-bars:                    "ea06" !default;
-$tyfyicons-dash:                    "ea07" !default;
-$tyfyicons-facebook:                "ea08" !default;
-$tyfyicons-instagram:               "ea09" !default;
-$tyfyicons-linkedin:                "ea0a" !default;
-$tyfyicons-quote-left:              "ea0b" !default;
-$tyfyicons-quote-right:             "ea0c" !default;
-$tyfyicons-search:                  "ea0d" !default;
-$tyfyicons-soundcloud:              "ea0e" !default;
-$tyfyicons-twitter:                 "ea0f" !default;
-$tyfyicons-x:                       "ea10" !default;
-$tyfyicons-youtube:                 "ea11" !default;
+$tyfyicons-check:                   "ea07" !default;
+$tyfyicons-dash:                    "ea08" !default;
+$tyfyicons-quote-left:              "ea09" !default;
+$tyfyicons-quote-right:             "ea0a" !default;
+$tyfyicons-quote-roof:              "ea0b" !default;
+$tyfyicons-search:                  "ea0c" !default;
+$tyfyicons-x:                       "ea0d" !default;
