@@ -11,7 +11,7 @@
   h6 {
     color:$tyfy-color-text-head-reverse;
   }
-  
+
   // links
   a {
     color:$tyfy-color-text-body-reverse;
@@ -63,27 +63,24 @@
       }
     }
   }
-  
+
   // utility
   code {
     background-color:rgba($tyfy-color-text-body-reverse,0.07);
     color:$tyfy-color-text-code-reverse;
   }
-  
+
   // quotes
   blockquote {
-    &.pullquote {
-      color:$tyfy-color-text-pullquote-reverse;
-      &::before {
-        color:$tyfy-color-border-reverse;
-      }
-      &::after {
-        color:$tyfy-color-border-reverse;
-      }
+    &.pullquote-roof-fixed::before {
+      color:$tyfy-color-border-reverse;
+    }
+    &.pullquote-roof-full::before {
+      background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22640px%22%20height%3D%2264px%22%20viewBox%3D%220%200%20640%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#{$tyfy-color-border-reverse}%22%3E%3Cpath%20d%3D%22M291%2C14%20L317%2C14%20L317%2C34%20C317%2C45.1082357%20310.333333%2C54.441569%20297%2C62%20L292%2C52%20C300%2C47.9026693%20304%2C43.2360026%20304%2C38%20L291%2C38%20L291%2C14%20Z%22%3E%3C%2Fpath%3E%3Cpolygon%20points%3D%220%2025%20272%2025%20272%2034%200%2034%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22368%2025%20640%2025%20640%2034%20368%2034%22%3E%3C%2Fpolygon%3E%3Cpath%20d%3D%22M323%2C14%20L349%2C14%20L349%2C34%20C349%2C45.1082357%20342.333333%2C54.441569%20329%2C62%20L324%2C52%20C332%2C47.9026693%20336%2C43.2360026%20336%2C38%20L323%2C38%20L323%2C14%20Z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     }
   }
-  
-  // tables 
+
+  // tables
   table.striped {
     tr:nth-child(2n) {
       td {
