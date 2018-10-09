@@ -1,9 +1,7 @@
 blockquote {
   font-style:italic;
-  margin-bottom:$tyfy-spacing-standard;
   margin-left:$tyfy-indent-small;
   margin-right:$tyfy-indent-small;
-  margin-top:$tyfy-spacing-standard;
   @media (min-width:$tyfy-break-pullquote-large) {
     margin-left:$tyfy-indent-standard;
     margin-right:$tyfy-indent-standard;
@@ -20,10 +18,6 @@ blockquote {
     margin-right:0;
     position:relative;
     text-align:center;
-    @media (min-width:$tyfy-break-pullquote-large) {
-      margin-left:$tyfy-indent-standard;
-      margin-right:$tyfy-indent-standard;
-    }
     p {
       font-size:$tyfy-font-size-pullquote;
       line-height:tylead($tyfy-font-size-pullquote,tall);
@@ -59,7 +53,8 @@ blockquote {
       @media (min-width:$tyfy-break-floats) {
         box-sizing:border-box;
         text-align:left;
-        width:calc(50% - #{tygrid(2)});
+        margin-bottom:$tyfy-spacing-standard;
+        width:calc(50% - #{$tyfy-spacing-standard});
       }
     }
     &.float-left {
@@ -67,14 +62,14 @@ blockquote {
         clear:left;
         float:left;
         margin-left:0;
-        margin-right:tygrid(4);
+        margin-right:2 * $tyfy-spacing-standard;
       }
     }
     &.float-right {
       @media (min-width:$tyfy-break-floats) {
         clear:right;
         float:right;
-        margin-left:tygrid(4);
+        margin-left:2 * $tyfy-spacing-standard;
         margin-right:0;
       }
     }
