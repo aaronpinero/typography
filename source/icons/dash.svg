@@ -3,6 +3,6 @@
     <title>dash</title>
     <defs></defs>
     <g id="dash" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Combined-Shape" fill="#000000" points="0 24.5 64 24.5 64 33.5 2.23820962e-13 33.5"></polygon>
+        <polygon id="Combined-Shape" fill="#000000" points="0 24.5 64 24.5 64 33.5 0 33.5"></polygon>
     </g>
 </svg>
