@@ -49,3 +49,6 @@ span {
 .button {
   @include button;
 }
+.button-outline {
+  @include button-outline;
+}
