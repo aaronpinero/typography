@@ -928,12 +928,13 @@
 				<p><input type="submit" name="submit" value="Submit Form"></p>
 			</form>
 		</figure>
-		<figure>
-			<figcaption>Reverse</figcaption>
-		</figure>
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="../dist/script/collapsables.js"></script>
 		<script src="../dist/script/tabs.js"></script>
 		<script src="../dist/script/tables.js"></script>
+		<script>
+			$('body').append('<div class="button button-rev">Rev</div>');
+			$('.button-rev').click(function(){ $('figure').toggleClass('reverse'); });
+		</script>
 	</body>
 </html>

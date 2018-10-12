@@ -141,3 +141,14 @@ hr.demo {
   margin-bottom:tygrid(0.5);
   margin-top:tygrid(0.5);
 }
+.button-rev {
+  opacity:0.25;
+  position:fixed;
+  right:tygrid(0.5);
+  top:tygrid(0.5);
+  transition:all $tyfy-transition-duration-hover;
+  z-index:100;
+  &:hover {
+    opacity:1;
+  }
+}
