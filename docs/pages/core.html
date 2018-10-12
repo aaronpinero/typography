@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../../dist/style/tyfy.css">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Core</title>
+	</head>
+	<body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand sibling-margins-off reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="list-nobullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="mixins.html">Mixins</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="forms.html">Forms</a></li>
+  				<li><a href="effects.html">Effects</a></li>
+  				<li><a href="extras.html">Extras</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+		<section class="main links-underlined">
+			<h1>Core</h1>
+			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the baseline grid, colors, text sizes, fonts, breakpoints, and other characteristics. The core variables are those that affect the baseline grid and modular scale. The value of these variables can have a significant impact on the character of your typographic design.</p>
+			<p>Core variables are stored in the required/core module. This module is the first one imported to the framework. Core variable values are required by the <a href="functions.html">required/functions</a> module to calculate values for variables in the <a href="settings.html">required/settings</a> module.</p>
+			<p>All variable names begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects.</p>
+			<h2>Core Variables</h2>
+			<dl>
+				<dt><code class="code-nobg">$tyfy-grid-unit: 0.875rem !default;</code></dt>
+				<dd>Base grid unit in rem units; I recommend this value be half the desired line height</dd>
+				<dt><code class="code-nobg">$tyfy-leading-adjustment-tall: 0.8 !default;</code></dt>
+				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &lt; 1 result in taller leading</dd>
+				<dt><code class="code-nobg">$tyfy-leading-adjustment-base: 0.9 !default;</code></dt>
+				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &lt; 1 result in taller leading</dd>
+				<dt><code class="code-nobg">$tyfy-leading-adjustment-heading: 1 !default;</code></dt>
+				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &gt;= 1 result in smaller leading</dd>
+				<dt><code class="code-nobg">$tyfy-leading-adjustment-short: 1.2 !default;</code></dt>
+				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &gt; 1 result in smaller leading</dd>
+				<dt><code class="code-nobg">$tyfy-font-size-scalar: 1.2 !default;</code></dt>
+				<dd>Scalar value that defines the proportion between text sizes on the typographic scale</dd>
+				<dt><code class="code-nobg">$tyfy-font-size-base: 1rem !default;</code></dt>
+				<dd>Font size in rem units applied to the <code>&lt;body&gt;</code> tag</dd>
+			</dl>
+		</section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="../resources/script/docs-nav.js"></script>
+		<!--/ COMMON FOOTER -->
+	</body>
+</html>

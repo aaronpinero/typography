@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<%include head.html%>
+		<title>Tyfy - Core</title>
+	</head>
+	<body class="">
+		<%include header.html%>
+		<section class="main links-underlined">
+			<h1>Core</h1>
+			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the baseline grid, colors, text sizes, fonts, breakpoints, and other characteristics. The core variables are those that affect the baseline grid and modular scale. The value of these variables can have a significant impact on the character of your typographic design.</p>
+			<p>Core variables are stored in the required/core module. This module is the first one imported to the framework. Core variable values are required by the <a href="functions.html">required/functions</a> module to calculate values for variables in the <a href="settings.html">required/settings</a> module.</p>
+			<p>All variable names begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects.</p>
+			<h2>Core Variables</h2>
+			<dl>
+				<dt><code class="code-nobg">$tyfy-grid-unit: 0.875rem !default;</code></dt>
+				<dd>Base grid unit in rem units; I recommend this value be half the desired line height</dd>
+				<dt><code class="code-nobg">$tyfy-leading-adjustment-tall: 0.8 !default;</code></dt>
+				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &lt; 1 result in taller leading</dd>
+				<dt><code class="code-nobg">$tyfy-leading-adjustment-base: 0.9 !default;</code></dt>
+				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &lt; 1 result in taller leading</dd>
+				<dt><code class="code-nobg">$tyfy-leading-adjustment-heading: 1 !default;</code></dt>
+				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &gt;= 1 result in smaller leading</dd>
+				<dt><code class="code-nobg">$tyfy-leading-adjustment-short: 1.2 !default;</code></dt>
+				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &gt; 1 result in smaller leading</dd>
+				<dt><code class="code-nobg">$tyfy-font-size-scalar: 1.2 !default;</code></dt>
+				<dd>Scalar value that defines the proportion between text sizes on the typographic scale</dd>
+				<dt><code class="code-nobg">$tyfy-font-size-base: 1rem !default;</code></dt>
+				<dd>Font size in rem units applied to the <code>&lt;body&gt;</code> tag</dd>
+			</dl>
+		</section>
+		<%include footer.html%>
+	</body>
+</html>
