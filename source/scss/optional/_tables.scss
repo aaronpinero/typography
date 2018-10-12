@@ -5,10 +5,8 @@ table {
 }
 th {
   font-family:$tyfy-font-table;
-  font-size:$tyfy-font-size-base;
   font-variant-numeric:lining-nums tabular-nums;
   font-feature-settings:"lnum", "tnum";
-  line-height:tylead($tyfy-font-size-base,base);
   text-align:left;
   vertical-align:top;
   &[scope="col"] {
@@ -17,10 +15,8 @@ th {
 }
 td {
   font-family:$tyfy-font-table;
-  font-size:$tyfy-font-size-base;
   font-variant-numeric:lining-nums tabular-nums;
   font-feature-settings:"lnum", "tnum";
-  line-height:tylead($tyfy-font-size-base,base);
   vertical-align:top;
 }
 
