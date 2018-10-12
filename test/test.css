@@ -796,6 +796,10 @@ span.smallcaps {
 .font-mono {
   font-family: monaco, courier, monospace; }
 
+/* line 68, source/scss/optional/_utility.scss */
+.light {
+  color: #8c8c8c; }
+
 /* line 1, source/scss/optional/_quotes.scss */
 blockquote {
   font-style: italic;
@@ -1004,7 +1008,7 @@ table.responsive td .td-label {
   /* line 117, source/scss/optional/_tables.scss */
   table.float-left, table.float-right {
     box-sizing: border-box;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
     width: calc(50% - 1.5rem); } }
 
 @media (min-width: 40em) {

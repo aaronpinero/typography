@@ -118,7 +118,7 @@ table {
   &.float-right {
     @media (min-width:$tyfy-break-floats) {
       box-sizing:border-box;
-      margin-bottom:tygrid(1);
+      margin-bottom:$tyfy-spacing-standard;
       width:calc(50% - #{tygrid(2)});
     }
   }
