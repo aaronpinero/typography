@@ -1416,9 +1416,10 @@ h6.collapsable-processed:hover::before {
   /* line 66, source/scss/optional/_tabs.scss */
   .tabs-container.tabs-processed .tab-label::before {
     border-radius: 50%;
+    color: #8c8c8c;
     content: "\ea08";
     font-family: tyfyicons;
-    font-size: 1rem;
+    font-size: 60%;
     font-style: normal;
     font-weight: normal;
     position: absolute;
@@ -1433,39 +1434,39 @@ h6.collapsable-processed:hover::before {
     /* line 55, source/scss/optional/_tabs.scss */
     .tabs-container.tabs-processed .tab-label {
       display: none; } }
-  /* line 85, source/scss/optional/_tabs.scss */
+  /* line 86, source/scss/optional/_tabs.scss */
   .tabs-container.tabs-processed .tab-label.collapsed {
     border-bottom: 2px #e0e0e0 solid; }
-    /* line 87, source/scss/optional/_tabs.scss */
+    /* line 88, source/scss/optional/_tabs.scss */
     .tabs-container.tabs-processed .tab-label.collapsed::before {
       content: "\ea01"; }
-  /* line 91, source/scss/optional/_tabs.scss */
+  /* line 92, source/scss/optional/_tabs.scss */
   .tabs-container.tabs-processed .tab-label.transition {
     border-bottom-color: transparent; }
-  /* line 95, source/scss/optional/_tabs.scss */
+  /* line 96, source/scss/optional/_tabs.scss */
   .tabs-container.tabs-processed .tab-label:hover::before {
     background-color: #cc3366;
     color: white; }
 
-/* line 101, source/scss/optional/_tabs.scss */
+/* line 102, source/scss/optional/_tabs.scss */
 .tabs-container.tabs-processed .tab-panel {
   border-bottom: 2px #e0e0e0 solid;
   overflow: hidden;
   margin-top: 0;
   padding: 0.75rem 0 calc(1.5rem - 2px) 0; }
   @media (min-width: 40em) {
-    /* line 101, source/scss/optional/_tabs.scss */
+    /* line 102, source/scss/optional/_tabs.scss */
     .tabs-container.tabs-processed .tab-panel {
       border: 2px #e0e0e0 solid;
       border-radius: 0 0 0.25rem 0.25rem;
       border-top: none;
       display: none;
       padding: 1.5rem calc(1.5rem - 2px) calc(1.5rem - 2px); } }
-  /* line 113, source/scss/optional/_tabs.scss */
+  /* line 114, source/scss/optional/_tabs.scss */
   .tabs-container.tabs-processed .tab-panel.open {
     display: block; }
   @media (max-width: 39.996em) {
-    /* line 116, source/scss/optional/_tabs.scss */
+    /* line 117, source/scss/optional/_tabs.scss */
     .tabs-container.tabs-processed .tab-panel.collapsed {
       border: none;
       height: 0;
