@@ -11,7 +11,7 @@
       color:$tyfy-color-link-default-reverse;
       &:hover,
       &:active {
-        border-bottom-color:rgba($tyfy-color-link-active-reverse,0.5);
+        border-bottom-color:rgba($tyfy-color-link-active-reverse,0.75);
         color:$tyfy-color-link-active-reverse;
       }
     }
@@ -25,7 +25,7 @@
 
   // utility
   code {
-    background-color:rgba($tyfy-color-foreground-reverse,0.07);
+    background-color:rgba($tyfy-color-foreground-reverse,0.1);
   }
 
   // quotes
