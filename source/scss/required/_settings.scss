@@ -16,6 +16,12 @@ $tyfy-indent-small:                 tygrid(map-get($tyfy-indents,"small")) !defa
 // toggle for adjacent sibling margins
 $tyfy-margins-on:                   true !default;
 
+// fonts
+$tyfy-serif:                        georgia, serif !default;
+$tyfy-sans:                         helvetica, arial, sans-serif !default;
+$tyfy-mono:                         monaco, courier, monospace !default;
+$tyfy-symbol:                       tyfyicons !default;
+
 // font assignments
 $tyfy-font-base:                    $tyfy-serif !default;
 $tyfy-font-heading:                 $tyfy-sans !default;
@@ -71,24 +77,22 @@ $fades: (
 ) !default;
 
 // site colors
-$tyfy-color-text-body:              $tyfy-color-foreground !default;
-$tyfy-color-text-head:              mix($tyfy-color-foreground,$tyfy-color-background,95%) !default;
+$tyfy-color-background:             white !default;
+$tyfy-color-foreground:             #111111 !default;
 $tyfy-color-text-light:             mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;
-$tyfy-color-text-code:              mix($tyfy-color-foreground,$tyfy-color-primary,40%) !default;
-$tyfy-color-link-default:           mix($tyfy-color-primary,tyreverse($tyfy-color-background),92%) !default;
-$tyfy-color-link-active:            adjust-hue($tyfy-color-link-default,-120deg) !default;
+$tyfy-color-link-default:           #3380cc !default;
+$tyfy-color-link-active:            #cc3380 !default;
 $tyfy-color-border:                 mix($tyfy-color-foreground,$tyfy-color-background,12%) !default;
-$tyfy-color-table-stripe:           mix($tyfy-color-foreground,$tyfy-color-background,5%) !default;
+$tyfy-color-shade:                  rgba($tyfy-color-foreground,0.05) !default;
 
 // reverse colors
-$tyfy-color-text-body-reverse:      tyreverse($tyfy-color-text-body) !default;
-$tyfy-color-text-head-reverse:      tyreverse($tyfy-color-text-head) !default;
-$tyfy-color-text-light-reverse:     fade-out(tyreverse($tyfy-color-text-body),0.45) !default;
-$tyfy-color-text-code-reverse:      mix($tyfy-color-text-body-reverse,tyreverse($tyfy-color-primary),40%) !default;
-$tyfy-color-link-default-reverse:   tycolor($tyfy-color-primary,(lightness($tyfy-color-primary)+15%)) !default;
-$tyfy-color-link-active-reverse:    adjust-hue($tyfy-color-link-default-reverse,-120deg) !default;
-$tyfy-color-border-reverse:         fade-out(tyreverse($tyfy-color-text-body),0.85) !default;
-$tyfy-color-table-stripe-reverse:   fade-out(tyreverse($tyfy-color-text-body),0.95) !default;
+$tyfy-color-background-reverse:     invert($tyfy-color-background) !default;
+$tyfy-color-foreground-reverse:     invert($tyfy-color-foreground) !default;
+$tyfy-color-text-light-reverse:     mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,55%) !default;
+$tyfy-color-link-default-reverse:   hsl(hue($tyfy-color-link-default),saturation($tyfy-color-link-default),(100% - lightness(darken($tyfy-color-link-default,25%)))) !default;
+$tyfy-color-link-active-reverse:    hsl(hue($tyfy-color-link-active),saturation($tyfy-color-link-active),(100% - lightness(darken($tyfy-color-link-active,25%)))) !default;
+$tyfy-color-border-reverse:         rgba($tyfy-color-foreground-reverse,0.1) !default;
+$tyfy-color-shade-reverse:          rgba($tyfy-color-foreground-reverse,0.05) !default;
 
 // icons
 // path to icon fonts
@@ -104,12 +108,11 @@ $tyfyicons-angle-down:              "ea01" !default;
 $tyfyicons-angle-left:              "ea02" !default;
 $tyfyicons-angle-right:             "ea03" !default;
 $tyfyicons-angle-up-down:           "ea04" !default;
-$tyfyicons-angle-up:                "ea05" !default;
-$tyfyicons-bars:                    "ea06" !default;
-$tyfyicons-check:                   "ea07" !default;
-$tyfyicons-dash:                    "ea08" !default;
-$tyfyicons-quote-left:              "ea09" !default;
-$tyfyicons-quote-right:             "ea0a" !default;
-$tyfyicons-quote-roof:              "ea0b" !default;
-$tyfyicons-search:                  "ea0c" !default;
-$tyfyicons-x:                       "ea0d" !default;
+$tyfyicons-angle-up:                "ea08" !default;
+$tyfyicons-bars:                    "ea07" !default;
+$tyfyicons-check:                   "ea05" !default;
+$tyfyicons-dash:                    "ea06" !default;
+$tyfyicons-quote-left:              "ea0a" !default;
+$tyfyicons-quote-right:             "ea0b" !default;
+$tyfyicons-search:                  "ea09" !default;
+$tyfyicons-x:                       "ea0c" !default;

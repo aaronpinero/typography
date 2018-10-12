@@ -1,21 +1,27 @@
 // heading size styles
 .font-size-h6 {
   font-size:$tyfy-font-size-h6;
+  line-height:tylead($tyfy-font-size-h6,heading);
 }
 .font-size-h5 {
   font-size:$tyfy-font-size-h5;
+  line-height:tylead($tyfy-font-size-h5,heading);
 }
 .font-size-h4 {
   font-size:$tyfy-font-size-h4;
+  line-height:tylead($tyfy-font-size-h4,heading);
 }
 .font-size-h3 {
   font-size:$tyfy-font-size-h3;
+  line-height:tylead($tyfy-font-size-h3,heading);
 }
 .font-size-h2 {
   font-size:$tyfy-font-size-h2;
+  line-height:tylead($tyfy-font-size-h2,heading);
 }
 .font-size-h1 {
   font-size:$tyfy-font-size-h1;
+  line-height:tylead($tyfy-font-size-h1,heading);
 }
 
 // headings
@@ -25,7 +31,6 @@ h3,
 h4,
 h5,
 h6 {
-  color:$tyfy-color-text-head;
   font-family:$tyfy-font-heading;
   font-weight:700;
 }

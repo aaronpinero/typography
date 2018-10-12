@@ -60,7 +60,7 @@
 			<table class="clean">
 				<tbody>
 					<tr>
-						<td><strong>Bold text</strong></td>
+						<td width="25%"><strong>Bold text</strong></td>
 						<td>Bold text, applied using the <code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code> tags</td>
 					</tr>
 					<tr>
@@ -72,6 +72,10 @@
 						<td>Text describing code, using the <code>&lt;code&gt;</code> tag</td>
 					</tr>
 					<tr>
+						<td><code class="code-nobg">Code, no background</code></td>
+						<td>A version of <code>&lt;code&gt;</code> tag using the <code>code-nobg</code> class</td>
+					</tr>
+					<tr>
 						<td><pre>Preformatted</pre></td>
 						<td>Preformatted text, using the <code>&lt;pre&gt;</code> tag</td>
 					</tr>
@@ -81,7 +85,7 @@
 					</tr>
 					<tr>
 						<td><hr class="demo"></td>
-						<td>Horizontal rule using the <code>&lt;hr&gt;</code> tag</td>
+						<td>Horizontal rule using the <code>&lt;hr&gt;</code> tag; the thickness is based on the value of the <code>$tyfy-width-border</code> variable</td>
 					</tr>
 					<tr>
 						<td><span class="smallcaps">Small Caps</span></td>
@@ -92,8 +96,24 @@
 						<td>Text as a button using <code>&lt;span&gt;</code> tag with the <code>button</code> class; also works with other tags</td>
 					</tr>
 					<tr>
+						<td><span class="button-outline">Outlined</span></td>
+						<td>Text as a outlined button using <code>&lt;span&gt;</code> tag with the <code>button-outline</code> class; also works with other tags</td>
+					</tr>
+					<tr>
 						<td><span class="dropcap">D</span>rop cap</td>
 						<td>A decorative drop cap using the <code>&lt;span&gt;</code> tag with the <code>dropcap</code> class</td>
+					</tr>
+					<tr>
+						<td><span class="font-sans">Sans-serif font</span></td>
+						<td>Display text using the font indicated by the <code>$tyfy-sans</code> variable by applying the <code>font-sans</code> class</td>
+					</tr>
+					<tr>
+						<td><span class="font-serif">Serif font</span></td>
+						<td>Display text using the font indicated by the <code>$tyfy-serif</code> variable by applying the <code>font-serif</code> class</td>
+					</tr>
+					<tr>
+						<td><span class="font-mono">Monospace font</span></td>
+						<td>Display text using the font indicated by the <code>$tyfy-mono</code> variable by applying the <code>font-mono</code> class</td>
 					</tr>
 				</tbody>
 			</table>

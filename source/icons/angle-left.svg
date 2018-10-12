@@ -3,6 +3,6 @@
     <title>angle-left</title>
     <defs></defs>
     <g id="angle-left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Combined-Shape" fill="#000000" points="10 32 42 1.63424829e-13 49 7 24 32 49 57 42 64"></polygon>
+        <polygon id="Combined-Shape" fill="#000000" points="10 32 42 0 49 7 24 32 49 57 42 64"></polygon>
     </g>
 </svg>

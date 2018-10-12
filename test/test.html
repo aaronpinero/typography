@@ -12,13 +12,12 @@
 		<figure>
 			<figcaption>Colors</figcaption>
 			<ul class="list-nobullet list-cols-2">
-				<li><span class="swatch text-body"></span> $tyfy-color-text-body</li>
-				<li><span class="swatch text-head"></span> $tyfy-color-text-head</li>
+				<li><span class="swatch foreground"></span> $tyfy-color-foreground</li>
 				<li><span class="swatch text-light"></span> $tyfy-color-text-light</li>
 				<li><span class="swatch link-default"></span> $tyfy-color-link-default</li>
 				<li><span class="swatch link-active"></span> $tyfy-color-link-active</li>
 				<li><span class="swatch border"></span> $tyfy-color-border</li>
-				<li><span class="swatch table-stripe"></span> $tyfy-color-table-stripe</li>
+				<li><span class="swatch shade"></span> $tyfy-color-shade</li>
 			</ul>
 		</figure>
 		<figure>
@@ -29,7 +28,6 @@
 			<h4>Heading 4</h4>
 			<h5>Heading 5</h5>
 			<h6>Heading 6</h6>
-			<hr>
 			<div class="font-size-h1">Div at Heading 1 Size</div>
 			<div class="font-size-h2">Div at Heading 2 Size</div>
 			<div class="font-size-h3">Div at Heading 3 Size</div>
@@ -42,21 +40,18 @@
 			<h4 class="font-size-h3">Heading 4 at Heading 3 Size</h4>
 			<h5 class="font-size-h2">Heading 5 at Heading 2 Size</h5>
 			<h6 class="font-size-h1">Heading 6 at Heading 1 Size</h6>
-			<hr>
 			<h1><a name="anchor1">Heading 1 Anchor</a></h1>
 			<h2><a name="anchor2">Heading 2 Anchor</a></h2>
 			<h3><a name="anchor3">Heading 3 Anchor</a></h3>
 			<h4><a name="anchor4">Heading 4 Anchor</a></h4>
 			<h5><a name="anchor5">Heading 5 Anchor</a></h5>
 			<h6><a name="anchor6">Heading 6 Anchor</a></h6>
-			<hr>
 			<h1><a href="http://aaronpinero.net">Heading 1 Link</a></h1>
 			<h2><a href="http://aaronpinero.net">Heading 2 Link</a></h2>
 			<h3><a href="http://aaronpinero.net">Heading 3 Link</a></h3>
 			<h4><a href="http://aaronpinero.net">Heading 4 Link</a></h4>
 			<h5><a href="http://aaronpinero.net">Heading 5 Link</a></h5>
 			<h6><a href="http://aaronpinero.net">Heading 6 Link</a></h6>
-			<hr>
 			<div class="links-underlined">
 				<p>Links are set to underlined.</p>
 				<h1><a href="http://aaronpinero.net">Heading 1 Link</a></h1>
@@ -425,7 +420,7 @@
 			<table class="clean">
 				<tbody>
 					<tr>
-						<td><strong>Bold text</strong></td>
+						<td width="25%"><strong>Bold text</strong></td>
 						<td>Bold text, applied using the <code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code> tags</td>
 					</tr>
 					<tr>
@@ -435,6 +430,10 @@
 					<tr>
 						<td><code>Code</code></td>
 						<td>Text describing code, using the <code>&lt;code&gt;</code> tag</td>
+					</tr>
+					<tr>
+						<td><code class="code-nobg">Code, no background</code></td>
+						<td>A version of <code>&lt;code&gt;</code> tag using the <code>code-nobg</code> class</td>
 					</tr>
 					<tr>
 						<td><pre>Preformatted</pre></td>
@@ -454,7 +453,7 @@
 			<table class="clean">
 				<tbody>
 					<tr>
-						<td><span class="light">Light</span></td>
+						<td width="25%"><span class="light">Light</span></td>
 						<td>Lighter text, using the <code>light</code> class</td>
 					</tr>
 					<tr>
@@ -466,12 +465,24 @@
 						<td>Text as a button using the <code>button</code> class</td>
 					</tr>
 					<tr>
-						<td><span class="button-outline">Button Outline</span></td>
+						<td><span class="outline">Button Outline</span></td>
 						<td>Text as an outline button using the <code>button-outline</code> class</td>
 					</tr>
 					<tr>
 						<td><span class="dropcap">D</span>rop cap</td>
 						<td>A decorative drop cap using the <code>&lt;span&gt;</code> tag with the <code>dropcap</code> class</td>
+					</tr>
+					<tr>
+						<td><span class="font-sans">Sans-serif font</span></td>
+						<td>Display text using the font indicated by the <code>$tyfy-sans</code> variable by applying the <code>font-sans</code> class</td>
+					</tr>
+					<tr>
+						<td><span class="font-serif">Serif font</span></td>
+						<td>Display text using the font indicated by the <code>$tyfy-serif</code> variable by applying the <code>font-serif</code> class</td>
+					</tr>
+					<tr>
+						<td><span class="font-mono">Monospace font</span></td>
+						<td>Display text using the font indicated by the <code>$tyfy-mono</code> variable by applying the <code>font-mono</code> class</td>
 					</tr>
 				</tbody>
 			</table>

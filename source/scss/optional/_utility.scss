@@ -2,19 +2,23 @@ b {
   font-weight:700;
 }
 code {
-  background-color:rgba($tyfy-color-text-body,0.07);
+  background-color:rgba($tyfy-color-foreground,0.07);
   border-radius:0.125em;
-  color:$tyfy-color-text-code;
   font-family:$tyfy-mono;
   padding-left:0.125em;
   padding-right:0.125em;
+  &.code-nobg {
+    background-color:transparent;
+    padding-left:0;
+    padding-right:0;
+  }
 }
 em {
   font-style:italic;
 }
 hr {
   border:none;
-  border-top:1px $tyfy-color-border solid;
+  border-top:$tyfy-width-border $tyfy-color-border solid;
   height:0;
 }
 i {
@@ -48,4 +52,19 @@ span {
 }
 .button {
   @include button;
+}
+.button-outline {
+  @include button-outline;
+}
+.font-sans {
+  font-family:$tyfy-sans;
+}
+.font-serif {
+  font-family:$tyfy-serif;
+}
+.font-mono {
+  font-family:$tyfy-mono;
+}
+.light {
+  color:$tyfy-color-text-light;
 }

@@ -14,7 +14,7 @@
   font-size:inherit;
   font-weight:400;
   text-rendering:auto;
-  transform:translate(0, 0);
+  transform:translate(0,0);
   -moz-osx-font-smoothing:grayscale;
   -webkit-font-smoothing:antialiased;
 }
@@ -55,29 +55,26 @@
   content:"\ea04";
 }
 .tyfyicons-angle-up::before {
-  content:"\ea05";
-}
-.tyfyicons-bars::before {
-  content:"\ea06";
-}
-.tyfyicons-check::before {
-  content:"\ea07";
-}
-.tyfyicons-dash::before {
   content:"\ea08";
 }
-.tyfyicons-quote-left::before {
-  content:"\ea09";
+.tyfyicons-bars::before {
+  content:"\ea07";
 }
-.tyfyicons-quote-right::before {
+.tyfyicons-check::before {
+  content:"\ea05";
+}
+.tyfyicons-dash::before {
+  content:"\ea06";
+}
+.tyfyicons-quote-left::before {
   content:"\ea0a";
 }
-.tyfyicons-quote-roof::before {
+.tyfyicons-quote-right::before {
   content:"\ea0b";
 }
 .tyfyicons-search::before {
-  content:"\ea0c";
+  content:"\ea09";
 }
 .tyfyicons-x::before {
-  content:"\ea0d";
+  content:"\ea0c";
 }
