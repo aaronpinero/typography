@@ -1164,9 +1164,10 @@ h6.collapsable-processed {
   h5.collapsable-processed::before,
   h6.collapsable-processed::before {
     border-radius: 50%;
+    color: #8c8c8c;
     content: "\ea08";
     font-family: tyfyicons;
-    font-size: 1.125rem;
+    font-size: 60%;
     font-style: normal;
     font-weight: normal;
     position: absolute;
@@ -1177,21 +1178,21 @@ h6.collapsable-processed {
     transition-property: background-color,color,top;
     transition-timing-function: ease-in-out;
     width: 2.25rem; }
-  /* line 29, source/scss/optional/_collapsables.scss */
+  /* line 30, source/scss/optional/_collapsables.scss */
   h2.collapsable-processed.closed,
   h3.collapsable-processed.closed,
   h4.collapsable-processed.closed,
   h5.collapsable-processed.closed,
   h6.collapsable-processed.closed {
     border-bottom: 2px #e0e0e0 solid; }
-    /* line 31, source/scss/optional/_collapsables.scss */
+    /* line 32, source/scss/optional/_collapsables.scss */
     h2.collapsable-processed.closed::before,
     h3.collapsable-processed.closed::before,
     h4.collapsable-processed.closed::before,
     h5.collapsable-processed.closed::before,
     h6.collapsable-processed.closed::before {
       content: "\ea01"; }
-  /* line 35, source/scss/optional/_collapsables.scss */
+  /* line 36, source/scss/optional/_collapsables.scss */
   h2.collapsable-processed.transition.closed,
   h3.collapsable-processed.transition.closed,
   h4.collapsable-processed.transition.closed,
@@ -1211,7 +1212,7 @@ h6.collapsable-processed {
       position: relative;
       transition-duration: 0.5s;
       transition-property: padding-top; }
-      /* line 45, source/scss/optional/_collapsables.scss */
+      /* line 46, source/scss/optional/_collapsables.scss */
       h2.collapsable-processed::before,
       h3.collapsable-processed::before,
       h4.collapsable-processed::before,
@@ -1219,7 +1220,7 @@ h6.collapsable-processed {
       h6.collapsable-processed::before {
         right: 1.5rem;
         top: 1.5rem; }
-      /* line 49, source/scss/optional/_collapsables.scss */
+      /* line 50, source/scss/optional/_collapsables.scss */
       h2.collapsable-processed.closed,
       h3.collapsable-processed.closed,
       h4.collapsable-processed.closed,
@@ -1227,7 +1228,7 @@ h6.collapsable-processed {
       h6.collapsable-processed.closed {
         border-bottom: 2px #e0e0e0 solid;
         padding-top: calc(0.75rem - 2px); }
-        /* line 52, source/scss/optional/_collapsables.scss */
+        /* line 53, source/scss/optional/_collapsables.scss */
         h2.collapsable-processed.closed::before,
         h3.collapsable-processed.closed::before,
         h4.collapsable-processed.closed::before,
@@ -1235,21 +1236,21 @@ h6.collapsable-processed {
         h6.collapsable-processed.closed::before {
           content: "\ea01";
           top: 0.75rem; }
-      /* line 57, source/scss/optional/_collapsables.scss */
+      /* line 58, source/scss/optional/_collapsables.scss */
       h2.collapsable-processed.transition,
       h3.collapsable-processed.transition,
       h4.collapsable-processed.transition,
       h5.collapsable-processed.transition,
       h6.collapsable-processed.transition {
         padding-top: calc(0.75rem - 2px); }
-        /* line 59, source/scss/optional/_collapsables.scss */
+        /* line 60, source/scss/optional/_collapsables.scss */
         h2.collapsable-processed.transition::before,
         h3.collapsable-processed.transition::before,
         h4.collapsable-processed.transition::before,
         h5.collapsable-processed.transition::before,
         h6.collapsable-processed.transition::before {
           top: 0.75rem; }
-      /* line 63, source/scss/optional/_collapsables.scss */
+      /* line 64, source/scss/optional/_collapsables.scss */
       h2.collapsable-processed.transition.closed,
       h3.collapsable-processed.transition.closed,
       h4.collapsable-processed.transition.closed,
@@ -1257,14 +1258,14 @@ h6.collapsable-processed {
       h6.collapsable-processed.transition.closed {
         border-bottom: 2px transparent solid;
         padding-top: calc(1.5rem - 2px); }
-        /* line 66, source/scss/optional/_collapsables.scss */
+        /* line 67, source/scss/optional/_collapsables.scss */
         h2.collapsable-processed.transition.closed::before,
         h3.collapsable-processed.transition.closed::before,
         h4.collapsable-processed.transition.closed::before,
         h5.collapsable-processed.transition.closed::before,
         h6.collapsable-processed.transition.closed::before {
           top: 1.5rem; } }
-  /* line 71, source/scss/optional/_collapsables.scss */
+  /* line 72, source/scss/optional/_collapsables.scss */
   * + h2.collapsable-processed,
   .sibling-margins-on * + h2.collapsable-processed, * +
   h3.collapsable-processed,
@@ -1281,23 +1282,23 @@ h6.collapsable-processed {
   h6.collapsable-processed {
     margin-top: 1.5rem; }
 
-/* line 77, source/scss/optional/_collapsables.scss */
+/* line 78, source/scss/optional/_collapsables.scss */
 h3.collapsable-processed::before {
   width: 2.25rem; }
 
-/* line 82, source/scss/optional/_collapsables.scss */
+/* line 83, source/scss/optional/_collapsables.scss */
 h4.collapsable-processed::before {
   width: 1.5rem; }
 
-/* line 87, source/scss/optional/_collapsables.scss */
+/* line 88, source/scss/optional/_collapsables.scss */
 h5.collapsable-processed::before {
   width: 1.5rem; }
 
-/* line 92, source/scss/optional/_collapsables.scss */
+/* line 93, source/scss/optional/_collapsables.scss */
 h6.collapsable-processed::before {
   width: 1.5rem; }
 
-/* line 102, source/scss/optional/_collapsables.scss */
+/* line 103, source/scss/optional/_collapsables.scss */
 h2.collapsable-processed:hover::before,
 h3.collapsable-processed:hover::before,
 h4.collapsable-processed:hover::before,
@@ -1306,7 +1307,7 @@ h6.collapsable-processed:hover::before {
   background-color: #cc3366;
   color: white; }
 
-/* line 109, source/scss/optional/_collapsables.scss */
+/* line 110, source/scss/optional/_collapsables.scss */
 .collapsables {
   box-sizing: border-box;
   border-bottom: 2px #e0e0e0 solid;
@@ -1314,12 +1315,12 @@ h6.collapsable-processed:hover::before {
   overflow: hidden;
   padding: 0.75rem 0 calc(1.5rem - 2px) 0; }
   @media (min-width: 50em) {
-    /* line 109, source/scss/optional/_collapsables.scss */
+    /* line 110, source/scss/optional/_collapsables.scss */
     .collapsables {
       border: 2px #e0e0e0 solid;
       border-top: none !important;
       padding: calc(0.75rem - 2px) calc(1.5rem - 2px) calc(1.5rem - 2px); } }
-  /* line 120, source/scss/optional/_collapsables.scss */
+  /* line 121, source/scss/optional/_collapsables.scss */
   .collapsables.closed {
     border: none;
     height: 0;
