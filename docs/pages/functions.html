@@ -53,7 +53,7 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Functions</h1>
-			<p><strong class="tyfy">Tyfy</strong> includes several custom <span class="smallcaps">SASS</span> functions. These functions were written to facilitate writing the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SCSS</span> files, but can also be used to help users who are including <strong class="tyfy">Tyfy</strong> in their web projects.</p>
+			<p><strong class="tyfy">Tyfy</strong> includes custom <span class="smallcaps">SASS</span> functions. These functions facilitate the writing of <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SCSS</span> files, but can also be of help to users who are including <strong class="tyfy">Tyfy</strong> in their web projects.</p>
 			<dl>
 				<dt>@function tylead($font-size,$leading-style:base)</dt>
 				<dd>Accepts a font size and leading style option and calculates a grid-based line height. The leading style options are <code>tall</code>, <code>base</code>, <code>heading</code>, and <code>short</code>. The default is <code>base</code>. The font size argument must be in rem units, and the value returned is also in rem units.</dd>
@@ -61,10 +61,6 @@
 				<dd>Makes the <span class="smallcaps">SCSS</span> files easier to read. The function accepts a number and returns a value, in rem units, that is the base grid unit multiplied by the number argument.</dd>
 				<dt>@function tyscale($exponent)</dt>
 				<dd>Facilitates use of the modular typographic scale by eliminating the task of calculating font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</dd>
-				<dt>@function tycolor($color,$lightness)</dt>
-				<dd>Accepts a color (in rgb or hexadecimal format) and a lightness value (0% to 100%), and returns the given color converted to the specified lightness.</dd>
-				<dt>@function tyreverse($color)</dt>
-				<dd>Accepts a color (in rgb or hexadecimal format) and returns the same color with the lightness value reversed.</dd>
 				<dt>@function tychar($code)</dt>
 				<dd>Accepts a character code without the preceding slash (“\”) and adds it; this is done to get around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> and allow icon character codes to be more easily customized for different icon fonts.</dd>
 			</dl>

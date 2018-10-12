@@ -1,26 +1,17 @@
 // root styles
 .reverse {
-  color:$tyfy-color-text-body-reverse;
-
-  // headings
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color:$tyfy-color-text-head-reverse;
-  }
+  background-color:$tyfy-color-background-reverse;
+  color:$tyfy-color-foreground-reverse;
 
   // links
   a {
-    color:$tyfy-color-text-body-reverse;
+    color:$tyfy-color-foreground-reverse;
     &[href] {
       border-bottom-color:rgba($tyfy-color-link-default-reverse,0.5);
       color:$tyfy-color-link-default-reverse;
       &:hover,
       &:active {
-        border-bottom-color:rgba($tyfy-color-link-active-reverse,0.5);
+        border-bottom-color:rgba($tyfy-color-link-active-reverse,0.75);
         color:$tyfy-color-link-active-reverse;
       }
     }
@@ -31,30 +22,10 @@
       @include button-outline($tyfy-color-link-default-reverse,$tyfy-color-link-active-reverse);
     }
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    a {
-      color:$tyfy-color-text-head-reverse;
-      &[href] {
-        border-bottom-color:rgba($tyfy-color-text-head-reverse,0.5);
-        color:$tyfy-color-text-head-reverse;
-        &:hover,
-        &:active {
-          border-bottom-color:rgba($tyfy-color-link-active-reverse,0.5);
-          color:$tyfy-color-link-active-reverse;
-        }
-      }
-    }
-  }
 
   // utility
   code {
-    background-color:rgba($tyfy-color-text-body-reverse,0.07);
-    color:$tyfy-color-text-code-reverse;
+    background-color:rgba($tyfy-color-foreground-reverse,0.1);
   }
 
   // quotes
@@ -71,7 +42,7 @@
   table.striped {
     tr:nth-child(2n) {
       td {
-        background-color:$tyfy-color-table-stripe-reverse;
+        background-color:$tyfy-color-shade-reverse;
       }
     }
   }
