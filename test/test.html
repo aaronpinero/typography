@@ -857,6 +857,76 @@
 		</figure>
 		<figure>
 			<figcaption>Forms</figcaption>
+			<form>
+				<div>
+					<label>Text Input</label>
+					<input type="text" name="name">
+				</div>
+				<div>
+					<label>Number Input</label>
+					<input type="number" name="age">
+				</div>
+				<div>
+					<label>Select</label>
+					<div class="tyfy-select">
+						<select name="color">
+							<option value="red">Red</option>
+							<option value="orange">Orange</option>
+							<option value="yellow">Yellow</option>
+							<option value="green">Green</option>
+							<option value="blue">Blue</option>
+							<option value="purple">Purple</option>
+							<option value="white">White</option>
+							<option value="gold">Gold</option>
+							<option value="silver">Silver</option>
+							<option value="black">Black</option>
+						</select>
+					</div>
+				</div>
+				<div>
+					<label>Multiple Select</label>
+					<div class="tyfy-select">
+						<select name="color" multiple="multiple">
+							<option value="red">Red</option>
+							<option value="orange">Orange</option>
+							<option value="yellow">Yellow</option>
+							<option value="green">Green</option>
+							<option value="blue">Blue</option>
+							<option value="purple">Purple</option>
+							<option value="white">White</option>
+							<option value="gold">Gold</option>
+							<option value="silver">Silver</option>
+							<option value="black">Black</option>
+						</select>
+					</div>
+				</div>
+				<fieldset>
+					<legend>Fieldset</legend>
+					<div>
+						<label>Option Labels, Inline</label>
+						<div>
+							<label class="label-option label-inline"><input type="checkbox" name="sky" value="a"> Option A</label>
+							<label class="label-option label-inline"><input type="checkbox" name="sky" value="b"> Option B</label>
+							<label class="label-option label-inline"><input type="checkbox" name="sky" value="c"> Option C</label>
+						</div>
+					</div>
+					<div>
+						<label>Option Labels, Inline</label>
+						<div>
+							<label class="label-option label-inline"><input type="radio" name="sky" value="true"> True</label>
+							<label class="label-option label-inline"><input type="radio" name="sky" value="false"> False</label>
+						</div>
+					</div>
+					<div>
+						<label>Option Labels</label>
+						<ul class="list-nobullet sibling-margins-off">
+							<li><label class="label-option"><input type="radio" name="roses" value="true"> True</label></li>
+							<li><label class="label-option"><input type="radio" name="roses" value="false"> False</label></li>
+						</ul>
+					</div>
+				</fieldset>
+				<p><input type="submit" name="submit" value="Submit Form"></p>
+			</form>
 		</figure>
 		<figure>
 			<figcaption>Reverse</figcaption>

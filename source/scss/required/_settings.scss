@@ -26,6 +26,7 @@ $tyfy-symbol:                       tyfyicons !default;
 $tyfy-font-base:                    $tyfy-serif !default;
 $tyfy-font-heading:                 $tyfy-sans !default;
 $tyfy-font-table:                   $tyfy-sans !default;
+$tyfy-font-input:                   $tyfy-sans !default;
 
 // font sizes
 // a sass map of font size values defined as number of steps on the modular scale
@@ -52,6 +53,7 @@ $tyfy-font-size-lede:               tyscale(map-get($tyfy-font-sizes,"lede")) !d
 
 // measures
 $tyfy-width-border:                 2px;
+$tyfy-radius-border:                4px;
 
 // breakpoints
 $tyfy-break-floats:                 40em !default;
