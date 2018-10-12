@@ -53,7 +53,7 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Variables</h1>
-			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the base grid, colors, text sizes, fonts, breakpoints, and other characteristics. My goal with this project is to have as few variables as possible. This results in some core variables – such as the grid unit, brand color and font size scalar – that can quickly change the entire character of the project to which <strong class="tyfy">Tyfy</strong> is applied. These core values are stored in the required/core file.</p>
+			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the base grid, colors, text sizes, fonts, breakpoints, and other characteristics. My goal with this project is to have as few variables as possible. This results in some core variables – such as the grid unit and font size scalar – that can quickly change the entire character of the project to which <strong class="tyfy">Tyfy</strong> is applied. These core values are stored in the required/core file.</p>
 			<p>The remainder of the variables, most of which are defined as a function of a core value, are stored in the required/settings file.</p>
 			<p>All variables begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects.</p>
 			<h2>required/core</h2>
@@ -72,6 +72,27 @@
 				<dd>Unitless value that defines the proportion between sizes in the typographic scale</dd>
 				<dt>$tyfy-font-size-base</dt>
 				<dd>Fonts size applied to the <code>&lt;body&gt;</code> tag</dd>
+			</dl>
+			<h2>required/settings</h2>
+			<h3>// grid and spacing</h3>
+			<dl>
+				<dt>$tyfy-spacings</dt>
+				<dd>A <span class="smallcaps">SASS</span> map of values indicating the number of grid units for each spacing variable value</dd>
+				<dt>$tyfy-spacing-standard</dt>
+				<dd>Standard spacing between <span class="smallcaps">HTML</span> elements defined as a number of grid units</dd>
+				<dt>$tyfy-spacing-large</dt>
+				<dd>Extra spacing between <span class="smallcaps">HTML</span> elements; used for spacing above headings</dd>
+				<dt>$tyfy-indents</dt>
+				<dd>A <span class="smallcaps">SASS</span> map of values indicating the number of grid units for each indent variable value</dd>
+				<dt>$tyfy-indent-standard</dt>
+				<dd>Standard indent distance for lists and blockquotes defined as a number of grid units</dd>
+				<dt>$tyfy-indent-small</dt>
+				<dd>Small indent distance for lists and blockquotes at small screen sizes</dd>
+				<dt>$tyfy-margins-on</dt>
+				<dd>Determines if adjacent sibling margins should be on; default is <code>true</code></dd>
+			</dl>
+			<h3>// fonts</h3>
+			<dl>
 				<dt>$tyfy-serif</dt>
 				<dd>Serif font selection</dd>
 				<dt>$tyfy-sans</dt>
@@ -80,26 +101,6 @@
 				<dd>Monospace font selection</dd>
 				<dt>$tyfy-symbol</dt>
 				<dd>Symbol font; set to the <strong class="tyfy">Tyfy</strong> <a href="icons.html">icon webfont</a></dd>
-				<dt>$tyfy-color-background</dt>
-				<dd>Background color of the <code>&lt;body&gt;</code> element</dd>
-				<dt>$tyfy-color-foreground</dt>
-				<dd>Color of the <code>&lt;body&gt;</code> element</dd>
-				<dt>$tyfy-color-primary</dt>
-				<dd>Your brand color</dd>
-			</dl>
-			<h2>required/settings</h2>
-			<h3>// grid and spacing</h3>
-			<dl>
-				<dt>$tyfy-spacing-standard</dt>
-				<dd>Standard spacing between <span class="smallcaps">HTML</span> elements defined as a number of grid units</dd>
-				<dt>$tyfy-spacing-large</dt>
-				<dd>Extra spacing between <span class="smallcaps">HTML</span> elements; used for spacing above headings</dd>
-				<dt>$tyfy-indent-standard</dt>
-				<dd>Standard indent distance for lists and blockquotes defined as a number of grid units</dd>
-				<dt>$tyfy-indent-small</dt>
-				<dd>Small indent distance for lists and blockquotes at small screen sizes</dd>
-				<dt>$tyfy-margins-on</dt>
-				<dd>Determines if adjacent sibling margins should be on; default is <code>true</code></dd>
 			</dl>
 			<h3>// font assignments</h3>
 			<dl>
@@ -169,43 +170,37 @@
 			</dl>
 			<h3>// site colors</h3>
 			<dl>
-				<dt>$tyfy-color-text-body</dt>
-				<dd>Default text color</dd>
-				<dt>$tyfy-color-text-head</dt>
-				<dd>Default heading text color</dd>
+				<dt>$tyfy-color-background</dt>
+				<dd>Background color of the <code>&lt;body&gt;</code> element</dd>
+				<dt>$tyfy-color-foreground</dt>
+				<dd>Color of the <code>&lt;body&gt;</code> element</dd>
 				<dt>$tyfy-color-text-light</dt>
 				<dd>A light text color variant</dd>
-				<dt>$tyfy-color-text-code</dt>
-				<dd>Color of text in the <code>&lt;code&gt;</code> tag</dd>
-				<dt>$tyfy-color-text-pullquote</dt>
-				<dd>Color of text in pullquotes</dd>
 				<dt>$tyfy-color-link-default</dt>
 				<dd>Default link color</dd>
 				<dt>$tyfy-color-link-active</dt>
 				<dd>Color of links that are hovered or active</dd>
 				<dt>$tyfy-color-border</dt>
 				<dd>Default border color for tables, pullquotes, collapsable sections, etc.</dd>
-				<dt>$tyfy-color-table-stripe</dt>
-				<dd>Default stripe color for zebra-stripe tables</dd>
+				<dt>$tyfy-color-shade</dt>
+				<dd>A subtle background color; used in zebra-stripe tables</dd>
 			</dl>
 			<h3>// reverse colors</h3>
 			<dl>
-				<dt>$tyfy-color-text-body-reverse</dt>
-				<dd>Reverse default text color, for use on backgrounds where the text colors need to be inverted to be legible</dd>
-				<dt>$tyfy-color-text-head-reverse</dt>
-				<dd>Reverse default heading text color</dd>
+				<dt>$tyfy-color-background-reverse</dt>
+				<dd>Reverse default background color</dd>
+				<dt>$tyfy-color-foreground-reverse</dt>
+				<dd>Reverse default text color</dd>
 				<dt>$tyfy-color-text-light-reverse</dt>
 				<dd>Reverse light text color variant</dd>
-				<dt>$tyfy-color-text-pullquote-reverse</dt>
-				<dd>Reverse text color for pullquotes</dd>
 				<dt>$tyfy-color-link-default-reverse</dt>
 				<dd>Reverse default link color</dd>
 				<dt>$tyfy-color-link-active-reverse</dt>
 				<dd>Reverse color of links that are hovered or active</dd>
 				<dt>$tyfy-color-border-reverse</dt>
 				<dd>Reverse default border color</dd>
-				<dt>$tyfy-color-table-stripe-reverse</dt>
-				<dd>Reverse color of stripes in zebra-stripe tables</dd>
+				<dt>$tyfy-color-shade-reverse</dt>
+				<dd>Reverse subtle background color</dd>
 			</dl>
 			<h3>// icons</h3>
 			<dl>
@@ -214,40 +209,30 @@
 			</dl>
 			<h3>// icon character codes</h3>
 			<dl>
+				<dt>$tyfyicons-angle-up</dt>
+				<dd>Character code for a up angle character in the selected icon font</dd>
 				<dt>$tyfyicons-angle-down</dt>
 				<dd>Character code for a down angle character in the selected icon font</dd>
 				<dt>$tyfyicons-angle-left</dt>
 				<dd>Character code for a left angle character in the selected icon font</dd>
-				<dt>$tyfyicons-angle-right-small</dt>
-				<dd>Character code for a small right angle character in the selected icon font</dd>
 				<dt>$tyfyicons-angle-right</dt>
 				<dd>Character code for a right angle character in the selected icon font</dd>
-				<dt>$tyfyicons-angle-up</dt>
-				<dd>Character code for a up angle character in the selected icon font</dd>
+				<dt>$tyfyicons-angle-up-down</dt>
+				<dd>Character code for a up/down angle character, used to indicate select options</dd>
 				<dt>$tyfyicons-bars</dt>
 				<dd>Character code for a bars (hamburger icon) character in the selected icon font</dd>
+				<dt>$tyfyicons-check</dt>
+				<dd>Character code for a check character in the selected icon font</dd>
 				<dt>$tyfyicons-dash</dt>
 				<dd>Character code for a long dash character in the selected icon font</dd>
-				<dt>$tyfyicons-facebook</dt>
-				<dd>Character code for a Facebook icon character in the selected icon font</dd>
-				<dt>$tyfyicons-instagram</dt>
-				<dd>Character code for a Instagram icon character in the selected icon font</dd>
-				<dt>$tyfyicons-linkedin</dt>
-				<dd>Character code for a LinkedIn icon character in the selected icon font</dd>
 				<dt>$tyfyicons-quote-left</dt>
 				<dd>Character code for a left double quote character in the selected icon font</dd>
 				<dt>$tyfyicons-quote-right</dt>
 				<dd>Character code for a right double quote character in the selected icon font</dd>
 				<dt>$tyfyicons-search</dt>
 				<dd>Character code for a magnifying glass icon character in the selected icon font</dd>
-				<dt>$tyfyicons-soundcloud</dt>
-				<dd>Character code for a SoundCloud icon character in the selected icon font</dd>
-				<dt>$tyfyicons-twitter</dt>
-				<dd>Character code for a Twitter icon character in the selected icon font</dd>
 				<dt>$tyfyicons-x</dt>
 				<dd>Character code for an x (remove) character in the selected icon font</dd>
-				<dt>$tyfyicons-youtube</dt>
-				<dd>Character code for a YouTube icon character in the selected icon font</dd>
 			</dl>
 		</section>
 		<!-- COMMON FOOTER -->
