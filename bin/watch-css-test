@@ -1,0 +1,1 @@
+nodemon -V -C -w test -w source/scss -e scss -x "npm run build-css-test"

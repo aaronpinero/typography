@@ -25,7 +25,7 @@
     li {
       background-color:$tyfy-color-shade;
       border:$tyfy-width-border $tyfy-color-border solid;
-      border-radius:tygrid(0.25) tygrid(0.25) 0 0;
+      border-radius:$tyfy-radius-border $tyfy-radius-border 0 0;
       color:$tyfy-color-text-light;
       cursor:pointer;
       display:block;
@@ -65,9 +65,10 @@
       transition-property:padding-top;
       &::before {
         border-radius:50%;
+        color:$tyfy-color-text-light;
         content:tychar($tyfyicons-angle-up);
         font-family:$tyfy-symbol;
-        font-size:1rem;
+        font-size:60%;
         font-style:normal;
         font-weight:normal;
         position:absolute;
@@ -105,7 +106,7 @@
       padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tyfy-width-border}) 0;
       @media (min-width:$tyfy-break-tabs) {
         border:$tyfy-width-border $tyfy-color-border solid;
-        border-radius:0 0 0.25rem 0.25rem;
+        border-radius:0 0 $tyfy-radius-border $tyfy-radius-border;
         border-top:none;
         display:none;
         padding:tygrid(2) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});

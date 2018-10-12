@@ -12,9 +12,10 @@ h6.collapsable-processed {
   position:relative;
   &::before {
     border-radius:50%;
+    color:$tyfy-color-text-light;
     content:tychar($tyfyicons-angle-up);
     font-family:$tyfy-symbol;
-    font-size:$tyfy-font-size-base;
+    font-size:60%;
     font-style:normal;
     font-weight:normal;
     position:absolute;
