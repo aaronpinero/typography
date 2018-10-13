@@ -1169,40 +1169,101 @@ table.responsive td .td-label {
     /* line 184, source/scss/required/_mixins.scss */
     .reverse .button-outline:focus, .reverse .button-outline[href]:focus {
       outline: none; }
-  /* line 53, source/scss/optional/_reverse.scss */
+  /* line 50, source/scss/optional/_reverse.scss */
+  .reverse .light {
+    color: #999999; }
+  /* line 56, source/scss/optional/_reverse.scss */
   .reverse blockquote.pullquote-roof-fixed::before, .reverse blockquote.pullquote-roof-full::before {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#4b4b4b%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     color: #4b4b4b; }
-  /* line 63, source/scss/optional/_reverse.scss */
+  /* line 66, source/scss/optional/_reverse.scss */
   .reverse table.striped tr:nth-child(2n) td {
     background-color: rgba(255, 255, 255, 0.05); }
-  /* line 68, source/scss/optional/_reverse.scss */
+  /* line 71, source/scss/optional/_reverse.scss */
   .reverse table.horizontal-rules {
     border-top-color: #4b4b4b; }
-    /* line 70, source/scss/optional/_reverse.scss */
+    /* line 73, source/scss/optional/_reverse.scss */
     .reverse table.horizontal-rules td,
     .reverse table.horizontal-rules th {
       border-bottom-color: #4b4b4b; }
-    /* line 74, source/scss/optional/_reverse.scss */
+    /* line 77, source/scss/optional/_reverse.scss */
     .reverse table.horizontal-rules th[scope="col"] {
       border-bottom-color: #4b4b4b; }
-  /* line 78, source/scss/optional/_reverse.scss */
+  /* line 81, source/scss/optional/_reverse.scss */
   .reverse table.vertical-rules {
     border-left-color: #4b4b4b; }
-    /* line 80, source/scss/optional/_reverse.scss */
+    /* line 83, source/scss/optional/_reverse.scss */
     .reverse table.vertical-rules td,
     .reverse table.vertical-rules th {
       border-right-color: #4b4b4b; }
-    /* line 84, source/scss/optional/_reverse.scss */
+    /* line 87, source/scss/optional/_reverse.scss */
     .reverse table.vertical-rules th[scope="row"] {
       border-right-color: #4b4b4b; }
   @media (max-width: 39.996em) {
-    /* line 89, source/scss/optional/_reverse.scss */
+    /* line 92, source/scss/optional/_reverse.scss */
     .reverse table.responsive tbody tr + tr {
       border-top-color: #4b4b4b; } }
-  /* line 95, source/scss/optional/_reverse.scss */
+  /* line 98, source/scss/optional/_reverse.scss */
   .reverse table.responsive td .td-label {
     color: #999999; }
+  /* line 110, source/scss/optional/_reverse.scss */
+  .reverse h2.collapsable-processed::before,
+  .reverse h3.collapsable-processed::before,
+  .reverse h4.collapsable-processed::before,
+  .reverse h5.collapsable-processed::before,
+  .reverse h6.collapsable-processed::before {
+    color: #999999; }
+  /* line 113, source/scss/optional/_reverse.scss */
+  .reverse h2.collapsable-processed.closed,
+  .reverse h3.collapsable-processed.closed,
+  .reverse h4.collapsable-processed.closed,
+  .reverse h5.collapsable-processed.closed,
+  .reverse h6.collapsable-processed.closed {
+    border-bottom-color: #4b4b4b; }
+  /* line 116, source/scss/optional/_reverse.scss */
+  .reverse h2.collapsable-processed.transition.closed,
+  .reverse h3.collapsable-processed.transition.closed,
+  .reverse h4.collapsable-processed.transition.closed,
+  .reverse h5.collapsable-processed.transition.closed,
+  .reverse h6.collapsable-processed.transition.closed {
+    border-bottom-color: transparent; }
+  @media (min-width: 50em) {
+    /* line 105, source/scss/optional/_reverse.scss */
+    .reverse h2.collapsable-processed,
+    .reverse h3.collapsable-processed,
+    .reverse h4.collapsable-processed,
+    .reverse h5.collapsable-processed,
+    .reverse h6.collapsable-processed {
+      border-color: #4b4b4b;
+      border-bottom-color: transparent; }
+      /* line 122, source/scss/optional/_reverse.scss */
+      .reverse h2.collapsable-processed.closed,
+      .reverse h3.collapsable-processed.closed,
+      .reverse h4.collapsable-processed.closed,
+      .reverse h5.collapsable-processed.closed,
+      .reverse h6.collapsable-processed.closed {
+        border-bottom-color: #4b4b4b; }
+      /* line 125, source/scss/optional/_reverse.scss */
+      .reverse h2.collapsable-processed.transition.closed,
+      .reverse h3.collapsable-processed.transition.closed,
+      .reverse h4.collapsable-processed.transition.closed,
+      .reverse h5.collapsable-processed.transition.closed,
+      .reverse h6.collapsable-processed.transition.closed {
+        border-bottom-color: transparent; } }
+  /* line 136, source/scss/optional/_reverse.scss */
+  .reverse h2.collapsable-processed:hover::before,
+  .reverse h3.collapsable-processed:hover::before,
+  .reverse h4.collapsable-processed:hover::before,
+  .reverse h5.collapsable-processed:hover::before,
+  .reverse h6.collapsable-processed:hover::before {
+    background-color: #e699b3; }
+  /* line 141, source/scss/optional/_reverse.scss */
+  .reverse .collapsables {
+    border-bottom-color: #4b4b4b; }
+    @media (min-width: 50em) {
+      /* line 141, source/scss/optional/_reverse.scss */
+      .reverse .collapsables {
+        border-color: #4b4b4b; } }
 
 /* line 2, source/scss/optional/_collapsables.scss */
 h2.collapsable-processed,

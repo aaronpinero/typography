@@ -47,6 +47,9 @@
   .button-outline {
     @include button-outline($tyfy-color-link-default-reverse,$tyfy-color-link-active-reverse);
   }
+  .light {
+    color:$tyfy-color-text-light-reverse;
+  }
 
   // quotes
   blockquote {
@@ -95,6 +98,50 @@
       .td-label {
         color:$tyfy-color-text-light-reverse;
       }
+    }
+  }
+
+  // collapsables
+  h2.collapsable-processed,
+  h3.collapsable-processed,
+  h4.collapsable-processed,
+  h5.collapsable-processed,
+  h6.collapsable-processed {
+    &::before {
+      color:$tyfy-color-text-light-reverse;
+    }
+    &.closed {
+      border-bottom-color:$tyfy-color-border-reverse;
+    }
+    &.transition.closed {
+      border-bottom-color:transparent;
+    }
+    @media (min-width:$tyfy-break-collapsables-pad) {
+      border-color:$tyfy-color-border-reverse;
+      border-bottom-color:transparent;
+      &.closed {
+        border-bottom-color:$tyfy-color-border-reverse;
+      }
+      &.transition.closed {
+        border-bottom-color:transparent;
+      }
+    }
+  }
+  h2.collapsable-processed,
+  h3.collapsable-processed,
+  h4.collapsable-processed,
+  h5.collapsable-processed,
+  h6.collapsable-processed {
+    &:hover {
+      &::before {
+        background-color:$tyfy-color-link-active-reverse;
+      }
+    }
+  }
+    .collapsables {
+    border-bottom-color:$tyfy-color-border-reverse;
+    @media (min-width:$tyfy-break-collapsables-pad) {
+      border-color:$tyfy-color-border-reverse;
     }
   }
 }
