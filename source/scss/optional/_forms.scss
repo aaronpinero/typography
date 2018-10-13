@@ -7,7 +7,6 @@ fieldset {
   margin-right:0;
   padding:calc(#{tygrid(1.5)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
   legend {
-    color:lighten($tyfy-color-foreground,25%);
     font-family:$tyfy-font-input;
     font-size:tyscale(1);
     font-weight:bold;
@@ -50,7 +49,6 @@ input[type="submit"] {
   width:100%;
 }
 label {
-  color:lighten($tyfy-color-foreground,25%);
   display:block;
   font-weight:bold;
   &.label-option {
@@ -146,7 +144,7 @@ input[type="submit"] {
 // special select element
 // special select element
 .tyfy-select select,
-select.tyfy-select, {
+select.tyfy-select {
   @extend %tyfy_form_element;
   @extend %tyfy_form_textinput;
   appearance:none;
