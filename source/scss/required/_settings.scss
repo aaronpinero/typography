@@ -90,10 +90,10 @@ $tyfy-color-shade:                  rgba($tyfy-color-foreground,0.05) !default;
 // reverse colors
 $tyfy-color-background-reverse:     invert($tyfy-color-background) !default;
 $tyfy-color-foreground-reverse:     invert($tyfy-color-foreground) !default;
-$tyfy-color-text-light-reverse:     mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,55%) !default;
+$tyfy-color-text-light-reverse:     mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,50%) !default;
 $tyfy-color-link-default-reverse:   hsl(hue($tyfy-color-link-default),saturation($tyfy-color-link-default),(100% - lightness(darken($tyfy-color-link-default,25%)))) !default;
 $tyfy-color-link-active-reverse:    hsl(hue($tyfy-color-link-active),saturation($tyfy-color-link-active),(100% - lightness(darken($tyfy-color-link-active,25%)))) !default;
-$tyfy-color-border-reverse:         rgba($tyfy-color-foreground-reverse,0.1) !default;
+$tyfy-color-border-reverse:         mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,12%) !default;
 $tyfy-color-shade-reverse:          rgba($tyfy-color-foreground-reverse,0.05) !default;
 
 // icons

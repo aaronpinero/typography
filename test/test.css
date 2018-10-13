@@ -1105,45 +1105,104 @@ table.responsive td .td-label {
       /* line 184, source/scss/required/_mixins.scss */
       .reverse a.button-outline:focus, .reverse a.button-outline[href]:focus {
         outline: none; }
-  /* line 27, source/scss/optional/_reverse.scss */
-  .reverse code {
+  /* line 30, source/scss/optional/_reverse.scss */
+  .reverse ul.list-icons li::before {
+    color: #999999; }
+  /* line 38, source/scss/optional/_reverse.scss */
+  .reverse code:not(.code-nobg) {
     background-color: rgba(255, 255, 255, 0.1); }
-  /* line 33, source/scss/optional/_reverse.scss */
-  .reverse blockquote.pullquote-roof-fixed::before {
-    color: rgba(255, 255, 255, 0.1); }
-  /* line 36, source/scss/optional/_reverse.scss */
-  .reverse blockquote.pullquote-roof-full::before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22640px%22%20height%3D%2264px%22%20viewBox%3D%220%200%20640%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22rgba(255, 255, 255, 0.1)%22%3E%3Cpath%20d%3D%22M291%2C14%20L317%2C14%20L317%2C34%20C317%2C45.1082357%20310.333333%2C54.441569%20297%2C62%20L292%2C52%20C300%2C47.9026693%20304%2C43.2360026%20304%2C38%20L291%2C38%20L291%2C14%20Z%22%3E%3C%2Fpath%3E%3Cpolygon%20points%3D%220%2025%20272%2025%20272%2034%200%2034%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22368%2025%20640%2025%20640%2034%20368%2034%22%3E%3C%2Fpolygon%3E%3Cpath%20d%3D%22M323%2C14%20L349%2C14%20L349%2C34%20C349%2C45.1082357%20342.333333%2C54.441569%20329%2C62%20L324%2C52%20C332%2C47.9026693%20336%2C43.2360026%20336%2C38%20L323%2C38%20L323%2C14%20Z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+  /* line 41, source/scss/optional/_reverse.scss */
+  .reverse hr {
+    border-color: #4b4b4b; }
   /* line 44, source/scss/optional/_reverse.scss */
+  .reverse .button {
+    background-color: #99b3e6;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0.375rem 1.125rem;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s;
+    vertical-align: middle; }
+    /* line 132, source/scss/required/_mixins.scss */
+    .reverse .button:hover, .reverse .button:active, .reverse .button[href]:hover, .reverse .button[href]:active {
+      background-color: #e699b3;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+      color: black; }
+    /* line 143, source/scss/required/_mixins.scss */
+    .reverse .button:active, .reverse .button[href]:active {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
+    /* line 146, source/scss/required/_mixins.scss */
+    .reverse .button:focus, .reverse .button[href]:focus {
+      outline: none; }
+  /* line 47, source/scss/optional/_reverse.scss */
+  .reverse .button-outline {
+    background-color: transparent;
+    border: 2px #99b3e6 solid;
+    border-radius: 4px;
+    color: #99b3e6;
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: calc(0.375rem - 2px) calc(1.125rem - 2px);
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s;
+    vertical-align: middle; }
+    /* line 169, source/scss/required/_mixins.scss */
+    .reverse .button-outline:hover, .reverse .button-outline:active, .reverse .button-outline[href]:hover, .reverse .button-outline[href]:active {
+      background-color: #e699b3;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+      border-color: #da91aa;
+      color: black; }
+    /* line 181, source/scss/required/_mixins.scss */
+    .reverse .button-outline:active, .reverse .button-outline[href]:active {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
+    /* line 184, source/scss/required/_mixins.scss */
+    .reverse .button-outline:focus, .reverse .button-outline[href]:focus {
+      outline: none; }
+  /* line 53, source/scss/optional/_reverse.scss */
+  .reverse blockquote.pullquote-roof-fixed::before, .reverse blockquote.pullquote-roof-full::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#4b4b4b%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    color: #4b4b4b; }
+  /* line 63, source/scss/optional/_reverse.scss */
   .reverse table.striped tr:nth-child(2n) td {
     background-color: rgba(255, 255, 255, 0.05); }
-  /* line 49, source/scss/optional/_reverse.scss */
+  /* line 68, source/scss/optional/_reverse.scss */
   .reverse table.horizontal-rules {
-    border-top-color: rgba(255, 255, 255, 0.1); }
-    /* line 51, source/scss/optional/_reverse.scss */
+    border-top-color: #4b4b4b; }
+    /* line 70, source/scss/optional/_reverse.scss */
     .reverse table.horizontal-rules td,
     .reverse table.horizontal-rules th {
-      border-bottom-color: rgba(255, 255, 255, 0.1); }
-    /* line 55, source/scss/optional/_reverse.scss */
+      border-bottom-color: #4b4b4b; }
+    /* line 74, source/scss/optional/_reverse.scss */
     .reverse table.horizontal-rules th[scope="col"] {
-      border-bottom-color: rgba(255, 255, 255, 0.1); }
-  /* line 59, source/scss/optional/_reverse.scss */
+      border-bottom-color: #4b4b4b; }
+  /* line 78, source/scss/optional/_reverse.scss */
   .reverse table.vertical-rules {
-    border-left-color: rgba(255, 255, 255, 0.1); }
-    /* line 61, source/scss/optional/_reverse.scss */
+    border-left-color: #4b4b4b; }
+    /* line 80, source/scss/optional/_reverse.scss */
     .reverse table.vertical-rules td,
     .reverse table.vertical-rules th {
-      border-right-color: rgba(255, 255, 255, 0.1); }
-    /* line 65, source/scss/optional/_reverse.scss */
+      border-right-color: #4b4b4b; }
+    /* line 84, source/scss/optional/_reverse.scss */
     .reverse table.vertical-rules th[scope="row"] {
-      border-right-color: rgba(255, 255, 255, 0.1); }
+      border-right-color: #4b4b4b; }
   @media (max-width: 39.996em) {
-    /* line 70, source/scss/optional/_reverse.scss */
+    /* line 89, source/scss/optional/_reverse.scss */
     .reverse table.responsive tbody tr + tr {
-      border-top-color: rgba(255, 255, 255, 0.1); } }
-  /* line 76, source/scss/optional/_reverse.scss */
+      border-top-color: #4b4b4b; } }
+  /* line 95, source/scss/optional/_reverse.scss */
   .reverse table.responsive td .td-label {
-    color: #a3a3a3; }
+    color: #999999; }
 
 /* line 2, source/scss/optional/_collapsables.scss */
 h2.collapsable-processed,
@@ -1808,7 +1867,7 @@ select.tyfy-select {
 .tyfyicons-x::before {
   content: "\ea0c"; }
 
-/* line 85, test/test.scss */
+/* line 81, test/test.scss */
 body {
   background-color: rgba(0, 0, 0, 0.05);
   margin-left: auto;
@@ -1816,7 +1875,7 @@ body {
   max-width: 52.5rem;
   padding: 1.5rem; }
 
-/* line 92, test/test.scss */
+/* line 88, test/test.scss */
 figure {
   background-color: white;
   border-radius: 4px;
@@ -1824,7 +1883,7 @@ figure {
   margin-left: 0;
   margin-right: 0;
   padding: 1.5rem; }
-  /* line 99, test/test.scss */
+  /* line 95, test/test.scss */
   figure figcaption {
     border-bottom: 2px #e0e0e0 solid;
     color: #8c8c8c;
@@ -1836,60 +1895,63 @@ figure {
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
     text-transform: uppercase; }
-  /* line 111, test/test.scss */
+  /* line 107, test/test.scss */
   figure figcaption + * {
     margin-top: 0 !important; }
+  /* line 110, test/test.scss */
+  figure.reverse figcaption {
+    border-bottom-color: #4b4b4b; }
 
-/* line 115, test/test.scss */
+/* line 114, test/test.scss */
 .swatch {
   border-radius: 50%;
   display: inline-block;
   height: 2.25rem;
   vertical-align: middle;
   width: 2.25rem; }
-  /* line 121, test/test.scss */
+  /* line 120, test/test.scss */
   .swatch.foreground {
     background-color: black; }
-    /* line 123, test/test.scss */
+    /* line 122, test/test.scss */
     .reverse .swatch.foreground {
       background-color: white; }
-  /* line 127, test/test.scss */
+  /* line 126, test/test.scss */
   .swatch.text-light {
     background-color: #8c8c8c; }
-    /* line 129, test/test.scss */
+    /* line 128, test/test.scss */
     .reverse .swatch.text-light {
-      background-color: #a3a3a3; }
-  /* line 133, test/test.scss */
+      background-color: #999999; }
+  /* line 132, test/test.scss */
   .swatch.link-default {
     background-color: #3366cc; }
-    /* line 135, test/test.scss */
+    /* line 134, test/test.scss */
     .reverse .swatch.link-default {
       background-color: #99b3e6; }
-  /* line 139, test/test.scss */
+  /* line 138, test/test.scss */
   .swatch.link-active {
     background-color: #cc3366; }
-    /* line 141, test/test.scss */
+    /* line 140, test/test.scss */
     .reverse .swatch.link-active {
       background-color: #e699b3; }
-  /* line 145, test/test.scss */
+  /* line 144, test/test.scss */
   .swatch.border {
     background-color: #e0e0e0; }
-    /* line 147, test/test.scss */
+    /* line 146, test/test.scss */
     .reverse .swatch.border {
-      background-color: rgba(255, 255, 255, 0.1); }
-  /* line 151, test/test.scss */
+      background-color: #4b4b4b; }
+  /* line 150, test/test.scss */
   .swatch.shade {
     background-color: rgba(0, 0, 0, 0.05); }
-    /* line 153, test/test.scss */
+    /* line 152, test/test.scss */
     .reverse .swatch.shade {
       background-color: rgba(255, 255, 255, 0.05); }
 
-/* line 158, test/test.scss */
+/* line 157, test/test.scss */
 hr.demo {
   margin-bottom: 0.375rem;
   margin-top: 0.375rem; }
 
-/* line 162, test/test.scss */
+/* line 161, test/test.scss */
 .button-rev {
   opacity: 0.25;
   position: fixed;
@@ -1897,6 +1959,6 @@ hr.demo {
   top: 0.375rem;
   transition: all 0.25s;
   z-index: 100; }
-  /* line 169, test/test.scss */
+  /* line 168, test/test.scss */
   .button-rev:hover {
     opacity: 1; }
