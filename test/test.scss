@@ -120,21 +120,39 @@ figure {
   width:tygrid(3);
   &.foreground {
     background-color:$tyfy-color-foreground;
+    .reverse & {
+      background-color:$tyfy-color-foreground-reverse;
+    }
   }
   &.text-light {
     background-color:$tyfy-color-text-light;
+    .reverse & {
+      background-color:$tyfy-color-text-light-reverse;
+    }
   }
   &.link-default {
     background-color:$tyfy-color-link-default;
+    .reverse & {
+      background-color:$tyfy-color-link-default-reverse;
+    }
   }
   &.link-active {
     background-color:$tyfy-color-link-active;
+    .reverse & {
+      background-color:$tyfy-color-link-active-reverse;
+    }
   }
   &.border {
     background-color:$tyfy-color-border;
+    .reverse & {
+      background-color:$tyfy-color-border-reverse;
+    }
   }
   &.shade {
     background-color:$tyfy-color-shade;
+    .reverse & {
+      background-color:$tyfy-color-shade-reverse;
+    }
   }
 }
 hr.demo {
