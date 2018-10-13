@@ -135,13 +135,127 @@
     &:hover {
       &::before {
         background-color:$tyfy-color-link-active-reverse;
+        color:$tyfy-color-background-reverse;
       }
     }
   }
-    .collapsables {
+  .collapsables {
     border-bottom-color:$tyfy-color-border-reverse;
     @media (min-width:$tyfy-break-collapsables-pad) {
       border-color:$tyfy-color-border-reverse;
+    }
+  }
+
+  // tabs
+  .tabs-container {
+    ul.tabs {
+      border-bottom-color:$tyfy-color-border-reverse;
+      li {
+        background-color:$tyfy-color-shade-reverse;
+        border-color:$tyfy-color-border-reverse;
+        color:$tyfy-color-text-light-reverse;
+        &:hover {
+          background-color:rgba($tyfy-color-link-active-reverse,0.12);
+          color:$tyfy-color-link-active-reverse;
+        }
+        &.open {
+          background-color:$tyfy-color-background-reverse;
+          border-bottom-color:$tyfy-color-background-reverse;
+          color:$tyfy-color-foreground-reverse;
+        }
+      }
+    }
+    &.tabs-processed {
+      .tab-label {
+        background-color:transparent;
+        border-bottom-color:transparent;
+        &::before {
+          color:$tyfy-color-text-light-reverse;
+        }
+        &.collapsed {
+          border-bottom-color:$tyfy-color-border-reverse;
+        }
+        &.transition {
+          border-bottom-color:transparent;
+        }
+        &:hover {
+          &::before {
+            background-color:$tyfy-color-link-active-reverse;
+            color:$tyfy-color-background-reverse;
+          }
+        }
+      }
+      .tab-panel {
+        border-bottom-color:$tyfy-color-border-reverse;
+        @media (min-width:$tyfy-break-tabs) {
+          border-color:$tyfy-color-border-reverse;
+        }
+      }
+    }
+  }
+
+  // forms
+  fieldset {
+    border-color:$tyfy-color-border-reverse;
+  }
+  select,
+  textarea,
+  input[type="text"],
+  input[type="file"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    background-color:$tyfy-color-background-reverse;
+    border-color:$tyfy-color-border-reverse;
+    color:$tyfy-color-foreground-reverse;
+  }
+  textarea,
+  input[type="text"],
+  input[type="file"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    color:$tyfy-color-foreground-reverse;
+    &:focus {
+      border-color:$tyfy-color-link-active-reverse;
+    }
+  }
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    @include button($tyfy-color-link-default-reverse,$tyfy-color-link-active-reverse);
+  }
+  .tyfy-select select,
+  select.tyfy-select {
+    background-color:$tyfy-color-background-reverse;
+    border-color:$tyfy-color-border-reverse;
+    color:$tyfy-color-foreground-reverse;
+    &:focus {
+      border-color:$tyfy-color-link-active-reverse;
+    }
+    &:not([multiple]) {
+      background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{$tyfy-color-text-light-reverse}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{$tyfy-color-text-light-reverse}'/%3E%3C/svg%3E");
     }
   }
 }

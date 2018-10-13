@@ -61,7 +61,7 @@ $tyfy-color-foreground-reverse:white;
 $tyfy-color-text-light-reverse:mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,50%);
 $tyfy-color-link-default-reverse:hsl(hue($tyfy-color-link-default),saturation($tyfy-color-link-default),(100% - lightness(darken($tyfy-color-link-default,25%))));
 $tyfy-color-link-active-reverse:hsl(hue($tyfy-color-link-active),saturation($tyfy-color-link-active),(100% - lightness(darken($tyfy-color-link-active,25%))));
-$tyfy-color-border-reverse:mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,12%);
+$tyfy-color-border-reverse:mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,15%);
 $tyfy-color-shade-reverse:rgba($tyfy-color-foreground-reverse,0.05);
 $tyfyicons-path:"../dist/fonts/tyfyicons";
 $tyfyicons-angle-down:"ea01";
