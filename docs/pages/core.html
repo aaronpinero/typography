@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+	<head>
 		<!-- COMMON HEAD TAGS -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
@@ -18,9 +18,9 @@
 		<link rel="stylesheet" href="../../dist/style/tyfy.css">
 		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy - Effects</title>
-  </head>
-  <body class="">
+		<title>Tyfy - Core</title>
+	</head>
+	<body class="">
 		<!-- COMMON HEADER -->
 		<header class="brand sibling-margins-off reverse">
 			<h1><a href="index.html">Tyfy</a></h1>
@@ -51,23 +51,20 @@
 			</nav>
 		</header>
 		<!--/ COMMON HEADER -->
-    <section class="main links-underlined">
-      <h1>Effects <em><small>Experimental</small></em></h1>
-      <p>I added this module because it was an opportunity to experiment with <a href="https://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184"><span class="smallcaps">SASS</span> maps</a>. In this case, I have used a sass map to generate a number of classes that, when applied to an element, cause that element to fade in when the page is loaded. The duration of the fade animation depends on the class used.</p>
-      <p>To apply a fade in animation of arbitrary duration, there is a mixin that accepts duration as a variable.</p>
-      <p>For now, this is the only effect available. I may add more effects at a later time. I welcome suggestions for particular effects.</p>
-      <h2>Classes</h2>
-      <dl>
-        <dt class="fade-500ms">.fade-500ms</dt>
-        <dd>Applies a fade in animation of 500ms duration.</dd>
-        <dt class="fade-1s">.fade-1s</dt>
-        <dd>Applies a fade in animation of 1000ms duration.</dd>
-        <dt class="fade-2s">.fade-2s</dt>
-        <dd>Applies a fade in animation of 2000ms duration.</dd>
-        <dt class="fade-3s">.fade-3s</dt>
-        <dd>Applies a fade in animation of 3000ms duration.</dd>
-      </dl>
-    </section>
+		<section class="main links-underlined">
+			<h1>Core</h1>
+			<p>Three <span class="smallcaps">SASS</span> variables make up <strong class="tyfy">Tyfy’s</strong> core module. These variables define the size of the framework’s grid and all of the framework's font sizes. The value of these variables can have a significant impact on the character of your typographic design.</p>
+			<p>The core module is the first module listed in the main tyfy.scss file. Core variable values are <em>required</em> by the <a href="functions.html">functions module</a> and are used to calculate many of the default values for variables in the <a href="settings.html">settings module</a>.
+			<p>All <strong class="tyfy">Tyfy</strong> variable names begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects.</p>
+			<dl>
+				<dt><code class="code-nobg">$tyfy-grid-unit: 0.875rem !default;</code></dt>
+				<dd>Grid unit size in rem units; I recommend this value be half the desired line height. Smaller values will result in a more compact design; larger values will create a design with more breathing room.</dd>
+				<dt><code class="code-nobg">$tyfy-font-size-scalar: 1.2 !default;</code></dt>
+				<dd>Scalar value that defines the proportion between font sizes on the modular scale. Larger values will create a scale with more typographic contrast.</dd>
+				<dt><code class="code-nobg">$tyfy-font-size-base: 1rem !default;</code></dt>
+				<dd>Font size in rem units applied to the <code>&lt;body&gt;</code> tag. All font sizes on the modular scale are calculated from on this size using the formula <em>font size = base font size &times; scalar<sup>(step)</sup></em> where <em>step</em> is an integer indicating the number of steps up (positive) or down (negative) the scale from the base size.</dd>
+			</dl>
+		</section>
 		<!-- COMMON FOOTER -->
 		<footer>
 			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
@@ -83,6 +80,5 @@
     </script>
     <script src="../resources/script/docs-nav.js"></script>
 		<!--/ COMMON FOOTER -->
-    <script src="../dist/script/tabs.js"></script>
-  </body>
+	</body>
 </html>
