@@ -1,16 +1,11 @@
-// grid unit
-// helps define vertical and horizontal grid
-// should be half the base line-height
+////////// grid //////////
+// the grid unit defines the size of the vertical (baseline) and horizontal grid
+// the value should be half the desired line height (leading) of the body text
 $tyfy-grid-unit:0.875rem !default;
 
-// line height adjustments
-// used by the leading function to adjust calculation of line-height
-// smaller values result in larger line-heights
-$tyfy-leading-adjustment-tall:0.8 !default;
-$tyfy-leading-adjustment-base:0.9 !default;
-$tyfy-leading-adjustment-heading:1 !default;
-$tyfy-leading-adjustment-short:1.2 !default;
-
-// typographic scale
+////////// modular typographic scale //////////
+// the modular scale is a set of mathematically harmonious font sizes
+// the scalar value defines the proportion between steps on the scale
+// all steps on the scale are calculated using the base value and the scalar
 $tyfy-font-size-scalar:1.2 !default;
 $tyfy-font-size-base:1rem !default;

@@ -8,7 +8,7 @@
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
-		
+
 		  gtag('config', 'UA-32897472-1');
 		</script>
 		<meta charset="utf8">
@@ -53,25 +53,16 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Core</h1>
-			<p><strong class="tyfy">Tyfy</strong> has a library of <span class="smallcaps">SASS</span> variables that define the baseline grid, colors, text sizes, fonts, breakpoints, and other characteristics. The core variables are those that affect the baseline grid and modular scale. The value of these variables can have a significant impact on the character of your typographic design.</p>
-			<p>Core variables are stored in the required/core module. This module is the first one imported to the framework. Core variable values are required by the <a href="functions.html">required/functions</a> module to calculate values for variables in the <a href="settings.html">required/settings</a> module.</p>
-			<p>All variable names begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects.</p>
-			<h2>Core Variables</h2>
+			<p>Three <span class="smallcaps">SASS</span> variables make up <strong class="tyfy">Tyfy’s</strong> core module. These variables define the size of the framework’s grid and all of the framework's font sizes. The value of these variables can have a significant impact on the character of your typographic design.</p>
+			<p>The core module is the first module listed in the main tyfy.scss file. Core variable values are <em>required</em> by the <a href="functions.html">functions module</a> and are used to calculate many of the default values for variables in the <a href="settings.html">settings module</a>.
+			<p>All <strong class="tyfy">Tyfy</strong> variable names begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects.</p>
 			<dl>
 				<dt><code class="code-nobg">$tyfy-grid-unit: 0.875rem !default;</code></dt>
-				<dd>Base grid unit in rem units; I recommend this value be half the desired line height</dd>
-				<dt><code class="code-nobg">$tyfy-leading-adjustment-tall: 0.8 !default;</code></dt>
-				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &lt; 1 result in taller leading</dd>
-				<dt><code class="code-nobg">$tyfy-leading-adjustment-base: 0.9 !default;</code></dt>
-				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &lt; 1 result in taller leading</dd>
-				<dt><code class="code-nobg">$tyfy-leading-adjustment-heading: 1 !default;</code></dt>
-				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &gt;= 1 result in smaller leading</dd>
-				<dt><code class="code-nobg">$tyfy-leading-adjustment-short: 1.2 !default;</code></dt>
-				<dd>Scalar value used by the <a href="functions.html#tylead"><code>tylead</code> function</a> to calculate line height; values &gt; 1 result in smaller leading</dd>
+				<dd>Grid unit size in rem units; I recommend this value be half the desired line height. Smaller values will result in a more compact design; larger values will create a design with more breathing room.</dd>
 				<dt><code class="code-nobg">$tyfy-font-size-scalar: 1.2 !default;</code></dt>
-				<dd>Scalar value that defines the proportion between text sizes on the typographic scale</dd>
+				<dd>Scalar value that defines the proportion between font sizes on the modular scale. Larger values will create a scale with more typographic contrast.</dd>
 				<dt><code class="code-nobg">$tyfy-font-size-base: 1rem !default;</code></dt>
-				<dd>Font size in rem units applied to the <code>&lt;body&gt;</code> tag</dd>
+				<dd>Font size in rem units applied to the <code>&lt;body&gt;</code> tag. All font sizes on the modular scale are calculated from on this size using the formula <em>font size = base font size &times; scalar<sup>(step)</sup></em> where <em>step</em> is an integer indicating the number of steps up (positive) or down (negative) the scale from the base size.</dd>
 			</dl>
 		</section>
 		<!-- COMMON FOOTER -->
@@ -83,7 +74,7 @@
     <script>
       WebFont.load({
         google: {
-          families: ['IBM+Plex+Mono:400,400i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+          families: ['IBM+Plex+Mono:400,400i,700,700i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
         }
       });
     </script>
