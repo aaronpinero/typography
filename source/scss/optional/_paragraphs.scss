@@ -16,5 +16,7 @@ p.lede {
   @media (min-width:$tyfy-break-cols-2) {
     columns:2;
     column-gap:$tyfy-spacing-large;
+    orphans:2;
+    widows:2;
   }
 }
