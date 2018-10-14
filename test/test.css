@@ -1808,6 +1808,156 @@ select.tyfy-select {
 .tyfyicons-x::before {
   content: "\ea0c"; }
 
+@media (max-width: 39.996em) {
+  /* line 8, source/scss/extras/_responsive_text.scss */
+  body {
+    font-size: 1.0125rem;
+    line-height: 1.5rem; } }
+
+@media (min-width: 80em) {
+  /* line 8, source/scss/extras/_responsive_text.scss */
+  body {
+    font-size: 1.25rem;
+    line-height: 1.5rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 19, source/scss/extras/_responsive_text.scss */
+  h1 {
+    font-size: 2.74658rem;
+    line-height: 3rem; } }
+
+@media (min-width: 80em) {
+  /* line 19, source/scss/extras/_responsive_text.scss */
+  h1 {
+    font-size: 4.29153rem;
+    line-height: 4.5rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 29, source/scss/extras/_responsive_text.scss */
+  h2 {
+    font-size: 1.75781rem;
+    line-height: 2.25rem; } }
+
+@media (min-width: 80em) {
+  /* line 29, source/scss/extras/_responsive_text.scss */
+  h2 {
+    font-size: 2.74658rem;
+    line-height: 3rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 39, source/scss/extras/_responsive_text.scss */
+  h3 {
+    font-size: 1.40625rem;
+    line-height: 1.5rem; } }
+
+@media (min-width: 80em) {
+  /* line 39, source/scss/extras/_responsive_text.scss */
+  h3 {
+    font-size: 2.19727rem;
+    line-height: 2.25rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 49, source/scss/extras/_responsive_text.scss */
+  h4 {
+    font-size: 1.125rem;
+    line-height: 1.5rem; } }
+
+@media (min-width: 80em) {
+  /* line 49, source/scss/extras/_responsive_text.scss */
+  h4 {
+    font-size: 1.75781rem;
+    line-height: 2.25rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 59, source/scss/extras/_responsive_text.scss */
+  h5 {
+    font-size: 0.9rem;
+    line-height: 1.5rem; } }
+
+@media (min-width: 80em) {
+  /* line 59, source/scss/extras/_responsive_text.scss */
+  h5 {
+    font-size: 1.40625rem;
+    line-height: 1.5rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 69, source/scss/extras/_responsive_text.scss */
+  h6 {
+    font-size: 0.72rem;
+    line-height: 0.75rem; } }
+
+@media (min-width: 80em) {
+  /* line 69, source/scss/extras/_responsive_text.scss */
+  h6 {
+    font-size: 1.125rem;
+    line-height: 1.5rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 79, source/scss/extras/_responsive_text.scss */
+  pre,
+  code,
+  kbd,
+  samp {
+    font-size: 1.0125rem; } }
+
+@media (min-width: 80em) {
+  /* line 79, source/scss/extras/_responsive_text.scss */
+  pre,
+  code,
+  kbd,
+  samp {
+    font-size: 1.25rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 92, source/scss/extras/_responsive_text.scss */
+  h2.collapsable-processed::before {
+    width: 2.25rem; } }
+
+@media (min-width: 80em) {
+  /* line 92, source/scss/extras/_responsive_text.scss */
+  h2.collapsable-processed::before {
+    width: 3rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 102, source/scss/extras/_responsive_text.scss */
+  h3.collapsable-processed::before {
+    width: 1.5rem; } }
+
+@media (min-width: 80em) {
+  /* line 102, source/scss/extras/_responsive_text.scss */
+  h3.collapsable-processed::before {
+    width: 2.25rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 112, source/scss/extras/_responsive_text.scss */
+  h4.collapsable-processed::before {
+    width: 1.5rem; } }
+
+@media (min-width: 80em) {
+  /* line 112, source/scss/extras/_responsive_text.scss */
+  h4.collapsable-processed::before {
+    width: 2.25rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 122, source/scss/extras/_responsive_text.scss */
+  h5.collapsable-processed::before {
+    width: 1.5rem; } }
+
+@media (min-width: 80em) {
+  /* line 122, source/scss/extras/_responsive_text.scss */
+  h5.collapsable-processed::before {
+    width: 1.5rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 132, source/scss/extras/_responsive_text.scss */
+  h6.collapsable-processed::before {
+    width: 0.75rem; } }
+
+@media (min-width: 80em) {
+  /* line 132, source/scss/extras/_responsive_text.scss */
+  h6.collapsable-processed::before {
+    width: 1.5rem; } }
+
 /* line 85, test/test.scss */
 body {
   background-color: rgba(0, 0, 0, 0.05);

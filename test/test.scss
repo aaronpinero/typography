@@ -24,6 +24,7 @@ $tyfy-symbol:tyfyicons;
 $tyfy-font-base:$tyfy-serif;
 $tyfy-font-heading:$tyfy-sans;
 $tyfy-font-table:$tyfy-sans;
+$tyfy-font-input:$tyfy-sans;
 $tyfy-font-sizes: (
   "sm":-1,
   "h6":-1,
@@ -81,7 +82,6 @@ $tyfyicons-quote-right:"ea0b";
 $tyfyicons-search:"ea09";
 $tyfyicons-x:"ea0c";
 @import "../source/scss/tyfy.scss";
-@import "../source/scss/extras/icons";
 body {
   background-color:$tyfy-color-shade;
   margin-left:auto;
