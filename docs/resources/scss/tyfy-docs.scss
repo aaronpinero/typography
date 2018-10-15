@@ -1,13 +1,13 @@
 $tyfyicons-path:"../../../dist/fonts/tyfyicons";
-
-@import "../../../source/scss/required/core";
-@import "../../../source/scss/required/functions";
-@import "../../../source/scss/required/settings";
-@import "../../../source/scss/required/mixins";
-
-@import "../../../source/scss/extras/icons";
-@import "../../../source/scss/extras/responsive_text";
-
+$tyfy-serif:"IBM Plex Serif", georgia, serif;
+$tyfy-sans:"IBM Plex Sans", helvetica, arial, sans-serif;
+$tyfy-mono:"IBM Plex Mono", courier, monospace;
+$tyfy-condensed:"IBM Plex Sans Condensed",sans-serif;
+$tyfy-font-base:$tyfy-serif;
+$tyfy-font-heading:$tyfy-sans;
+$tyfy-font-table:$tyfy-sans;
+$tyfy-font-input:$tyfy-sans;
+@import "../../../source/scss/tyfy.scss";
 body {
   @include fade-in(2000ms);
   font-family:"IBM Plex Serif", serif;
@@ -23,7 +23,7 @@ body {
   max-width:55rem;
 }
 h1 {
-  font-family:"IBM Plex Sans Condensed",sans-serif;
+  font-family:$tyfy-condensed;
   text-transform:uppercase;
   small {
     font-size:tyscale(1);
@@ -41,7 +41,9 @@ hr.demo {
   margin-top:tygrid(1);
 }
 strong.tyfy {
-  color:#de4185;
+  font-family:$tyfy-condensed;
+  font-weight:bold;
+  text-transform:uppercase;
 }
 
 header.brand {

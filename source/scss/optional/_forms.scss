@@ -1,17 +1,17 @@
 // basic styles
 fieldset {
-  border:$tyfy-width-border solid $tyfy-color-border;
+  border-width:$tyfy-width-border;
+  border-style:solid;
   border-radius:$tyfy-radius-border;
   display:block;
   margin-left:0;
   margin-right:0;
   padding:calc(#{tygrid(1.5)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
   legend {
-    color:lighten($tyfy-color-foreground,25%);
     font-family:$tyfy-font-input;
     font-size:tyscale(1);
     font-weight:bold;
-    line-height:tylead(tyscale(1),base);
+    line-height:tylead(tyscale(1));
     margin-left:tygrid(-1);
     margin-right:tygrid(-1);
     padding-left:tygrid(1);
@@ -50,7 +50,6 @@ input[type="submit"] {
   width:100%;
 }
 label {
-  color:lighten($tyfy-color-foreground,25%);
   display:block;
   font-weight:bold;
   &.label-option {
@@ -65,27 +64,6 @@ label {
   }
   form & + * {
     margin-top:$tyfy-spacing-standard / 2;
-  }
-}
-
-// placeholder selectors for forms
-%tyfy_form_element {
-  border:$tyfy-width-border solid $tyfy-color-border;
-  border-radius:$tyfy-radius-border;
-  color:$tyfy-color-foreground;
-  font-family:$tyfy-font-input;
-}
-%tyfy_form_textinput {
-  background-color:white;
-  box-shadow:0 1px 1px rgba(0,0,0,0.1) inset;
-  color:$tyfy-color-foreground;
-  line-height:tylead(tyscale(0),base);
-  padding:calc(#{tygrid(0.75)} - #{$tyfy-width-border});
-  transition:border-color $tyfy-transition-duration-hover, box-shadow $tyfy-transition-duration-hover;
-  width:100%;
-  &:focus {
-    border-color:$tyfy-color-link-active;
-    box-shadow:0 1px 1px rgba(0,0,0,0.2) inset;
   }
 }
 
@@ -107,25 +85,27 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-  @extend %tyfy_form_element;
+  background-color:white;
+  border-width:$tyfy-width-border;
+  border-style:solid;
+  border-radius:$tyfy-radius-border;
+  box-shadow:0 1px 1px rgba(0,0,0,0.1) inset;
+  color:$tyfy-color-foreground;
+  font-family:$tyfy-font-input;
+  line-height:tylead(tyscale(0));
+  padding:calc(#{tygrid(0.75)} - #{$tyfy-width-border});
+  transition:border-color $tyfy-transition-duration-hover, box-shadow $tyfy-transition-duration-hover;
+  width:100%;
+  &:focus {
+    border-color:$tyfy-color-link-active;
+    box-shadow:0 1px 2px rgba(0,0,0,0.2) inset;
+  }
 }
-textarea,
-input[type="text"],
-input[type="file"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-  @extend %tyfy_form_textinput;
+select {
+  @include sibling-margins(off);
+  &:not([multiple]) {
+    box-shadow:0 0 0 transparent;
+  }
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -144,16 +124,9 @@ input[type="submit"] {
 }
 
 // special select element
-// special select element
 .tyfy-select select,
-select.tyfy-select, {
-  @extend %tyfy_form_element;
-  @extend %tyfy_form_textinput;
+select.tyfy-select {
   appearance:none;
-  box-shadow:none;
-  &:focus {
-    box-shadow:none;
-  }
   &:not([multiple]) {
     background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{$tyfy-color-text-light}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{$tyfy-color-text-light}'/%3E%3C/svg%3E");
     background-repeat:no-repeat;

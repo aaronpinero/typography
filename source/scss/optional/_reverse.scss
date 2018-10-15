@@ -1,7 +1,11 @@
 // root styles
 .reverse {
   background-color:$tyfy-color-background-reverse;
+  border-color:$tyfy-color-border-reverse;
   color:$tyfy-color-foreground-reverse;
+  * {
+    border-color:inherit;
+  }
 
   // links
   a {
@@ -23,18 +27,40 @@
     }
   }
 
+  // lists
+  ul {
+    &.list-icons {
+      li {
+        &::before {
+          color:$tyfy-color-text-light-reverse;
+        }
+      }
+    }
+  }
+
   // utility
-  code {
-    background-color:rgba($tyfy-color-foreground-reverse,0.1);
+  code:not(.code-nobg) {
+    background-color:$tyfy-color-shade-reverse;
+  }
+  hr {
+    border-color:$tyfy-color-border-reverse;
+  }
+  .button {
+    @include button($tyfy-color-link-default-reverse,$tyfy-color-link-active-reverse);
+  }
+  .button-outline {
+    @include button-outline($tyfy-color-link-default-reverse,$tyfy-color-link-active-reverse);
+  }
+  .light {
+    color:$tyfy-color-text-light-reverse;
   }
 
   // quotes
   blockquote {
-    &.pullquote-roof-fixed::before {
-      color:$tyfy-color-border-reverse;
-    }
+    &.pullquote-roof-fixed::before,
     &.pullquote-roof-full::before {
-      background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22640px%22%20height%3D%2264px%22%20viewBox%3D%220%200%20640%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#{$tyfy-color-border-reverse}%22%3E%3Cpath%20d%3D%22M291%2C14%20L317%2C14%20L317%2C34%20C317%2C45.1082357%20310.333333%2C54.441569%20297%2C62%20L292%2C52%20C300%2C47.9026693%20304%2C43.2360026%20304%2C38%20L291%2C38%20L291%2C14%20Z%22%3E%3C%2Fpath%3E%3Cpolygon%20points%3D%220%2025%20272%2025%20272%2034%200%2034%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22368%2025%20640%2025%20640%2034%20368%2034%22%3E%3C%2Fpolygon%3E%3Cpath%20d%3D%22M323%2C14%20L349%2C14%20L349%2C34%20C349%2C45.1082357%20342.333333%2C54.441569%20329%2C62%20L324%2C52%20C332%2C47.9026693%20336%2C43.2360026%20336%2C38%20L323%2C38%20L323%2C14%20Z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#{$tyfy-color-border-reverse}%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      color:$tyfy-color-border-reverse;
     }
   }
 
@@ -76,6 +102,138 @@
       .td-label {
         color:$tyfy-color-text-light-reverse;
       }
+    }
+  }
+
+  // collapsables
+  h2.collapsable-processed,
+  h3.collapsable-processed,
+  h4.collapsable-processed,
+  h5.collapsable-processed,
+  h6.collapsable-processed {
+    &::before {
+      color:$tyfy-color-text-light-reverse;
+    }
+    &.closed {
+      border-bottom-color:$tyfy-color-border-reverse;
+    }
+    &.transition.closed {
+      border-bottom-color:transparent;
+    }
+    @media (min-width:$tyfy-break-collapsables-pad) {
+      border-color:$tyfy-color-border-reverse;
+      border-bottom-color:transparent;
+      &.closed {
+        border-bottom-color:$tyfy-color-border-reverse;
+      }
+      &.transition.closed {
+        border-bottom-color:transparent;
+      }
+    }
+  }
+  h2.collapsable-processed,
+  h3.collapsable-processed,
+  h4.collapsable-processed,
+  h5.collapsable-processed,
+  h6.collapsable-processed {
+    &:hover {
+      &::before {
+        background-color:$tyfy-color-link-active-reverse;
+        color:$tyfy-color-background-reverse;
+      }
+    }
+  }
+  .collapsables {
+    border-bottom-color:$tyfy-color-border-reverse;
+    @media (min-width:$tyfy-break-collapsables-pad) {
+      border-color:$tyfy-color-border-reverse;
+    }
+  }
+
+  // tabs
+  .tabs-container {
+    ul.tabs {
+      border-bottom-color:$tyfy-color-border-reverse;
+      li {
+        background-color:$tyfy-color-shade-reverse;
+        border-color:$tyfy-color-border-reverse;
+        color:$tyfy-color-text-light-reverse;
+        &:hover {
+          background-color:rgba($tyfy-color-link-active-reverse,0.12);
+          color:$tyfy-color-link-active-reverse;
+        }
+        &.open {
+          background-color:$tyfy-color-background-reverse;
+          border-bottom-color:$tyfy-color-background-reverse;
+          color:$tyfy-color-foreground-reverse;
+        }
+      }
+    }
+    &.tabs-processed {
+      .tab-label {
+        background-color:transparent;
+        border-bottom-color:transparent;
+        &::before {
+          color:$tyfy-color-text-light-reverse;
+        }
+        &.collapsed {
+          border-bottom-color:$tyfy-color-border-reverse;
+        }
+        &.transition {
+          border-bottom-color:transparent;
+        }
+        &:hover {
+          &::before {
+            background-color:$tyfy-color-link-active-reverse;
+            color:$tyfy-color-background-reverse;
+          }
+        }
+      }
+      .tab-panel {
+        border-bottom-color:$tyfy-color-border-reverse;
+        @media (min-width:$tyfy-break-tabs) {
+          border-color:$tyfy-color-border-reverse;
+        }
+      }
+    }
+  }
+
+  // forms
+  select,
+  textarea,
+  input[type="text"],
+  input[type="file"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    background-color:$tyfy-color-background-reverse;
+    box-shadow:0 1px 1px darken($tyfy-color-background-reverse,10%) inset;
+    color:$tyfy-color-foreground-reverse;
+    &:focus {
+      border-color:$tyfy-color-link-active-reverse;
+      box-shadow:0 1px 2px darken($tyfy-color-background-reverse,20%) inset;
+    }
+  }
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    @include button($tyfy-color-link-default-reverse,$tyfy-color-link-active-reverse);
+  }
+  .tyfy-select select,
+  select.tyfy-select {
+    &:not([multiple]) {
+      background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{$tyfy-color-text-light-reverse}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{$tyfy-color-text-light-reverse}'/%3E%3C/svg%3E");
     }
   }
 }

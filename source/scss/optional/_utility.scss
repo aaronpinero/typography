@@ -2,7 +2,7 @@ b {
   font-weight:700;
 }
 code {
-  background-color:rgba($tyfy-color-foreground,0.07);
+  background-color:tyfy-color-shade;
   border-radius:0.125em;
   font-family:$tyfy-mono;
   padding-left:0.125em;
@@ -46,8 +46,8 @@ span {
   &.smallcaps {
     font-feature-settings:"c2sc", "smcp";
     font-variant-caps:all-small-caps;
-    font-weight:bolder;
-    letter-spacing:0.05em;
+    letter-spacing:0.075em;
+    margin-right:-0.0375em;
   }
 }
 .button {

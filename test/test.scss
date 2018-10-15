@@ -1,9 +1,5 @@
 // tyfy core overrides
 $tyfy-grid-unit:0.75rem;
-$tyfy-leading-adjustment-tall:0.8;
-$tyfy-leading-adjustment-base:0.9;
-$tyfy-leading-adjustment-heading:1;
-$tyfy-leading-adjustment-short:1.2;
 $tyfy-font-size-scalar:1.25;
 $tyfy-font-size-base:1.125rem;
 
@@ -24,6 +20,7 @@ $tyfy-symbol:tyfyicons;
 $tyfy-font-base:$tyfy-serif;
 $tyfy-font-heading:$tyfy-sans;
 $tyfy-font-table:$tyfy-sans;
+$tyfy-font-input:$tyfy-sans;
 $tyfy-font-sizes: (
   "sm":-1,
   "h6":-1,
@@ -62,10 +59,10 @@ $tyfy-color-border:mix($tyfy-color-foreground,$tyfy-color-background,12%);
 $tyfy-color-shade:rgba($tyfy-color-foreground,0.05);
 $tyfy-color-background-reverse:#333;
 $tyfy-color-foreground-reverse:white;
-$tyfy-color-text-light-reverse:mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,55%);
+$tyfy-color-text-light-reverse:mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,50%);
 $tyfy-color-link-default-reverse:hsl(hue($tyfy-color-link-default),saturation($tyfy-color-link-default),(100% - lightness(darken($tyfy-color-link-default,25%))));
 $tyfy-color-link-active-reverse:hsl(hue($tyfy-color-link-active),saturation($tyfy-color-link-active),(100% - lightness(darken($tyfy-color-link-active,25%))));
-$tyfy-color-border-reverse:rgba($tyfy-color-foreground-reverse,0.1);
+$tyfy-color-border-reverse:mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,15%);
 $tyfy-color-shade-reverse:rgba($tyfy-color-foreground-reverse,0.05);
 $tyfyicons-path:"../dist/fonts/tyfyicons";
 $tyfyicons-angle-down:"ea01";
@@ -81,7 +78,6 @@ $tyfyicons-quote-right:"ea0b";
 $tyfyicons-search:"ea09";
 $tyfyicons-x:"ea0c";
 @import "../source/scss/tyfy.scss";
-@import "../source/scss/extras/icons";
 body {
   background-color:$tyfy-color-shade;
   margin-left:auto;
@@ -111,6 +107,9 @@ figure {
   figcaption + * {
     margin-top:0 !important;
   }
+  &.reverse figcaption {
+    border-bottom-color:$tyfy-color-border-reverse;
+  }
 }
 .swatch {
   border-radius:50%;
@@ -120,21 +119,39 @@ figure {
   width:tygrid(3);
   &.foreground {
     background-color:$tyfy-color-foreground;
+    .reverse & {
+      background-color:$tyfy-color-foreground-reverse;
+    }
   }
   &.text-light {
     background-color:$tyfy-color-text-light;
+    .reverse & {
+      background-color:$tyfy-color-text-light-reverse;
+    }
   }
   &.link-default {
     background-color:$tyfy-color-link-default;
+    .reverse & {
+      background-color:$tyfy-color-link-default-reverse;
+    }
   }
   &.link-active {
     background-color:$tyfy-color-link-active;
+    .reverse & {
+      background-color:$tyfy-color-link-active-reverse;
+    }
   }
   &.border {
     background-color:$tyfy-color-border;
+    .reverse & {
+      background-color:$tyfy-color-border-reverse;
+    }
   }
   &.shade {
     background-color:$tyfy-color-shade;
+    .reverse & {
+      background-color:$tyfy-color-shade-reverse;
+    }
   }
 }
 hr.demo {

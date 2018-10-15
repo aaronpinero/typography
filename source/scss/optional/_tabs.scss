@@ -95,7 +95,7 @@
       &:hover {
         &::before {
           background-color:$tyfy-color-link-active;
-          color:white;
+          color:$tyfy-color-background;
         }
       }
     }
