@@ -128,7 +128,6 @@ header.brand {
     }
   }
 }
-
 section.main {
   @extend .constrained;
   margin-top:0;
@@ -143,7 +142,6 @@ section.demo {
 section.demo.reverse {
   border:none;
 }
-
 pre.codebox {
   background-color:$tyfy-color-shade;
   border:$tyfy-width-border $tyfy-color-border solid;
@@ -151,7 +149,10 @@ pre.codebox {
   padding:$tyfy-spacing-standard;
   overflow:auto;
 }
-
+dt .defaultval {
+  color:lighten(mix($tyfy-color-link-default,$tyfy-color-link-active),10%);
+  font-weight:normal;
+}
 #lists-demo {
   @include sibling-margins(off);
   border:2px dashed darken($tyfy-color-background,10%);
@@ -198,7 +199,6 @@ pre.codebox {
     }
   }
 }
-
 footer {
   p {
     @extend .constrained;
