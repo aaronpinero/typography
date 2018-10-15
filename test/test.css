@@ -678,7 +678,7 @@ b {
 
 /* line 4, source/scss/optional/_utility.scss */
 code {
-  background-color: rgba(0, 0, 0, 0.07);
+  background-color: tyfy-color-shade;
   border-radius: 0.125em;
   font-family: monaco, courier, monospace;
   padding-left: 0.125em;
@@ -1120,7 +1120,7 @@ table.responsive td .td-label {
     color: #999999; }
   /* line 42, source/scss/optional/_reverse.scss */
   .reverse code:not(.code-nobg) {
-    background-color: rgba(255, 255, 255, 0.1); }
+    background-color: rgba(255, 255, 255, 0.05); }
   /* line 45, source/scss/optional/_reverse.scss */
   .reverse hr {
     border-color: #525252; }
@@ -2091,78 +2091,6 @@ select.tyfy-select {
 
 @media (max-width: 39.996em) {
   /* line 19, source/scss/extras/_responsive_text.scss */
-  h1 {
-    font-size: 2.74658rem;
-    line-height: 3rem; } }
-
-@media (min-width: 80em) {
-  /* line 19, source/scss/extras/_responsive_text.scss */
-  h1 {
-    font-size: 4.29153rem;
-    line-height: 4.5rem; } }
-
-@media (max-width: 39.996em) {
-  /* line 29, source/scss/extras/_responsive_text.scss */
-  h2 {
-    font-size: 1.75781rem;
-    line-height: 2.25rem; } }
-
-@media (min-width: 80em) {
-  /* line 29, source/scss/extras/_responsive_text.scss */
-  h2 {
-    font-size: 2.74658rem;
-    line-height: 3rem; } }
-
-@media (max-width: 39.996em) {
-  /* line 39, source/scss/extras/_responsive_text.scss */
-  h3 {
-    font-size: 1.40625rem;
-    line-height: 1.5rem; } }
-
-@media (min-width: 80em) {
-  /* line 39, source/scss/extras/_responsive_text.scss */
-  h3 {
-    font-size: 2.19727rem;
-    line-height: 2.25rem; } }
-
-@media (max-width: 39.996em) {
-  /* line 49, source/scss/extras/_responsive_text.scss */
-  h4 {
-    font-size: 1.125rem;
-    line-height: 1.5rem; } }
-
-@media (min-width: 80em) {
-  /* line 49, source/scss/extras/_responsive_text.scss */
-  h4 {
-    font-size: 1.75781rem;
-    line-height: 2.25rem; } }
-
-@media (max-width: 39.996em) {
-  /* line 59, source/scss/extras/_responsive_text.scss */
-  h5 {
-    font-size: 0.9rem;
-    line-height: 1.5rem; } }
-
-@media (min-width: 80em) {
-  /* line 59, source/scss/extras/_responsive_text.scss */
-  h5 {
-    font-size: 1.40625rem;
-    line-height: 1.5rem; } }
-
-@media (max-width: 39.996em) {
-  /* line 69, source/scss/extras/_responsive_text.scss */
-  h6 {
-    font-size: 0.72rem;
-    line-height: 0.75rem; } }
-
-@media (min-width: 80em) {
-  /* line 69, source/scss/extras/_responsive_text.scss */
-  h6 {
-    font-size: 1.125rem;
-    line-height: 1.5rem; } }
-
-@media (max-width: 39.996em) {
-  /* line 79, source/scss/extras/_responsive_text.scss */
   pre,
   code,
   kbd,
@@ -2170,7 +2098,7 @@ select.tyfy-select {
     font-size: 1.0125rem; } }
 
 @media (min-width: 80em) {
-  /* line 79, source/scss/extras/_responsive_text.scss */
+  /* line 19, source/scss/extras/_responsive_text.scss */
   pre,
   code,
   kbd,
@@ -2178,52 +2106,148 @@ select.tyfy-select {
     font-size: 1.25rem; } }
 
 @media (max-width: 39.996em) {
-  /* line 92, source/scss/extras/_responsive_text.scss */
+  /* line 31, source/scss/extras/_responsive_text.scss */
+  p.lede {
+    font-size: 1.40625rem;
+    line-height: 2.25rem; } }
+
+@media (min-width: 80em) {
+  /* line 31, source/scss/extras/_responsive_text.scss */
+  p.lede {
+    font-size: 2.19727rem;
+    line-height: 3rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 42, source/scss/extras/_responsive_text.scss */
+  h1,
+  .font-size-h1 {
+    font-size: 2.74658rem;
+    line-height: 3rem; } }
+
+@media (min-width: 80em) {
+  /* line 42, source/scss/extras/_responsive_text.scss */
+  h1,
+  .font-size-h1 {
+    font-size: 4.29153rem;
+    line-height: 4.5rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 53, source/scss/extras/_responsive_text.scss */
+  h2,
+  .font-size-h2 {
+    font-size: 1.75781rem;
+    line-height: 2.25rem; } }
+
+@media (min-width: 80em) {
+  /* line 53, source/scss/extras/_responsive_text.scss */
+  h2,
+  .font-size-h2 {
+    font-size: 2.74658rem;
+    line-height: 3rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 64, source/scss/extras/_responsive_text.scss */
+  h3,
+  .font-size-h3 {
+    font-size: 1.40625rem;
+    line-height: 1.5rem; } }
+
+@media (min-width: 80em) {
+  /* line 64, source/scss/extras/_responsive_text.scss */
+  h3,
+  .font-size-h3 {
+    font-size: 2.19727rem;
+    line-height: 2.25rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 75, source/scss/extras/_responsive_text.scss */
+  h4,
+  .font-size-h4 {
+    font-size: 1.125rem;
+    line-height: 1.5rem; } }
+
+@media (min-width: 80em) {
+  /* line 75, source/scss/extras/_responsive_text.scss */
+  h4,
+  .font-size-h4 {
+    font-size: 1.75781rem;
+    line-height: 2.25rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 86, source/scss/extras/_responsive_text.scss */
+  h5,
+  .font-size-h5 {
+    font-size: 0.9rem;
+    line-height: 1.5rem; } }
+
+@media (min-width: 80em) {
+  /* line 86, source/scss/extras/_responsive_text.scss */
+  h5,
+  .font-size-h5 {
+    font-size: 1.40625rem;
+    line-height: 1.5rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 97, source/scss/extras/_responsive_text.scss */
+  h6,
+  .font-size-h6 {
+    font-size: 0.72rem;
+    line-height: 0.75rem; } }
+
+@media (min-width: 80em) {
+  /* line 97, source/scss/extras/_responsive_text.scss */
+  h6,
+  .font-size-h6 {
+    font-size: 1.125rem;
+    line-height: 1.5rem; } }
+
+@media (max-width: 39.996em) {
+  /* line 110, source/scss/extras/_responsive_text.scss */
   h2.collapsable-processed::before {
     width: 2.25rem; } }
 
 @media (min-width: 80em) {
-  /* line 92, source/scss/extras/_responsive_text.scss */
+  /* line 110, source/scss/extras/_responsive_text.scss */
   h2.collapsable-processed::before {
     width: 3rem; } }
 
 @media (max-width: 39.996em) {
-  /* line 102, source/scss/extras/_responsive_text.scss */
+  /* line 120, source/scss/extras/_responsive_text.scss */
   h3.collapsable-processed::before {
     width: 1.5rem; } }
 
 @media (min-width: 80em) {
-  /* line 102, source/scss/extras/_responsive_text.scss */
+  /* line 120, source/scss/extras/_responsive_text.scss */
   h3.collapsable-processed::before {
     width: 2.25rem; } }
 
 @media (max-width: 39.996em) {
-  /* line 112, source/scss/extras/_responsive_text.scss */
+  /* line 130, source/scss/extras/_responsive_text.scss */
   h4.collapsable-processed::before {
     width: 1.5rem; } }
 
 @media (min-width: 80em) {
-  /* line 112, source/scss/extras/_responsive_text.scss */
+  /* line 130, source/scss/extras/_responsive_text.scss */
   h4.collapsable-processed::before {
     width: 2.25rem; } }
 
 @media (max-width: 39.996em) {
-  /* line 122, source/scss/extras/_responsive_text.scss */
+  /* line 140, source/scss/extras/_responsive_text.scss */
   h5.collapsable-processed::before {
     width: 1.5rem; } }
 
 @media (min-width: 80em) {
-  /* line 122, source/scss/extras/_responsive_text.scss */
+  /* line 140, source/scss/extras/_responsive_text.scss */
   h5.collapsable-processed::before {
     width: 1.5rem; } }
 
 @media (max-width: 39.996em) {
-  /* line 132, source/scss/extras/_responsive_text.scss */
+  /* line 150, source/scss/extras/_responsive_text.scss */
   h6.collapsable-processed::before {
     width: 0.75rem; } }
 
 @media (min-width: 80em) {
-  /* line 132, source/scss/extras/_responsive_text.scss */
+  /* line 150, source/scss/extras/_responsive_text.scss */
   h6.collapsable-processed::before {
     width: 1.5rem; } }
 
