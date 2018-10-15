@@ -40,7 +40,7 @@
 
   // utility
   code:not(.code-nobg) {
-    background-color:rgba($tyfy-color-foreground-reverse,0.1);
+    background-color:$tyfy-color-shade-reverse;
   }
   hr {
     border-color:$tyfy-color-border-reverse;
