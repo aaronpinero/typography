@@ -60,13 +60,13 @@ h5 {
 }</code></pre>
 			<h2 id="fn-tychar">@function tychar</h2>
 			<p>Facilitates the use of the <strong>tyfyicons</strong> custom font by working around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> related to character codes. This function properly applies icons when used in the <em>content</em> attribute of a pseudo-element.</p>
-			<h3 class="font-size-h5">Arguments</h3>
+			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
-				<dt><code><em class="var">$code</em></code></dt>
+				<dt><code class="code-nobg">$code</code></dt>
 				<dd>A character code without the preceding slash (“\”). For use with the <strong>tyfyicons</strong>, there are <a href="settings.html"><span class="smallcaps">SASS</span> variables for each of the character codes</a>.</dd>
 			</dl>
-			<h3 class="font-size-h5">Examples</h3>
-			<pre class="codebox mini" data-lang="SCSS"><code>div::before {
+			<h3 class="font-size-h4">Examples</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">div::before {
   content: tychar($tyfyicons-angle-left);
 }</code></pre>
 		</section>

@@ -144,6 +144,14 @@ section.demo.reverse {
   border:none;
 }
 
+pre.codebox {
+  background-color:$tyfy-color-shade;
+  border:$tyfy-width-border $tyfy-color-border solid;
+  border-radius:$tyfy-radius-border;
+  padding:$tyfy-spacing-standard;
+  overflow:auto;
+}
+
 #lists-demo {
   @include sibling-margins(off);
   border:2px dashed darken($tyfy-color-background,10%);
