@@ -11,7 +11,7 @@ fieldset {
     font-family:$tyfy-font-input;
     font-size:tyscale(1);
     font-weight:bold;
-    line-height:tylead(tyscale(1),base);
+    line-height:tylead(tyscale(1));
     margin-left:tygrid(-1);
     margin-right:tygrid(-1);
     padding-left:tygrid(1);
@@ -92,7 +92,7 @@ input[type="color"] {
   box-shadow:0 1px 1px rgba(0,0,0,0.1) inset;
   color:$tyfy-color-foreground;
   font-family:$tyfy-font-input;
-  line-height:tylead(tyscale(0),base);
+  line-height:tylead(tyscale(0));
   padding:calc(#{tygrid(0.75)} - #{$tyfy-width-border});
   transition:border-color $tyfy-transition-duration-hover, box-shadow $tyfy-transition-duration-hover;
   width:100%;
