@@ -678,7 +678,7 @@ b {
 
 /* line 4, source/scss/optional/_utility.scss */
 code {
-  background-color: tyfy-color-shade;
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 0.125em;
   font-family: monaco, courier, monospace;
   padding-left: 0.125em;
