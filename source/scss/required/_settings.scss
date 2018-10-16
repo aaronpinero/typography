@@ -52,8 +52,8 @@ $tyfy-font-size-pullquote:          tyscale(map-get($tyfy-font-sizes,"pullquote"
 $tyfy-font-size-lede:               tyscale(map-get($tyfy-font-sizes,"lede")) !default;
 
 // measures
-$tyfy-width-border:                 2px;
-$tyfy-radius-border:                4px;
+$tyfy-width-border:                 2px !default;
+$tyfy-radius-border:                4px !default;
 
 // breakpoints
 $tyfy-break-floats:                 40em !default;
