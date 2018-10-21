@@ -102,20 +102,20 @@
 			</dl>
 			<h3>// transitions</h3>
 			<dl>
-				<dt><code class="code-nobg">$tyfy-transition-duration-hover: <span class="defaultval"></span></code></dt>
-				<dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions where colors are changing</dd>
-				<dt><code class="code-nobg">$tyfy-transition-duration-move: <span class="defaultval"></span></code></dt>
-				<dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions where measures are changing</dd>
+				<dt><code class="code-nobg">$tyfy-transition-duration-hover: <span class="defaultval">0.25s !default;</span></code></dt>
+				<dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions related to hover events</dd>
+				<dt><code class="code-nobg">$tyfy-transition-duration-move: <span class="defaultval">0.5s !default;</span></code></dt>
+				<dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions where measures (width, height, position) are changing</dd>
 			</dl>
 			<h3>// site colors</h3>
 			<dl>
-				<dt><code class="code-nobg">$tyfy-color-background: <span class="defaultval"></span></code></dt>
+				<dt><code class="code-nobg">$tyfy-color-background: <span class="defaultval"><a href="https://www.colorhexa.com/ffffff">white</a>  !default;</span></code></dt>
 				<dd>Background color of the <code>&lt;body&gt;</code> element</dd>
-				<dt><code class="code-nobg">$tyfy-color-foreground: <span class="defaultval"></span></code></dt>
+				<dt><code class="code-nobg">$tyfy-color-foreground: <span class="defaultval"><a href="https://www.colorhexa.com/111111">#111111</a> !default;</span></code></dt>
 				<dd>Color of the <code>&lt;body&gt;</code> element</dd>
-				<dt><code class="code-nobg">$tyfy-color-text-light: <span class="defaultval"></span></code></dt>
-				<dd>A light text color variant</dd>
-				<dt><code class="code-nobg">$tyfy-color-link-default: <span class="defaultval"></span></code></dt>
+				<dt><code class="code-nobg">$tyfy-color-text-light: <span class="defaultval">mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;</span></code></dt>
+				<dd>A light text color variant, defined as a function of the foreground and background colors</dd>
+				<dt><code class="code-nobg">$tyfy-color-link-default: <span class="defaultval"><a href="https://www.colorhexa.com/3380cc">#3380cc</a> !default;</span></code></dt>
 				<dd>Default link color</dd>
 				<dt><code class="code-nobg">$tyfy-color-link-active: <span class="defaultval"></span></code></dt>
 				<dd>Color of links that are hovered or active</dd>
