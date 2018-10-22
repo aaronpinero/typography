@@ -13,9 +13,9 @@
 			<p>Calculates a <a href="grid.html">grid-based</a> line height value based on a font size and (optionally) a line height style. This function helps maintain the baseline grid by automating the calculation of appropriate line heights.</p>
 			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
-				<dt><code class="code-nobg">$font-size</code></dt>
+				<dt>$font-size</dt>
 				<dd>Font size value in rem units.</dd>
-				<dt><code class="code-nobg">$leading-style</code></dt>
+				<dt>$leading-style</dt>
 				<dd>Accepted value are <code>base</code>, <code>heading</code>, <code>tall</code>, or <code>short</code>.</dd>
 				<dd>Default value is <code>base</code>.</dd>
 			</dl>
@@ -32,7 +32,7 @@ p.special {
 			<p>Calculates a grid-based length value. This function facilitates the use of the $tyfy-grid-unit variable by making your <span class="smallcaps">SCSS</span> easier to read, write, and maintain.</p>
 			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
-				<dt><code class="code-nobg">$multiplier</code></dt>
+				<dt>$multiplier</dt>
 				<dd>A floating point value to be multipled by the grid unit value to calculate the desired length.</dd>
 			</dl>
 			<h3 class="font-size-h4">Examples</h3>
@@ -44,7 +44,7 @@ p.special {
 			<p>Facilitates use of the <a href="scale.html">modular typographic scale</a> by automating the calculation of font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</p>
 			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
-				<dt><code class="code-nobg">$exponent</code></dt>
+				<dt>$exponent</dt>
 				<dd>Integer representing a number of steps from the base font size on the modular scale to calculate; positive and negative values allowed.</dd>
 			</dl>
 			<h3 class="font-size-h4">Examples</h3>
@@ -62,7 +62,7 @@ h5 {
 			<p>Facilitates the use of the <strong>tyfyicons</strong> custom font by working around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> related to character codes. This function properly applies icons when used in the <em>content</em> attribute of a pseudo-element.</p>
 			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
-				<dt><code class="code-nobg">$code</code></dt>
+				<dt>$code</dt>
 				<dd>A character code without the preceding slash (“\”). For use with the <strong>tyfyicons</strong>, there are <a href="settings.html"><span class="smallcaps">SASS</span> variables for each of the character codes</a>.</dd>
 			</dl>
 			<h3 class="font-size-h4">Examples</h3>

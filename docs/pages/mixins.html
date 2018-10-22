@@ -52,7 +52,28 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Mixins</h1>
-			<p><strong class="tyfy">Tyfy</strong> includes several <span class="smallcaps">SASS</span> mixins. Some mixins were copied or borrowed from <a href="https://html5boilerplate.com">HTML5 Boilerplate</a> and are generally useful for any project. The remaining mixins facilitate the application of the 'smart' vertical margins between adjacent siblings.</p>
+			<p class="lede"><strong class="tyfy">Tyfy</strong> includes several <span class="smallcaps">SASS</span> mixins that facilitate the use of the framework and provide commonly used styles and effects.</p>
+			<h2 id="mixin-clearfix">@mixin clearfix</h2>
+			<p>Clear floats within an element. This mixin does not accept any arguments. Code comes from <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>.</p>
+			<h3 class="font-size-h4">Example</h3>
+      <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">tag.class {
+  @include clearfix;
+}</code></pre>
+			<h2 id="mixin-visuallyhidden">@mixin visuallyhidden</h2>
+			<p>Visually hide an element, but allow screen readers and search engines to read the element’s content. The default <code>true</code> argument hides the element. The <code>false</code> argument is used to override the default styles. Code is adapted from <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a></p>
+			<h3 class="font-size-h4">Arguments</h3>
+			<dl>
+				<dt>$state</dt>
+				<dd>Allowed values are <code>true</code> or <code>false</code></dd>
+				<dd>Default value is <code>true</code></dd>
+			</dl>
+			<h3 class="font-size-h4">Example</h3>
+      <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">tag.hide-me {
+  @include visuallyhidden;
+  &amp;.show-me {
+    @include visuallyhidden(false);
+  }
+}</code></pre>
 			<dl>
 				<dt>@mixin clearfix</dt>
 				<dd>Copied directly from HTML5 Boilerplate for dealing with floats.</dd>
