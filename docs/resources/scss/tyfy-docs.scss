@@ -149,7 +149,7 @@ pre.codebox {
   padding:$tyfy-spacing-standard;
   overflow:auto;
 }
-dt .defaultval {
+dl .defaultval {
   color:lighten(mix($tyfy-color-link-default,$tyfy-color-link-active),10%);
   font-weight:normal;
 }

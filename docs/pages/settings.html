@@ -56,48 +56,65 @@
 			<p>All variables begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects. Variable values are assigned using the <code>!default</code> declaration so they may be overridden when including the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SASS</span> files in your project.</p>
 			<h2>// grid and spacing</h2>
 			<dl>
-				<dt><code class="code-nobg">$tyfy-spacings: <span class="defaultval">("standard":2, "large":3,) !default;</span></code></dt>
+				<dt>$tyfy-spacings</dt>
+				<dd><code class="code-nobg"><span class="defaultval">("standard":2, "large":3,) !default;</span></code></dd>
 				<dd>A <span class="smallcaps">SASS</span> map of values indicating the number of grid units for each spacing variable value</dd>
-				<dt><code class="code-nobg">$tyfy-spacing-standard: <span class="defaultval">tygrid(map-get($tyfy-spacings,"standard")) !default;</span></code></dt>
+				<dt>$tyfy-spacing-standard</dt>
+				<dd><code class="code-nobg"><span class="defaultval">tygrid(map-get($tyfy-spacings,"standard")) !default;</span></code></dd>
 				<dd>Standard spacing between <span class="smallcaps">HTML</span> elements defined as a number of grid units</dd>
-				<dt><code class="code-nobg">$tyfy-spacing-large: <span class="defaultval">tygrid(map-get($tyfy-spacings,"large")) !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-spacing-large</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">tygrid(map-get($tyfy-spacings,"large")) !default;</span></code></dd>
 				<dd>Larger spacing between HTML elements defined as a number of grid units; used for spacing above headings</dd>
-				<dt><code class="code-nobg">$tyfy-indents: <span class="defaultval">("standard":3, "small":2,) !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-indents</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">("standard":3, "small":2,) !default;</span></code></dd>
 				<dd>A <span class="smallcaps">SASS</span> map of values indicating the number of grid units for each indent variable value</dd>
-				<dt><code class="code-nobg">$tyfy-indent-standard: <span class="defaultval">tygrid(map-get($tyfy-indents,"standard")) !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-indent-standard</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">tygrid(map-get($tyfy-indents,"standard")) !default;</span></code></dd>
 				<dd>Standard indent distance for lists and blockquotes defined as a number of grid units</dd>
-				<dt><code class="code-nobg">$tyfy-indent-small: <span class="defaultval">tygrid(map-get($tyfy-indents,"small")) !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-indent-small</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">tygrid(map-get($tyfy-indents,"small")) !default;</span></code></dd>
 				<dd>Small indent distance for lists and blockquotes at small screen sizes</dd>
-				<dt><code class="code-nobg">$tyfy-margins-on: <span class="defaultval">true !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-margins-on</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">true !default;</span></code></dd>
 				<dd>Determines if adjacent sibling margins styles should be applied on the <code>&lt;body&gt;</code> tag</dd>
 			</dl>
 			<h3>// fonts</h3>
 			<dl>
-				<dt><code class="code-nobg">$tyfy-serif: <span class="defaultval">georgia, serif !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-serif</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">georgia, serif !default;</span></code></dd>
 				<dd>Serif font selection</dd>
-				<dt><code class="code-nobg">$tyfy-sans: <span class="defaultval">helvetica, arial, sans-serif !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-sans</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">helvetica, arial, sans-serif !default;</span></code></dd>
 				<dd>Sans-serif font selection</dd>
-				<dt><code class="code-nobg">$tyfy-mono: <span class="defaultval">monaco, courier, monospace !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-mono</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">monaco, courier, monospace !default;</span></code></dd>
 				<dd>Monospace font selection</dd>
-				<dt><code class="code-nobg">$tyfy-symbol: <span class="defaultval">tyfyicons !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-symbol</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">tyfyicons !default;</span></code></dd>
 				<dd>Icon font selection</dd>
 			</dl>
 			<h3>// font assignments</h3>
 			<dl>
-				<dt><code class="code-nobg">$tyfy-font-base: <span class="defaultval">$tyfy-serif !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-font-base</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">$tyfy-serif !default;</span></code></dd>
 				<dd>Base font selection, used for <code>&lt;body&gt;</code></dd>
-				<dt><code class="code-nobg">$tyfy-font-heading: <span class="defaultval">$tyfy-sans !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-font-heading</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">$tyfy-sans !default;</span></code></dd>
 				<dd>Heading font selection</dd>
-				<dt><code class="code-nobg">$tyfy-font-table: <span class="defaultval">$tyfy-sans !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-font-table</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">$tyfy-sans !default;</span></code></dd>
 				<dd>Table cell font selection</dd>
-				<dt><code class="code-nobg">$tyfy-font-input: <span class="defaultval">$tyfy-sans !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-font-input</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">$tyfy-sans !default;</span></code></dd>
 				<dd>Form input element font selection</dd>
 			</dl>
 			<h3>// typographic scale</h3>
 			<dl>
-				<dt><code class="code-nobg">$tyfy-font-sizes: <span class="defaultval">("sm":-1, "h6":0, "h5":1, "h4":2, "h3":3, "h2":4, "h1":6, "pullquote":2, "lede":2) !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-font-sizes</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">("sm":-1, "h6":0, "h5":1, "h4":2, "h3":3, "h2":4, "h1":6, "pullquote":2, "lede":2) !default;</span></code></dd>
 				<dd>A <span class="smallcaps">SASS</span> map of values indicating the scale step for each of the font size variables</dd>
-				<dt><code class="code-nobg">$tyfy-font-size-sm: <span class="defaultval">tyscale(map-get($tyfy-font-sizes,"sm")) !default;</span></code></dt>
+				<dt><code class="code-nobg">$tyfy-font-size-sm</code></dt>
+				<dd><code class="code-nobg"><span class="defaultval">tyscale(map-get($tyfy-font-sizes,"sm")) !default;</span></code></dd>
 				<dd>Small font size, used in the quotes and tables modules; defaults to one scale step down from the base font size</dd>
 				<dt><code class="code-nobg">$tyfy-font-size-h6: <span class="defaultval">tyscale(map-get($tyfy-font-sizes,"h6")) !default;</span></code></dt>
 				<dd>Level 6 heading font size</dd>
@@ -159,14 +176,14 @@
 				<dd>Color of the <code>&lt;body&gt;</code> element</dd>
 				<dt><code class="code-nobg">$tyfy-color-text-light: <span class="defaultval">mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;</span></code></dt>
 				<dd>A light text color variant, defined as a function of the foreground and background colors</dd>
-				<dt><code class="code-nobg">$tyfy-color-link-default: <span class="defaultval"></span></code></dt>
+				<dt><code class="code-nobg">$tyfy-color-link-default: <span class="defaultval"><a href="https://www.colorhexa.com/3380cc">#3380cc</a> !default;</span></code></dt>
 				<dd>Default link color</dd>
-				<dt><code class="code-nobg">$tyfy-color-link-active: <span class="defaultval"></span></code></dt>
+				<dt><code class="code-nobg">$tyfy-color-link-active: <span class="defaultval"><a href="https://www.colorhexa.com/cc3380">#cc3380</a> !default;</span></code></dt>
 				<dd>Color of links that are hovered or active</dd>
-				<dt><code class="code-nobg">$tyfy-color-border: <span class="defaultval"></span></code></dt>
-				<dd>Default border color for tables, pullquotes, collapsable sections, etc.</dd>
-				<dt><code class="code-nobg">$tyfy-color-shade: <span class="defaultval"></span></code></dt>
-				<dd>A subtle background color; used in zebra-stripe tables</dd>
+				<dt><code class="code-nobg">$tyfy-color-border: <span class="defaultval">mix($tyfy-color-foreground,$tyfy-color-background,12%) !default;</span></code></dt>
+				<dd>Default border color for tables, pullquotes, collapsable sections, etc. defined as a function of the foreground and background colors</dd>
+				<dt><code class="code-nobg">$tyfy-color-shade: <span class="defaultval">rgba($tyfy-color-foreground,0.05) !default;</span></code></dt>
+				<dd>A subtle background color used in zebra-stripe tables and other places where shading is desireable in the design; defined as a function of the foreground color</dd>
 			</dl>
 			<h3>// reverse colors</h3>
 			<dl>
