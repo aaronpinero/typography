@@ -177,62 +177,84 @@
 			</dl>
 			<h3>// transitions</h3>
 			<dl>
-				<dt>$tyfy-transition-duration-hover: <code class="val val-default">0.25s !default;</code></dt>
+				<dt>$tyfy-transition-duration-hover</dt>
+				<dd><code class="val val-default">0.25s !default;</code></dd>
 				<dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions related to hover events</dd>
-				<dt>$tyfy-transition-duration-move: <code class="val val-default">0.5s !default;</code></dt>
+				<dt>$tyfy-transition-duration-move</dt>
+				<dd><code class="val val-default">0.5s !default;</code></dd>
 				<dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions where measures (width, height, position) are changing</dd>
 			</dl>
 			<h3>// site colors</h3>
 			<dl>
-				<dt>$tyfy-color-background: <code class="val val-default"><a href="https://www.colorhexa.com/ffffff">white</a>  !default;</code></dt>
+				<dt>$tyfy-color-background</dt>
+				<dd><code class="val val-default"><a href="https://www.colorhexa.com/ffffff">white</a>  !default;</code></dd>
 				<dd>Background color of the <code>&lt;body&gt;</code> element</dd>
-				<dt>$tyfy-color-foreground: <code class="val val-default"><a href="https://www.colorhexa.com/111111">#111111</a> !default;</code></dt>
+				<dt>$tyfy-color-foreground</dt>
+				<dd><code class="val val-default"><a href="https://www.colorhexa.com/111111">#111111</a> !default;</code></dd>
 				<dd>Color of the <code>&lt;body&gt;</code> element</dd>
-				<dt>$tyfy-color-text-light: <code class="val val-default">mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;</code></dt>
-				<dd>A light text color variant, defined as a function of the foreground and background colors</dd>
-				<dt>$tyfy-color-link-default: <code class="val val-default"><a href="https://www.colorhexa.com/3380cc">#3380cc</a> !default;</code></dt>
+				<dt>$tyfy-color-text-light</dt>
+				<dd><code class="val val-default">mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;</code></dd>
+				<dd>A light text color variant</dd>
+				<dt>$tyfy-color-link-default</dt>
+				<dd><code class="val val-default"><a href="https://www.colorhexa.com/3380cc">#3380cc</a> !default;</code></dd>
 				<dd>Default link color</dd>
-				<dt>$tyfy-color-link-active: <code class="val val-default"><a href="https://www.colorhexa.com/cc3380">#cc3380</a> !default;</code></dt>
+				<dt>$tyfy-color-link-active</dt>
+				<dd><code class="val val-default"><a href="https://www.colorhexa.com/cc3380">#cc3380</a> !default;</code></dd>
 				<dd>Color of links that are hovered or active</dd>
-				<dt>$tyfy-color-border: <code class="val val-default">mix($tyfy-color-foreground,$tyfy-color-background,12%) !default;</code></dt>
-				<dd>Default border color for tables, pullquotes, collapsable sections, etc. defined as a function of the foreground and background colors</dd>
-				<dt>$tyfy-color-shade: <code class="val val-default">rgba($tyfy-color-foreground,0.05) !default;</code></dt>
-				<dd>A subtle background color used in zebra-stripe tables and other places where shading is desireable in the design; defined as a function of the foreground color</dd>
+				<dt>$tyfy-color-border</dt>
+				<dd><code class="val val-default">mix($tyfy-color-foreground,$tyfy-color-background,12%) !default;</code></dd>
+				<dd>Default border color</dd>
+				<dt>$tyfy-color-shade</dt>
+				<dd><code class="val val-default">rgba($tyfy-color-foreground,0.05) !default;</code></dd>
+				<dd>A background color for shading</dd>
 			</dl>
 			<h3>// reverse colors</h3>
 			<dl>
-				<dt>$tyfy-color-background-reverse: <code class="val val-default"></code></dt>
+				<dt>$tyfy-color-background-reverse</dt>
+				<dd><code class="val val-default">invert($tyfy-color-background) !default;</code></dd>
 				<dd>Reverse default background color</dd>
-				<dt>$tyfy-color-foreground-reverse: <code class="val val-default"></code></dt>
-				<dd>Reverse default text color</dd>
-				<dt>$tyfy-color-text-light-reverse: <code class="val val-default"></code></dt>
+				<dt>$tyfy-color-foreground-reverse</dt>
+				<dd><code class="val val-default">invert($tyfy-color-foreground) !default;</code></dd>
+				<dd>Reverse default foreground color</dd>
+				<dt>$tyfy-color-text-light-reverse</dt>
+				<dd><code class="val val-default">mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,50%) !default;</code></dd>
 				<dd>Reverse light text color variant</dd>
-				<dt>$tyfy-color-link-default-reverse: <code class="val val-default"></code></dt>
+				<dt>$tyfy-color-link-default-reverse</dt>
+				<dd><code class="val val-default">hsl(hue($tyfy-color-link-default),saturation($tyfy-color-link-default),(100% - lightness(darken($tyfy-color-link-default,25%)))) !default;</code></dd>
 				<dd>Reverse default link color</dd>
-				<dt>$tyfy-color-link-active-reverse: <code class="val val-default"></code></dt>
-				<dd>Reverse color of links that are hovered or active</dd>
-				<dt>$tyfy-color-border-reverse: <code class="val val-default"></code></dt>
+				<dt>$tyfy-color-link-active-reverse</dt>
+				<dd><code class="val val-default">hsl(hue($tyfy-color-link-active),saturation($tyfy-color-link-active),(100% - lightness(darken($tyfy-color-link-active,25%)))) !default;</code></dd>
+				<dd>Reverse active link color</dd>
+				<dt>$tyfy-color-border-reverse</dt>
+				<dd><code class="val val-default">mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,12%) !default;</code></dt>
 				<dd>Reverse default border color</dd>
-				<dt>$tyfy-color-shade-reverse: <code class="val val-default"></code></dt>
-				<dd>Reverse subtle background color</dd>
+				<dt>$tyfy-color-shade-reverse</dt>
+				<dd><code class="val val-default">rgba($tyfy-color-foreground-reverse,0.05) !default</code></dd>
+				<dd>Reverse background color for shading</dd>
 			</dl>
 			<h3>// icons</h3>
 			<dl>
-  			<dt>$tyfyicons-path: <code class="val val-default"></code></dt>
-  			<dd>Define the path to the tyfyicons folder where the web font files will be kept for your project; defaults to "../fonts"</dd>
+  			<dt>$tyfyicons-path</dt>
+  			<dd><code class="val val-default">"../fonts/tyfyicons" !default;</code></dd>
+  			<dd>Define the path to the tyfyicons folder where the web font files will be kept for your project; string should not have a trailing slash</dd>
 			</dl>
 			<h3>// icon character codes</h3>
 			<dl>
-				<dt>$tyfyicons-angle-up: <code class="val val-default"></code></dt>
-				<dd>Character code for a up angle character in the selected icon font</dd>
-				<dt>$tyfyicons-angle-down: <code class="val val-default"></code></dt>
-				<dd>Character code for a down angle character in the selected icon font</dd>
-				<dt>$tyfyicons-angle-left: <code class="val val-default"></code></dt>
-				<dd>Character code for a left angle character in the selected icon font</dd>
-				<dt>$tyfyicons-angle-right: <code class="val val-default"></code></dt>
-				<dd>Character code for a right angle character in the selected icon font</dd>
-				<dt>$tyfyicons-angle-up-down: <code class="val val-default"></code></dt>
-				<dd>Character code for a up/down angle character, used to indicate select options</dd>
+				<dt>$tyfyicons-angle-down</dt>
+				<dd><code class="val val-default">"ea01" !default;</code></dd>
+				<dd>Character code for a <span title="down angle" class="tyfyicons tyfyicons-angle-down example"></span> character in the selected icon font</dd>
+				<dt>$tyfyicons-angle-left</dt>
+				<dd><code class="val val-default">"ea02" !default;</code></dd>
+				<dd>Character code for a <span title="left angle" class="tyfyicons tyfyicons-angle-left example"></span> character in the selected icon font</dd>
+				<dt>$tyfyicons-angle-right</dt>
+				<dd><code class="val val-default">"ea03" !default;</code></dd>
+				<dd>Character code for a <span title="right angle" class="tyfyicons tyfyicons-angle-right example"></span> character in the selected icon font</dd>
+				<dt>$tyfyicons-angle-up-down</dt>
+				<dd><code class="val val-default">"ea04" !default;</code></dd>
+				<dd>Character code for a <span title="angle up/down" class="tyfyicons tyfyicons-angle-up-down example"></span> character in the selected icon font</dd>
+				<dt>$tyfyicons-angle-up</dt>
+				<dd><code class="val val-default">"ea08" !default;</code></dd>
+				<dd>Character code for a <span title="up angle" class="tyfyicons tyfyicons-angle-up example"></span> character in the selected icon font</dd>
 				<dt>$tyfyicons-bars</dt>
 				<dd><code class="val val-default">"ea07" !default;</code></dd>
 				<dd>Character code for a <span title="bars" class="tyfyicons tyfyicons-bars example"></span> character in the selected icon font</dd>
