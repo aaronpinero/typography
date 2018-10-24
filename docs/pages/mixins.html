@@ -52,9 +52,9 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Mixins</h1>
-			<p class="lede"><strong class="tyfy">Tyfy</strong> includes several <span class="smallcaps">SASS</span> mixins that facilitate the use of the framework and provide commonly used styles and effects.</p>
+			<p class="lede"><strong class="tyfy">Tyfy</strong> mixins make it easier to use the some of the framework’s styles and effects..</p>
 			<h2 id="mixin-button">@mixin button</h2>
-			<p>Display a link or other tag as a button. The text color of the button is either white or black depending on the hsl lightness value of the default button color. To apply the button class to a link, use the [href] attribute selector. See the <a href="links.html">links</a> and <a href="utility.html">utility</a> modules documetation for more information.</p>
+			<p>Use this mixin to display a link or other tag as a button. The button’s text color will be black or white – whichever provides the best contrast with the button’s background color. To apply the mixin to a link, use the [href] attribute selector. See the <a href="links.html">links</a> and <a href="utility.html">utility</a> documetation for more information.</p>
 			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
 				<dt>$color_default</dt>
@@ -75,8 +75,7 @@ a.button[href] {
   @include button(red,blue,0px);
 }</code></pre>
 			<h2 id="mixin-button-outline">@mixin button-outline</h2>
-			<p>Display a link or other tag as an outlined button. In the default state, the background color is transparent. In the active state, the background is the active color and the text color is determined based on the hsl lightness of that color.</p>
-			<p>To apply the button class to a link, use the [href] attribute selector. See the <a href="links.html">links</a> and <a href="utility.html">utility</a> modules documetation for more information.</p>
+			<p>Use this mixin to display a link or other tag as an outlined button. In the default state, the button background color is transparent and the button text color is the default color. In the active state, the button background color is the active color and the text color is either black or white – whichever provides the best contrast with the background color. To apply the mixin to a link, use the [href] attribute selector. See the <a href="links.html">links</a> and <a href="utility.html">utility</a> documetation for more information.</p>
 			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
 				<dt>$color_default</dt>
@@ -90,7 +89,7 @@ a.button[href] {
 				<dd>Default value is <code>$tyfy-radius-border</code></dd>
 			</dl>
 			<h3 class="font-size-h4">Examples</h3>
-			<pre class="codebox mini" data-lang="SCSS"><code>tag.button-outline {
+			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">tag.button-outline {
   @include button-outline;
 }
 a.button-outline[href] {
