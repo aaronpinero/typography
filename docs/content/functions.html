@@ -8,16 +8,18 @@
 		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>Functions</h1>
-			<p class="lede"><strong class="tyfy">Tyfy</strong> includes four custom <span class="smallcaps">SASS</span> functions to facilitate use of the framework for front-end development.</p>
+			<p><strong class="tyfy">Tyfy</strong> includes custom <span class="smallcaps">SASS</span> functions that make the framework easier to use.</p>
 			<h2 id="fn-tylead">@function tylead</h2>
-			<p>Calculates a <a href="grid.html">grid-based</a> line height value based on a font size and (optionally) a line height style. This function helps maintain the baseline grid by automating the calculation of appropriate line heights.</p>
+			<p>This function calculates a <a href="grid.html">grid-based</a> line height based on a font size and (optionally) a line height style. This function helps maintain the baseline grid.</p>
 			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
 				<dt>$font-size</dt>
+				<dd><em>required</em></dd>
 				<dd>Font size value in rem units.</dd>
 				<dt>$leading-style</dt>
-				<dd>Accepted value are <code>base</code>, <code>heading</code>, <code>tall</code>, or <code>short</code>.</dd>
+				<dd><em>optional</em></dd>
 				<dd>Default value is <code>base</code>.</dd>
+				<dd>Accepted value are <code>base</code>, <code>heading</code>, <code>tall</code>, or <code>short</code>.</dd>
 			</dl>
 			<h3 class="font-size-h4">Examples</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">p {
