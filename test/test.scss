@@ -161,8 +161,8 @@ hr.demo {
 .button-rev {
   opacity:0.25;
   position:fixed;
-  right:tygrid(0.5);
-  top:tygrid(0.5);
+  right:tygrid();
+  top:tygrid();
   transition:all $tyfy-transition-duration-hover;
   z-index:100;
   &:hover {

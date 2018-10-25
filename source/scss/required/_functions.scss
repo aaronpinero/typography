@@ -43,7 +43,7 @@ $tyfy-leading-adjustment-short:1.2 !default; // $leading-style:short
 // the tygrid function is used to calculate a multiple of the base grid unit
 // this function makes it easier to work with the grid unit variables
 //
-@function tygrid($multiplier) {
+@function tygrid($multiplier:1) {
   @return $tyfy-grid-unit * $multiplier;
 }
 
