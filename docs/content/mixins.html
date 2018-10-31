@@ -8,7 +8,7 @@
 		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>Mixins</h1>
-			<p class="lede"><strong class="tyfy">Tyfy</strong> mixins make it easier to use the some of the framework’s styles and effects..</p>
+			<p class="lede"><strong class="tyfy">Tyfy</strong> mixins make it easier to use the some of the framework’s styles and effects.</p>
 			<h2 id="mixin-button">@mixin button</h2>
 			<p>Use this mixin to display a link or other tag as a button. The button’s text color will be black or white – whichever provides the best contrast with the button’s background color. To apply the mixin to a link, use the [href] attribute selector. See the <a href="links.html">links</a> and <a href="utility.html">utility</a> documetation for more information.</p>
 			<h3 class="font-size-h4">Arguments</h3>
@@ -69,6 +69,7 @@ a.button-outline[href] {
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">tag.class {
   @include fade-in(2s);
 }</code></pre>
+
 			<h2 id="mixin-visuallyhidden">@mixin visuallyhidden</h2>
 			<p>Visually hide an element, but allow screen readers and search engines to read the element’s content. The default <code>true</code> argument hides the element. The <code>false</code> argument is used to override the default styles. Code is adapted from <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a></p>
 			<h3 class="font-size-h4">Arguments</h3>
@@ -84,14 +85,6 @@ a.button-outline[href] {
     @include visuallyhidden(false);
   }
 }</code></pre>
-			<h2 id="">@mixin set-sibling-margins</h2>
-			<h2 id="">@mixin sibling-margins</h2>
-			<dl>
-				<dt>@mixin set-sibling-margins ($context:all, $measure:$tyfy-spacing-standard)</dt>
-				<dd>A mixin for setting the value of the vertical margin between adjacent siblings. The <code>all</code> context employs the lobotomized owl selector for margins between all elements. The <code>headings</code> context applies margin between a heading and a preceding non-heading element. The <code>lists</code> context applies margin between child element of definition, ordered, and unordered lists.</dd>
-				<dt>@mixin sibling-margins ($state:on)</dt>
-				<dd>A mixin for turning the vertical margin between adjacent siblings on an off. It depends on the <code>set-sibling-margins</code> mixin.</dd>
-			</dl>
 		</section>
 		<%include footer.html%>
 	</body>
