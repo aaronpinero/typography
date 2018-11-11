@@ -8,10 +8,10 @@
 		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>Core</h1>
-			<p>Three <span class="smallcaps">SASS</span> variables make up <strong class="tyfy">Tyfy</strong>’s core module. These variables define the size of the framework’s grid and font sizes. The variable values can have a significant impact on your typographic design.</p>
-			<p>The core module is the first module listed in the main tyfy.scss file. Core variables are required by the functions module and are used to calculate default values for variables in the settings module.</p>
+			<p>Three <span class="smallcaps">SASS</span> variables make up <strong class="tyfy">Tyfy</strong>’s core module. These variables define the size of the framework’s grid and text. The variable values can have a significant impact on your typographic design.</p>
+			<p>The core module is the first module listed in the tyfy.scss file. Core variables are required by the functions module and are used to calculate default values for variables in the settings module.</p>
 			<p>All <strong class="tyfy">Tyfy</strong> variable names begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects.</p>
-			<h2>Core Variables</h2>
+			<h2>Variables</h2>
 			<dl>
 				<dt>$tyfy-grid-unit</dt>
 				<dd><code class="val val-default">0.875rem !default;</code></dd>
@@ -21,7 +21,7 @@
 				<dd>Scalar value that defines the proportion between font sizes on the modular scale. Larger values will create a scale with more typographic contrast.</dd>
 				<dt>$tyfy-font-size-base</dt>
 				<dd><code class="val val-default">1rem !default;</code></dd>
-				<dd>Font size in rem units applied to the <code>&lt;body&gt;</code> tag. Font sizes on the modular scale are calculated as a function of the base font size and the scalar: <em>font size = base font size &times; scalar<sup>(step)</sup></em>. In this function <em>step</em> is an integer indicating the number of steps up (positive) or down (negative) the scale from the base size.</dd>
+				<dd>Font size in rem units applied to the <code>&lt;body&gt;</code> tag. Font sizes on the modular scale are calculated as a function of the base font size and the scalar: <em>step font size = base font size &times; scalar<sup>(step)</sup></em>. In this function <em>step</em> is an integer indicating the number of steps up (positive) or down (negative) the scale from the base size.</dd>
 			</dl>
 		</section>
 		<%include footer.html%>
