@@ -94,10 +94,11 @@ button:-moz-focusring,
 
 /* line 75, source/scss/essential/_normalize.scss */
 fieldset {
-  border-width: 0.09375rem;
-  padding: 1.03125rem 1.40625rem 1.40625rem 1.40625rem; }
+  border-width: 2px;
+  padding: calc(1.5rem - 2px);
+  padding-top: calc(1.125rem - 2px); }
 
-/* line 79, source/scss/essential/_normalize.scss */
+/* line 80, source/scss/essential/_normalize.scss */
 legend {
   box-sizing: border-box;
   color: inherit;
@@ -107,37 +108,37 @@ legend {
   /* 3 */
   white-space: normal; }
 
-/* line 87, source/scss/essential/_normalize.scss */
+/* line 88, source/scss/essential/_normalize.scss */
 textarea {
   overflow: auto; }
 
-/* line 90, source/scss/essential/_normalize.scss */
+/* line 91, source/scss/essential/_normalize.scss */
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
   padding: 0; }
 
-/* line 95, source/scss/essential/_normalize.scss */
+/* line 96, source/scss/essential/_normalize.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
-/* line 99, source/scss/essential/_normalize.scss */
+/* line 100, source/scss/essential/_normalize.scss */
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px; }
 
-/* line 103, source/scss/essential/_normalize.scss */
+/* line 104, source/scss/essential/_normalize.scss */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/* line 107, source/scss/essential/_normalize.scss */
+/* line 108, source/scss/essential/_normalize.scss */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit; }
 
-/* line 111, source/scss/essential/_normalize.scss */
+/* line 112, source/scss/essential/_normalize.scss */
 [hidden] {
   display: none; }
 
