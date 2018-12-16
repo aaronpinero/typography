@@ -1,14 +1,19 @@
+:root {
+  --tyfy-color-background:#{$tyfy-color-background};
+  --tyfy-color-foreground:#{$tyfy-color-foreground};
+  --tyfy-color-text-light:#{$tyfy-color-text-light};
+  --tyfy-color-link-default:#{$tyfy-color-link-default};
+  --tyfy-color-link-active:#{$tyfy-color-link-active};
+  --tyfy-color-border:#{$tyfy-color-border};
+  --tyfy-color-shade:#{$tyfy-color-shade};
+}
 html {
   font-size:100%;
 }
 body {
-  background:$tyfy-color-background;
-  border-color:$tyfy-color-border;
-  color:$tyfy-color-foreground;
+  background:var(--tyfy-color-background);
+  color:var(--tyfy-color-foreground);
   font-family:$tyfy-font-base;
   font-size:$tyfy-font-size-base;
   line-height:tylead($tyfy-font-size-base);
-  * {
-    border-color:inherit;
-  }
 }

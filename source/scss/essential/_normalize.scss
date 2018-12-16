@@ -73,7 +73,7 @@ button:-moz-focusring,
   outline:1px dotted ButtonText;
 }
 fieldset {
-  border-width:$tyfy-width-border;
+  border:$tyfy-width-border var(--tyfy-color-border) solid;
   padding:calc(#{tygrid(2)} - #{$tyfy-width-border});
   padding-top:calc(#{tygrid(1.5)} - #{$tyfy-width-border});
 }
@@ -82,7 +82,7 @@ legend {
   color:inherit;
   display:table;
   max-width:100%;
-  padding:0; /* 3 */
+  padding:0;
   white-space:normal;
 }
 textarea {
