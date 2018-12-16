@@ -33,7 +33,7 @@ ul {
       list-style-type:none;
       position:relative;
       &::before {
-        color:$tyfy-color-text-light;
+        color:var(--tyfy-color-text-light);
         font-family:$tyfy-symbol;
         font-size:66%;
         margin-right:tygrid(0.5);

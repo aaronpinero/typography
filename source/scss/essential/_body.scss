@@ -5,6 +5,8 @@
   --tyfy-color-link-default:#{$tyfy-color-link-default};
   --tyfy-color-link-active:#{$tyfy-color-link-active};
   --tyfy-color-border:#{$tyfy-color-border};
+  --tyfy-color-border-link-default:#{rgba($tyfy-color-link-default,0.5)};
+  --tyfy-color-border-link-active:#{rgba($tyfy-color-link-active,0.75)};
   --tyfy-color-shade:#{$tyfy-color-shade};
 }
 html {

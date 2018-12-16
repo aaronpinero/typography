@@ -1,8 +1,8 @@
 // basic styles
 fieldset {
-  border-width:$tyfy-width-border;
-  border-style:solid;
+  border-color:var(--tyfy-color-border);
   border-radius:$tyfy-radius-border;
+  border-style:solid;
   display:block;
   margin-left:0;
   margin-right:0;
@@ -86,18 +86,19 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
   background-color:white;
-  border-width:$tyfy-width-border;
+  border-color:var(--tyfy-color-border);
   border-style:solid;
   border-radius:$tyfy-radius-border;
+  border-width:$tyfy-width-border;
   box-shadow:0 1px 1px rgba(0,0,0,0.1) inset;
-  color:$tyfy-color-foreground;
+  color:var(--tyfy-color-foreground);
   font-family:$tyfy-font-input;
   line-height:tylead(tyscale(0));
   padding:calc(#{tygrid(0.75)} - #{$tyfy-width-border});
   transition:border-color $tyfy-transition-duration-hover, box-shadow $tyfy-transition-duration-hover;
   width:100%;
   &:focus {
-    border-color:$tyfy-color-link-active;
+    border-color:var(--tyfy-color-link-active);
     box-shadow:0 1px 2px rgba(0,0,0,0.2) inset;
   }
 }

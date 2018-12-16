@@ -1,15 +1,15 @@
 a {
-  color:$tyfy-color-foreground;
+  color:var(--tyfy-color-foreground);
   text-decoration:none;
   transition-duration:$tyfy-transition-duration-hover;
   transition-property:background-color,border-color,color;
   &[href] {
-    border-bottom-color:rgba($tyfy-color-link-default,0.5);
-    color:$tyfy-color-link-default;
+    border-bottom-color:var(--tyfy-color-border-link-default);
+    color:var(--tyfy-color-link-default);
     &:hover,
     &:active {
-      border-bottom-color:rgba($tyfy-color-link-active,0.75);
-      color:$tyfy-color-link-active;
+      border-bottom-color:var(--tyfy-color-border-link-active);
+      color:var(--tyfy-color-link-active);
     }
   }
   .links-underlined & {

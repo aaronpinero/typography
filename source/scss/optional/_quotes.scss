@@ -37,7 +37,7 @@ blockquote {
       background-size:auto 64px;
       background-position:center center;
       background-repeat:no-repeat;
-      color:$tyfy-color-border;
+      color:var(--tyfy-color-border);
       content:tychar($tyfyicons-quote-right);
       display:block;
       font-family:$tyfy-symbol;

@@ -105,7 +105,6 @@ legend {
   display: table;
   max-width: 100%;
   padding: 0;
-  /* 3 */
   white-space: normal; }
 
 /* line 88, source/scss/essential/_normalize.scss */
@@ -143,20 +142,26 @@ textarea {
   display: none; }
 
 /* line 1, source/scss/essential/_body.scss */
+:root {
+  --tyfy-color-background:white;
+  --tyfy-color-foreground:black;
+  --tyfy-color-text-light:#8c8c8c;
+  --tyfy-color-link-default:#3366cc;
+  --tyfy-color-link-active:#cc3366;
+  --tyfy-color-border:#e0e0e0;
+  --tyfy-color-shade:rgba(0, 0, 0, 0.05); }
+
+/* line 10, source/scss/essential/_body.scss */
 html {
   font-size: 100%; }
 
-/* line 4, source/scss/essential/_body.scss */
+/* line 13, source/scss/essential/_body.scss */
 body {
-  background: white;
-  border-color: #e0e0e0;
-  color: black;
+  background: var(--tyfy-color-background);
+  color: var(--tyfy-color-foreground);
   font-family: georgia, serif;
   font-size: 1.125rem;
   line-height: 1.5rem; }
-  /* line 11, source/scss/essential/_body.scss */
-  body * {
-    border-color: inherit; }
 
 /* line 2, source/scss/essential/_spacing.scss */
 * {
@@ -1436,7 +1441,7 @@ h6.collapsable-processed {
   h5.collapsable-processed::before,
   h6.collapsable-processed::before {
     border-radius: 50%;
-    color: #8c8c8c;
+    color: var(--tyfy-color-text-light);
     content: "\ea08";
     font-family: tyfyicons;
     font-size: 60%;
@@ -1456,7 +1461,7 @@ h6.collapsable-processed {
   h4.collapsable-processed.closed,
   h5.collapsable-processed.closed,
   h6.collapsable-processed.closed {
-    border-bottom: 2px #e0e0e0 solid; }
+    border-bottom: 2px var(--tyfy-color-border) solid; }
     /* line 32, source/scss/optional/_collapsables.scss */
     h2.collapsable-processed.closed::before,
     h3.collapsable-processed.closed::before,
@@ -1478,7 +1483,7 @@ h6.collapsable-processed {
     h4.collapsable-processed,
     h5.collapsable-processed,
     h6.collapsable-processed {
-      border: 2px #e0e0e0 solid;
+      border: 2px var(--tyfy-color-border) solid;
       border-bottom: 2px transparent solid;
       padding: calc(1.5rem - 2px) calc(4.5rem - 2px) calc(0.75rem - 2px) calc(1.5rem - 2px);
       position: relative;
@@ -1498,7 +1503,7 @@ h6.collapsable-processed {
       h4.collapsable-processed.closed,
       h5.collapsable-processed.closed,
       h6.collapsable-processed.closed {
-        border-bottom: 2px #e0e0e0 solid;
+        border-bottom: 2px var(--tyfy-color-border) solid;
         padding-top: calc(0.75rem - 2px); }
         /* line 53, source/scss/optional/_collapsables.scss */
         h2.collapsable-processed.closed::before,
@@ -1576,20 +1581,20 @@ h3.collapsable-processed:hover::before,
 h4.collapsable-processed:hover::before,
 h5.collapsable-processed:hover::before,
 h6.collapsable-processed:hover::before {
-  background-color: #cc3366;
-  color: white; }
+  background-color: var(--tyfy-color-link-active);
+  color: var(--tyfy-color-background); }
 
 /* line 110, source/scss/optional/_collapsables.scss */
 .collapsables {
   box-sizing: border-box;
-  border-bottom: 2px #e0e0e0 solid;
+  border-bottom: 2px var(--tyfy-color-border) solid;
   margin: 0rem;
   overflow: hidden;
   padding: 0.75rem 0 calc(1.5rem - 2px) 0; }
   @media (min-width: 50em) {
     /* line 110, source/scss/optional/_collapsables.scss */
     .collapsables {
-      border: 2px #e0e0e0 solid;
+      border: 2px var(--tyfy-color-border) solid;
       border-top: none !important;
       padding: calc(0.75rem - 2px) calc(1.5rem - 2px) calc(1.5rem - 2px); } }
   /* line 121, source/scss/optional/_collapsables.scss */
@@ -1748,9 +1753,9 @@ h6.collapsable-processed:hover::before {
 
 /* line 2, source/scss/optional/_forms.scss */
 fieldset {
-  border-width: 2px;
-  border-style: solid;
+  border-color: var(--tyfy-color-border);
   border-radius: 4px;
+  border-style: solid;
   display: block;
   margin-left: 0;
   margin-right: 0;
@@ -1835,17 +1840,18 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
   background-color: white;
-  border-width: 2px;
+  border-color: var(--tyfy-color-border);
   border-style: solid;
   border-radius: 4px;
+  border-width: 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
-  color: black;
+  color: var(--tyfy-color-foreground);
   font-family: helvetica, arial, sans-serif;
   line-height: 1.5rem;
   padding: calc(0.5625rem - 2px);
   transition: border-color 0.25s, box-shadow 0.25s;
   width: 100%; }
-  /* line 99, source/scss/optional/_forms.scss */
+  /* line 100, source/scss/optional/_forms.scss */
   select:focus,
   textarea:focus,
   input[type="text"]:focus,
@@ -1863,7 +1869,7 @@ input[type="color"] {
   input[type="search"]:focus,
   input[type="tel"]:focus,
   input[type="color"]:focus {
-    border-color: #cc3366;
+    border-color: var(--tyfy-color-link-active);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
 
 /* line 72, source/scss/required/_mixins.scss */
@@ -1887,17 +1893,17 @@ select :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
 select :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
   margin-top: 0rem; }
 
-/* line 106, source/scss/optional/_forms.scss */
+/* line 107, source/scss/optional/_forms.scss */
 select:not([multiple]) {
   box-shadow: 0 0 0 transparent; }
 
-/* line 110, source/scss/optional/_forms.scss */
+/* line 111, source/scss/optional/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   height: 1.5em;
   vertical-align: baseline; }
 
-/* line 115, source/scss/optional/_forms.scss */
+/* line 116, source/scss/optional/_forms.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -1956,12 +1962,12 @@ input[type="submit"] {
   input[type="submit"][href]:focus {
     outline: none; }
 
-/* line 127, source/scss/optional/_forms.scss */
+/* line 128, source/scss/optional/_forms.scss */
 .tyfy-select select,
 select.tyfy-select {
   -webkit-appearance: none;
           appearance: none; }
-  /* line 130, source/scss/optional/_forms.scss */
+  /* line 131, source/scss/optional/_forms.scss */
   .tyfy-select select:not([multiple]),
   select.tyfy-select:not([multiple]) {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#8c8c8c'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#8c8c8c'/%3E%3C/svg%3E");
