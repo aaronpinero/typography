@@ -46,34 +46,34 @@ table.striped {
   }
   tr:nth-child(2n) {
     td {
-      background-color:var(--tyfy-color-shade);
+      background-color:var(--tycolor-shade);
     }
   }
 }
 
 // horizontal borders
 table.horizontal-rules {
-  border-top:$tyfy-width-border var(--tyfy-color-border) solid;
+  border-top:$tyfy-width-border var(--tycolor-border) solid;
   td,
   th {
-    border-bottom:$tyfy-width-border var(--tyfy-color-border) solid;
+    border-bottom:$tyfy-width-border var(--tycolor-border) solid;
   }
   th[scope="col"] {
-    border-bottom:(2 * $tyfy-width-border) var(--tyfy-color-border) solid;
+    border-bottom:(2 * $tyfy-width-border) var(--tycolor-border) solid;
   }
 }
 
 // vertical borders
 table.vertical-rules {
-  border-left:$tyfy-width-border var(--tyfy-color-border) solid;
+  border-left:$tyfy-width-border var(--tycolor-border) solid;
   td,
   th {
-    border-right:$tyfy-width-border var(--tyfy-color-border) solid;
+    border-right:$tyfy-width-border var(--tycolor-border) solid;
     padding-left:tygrid(1);
     padding-right:tygrid(1);
   }
   th[scope="row"] {
-    border-right:(2 * $tyfy-width-border) var(--tyfy-color-border) solid;
+    border-right:(2 * $tyfy-width-border) var(--tycolor-border) solid;
   }
 }
 
@@ -87,7 +87,7 @@ table.responsive {
   }
   tbody tr + tr {
     @media (max-width:$tyfy-break-table*0.9999) {
-      border-top:$tyfy-width-border var(--tyfy-color-border) solid;
+      border-top:$tyfy-width-border var(--tycolor-border) solid;
     }
   }
   td {
@@ -97,7 +97,7 @@ table.responsive {
       position:relative;
     }
     .td-label {
-      color:var(--tyfy-color-text-light);
+      color:var(--tycolor-text-light);
       display:block;
       font-family:$tyfy-font-table;
       font-size:$tyfy-font-size-sm;

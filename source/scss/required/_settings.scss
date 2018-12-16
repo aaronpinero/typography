@@ -79,22 +79,28 @@ $fades: (
 ) !default;
 
 // site colors
-$tyfy-color-background:             white !default;
-$tyfy-color-foreground:             #111111 !default;
-$tyfy-color-text-light:             mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;
-$tyfy-color-link-default:           #3380cc !default;
-$tyfy-color-link-active:            #cc3380 !default;
-$tyfy-color-border:                 mix($tyfy-color-foreground,$tyfy-color-background,12%) !default;
-$tyfy-color-shade:                  rgba($tyfy-color-foreground,0.05) !default;
+$tycolor-bg:                        white !default;
+$tycolor-bg-tab-active:             rgba($tycolor-link-active,0.12) !default;
+$tycolor-fg:                        #111111 !default;
+$tycolor-text-light:                mix($tyfy-color-fg,$tyfy-color-bg,45%) !default;
+$tycolor-link-default:              #3380cc !default;
+$tycolor-link-active:               #cc3380 !default;
+$tycolor-border:                    mix($tyfy-color-fg,$tyfy-color-bg,12%) !default;
+$tycolor-border-link-default:       rgba($tycolor-link-default,0.5) !default;
+$tycolor-border-link-active:        rgba($tycolor-link-active,0.75) !default;
+$tycolor-shade:                     rgba($tyfy-color-fg,0.05) !default;
 
 // reverse colors
-$tyfy-color-background-reverse:     invert($tyfy-color-background) !default;
-$tyfy-color-foreground-reverse:     invert($tyfy-color-foreground) !default;
-$tyfy-color-text-light-reverse:     mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,50%) !default;
-$tyfy-color-link-default-reverse:   hsl(hue($tyfy-color-link-default),saturation($tyfy-color-link-default),(100% - lightness(darken($tyfy-color-link-default,25%)))) !default;
-$tyfy-color-link-active-reverse:    hsl(hue($tyfy-color-link-active),saturation($tyfy-color-link-active),(100% - lightness(darken($tyfy-color-link-active,25%)))) !default;
-$tyfy-color-border-reverse:         mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,12%) !default;
-$tyfy-color-shade-reverse:          rgba($tyfy-color-foreground-reverse,0.05) !default;
+$tycolor-bg-rev:                    invert($tyfy-color-bg) !default;
+$tycolor-bg-tab-active-rev:         rgba($tycolor-link-active-rev,0.12) !default;
+$tycolor-fg-rev:                    invert($tyfy-color-fg) !default;
+$tycolor-text-light-rev:            mix($tyfy-color-fg-reverse,$tyfy-color-bg-reverse,50%) !default;
+$tycolor-link-default-rev:          hsl(hue($tycolor-link-default),saturation($tycolor-link-default),(100% - lightness(darken($tycolor-link-default,25%)))) !default;
+$tycolor-link-active-rev:           hsl(hue($tycolor-link-active),saturation($tycolor-link-active),(100% - lightness(darken($tycolor-link-active,25%)))) !default;
+$tycolor-border-rev:                mix($tyfy-color-fg-reverse,$tyfy-color-bg-reverse,12%) !default;
+$tycolor-border-link-default-rev:   rgba($tycolor-link-default-rev,0.5) !default;
+$tycolor-border-link-active-rev:    rgba($tycolor-link-active-rev,0.75) !default;
+$tycolor-shade-rev:                 rgba($tyfy-color-fg-reverse,0.05) !default;
 
 // icons
 // path to icon fonts

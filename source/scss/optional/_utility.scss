@@ -2,7 +2,7 @@ b {
   font-weight:700;
 }
 code {
-  background-color:$tyfy-color-shade;
+  background-color:var(--tycolor-shade);
   border-radius:0.125em;
   font-family:$tyfy-mono;
   padding-left:0.125em;
@@ -18,7 +18,7 @@ em {
 }
 hr {
   border:none;
-  border-top:$tyfy-width-border $tyfy-color-border solid;
+  border-top:$tyfy-width-border var(--tycolor-border) solid;
   height:0;
 }
 i {
@@ -66,5 +66,5 @@ span {
   font-family:$tyfy-mono;
 }
 .light {
-  color:$tyfy-color-text-light;
+  color:var(--tycolor-text-light);
 }

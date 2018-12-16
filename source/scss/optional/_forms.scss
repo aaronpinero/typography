@@ -1,6 +1,6 @@
 // basic styles
 fieldset {
-  border-color:var(--tyfy-color-border);
+  border-color:var(--tycolor-border);
   border-radius:$tyfy-radius-border;
   border-style:solid;
   display:block;
@@ -85,20 +85,20 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-  background-color:white;
-  border-color:var(--tyfy-color-border);
+  background-color:var(--tycolor-bg);
+  border-color:var(--tycolor-border);
   border-style:solid;
   border-radius:$tyfy-radius-border;
   border-width:$tyfy-width-border;
   box-shadow:0 1px 1px rgba(0,0,0,0.1) inset;
-  color:var(--tyfy-color-foreground);
+  color:var(--tycolor-fg);
   font-family:$tyfy-font-input;
   line-height:tylead(tyscale(0));
   padding:calc(#{tygrid(0.75)} - #{$tyfy-width-border});
   transition:border-color $tyfy-transition-duration-hover, box-shadow $tyfy-transition-duration-hover;
   width:100%;
   &:focus {
-    border-color:var(--tyfy-color-link-active);
+    border-color:var(--tycolor-link-active);
     box-shadow:0 1px 2px rgba(0,0,0,0.2) inset;
   }
 }
@@ -129,7 +129,7 @@ input[type="submit"] {
 select.tyfy-select {
   appearance:none;
   &:not([multiple]) {
-    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{$tyfy-color-text-light}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{$tyfy-color-text-light}'/%3E%3C/svg%3E");
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{$tycolor-text-light}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{$tycolor-text-light}'/%3E%3C/svg%3E");
     background-repeat:no-repeat;
     background-position:calc(100% - #{tygrid(0.5)}) center;
     background-size:tygrid(1.25) auto;

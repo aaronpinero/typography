@@ -12,7 +12,7 @@ h6.collapsable-processed {
   position:relative;
   &::before {
     border-radius:50%;
-    color:var(--tyfy-color-text-light);
+    color:var(--tycolor-text-light);
     content:tychar($tyfyicons-angle-up);
     font-family:$tyfy-symbol;
     font-size:60%;
@@ -28,7 +28,7 @@ h6.collapsable-processed {
     width:tylead($tyfy-font-size-h2,heading);
   }
   &.closed {
-    border-bottom:$tyfy-width-border var(--tyfy-color-border) solid;
+    border-bottom:$tyfy-width-border var(--tycolor-border) solid;
     &::before {
       content:tychar($tyfyicons-angle-down);
     }
@@ -37,7 +37,7 @@ h6.collapsable-processed {
     border-bottom:$tyfy-width-border transparent solid;
   }
   @media (min-width:$tyfy-break-collapsables-pad) {
-    border:$tyfy-width-border var(--tyfy-color-border) solid;
+    border:$tyfy-width-border var(--tycolor-border) solid;
     border-bottom:$tyfy-width-border transparent solid;
     padding:calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(6)} - #{$tyfy-width-border}) calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
     position:relative;
@@ -48,7 +48,7 @@ h6.collapsable-processed {
       top:tygrid(2);
     }
     &.closed {
-      border-bottom:$tyfy-width-border var(--tyfy-color-border) solid;
+      border-bottom:$tyfy-width-border var(--tycolor-border) solid;
       padding-top:calc(#{tygrid(1)} - #{$tyfy-width-border});
       &::before {
         content:tychar($tyfyicons-angle-down);
@@ -101,20 +101,20 @@ h5.collapsable-processed,
 h6.collapsable-processed {
   &:hover {
     &::before {
-      background-color:var(--tyfy-color-link-active);
-      color:var(--tyfy-color-background);
+      background-color:var(--tycolor-link-active);
+      color:var(--tycolor-bg);
     }
   }
 }
 
 .collapsables {
   box-sizing:border-box;
-  border-bottom:$tyfy-width-border var(--tyfy-color-border) solid;
+  border-bottom:$tyfy-width-border var(--tycolor-border) solid;
   margin:0rem;
   overflow:hidden;
   padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tyfy-width-border}) 0;
   @media (min-width:$tyfy-break-collapsables-pad) {
-    border:$tyfy-width-border var(--tyfy-color-border) solid;
+    border:$tyfy-width-border var(--tycolor-border) solid;
     border-top:none !important;
     padding:calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
   }

@@ -110,7 +110,7 @@ header.brand {
           width:tylead($tyfy-font-size-h3,heading);
         }
         &:hover {
-          color:$tyfy-color-link-active-reverse;
+          color:$tycolor-link-active-rev;
         }
       }
       ul {
@@ -135,7 +135,7 @@ section.main {
   padding:$tyfy-spacing-standard;
 }
 section.demo {
-  border:2px dashed darken($tyfy-color-background,10%);
+  border:2px dashed darken($tycolor-bg,10%);
   border-radius:tygrid(1);
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
   margin-top:$tyfy-spacing-standard;
@@ -146,7 +146,7 @@ section.demo.reverse {
 
 #lists-demo {
   @include sibling-margins(off);
-  border:2px dashed darken($tyfy-color-background,10%);
+  border:2px dashed darken($tycolor-bg,10%);
   border-radius:tygrid(0.5);
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
   display:flex;
@@ -159,12 +159,12 @@ section.demo.reverse {
     label {
       width:11rem;
       &.disabled {
-        color:$tyfy-color-text-light;
+        color:$tycolor-text-light;
       }
     }
     &.form-control-type {
       @media (min-width:55em) {
-        border-right:2px dashed darken($tyfy-color-background,10%);
+        border-right:2px dashed darken($tycolor-bg,10%);
       }
     }
     &.form-control-classes {
@@ -194,7 +194,7 @@ section.demo.reverse {
 footer {
   p {
     @extend .constrained;
-    color:$tyfy-color-text-light;
+    color:$tycolor-text-light;
     font-size:$tyfy-font-size-sm;
     line-height:tylead($tyfy-font-size-sm,heading);
     padding:tygrid(1) tygrid(2);

@@ -50,20 +50,20 @@ $fades: (
   "2s":2000ms,
   "3s":3000ms
 );
-$tyfy-color-background:white;
-$tyfy-color-foreground:black;
-$tyfy-color-text-light:mix($tyfy-color-foreground,$tyfy-color-background,45%);
-$tyfy-color-link-default:#3366cc;
-$tyfy-color-link-active:#cc3366;
-$tyfy-color-border:mix($tyfy-color-foreground,$tyfy-color-background,12%);
-$tyfy-color-shade:rgba($tyfy-color-foreground,0.05);
-$tyfy-color-background-reverse:#333;
-$tyfy-color-foreground-reverse:white;
-$tyfy-color-text-light-reverse:mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,50%);
-$tyfy-color-link-default-reverse:hsl(hue($tyfy-color-link-default),saturation($tyfy-color-link-default),(100% - lightness(darken($tyfy-color-link-default,25%))));
-$tyfy-color-link-active-reverse:hsl(hue($tyfy-color-link-active),saturation($tyfy-color-link-active),(100% - lightness(darken($tyfy-color-link-active,25%))));
-$tyfy-color-border-reverse:mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,15%);
-$tyfy-color-shade-reverse:rgba($tyfy-color-foreground-reverse,0.05);
+$tycolor-bg:white;
+$tycolor-fg:black;
+$tycolor-text-light:mix($tycolor-fg,$tycolor-bg,45%);
+$tycolor-link-default:#3366cc;
+$tycolor-link-active:#cc3366;
+$tycolor-border:mix($tycolor-fg,$tycolor-bg,12%);
+$tycolor-shade:rgba($tycolor-fg,0.05);
+$tycolor-bg-rev:#333;
+$tycolor-fg-rev:white;
+$tycolor-text-light-rev:mix($tycolor-fg-rev,$tycolor-bg-rev,50%);
+$tycolor-link-default-rev:hsl(hue($tycolor-link-default),saturation($tycolor-link-default),(100% - lightness(darken($tycolor-link-default,25%))));
+$tycolor-link-active-rev:hsl(hue($tycolor-link-active),saturation($tycolor-link-active),(100% - lightness(darken($tycolor-link-active,25%))));
+$tycolor-border-rev:mix($tycolor-fg-rev,$tycolor-bg-rev,15%);
+$tycolor-shade-rev:rgba($tycolor-fg-rev,0.05);
 $tyfyicons-path:"../dist/fonts/tyfyicons";
 $tyfyicons-angle-down:"ea01";
 $tyfyicons-angle-left:"ea02";
@@ -79,22 +79,22 @@ $tyfyicons-search:"ea09";
 $tyfyicons-x:"ea0c";
 @import "../source/scss/tyfy.scss";
 body {
-  background-color:$tyfy-color-shade;
+  background-color:var(--tycolor-shade);
   margin-left:auto;
   margin-right:auto;
   max-width:tygrid(70);
   padding:$tyfy-spacing-standard;
 }
 figure {
-  background-color:white;
+  background-color:var(--tycolor-bg);
   border-radius:4px;
   box-shadow:1px 1px 6px rgba(0,0,0,0.2);
   margin-left:0;
   margin-right:0;
   padding:$tyfy-spacing-standard;
   figcaption {
-    border-bottom:$tyfy-width-border $tyfy-color-border solid;
-    color:$tyfy-color-text-light;
+    border-bottom:$tyfy-width-border var(--tycolor-border) solid;
+    color:var(--tycolor-text-light);
     font-family:$tyfy-sans;
     font-size:tyscale(-2);
     font-weight:bold;
@@ -107,9 +107,6 @@ figure {
   figcaption + * {
     margin-top:0 !important;
   }
-  &.reverse figcaption {
-    border-bottom-color:$tyfy-color-border-reverse;
-  }
 }
 .swatch {
   border-radius:50%;
@@ -118,40 +115,22 @@ figure {
   vertical-align:middle;
   width:tygrid(3);
   &.foreground {
-    background-color:$tyfy-color-foreground;
-    .reverse & {
-      background-color:$tyfy-color-foreground-reverse;
-    }
+    background-color:var(--tycolor-fg);
   }
   &.text-light {
-    background-color:$tyfy-color-text-light;
-    .reverse & {
-      background-color:$tyfy-color-text-light-reverse;
-    }
+    background-color:var(--tycolor-text-light);
   }
   &.link-default {
-    background-color:$tyfy-color-link-default;
-    .reverse & {
-      background-color:$tyfy-color-link-default-reverse;
-    }
+    background-color:var(--tycolor-link-default);
   }
   &.link-active {
-    background-color:$tyfy-color-link-active;
-    .reverse & {
-      background-color:$tyfy-color-link-active-reverse;
-    }
+    background-color:var(--tycolor-link-active);
   }
   &.border {
-    background-color:$tyfy-color-border;
-    .reverse & {
-      background-color:$tyfy-color-border-reverse;
-    }
+    background-color:var(--tycolor-border);
   }
   &.shade {
-    background-color:$tyfy-color-shade;
-    .reverse & {
-      background-color:$tyfy-color-shade-reverse;
-    }
+    background-color:var(--tycolor-shade);
   }
 }
 hr.demo {
