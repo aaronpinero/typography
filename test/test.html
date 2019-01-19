@@ -12,12 +12,12 @@
 		<figure>
 			<figcaption>Colors</figcaption>
 			<ul class="list-nobullet list-cols-2">
-				<li><span class="swatch foreground"></span> $tyfy-color-foreground</li>
-				<li><span class="swatch text-light"></span> $tyfy-color-text-light</li>
-				<li><span class="swatch link-default"></span> $tyfy-color-link-default</li>
-				<li><span class="swatch link-active"></span> $tyfy-color-link-active</li>
-				<li><span class="swatch border"></span> $tyfy-color-border</li>
-				<li><span class="swatch shade"></span> $tyfy-color-shade</li>
+				<li><span class="swatch foreground"></span> $tycolor-fg</li>
+				<li><span class="swatch text-light"></span> $tycolor-text-light</li>
+				<li><span class="swatch link-default"></span> $tycolor-link-default</li>
+				<li><span class="swatch link-active"></span> $tycolor-link-active</li>
+				<li><span class="swatch border"></span> $tycolor-border</li>
+				<li><span class="swatch shade"></span> $tycolor-shade</li>
 			</ul>
 		</figure>
 		<figure>
@@ -964,7 +964,7 @@
 		<script src="../dist/script/tables.js"></script>
 		<script>
 			$('body').append('<div class="button button-rev">Rev</div>');
-			$('.button-rev').click(function(){ $('figure').toggleClass('reverse'); });
+			$('.button-rev').click(function(){ $('body').toggleClass('reverse'); });
 		</script>
 	</body>
 </html>

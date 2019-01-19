@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<%include head.html%>
+		<title>Tyfy - About - Build Tools</title>
+	</head>
+	<body class="">
+		<%include header.html%>
+		<section class="main links-underlined">
+			<h1>Build Tools</h1>
+      <p>This project uses node.js for assembling the icon webfont, compiling the SCSS files into CSS, and for assembling the documentation pages. These tasks are automated with npm scripts.</p>
+      <dl>
+        <dt><pre>&gt; npm run build-css
+&gt; npm run watch-css</pre></dt>
+        <dd>Uses <em><a href="https://www.npmjs.com/package/node-sass">node-sass</a></em> to create compressed CSS files. Autoprefixing is accomplished with <em><a href="https://www.npmjs.com/package/autoprefixer">autoprefixer</a></em> and <em><a href="https://www.npmjs.com/package/postcss-cli">postcss-cli</a></em>. The watch script uses <em><a href="https://www.npmjs.com/package/nodemon">nodemon</a></em> to check for changes to the SCSS files.</dd>
+        <dt><pre>&gt; npm run build-css-dev
+&gt; npm run watch-css-dev</pre></dt>
+        <dd>Uses <em><a href="https://www.npmjs.com/package/node-sass">node-sass</a></em> to create readable CSS with source file comments. Files are linted prior to compilation using <em><a href="https://www.npmjs.com/package/stylelint">stylelint</a></em>. Autoprefixing is accomplished with <em><a href="https://www.npmjs.com/package/autoprefixer">autoprefixer</a></em> and <em><a href="https://www.npmjs.com/package/postcss-cli">postcss-cli</a></em>. The watch script uses <em><a href="https://www.npmjs.com/package/nodemon">nodemon</a></em> to check for changes to the SCSS files.</dd>
+        <dt><pre>&gt; npm run build-icons</pre></dt>
+        <dd>Uses <em><a href="https://www.npmjs.com/package/webfont">webfont</a></em> the webfont and SCSS files for the icons.</dd>
+        <dt><pre>&gt; node docs.js</pre></dt>
+        <dd>Compiles documentation files using <em><a href="https://www.npmjs.com/package/templatesjs">templatesjs</a></em> to assemble the HTML pages and their includes.</dd>
+      </dl>
+		</section>
+		<%include footer.html%>
+	</body>
+</html>

@@ -107,7 +107,7 @@
   }
 }
 
-@mixin button($color_default:$tyfy-color-link-default,$color_active:$tyfy-color-link-active,$border_radius:$tyfy-radius-border) {
+@mixin button($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:$tyfy-radius-border) {
   background-color:$color_default;
   border:none;
   border-radius:$border_radius;
@@ -149,7 +149,7 @@
   }
 }
 
-@mixin button-outline($color_default:$tyfy-color-link-default,$color_active:$tyfy-color-link-active,$border_radius:$tyfy-radius-border) {
+@mixin button-outline($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:$tyfy-radius-border) {
   background-color:transparent;
   border:$tyfy-width-border $color_default solid;
   border-radius:$border_radius;
