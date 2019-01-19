@@ -1,14 +1,22 @@
+:root {
+  --tycolor-bg:                   #{$tycolor-bg};
+  --tycolor-bg-tab-active:        #{$tycolor-bg-tab-active};
+  --tycolor-fg:                   #{$tycolor-fg};
+  --tycolor-text-light:           #{$tycolor-text-light};
+  --tycolor-link-default:         #{$tycolor-link-default};
+  --tycolor-link-active:          #{$tycolor-link-active};
+  --tycolor-border:               #{$tycolor-border};
+  --tycolor-border-link-default:  #{$tycolor-border-link-default};
+  --tycolor-border-link-active:   #{$tycolor-border-link-active};
+  --tycolor-shade:                #{$tycolor-shade};
+}
 html {
   font-size:100%;
 }
 body {
-  background:$tyfy-color-background;
-  border-color:$tyfy-color-border;
-  color:$tyfy-color-foreground;
+  background:var(--tycolor-bg);
+  color:var(--tycolor-fg);
   font-family:$tyfy-font-base;
   font-size:$tyfy-font-size-base;
   line-height:tylead($tyfy-font-size-base);
-  * {
-    border-color:inherit;
-  }
 }

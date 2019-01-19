@@ -147,51 +147,27 @@
 			</dl>
 			<h3>// site colors</h3>
 			<dl>
-				<dt>$tyfy-color-background</dt>
+				<dt>$tycolor-bg</dt>
 				<dd><code class="val val-default"><a href="https://www.colorhexa.com/ffffff">white</a>  !default;</code></dd>
 				<dd>Background color of the <code>&lt;body&gt;</code> element</dd>
-				<dt>$tyfy-color-foreground</dt>
+				<dt>$tycolor-fg</dt>
 				<dd><code class="val val-default"><a href="https://www.colorhexa.com/111111">#111111</a> !default;</code></dd>
 				<dd>Color of the <code>&lt;body&gt;</code> element</dd>
-				<dt>$tyfy-color-text-light</dt>
+				<dt>$tycolor-text-light</dt>
 				<dd><code class="val val-default">mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;</code></dd>
 				<dd>A light text color variant</dd>
-				<dt>$tyfy-color-link-default</dt>
+				<dt>$tycolor-link-default</dt>
 				<dd><code class="val val-default"><a href="https://www.colorhexa.com/3380cc">#3380cc</a> !default;</code></dd>
 				<dd>Default link color</dd>
-				<dt>$tyfy-color-link-active</dt>
+				<dt>$tycolor-link-active</dt>
 				<dd><code class="val val-default"><a href="https://www.colorhexa.com/cc3380">#cc3380</a> !default;</code></dd>
 				<dd>Color of links that are hovered or active</dd>
-				<dt>$tyfy-color-border</dt>
+				<dt>$tycolor-border</dt>
 				<dd><code class="val val-default">mix($tyfy-color-foreground,$tyfy-color-background,12%) !default;</code></dd>
 				<dd>Default border color</dd>
-				<dt>$tyfy-color-shade</dt>
+				<dt>$tycolor-shade</dt>
 				<dd><code class="val val-default">rgba($tyfy-color-foreground,0.05) !default;</code></dd>
 				<dd>A background color for shading</dd>
-			</dl>
-			<h3>// reverse colors</h3>
-			<dl>
-				<dt>$tyfy-color-background-reverse</dt>
-				<dd><code class="val val-default">invert($tyfy-color-background) !default;</code></dd>
-				<dd>Reverse default background color</dd>
-				<dt>$tyfy-color-foreground-reverse</dt>
-				<dd><code class="val val-default">invert($tyfy-color-foreground) !default;</code></dd>
-				<dd>Reverse default foreground color</dd>
-				<dt>$tyfy-color-text-light-reverse</dt>
-				<dd><code class="val val-default">mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,50%) !default;</code></dd>
-				<dd>Reverse light text color variant</dd>
-				<dt>$tyfy-color-link-default-reverse</dt>
-				<dd><code class="val val-default">hsl(hue($tyfy-color-link-default),saturation($tyfy-color-link-default),(100% - lightness(darken($tyfy-color-link-default,25%)))) !default;</code></dd>
-				<dd>Reverse default link color</dd>
-				<dt>$tyfy-color-link-active-reverse</dt>
-				<dd><code class="val val-default">hsl(hue($tyfy-color-link-active),saturation($tyfy-color-link-active),(100% - lightness(darken($tyfy-color-link-active,25%)))) !default;</code></dd>
-				<dd>Reverse active link color</dd>
-				<dt>$tyfy-color-border-reverse</dt>
-				<dd><code class="val val-default">mix($tyfy-color-foreground-reverse,$tyfy-color-background-reverse,12%) !default;</code></dt>
-				<dd>Reverse default border color</dd>
-				<dt>$tyfy-color-shade-reverse</dt>
-				<dd><code class="val val-default">rgba($tyfy-color-foreground-reverse,0.05) !default</code></dd>
-				<dd>Reverse background color for shading</dd>
 			</dl>
 			<h3>// icons</h3>
 			<dl>

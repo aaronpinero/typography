@@ -7,20 +7,20 @@ $tyfy-font-base:$tyfy-serif;
 $tyfy-font-heading:$tyfy-sans;
 $tyfy-font-table:$tyfy-sans;
 $tyfy-font-input:$tyfy-sans;
+$tycolor-bg-rev:#333;
+$width-constrained:55rem;
 @import "../../../source/scss/tyfy.scss";
+@import "../../../source/scss/extras/_effects.scss";
+@import "../../../source/scss/extras/_responsive_text.scss";
 body {
   @include fade-in(2000ms);
-  font-family:"IBM Plex Serif", serif;
   margin:0 0 tygrid(2) 0;
   padding:0;
-}
-.reverse {
-  background-color:#333;
 }
 .constrained {
   margin-left:auto;
   margin-right:auto;
-  max-width:55rem;
+  max-width:$width-constrained;
 }
 h1 {
   font-family:$tyfy-condensed;
@@ -29,12 +29,6 @@ h1 {
     font-size:tyscale(1);
     text-transform:none;
   }
-}
-h2, h3, h4, h5, h6, dt, td, th, select, input, textarea, label, fieldset legend, button, input[type="button"], input[type="reset"], input[type="submit"] {
-  font-family:"IBM Plex Sans",sans-serif;
-}
-code {
-  font-family:"IBM Plex Mono", monospace;
 }
 hr.demo {
   margin-bottom:tygrid(1);
@@ -45,18 +39,16 @@ strong.tyfy {
   font-weight:bold;
   text-transform:uppercase;
 }
-
 header.brand {
-  background:#333 url("../img/bg.gif");
   h1 {
     @extend .constrained;
     font-size:$tyfy-font-size-h3;
     line-height:tylead($tyfy-font-size-h3,heading);
-    padding:tygrid(1) tygrid(2);
+    padding:tygrid() tygrid(2);
   }
   nav {
     @extend .constrained;
-    padding:0 2*$tyfy-grid-unit;
+    padding:0 tygrid(2);
     h2 {
       font-size:$tyfy-font-size-h5;
       line-height:tylead($tyfy-font-size-h5,heading);
@@ -64,9 +56,9 @@ header.brand {
     ul.list-grid-4 {
       display:flex;
       flex-wrap:wrap;
-      font-family:"IBM Plex Sans",sans-serif;
-      margin-top:tygrid(1);
-      padding-bottom:tygrid(1);
+      font-family:$tyfy-sans;
+      margin-top:tygrid();
+      padding-bottom:tygrid();
       padding-left:0;
       li {
         @media (max-width:$tyfy-break-list-cols-2 * 0.9999) {
@@ -91,6 +83,7 @@ header.brand {
     &.nav-processed {
       position:relative;
       h2 {
+        color:$tycolor-link-default-rev;
         cursor:pointer;
         height:tylead($tyfy-font-size-h3,heading);
         line-height:tylead($tyfy-font-size-h3,heading);
@@ -110,7 +103,7 @@ header.brand {
           width:tylead($tyfy-font-size-h3,heading);
         }
         &:hover {
-          color:$tyfy-color-link-active-reverse;
+          color:$tycolor-link-active-rev;
         }
       }
       ul {
@@ -134,8 +127,8 @@ section.main {
   padding:$tyfy-spacing-standard;
 }
 section.demo {
-  border:2px dashed darken($tyfy-color-background,10%);
-  border-radius:tygrid(1);
+  border:2px dashed darken($tycolor-bg,10%);
+  border-radius:tygrid();
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
   margin-top:$tyfy-spacing-standard;
 }
@@ -143,47 +136,47 @@ section.demo.reverse {
   border:none;
 }
 pre.codebox {
-  background-color:$tyfy-color-shade;
-  border:$tyfy-width-border $tyfy-color-border solid;
+  background-color:$tycolor-shade;
+  border:$tyfy-width-border $tycolor-border solid;
   border-radius:$tyfy-radius-border;
   padding:$tyfy-spacing-standard;
   overflow:auto;
 }
 code.val-default {
   background-color:transparent;
-  color:lighten(mix($tyfy-color-link-default,$tyfy-color-link-active),10%);
+  color:lighten(mix($tycolor-link-default,$tycolor-link-active),10%);
   font-style:italic;
   font-weight:normal;
   padding-left:0;
   padding-right:0;
 }
 .tyfyicons.example {
-  color:lighten(mix($tyfy-color-link-default,$tyfy-color-link-active),10%);
+  color:lighten(mix($tycolor-link-default,$tycolor-link-active),10%);
   margin-left:0.25em;
   margin-right:0.25em;
   vertical-align:bottom;
 }
 #lists-demo {
   @include sibling-margins(off);
-  border:2px dashed darken($tyfy-color-background,10%);
+  border:2px dashed darken($tycolor-bg,10%);
   border-radius:tygrid(0.5);
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
   display:flex;
   flex-wrap:wrap;
-  padding:tygrid(1) tygrid(2);
+  padding:tygrid() tygrid(2);
   .form-control {
     display:block;
-    padding-top:tygrid(1);
-    padding-bottom:tygrid(1);
+    padding-top:tygrid();
+    padding-bottom:tygrid();
     label {
       width:11rem;
       &.disabled {
-        color:$tyfy-color-text-light;
+        color:$tycolor-text-light;
       }
     }
     &.form-control-type {
       @media (min-width:55em) {
-        border-right:2px dashed darken($tyfy-color-background,10%);
+        border-right:2px dashed darken($tycolor-bg,10%);
       }
     }
     &.form-control-classes {
@@ -212,9 +205,9 @@ code.val-default {
 footer {
   p {
     @extend .constrained;
-    color:$tyfy-color-text-light;
+    color:$tycolor-text-light;
     font-size:$tyfy-font-size-sm;
     line-height:tylead($tyfy-font-size-sm,heading);
-    padding:tygrid(1) tygrid(2);
+    padding:tygrid() tygrid(2);
   }
 }

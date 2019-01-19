@@ -12,7 +12,7 @@
   ul.tabs {
     @include sibling-margins(off);
     align-items:stretch;
-    border-bottom:$tyfy-width-border $tyfy-color-border solid;
+    border-bottom:$tyfy-width-border var(--tycolor-border) solid;
     display:none;
     margin:0;
     padding:0;
@@ -23,10 +23,10 @@
       margin-left:tygrid(1);
     }
     li {
-      background-color:$tyfy-color-shade;
-      border:$tyfy-width-border $tyfy-color-border solid;
+      background-color:var(--tycolor-shade);
+      border:$tyfy-width-border var(--tycolor-border) solid;
       border-radius:$tyfy-radius-border $tyfy-radius-border 0 0;
-      color:$tyfy-color-text-light;
+      color:var(--tycolor-text-light);
       cursor:pointer;
       display:block;
       flex:1;
@@ -37,13 +37,13 @@
       transition-duration:$tyfy-transition-duration-hover;
       transition-property:background-color;
       &:hover {
-        background-color:rgba($tyfy-color-link-active,0.12);
-        color:$tyfy-color-link-active;
+        background-color:var(--tycolor-bg-tab-active);
+        color:var(--tycolor-link-active);
       }
       &.open {
-        background-color:$tyfy-color-background;
-        border-bottom:$tyfy-width-border $tyfy-color-background solid;
-        color:$tyfy-color-foreground;
+        background-color:var(--tycolor-bg);
+        border-bottom:$tyfy-width-border var(--tycolor-bg) solid;
+        color:var(--tycolor-fg);
         font-weight:600;
       }
     }
@@ -65,7 +65,7 @@
       transition-property:padding-top;
       &::before {
         border-radius:50%;
-        color:$tyfy-color-text-light;
+        color:var(--tycolor-text-light);
         content:tychar($tyfyicons-angle-up);
         font-family:$tyfy-symbol;
         font-size:60%;
@@ -84,7 +84,7 @@
         display:none;
       }
       &.collapsed {
-        border-bottom:$tyfy-width-border $tyfy-color-border solid;
+        border-bottom:$tyfy-width-border var(--tycolor-border) solid;
         &::before {
           content:tychar($tyfyicons-angle-down);
         }
@@ -94,18 +94,18 @@
       }
       &:hover {
         &::before {
-          background-color:$tyfy-color-link-active;
-          color:$tyfy-color-background;
+          background-color:var(--tycolor-link-active);
+          color:var(--tycolor-bg);
         }
       }
     }
     .tab-panel {
-      border-bottom:$tyfy-width-border $tyfy-color-border solid;
+      border-bottom:$tyfy-width-border var(--tycolor-border) solid;
       overflow:hidden;
       margin-top:0;
       padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tyfy-width-border}) 0;
       @media (min-width:$tyfy-break-tabs) {
-        border:$tyfy-width-border $tyfy-color-border solid;
+        border:$tyfy-width-border var(--tycolor-border) solid;
         border-radius:0 0 $tyfy-radius-border $tyfy-radius-border;
         border-top:none;
         display:none;
