@@ -80,27 +80,15 @@ $fades: (
 
 // site colors
 $tycolor-bg:                        white !default;
-$tycolor-bg-tab-active:             rgba($tycolor-link-active,0.12) !default;
 $tycolor-fg:                        #111111 !default;
-$tycolor-text-light:                mix($tyfy-color-fg,$tyfy-color-bg,45%) !default;
+$tycolor-text-light:                mix($tycolor-fg,$tycolor-bg,45%) !default;
 $tycolor-link-default:              #3380cc !default;
 $tycolor-link-active:               #cc3380 !default;
-$tycolor-border:                    mix($tyfy-color-fg,$tyfy-color-bg,12%) !default;
+$tycolor-bg-tab-active:             rgba($tycolor-link-active,0.12) !default;
+$tycolor-border:                    mix($tycolor-fg,$tycolor-bg,12%) !default;
 $tycolor-border-link-default:       rgba($tycolor-link-default,0.5) !default;
 $tycolor-border-link-active:        rgba($tycolor-link-active,0.75) !default;
-$tycolor-shade:                     rgba($tyfy-color-fg,0.05) !default;
-
-// reverse colors
-$tycolor-bg-rev:                    invert($tyfy-color-bg) !default;
-$tycolor-bg-tab-active-rev:         rgba($tycolor-link-active-rev,0.12) !default;
-$tycolor-fg-rev:                    invert($tyfy-color-fg) !default;
-$tycolor-text-light-rev:            mix($tyfy-color-fg-reverse,$tyfy-color-bg-reverse,50%) !default;
-$tycolor-link-default-rev:          hsl(hue($tycolor-link-default),saturation($tycolor-link-default),(100% - lightness(darken($tycolor-link-default,25%)))) !default;
-$tycolor-link-active-rev:           hsl(hue($tycolor-link-active),saturation($tycolor-link-active),(100% - lightness(darken($tycolor-link-active,25%)))) !default;
-$tycolor-border-rev:                mix($tyfy-color-fg-reverse,$tyfy-color-bg-reverse,12%) !default;
-$tycolor-border-link-default-rev:   rgba($tycolor-link-default-rev,0.5) !default;
-$tycolor-border-link-active-rev:    rgba($tycolor-link-active-rev,0.75) !default;
-$tycolor-shade-rev:                 rgba($tyfy-color-fg-reverse,0.05) !default;
+$tycolor-shade:                     rgba($tycolor-fg,0.05) !default;
 
 // icons
 // path to icon fonts

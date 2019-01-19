@@ -17,7 +17,7 @@
 		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
 		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy - About - Browser Compatability</title>
+		<title>Tyfy - About - Build Tools</title>
 	</head>
 	<body class="">
 		<!-- COMMON HEADER -->
@@ -51,22 +51,20 @@
 		</header>
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
-			<h1>Browser Compatability</h1>
-      <p><strong class="tyfy">Tyfy</strong> depends on the support of the following  <span class="smallcaps">CSS</span> standards. Some styles may not work properly if your target web browser lacks the necessary support. You can assess support for each standard at <a href="https://caniuse.com/#home">caniuse.com</a>.</p>
-      <ul class="list-cols-2">
-        <li><a href="https://caniuse.com/#feat=css-mediaqueries"><span class="smallcaps">CSS</span> Media Queries</a></li>
-        <li><a href="https://caniuse.com/#search=calc">calc() as <span class="smallcaps">CSS</span> unit value</a></li>
-        <li><a href="https://caniuse.com/#feat=css-gencontent">pseudo-elements</a></li>
-        <li><a href="https://caniuse.com/#feat=css-text-justify"><span class="smallcaps">CSS</span> text-justify</a></li>
-        <li><a href="https://caniuse.com/#feat=css-hyphens"><span class="smallcaps">CSS</span> Hyphenation</a></li>
-        <li><a href="https://caniuse.com/#feat=multicolumn"><span class="smallcaps">CSS3</span> Multiple column layout</a></li>
-        <li><a href="https://caniuse.com/#feat=css-transitions"><span class="smallcaps">CSS3</span> Transitions</a></li>
-        <li><a href="https://caniuse.com/#feat=css-animation"><span class="smallcaps">CSS</span> Animation</a></li>
-        <li><a href="https://caniuse.com/#feat=flexbox"><span class="smallcaps">CSS</span> Flexbox</a></li>
-        <li><a href="https://caniuse.com/#feat=css-appearance"><span class="smallcaps">CSS</span> Appearance</a></li>
-        <li><a href="https://caniuse.com/#feat=css-sel3"><span class="smallcaps">CSS3</span> Selectors</a></li>
-        <li><a href="https://caniuse.com/#feat=css-variables"><span class="smallcaps">CSS</span> Custom Properties</a></li>
-      </ul>
+			<h1>Build Tools</h1>
+      <p>This project uses node.js for assembling the icon webfont, compiling the SCSS files into CSS, and for assembling the documentation pages. These tasks are automated with npm scripts.</p>
+      <dl>
+        <dt><pre>&gt; npm run build-css
+&gt; npm run watch-css</pre></dt>
+        <dd>Uses <em><a href="https://www.npmjs.com/package/node-sass">node-sass</a></em> to create compressed CSS files. Autoprefixing is accomplished with <em><a href="https://www.npmjs.com/package/autoprefixer">autoprefixer</a></em> and <em><a href="https://www.npmjs.com/package/postcss-cli">postcss-cli</a></em>. The watch script uses <em><a href="https://www.npmjs.com/package/nodemon">nodemon</a></em> to check for changes to the SCSS files.</dd>
+        <dt><pre>&gt; npm run build-css-dev
+&gt; npm run watch-css-dev</pre></dt>
+        <dd>Uses <em><a href="https://www.npmjs.com/package/node-sass">node-sass</a></em> to create readable CSS with source file comments. Files are linted prior to compilation using <em><a href="https://www.npmjs.com/package/stylelint">stylelint</a></em>. Autoprefixing is accomplished with <em><a href="https://www.npmjs.com/package/autoprefixer">autoprefixer</a></em> and <em><a href="https://www.npmjs.com/package/postcss-cli">postcss-cli</a></em>. The watch script uses <em><a href="https://www.npmjs.com/package/nodemon">nodemon</a></em> to check for changes to the SCSS files.</dd>
+        <dt><pre>&gt; npm run build-icons</pre></dt>
+        <dd>Uses <em><a href="https://www.npmjs.com/package/webfont">webfont</a></em> the webfont and SCSS files for the icons.</dd>
+        <dt><pre>&gt; node docs.js</pre></dt>
+        <dd>Compiles documentation files using <em><a href="https://www.npmjs.com/package/templatesjs">templatesjs</a></em> to assemble the HTML pages and their includes.</dd>
+      </dl>
 		</section>
 		<!-- COMMON FOOTER -->
 		<footer>
@@ -83,6 +81,5 @@
     </script>
     <script src="../resources/script/docs-nav.js"></script>
 		<!--/ COMMON FOOTER -->
-		<script src="../../dist/script/collapsables.js"></script>
 	</body>
 </html>

@@ -739,10 +739,11 @@ span.smallcaps {
   -webkit-font-feature-settings: "c2sc", "smcp";
           font-feature-settings: "c2sc", "smcp";
   font-variant-caps: all-small-caps;
+  font-weight: bolder;
   letter-spacing: 0.075em;
   margin-right: -0.0375em; }
 
-/* line 53, source/scss/optional/_utility.scss */
+/* line 54, source/scss/optional/_utility.scss */
 .button {
   background-color: #3366cc;
   border: none;
@@ -770,7 +771,7 @@ span.smallcaps {
   .button:focus, .button[href]:focus {
     outline: none; }
 
-/* line 56, source/scss/optional/_utility.scss */
+/* line 57, source/scss/optional/_utility.scss */
 .button-outline {
   background-color: transparent;
   border: 2px #3366cc solid;
@@ -799,19 +800,19 @@ span.smallcaps {
   .button-outline:focus, .button-outline[href]:focus {
     outline: none; }
 
-/* line 59, source/scss/optional/_utility.scss */
+/* line 60, source/scss/optional/_utility.scss */
 .font-sans {
   font-family: helvetica, arial, sans-serif; }
 
-/* line 62, source/scss/optional/_utility.scss */
+/* line 63, source/scss/optional/_utility.scss */
 .font-serif {
   font-family: georgia, serif; }
 
-/* line 65, source/scss/optional/_utility.scss */
+/* line 66, source/scss/optional/_utility.scss */
 .font-mono {
   font-family: monaco, courier, monospace; }
 
-/* line 68, source/scss/optional/_utility.scss */
+/* line 69, source/scss/optional/_utility.scss */
 .light {
   color: var(--tycolor-text-light); }
 
@@ -1049,135 +1050,6 @@ table.responsive td .td-label {
   /* line 145, source/scss/optional/_tables.scss */
   table.float-left + table.float-right {
     margin-left: 1.5rem; } }
-
-/* line 2, source/scss/optional/_reverse.scss */
-.reverse {
-  --tycolor-bg:                   #333;
-  --tycolor-bg-tab-active:        rgba(230, 153, 179, 0.12);
-  --tycolor-fg:                   white;
-  --tycolor-text-light:           #999999;
-  --tycolor-link-default:         #99b3e6;
-  --tycolor-link-active:          #e699b3;
-  --tycolor-border:               #525252;
-  --tycolor-border-link-default:  rgba(153, 179, 230, 0.5);
-  --tycolor-border-link-active:   rgba(230, 153, 179, 0.75);
-  --tycolor-shade:                rgba(255, 255, 255, 0.05); }
-  /* line 15, source/scss/optional/_reverse.scss */
-  .reverse .button,
-  .reverse a.button,
-  .reverse button,
-  .reverse input[type="button"],
-  .reverse input[type="reset"],
-  .reverse input[type="submit"] {
-    background-color: #99b3e6;
-    border: none;
-    border-radius: 4px;
-    color: black;
-    cursor: pointer;
-    display: inline-block;
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0;
-    padding: 0.375rem 1.125rem;
-    text-decoration: none;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    transition: all 0.25s;
-    vertical-align: middle; }
-    /* line 132, source/scss/required/_mixins.scss */
-    .reverse .button:hover, .reverse .button:active, .reverse .button[href]:hover, .reverse .button[href]:active,
-    .reverse a.button:hover,
-    .reverse a.button:active,
-    .reverse a.button[href]:hover,
-    .reverse a.button[href]:active,
-    .reverse button:hover,
-    .reverse button:active,
-    .reverse button[href]:hover,
-    .reverse button[href]:active,
-    .reverse input[type="button"]:hover,
-    .reverse input[type="button"]:active,
-    .reverse input[type="button"][href]:hover,
-    .reverse input[type="button"][href]:active,
-    .reverse input[type="reset"]:hover,
-    .reverse input[type="reset"]:active,
-    .reverse input[type="reset"][href]:hover,
-    .reverse input[type="reset"][href]:active,
-    .reverse input[type="submit"]:hover,
-    .reverse input[type="submit"]:active,
-    .reverse input[type="submit"][href]:hover,
-    .reverse input[type="submit"][href]:active {
-      background-color: #e699b3;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
-      color: black; }
-    /* line 143, source/scss/required/_mixins.scss */
-    .reverse .button:active, .reverse .button[href]:active,
-    .reverse a.button:active,
-    .reverse a.button[href]:active,
-    .reverse button:active,
-    .reverse button[href]:active,
-    .reverse input[type="button"]:active,
-    .reverse input[type="button"][href]:active,
-    .reverse input[type="reset"]:active,
-    .reverse input[type="reset"][href]:active,
-    .reverse input[type="submit"]:active,
-    .reverse input[type="submit"][href]:active {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 146, source/scss/required/_mixins.scss */
-    .reverse .button:focus, .reverse .button[href]:focus,
-    .reverse a.button:focus,
-    .reverse a.button[href]:focus,
-    .reverse button:focus,
-    .reverse button[href]:focus,
-    .reverse input[type="button"]:focus,
-    .reverse input[type="button"][href]:focus,
-    .reverse input[type="reset"]:focus,
-    .reverse input[type="reset"][href]:focus,
-    .reverse input[type="submit"]:focus,
-    .reverse input[type="submit"][href]:focus {
-      outline: none; }
-  /* line 23, source/scss/optional/_reverse.scss */
-  .reverse .button-outline,
-  .reverse a.button-outline {
-    background-color: transparent;
-    border: 2px #99b3e6 solid;
-    border-radius: 4px;
-    color: #99b3e6;
-    cursor: pointer;
-    display: inline-block;
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0;
-    padding: calc(0.375rem - 2px) calc(1.125rem - 2px);
-    text-decoration: none;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    transition: all 0.25s;
-    vertical-align: middle; }
-    /* line 169, source/scss/required/_mixins.scss */
-    .reverse .button-outline:hover, .reverse .button-outline:active, .reverse .button-outline[href]:hover, .reverse .button-outline[href]:active,
-    .reverse a.button-outline:hover,
-    .reverse a.button-outline:active,
-    .reverse a.button-outline[href]:hover,
-    .reverse a.button-outline[href]:active {
-      background-color: #e699b3;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
-      border-color: #da91aa;
-      color: black; }
-    /* line 181, source/scss/required/_mixins.scss */
-    .reverse .button-outline:active, .reverse .button-outline[href]:active,
-    .reverse a.button-outline:active,
-    .reverse a.button-outline[href]:active {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 184, source/scss/required/_mixins.scss */
-    .reverse .button-outline:focus, .reverse .button-outline[href]:focus,
-    .reverse a.button-outline:focus,
-    .reverse a.button-outline[href]:focus {
-      outline: none; }
-  /* line 31, source/scss/optional/_reverse.scss */
-  .reverse blockquote.pullquote-roof-fixed::before, .reverse blockquote.pullquote-roof-full::before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#525252%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
-  /* line 38, source/scss/optional/_reverse.scss */
-  .reverse .tyfy-select select:not([multiple]),
-  .reverse select.tyfy-select:not([multiple]) {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#999999'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#999999'/%3E%3C/svg%3E"); }
 
 /* line 2, source/scss/optional/_collapsables.scss */
 h2.collapsable-processed,
@@ -1732,22 +1604,6 @@ select.tyfy-select {
     background-position: calc(100% - 0.375rem) center;
     background-size: 0.9375rem auto; }
 
-/* line 2, source/scss/optional/_effects.scss */
-.fade-500ms {
-  animation: fadein 500ms; }
-
-/* line 2, source/scss/optional/_effects.scss */
-.fade-1s {
-  animation: fadein 1000ms; }
-
-/* line 2, source/scss/optional/_effects.scss */
-.fade-2s {
-  animation: fadein 2000ms; }
-
-/* line 2, source/scss/optional/_effects.scss */
-.fade-3s {
-  animation: fadein 3000ms; }
-
 @font-face {
   font-family: tyfyicons;
   src: url("../dist/fonts/tyfyicons/tyfyicons.eot");
@@ -1840,6 +1696,153 @@ select.tyfy-select {
 /* line 78, source/scss/extras/_icons.scss */
 .tyfyicons-x::before {
   content: "\ea0c"; }
+
+/* line 14, source/scss/extras/_reverse.scss */
+.reverse {
+  --tycolor-bg:                   #333;
+  --tycolor-bg-tab-active:        rgba(230, 153, 179, 0.12);
+  --tycolor-fg:                   white;
+  --tycolor-text-light:           #999999;
+  --tycolor-link-default:         #99b3e6;
+  --tycolor-link-active:          #e699b3;
+  --tycolor-border:               #525252;
+  --tycolor-border-link-default:  rgba(153, 179, 230, 0.5);
+  --tycolor-border-link-active:   rgba(230, 153, 179, 0.75);
+  --tycolor-shade:                rgba(255, 255, 255, 0.05);
+  background-color: var(--tycolor-bg);
+  color: var(--tycolor-fg); }
+  /* line 30, source/scss/extras/_reverse.scss */
+  .reverse .button,
+  .reverse a.button,
+  .reverse button,
+  .reverse input[type="button"],
+  .reverse input[type="reset"],
+  .reverse input[type="submit"] {
+    background-color: #99b3e6;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0.375rem 1.125rem;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s;
+    vertical-align: middle; }
+    /* line 132, source/scss/required/_mixins.scss */
+    .reverse .button:hover, .reverse .button:active, .reverse .button[href]:hover, .reverse .button[href]:active,
+    .reverse a.button:hover,
+    .reverse a.button:active,
+    .reverse a.button[href]:hover,
+    .reverse a.button[href]:active,
+    .reverse button:hover,
+    .reverse button:active,
+    .reverse button[href]:hover,
+    .reverse button[href]:active,
+    .reverse input[type="button"]:hover,
+    .reverse input[type="button"]:active,
+    .reverse input[type="button"][href]:hover,
+    .reverse input[type="button"][href]:active,
+    .reverse input[type="reset"]:hover,
+    .reverse input[type="reset"]:active,
+    .reverse input[type="reset"][href]:hover,
+    .reverse input[type="reset"][href]:active,
+    .reverse input[type="submit"]:hover,
+    .reverse input[type="submit"]:active,
+    .reverse input[type="submit"][href]:hover,
+    .reverse input[type="submit"][href]:active {
+      background-color: #e699b3;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+      color: black; }
+    /* line 143, source/scss/required/_mixins.scss */
+    .reverse .button:active, .reverse .button[href]:active,
+    .reverse a.button:active,
+    .reverse a.button[href]:active,
+    .reverse button:active,
+    .reverse button[href]:active,
+    .reverse input[type="button"]:active,
+    .reverse input[type="button"][href]:active,
+    .reverse input[type="reset"]:active,
+    .reverse input[type="reset"][href]:active,
+    .reverse input[type="submit"]:active,
+    .reverse input[type="submit"][href]:active {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
+    /* line 146, source/scss/required/_mixins.scss */
+    .reverse .button:focus, .reverse .button[href]:focus,
+    .reverse a.button:focus,
+    .reverse a.button[href]:focus,
+    .reverse button:focus,
+    .reverse button[href]:focus,
+    .reverse input[type="button"]:focus,
+    .reverse input[type="button"][href]:focus,
+    .reverse input[type="reset"]:focus,
+    .reverse input[type="reset"][href]:focus,
+    .reverse input[type="submit"]:focus,
+    .reverse input[type="submit"][href]:focus {
+      outline: none; }
+  /* line 38, source/scss/extras/_reverse.scss */
+  .reverse .button-outline,
+  .reverse a.button-outline {
+    background-color: transparent;
+    border: 2px #99b3e6 solid;
+    border-radius: 4px;
+    color: #99b3e6;
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: calc(0.375rem - 2px) calc(1.125rem - 2px);
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s;
+    vertical-align: middle; }
+    /* line 169, source/scss/required/_mixins.scss */
+    .reverse .button-outline:hover, .reverse .button-outline:active, .reverse .button-outline[href]:hover, .reverse .button-outline[href]:active,
+    .reverse a.button-outline:hover,
+    .reverse a.button-outline:active,
+    .reverse a.button-outline[href]:hover,
+    .reverse a.button-outline[href]:active {
+      background-color: #e699b3;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+      border-color: #da91aa;
+      color: black; }
+    /* line 181, source/scss/required/_mixins.scss */
+    .reverse .button-outline:active, .reverse .button-outline[href]:active,
+    .reverse a.button-outline:active,
+    .reverse a.button-outline[href]:active {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
+    /* line 184, source/scss/required/_mixins.scss */
+    .reverse .button-outline:focus, .reverse .button-outline[href]:focus,
+    .reverse a.button-outline:focus,
+    .reverse a.button-outline[href]:focus {
+      outline: none; }
+  /* line 46, source/scss/extras/_reverse.scss */
+  .reverse blockquote.pullquote-roof-fixed::before, .reverse blockquote.pullquote-roof-full::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#525252%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+  /* line 53, source/scss/extras/_reverse.scss */
+  .reverse .tyfy-select select:not([multiple]),
+  .reverse select.tyfy-select:not([multiple]) {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#999999'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#999999'/%3E%3C/svg%3E"); }
+
+/* line 2, source/scss/extras/_effects.scss */
+.fade-500ms {
+  animation: fadein 500ms; }
+
+/* line 2, source/scss/extras/_effects.scss */
+.fade-1s {
+  animation: fadein 1000ms; }
+
+/* line 2, source/scss/extras/_effects.scss */
+.fade-2s {
+  animation: fadein 2000ms; }
+
+/* line 2, source/scss/extras/_effects.scss */
+.fade-3s {
+  animation: fadein 3000ms; }
 
 @media (max-width: 39.996em) {
   /* line 8, source/scss/extras/_responsive_text.scss */
@@ -2015,15 +2018,18 @@ select.tyfy-select {
   h6.collapsable-processed::before {
     width: 1.5rem; } }
 
-/* line 81, test/test.scss */
+/* line 83, test/test.scss */
 body {
   background-color: var(--tycolor-shade);
   margin-left: auto;
   margin-right: auto;
   max-width: 52.5rem;
   padding: 1.5rem; }
+  /* line 89, test/test.scss */
+  body.reverse {
+    background-color: #666; }
 
-/* line 88, test/test.scss */
+/* line 93, test/test.scss */
 figure {
   background-color: var(--tycolor-bg);
   border-radius: 4px;
@@ -2031,7 +2037,7 @@ figure {
   margin-left: 0;
   margin-right: 0;
   padding: 1.5rem; }
-  /* line 95, test/test.scss */
+  /* line 100, test/test.scss */
   figure figcaption {
     border-bottom: 2px var(--tycolor-border) solid;
     color: var(--tycolor-text-light);
@@ -2043,42 +2049,42 @@ figure {
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
     text-transform: uppercase; }
-  /* line 107, test/test.scss */
+  /* line 112, test/test.scss */
   figure figcaption + * {
     margin-top: 0 !important; }
 
-/* line 111, test/test.scss */
+/* line 116, test/test.scss */
 .swatch {
   border-radius: 50%;
   display: inline-block;
   height: 2.25rem;
   vertical-align: middle;
   width: 2.25rem; }
-  /* line 117, test/test.scss */
+  /* line 122, test/test.scss */
   .swatch.foreground {
     background-color: var(--tycolor-fg); }
-  /* line 120, test/test.scss */
+  /* line 125, test/test.scss */
   .swatch.text-light {
     background-color: var(--tycolor-text-light); }
-  /* line 123, test/test.scss */
+  /* line 128, test/test.scss */
   .swatch.link-default {
     background-color: var(--tycolor-link-default); }
-  /* line 126, test/test.scss */
+  /* line 131, test/test.scss */
   .swatch.link-active {
     background-color: var(--tycolor-link-active); }
-  /* line 129, test/test.scss */
+  /* line 134, test/test.scss */
   .swatch.border {
     background-color: var(--tycolor-border); }
-  /* line 132, test/test.scss */
+  /* line 137, test/test.scss */
   .swatch.shade {
     background-color: var(--tycolor-shade); }
 
-/* line 136, test/test.scss */
+/* line 141, test/test.scss */
 hr.demo {
   margin-bottom: 0.375rem;
   margin-top: 0.375rem; }
 
-/* line 140, test/test.scss */
+/* line 145, test/test.scss */
 .button-rev {
   opacity: 0.25;
   position: fixed;
@@ -2086,6 +2092,6 @@ hr.demo {
   top: 0.75rem;
   transition: all 0.25s;
   z-index: 100; }
-  /* line 147, test/test.scss */
+  /* line 152, test/test.scss */
   .button-rev:hover {
     opacity: 1; }

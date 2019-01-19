@@ -1,3 +1,15 @@
+// reverse colors
+$tycolor-bg-rev:                    invert($tycolor-bg) !default;
+$tycolor-fg-rev:                    invert($tycolor-fg) !default;
+$tycolor-text-light-rev:            mix($tycolor-fg-rev,$tycolor-bg-rev,50%) !default;
+$tycolor-link-default-rev:          hsl(hue($tycolor-link-default),saturation($tycolor-link-default),(100% - lightness(darken($tycolor-link-default,25%)))) !default;
+$tycolor-link-active-rev:           hsl(hue($tycolor-link-active),saturation($tycolor-link-active),(100% - lightness(darken($tycolor-link-active,25%)))) !default;
+$tycolor-bg-tab-active-rev:         rgba($tycolor-link-active-rev,0.12) !default;
+$tycolor-border-rev:                mix($tycolor-fg-rev,$tycolor-bg-rev,12%) !default;
+$tycolor-border-link-default-rev:   rgba($tycolor-link-default-rev,0.5) !default;
+$tycolor-border-link-active-rev:    rgba($tycolor-link-active-rev,0.75) !default;
+$tycolor-shade-rev:                 rgba($tycolor-fg-rev,0.05) !default;
+
 // root styles
 .reverse {
   --tycolor-bg:                   #{$tycolor-bg-rev};
@@ -10,6 +22,9 @@
   --tycolor-border-link-default:  #{$tycolor-border-link-default-rev};
   --tycolor-border-link-active:   #{$tycolor-border-link-active-rev};
   --tycolor-shade:                #{$tycolor-shade-rev};
+  
+  background-color:var(--tycolor-bg);
+  color:var(--tycolor-fg);
 
   // buttons
   .button,
