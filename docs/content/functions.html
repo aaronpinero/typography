@@ -21,10 +21,22 @@
 				<dd>Default value is <code>base</code></dd>
 				<dd>Accepted values are <code>base</code>, <code>heading</code>, <code>tall</code>, or <code>short</code></dd>
 			</dl>
+			<h3 class="font-size-h4">Variables</h3>
+			<p>The leading styles listed above correspond to scalar values that are used in the function’s line height calculation. The values are used to adjust the line height to achieve a particular style. Generally speaking, a larger value will result in a smaller line height, and a smaller value will give a larger line height. These values have been determined through experimentation and should not need to be changed. However, the values are available as variables if it is necessary to change the behavior of the tylead function.</p>
+			<dl>
+  			<dt>$tyfy-leading-adjustment-tall</dt>
+  			<dd><code class="val val-default">0.8 !default;</code></dd>
+  			<dt>$tyfy-leading-adjustment-base</dt>
+  			<dd><code class="val val-default">0.9 !default;</code></dd>
+  			<dt>$tyfy-leading-adjustment-heading</dt>
+  			<dd><code class="val val-default">1 !default;</code></dd>
+  			<dt>$tyfy-leading-adjustment-short</dt>
+  			<dd><code class="val val-default">1.2 !default;</code></dd>
+			</dl>
 			<h3 class="font-size-h4">Examples</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">p {
-  font-size:1rem;
-  line-height:tylead(1rem);
+  font-size:$tyfy-font-size-base;
+  line-height:tylead($tyfy-font-size-base);
 }
 p.special {
   font-size:1.2rem;
@@ -64,7 +76,7 @@ h5 {
   font-size: tyscale(1) !default;  <em class="light">// 1.2rem; one scale step up from the base size</em>
 }</code></pre>
 			<h2 id="fn-tychar">@function tychar</h2>
-			<p>This function facilitates the use of the icon font by working around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> related to character codes. This function properly applies icons when used in the <em>content</em> attribute of a pseudo-element.</p>
+			<p>This function facilitates the use of the icon font in <span class="smallcaps">CSS</span> pseudo-elements by working around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> related to character codes. This function properly applies icons when used in the <em>content</em> attribute of a pseudo-element.</p>
 			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
 				<dt>$code</dt>

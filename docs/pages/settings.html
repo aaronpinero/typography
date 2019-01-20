@@ -53,7 +53,7 @@
 		<section class="main links-underlined">
 			<h1>Settings</h1>
 			<p>The settings module is a library of <span class="smallcaps">SASS</span> variables that define the margins, colors, fonts, font sizes, breakpoints, and other characteristics.</p>
-			<p>All variables begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects. Variable values are assigned using the <code>!default</code> declaration so they may be overridden when including the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SASS</span> files in your project.</p>
+			<p>Variable names begin with the prefix <code>$tyfy-</code> (or <code>$tycolor-</code> for color variables) to avoid name collision with other projects. Variable values are assigned using the <code>!default</code> declaration so they may be overridden when including the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SASS</span> files in your project.</p>
 			<h2>// grid and spacing</h2>
 			<dl>
 				<dt>$tyfy-spacings</dt>
@@ -190,6 +190,7 @@
 				<dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions where measures (width, height, position) are changing</dd>
 			</dl>
 			<h3>// site colors</h3>
+			<p>In the body module, the following colors are assigned to <span class="smallcaps">CSS</span> custom properties to facilicate dynamic or contextual color changes. The custom property names are the same as the equivalent <span class="smallcaps">SCSS</span> variable names.</p>
 			<dl>
 				<dt>$tycolor-bg</dt>
 				<dd><code class="val val-default"><a href="https://www.colorhexa.com/ffffff">white</a>  !default;</code></dd>
@@ -198,7 +199,7 @@
 				<dd><code class="val val-default"><a href="https://www.colorhexa.com/111111">#111111</a> !default;</code></dd>
 				<dd>Color of the <code>&lt;body&gt;</code> element</dd>
 				<dt>$tycolor-text-light</dt>
-				<dd><code class="val val-default">mix($tyfy-color-foreground,$tyfy-color-background,45%) !default;</code></dd>
+				<dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,45%) !default;</code></dd>
 				<dd>A light text color variant</dd>
 				<dt>$tycolor-link-default</dt>
 				<dd><code class="val val-default"><a href="https://www.colorhexa.com/3380cc">#3380cc</a> !default;</code></dd>
@@ -206,11 +207,20 @@
 				<dt>$tycolor-link-active</dt>
 				<dd><code class="val val-default"><a href="https://www.colorhexa.com/cc3380">#cc3380</a> !default;</code></dd>
 				<dd>Color of links that are hovered or active</dd>
+				<dt>$tycolor-bg-tab-active</dt>
+				<dd><code class="val val-default">rgba($tycolor-link-active,0.12) !default;</code></dd>
+				<dd>Background color for unselected tabs when hovered or active</dd> 
 				<dt>$tycolor-border</dt>
-				<dd><code class="val val-default">mix($tyfy-color-foreground,$tyfy-color-background,12%) !default;</code></dd>
+				<dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,12%) !default;</code></dd>
 				<dd>Default border color</dd>
+				<dt>$tycolor-border-link-default</dt>
+				<dd><code class="val val-default">rgba($tycolor-link-default,0.5) !default;</code></dd>
+				<dd>Default border color for underlined links</dd>
+        <dt>$tycolor-border-link-active</dt>
+				<dd><code class="val val-default">rgba($tycolor-link-active,0.75) !default;</code></dd>
+        <dd>Border color for underlined links when hovered or active</dd>
 				<dt>$tycolor-shade</dt>
-				<dd><code class="val val-default">rgba($tyfy-color-foreground,0.05) !default;</code></dd>
+				<dd><code class="val val-default">rgba($tycolor-fg,0.05) !default;</code></dd>
 				<dd>A background color for shading</dd>
 			</dl>
 			<h3>// icons</h3>
