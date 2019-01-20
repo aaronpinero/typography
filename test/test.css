@@ -240,7 +240,7 @@ hr {
   margin-top: 0rem; }
 
 /* line 2, source/scss/optional/_paragraphs.scss */
-.paragraphs-justified p,
+.justified p,
 p.justified {
   -webkit-hyphens: auto;
   hyphens: auto;

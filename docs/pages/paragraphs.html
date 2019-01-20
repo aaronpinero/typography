@@ -52,34 +52,58 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Paragraphs</h1>
-			<p>Paragraphs inherit font size and line height from the <code>&lt;body&gt;</code>. Utility classes allow paragraphs to be used as a lede or as justified text.</p>
-			<h2>Classes</h2>
+			<p>Paragraphs inherit font size and line height from the <code>&lt;body&gt;</code>. <strong class="tyfy">Tyfy</strong> provides <span class="smallcaps">CSS</span> classes for common style variations.</p>
+			<h2 id="classes">Classes</h2>
 			<dl>
-  			<dt>.paragraphs-justified</dt>
-  			<dd>Applied to a containing element to a make all child paragraphs justified.</dd>
-  			<dt>.justified</dt>
-  			<dd>Applied to a <code>&lt;p&gt;</code> tag to justify that paragraph.</dd>
-  			<dt>.lede</dt>
-  			<dd>Applied to a <code>&lt;p&gt;</code> tag to display the paragraph as a lede, with increased font size and line height. The line height and font size are the same as that for <a href="quotes.html">pull quotes</a>.</dd>
   			<dt>.cols-2</dt>
-  			<dd>Applied to a containing element to a make child content display in 2 columns using <span class="smallcaps">CSS</span> columns. The style is responsive and reduce to a single column for small screen widths.</dd>
+    		<dd>Applied to a containing element to a make child content display in 2 columns using <span class="smallcaps">CSS</span> columns. The style is responsive and degrades to a single column when the screen width is less than <code>$tyfy-break-cols-2</code>.</dd>
+  			<dt>.justified</dt>
+  			<dd>Applied to a <code>&lt;p&gt;</code> tag to justify that paragraph. If applied to a containing element, all descendant paragraphs are justified.</dd>
+  			<dt>.lede</dt>
+  			<dd>Applied to a <code>&lt;p&gt;</code> tag to display the paragraph as a lede, with the font-size increased to <code>$tyfy-font-size-lede</code> and a proportionally larger line height.</dd>
 			</dl>
-		</section>
-		<section class="main links-underlined demo">
-			<h1>Demo</h1>
-			<h2>Lede</h2>
-			<p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus. Cras odio mauris, varius nec tempor nec, elementum eget augue. Vivamus pretium ante sed ex ultrices semper. Donec ante diam, convallis at rutrum sit amet, sodales nec est. Integer tincidunt felis luctus placerat fermentum.</p>
-			<h2>Regular</h2>
-			<p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
-			<p>Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas quis nisi sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.</p>
-			<h2>Justified</h2>
-			<p class="justified">Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
-			<p class="justified">Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
-			<h2>Two Columns</h2>
-			<div class="cols-2">
-			  <p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
-        <p>Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
-			</div>
+			<h2 id="variables">Variables</h2>
+			<dl>
+  			<dt>$tyfy-break-cols-2</dt>
+				<dd><code class="val val-default">50em !default;</code></dd>
+  			<dd>Breakpoint above which text inside an element with the <code>cols-2</code> class is displayed in two columns.</dd>
+  			<dt>$tyfy-font-size-lede</dt>
+				<dd><code class="val val-default">tyscale(map-get($tyfy-font-sizes,"lede")) !default;</code></dd>
+  			<dd>Font size applied to a paragraph with the <code>lede</code> class.</dd>
+			</dl>
+			<h2 id="examples">Examples</h2>
+			<h3>Lede</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;p class="lede"&gt;Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.&lt;/p&gt;
+&lt;p&gt;I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. May the Force be with you.&lt;/p&gt;</code></pre>
+			<figure class="example">
+			  <p class="lede">Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.</p>
+        <p>I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. May the Force be with you.</p>
+			</figure>
+			<h3>Justified</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;p class="justified"&gt;I heard the command center had been hit. You got your clearance to leave. Don’t worry. I’ll leave. First I’m going to get you to your ship. Your Highness, we must take this last transport. It’s our only hope. Send all troops in sector twelve to the south slope to protect the fighters. Imperial troops have entered the base. Come on… that’s it. Give the evacuation code signal.&lt;/p&gt;
+&lt;div class="justified"&gt;
+  &lt;p&gt;Hokey religions and ancient weapons are no match for a good blaster at your side, kid. You don’t believe in the Force, do you? Kid, I’ve flown from one side of this galaxy to the other. I’ve seen a lot of strange stuff, but I’ve never seen anything to make me believe there’s one all-powerful force controlling everything.&lt;/p&gt;
+  &lt;p&gt;There’s no mystical energy field that controls my destiny. It’s all a lot of simple tricks and nonsense. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. With the blast shield down, I can’t even see. How am I supposed to fight? Your eyes can deceive you. Don’t trust them.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+			<figure class="example">
+			  <p class="justified">I heard the command center had been hit. You got your clearance to leave. Don’t worry. I’ll leave. First I’m going to get you to your ship. Your Highness, we must take this last transport. It’s our only hope. Send all troops in sector twelve to the south slope to protect the fighters. Imperial troops have entered the base. Come on… that’s it. Give the evacuation code signal.</p>
+			  <div class="justified">
+  			  <p>Hokey religions and ancient weapons are no match for a good blaster at your side, kid. You don’t believe in the Force, do you? Kid, I’ve flown from one side of this galaxy to the other. I’ve seen a lot of strange stuff, but I’ve never seen anything to make me believe there’s one all-powerful force controlling everything.</p>
+  			  <p>There’s no mystical energy field that controls my destiny. It’s all a lot of simple tricks and nonsense. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. With the blast shield down, I can’t even see. How am I supposed to fight? Your eyes can deceive you. Don’t trust them.</p>
+			  </div>
+			</figure>
+			<h3>Two Columns</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;div class="cols-2"&gt;
+  &lt;p&gt;I want to come with you to Alderaan. There’s nothing here for me now. I want to learn the ways of the Force and become a Jedi like my father.&lt;/p&gt;
+  &lt;p&gt;Mos Eisley Spaceport. You will never find a more wretched hive of scum and villainy. We must be cautious. How long have you had these droids? About three or four seasons. They’re for sale if you want them.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+  		<figure class="example">
+  			<div class="cols-2">
+    			<p>I want to come with you to Alderaan. There’s nothing here for me now. I want to learn the ways of the Force and become a Jedi like my father.</p>
+          <p>Mos Eisley Spaceport. You will never find a more wretched hive of scum and villainy. We must be cautious. How long have you had these droids? About three or four seasons. They’re for sale if you want them.</p>
+        </div>
+  		</figure>
+			<p><em><small>Sample text from <a href="http://forcemipsum.com">Forcem Ipsum</a>.</small></em></p>
 		</section>
 		<!-- COMMON FOOTER -->
 		<footer>
