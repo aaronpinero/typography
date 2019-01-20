@@ -9,6 +9,8 @@ $tyfy-font-table:$tyfy-sans;
 $tyfy-font-input:$tyfy-sans;
 $tycolor-bg-rev:#333;
 $width-constrained:55rem;
+$color-codebox:#508066;
+$color-example:#609077;
 @import "../../../source/scss/tyfy.scss";
 @import "../../../source/scss/extras/_effects.scss";
 @import "../../../source/scss/extras/_responsive_text.scss";
@@ -22,7 +24,7 @@ body {
   margin-right:auto;
   max-width:$width-constrained;
 }
-h1 {
+h1:not(.demo) {
   font-family:$tyfy-condensed;
   text-transform:uppercase;
   small {
@@ -138,17 +140,26 @@ section.demo.reverse {
 pre.codebox {
   background-color:$tycolor-shade;
   border:$tyfy-width-border $tycolor-border solid;
+  color:$color-codebox;
   padding:calc(#{$tyfy-spacing-standard} - #{$tyfy-width-border});
   overflow:auto;
   & + figure.example {
     border:$tyfy-width-border $tycolor-border solid;
     border-top:none;
+    color:$color-example;
     margin:0;
     padding:calc(#{$tyfy-spacing-standard} - #{$tyfy-width-border});
     padding-top:$tyfy-spacing-standard;
   }
 }
-
+code.val-default {
+  background-color:transparent;
+  color:lighten(mix($tycolor-link-default,$tycolor-link-active),10%);
+  font-style:italic;
+  font-weight:normal;
+  padding-left:0;
+  padding-right:0;
+}
 .tyfyicons.example {
   color:lighten(mix($tycolor-link-default,$tycolor-link-active),10%);
   margin-left:0.25em;
