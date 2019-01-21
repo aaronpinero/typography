@@ -61,11 +61,11 @@ ul {
     &.list-indented {
       li {
         box-sizing:border-box;
-        padding-left:$tyfy-indent-standard;
-        text-indent:-1 * $tyfy-indent-standard;
+        padding-left:$tyfy-indent-standard/2;
+        text-indent:-1 * ($tyfy-indent-standard/2);
       }
       ol, ul {
-        margin-left:-1 * $tyfy-indent-standard;
+        margin-left:-1 * ($tyfy-indent-standard/2);
       }
     }
     &.list-cols-2,

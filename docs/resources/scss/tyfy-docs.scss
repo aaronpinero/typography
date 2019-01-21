@@ -171,25 +171,30 @@ code.val-default {
 }
 #lists-demo {
   @include sibling-margins(off);
-  border:2px dashed darken($tycolor-bg,10%);
-  border-radius:tygrid(0.5);
+  border:$tyfy-width-border solid $tycolor-border;
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
   display:flex;
   flex-wrap:wrap;
   padding:tygrid() tygrid(2);
   .form-control {
     display:block;
+    font-family:$tyfy-sans;
+    font-size:$tyfy-font-size-base;
     padding-top:tygrid();
     padding-bottom:tygrid();
     label {
-      width:11rem;
       &.disabled {
         color:$tycolor-text-light;
       }
     }
     &.form-control-type {
       @media (min-width:55em) {
-        border-right:2px dashed darken($tycolor-bg,10%);
+        box-sizing:border-box;
+        border-right:$tyfy-width-border solid $tycolor-border;
+        width:25%;
+      }
+      label {
+        width:100%;
       }
     }
     &.form-control-classes {
@@ -201,8 +206,12 @@ code.val-default {
         width:75%;
       }
       label {
-        &:first-child {
-          width:100%;
+        width:100%;
+        @media (min-width:40em) {
+          width:33%;
+          &:first-child {
+            width:100%;
+          }
         }
       }
     }
@@ -212,6 +221,17 @@ code.val-default {
     font-weight:bold;
     &.option {
       font-weight:normal;
+    }
+  }
+  & + figure.example {
+    border:$tyfy-width-border $tycolor-border solid;
+    border-top:none;
+    color:$color-example;
+    margin:0;
+    padding:calc(#{$tyfy-spacing-standard} - #{$tyfy-width-border});
+    padding-top:$tyfy-spacing-standard;
+    a:not([href]) {
+      color:$color-example;
     }
   }
 }

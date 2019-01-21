@@ -9,42 +9,71 @@
 		<section class="main links-underlined">
 			<h1>List Styles</h1>
 			<p>Ordered, unordered, and definition lists inherit styles from the essential/body and essential/spacing modules. In addition to the default list types, <strong class="tyfy">Tyfy</strong> offers several display options for ordered and unordered lists.</p>
-			<h2>Classes</h2>
+			<h2 id="classes">Classes</h2>
 			<dl>
   			<dt>.list-icons</dt>
-  			<dd>Applied to an unordered list to replace the default bullets with icons. A second class is required to identify the icon to be used. <strong class="tyfy">Tyfy</strong> includes the <code>list-icons-angle</code> class which uses the small angle right icon. A project can define additional icon classes based on <code>list-icons-angle</code>. This class works with nested lists.</dd>
+  			<dd>
+  			  <div>Applied to an unordered list to replace the default bullets with icons. A second class is required to identify the icon to be used:</div>
+  			  <dl>
+    			  <dt>.list-icons-angle</dt>
+    			  <dd>Used with the <code>list-icons</code> class to replace the default bullets with the <span title="angle" class="tyfyicons tyfyicons-angle-right example"></span>angle icon.</dd>
+    			  <dt>.list-icons-dash</dt>
+    			  <dd>Used with the <code>list-icons</code> class to replace the default bullets with the <span title="dash" class="tyfyicons tyfyicons-dash example"></span> dash icon.</dd>
+    			  <dt>.list-icons-check</dt>
+    			  <dd>Used with the <code>list-icons</code> class to replace the default bullets with the <span title="check" class="tyfyicons tyfyicons-check example"></span>check icon.</dd>
+  			  </dl>
+        </dd>
   			<dt>.list-nobullet</dt>
-  			<dd>Applied to an unordered list to remove the bullets and left-hand padding. When using this class, you can add the <code>list-indented</code> class to more clearly identify individual list items. The <code>list-indented</code> class indents all lines after the first line in each list item. This class works with nested lists.</dd>
+  			<dd>
+  			  <div>Applied to an unordered list to remove the bullets and left-hand padding.</div>
+  			  <dl>
+    			  <dt>.list-indented</dt>
+    			  <dd>Used with the <code>list-nobullet</code> class to more clearly identify individual list items. This class indents all lines after the first line in each list item. This class works with nested lists.</dd>
+  			  </dl>
+        </dd>
   			<dt>.list-cols-2, .list-cols-3</dt>
   			<dd>Applied to ordered and unordered lists to display items in columns. These classes use CSS columns; columns are read top to bottom and then left to right. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths. These classes do not account for nested lists.</dd>
   			<dt>.list-grid-2, .list-grid-3, .list-grid-4</dt>
   			<dd>Applied to ordered and unordered lists to display items in rows. These classes use CSS flexbox; rows are read left to right and then top to bottom. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths. These classes does not account for nested lists.</dd>
   			<dt>.list-flex</dt>
-  			<dd>Applied to unordered lists to display list items in an in-line fashion. This class uses CSS flexbox. While this class is intended for use with the <code>list-nobullet</code> class, it can also be used alone or with the <code>list-icons</code> class. The default justification of items is left; two additional classes, <code>list-flex-center</code> and <code>list-flex-right</code>, can change the justification. This class does not account for nested lists.</dd>
+  			<dd>
+  			  <div>Applied to unordered lists to display list items in an in-line fashion. This class uses CSS flexbox. While this class is intended for use with the <code>list-nobullet</code> class, it can also be used alone or with the <code>list-icons</code> class. The default alignment of items is left.</div>
+  			  <dl>
+    			  <dt>.list-flex-center</dt>
+    			  <dd>Used with the <code>list-flex</code> class to center align the list items.</dd>
+    			  <dt>.list-flex-right</dt>
+    			  <dd>Used with the <code>list-flex</code> class to right align the list items.</dd>
+  			  </dl>
+        </dd>
 			</dl>
-			<h2>Related Variables</h2>
+			<h2 id="variables">Variables</h2>
 			<dl>
-  			<dt>$tyfy-font-size-base</dt>
-  			<dd>Lists inherit this font size from the <code>&lt;body&gt;</code>.</dd>
-  			<dt>$tycolor-fg</dt>
-  			<dd>Lists inherit this font color from the <code>&lt;body&gt;</code>.</dd>
+  			<dt>$tyfy-font-heading</dt>
+				<dd><code class="val val-default">$tyfy-sans !default;</code></dd>
+  			<dd>Font family applied to the <code>&lt;dt&gt;</code> tag.</dd>
   			<dt>$tyfy-spacing-standard</dt>
+				<dd><code class="val val-default">tygrid(map-get($tyfy-spacings,"standard")) !default;</code></dd>
   			<dd>$tyfy-spacing-standard is the margin between lists and other elements. Inside lists, $tyfy-spacing-standard/2 is the spacing between list items.</dd>
-  			<dt>$tyfy-indent-standard</dt>
-  			<dd>The amount of indentation for list items, definition list definitions, and indented text using the <code>list-indented</code> class.</dd>
-  			<dt>$tyfy-font-base</dt>
-  			<dd>Lists inherit this font family from the <code>&lt;body&gt;</code>.</dd>
+				<dt>$tyfy-indent-standard</dt>
+				<dd><code class="val val-default">tygrid(map-get($tyfy-indents,"standard")) !default;</code></dd>
+  			<dd>The amount of indentation for list items and definition list definitions. For text indented using the <code>list-indented</code> class, the value is half the value of <code>$tyfy-indent-standard</code>.</dd>
 				<dt>$tyfy-break-list-cols-2</dt>
+				<dd><code class="val val-default">35em !default;</code></dd>
 				<dd>Above this em-based screen width grid and column lists can be 2 columns.</dd>
 				<dt>$tyfy-break-list-cols-3</dt>
+				<dd><code class="val val-default">55em !default;</code></dd>
 				<dd>Above this em-based screen width grid and column lists can be 3 columns.</dd>
 				<dt>$tyfy-break-list-cols-4</dt>
+				<dd><code class="val val-default">75em !default;</code></dd>
 				<dd>Above this em-based screen width grid and column lists can be 4 columns.</dd>
+				<dt>$tyfy-spacing-large</dt>
+				<dd><code class="val val-default">tygrid(map-get($tyfy-spacings,"large")) !default;</code></dd>
+				<dd>The amount of horizontal space between list items when using the <code>list-col-[x]</code> or <code>list-grid-[x]</code> styles.</dd>
+				<dt>$tycolor-text-light</dt>
+				<dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,45%) !default;</code></dd>
+				<dd>Color of icon bullets when using the <code>list-icons</code> class.</dd>
 			</dl>
-		</section>
-		<section class="main links-underlined demo">
-			<h1>Demo</h1>
-			<h2>Un/ordered List Options</h2>
+			<h2 id="demo">Demo</h2>
 			<form id="lists-demo">
   			<div class="form-control form-control-type">
     			<label>List Type</label>
@@ -53,7 +82,7 @@
   			</div>
   			<div class="form-control form-control-classes">
     			<label>List Class</label>
-    			<label class="option" for="list-class-icons"><input type="checkbox" name="list-class" id="list-class-icons" value="list-icons"> .list-icons</label>
+    			<label class="option" for="list-class-icons"><input type="checkbox" name="list-class" id="list-class-icons" value="list-icons"> .list-icons(-angle)</label>
     			<label class="option" for="list-class-nobullet"><input type="checkbox" name="list-class" id="list-class-nobullet" value="list-nobullet"> .list-nobullet</label>
     			<label class="option disabled" for="list-class-indented"><input type="checkbox" name="list-class" id="list-class-indented" value="list-indented" disabled="disabled"> .list-indented</label>
     			<label class="option" for="list-class-cols2"><input type="checkbox" name="list-class" id="list-class-cols2" value="list-cols-2"> .list-cols-2</label>
@@ -67,31 +96,33 @@
     			<label class="option disabled" for="list-class-flexright"><input type="checkbox" name="list-class" id="list-class-flexright" value="list-flex-right" disabled="disabled"> .list-flex-right</label>
   			</div>
 			</form>
-			<ul class="lists-demo-list">
-				<li>Ab hic tempora tempora dolor</li>
-				<li>Alias et nam voluptate</li>
-				<li>
-				  Blanditiis voluptates ad
-					<ul>
-						<li>Cras odio mauris, varius nec tempor nec, elementum eget augue.</li>
-						<li>Vivamus pretium ante sed ex ultrices semper.</li>
-					</ul>
-				</li>
-				<li>Cumque tempora alias</li>
-				<li>Esse vel ut fugiat nisi</li>
-				<li>Est error placeat sit</li>
-				<li>Et placeat in suscipit et</li>
-				<li>Ex est similique fugit vitae</li>
-				<li>
-				  In eos saepe eos qui tempora
-					<ul>
-						<li>Integer tincidunt felis luctus placerat fermentum.</li>
-            <li>Duis et felis mi. Mauris sed faucibus neque.</li>
-					</ul>
-				</li>
-				<li>Ipsam omnis</li>
-				<li>Labore asperiores velit</li>
-			</ul>
+			<figure class="example">
+  			<ul class="lists-demo-list">
+  				<li>Ab hic tempora tempora dolor</li>
+  				<li>Alias et nam voluptate</li>
+  				<li>
+  				  Blanditiis voluptates ad
+  					<ul>
+  						<li>Cras odio mauris, varius nec tempor nec, elementum eget augue.</li>
+  						<li>Vivamus pretium ante sed ex ultrices semper.</li>
+  					</ul>
+  				</li>
+  				<li>Cumque tempora alias</li>
+  				<li>Esse vel ut fugiat nisi</li>
+  				<li>Est error placeat sit</li>
+  				<li>Et placeat in suscipit et</li>
+  				<li>Ex est similique fugit vitae</li>
+  				<li>
+  				  In eos saepe eos qui tempora
+  					<ul>
+  						<li>Integer tincidunt felis luctus placerat fermentum.</li>
+              <li>Duis et felis mi. Mauris sed faucibus neque.</li>
+  					</ul>
+  				</li>
+  				<li>Ipsam omnis</li>
+  				<li>Labore asperiores velit</li>
+  			</ul>
+			</figure>
 		</section>
 		<%include footer.html%>
     <script src="../resources/script/docs-demo.js"></script>
