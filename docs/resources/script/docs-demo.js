@@ -10,7 +10,7 @@
     else if (type == 'ordered') {
       demo.replaceWith('<ol class="'+classes+'">' + demo.html() + '</ol>');
       $("#list-class-flex, #list-class-flexcenter, #list-class-flexright").removeAttr('checked').attr('disabled','disabled').parent().addClass('disabled');
-      SetClasses();
+      $("#list-class-flex").trigger('change');
     }
   });
   
