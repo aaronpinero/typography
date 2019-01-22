@@ -169,6 +169,11 @@ code.val-default {
   margin-right:0.25em;
   vertical-align:bottom;
 }
+table.utility {
+  th[scope="col"] {
+    border-bottom:(2 * $tyfy-width-border) var(--tycolor-border) solid;
+  }
+}
 #lists-demo {
   @include sibling-margins(off);
   border:$tyfy-width-border solid $tycolor-border;
