@@ -11,10 +11,44 @@
       <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic, required class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and a few lines of JavaScript.</p>
       <p>Proper application of styles and the responsive behavior depends on semantically correct structure of the tables. Tables should use the <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> tabs. Table headers should have the <code>scope</code> attribute to indicate how the headers should be interpreted.</p>
       <p>Using the <code>float-left</code> and <code>float-right</code> classes, a table can be positioned to the left or right of the main text. Positioning left or right is limited to larger screen sizes. At smaller screen sizes, the styled tables are displayed at full width.</p>
-    </section>
-    <section class="main links-underlined demo paragraphs-justified">
-      <h1>Demo</h1>
-      <h2>Default (no style)</h2>
+			<h2 id="classes">Classes</h2>
+			<dl>
+  			<dt>.clean</dt>
+    		<dd>Applied to a <code>&lt;table&gt;</code> tag for basic styles. Padding is applied to cells and the table width is set to 100%. All other <strong class="tyfy">TYFY</strong> table styles must be used in combination with this style.</dd>
+  			<dt>.striped</dt>
+  			<dd>Applied to a <code>&lt;table&gt;</code> tag to add shading to even-numbered rows in within the <code>&lt;tbody&gt;</code>.</dd>
+  			<dt>.horizontal-rules</dt>
+  			<dd>Applied to a <code>&lt;table&gt;</code> tag to add horizontal rules between table rows. Table heading cells with the attribute <code>scope="col"</code> will have increased rule thickness to distinguish them from table cells.</dd>
+  			<dt>.vertical-rules</dt>
+  			<dd>Applied to a <code>&lt;table&gt;</code> tag to add vertical rules between table columns. Table heading cells with the attribute <code>scope="row"</code> will have increased rule thickness to distinguish them from table cells.</dd>
+  			<dt>.responsive</dt>
+  			<dd>Applied to a <code>&lt;table&gt;</code> tag to add responsive behavior. Responsive behavior requires the inclusion of the tables.js javascript file.</dd>
+  			<dt>.float-left, .float-right</dt>
+  			<dd>Applied to a <code>&lt;table&gt;</code> tag to float the table left or right. Width of a floated table is approximately 50% of the containing element, including an appropriate margin. Adjacent tables can be floated left and right for a side-by-side layout. At screen widths below the value of <code>$tyfy-break-floats</code>, the float styles are disabled.</dd>
+			</dl>
+			<h2 id="variables">Variables</h2>
+			<dl>
+  			<dt>$tyfy-break-floats</dt>
+				<dd><code class="val val-default">40em !default;</code></dd>
+  			<dd>Screen width above which float styles are enabled.</dd>
+				<dt>$tyfy-break-table</dt>
+				<dd><code class="val val-default">40em !default;</code></dd>
+				<dd>Screen width below which responsive <a href="tables.html">tables</a> are converted to labeled lists</dd>
+				<dt>$tyfy-font-table</dt>
+				<dd><code class="val val-default">$tyfy-sans !default;</code></dd>
+				<dd>Table cell font selection</dd>
+				<dt>$tyfy-width-border</dt>
+				<dd><code class="val val-default">2px !default;</code></dd>
+				<dd>Border thickness for table cells</dd>
+				<dt>$tycolor-border</dt>
+				<dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,12%) !default;</code></dd>
+				<dd>Default border color</dd>
+				<dt>$tycolor-shade</dt>
+				<dd><code class="val val-default">rgba($tycolor-fg,0.05) !default;</code></dd>
+				<dd>A background color for shading when using the <code>.striped</code> class</dd>
+			</dl>
+			<h2 id="examples">Examples</h2>
+      <h3>Default (no style)</h3>
       <table>
         <thead>
           <tr>
