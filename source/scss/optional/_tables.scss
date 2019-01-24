@@ -44,8 +44,9 @@ table.striped {
     padding-left:tygrid(1);
     padding-right:tygrid(1);
   }
-  tr:nth-child(2n) {
-    td {
+  tbody tr:nth-child(2n+1) {
+    td,
+    th {
       background-color:var(--tycolor-shade);
     }
   }
@@ -59,7 +60,7 @@ table.horizontal-rules {
     border-bottom:$tyfy-width-border var(--tycolor-border) solid;
   }
   th[scope="col"] {
-    border-bottom:(2 * $tyfy-width-border) var(--tycolor-border) solid;
+    border-bottom:(3 * $tyfy-width-border) var(--tycolor-border) double;
   }
 }
 
@@ -73,7 +74,7 @@ table.vertical-rules {
     padding-right:tygrid(1);
   }
   th[scope="row"] {
-    border-right:(2 * $tyfy-width-border) var(--tycolor-border) solid;
+    border-right:(3 * $tyfy-width-border) var(--tycolor-border) double;
   }
 }
 
