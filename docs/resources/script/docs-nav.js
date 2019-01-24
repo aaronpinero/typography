@@ -6,5 +6,5 @@
 		  $(this).parent().toggleClass('nav-open');
 	  });
     nav.addClass('nav-processed');
-  }  
+  }
 })(jQuery);

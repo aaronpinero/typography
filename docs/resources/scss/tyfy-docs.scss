@@ -174,44 +174,49 @@ table.utility {
     border-bottom:(2 * $tyfy-width-border) var(--tycolor-border) solid;
   }
 }
-#lists-demo {
+.form-demo {
   @include sibling-margins(off);
   border:$tyfy-width-border solid $tycolor-border;
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
   display:flex;
   flex-wrap:wrap;
   padding:tygrid() tygrid(2);
+  label {
+    display:block;
+    font-weight:bold;
+    width:100%;
+    &.option {
+      font-weight:normal;
+    }
+    &.disabled {
+      color:$tycolor-text-light;
+    }
+  }
   .form-control {
+    box-sizing:border-box;
     display:block;
     font-family:$tyfy-sans;
     font-size:$tyfy-font-size-base;
     padding-top:tygrid();
     padding-bottom:tygrid();
-    label {
-      &.disabled {
-        color:$tycolor-text-light;
-      }
-    }
-    &.form-control-type {
-      @media (min-width:55em) {
-        box-sizing:border-box;
-        border-right:$tyfy-width-border solid $tycolor-border;
-        width:25%;
-      }
-      label {
-        width:100%;
-      }
-    }
     &.form-control-classes {
       display:flex;
       flex-wrap:wrap;
+    }
+  }
+  &#lists-demo .form-control {
+    &.form-control-type {
       @media (min-width:55em) {
-        box-sizing:border-box;
+        border-right:$tyfy-width-border solid $tycolor-border;
+        width:25%;
+      }
+    }
+    &.form-control-classes {
+      @media (min-width:55em) {
         padding-left:$tyfy-spacing-standard;
         width:75%;
       }
       label {
-        width:100%;
         @media (min-width:40em) {
           width:33%;
           &:first-child {
@@ -221,11 +226,14 @@ table.utility {
       }
     }
   }
-  label {
-    display:block;
-    font-weight:bold;
-    &.option {
-      font-weight:normal;
+  &#tables-demo .form-control-classes {
+    label:not(:first-child) {
+      @media (min-width:30em) {
+        width:50%;
+      }
+      @media (min-width:50em) {
+        width:25%;
+      }
     }
   }
   & + figure.example {
