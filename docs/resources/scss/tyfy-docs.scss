@@ -237,15 +237,13 @@ table.utility {
     }
   }
   & + figure.example {
+    --tycolor-fg:#{$color-example};
     border:$tyfy-width-border $tycolor-border solid;
     border-top:none;
     color:$color-example;
     margin:0;
     padding:calc(#{$tyfy-spacing-standard} - #{$tyfy-width-border});
     padding-top:$tyfy-spacing-standard;
-    a:not([href]) {
-      color:$color-example;
-    }
   }
 }
 footer {

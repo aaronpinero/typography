@@ -8,13 +8,13 @@
 		<%include header.html%>
     <section class="main links-underlined">
       <h1>Tables</h1>
-      <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic, required class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and a few lines of JavaScript.</p>
+      <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and a few lines of JavaScript.</p>
       <p>Proper application of styles and the responsive behavior depends on semantically correct structure of the tables. Tables should use the <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> tabs. Table headers should have the <code>scope</code> attribute to indicate how the headers should be interpreted.</p>
       <p>Using the <code>float-left</code> and <code>float-right</code> classes, a table can be positioned to the left or right of the main text. Positioning left or right is limited to larger screen sizes. At smaller screen sizes, the styled tables are displayed at full width.</p>
 			<h2 id="classes">Classes</h2>
 			<dl>
   			<dt>.clean</dt>
-    		<dd>Applied to a <code>&lt;table&gt;</code> tag for basic styles. Padding is applied to cells and the table width is set to 100%. All other <strong class="tyfy">TYFY</strong> table styles must be used in combination with this style.</dd>
+    		<dd>Applied to a <code>&lt;table&gt;</code> tag for basic styles. Padding is applied to cells and the table width is set to 100%. All other <strong class="tyfy">TYFY</strong> table styles should be used in combination with this style.</dd>
   			<dt>.striped</dt>
   			<dd>Applied to a <code>&lt;table&gt;</code> tag to add shading to even-numbered rows in within the <code>&lt;tbody&gt;</code>.</dd>
   			<dt>.horizontal-rules</dt>
@@ -52,54 +52,43 @@
   			<div class="form-control form-control-classes">
     			<label>Table Class</label>
     			<label class="option" for="table-class-clean"><input type="checkbox" name="table-class" id="table-class-clean" value="clean"> .clean</label>
-    			<label class="option disabled" for="table-class-striped"><input type="checkbox" name="table-class" id="table-class-striped" value="striped"> .striped</label>
-    			<label class="option disabled" for="table-class-horizontal-rules"><input type="checkbox" name="table-class" id="table-class-horizontal-rules" value="horizontal-rules"> .horizontal-rules</label>
-    			<label class="option disabled" for="table-class-vertical-rules"><input type="checkbox" name="table-class" id="table-class-vertical-rules" value="vertical-rules"> .vertical-rules</label>
+    			<label class="option" for="table-class-striped"><input type="checkbox" name="table-class" id="table-class-striped" value="striped"> .striped</label>
+    			<label class="option" for="table-class-horizontal-rules"><input type="checkbox" name="table-class" id="table-class-horizontal-rules" value="horizontal-rules"> .horizontal-rules</label>
+    			<label class="option" for="table-class-vertical-rules"><input type="checkbox" name="table-class" id="table-class-vertical-rules" value="vertical-rules"> .vertical-rules</label>
     			<label class="option" for="table-class-responsive"><input type="checkbox" name="table-class" id="table-class-responsive" value="responsive"> .responsive</label>
     			<label class="option" for="table-class-float-left"><input type="checkbox" name="table-class" id="table-class-float-left" value="float-left"> .float-left</label>
     			<label class="option" for="table-class-float-right"><input type="checkbox" name="table-class" id="table-class-float-right" value="float-right"> .float-right</label>
   			</div>
 			</form>
 			<figure class="example">
-  			<table class="lists-demo-list">
+			  <h3>TYFY Tables</h3>
+  			<table class="tables-demo-table">
           <thead>
             <tr>
               <th scope="col">Quisque</th>
               <th scope="col">Finibus</th>
-              <th scope="col">Nisl et Luctus</th>
+              <th scope="col">Luctus</th>
               <th scope="col">Velit</th>
-              <th scope="col">Commodo Sem</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              
-              <th scope="row">Dolorum nobis deleniti</th>
+              <th scope="row">Dolorum nobis</th>
               <td>8971</td>
               <td>513</td>
               <td>9435</td>
-              <td>235</td>
             </tr>
             <tr>
-              <th scope="row">Sunt nobis doloremque</th>
+              <th scope="row">Sunt nobis</th>
               <td>205</td>
               <td>29580</td>
               <td>95</td>
-              <td>349</td>
             </tr>
             <tr>
-              <th scope="row">Iure dolorem libero</th>
+              <th scope="row">Iure dolorem</th>
               <td>3069</td>
               <td>395</td>
               <td>9358</td>
-              <td>284</td>
-            </tr>
-            <tr>
-              <th scope="row">Voluptatibus est reiciendis</th>
-              <td>5468</td>
-              <td>4352</td>
-              <td>43</td>
-              <td>6346</td>
             </tr>
           </tbody>
         </table>
@@ -109,5 +98,6 @@
     </section>
 		<%include footer.html%>
     <script src="../../dist/script/tables.js"></script>
+    <script src="../resources/script/docs-demo-tables.js"></script>
   </body>
 </html>
