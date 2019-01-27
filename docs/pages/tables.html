@@ -52,13 +52,13 @@
 		<!--/ COMMON HEADER -->
     <section class="main links-underlined">
       <h1>Tables</h1>
-      <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic, required class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and a few lines of JavaScript.</p>
+      <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and a few lines of JavaScript.</p>
       <p>Proper application of styles and the responsive behavior depends on semantically correct structure of the tables. Tables should use the <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> tabs. Table headers should have the <code>scope</code> attribute to indicate how the headers should be interpreted.</p>
       <p>Using the <code>float-left</code> and <code>float-right</code> classes, a table can be positioned to the left or right of the main text. Positioning left or right is limited to larger screen sizes. At smaller screen sizes, the styled tables are displayed at full width.</p>
 			<h2 id="classes">Classes</h2>
 			<dl>
   			<dt>.clean</dt>
-    		<dd>Applied to a <code>&lt;table&gt;</code> tag for basic styles. Padding is applied to cells and the table width is set to 100%. All other <strong class="tyfy">TYFY</strong> table styles must be used in combination with this style.</dd>
+    		<dd>Applied to a <code>&lt;table&gt;</code> tag for basic styles. Padding is applied to cells and the table width is set to 100%. All other <strong class="tyfy">TYFY</strong> table styles should be used in combination with this style.</dd>
   			<dt>.striped</dt>
   			<dd>Applied to a <code>&lt;table&gt;</code> tag to add shading to even-numbered rows in within the <code>&lt;tbody&gt;</code>.</dd>
   			<dt>.horizontal-rules</dt>
@@ -93,6 +93,11 @@
 			</dl>
 			<h2 id="demo">Demo</h2>
 			<form class="form-demo" id="tables-demo">
+  			<div class="form-control form-control-headers">
+    			<label>Table Headers</label>
+    			<label class="option" for="table-headers-cols"><input type="checkbox" checked="checked" name="table-headers-cols" id="table-headers-cols" value="true">Columns</label>
+    			<label class="option" for="table-headers-rows"><input type="checkbox" checked="checked" name="table-headers-rows" id="table-headers-rows" value="true">Rows</label>
+  			</div>
   			<div class="form-control form-control-classes">
     			<label>Table Class</label>
     			<label class="option" for="table-class-clean"><input type="checkbox" name="table-class" id="table-class-clean" value="clean"> .clean</label>

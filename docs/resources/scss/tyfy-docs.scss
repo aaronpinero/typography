@@ -199,7 +199,9 @@ table.utility {
     font-size:$tyfy-font-size-base;
     padding-top:tygrid();
     padding-bottom:tygrid();
-    &.form-control-classes {
+    width:100%;
+    &.form-control-classes,
+    &.form-control-headers {
       display:flex;
       flex-wrap:wrap;
     }
@@ -226,7 +228,7 @@ table.utility {
       }
     }
   }
-  &#tables-demo .form-control-classes {
+  &#tables-demo .form-control {
     label:not(:first-child) {
       @media (min-width:30em) {
         width:50%;
