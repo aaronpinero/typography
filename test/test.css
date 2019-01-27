@@ -996,23 +996,29 @@ table.vertical-rules {
 
 @media (max-width: 39.996em) {
   /* line 92, source/scss/optional/_tables.scss */
-  table.responsive tbody tr + tr {
-    border-top: 2px var(--tycolor-border) solid; } }
+  table.responsive tbody tr {
+    display: block; } }
 
 @media (max-width: 39.996em) {
   /* line 97, source/scss/optional/_tables.scss */
+  table.responsive tbody tr + tr {
+    border-top: 2px var(--tycolor-border) solid;
+    margin-top: 2px; } }
+
+@media (max-width: 39.996em) {
+  /* line 103, source/scss/optional/_tables.scss */
   table.responsive tbody th {
     display: block;
     padding-left: 0; } }
 
 @media (max-width: 39.996em) {
-  /* line 103, source/scss/optional/_tables.scss */
+  /* line 109, source/scss/optional/_tables.scss */
   table.responsive tbody td {
     display: block;
     padding-left: 0;
     position: relative; } }
 
-/* line 109, source/scss/optional/_tables.scss */
+/* line 115, source/scss/optional/_tables.scss */
 table.responsive tbody td .td-label {
   color: var(--tycolor-text-light);
   display: block;
@@ -1023,38 +1029,38 @@ table.responsive tbody td .td-label {
   vertical-align: top;
   width: calc(33% - 0.75rem); }
   @media (min-width: 40em) {
-    /* line 109, source/scss/optional/_tables.scss */
+    /* line 115, source/scss/optional/_tables.scss */
     table.responsive tbody td .td-label {
       display: none; } }
 
 @media (min-width: 40em) {
-  /* line 128, source/scss/optional/_tables.scss */
+  /* line 134, source/scss/optional/_tables.scss */
   table.float-left, table.float-right {
     box-sizing: border-box;
     margin-bottom: 1.5rem;
     width: calc(50% - 1.5rem); } }
 
 @media (min-width: 40em) {
-  /* line 136, source/scss/optional/_tables.scss */
+  /* line 142, source/scss/optional/_tables.scss */
   table.float-left {
     clear: left;
     float: left;
     margin-right: 3rem; } }
 
 @media (min-width: 40em) {
-  /* line 143, source/scss/optional/_tables.scss */
+  /* line 149, source/scss/optional/_tables.scss */
   table.float-right {
     clear: right;
     float: right;
     margin-left: 3rem; } }
 
 @media (min-width: 40em) {
-  /* line 151, source/scss/optional/_tables.scss */
+  /* line 157, source/scss/optional/_tables.scss */
   table.float-right + table.float-left {
     margin-right: 1.5rem; } }
 
 @media (min-width: 40em) {
-  /* line 156, source/scss/optional/_tables.scss */
+  /* line 162, source/scss/optional/_tables.scss */
   table.float-left + table.float-right {
     margin-left: 1.5rem; } }
 

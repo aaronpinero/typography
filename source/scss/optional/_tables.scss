@@ -89,9 +89,15 @@ table.responsive {
     }
   }
   tbody {
+    tr {
+      @media (max-width:$tyfy-break-table*0.9999) {
+        display:block;
+      }
+    }
     tr + tr {
       @media (max-width:$tyfy-break-table*0.9999) {
         border-top:$tyfy-width-border var(--tycolor-border) solid;
+        margin-top:$tyfy-width-border;
       }
     }
     th {
