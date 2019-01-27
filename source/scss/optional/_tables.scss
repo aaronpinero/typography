@@ -80,34 +80,44 @@ table.vertical-rules {
 
 // responsive table
 table.responsive {
-  thead,
-  th {
+  thead {
     @media (max-width:$tyfy-break-table*0.9999) {
       @include visuallyhidden;
+      & + tbody td {
+        padding-left:33%;
+      }
     }
   }
-  tbody tr + tr {
-    @media (max-width:$tyfy-break-table*0.9999) {
-      border-top:$tyfy-width-border var(--tycolor-border) solid;
+  tbody {
+    tr + tr {
+      @media (max-width:$tyfy-break-table*0.9999) {
+        border-top:$tyfy-width-border var(--tycolor-border) solid;
+      }
     }
-  }
-  td {
-    @media (max-width:$tyfy-break-table*0.9999) {
-      display:block;
-      padding-left:9rem;
-      position:relative;
+    th {
+      @media (max-width:$tyfy-break-table*0.9999) {
+        display:block;
+        padding-left:0;
+      }
     }
-    .td-label {
-      color:var(--tycolor-text-light);
-      display:block;
-      font-family:$tyfy-font-table;
-      font-size:$tyfy-font-size-sm;
-      left:0;
-      position:absolute;
-      vertical-align:top;
-      width:8rem;
-      @media (min-width:$tyfy-break-table) {
-        display:none;
+    td {
+      @media (max-width:$tyfy-break-table*0.9999) {
+        display:block;
+        padding-left:0;
+        position:relative;
+      }
+      .td-label {
+        color:var(--tycolor-text-light);
+        display:block;
+        font-family:$tyfy-font-table;
+        font-size:$tyfy-font-size-sm;
+        left:0;
+        position:absolute;
+        vertical-align:top;
+        width:calc(33% - #{tygrid()});
+        @media (min-width:$tyfy-break-table) {
+          display:none;
+        }
       }
     }
   }
