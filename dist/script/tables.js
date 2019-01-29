@@ -30,9 +30,15 @@ function ResponsiveTablesOn() {
           var z;
           // loop through all heading cells and apply the label to the corresponding table body cells
           for (z=0;z<ty_table_th.length;z++) {
-            console.log(ty_table_th.item(z).getAttribute('scope'));
             if (ty_table_th.item(z).getAttribute('scope') == 'col') {
-              var label_text = ty_table_th.item(z).innerHTML; console.log(label_text);
+              // get the table heading text
+              var label_text = ty_table_th.item(z).innerHTML;
+              var a;
+              // loop through all the table body rows
+              for (a=0;a<ty_table_tr.length;a++) {
+                var cell = ty_table_tr.item(a).children.item(z);
+                console.log(cell.tagName);
+              }
             }
           }
         }
