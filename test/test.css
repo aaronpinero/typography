@@ -1019,7 +1019,7 @@ table.vertical-rules {
     position: relative; } }
 
 /* line 115, source/scss/optional/_tables.scss */
-table.responsive tbody td .td-label {
+table.responsive tbody td .tyfy-td-label {
   color: var(--tycolor-text-light);
   display: block;
   font-family: helvetica, arial, sans-serif;
@@ -1030,7 +1030,7 @@ table.responsive tbody td .td-label {
   width: calc(33% - 0.75rem); }
   @media (min-width: 40em) {
     /* line 115, source/scss/optional/_tables.scss */
-    table.responsive tbody td .td-label {
+    table.responsive tbody td .tyfy-td-label {
       display: none; } }
 
 @media (min-width: 40em) {
