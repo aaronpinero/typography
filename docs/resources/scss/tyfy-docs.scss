@@ -248,6 +248,16 @@ table.utility {
     padding-top:$tyfy-spacing-standard;
   }
 }
+.tables-demo-table {
+  th.row-hidden {
+    display:none !important;
+  }
+  &:not(.striped):not(.vertical-rules):not(.responsive) {
+    th.row-hidden + * {
+      padding-left:0;
+    }
+  }
+}
 footer {
   p {
     @extend .constrained;
