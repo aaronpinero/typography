@@ -943,37 +943,37 @@ table.striped th {
   padding-right: 0.75rem; }
 
 /* line 48, source/scss/optional/_tables.scss */
-table.striped tr:nth-child(2n) td {
+table.striped tbody tr:nth-child(2n+1) td,
+table.striped tbody tr:nth-child(2n+1) th {
   background-color: var(--tycolor-shade); }
 
-/* line 55, source/scss/optional/_tables.scss */
+/* line 56, source/scss/optional/_tables.scss */
 table.horizontal-rules {
   border-top: 2px var(--tycolor-border) solid; }
-  /* line 57, source/scss/optional/_tables.scss */
+  /* line 58, source/scss/optional/_tables.scss */
   table.horizontal-rules td,
   table.horizontal-rules th {
     border-bottom: 2px var(--tycolor-border) solid; }
-  /* line 61, source/scss/optional/_tables.scss */
+  /* line 62, source/scss/optional/_tables.scss */
   table.horizontal-rules th[scope="col"] {
-    border-bottom: 4px var(--tycolor-border) solid; }
+    border-bottom: 6px var(--tycolor-border) double; }
 
-/* line 67, source/scss/optional/_tables.scss */
+/* line 68, source/scss/optional/_tables.scss */
 table.vertical-rules {
   border-left: 2px var(--tycolor-border) solid; }
-  /* line 69, source/scss/optional/_tables.scss */
+  /* line 70, source/scss/optional/_tables.scss */
   table.vertical-rules td,
   table.vertical-rules th {
     border-right: 2px var(--tycolor-border) solid;
     padding-left: 0.75rem;
     padding-right: 0.75rem; }
-  /* line 75, source/scss/optional/_tables.scss */
+  /* line 76, source/scss/optional/_tables.scss */
   table.vertical-rules th[scope="row"] {
-    border-right: 4px var(--tycolor-border) solid; }
+    border-right: 6px var(--tycolor-border) double; }
 
 @media (max-width: 39.996em) {
-  /* line 82, source/scss/optional/_tables.scss */
-  table.responsive thead,
-  table.responsive th {
+  /* line 83, source/scss/optional/_tables.scss */
+  table.responsive thead {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px !important;
@@ -983,30 +983,43 @@ table.vertical-rules {
     position: absolute;
     width: 1px !important; }
     /* line 32, source/scss/required/_mixins.scss */
-    table.responsive thead.focusable:active, table.responsive thead.focusable:focus,
-    table.responsive th.focusable:active,
-    table.responsive th.focusable:focus {
+    table.responsive thead.focusable:active, table.responsive thead.focusable:focus {
       clip: auto;
       height: auto;
       margin: 0;
       overflow: visible;
       position: static;
-      width: auto; } }
+      width: auto; }
+    /* line 86, source/scss/optional/_tables.scss */
+    table.responsive thead + tbody td {
+      padding-left: 33%; } }
 
 @media (max-width: 39.996em) {
-  /* line 88, source/scss/optional/_tables.scss */
+  /* line 92, source/scss/optional/_tables.scss */
+  table.responsive tbody tr {
+    display: block; } }
+
+@media (max-width: 39.996em) {
+  /* line 97, source/scss/optional/_tables.scss */
   table.responsive tbody tr + tr {
-    border-top: 2px var(--tycolor-border) solid; } }
+    border-top: 2px var(--tycolor-border) solid;
+    margin-top: 2px; } }
 
 @media (max-width: 39.996em) {
-  /* line 93, source/scss/optional/_tables.scss */
-  table.responsive td {
+  /* line 103, source/scss/optional/_tables.scss */
+  table.responsive tbody th {
     display: block;
-    padding-left: 9rem;
+    padding-left: 0; } }
+
+@media (max-width: 39.996em) {
+  /* line 109, source/scss/optional/_tables.scss */
+  table.responsive tbody td {
+    display: block;
+    padding-left: 0;
     position: relative; } }
 
-/* line 99, source/scss/optional/_tables.scss */
-table.responsive td .td-label {
+/* line 115, source/scss/optional/_tables.scss */
+table.responsive tbody td .tyfy-td-label {
   color: var(--tycolor-text-light);
   display: block;
   font-family: helvetica, arial, sans-serif;
@@ -1014,40 +1027,40 @@ table.responsive td .td-label {
   left: 0;
   position: absolute;
   vertical-align: top;
-  width: 8rem; }
+  width: calc(33% - 0.75rem); }
   @media (min-width: 40em) {
-    /* line 99, source/scss/optional/_tables.scss */
-    table.responsive td .td-label {
+    /* line 115, source/scss/optional/_tables.scss */
+    table.responsive tbody td .tyfy-td-label {
       display: none; } }
 
 @media (min-width: 40em) {
-  /* line 117, source/scss/optional/_tables.scss */
+  /* line 134, source/scss/optional/_tables.scss */
   table.float-left, table.float-right {
     box-sizing: border-box;
     margin-bottom: 1.5rem;
     width: calc(50% - 1.5rem); } }
 
 @media (min-width: 40em) {
-  /* line 125, source/scss/optional/_tables.scss */
+  /* line 142, source/scss/optional/_tables.scss */
   table.float-left {
     clear: left;
     float: left;
     margin-right: 3rem; } }
 
 @media (min-width: 40em) {
-  /* line 132, source/scss/optional/_tables.scss */
+  /* line 149, source/scss/optional/_tables.scss */
   table.float-right {
     clear: right;
     float: right;
     margin-left: 3rem; } }
 
 @media (min-width: 40em) {
-  /* line 140, source/scss/optional/_tables.scss */
+  /* line 157, source/scss/optional/_tables.scss */
   table.float-right + table.float-left {
     margin-right: 1.5rem; } }
 
 @media (min-width: 40em) {
-  /* line 145, source/scss/optional/_tables.scss */
+  /* line 162, source/scss/optional/_tables.scss */
   table.float-left + table.float-right {
     margin-left: 1.5rem; } }
 
