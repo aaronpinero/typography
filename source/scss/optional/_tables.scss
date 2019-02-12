@@ -127,6 +127,37 @@ table.responsive {
       }
     }
   }
+  &.striped,
+  &.vertical-rules {
+    tbody {
+      td,
+      th {
+        padding-left:tygrid(1);
+        padding-right:tygrid(1);
+      }
+      td {
+        .tyfy-td-label {
+          left:tygrid(1);
+        }
+      }
+    }
+    thead {
+      @media (max-width:$tyfy-break-table*0.9999) {
+        & + tbody td {
+          padding-left:calc(33% + #{tygrid(1)});
+        }
+      }
+    }
+  }
+  &.vertical-rules {
+    tbody {
+      th[scope="row"] {
+        @media (max-width:$tyfy-break-table*0.9999) {
+          border-right:$tyfy-width-border var(--tycolor-border) solid;
+        }
+      }
+    }
+  }
 }
 
 // floated table

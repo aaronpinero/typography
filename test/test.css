@@ -1033,34 +1033,55 @@ table.responsive tbody td .tyfy-td-label {
     table.responsive tbody td .tyfy-td-label {
       display: none; } }
 
+/* line 133, source/scss/optional/_tables.scss */
+table.responsive.striped tbody td,
+table.responsive.striped tbody th, table.responsive.vertical-rules tbody td,
+table.responsive.vertical-rules tbody th {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem; }
+
+/* line 139, source/scss/optional/_tables.scss */
+table.responsive.striped tbody td .tyfy-td-label, table.responsive.vertical-rules tbody td .tyfy-td-label {
+  left: 0.75rem; }
+
+@media (max-width: 39.996em) {
+  /* line 146, source/scss/optional/_tables.scss */
+  table.responsive.striped thead + tbody td, table.responsive.vertical-rules thead + tbody td {
+    padding-left: calc(33% + 0.75rem); } }
+
+@media (max-width: 39.996em) {
+  /* line 154, source/scss/optional/_tables.scss */
+  table.responsive.vertical-rules tbody th[scope="row"] {
+    border-right: 2px var(--tycolor-border) solid; } }
+
 @media (min-width: 40em) {
-  /* line 134, source/scss/optional/_tables.scss */
+  /* line 165, source/scss/optional/_tables.scss */
   table.float-left, table.float-right {
     box-sizing: border-box;
     margin-bottom: 1.5rem;
     width: calc(50% - 1.5rem); } }
 
 @media (min-width: 40em) {
-  /* line 142, source/scss/optional/_tables.scss */
+  /* line 173, source/scss/optional/_tables.scss */
   table.float-left {
     clear: left;
     float: left;
     margin-right: 3rem; } }
 
 @media (min-width: 40em) {
-  /* line 149, source/scss/optional/_tables.scss */
+  /* line 180, source/scss/optional/_tables.scss */
   table.float-right {
     clear: right;
     float: right;
     margin-left: 3rem; } }
 
 @media (min-width: 40em) {
-  /* line 157, source/scss/optional/_tables.scss */
+  /* line 188, source/scss/optional/_tables.scss */
   table.float-right + table.float-left {
     margin-right: 1.5rem; } }
 
 @media (min-width: 40em) {
-  /* line 162, source/scss/optional/_tables.scss */
+  /* line 193, source/scss/optional/_tables.scss */
   table.float-left + table.float-right {
     margin-left: 1.5rem; } }
 
