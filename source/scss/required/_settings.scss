@@ -1,98 +1,99 @@
+// tyfy variables are prefixed "ty" to avoid name collisions with other frameworks
+
 // grid and spacing
 // sass maps of spacing and indent values are defined as number of grid units
-$tyfy-spacings: (
-  "standard":   2,
-  "large":      3,
+$tyspacing: (
+  "default":  2,
+  "large":    3,
 ) !default;
-$tyfy-indents: (
-  "standard":   3,
-  "small":      2,
+$tyindent: (
+  "default":  3,
+  "small":    2,
 ) !default;
-$tyfy-spacing-standard:             tygrid(map-get($tyfy-spacings,"standard")) !default;
-$tyfy-spacing-large:                tygrid(map-get($tyfy-spacings,"large")) !default;
-$tyfy-indent-standard:              tygrid(map-get($tyfy-indents,"standard")) !default;
-$tyfy-indent-small:                 tygrid(map-get($tyfy-indents,"small")) !default;
+$tyspacing:                    tygrid(map-get($tyspacing,"default")) !default;
+$tyspacing-lg:                 tygrid(map-get($tyspacing,"large")) !default;
+$tyindent:                     tygrid(map-get($tyindent,"default")) !default;
+$tyindent-sm:                  tygrid(map-get($tyindent,"small")) !default;
 
 // toggle for adjacent sibling margins
-$tyfy-margins-on:                   true !default;
+$tymargins-on:                 true !default;
 
 // fonts
-$tyfy-serif:                        georgia, serif !default;
-$tyfy-sans:                         helvetica, arial, sans-serif !default;
-$tyfy-mono:                         monaco, courier, monospace !default;
-$tyfy-symbol:                       tyfyicons !default;
+$tyfont-serif:                 georgia, serif !default;
+$tyfont-sans:                  helvetica, arial, sans-serif !default;
+$tyfont-mono:                  monaco, courier, monospace !default;
+$tyfont-symbol:                tyfyicons !default;
 
 // font assignments
-$tyfy-font-base:                    $tyfy-serif !default;
-$tyfy-font-heading:                 $tyfy-sans !default;
-$tyfy-font-table:                   $tyfy-sans !default;
-$tyfy-font-input:                   $tyfy-sans !default;
+$tyfont-base:                  $tyfont-serif !default;
+$tyfont-heading:               $tyfont-sans !default;
+$tyfont-table:                 $tyfont-sans !default;
+$tyfont-input:                 $tyfont-sans !default;
 
 // font sizes
 // a sass map of font size values defined as number of steps on the modular scale
-$tyfy-font-sizes: (
-  "sm":         -1,
-  "h6":         0,
-  "h5":         1,
-  "h4":         2,
-  "h3":         3,
-  "h2":         4,
-  "h1":         6,
-  "pullquote":  2,
-  "lede":       2
+$tyfont-size: (
+  "sm":       -1,
+  "h6":       0,
+  "h5":       1,
+  "h4":       2,
+  "h3":       3,
+  "h2":       4,
+  "h1":       6,
+  "quote":    2,
+  "lede":     2
 ) !default;
-$tyfy-font-size-sm:                 tyscale(map-get($tyfy-font-sizes,"sm")) !default;
-$tyfy-font-size-h6:                 tyscale(map-get($tyfy-font-sizes,"h6")) !default;
-$tyfy-font-size-h5:                 tyscale(map-get($tyfy-font-sizes,"h5")) !default;
-$tyfy-font-size-h4:                 tyscale(map-get($tyfy-font-sizes,"h4")) !default;
-$tyfy-font-size-h3:                 tyscale(map-get($tyfy-font-sizes,"h3")) !default;
-$tyfy-font-size-h2:                 tyscale(map-get($tyfy-font-sizes,"h2")) !default;
-$tyfy-font-size-h1:                 tyscale(map-get($tyfy-font-sizes,"h1")) !default;
-$tyfy-font-size-pullquote:          tyscale(map-get($tyfy-font-sizes,"pullquote")) !default;
-$tyfy-font-size-lede:               tyscale(map-get($tyfy-font-sizes,"lede")) !default;
+$tyfont-size-sm:               tyscale(map-get($tyfont-size,"sm")) !default;
+$tyfont-size-h6:               tyscale(map-get($tyfont-size,"h6")) !default;
+$tyfont-size-h5:               tyscale(map-get($tyfont-size,"h5")) !default;
+$tyfont-size-h4:               tyscale(map-get($tyfont-size,"h4")) !default;
+$tyfont-size-h3:               tyscale(map-get($tyfont-size,"h3")) !default;
+$tyfont-size-h2:               tyscale(map-get($tyfont-size,"h2")) !default;
+$tyfont-size-h1:               tyscale(map-get($tyfont-size,"h1")) !default;
+$tyfont-size-quote:            tyscale(map-get($tyfont-size,"quote")) !default;
+$tyfont-size-lede:             tyscale(map-get($tyfont-size,"lede")) !default;
 
 // measures
-$tyfy-width-border:                 2px !default;
-$tyfy-radius-border:                4px !default;
+$tywidth-border:               2px !default;
+$tyradius-border:              4px !default;
 
 // breakpoints
-$tyfy-break-floats:                 40em !default;
-$tyfy-break-pullquote-large:        40em !default;
-$tyfy-break-cols-2:                 50em !default;
-$tyfy-break-list-cols-2:            35em !default;
-$tyfy-break-list-cols-3:            55em !default;
-$tyfy-break-list-cols-4:            75em !default;
-$tyfy-break-collapsables-pad:       50em !default;
-$tyfy-break-tabs:                   40em !default;
-$tyfy-break-table:                  40em !default;
+$tybreak-float:                40em !default;
+$tybreak-quote:                40em !default;
+$tybreak-cols2:                50em !default;
+$tybreak-list-cols2:           35em !default;
+$tybreak-list-cols3:           55em !default;
+$tybreak-list-cols4:           75em !default;
+$tybreak-collapsables:         50em !default;
+$tybreak-tabs:                 40em !default;
+$tybreak-table:                40em !default;
 
-// transitions
-$tyfy-transition-duration-hover:    0.25s !default;
-$tyfy-transition-duration-move:     0.5s !default;
-
-// effects
-$fades: (
-  "500ms":      500ms,
-  "1s":         1000ms,
-  "2s":         2000ms,
-  "3s":         3000ms
+// durations for transition and animation
+$tyduration: (
+  "250":      250ms,
+  "500":      500ms,
+  "1000":     1000ms,
+  "2000":     2000ms,
+  "3000":     3000ms
 ) !default;
+$tyduration-hover:             map-get($tyduration,"250") !default;
+$tyduration-move:              map-get($tyduration,"500") !default;
 
-// site colors
-$tycolor-bg:                        white !default;
-$tycolor-fg:                        #111111 !default;
-$tycolor-text-light:                mix($tycolor-fg,$tycolor-bg,45%) !default;
-$tycolor-link-default:              #3380cc !default;
-$tycolor-link-active:               #cc3380 !default;
-$tycolor-bg-tab-active:             rgba($tycolor-link-active,0.12) !default;
-$tycolor-border:                    mix($tycolor-fg,$tycolor-bg,12%) !default;
-$tycolor-border-link-default:       rgba($tycolor-link-default,0.5) !default;
-$tycolor-border-link-active:        rgba($tycolor-link-active,0.75) !default;
-$tycolor-shade:                     rgba($tycolor-fg,0.05) !default;
+// colors
+$tycolor-bg:                   white !default;
+$tycolor-fg:                   #111111 !default;
+$tycolor-text-light:           mix($tycolor-fg,$tycolor-bg,45%) !default;
+$tycolor-link-default:         #3380cc !default;
+$tycolor-link-active:          #cc3380 !default;
+$tycolor-bg-tab-active:        rgba($tycolor-link-active,0.12) !default;
+$tycolor-border:               mix($tycolor-fg,$tycolor-bg,12%) !default;
+$tycolor-border-link-default:  rgba($tycolor-link-default,0.5) !default;
+$tycolor-border-link-active:   rgba($tycolor-link-active,0.75) !default;
+$tycolor-shade:                rgba($tycolor-fg,0.05) !default;
 
 // icons
 // path to icon fonts
-$tyfyicons-path:                    "../fonts/tyfyicons" !default; // do not add a trailing /
+$tyicons-path:                 "../fonts/tyfyicons" !default; // do not add a trailing /
 
 // icon character codes
 // these are copied from the scss file that is output by running `npm build icons`
@@ -100,15 +101,15 @@ $tyfyicons-path:                    "../fonts/tyfyicons" !default; // do not add
 // the initial slash (\) has been removed so the values are stored as strings rather than as the actual character;
 // the tychar($code) function can be used to output the string with the initial '\';
 // these values can be overridden to allow a different icon font
-$tyfyicons-angle-down:              "ea01" !default;
-$tyfyicons-angle-left:              "ea02" !default;
-$tyfyicons-angle-right:             "ea03" !default;
-$tyfyicons-angle-up-down:           "ea04" !default;
-$tyfyicons-angle-up:                "ea08" !default;
-$tyfyicons-bars:                    "ea07" !default;
-$tyfyicons-check:                   "ea05" !default;
-$tyfyicons-dash:                    "ea06" !default;
-$tyfyicons-quote-left:              "ea0a" !default;
-$tyfyicons-quote-right:             "ea0b" !default;
-$tyfyicons-search:                  "ea09" !default;
-$tyfyicons-x:                       "ea0c" !default;
+$tyicons-angle-down:           "ea01" !default;
+$tyicons-angle-left:           "ea02" !default;
+$tyicons-angle-right:          "ea03" !default;
+$tyicons-angle-up-down:        "ea04" !default;
+$tyicons-angle-up:             "ea08" !default;
+$tyicons-bars:                 "ea07" !default;
+$tyicons-check:                "ea05" !default;
+$tyicons-dash:                 "ea06" !default;
+$tyicons-quote-left:           "ea0a" !default;
+$tyicons-quote-right:          "ea0b" !default;
+$tyicons-search:               "ea09" !default;
+$tyicons-x:                    "ea0c" !default;

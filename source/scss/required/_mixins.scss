@@ -42,7 +42,7 @@
 }
 
 // based on css-tricks.com/lobotomized-owls/
-@mixin set-sibling-margins ($context:all, $measure:$tyfy-spacing-standard) {
+@mixin set-sibling-margins ($context:all, $measure:$tyspacing) {
   @if $context == headings {
     // headings
     :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
@@ -78,11 +78,11 @@
 @mixin sibling-margins ($state:on) {
   @if $state == on {
     // everything
-    @include set-sibling-margins(all,$tyfy-spacing-standard);
+    @include set-sibling-margins(all,$tyspacing);
     // lists
-    @include set-sibling-margins(lists,$tyfy-spacing-standard/2);
+    @include set-sibling-margins(lists,$tyspacing/2);
     // headings
-    @include set-sibling-margins(headings,$tyfy-spacing-large);
+    @include set-sibling-margins(headings,$tyspacing-lg);
   }
   @else {
     // everything
@@ -107,7 +107,7 @@
   }
 }
 
-@mixin button($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:$tyfy-radius-border) {
+@mixin button($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:$tyradius-border) {
   background-color:$color_default;
   border:none;
   border-radius:$border_radius;
@@ -125,7 +125,7 @@
   padding:tygrid(0.5) tygrid(1.5);
   text-decoration:none;
   text-shadow:0 1px 1px rgba(black,0.1);
-  transition:all $tyfy-transition-duration-hover;
+  transition:all $tyduration-hover;
   vertical-align:middle;
   &,
   &[href] {
@@ -151,7 +151,7 @@
 
 @mixin button-outline($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:$tyfy-radius-border) {
   background-color:transparent;
-  border:$tyfy-width-border $color_default solid;
+  border:$tywidth-border $color_default solid;
   border-radius:$border_radius;
   color:$color_default;
   cursor:pointer;
@@ -159,10 +159,10 @@
   font-size:inherit;
   line-height:inherit;
   margin:0;
-  padding:calc(#{tygrid(0.5)} - #{$tyfy-width-border}) calc(#{tygrid(1.5)} - #{$tyfy-width-border});
+  padding:calc(#{tygrid(0.5)} - #{$tywidth-border}) calc(#{tygrid(1.5)} - #{$tywidth-border});
   text-decoration:none;
   text-shadow:0 1px 1px rgba(black,0.1);
-  transition:all $tyfy-transition-duration-hover;
+  transition:all $tyduration-hover;
   vertical-align:middle;
   &,
   &[href] {

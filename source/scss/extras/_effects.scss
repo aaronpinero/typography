@@ -1,4 +1,4 @@
-@each $name, $value in $fades {
+@each $name, $value in $tyduration {
   .fade-#{$name} {
     @include fade-in($value);
   }
