@@ -93,11 +93,11 @@ $tycolor-shade:                rgba($tycolor-fg,0.05) !default;
 
 // icons
 // path to icon fonts
-$tyicons-path:                 "../fonts/tyfyicons" !default; // do not add a trailing /
+$tyicons-path:                 "../fonts/tyicons" !default; // do not add a trailing /
 
 // icon character codes
 // these are copied from the scss file that is output by running `npm build icons`
-// they are included here so tyfyicons is not a requirement for using tyfy;
+// they are included here so tyicons is not a requirement for using tyfy;
 // the initial slash (\) has been removed so the values are stored as strings rather than as the actual character;
 // the tychar($code) function can be used to output the string with the initial '\';
 // these values can be overridden to allow a different icon font

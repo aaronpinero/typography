@@ -1,4 +1,8 @@
-@mixin clearfix {
+////////// tyclear mixin //////////
+// based on styles from the HTML5 Boilerplate
+// clears floats inside the element to which the mixin is applied
+
+@mixin tyclear {
   *zoom:1;
   &::before,
   &::after {
@@ -11,8 +15,13 @@
   }
 }
 
-@mixin visuallyhidden ($type:true) {
-  @if $type == false {
+////////// tyhidden mixin //////////
+// based on styles from the HTML5 Boilerplate
+// includes the ability to reverse the hidden styles
+// when passing "false" as the state parameter
+
+@mixin tyhidden ($state:true) {
+  @if $state == false {
     clip:auto;
     height:auto !important;
     margin:0;
@@ -41,8 +50,15 @@
   }
 }
 
+////////// tymargins-set mixin //////////
 // based on css-tricks.com/lobotomized-owls/
-@mixin set-sibling-margins ($context:all, $measure:$tyspacing) {
+//
+// used to set adjacent sibling margins on descendant elements;
+// using the context parameter, different measure values can be applied
+// to different classes of elements; the default context is "all" in which case
+// the specified margin measure will be applied to all descendants
+
+@mixin tymargins-set ($context:all, $measure:$tyspacing) {
   @if $context == headings {
     // headings
     :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
@@ -75,26 +91,36 @@
   }
 }
 
-@mixin sibling-margins ($state:on) {
+////////// tymargins mixin //////////
+// used to apply or remove adjacent sibling margins depending
+// on the value of the state parameter; the margin values applied
+// for the "on" state are the framework's default values; for custom values,
+// use the tymargins-set mixin
+
+@mixin tymargins ($state:on) {
   @if $state == on {
     // everything
-    @include set-sibling-margins(all,$tyspacing);
+    @include tymargins-set(all,$tyspacing);
     // lists
-    @include set-sibling-margins(lists,$tyspacing/2);
+    @include tymargins-set(lists,$tyspacing/2);
     // headings
-    @include set-sibling-margins(headings,$tyspacing-lg);
+    @include tymargins-set(headings,$tyspacing-lg);
   }
   @else {
     // everything
-    @include set-sibling-margins(all,0rem);
+    @include tymargins-set(all,0rem);
     // lists
-    @include set-sibling-margins(lists,0rem);
+    @include tymargins-set(lists,0rem);
     // headings
-    @include set-sibling-margins(headings,0rem);
+    @include tymargins-set(headings,0rem);
   }
 }
 
-@mixin fade-in ($duration:1000ms) {
+////////// tyfadein mixin //////////
+// apply a fade-in animation; the duration of the 
+// animation is provided as a parameter
+
+@mixin tyfadein ($duration:1000ms) {
   animation:fadein $duration;
 }
 
@@ -107,7 +133,13 @@
   }
 }
 
-@mixin button($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:$tyradius-border) {
+////////// tybutton mixin //////////
+// use to apply button appearance to an element;
+// default button color, active button color, and border radius can be customized;
+// the text color of the button will be white or dark depending on what provides
+// the best contrast with the button color (this is done by checking the color lightness) 
+
+@mixin tybutton($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:$tyradius-border) {
   background-color:$color_default;
   border:none;
   border-radius:$border_radius;
@@ -149,40 +181,28 @@
   }
 }
 
-@mixin button-outline($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:$tyfy-radius-border) {
+////////// tybutton-outline mixin //////////
+// based on the tybutton mixin
+//
+// use to apply an outlined button appearance to an element;
+// the border width will be the value of the tywidth-border variable;
+// default button color, active button color, and border radius can be customized;
+// in the default state, the border and the text are the default color;
+// in the active state, the border and background are the active color and the text color
+// will be white or dark depending on what provides  the best contrast
+// with the button color (this is done by checking the color lightness) 
+
+@mixin tybutton-outline($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:$tyradius-border) {
+  @include tybutton($color_default,$color_active,$border_radius);
   background-color:transparent;
   border:$tywidth-border $color_default solid;
-  border-radius:$border_radius;
   color:$color_default;
-  cursor:pointer;
-  display:inline-block;
-  font-size:inherit;
-  line-height:inherit;
-  margin:0;
   padding:calc(#{tygrid(0.5)} - #{$tywidth-border}) calc(#{tygrid(1.5)} - #{$tywidth-border});
-  text-decoration:none;
-  text-shadow:0 1px 1px rgba(black,0.1);
-  transition:all $tyduration-hover;
-  vertical-align:middle;
   &,
   &[href] {
     &:hover,
     &:active {
-      background-color:$color_active;
-      background-image:linear-gradient(to bottom,rgba(white,0.05) 0%,rgba(black,0.05) 100%);
       border-color:mix($color_active,black,95%);
-      @if lightness($color_active) > 60% {
-        color:hsl(hue($color_active),10%,0%);
-      }
-      @else {
-        color:hsl(hue($color_active),10%,100%);
-      }
-    }
-    &:active {
-      box-shadow:0 0 0 1px rgba(0,0,0,0.15) inset, 0 0 6px rgba(0,0,0,0.2) inset;
-    }
-    &:focus {
-      outline:none;
     }
   }
 }
