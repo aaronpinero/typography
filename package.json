@@ -32,14 +32,14 @@
   "homepage": "https://github.com/aaronpinero/typography#readme",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^7.2.6",
-    "node-sass": "^4.9.3",
-    "nodemon": "^1.18.4",
-    "postcss-cli": "^4.1.1",
-    "stylelint": "^8.4.0",
-    "stylelint-scss": "^2.5.0",
+    "autoprefixer": "^9.5.1",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1",
+    "postcss-cli": "^6.1.2",
+    "stylelint": "^10.0.1",
+    "stylelint-scss": "^3.6.1",
     "templatesjs": "^2.0.0",
-    "webfont": "^7.1.4"
+    "webfont": "^9.0.0"
   },
   "stylelint": {
     "rules": {
