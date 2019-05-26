@@ -4,7 +4,7 @@ b {
 code {
   background-color:var(--tycolor-shade);
   border-radius:0.125em;
-  font-family:$tyfy-mono;
+  font-family:$tyfont-mono;
   padding-left:0.125em;
   padding-right:0.125em;
   &.code-nobg {
@@ -18,17 +18,17 @@ em {
 }
 hr {
   border:none;
-  border-top:$tyfy-width-border var(--tycolor-border) solid;
+  border-top:$tywidth-border var(--tycolor-border) solid;
   height:0;
 }
 i {
   font-style:italic;
 }
 pre {
-  font-family:$tyfy-mono;
+  font-family:$tyfont-mono;
 }
 small {
-  font-size:100%/$tyfy-font-size-scalar;
+  font-size:100%/$tyfont-size-scalar; // basically one scale step down from wherever we are
 }
 strong {
   font-weight:700;
@@ -52,19 +52,19 @@ span {
   }
 }
 .button {
-  @include button;
+  @include tybutton;
 }
 .button-outline {
-  @include button-outline;
+  @include tybutton-outline;
 }
 .font-sans {
-  font-family:$tyfy-sans;
+  font-family:$tyfont-sans;
 }
 .font-serif {
-  font-family:$tyfy-serif;
+  font-family:$tyfont-serif;
 }
 .font-mono {
-  font-family:$tyfy-mono;
+  font-family:$tyfont-mono;
 }
 .light {
   color:var(--tycolor-text-light);
