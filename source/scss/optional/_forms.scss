@@ -1,14 +1,14 @@
 // basic styles
 fieldset {
   border-color:var(--tycolor-border);
-  border-radius:$tyfy-radius-border;
+  border-radius:$tyradius-border;
   border-style:solid;
   display:block;
   margin-left:0;
   margin-right:0;
-  padding:calc(#{tygrid(1.5)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
+  padding:calc(#{tygrid(1.5)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
   legend {
-    font-family:$tyfy-font-input;
+    font-family:$tyfont-input;
     font-size:tyscale(1);
     font-weight:bold;
     line-height:tylead(tyscale(1));
@@ -63,7 +63,7 @@ label {
     margin-top:0;
   }
   form & + * {
-    margin-top:$tyfy-spacing-standard / 2;
+    margin-top:$tyspacing / 2;
   }
 }
 
@@ -88,14 +88,14 @@ input[type="color"] {
   background-color:var(--tycolor-bg);
   border-color:var(--tycolor-border);
   border-style:solid;
-  border-radius:$tyfy-radius-border;
-  border-width:$tyfy-width-border;
+  border-radius:$tyradius-border;
+  border-width:$tywidth-border;
   box-shadow:0 1px 1px rgba(0,0,0,0.1) inset;
   color:var(--tycolor-fg);
-  font-family:$tyfy-font-input;
+  font-family:$tyfont-input;
   line-height:tylead(tyscale(0));
-  padding:calc(#{tygrid(0.75)} - #{$tyfy-width-border});
-  transition:border-color $tyfy-transition-duration-hover, box-shadow $tyfy-transition-duration-hover;
+  padding:calc(#{tygrid(0.75)} - #{$tywidth-border});
+  transition:border-color $tyduration-hover, box-shadow $tyduration-hover;
   width:100%;
   &:focus {
     border-color:var(--tycolor-link-active);
@@ -103,7 +103,7 @@ input[type="color"] {
   }
 }
 select {
-  @include sibling-margins(off);
+  @include tymargins(off);
   &:not([multiple]) {
     box-shadow:0 0 0 transparent;
   }
@@ -117,16 +117,16 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  @include button;
+  @include tybutton;
   border:none;
   display:inline-block;
-  font-family:$tyfy-font-input;
+  font-family:$tyfont-input;
   width:auto;
 }
 
 // special select element
-.tyfy-select select,
-select.tyfy-select {
+.tyselect select,
+select.tyselect {
   appearance:none;
   &:not([multiple]) {
     background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{$tycolor-text-light}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{$tycolor-text-light}'/%3E%3C/svg%3E");

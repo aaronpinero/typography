@@ -4,7 +4,7 @@ table {
   font-feature-settings:"lnum", "tnum";
 }
 th {
-  font-family:$tyfy-font-table;
+  font-family:$tyfont-table;
   font-variant-numeric:lining-nums tabular-nums;
   font-feature-settings:"lnum", "tnum";
   text-align:left;
@@ -14,7 +14,7 @@ th {
   }
 }
 td {
-  font-family:$tyfy-font-table;
+  font-family:$tyfont-table;
   font-variant-numeric:lining-nums tabular-nums;
   font-feature-settings:"lnum", "tnum";
   vertical-align:top;
@@ -54,35 +54,35 @@ table.striped {
 
 // horizontal borders
 table.horizontal-rules {
-  border-top:$tyfy-width-border var(--tycolor-border) solid;
+  border-top:$tywidth-border var(--tycolor-border) solid;
   td,
   th {
-    border-bottom:$tyfy-width-border var(--tycolor-border) solid;
+    border-bottom:$tywidth-border var(--tycolor-border) solid;
   }
   th[scope="col"] {
-    border-bottom:(3 * $tyfy-width-border) var(--tycolor-border) double;
+    border-bottom:(3 * $tywidth-border) var(--tycolor-border) double;
   }
 }
 
 // vertical borders
 table.vertical-rules {
-  border-left:$tyfy-width-border var(--tycolor-border) solid;
+  border-left:$tywidth-border var(--tycolor-border) solid;
   td,
   th {
-    border-right:$tyfy-width-border var(--tycolor-border) solid;
+    border-right:$tywidth-border var(--tycolor-border) solid;
     padding-left:tygrid(1);
     padding-right:tygrid(1);
   }
   th[scope="row"] {
-    border-right:(3 * $tyfy-width-border) var(--tycolor-border) double;
+    border-right:(3 * $tywidth-border) var(--tycolor-border) double;
   }
 }
 
 // responsive table
 table.responsive {
   thead {
-    @media (max-width:$tyfy-break-table*0.9999) {
-      @include visuallyhidden;
+    @media (max-width:$tybreak-table*0.9999) {
+      @include tyhidden;
       & + tbody td {
         padding-left:33%;
       }
@@ -90,24 +90,24 @@ table.responsive {
   }
   tbody {
     tr {
-      @media (max-width:$tyfy-break-table*0.9999) {
+      @media (max-width:$tybreak-table*0.9999) {
         display:block;
       }
     }
     tr + tr {
-      @media (max-width:$tyfy-break-table*0.9999) {
-        border-top:$tyfy-width-border var(--tycolor-border) solid;
-        margin-top:$tyfy-width-border;
+      @media (max-width:$tybreak-table*0.9999) {
+        border-top:$tywidth-border var(--tycolor-border) solid;
+        margin-top:$tywidth-border;
       }
     }
     th {
-      @media (max-width:$tyfy-break-table*0.9999) {
+      @media (max-width:$tybreak-table*0.9999) {
         display:block;
         padding-left:0;
       }
     }
     td {
-      @media (max-width:$tyfy-break-table*0.9999) {
+      @media (max-width:$tybreak-table*0.9999) {
         display:block;
         padding-left:0;
         position:relative;
@@ -115,13 +115,13 @@ table.responsive {
       .tyfy-td-label {
         color:var(--tycolor-text-light);
         display:block;
-        font-family:$tyfy-font-table;
-        font-size:$tyfy-font-size-sm;
+        font-family:$tyfont-table;
+        font-size:$tyfont-size-sm;
         left:0;
         position:absolute;
         vertical-align:top;
         width:calc(33% - #{tygrid()});
-        @media (min-width:$tyfy-break-table) {
+        @media (min-width:$tybreak-table) {
           display:none;
         }
       }
@@ -142,7 +142,7 @@ table.responsive {
       }
     }
     thead {
-      @media (max-width:$tyfy-break-table*0.9999) {
+      @media (max-width:$tybreak-table*0.9999) {
         & + tbody td {
           padding-left:calc(33% + #{tygrid(1)});
         }
@@ -152,8 +152,8 @@ table.responsive {
   &.vertical-rules {
     tbody {
       th[scope="row"] {
-        @media (max-width:$tyfy-break-table*0.9999) {
-          border-right:$tyfy-width-border var(--tycolor-border) solid;
+        @media (max-width:$tybreak-table*0.9999) {
+          border-right:$tywidth-border var(--tycolor-border) solid;
         }
       }
     }
@@ -164,21 +164,21 @@ table.responsive {
 table {
   &.float-left,
   &.float-right {
-    @media (min-width:$tyfy-break-floats) {
+    @media (min-width:$tybreak-float) {
       box-sizing:border-box;
-      margin-bottom:$tyfy-spacing-standard;
+      margin-bottom:$tyspacing;
       width:calc(50% - #{tygrid(2)});
     }
   }
   &.float-left {
-    @media (min-width:$tyfy-break-floats) {
+    @media (min-width:$tybreak-float) {
       clear:left;
       float:left;
       margin-right:tygrid(4);
     }
   }
   &.float-right {
-    @media (min-width:$tyfy-break-floats) {
+    @media (min-width:$tybreak-float) {
       clear:right;
       float:right;
       margin-left:tygrid(4);
@@ -186,12 +186,12 @@ table {
   }
 }
 table.float-right + table.float-left {
-  @media (min-width:$tyfy-break-floats) {
+  @media (min-width:$tybreak-float) {
     margin-right:tygrid(2);
   }
 }
 table.float-left + table.float-right {
-  @media (min-width:$tyfy-break-floats) {
+  @media (min-width:$tybreak-float) {
     margin-left:tygrid(2);
   }
 }
