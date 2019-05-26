@@ -1,7 +1,9 @@
-// tyfy variables are prefixed "ty" to avoid name collisions with other frameworks
+// variables are prefixed "ty" to avoid name collisions
+// with other frameworks
 
 // grid and spacing
-// sass maps of spacing and indent values are defined as number of grid units
+// sass maps of spacing and indent values are defined as multiple of
+// the grid unit
 $tyspacing: (
   "default":  2,
   "large":    3,
@@ -31,7 +33,8 @@ $tyfont-table:                 $tyfont-sans !default;
 $tyfont-input:                 $tyfont-sans !default;
 
 // font sizes
-// a sass map of font size values defined as number of steps on the modular scale
+// a sass map of font size values defined as number of steps up or down
+// the modular scale from the base font size
 $tyfont-size: (
   "sm":       -1,
   "h6":       0,

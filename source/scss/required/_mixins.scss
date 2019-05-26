@@ -1,4 +1,5 @@
 ////////// tyclear mixin //////////
+//
 // based on styles from the HTML5 Boilerplate
 // clears floats inside the element to which the mixin is applied
 
@@ -16,6 +17,7 @@
 }
 
 ////////// tyhidden mixin //////////
+//
 // based on styles from the HTML5 Boilerplate
 // includes the ability to reverse the hidden styles
 // when passing "false" as the state parameter
@@ -50,15 +52,18 @@
   }
 }
 
-////////// tymargins-set mixin //////////
+////////// tymargins-size mixin //////////
+//
 // based on css-tricks.com/lobotomized-owls/
 //
-// used to set adjacent sibling margins on descendant elements;
+// used to set the size of the adjacent sibling margins on descendants
+//
 // using the context parameter, different measure values can be applied
-// to different classes of elements; the default context is "all" in which case
-// the specified margin measure will be applied to all descendants
+// to different types of elements; the default context is "all"
+// in which case the specified margin size will be applied to all
+// descendants
 
-@mixin tymargins-set ($context:all, $measure:$tyspacing) {
+@mixin tymargins-size ($context:all, $measure:$tyspacing) {
   @if $context == headings {
     // headings
     :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
@@ -92,31 +97,34 @@
 }
 
 ////////// tymargins mixin //////////
+//
 // used to apply or remove adjacent sibling margins depending
-// on the value of the state parameter; the margin values applied
-// for the "on" state are the framework's default values; for custom values,
-// use the tymargins-set mixin
+// on the value of the state parameter;
+//
+// the margin values applied for the "on" state are the framework's
+// default values; for custom values, use the tymargins-set mixin
 
 @mixin tymargins ($state:on) {
   @if $state == on {
     // everything
-    @include tymargins-set(all,$tyspacing);
+    @include tymargins-size;
     // lists
-    @include tymargins-set(lists,$tyspacing/2);
+    @include tymargins-size(lists,$tyspacing/2);
     // headings
-    @include tymargins-set(headings,$tyspacing-lg);
+    @include tymargins-size(headings,$tyspacing-lg);
   }
   @else {
     // everything
-    @include tymargins-set(all,0rem);
+    @include tymargins-size(all,0rem);
     // lists
-    @include tymargins-set(lists,0rem);
+    @include tymargins-size(lists,0rem);
     // headings
-    @include tymargins-set(headings,0rem);
+    @include tymargins-size(headings,0rem);
   }
 }
 
 ////////// tyfadein mixin //////////
+//
 // apply a fade-in animation; the duration of the 
 // animation is provided as a parameter
 
@@ -134,10 +142,14 @@
 }
 
 ////////// tybutton mixin //////////
+//
 // use to apply button appearance to an element;
-// default button color, active button color, and border radius can be customized;
-// the text color of the button will be white or dark depending on what provides
-// the best contrast with the button color (this is done by checking the color lightness) 
+// default button color, active button color, and
+// border radius can be customized;
+//
+// the text color of the button will be white or dark depending on
+// which color provides the best contrast with the button color
+// (this is done by checking the color lightness) 
 
 @mixin tybutton($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:$tyradius-border) {
   background-color:$color_default;
@@ -182,15 +194,17 @@
 }
 
 ////////// tybutton-outline mixin //////////
+// 
 // based on the tybutton mixin
 //
-// use to apply an outlined button appearance to an element;
-// the border width will be the value of the tywidth-border variable;
-// default button color, active button color, and border radius can be customized;
+// used to apply button appearance to an element;
+// default button color, active button color, and
+// border radius can be customized;
+//
 // in the default state, the border and the text are the default color;
-// in the active state, the border and background are the active color and the text color
-// will be white or dark depending on what provides  the best contrast
-// with the button color (this is done by checking the color lightness) 
+// in the active state, the border and background are the active color
+// and the text color will be white or dark depending on what provides
+// the best contrast with the button color
 
 @mixin tybutton-outline($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:$tyradius-border) {
   @include tybutton($color_default,$color_active,$border_radius);
