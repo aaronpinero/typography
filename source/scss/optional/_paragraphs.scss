@@ -1,21 +1,24 @@
 // justified
 .paragraphs-justified p,
 p.justified {
+  /* autoprefixer: off */
   -moz-hyphens:auto;
+  -ms-hyphens:auto;
   -webkit-hyphens:auto;
   hyphens:auto;
   -webkit-hyphenate-limit-after:3;
   -webkit-hyphenate-limit-before:3;
+  hyphenate-limit-chars:6 3 3;
   text-align:justify;
 }
 p.lede {
-  font-size:$tyfy-font-size-lede;
-  line-height:tylead($tyfy-font-size-lede,tall);
+  font-size:$tyfont-size-lede;
+  line-height:tylead($tyfont-size-lede,tall);
 }
 .cols-2 {
-  @media (min-width:$tyfy-break-cols-2) {
+  @media (min-width:$tybreak-cols2) {
     columns:2;
-    column-gap:$tyfy-spacing-large;
+    column-gap:$tyspacing-lg;
     orphans:2;
     widows:2;
   }
