@@ -63,6 +63,8 @@ $tycolor-link-default-rev:hsl(hue($tycolor-link-default),saturation($tycolor-lin
 $tycolor-link-active-rev:hsl(hue($tycolor-link-active),saturation($tycolor-link-active),(100% - lightness(darken($tycolor-link-active,25%))));
 $tycolor-border-rev:mix($tycolor-fg-rev,$tycolor-bg-rev,15%);
 $tycolor-shade-rev:rgba($tycolor-fg-rev,0.05);
+$tyicons-path:"../dist/fonts/tyicons";
+
 @import "../source/scss/tyfy.scss";
 @import "../source/scss/extras/_effects.scss";
 @import "../source/scss/extras/_responsive_text.scss";

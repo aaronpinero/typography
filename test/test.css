@@ -1647,8 +1647,8 @@ select.tyselect {
 
 @font-face {
   font-family: tyicons;
-  src: url("../fonts/tyicons/tyicons.eot");
-  src: url("../fonts/tyicons/tyicons.eot?#iefix") format("embedded-opentype"), url("../fonts/tyicons/tyicons.woff2") format("woff2"), url("../fonts/tyicons/tyicons.woff") format("woff"), url("../fonts/tyicons/tyicons.ttf") format("truetype"), url("../fonts/tyicons/tyicons.svg#tyicons") format("svg");
+  src: url("../dist/fonts/tyicons/tyicons.eot");
+  src: url("../dist/fonts/tyicons/tyicons.eot?#iefix") format("embedded-opentype"), url("../dist/fonts/tyicons/tyicons.woff2") format("woff2"), url("../dist/fonts/tyicons/tyicons.woff") format("woff"), url("../dist/fonts/tyicons/tyicons.ttf") format("truetype"), url("../dist/fonts/tyicons/tyicons.svg#tyicons") format("svg");
   font-style: normal;
   font-weight: 400; }
 
@@ -2073,18 +2073,18 @@ select.tyselect {
   h6.collapsable-processed::before {
     width: 1.5rem; } }
 
-/* line 69, test/test.scss */
+/* line 71, test/test.scss */
 body {
   background-color: var(--tycolor-shade);
   margin-left: auto;
   margin-right: auto;
   max-width: 52.5rem;
   padding: 1.5rem; }
-  /* line 75, test/test.scss */
+  /* line 77, test/test.scss */
   body.reverse {
     background-color: #666; }
 
-/* line 79, test/test.scss */
+/* line 81, test/test.scss */
 figure {
   background-color: var(--tycolor-bg);
   border-radius: 4px;
@@ -2092,7 +2092,7 @@ figure {
   margin-left: 0;
   margin-right: 0;
   padding: 1.5rem; }
-  /* line 86, test/test.scss */
+  /* line 88, test/test.scss */
   figure figcaption {
     border-bottom: 2px var(--tycolor-border) solid;
     color: var(--tycolor-text-light);
@@ -2104,42 +2104,42 @@ figure {
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
     text-transform: uppercase; }
-  /* line 98, test/test.scss */
+  /* line 100, test/test.scss */
   figure figcaption + * {
     margin-top: 0 !important; }
 
-/* line 102, test/test.scss */
+/* line 104, test/test.scss */
 .swatch {
   border-radius: 50%;
   display: inline-block;
   height: 2.25rem;
   vertical-align: middle;
   width: 2.25rem; }
-  /* line 108, test/test.scss */
+  /* line 110, test/test.scss */
   .swatch.foreground {
     background-color: var(--tycolor-fg); }
-  /* line 111, test/test.scss */
+  /* line 113, test/test.scss */
   .swatch.text-light {
     background-color: var(--tycolor-text-light); }
-  /* line 114, test/test.scss */
+  /* line 116, test/test.scss */
   .swatch.link-default {
     background-color: var(--tycolor-link-default); }
-  /* line 117, test/test.scss */
+  /* line 119, test/test.scss */
   .swatch.link-active {
     background-color: var(--tycolor-link-active); }
-  /* line 120, test/test.scss */
+  /* line 122, test/test.scss */
   .swatch.border {
     background-color: var(--tycolor-border); }
-  /* line 123, test/test.scss */
+  /* line 125, test/test.scss */
   .swatch.shade {
     background-color: var(--tycolor-shade); }
 
-/* line 127, test/test.scss */
+/* line 129, test/test.scss */
 hr.demo {
   margin-bottom: 0.375rem;
   margin-top: 0.375rem; }
 
-/* line 131, test/test.scss */
+/* line 133, test/test.scss */
 .button-rev {
   opacity: 0.25;
   position: fixed;
@@ -2147,6 +2147,6 @@ hr.demo {
   top: 0.75rem;
   transition: all 333ms;
   z-index: 100; }
-  /* line 138, test/test.scss */
+  /* line 140, test/test.scss */
   .button-rev:hover {
     opacity: 1; }
