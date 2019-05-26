@@ -6,7 +6,7 @@ $status-error-color:#aa3333 !default;
 // invisible elements
 .element-invisible,
 .skip-link {
-  @include visuallyhidden;
+  @include tyhidden;
 }
 .rdf-meta + *,
 .element-hidden + *,
@@ -77,7 +77,7 @@ tr.error {
       border:1px #ccc solid;
       border-bottom:0px;
       display:inline-block;
-      font-family:$tyfy-sans;
+      font-family:$tyfont-sans;
       position:relative;
       padding:0 tygrid(1);
       top:-1px;
@@ -109,7 +109,7 @@ tr.error {
     text-align:center;
     padding:tygrid(1);
     margin-bottom:tygrid(1);
-    font-family:$tyfy-sans;
+    font-family:$tyfont-sans;
     font-weight:bold;
     text-transform:uppercase;
     color:#cca;
@@ -134,7 +134,7 @@ tr.error {
 // restore default margins on admin ui, use content-box model
 .contextual-links-wrapper,
 #admin-toolbar {
-  @include sibling-margins(off);
+  @include tymargins(off);
   &, * {
     box-sizing:content-box;
   }
