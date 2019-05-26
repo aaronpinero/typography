@@ -51,19 +51,19 @@ span {
     margin-right:-0.0375em;
   }
 }
-.button {
+.tybutton {
   @include tybutton;
 }
-.button-outline {
+.tybutton-outline {
   @include tybutton-outline;
 }
-.font-sans {
+.tyfont-sans {
   font-family:$tyfont-sans;
 }
-.font-serif {
+.tyfont-serif {
   font-family:$tyfont-serif;
 }
-.font-mono {
+.tyfont-mono {
   font-family:$tyfont-mono;
 }
 .light {

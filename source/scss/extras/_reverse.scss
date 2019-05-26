@@ -27,20 +27,19 @@ $tycolor-shade-rev:                 rgba($tycolor-fg-rev,0.05) !default;
   color:var(--tycolor-fg);
 
   // buttons
-  .button,
-  a.button,
+  .tybutton,
+  a.tybutton,
   button,
   input[type="button"],
   input[type="reset"],
   input[type="submit"] {
-    @include button($tycolor-link-default-rev,$tycolor-link-active-rev);
+    @include tybutton($tycolor-link-default-rev,$tycolor-link-active-rev);
   }
-  .button-outline,
-  a.button-outline {
-    @include button-outline($tycolor-link-default-rev,$tycolor-link-active-rev);
+  .tybutton-outline,
+  a.tybutton-outline {
+    @include tybutton-outline($tycolor-link-default-rev,$tycolor-link-active-rev);
   }
   
-
   // quotes
   blockquote {
     &.pullquote-roof-fixed::before,
@@ -48,8 +47,10 @@ $tycolor-shade-rev:                 rgba($tycolor-fg-rev,0.05) !default;
       background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#{$tycolor-border-rev}%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     }
   }
-  .tyfy-select select,
-  select.tyfy-select {
+  
+  // select elements
+  .tyselect select,
+  select.tyselect {
     &:not([multiple]) {
       background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{$tycolor-text-light-rev}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{$tycolor-text-light-rev}'/%3E%3C/svg%3E");
     }
