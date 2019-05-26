@@ -1,16 +1,16 @@
 // copied from the scss file that is output by running `npm build icons`
-@if $tyfy-symbol == tyfyicons {
+@if $tyfy-symbol == tyicons {
   @font-face {
-    font-family:tyfyicons;
-    src:url("#{$tyicons-path}/tyfyicons.eot");
-    src:url("#{$tyicons-path}/tyfyicons.eot?#iefix") format("embedded-opentype"), url("#{$tyicons-path}/tyfyicons.woff2") format("woff2"), url("#{$tyicons-path}/tyfyicons.woff") format("woff"), url("#{$tyicons-path}/tyfyicons.ttf") format("truetype"), url("#{$tyicons-path}/tyfyicons.svg#tyfyicons") format("svg");
+    font-family:tyicons;
+    src:url("#{$tyicons-path}/tyicons.eot");
+    src:url("#{$tyicons-path}/tyicons.eot?#iefix") format("embedded-opentype"), url("#{$tyicons-path}/tyicons.woff2") format("woff2"), url("#{$tyicons-path}/tyicons.woff") format("woff"), url("#{$tyicons-path}/tyicons.ttf") format("truetype"), url("#{$tyicons-path}/tyicons.svg#tyicons") format("svg");
     font-style:normal;
     font-weight:400;
   }
 }
-%tyfyicons {
+%tyicons {
   display:inline-block;
-  font-family:tyfyicons;
+  font-family:tyicons;
   font-size:inherit;
   font-weight:400;
   text-rendering:auto;
@@ -18,63 +18,63 @@
   -moz-osx-font-smoothing:grayscale;
   -webkit-font-smoothing:antialiased;
 }
-.tyfyicons {
-  @extend %tyfyicons;
+.tyicons {
+  @extend %tyicons;
 }
-.tyfyicons-lg {
+.tyicons-lg {
   vertical-align:-15%;
   line-height:0.75em;
   font-size:1.33333333em;
 }
-.tyfyicons-2x {
+.tyicons-2x {
   font-size:2em;
 }
-.tyfyicons-3x {
+.tyicons-3x {
   font-size:3em;
 }
-.tyfyicons-4x {
+.tyicons-4x {
   font-size:4em;
 }
-.tyfyicons-5x {
+.tyicons-5x {
   font-size:5em;
 }
-.tyfyicons-fw {
+.tyicons-fw {
   width:1.28571429em;
   text-align:center;
 }
-.tyfyicons-angle-down::before {
+.tyicons-angle-down::before {
   content:"\ea01";
 }
-.tyfyicons-angle-left::before {
+.tyicons-angle-left::before {
   content:"\ea02";
 }
-.tyfyicons-angle-right::before {
+.tyicons-angle-right::before {
   content:"\ea03";
 }
-.tyfyicons-angle-up-down::before {
+.tyicons-angle-up-down::before {
   content:"\ea04";
 }
-.tyfyicons-angle-up::before {
+.tyicons-angle-up::before {
   content:"\ea08";
 }
-.tyfyicons-bars::before {
+.tyicons-bars::before {
   content:"\ea07";
 }
-.tyfyicons-check::before {
+.tyicons-check::before {
   content:"\ea05";
 }
-.tyfyicons-dash::before {
+.tyicons-dash::before {
   content:"\ea06";
 }
-.tyfyicons-quote-left::before {
+.tyicons-quote-left::before {
   content:"\ea0a";
 }
-.tyfyicons-quote-right::before {
+.tyicons-quote-right::before {
   content:"\ea0b";
 }
-.tyfyicons-search::before {
+.tyicons-search::before {
   content:"\ea09";
 }
-.tyfyicons-x::before {
+.tyicons-x::before {
   content:"\ea0c";
 }

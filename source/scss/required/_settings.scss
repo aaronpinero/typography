@@ -24,7 +24,7 @@ $tymargins-on:                 true !default;
 $tyfont-serif:                 georgia, serif !default;
 $tyfont-sans:                  helvetica, arial, sans-serif !default;
 $tyfont-mono:                  monaco, courier, monospace !default;
-$tyfont-symbol:                tyfyicons !default;
+$tyfont-symbol:                tyicons !default;
 
 // font assignments
 $tyfont-base:                  $tyfont-serif !default;
@@ -104,15 +104,16 @@ $tyicons-path:                 "../fonts/tyicons" !default; // do not add a trai
 // the initial slash (\) has been removed so the values are stored as strings rather than as the actual character;
 // the tychar($code) function can be used to output the string with the initial '\';
 // these values can be overridden to allow a different icon font
+
 $tyicons-angle-down:           "ea01" !default;
 $tyicons-angle-left:           "ea02" !default;
 $tyicons-angle-right:          "ea03" !default;
-$tyicons-angle-up-down:        "ea04" !default;
-$tyicons-angle-up:             "ea08" !default;
-$tyicons-bars:                 "ea07" !default;
-$tyicons-check:                "ea05" !default;
-$tyicons-dash:                 "ea06" !default;
-$tyicons-quote-left:           "ea0a" !default;
-$tyicons-quote-right:          "ea0b" !default;
-$tyicons-search:               "ea09" !default;
+$tyicons-angle-up:             "ea04" !default;
+$tyicons-angle-up-down:        "ea05" !default;
+$tyicons-bars:                 "ea06" !default;
+$tyicons-check:                "ea07" !default;
+$tyicons-dash:                 "ea08" !default;
+$tyicons-quote-left:           "ea09" !default;
+$tyicons-quote-right:          "ea0a" !default;
+$tyicons-search:               "ea0b" !default;
 $tyicons-x:                    "ea0c" !default;
