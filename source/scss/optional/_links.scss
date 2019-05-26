@@ -1,7 +1,7 @@
 a {
   color:var(--tycolor-fg);
   text-decoration:none;
-  transition-duration:$tyfy-transition-duration-hover;
+  transition-duration:$tyduration-hover;
   transition-property:background-color,border-color,color;
   &[href] {
     border-bottom-color:var(--tycolor-border-link-default);
@@ -15,13 +15,13 @@ a {
   .links-underlined & {
     &[href] {
       border-bottom-style:solid;
-      border-bottom-width:$tyfy-width-border;
+      border-bottom-width:$tywidth-border;
     }
   }
-  &[href].button {
-    @include button;
+  &[href].tybutton {
+    @include tybutton;
   }
-  &[href].button-outline {
-    @include button-outline;
+  &[href].tybutton-outline {
+    @include tybutton-outline;
   }
 }
