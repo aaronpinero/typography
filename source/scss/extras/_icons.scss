@@ -1,5 +1,5 @@
 // copied from the scss file that is output by running `npm build icons`
-@if $tyfy-symbol == tyicons {
+@if $tyfont-symbol == tyicons {
   @font-face {
     font-family:tyicons;
     src:url("#{$tyicons-path}/tyicons.eot");

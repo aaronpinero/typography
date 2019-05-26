@@ -1,7 +1,7 @@
 // default lists
 ol,
 ul {
-  padding-left:$tyindent;
+  padding-left:$tyindent-md;
 }
 dt {
   font-family:$tyfont-heading;
@@ -10,13 +10,13 @@ dt {
 dd {
   margin-left:0;
   margin-right:0;
-  padding-left:$tyindent;
+  padding-left:$tyindent-md;
 }
 
 // nested lists
 ol, ul {
   ol, ul {
-    margin-top:$tyspacing/2;
+    margin-top:$tyspacing-md/2;
   }
   .tymargins-off &,
   &.tymargins-off {
@@ -61,11 +61,11 @@ ul {
     &.list-indented {
       li {
         box-sizing:border-box;
-        padding-left:$tyindent;
-        text-indent:-1 * $tyindent;
+        padding-left:$tyindent-md;
+        text-indent:-1 * $tyindent-md;
       }
       ol, ul {
-        margin-left:-1 * $tyindent;
+        margin-left:-1 * $tyindent-md;
       }
     }
     &.list-cols-2,
@@ -86,7 +86,7 @@ ul {
     flex-wrap:wrap;
     padding-left:0;
     li {
-      margin-left:$tyindent;
+      margin-left:$tyindent-md;
     }
     &.list-flex-center {
       justify-content:center;
@@ -107,7 +107,7 @@ ol,
 ul {
   &.list-cols-2,
   &.list-cols-3 {
-    @media (min-width:$tyfbreak-list-cols2) {
+    @media (min-width:$tybreak-list-cols2) {
       @include tymargins(off);
       columns:2;
       column-gap:$tyspacing-lg;
@@ -117,11 +117,11 @@ ul {
         -webkit-column-break-inside:avoid;
         page-break-inside:avoid;
         break-inside:avoid;
-        margin-left:$tyindent;
+        margin-left:$tyindent-md;
         padding-bottom:tygrid(1);
       }
-      &.sibling-margins-off,
-      .sibling-margins-off & {
+      &.tymargins-off,
+      .tymargins-off & {
         li {
           padding-bottom:0;
         }
@@ -143,8 +143,8 @@ ul {
       padding-left:0;
       li {
         box-sizing:border-box;
-        margin-left:$tyindent;
-        width:calc(50% - #{$tyindent} - #{(0.5 * $tyspacing-lg)});
+        margin-left:$tyindent-md;
+        width:calc(50% - #{$tyindent-md} - #{(0.5 * $tyspacing-lg)});
         &:nth-child(2) {
           margin-top:0; // override of the default margin
         }
@@ -163,7 +163,7 @@ ul {
   &.list-grid-4 {
     @media (min-width:$tybreak-list-cols3) {
       li {
-        width:calc(33.33% - #{$tyindent} - #{(0.667 * $tyspacing-lg)});
+        width:calc(33.33% - #{$tyindent-md} - #{(0.667 * $tyspacing-lg)});
         &:nth-child(3) {
           margin-top:0; // override of the default margin
         }
@@ -185,7 +185,7 @@ ul {
   &.list-grid-4 {
     @media (min-width:$tybreak-list-cols4) {
       li {
-        width:calc(25% - #{$tyindent} - #{(0.75 * $tyspacing-lg)});
+        width:calc(25% - #{$tyindent-md} - #{(0.75 * $tyspacing-lg)});
         &:nth-child(4) {
           margin-top:0; // override of the default margin
         }

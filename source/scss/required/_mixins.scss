@@ -63,7 +63,7 @@
 // in which case the specified margin size will be applied to all
 // descendants
 
-@mixin tymargins-size ($context:all, $measure:$tyspacing) {
+@mixin tymargins-size ($context:all, $measure:$tyspacing-md) {
   @if $context == headings {
     // headings
     :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
@@ -109,7 +109,7 @@
     // everything
     @include tymargins-size;
     // lists
-    @include tymargins-size(lists,$tyspacing/2);
+    @include tymargins-size(lists,$tyspacing-md/2);
     // headings
     @include tymargins-size(headings,$tyspacing-lg);
   }
@@ -194,7 +194,7 @@
 }
 
 ////////// tybutton-outline mixin //////////
-// 
+//
 // based on the tybutton mixin
 //
 // used to apply button appearance to an element;

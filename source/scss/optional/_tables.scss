@@ -166,7 +166,7 @@ table {
   &.float-right {
     @media (min-width:$tybreak-float) {
       box-sizing:border-box;
-      margin-bottom:$tyspacing;
+      margin-bottom:$tyspacing-md;
       width:calc(50% - #{tygrid(2)});
     }
   }

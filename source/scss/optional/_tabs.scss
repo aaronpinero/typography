@@ -1,5 +1,5 @@
 * + .tabs-container {
-  margin-top:$tyspacing;
+  margin-top:$tyspacing-md;
 }
 .tabs-container + h2,
 .tabs-container + h3,
@@ -10,7 +10,7 @@
 }
 .tabs-container {
   ul.tabs {
-    @include sibling-margins(off);
+    @include tymargins(off);
     align-items:stretch;
     border-bottom:$tywidth-border var(--tycolor-border) solid;
     display:none;
@@ -50,7 +50,7 @@
   }
   &.tabs-processed {
     * + .tab-label {
-      margin-top:$tyspacing;
+      margin-top:$tyspacing-md;
     }
     .tab-label {
       background-color:transparent;

@@ -70,8 +70,8 @@ h6.collapsable-processed {
     }
   }
   * + &,
-  .sibling-margins-on * + & {
-    margin-top:$tyspacing;
+  .tymargins-on * + & {
+    margin-top:$tyspacing-md;
   }
 }
 h3.collapsable-processed {

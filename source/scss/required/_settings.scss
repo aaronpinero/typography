@@ -5,16 +5,16 @@
 // sass maps of spacing and indent values are defined as multiple of
 // the grid unit
 $tyspacing: (
-  "default":  2,
+  "medium":   2,
   "large":    3,
 ) !default;
 $tyindent: (
-  "default":  3,
+  "medium":   3,
   "small":    2,
 ) !default;
-$tyspacing:                    tygrid(map-get($tyspacing,"default")) !default;
+$tyspacing-md:                 tygrid(map-get($tyspacing,"medium")) !default;
 $tyspacing-lg:                 tygrid(map-get($tyspacing,"large")) !default;
-$tyindent:                     tygrid(map-get($tyindent,"default")) !default;
+$tyindent-md:                  tygrid(map-get($tyindent,"medium")) !default;
 $tyindent-sm:                  tygrid(map-get($tyindent,"small")) !default;
 
 // toggle for adjacent sibling margins
