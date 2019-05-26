@@ -57,7 +57,7 @@ $tylead-adjustment-short:1.2 !default; // $leading-style:short
 // based on the base font size and scalar value
 // this function makes it easier to work with the modular scale
 
-@function tyscale($exponent) {
+@function tyscale($exponent:0) {
   $i:0;
   $scale:$tyfont-size-base;
   @if $exponent < 0 {

@@ -73,14 +73,14 @@ $tybreak-table:                40em !default;
 
 // durations for transition and animation
 $tyduration: (
-  "250":      250ms,
-  "500":      500ms,
-  "1000":     1000ms,
-  "2000":     2000ms,
-  "3000":     3000ms
+  "hover":    250ms,
+  "move":     500ms,
+  "long":     1000ms,
+  "longer":   2000ms,
+  "longest":  3000ms
 ) !default;
-$tyduration-hover:             map-get($tyduration,"250") !default;
-$tyduration-move:              map-get($tyduration,"500") !default;
+$tyduration-hover:             map-get($tyduration,"hover") !default;
+$tyduration-move:              map-get($tyduration,"move") !default;
 
 // colors
 $tycolor-bg:                   white !default;
