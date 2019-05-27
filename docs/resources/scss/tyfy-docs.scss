@@ -9,8 +9,11 @@ $tyfont-table:$tyfont-sans;
 $tyfont-input:$tyfont-sans;
 $tycolor-bg-rev:#333;
 $tywidth-constrained:55rem;
-$color-codebox:#508066;
-$color-example:#609077;
+$color-codebox:darken(#80cc33,25%);
+$color-codebox-text:mix(#8033cc,#999999,20%);
+$color-codebox-attr:darken(#cc3380,10%);
+$color-example:darken(#80cc33,25%);
+$color-value:mix(#8033cc,#999999,75%);
 @import "../../../source/scss/tyfy.scss";
 @import "../../../source/scss/extras/_effects.scss";
 @import "../../../source/scss/extras/_responsive_text.scss";
@@ -155,17 +158,23 @@ pre.codebox {
       color:$color-example;
     }
   }
+  span.txt {
+    color:$color-codebox-text;
+  }
+  span.attr {
+    color:$color-codebox-attr;
+  }
 }
 code.val-default {
   background-color:transparent;
-  color:lighten(mix($tycolor-link-default,$tycolor-link-active),10%);
+  color:$color-value;
   font-style:italic;
   font-weight:normal;
   padding-left:0;
   padding-right:0;
 }
 .tyfyicons.example {
-  color:lighten(mix($tycolor-link-default,$tycolor-link-active),10%);
+  color:$color-value;
   margin-left:0.25em;
   margin-right:0.25em;
   vertical-align:bottom;
