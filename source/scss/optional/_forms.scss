@@ -110,7 +110,7 @@ select {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  height:1.5em;
+  height:$tyfont-size-base;
   vertical-align:baseline;
 }
 button,
