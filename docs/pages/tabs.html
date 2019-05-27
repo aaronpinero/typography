@@ -21,7 +21,7 @@
   </head>
   <body class="">
 		<!-- COMMON HEADER -->
-		<header class="brand sibling-margins-off reverse">
+		<header class="brand tymargins-off reverse">
 			<h1><a href="index.html">Tyfy</a></h1>
 			<nav>
 				<h2>Contents</h2>
@@ -52,11 +52,23 @@
 		<!--/ COMMON HEADER -->
     <section class="main links-underlined">
       <h1>Tabs</h1>
-      <p>It is occasionally useful to present content as a set of tabs. Tabs are presented horizontally with the content of the selected tab appearing directly below the tabs.</p>
-      <p>Unfortunately, tabs are not a good choice when the browser window is specially small or narrow, as on phones. <strong class="tyfy">Tyfy</strong> tabs are responsive. At narrow screen sizes, the tabs convert to <a href="collapsables.html">collapsable headings</a>.</p>
-      <p><strong class="tyfy">Tyfy</strong> tabs accommodate linking to anchors within tabs. Each tab label is also given a unique id attribute, allowing for links that open a specific tab.</p>
+      <p>Tabs are presented horizontally with the content of the selected tab appearing directly below the tabs. <strong class="tyfy">Tyfy</strong> tabs:</p>
+      <ul>
+        <li>are responsive, reducing to <a href="collapsables.html">collapsable headings</a> at small screen sizes</li>
+        <li>allow for anchored links to tabs or to content inside inactive tabs</li>
+        <li>require Javascript (tabs.js)</li>
+      </ul>
       <h2><span class="smallcaps">HTML</span> Structure</h2>
-      <p>All tab labels and tab content are enclosed in a block-level element with the <code>tabs-container</code> class. Individual tabs are defined by indicating the label for each tab with the <code>tab-label</code> class. JavaScript is used to identify the contents of each tab and to generate the clickable tabs. The content of a tab is defined as all the next sibling elements following the <code>tab-label</code> element up to the next <code>tab-label</code>.</p> 
+      <p>All tab labels and tab content are enclosed in a block-level element with the <code>tabs-container</code> class. Individual tabs are defined by indicating the label for each tab with the <code>tab-label</code> class.</p>
+      <pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;div class="tabs-container"&gt;
+  &lt;h2 class="tab-label"&gt;Tab Label 1&lt;/h2&gt;
+  &lt;p&gt;[content of the tab]&lt;/p&gt;
+  &lt;p&gt;[content of the tab]&lt;/p&gt;
+  &lt;h2 class="tab-label"&gt;Tab Label 2&lt;/h2&gt;
+  &lt;p&gt;[content of the tab]&lt;/p&gt;
+  &lt;ul&gt;[content of the tab]&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+      <p>JavaScript is used to identify the contents of each tab and to generate the clickable tabs. The content of a tab is defined as <em>all the next sibling elements following the <code>tab-label</code> element up to the next <code>tab-label</code></em>. JavaScript wraps the content of each tab in a  <code>&lt;div&gt;</code> with the class <code>tab-panel</code> and creates an unordered list . To indicate that JavaScript has acted on the collapsable heading, the class collapsable-processed is added to the collapsable heading. So, after JavaScript has run, the code will appear as follows:</p> 
       <pre>&lt;div class="tabs-container"&gt;
   &lt;h2 class="tab-label"&gt;Tab Label 1&lt;/h2&gt;
   &lt;p&gt;[content of the tab]&lt;/p&gt;
