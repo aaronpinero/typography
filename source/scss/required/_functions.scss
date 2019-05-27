@@ -1,69 +1,74 @@
 ////////// tylead function //////////
-// the tylead function is used to calculate a grid-unit-based leading for a given fontsize
+//
+// used to calculate a grid-unit-based leading for a given font size
 // this function makes it easier to maintain a consistent baseline grid
 //
 // line height adjustment variables are used in the tylead function to
-// increase or decrease the leading; smaller values will result in larger leading
-// the adjustment variable values can be overridden, but in most cases the defaults will do
-//
-$tyfy-leading-adjustment-tall:0.8 !default;  // $leading-style:tall
-$tyfy-leading-adjustment-base:0.9 !default;  // $leading-style:base
-$tyfy-leading-adjustment-heading:1 !default; // $leading-style:heading
-$tyfy-leading-adjustment-short:1.2 !default; // $leading-style:short
+// increase or decrease the leading; smaller values will result in
+// larger leading; the adjustment variable values can be overridden,
+// but in most cases the defaults will do
+
+$tylead-adjustment-tall:0.8 !default;  // $leading-style:tall
+$tylead-adjustment-base:0.9 !default;  // $leading-style:base
+$tylead-adjustment-heading:1 !default; // $leading-style:heading
+$tylead-adjustment-short:1.2 !default; // $leading-style:short
+
 @function tylead($font-size,$leading-style:base) {
   // by default, use the base adjustment value
   // the base adjustment value is less than 1 so that
   // the calculated leading will always be greater than the font size
-  $adjustment_factor:$tyfy-leading-adjustment-base;
+  $adjustment_factor:$tylead-adjustment-base;
   // if the leading style is 'tall', the adjustment factor will be smaller
   @if $leading-style == tall {
-    $adjustment_factor:$tyfy-leading-adjustment-tall;
+    $adjustment_factor:$tylead-adjustment-tall;
   }
   // if the leading style is 'heading', the adjustment factor will be larger
   @else if $leading-style == heading {
-    $adjustment_factor:$tyfy-leading-adjustment-heading;
+    $adjustment_factor:$tylead-adjustment-heading;
   }
   // if the leading style is 'short', the adjustment factor will be largest
   @else if $leading-style == short {
-    $adjustment_factor:$tyfy-leading-adjustment-short;
+    $adjustment_factor:$tylead-adjustment-short;
   }
   //
   // now that we have the adjustment factor value, calculate the leading
   // if the font size is smaller than the adjusted grid unit
-  @if $font-size <= ($tyfy-grid-unit*$adjustment_factor) {
-    @return $tyfy-grid-unit;
+  @if $font-size <= ($tygrid-unit*$adjustment_factor) {
+    @return $tygrid-unit;
   }
   // else, the leading will be some multiple of the grid unit
   @else {
-    @return ceil($font-size/($tyfy-grid-unit*$adjustment_factor)) * $tyfy-grid-unit;
+    @return ceil($font-size/($tygrid-unit*$adjustment_factor)) * $tygrid-unit;
   }
 }
 
 ////////// tygrid function //////////
-// the tygrid function is used to calculate a multiple of the base grid unit
-// this function makes it easier to work with the grid unit variables
 //
+// used to calculate a multiple of the base grid unit;
+// this function makes it easier to work with the grid unit
+
 @function tygrid($multiplier:1) {
-  @return $tyfy-grid-unit * $multiplier;
+  @return $tygrid-unit * $multiplier;
 }
 
 ////////// tyscale function //////////
-// the tyscale function is used to calculate a font size from the modular scale
+// 
+// used to calculate a font size from the modular scale
 // based on the base font size and scalar value
 // this function makes it easier to work with the modular scale
-//
-@function tyscale($exponent) {
+
+@function tyscale($exponent:0) {
   $i:0;
-  $scale:$tyfy-font-size-base;
+  $scale:$tyfont-size-base;
   @if $exponent < 0 {
     @while $i > $exponent {
-      $scale:$scale/$tyfy-font-size-scalar;
+      $scale:$scale/$tyfont-size-scalar;
       $i:$i - 1;
     }
   }
   @else if $exponent > 0 {
     @while $i < $exponent {
-      $scale:$scale*$tyfy-font-size-scalar;
+      $scale:$scale*$tyfont-size-scalar;
       $i:$i + 1;
     }
   }
@@ -71,9 +76,10 @@ $tyfy-leading-adjustment-short:1.2 !default; // $leading-style:short
 }
 
 ////////// tychar function //////////
-// the tychar function is used to output character code strings for icon fonts
-// see https://github.com/sass/libsass/issues/1115
 //
+// used to output character code strings for icon fonts
+// see https://github.com/sass/libsass/issues/1115
+
 @function tychar($code) {
   /* stylelint-disable-next-line string-no-newline */
   @return unquote("\"") + unquote(str_insert($code,"\\",1)) + unquote("\"");

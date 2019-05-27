@@ -2,12 +2,9 @@
 
 My framework for applying elements of typographic style to web projects. See the [online docs and demos](http://aaronpinero.net/tyfy/docs/index.html) and [the Medium article](https://medium.com/@aaronpinero/why-tyfy-1665e36b4f94.)
 
-## TODOs for next release
+## Version 2
 
-* responsive iframe utility class
-* generic floated content utility classes
-* sticky table headers option
-* remove jQuery dependency
+Version 2 of Tyfy is not going to be backwards compatible with the current release (1.4.5). I am implementing a huge set of improvements. One of the major changes involves renaming most, if not all, of the SASS variables and mixins so the naming scheme is unique and internally consistent.
 
 ## Why build another framework?
 
@@ -35,7 +32,5 @@ I realize that without the benefit of work previously done by others, this proje
 * [HTML5 Boilerplate](https://html5boilerplate.com)
 * [Archetype](https://archetypeapp.com)
 * [Bootstrap](https://getbootstrap.com)
-* The [Columbia College](https://www.college.columbia.edu) Style Guide
 * [PureCSS](https://purecss.io)
-* [Simpleicons](https://simpleicons.org)
 * [Better Web Type](https://betterwebtype.com)

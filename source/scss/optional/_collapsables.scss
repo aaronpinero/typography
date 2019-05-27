@@ -5,16 +5,16 @@ h4.collapsable-processed,
 h5.collapsable-processed,
 h6.collapsable-processed {
   background-color:transparent;
-  border-bottom:$tyfy-width-border transparent solid;
+  border-bottom:$tywidth-border transparent solid;
   clear:both;
   cursor:pointer;
-  padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tyfy-width-border}) 0;
+  padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tywidth-border}) 0;
   position:relative;
   &::before {
     border-radius:50%;
     color:var(--tycolor-text-light);
-    content:tychar($tyfyicons-angle-up);
-    font-family:$tyfy-symbol;
+    content:tychar($tyicons-angle-up);
+    font-family:$tyfont-symbol;
     font-size:60%;
     font-style:normal;
     font-weight:normal;
@@ -22,76 +22,76 @@ h6.collapsable-processed {
     right:tygrid(0);
     text-align:center;
     top:tygrid(0);
-    transition-duration:$tyfy-transition-duration-move;
+    transition-duration:$tyduration-move;
     transition-property:background-color,color,top;
     transition-timing-function:ease-in-out;
-    width:tylead($tyfy-font-size-h2,heading);
+    width:tylead($tyfont-size-h2,heading);
   }
   &.closed {
-    border-bottom:$tyfy-width-border var(--tycolor-border) solid;
+    border-bottom:$tywidth-border var(--tycolor-border) solid;
     &::before {
-      content:tychar($tyfyicons-angle-down);
+      content:tychar($tyicons-angle-down);
     }
   }
   &.transition.closed {
-    border-bottom:$tyfy-width-border transparent solid;
+    border-bottom:$tywidth-border transparent solid;
   }
-  @media (min-width:$tyfy-break-collapsables-pad) {
-    border:$tyfy-width-border var(--tycolor-border) solid;
-    border-bottom:$tyfy-width-border transparent solid;
-    padding:calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(6)} - #{$tyfy-width-border}) calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
+  @media (min-width:$tybreak-collapsables) {
+    border:$tywidth-border var(--tycolor-border) solid;
+    border-bottom:$tywidth-border transparent solid;
+    padding:calc(#{tygrid(2)} - #{$tywidth-border}) calc(#{tygrid(6)} - #{$tywidth-border}) calc(#{tygrid(1)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
     position:relative;
-    transition-duration:$tyfy-transition-duration-move;
+    transition-duration:$tyduration-move;
     transition-property:padding-top;
     &::before {
       right:tygrid(2);
       top:tygrid(2);
     }
     &.closed {
-      border-bottom:$tyfy-width-border var(--tycolor-border) solid;
-      padding-top:calc(#{tygrid(1)} - #{$tyfy-width-border});
+      border-bottom:$tywidth-border var(--tycolor-border) solid;
+      padding-top:calc(#{tygrid(1)} - #{$tywidth-border});
       &::before {
-        content:tychar($tyfyicons-angle-down);
+        content:tychar($tyicons-angle-down);
         top:tygrid(1);
       }
     }
     &.transition {
-      padding-top:calc(#{tygrid(1)} - #{$tyfy-width-border});
+      padding-top:calc(#{tygrid(1)} - #{$tywidth-border});
       &::before {
         top:tygrid(1);
       }
     }
     &.transition.closed {
-      border-bottom:$tyfy-width-border transparent solid;
-      padding-top:calc(#{tygrid(2)} - #{$tyfy-width-border});
+      border-bottom:$tywidth-border transparent solid;
+      padding-top:calc(#{tygrid(2)} - #{$tywidth-border});
       &::before {
         top:tygrid(2);
       }
     }
   }
   * + &,
-  .sibling-margins-on * + & {
-    margin-top:$tyfy-spacing-standard;
+  .tymargins-on * + & {
+    margin-top:$tyspacing-md;
   }
 }
 h3.collapsable-processed {
   &::before {
-    width:tylead($tyfy-font-size-h3,heading);
+    width:tylead($tyfont-size-h3,heading);
   }
 }
 h4.collapsable-processed {
   &::before {
-    width:tylead($tyfy-font-size-h4,heading);
+    width:tylead($tyfont-size-h4,heading);
   }
 }
 h5.collapsable-processed {
   &::before {
-    width:tylead($tyfy-font-size-h5,heading);
+    width:tylead($tyfont-size-h5,heading);
   }
 }
 h6.collapsable-processed {
   &::before {
-    width:tylead($tyfy-font-size-h6,heading);
+    width:tylead($tyfont-size-h6,heading);
   }
 }
 h2.collapsable-processed,
@@ -109,14 +109,14 @@ h6.collapsable-processed {
 
 .collapsables {
   box-sizing:border-box;
-  border-bottom:$tyfy-width-border var(--tycolor-border) solid;
+  border-bottom:$tywidth-border var(--tycolor-border) solid;
   margin:0rem;
   overflow:hidden;
-  padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tyfy-width-border}) 0;
-  @media (min-width:$tyfy-break-collapsables-pad) {
-    border:$tyfy-width-border var(--tycolor-border) solid;
+  padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tywidth-border}) 0;
+  @media (min-width:$tybreak-collapsables) {
+    border:$tywidth-border var(--tycolor-border) solid;
     border-top:none !important;
-    padding:calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
+    padding:calc(#{tygrid(1)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
   }
   &.closed {
     border:none;
