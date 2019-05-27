@@ -61,10 +61,10 @@ function TYFY_ResponsiveTablesOn() {
 }
 
 function TYFY_ResponsiveTablesOff() {
-  var tables = document.getElementsByClassName('tyfy-responsive-processed'); console.log(tables.length);
+  var tables = document.getElementsByClassName('tyfy-responsive-processed');
   var x;
   for (x=(tables.length - 1);x>=0;x--) { // iterate in reverse because HTML collections are live
-    var labels = tables.item(x).getElementsByClassName('tyfy-td-label'); console.log(labels.length);
+    var labels = tables.item(x).getElementsByClassName('tyfy-td-label');
     if (labels.length > 0) {
       var y;
       for (y=(labels.length - 1);y>=0;y--) { // iterate in reverse because HTML collections are live

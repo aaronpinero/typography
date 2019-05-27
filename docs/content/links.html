@@ -9,7 +9,7 @@
 		<section class="main links-underlined">
 			<h1>Link Styles</h1>
 			<p>Links must have a style that is different from body text, but anchors should not. Because anchors and links share the <code>&lt;a&gt;</code> tag, it is necessary to progressively define styles for this tag. Here, the default appearance of the <code>&lt;a&gt;</code> tag is the same as for body text. Using an attribute selector, those elements that have an <code>href</code> attribute have link styles applied.</p>
-			<pre>a {
+			<pre class="codebox"><code class="code-nobg">a {
   [styles]
   &[href] {
     [link styles]
@@ -18,21 +18,69 @@
       [hovered and active link styles]
     }
   }
-}</pre>
-			<p>For links, I have used <code>border-bottom</code> to apply an underline instead of <code>text-decoration</code>. This way, the underline can be styled and transitions can be employed. The framework includes <span class="smallcaps">SASS</span> variables to globally define transition speeds.</p>
-			<p>Links in headings have a slightly different appearance, as I prefer links in this context to have a default appearance that is not too far removed from the heading style.</p>
-			<p>There are contexts in which I prefer links to not have any underline. When creating tabs, menus, or other navigation, I often must override the default style to remove the underline. The default link styles do not have an underline. The <code>links-underlined</code> class can be applied where links should be presented with an underline.</p>
-      <p>Links can be presented as a button using the <code>button</code> and <code>button-outline</code> classes. These classes are dependent on mixins of the same name. Using mixins allows the same button styling to be applied to other elements.</p>
-		</section>
-		<section class="main links-underlined demo">
-			<h1>Demo</h1>
-			<h2><a name="anchor1">Anchored Heading</a></h2>
-			<p><a name="anchor2">Anchored text</a>.</p>
-			<p>Lorem ipsum dolor sit amet, <a href="http://aaronpinero.net">consectetur adipiscing elit</a>. Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus. Cras odio mauris, varius nec tempor nec, elementum eget augue. Vivamus pretium ante sed ex ultrices semper. Donec ante diam, convallis at rutrum sit amet, sodales nec est. Integer tincidunt felis luctus placerat fermentum. Duis et felis mi. Mauris sed faucibus neque. Morbi facilisis blandit est, vel pellentesque nisi elementum ut.</p>
-			<p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
-			<h3>Pariatur Alias <a href="http://aaronpinero.net">Reprehenderit</a> Soluta Dolor</h3>
-			<p>Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas <a href="http://aaronpinero.net">quis nisi</a> sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.</p>
-			<p><a href="http://aaronpinero.net" class="button">Link as Button</a> <a href="http://aaronpinero.net" class="button-outline">Link as Outline Button</a></p>
+}</code></pre>
+			<p>For underlined links, I have used <code>border-bottom</code> to apply an underline instead of <code>text-decoration</code>. This way, the underline can be styled and transitions can be employed. The framework includes <span class="smallcaps">SASS</span> variables to globally define transition speeds.</p>
+			<h2 id="classes">Classes</h2>
+			<dl>
+  			<dt>.button</dt>
+  			<dd>Applied to an <code>&lt;a&gt;</code> tag to make a link appear as a button.</dd>
+  			<dt>.button-outline</dt>
+  			<dd>Applied to an <code>&lt;a&gt;</code> tag to make a link appear as an outlined button.</dd>
+  			<dt>.links-underlined</dt>
+  			<dd>Applied to a containing element to add underlines to descendant links; by default, links do not have any underline.</dd>
+  			<dt>.links-notunderlined</dt>
+  			<dd>Applied to a containing element to remove underlines to descendant links; intended to be used inside an element that has the <code>links-underlined</code> class.</dd>
+			</dl>
+			<h2 id="variables">Variables</h2>
+			<dl>
+				<dt>$tycolor-fg</dt>
+				<dd><code class="val-default">#111111 !default;</code></dd>
+				<dd>Color of anchor links (same as body text color)</dd>
+				<dt>$tyfy-transition-duration-hover</dt>
+				<dd><code class="val-default">0.25s !default;</code></dd>
+				<dd>Duration for transition of border, background color, and text color on hovered links.</dd>
+				<dt>$tycolor-link-default</dt>
+				<dd><code class="val-default">#3380cc !default;</code></dd>
+				<dd>Default link color</dd>
+				<dt>$tycolor-link-active</dt>
+				<dd><code class="val-default">#cc3380 !default;</code></dd>
+				<dd>Hovered and active link color</dd>
+				<dt>$tycolor-border-link-default</dt>
+				<dd><code class="val-default">rgba($tycolor-link-default,0.5) !default;</code></dd>
+				<dd>Default link underline color</dd>
+				<dt>$tycolor-border-link-active</dt>
+				<dd><code class="val-default">rgba($tycolor-link-active,0.75) !default;</code></dd>
+				<dd>Hovered and active link underline color</dd>
+				<dt>$tyfy-width-border</dt>
+				<dd><code class="val-default">2px !default;</code></dd>
+				<dd>Width (thickness) of the link underline</dd>
+			</dl>
+			<h2 id="examples">Examples</h2>
+			<h3>Default Styles</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;h2&gt;&lt;a name="anchor1"&gt;Anchored Heading&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a name="anchor2"&gt;Anchored text&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="http://aaronpinero.net"&gt;Ut euismod purus&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Ut euismod purus sed &lt;a href="http://aaronpinero.net"&gt;dolor bibendum&lt;/a&gt;, et viverra sapien sagittis. Nullam luctus malesuada ante eget porttitor. Pellentesque eu lobortis augue. Quisque convallis porta tellus, eget lobortis dolor varius accumsan. &lt;a href="http://aaronpinero.net"&gt;Donec eu purus&lt;/a&gt; ut diam egestas dapibus. Morbi lorem est, luctus ac magna a, luctus volutpat mi. Nullam id &lt;a href="http://aaronpinero.net"&gt;nulla eget urna&lt;/a&gt; finibus lacinia. Curabitur porttitor tempus nulla non fringilla. Nam egestas vestibulum sem, vel tincidunt elit iaculis non.&lt;/p&gt;</code></pre>
+			<figure class="example links-notunderlined">
+  		  <h2><a name="anchor1">Anchored Heading</a></h2>
+        <p><a name="anchor2">Anchored text</a>.</p>
+        <h2><a href="http://aaronpinero.net">Ut euismod purus</a></h2>
+        <p>Ut euismod purus sed <a href="http://aaronpinero.net">dolor bibendum</a>, et viverra sapien sagittis. Nullam luctus malesuada ante eget porttitor. Pellentesque eu lobortis augue. Quisque convallis porta tellus, eget lobortis dolor varius accumsan. <a href="http://aaronpinero.net">Donec eu purus</a> ut diam egestas dapibus. Morbi lorem est, luctus ac magna a, luctus volutpat mi. Nullam id <a href="http://aaronpinero.net">nulla eget urna</a> finibus lacinia. Curabitur porttitor tempus nulla non fringilla. Nam egestas vestibulum sem, vel tincidunt elit iaculis non.</p>
+			</figure>
+			<h3>Underlined</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;h2&gt;&lt;a href="http://aaronpinero.net"&gt;Ut euismod purus&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Ut euismod purus sed &lt;a href="http://aaronpinero.net"&gt;dolor bibendum&lt;/a&gt;, et viverra sapien sagittis. Nullam luctus malesuada ante eget porttitor. Pellentesque eu lobortis augue. Quisque convallis porta tellus, eget lobortis dolor varius accumsan. &lt;a href="http://aaronpinero.net"&gt;Donec eu purus&lt;/a&gt; ut diam egestas dapibus. Morbi lorem est, luctus ac magna a, luctus volutpat mi. Nullam id &lt;a href="http://aaronpinero.net"&gt;nulla eget urna&lt;/a&gt; finibus lacinia. Curabitur porttitor tempus nulla non fringilla. Nam egestas vestibulum sem, vel tincidunt elit iaculis non.&lt;/p&gt;</code></pre>
+			<figure class="example">
+        <h2><a href="http://aaronpinero.net">Ut euismod purus</a></h2>
+        <p>Ut euismod purus sed <a href="http://aaronpinero.net">dolor bibendum</a>, et viverra sapien sagittis. Nullam luctus malesuada ante eget porttitor. Pellentesque eu lobortis augue. Quisque convallis porta tellus, eget lobortis dolor varius accumsan. <a href="http://aaronpinero.net">Donec eu purus</a> ut diam egestas dapibus. Morbi lorem est, luctus ac magna a, luctus volutpat mi. Nullam id <a href="http://aaronpinero.net">nulla eget urna</a> finibus lacinia. Curabitur porttitor tempus nulla non fringilla. Nam egestas vestibulum sem, vel tincidunt elit iaculis non.</p>
+			</figure>
+			<h3>Buttons</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;p&gt;&lt;a href="http://aaronpinero.net" class="button"&gt;Button&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://aaronpinero.net" class="button-outline"&gt;Outline Button&lt;/a&gt;&lt;/p&gt;</code></pre>
+			<figure class="example">
+			  <p><a href="http://aaronpinero.net" class="button">Button</a></p>
+        <p><a href="http://aaronpinero.net" class="button-outline">Outline Button</a></p>
+			</figure>
 		</section>
 		<%include footer.html%>
 	</body>

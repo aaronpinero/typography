@@ -252,7 +252,7 @@ hr {
   margin-top: 0rem; }
 
 /* line 2, source/scss/optional/_paragraphs.scss */
-.paragraphs-justified p,
+.justified p,
 p.justified {
   /* autoprefixer: off */
   -moz-hyphens: auto;
@@ -350,7 +350,11 @@ a {
   .links-underlined a[href] {
     border-bottom-style: solid;
     border-bottom-width: 2px; }
-  /* line 21, source/scss/optional/_links.scss */
+  /* line 22, source/scss/optional/_links.scss */
+  .links-notunderlined a[href] {
+    border-bottom-style: none;
+    border-bottom-width: 0; }
+  /* line 27, source/scss/optional/_links.scss */
   a[href].tybutton {
     background-color: #3366cc;
     border: none;
@@ -377,7 +381,7 @@ a {
     /* line 190, source/scss/required/_mixins.scss */
     a[href].tybutton:focus, a[href].tybutton[href]:focus {
       outline: none; }
-  /* line 24, source/scss/optional/_links.scss */
+  /* line 30, source/scss/optional/_links.scss */
   a[href].tybutton-outline {
     background-color: #3366cc;
     border: none;
@@ -472,11 +476,11 @@ ul.list-nobullet {
   /* line 62, source/scss/optional/_lists.scss */
   ul.list-nobullet.list-indented li {
     box-sizing: border-box;
-    padding-left: 2.25rem;
-    text-indent: -2.25rem; }
+    padding-left: 1.125rem;
+    text-indent: -1.125rem; }
   /* line 67, source/scss/optional/_lists.scss */
   ul.list-nobullet.list-indented ol, ul.list-nobullet.list-indented ul {
-    margin-left: -2.25rem; }
+    margin-left: -1.125rem; }
   @media (min-width: 35em) {
     /* line 77, source/scss/optional/_lists.scss */
     ul.list-nobullet.list-cols-2 li, ul.list-nobullet.list-cols-3 li, ul.list-nobullet.list-grid-2 li, ul.list-nobullet.list-grid-3 li, ul.list-nobullet.list-grid-4 li {
@@ -1658,83 +1662,84 @@ select.tyselect {
   font-family: tyicons;
   font-size: inherit;
   font-weight: 400;
+  margin-top: 0;
   text-rendering: auto;
   transform: translate(0, 0);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; }
 
-/* line 24, source/scss/extras/_icons.scss */
+/* line 25, source/scss/extras/_icons.scss */
 .tyicons-lg {
   vertical-align: -15%;
   line-height: 0.75em;
   font-size: 1.33333333em; }
 
-/* line 29, source/scss/extras/_icons.scss */
+/* line 30, source/scss/extras/_icons.scss */
 .tyicons-2x {
   font-size: 2em; }
 
-/* line 32, source/scss/extras/_icons.scss */
+/* line 33, source/scss/extras/_icons.scss */
 .tyicons-3x {
   font-size: 3em; }
 
-/* line 35, source/scss/extras/_icons.scss */
+/* line 36, source/scss/extras/_icons.scss */
 .tyicons-4x {
   font-size: 4em; }
 
-/* line 38, source/scss/extras/_icons.scss */
+/* line 39, source/scss/extras/_icons.scss */
 .tyicons-5x {
   font-size: 5em; }
 
-/* line 41, source/scss/extras/_icons.scss */
+/* line 42, source/scss/extras/_icons.scss */
 .tyicons-fw {
   width: 1.28571429em;
   text-align: center; }
 
-/* line 45, source/scss/extras/_icons.scss */
+/* line 46, source/scss/extras/_icons.scss */
 .tyicons-angle-down::before {
   content: "\ea01"; }
 
-/* line 48, source/scss/extras/_icons.scss */
+/* line 49, source/scss/extras/_icons.scss */
 .tyicons-angle-left::before {
   content: "\ea02"; }
 
-/* line 51, source/scss/extras/_icons.scss */
+/* line 52, source/scss/extras/_icons.scss */
 .tyicons-angle-right::before {
   content: "\ea03"; }
 
-/* line 54, source/scss/extras/_icons.scss */
+/* line 55, source/scss/extras/_icons.scss */
 .tyicons-angle-up-down::before {
   content: "\ea04"; }
 
-/* line 57, source/scss/extras/_icons.scss */
+/* line 58, source/scss/extras/_icons.scss */
 .tyicons-angle-up::before {
   content: "\ea08"; }
 
-/* line 60, source/scss/extras/_icons.scss */
+/* line 61, source/scss/extras/_icons.scss */
 .tyicons-bars::before {
   content: "\ea07"; }
 
-/* line 63, source/scss/extras/_icons.scss */
+/* line 64, source/scss/extras/_icons.scss */
 .tyicons-check::before {
   content: "\ea05"; }
 
-/* line 66, source/scss/extras/_icons.scss */
+/* line 67, source/scss/extras/_icons.scss */
 .tyicons-dash::before {
   content: "\ea06"; }
 
-/* line 69, source/scss/extras/_icons.scss */
+/* line 70, source/scss/extras/_icons.scss */
 .tyicons-quote-left::before {
   content: "\ea0a"; }
 
-/* line 72, source/scss/extras/_icons.scss */
+/* line 73, source/scss/extras/_icons.scss */
 .tyicons-quote-right::before {
   content: "\ea0b"; }
 
-/* line 75, source/scss/extras/_icons.scss */
+/* line 76, source/scss/extras/_icons.scss */
 .tyicons-search::before {
   content: "\ea09"; }
 
-/* line 78, source/scss/extras/_icons.scss */
+/* line 79, source/scss/extras/_icons.scss */
 .tyicons-x::before {
   content: "\ea0c"; }
 

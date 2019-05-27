@@ -17,7 +17,7 @@
 		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
 		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy</title>
+		<title>Tyfy - Essential - Spacing</title>
 	</head>
 	<body class="">
 		<!-- COMMON HEADER -->
@@ -50,33 +50,19 @@
 			</nav>
 		</header>
 		<!--/ COMMON HEADER -->
-		<section class="main">
-			<header>
-				<h1><span class="fade-500ms">T</span><span class="fade-1s">y</span><span class="fade-2s">f</span><span class="fade-3s">y<span></h1>
-				<p><strong class="tyfy">Tyfy</strong> (shortened form of typography) is my framework for applying elements of typographic style to web projects.</p>
-			</header>
-			<ul class="list-icons list-icons-angle list-grid-3">
-				<li><a href="startup.html">Get Started</a></li>
-				<li><a href="modules.html">Modules</a></li>
-				<li><a href="variables.html">Variables</a></li>
-				<li><a href="functions.html">Functions</a></li>
-				<li><a href="mixins.html">Mixins</a></li>
-				<li><a href="icons.html">Icons</a></li>
-				<li><a href="paragraphs.html">Paragraphs</a></li>
-				<li><a href="headings.html">Headings</a></li>
-				<li><a href="links.html">Links</a></li>
-				<li><a href="lists.html">Lists</a></li>
-				<li><a href="utility.html">Utility Styles</a></li>
-				<li><a href="quotes.html">Quotes</a></li>
-				<li><a href="tables.html">Tables</a></li>
-				<li><a href="reverse.html">Reverse Styles</a></li>
-				<li><a href="collapsables.html">Collapsable Headings</a></li>
-				<li><a href="tabs.html">Tabs</a></li>
-				<li><a href="forms.html">Forms</a></li>
-				<li><a href="effects.html">Effects</a></li>
-				<li><a href="extras.html">Extras</a></li>
-				<li><a href="about.html">About Tyfy</a></li>
-			</ul>
+		<section class="main links-underlined">
+			<h1>Spacing</h1>
+      <p>The spacing module turns off the default top and bottom margins for all <span class="smallcaps">HTML</span> elements, replacing those styles with <strong class="tyfy">Tyfy</strong>s adjacent sibling margin rules. The adjacent sibling margin rules are applied if the value of the <code>$tyfy-margins-on</code> setting is <code>true</code>.</p>
+      <h2>Horizontal Rule</h2>
+      <p><strong class="tyfy">Tyfy</strong> treats the horizontal rule tag (<code>&lt;hr&gt;</code>) as a special case. In the spacing module, this tag’s top and bottom margin are set to the value of the <code>$tyfy-spacing-large</code> variable.
+      <h2>Classes</h2>
+      <p>The following classes are defined by the spacing module. They can be used to enable or disable the adjacent sibling margins in specific contexts. <em>Please note</em>: these classes may not behave as expected if nested. So, it is not recommended to use the <code>.sibling-margins-on</code> class on a descendant of an element that is using the <code>.sibling-margins-off</code>, or vice versa. This is because of how CSS interprets the wildcard selector.</p>
+			<dl>
+  			<dt>.sibling-margins-on</dt>
+  			<dd>Apply the default adjacent sibling margin rules to descendants of the element with this class</dd>
+  			<dt>.sibling-margins-off</dt>
+  			<dd>Remove the default adjacent sibling margin rules from descendants of the element with this class</dd>
+			</dl>
 		</section>
 		<!-- COMMON FOOTER -->
 		<footer>

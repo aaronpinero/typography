@@ -17,7 +17,7 @@
 		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
 		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy - Mixins</title>
+		<title>Tyfy - Modules - Mixins</title>
 	</head>
 	<body class="">
 		<!-- COMMON HEADER -->
@@ -52,27 +52,124 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Mixins</h1>
-			<p><strong class="tyfy">Tyfy</strong> includes several <span class="smallcaps">SASS</span> mixins. Some mixins were copied or borrowed from <a href="https://html5boilerplate.com">HTML5 Boilerplate</a> and are generally useful for any project. The remaining mixins facilitate the application of the 'smart' vertical margins between adjacent siblings.</p>
+			<p><strong class="tyfy">Tyfy</strong> mixins make it easier to use the some of the framework’s styles and effects.</p>
+			<h2 id="mixin-button">@mixin button</h2>
+			<p>Use this mixin to display an <span class="smallcaps">HTML</span> element as a button. The button’s text color will be black or white – whichever provides the best contrast with the button’s background color. To apply the mixin to a link, use the [href] attribute selector. See the <a href="links.html">links</a> and <a href="utility.html">utility</a> documetation for more information.</p>
+			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
-				<dt>@mixin clearfix</dt>
-				<dd>Copied directly from HTML5 Boilerplate for dealing with floats.</dd>
-				<dt>@mixin visuallyhidden ($type:true)</dt>
-				<dd>A customization of a similar mixin from HTML5 Boilerplate for obscuring elements without using the more disruptive <code>display:none</code></dd>
-				<dt>@mixin set-sibling-margins ($context:all, $measure:$tyfy-spacing-standard)</dt>
-				<dd>A mixin for setting the value of the vertical margin between adjacent siblings. The <code>all</code> context employs the lobotomized owl selector for margins between all elements. The <code>headings</code> context applies margin between a heading and a preceding non-heading element. The <code>lists</code> context applies margin between child element of definition, ordered, and unordered lists.</dd>
-				<dt>@mixin sibling-margins ($state:on)</dt>
-				<dd>A mixin for turning the vertical margin between adjacent siblings on an off. It depends on the <code>set-sibling-margins</code> mixin.</dd>
-				<dt>@mixin fade-in($duration:1000ms)</dt>
-				<dd>An effect that fades in the element to which the mixin is applied. The mixin accepts a duration as an argument; the default is <code>1000ms</code>.</dd>
-				<dt>@mixin button($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:tygrid(0.25))</dt>
-				<dd>A mixin for displaying a link or other tag as a button.</dd>
-				<dt>@mixin button-outline($color_default:$tycolor-link-default,$color_active:$tycolor-link-active,$border_radius:tygrid(0.25))</dt>
-				<dd>A mixin for displaying a link or other tag as an outlined button.</dd>
+				<dt>$color_default</dt>
+				<dd><em>optional</em></dd>
+				<dd>Default value is <code>$tycolor-link-default</code></dd>
+				<dd>The default button color; must be rgb, named color, or hexidecimal</dd>
+				<dt>$color_active</dt>
+				<dd><em>optional</em></dd>
+				<dd>Default value is <code>$tycolor-link-active</code></dd>
+				<dd>The hovered and active button color; must be rgb, named color, or hexidecimal</dd>
+				<dt>$border_radius</dt>
+				<dd><em>optional</em></dd>
+				<dd>Default value is <code>$tyfy-radius-border</code></dd>
+				<dd>The border radius of the button</dd>
 			</dl>
+			<h3 class="font-size-h4">Examples</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">tag.button {
+  @include button;
+}
+a.button[href] {
+  @include button(red,blue,0px);
+}</code></pre>
+			<h2 id="mixin-button-outline">@mixin button-outline</h2>
+			<p>Use this mixin to display an <span class="smallcaps">HTML</span> element as an outlined button. In the default state, the button background color is transparent and the button text color is the default color. In the active state, the button background color is the active color and the text color is either black or white – whichever provides the best contrast with the background color. To apply the mixin to a link, use the [href] attribute selector. See the <a href="links.html">links</a> and <a href="utility.html">utility</a> documetation for more information.</p>
+			<h3 class="font-size-h4">Arguments</h3>
+			<dl>
+				<dt>$color_default</dt>
+				<dd><em>optional</em></dd>
+				<dd>Default value is <code>$tycolor-link-default</code></dd>
+				<dd>The default button color; must be rgb, named color, or hexidecimal</dd>
+				<dt>$color_active</dt>
+				<dd><em>optional</em></dd>
+				<dd>Default value is <code>$tycolor-link-active</code></dd>
+				<dd>The hovered and active button color; must be rgb, named color, or hexidecimal</dd>
+				<dt>$border_radius</dt>
+				<dd><em>optional</em></dd>
+				<dd>Default value is <code>$tyfy-radius-border</code></dd>
+				<dd>The border radius of the button</dd>
+			</dl>
+			<h3 class="font-size-h4">Examples</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">tag.button-outline {
+  @include button-outline;
+}
+a.button-outline[href] {
+  @include button-outline(red,blue,0px);
+}</code></pre>
+			<h2 id="mixin-clearfix">@mixin clearfix</h2>
+			<p>Use this mixin to clear floats within an element. This mixin does not accept any arguments. Code comes from <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>.</p>
+			<h3 class="font-size-h4">Example</h3>
+      <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">tag.class {
+  @include clearfix;
+}</code></pre>
+			<h2 id="mixin-fadein">@mixin fade-in</h2>
+			<p>Use this mixin to apply a non-looping fade in animation to an element with the given animation duration.</p>
+			<h3 class="font-size-h4">Arguments</h3>
+			<dl>
+				<dt>$duration</dt>
+				<dd><em>optional</em></dd>
+				<dd>Default value is <code>1000ms</code></dd>
+				<dd>The duration of the animation in seconds or milliseconds</dd>
+			</dl>
+			<h3 class="font-size-h5">Example</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">tag.class {
+  @include fade-in(2s);
+}</code></pre>
+			<h2 id="mixin-set-sibling-margins">@mixin set-sibling-margins</h2>
+			<p>Use this mixin to set the size of adjacent sibling margins for all children of the selected elements. For more information, see the <a href="margins.html">Margins</a> documentation.</p>
+			<h3 class="font-size-h4">Arguments</h3>
+			<dl>
+				<dt>$context</dt>
+				<dd><em>optional</em></dd>
+				<dd>Default value is <code>all</code></dd>
+				<dd>Allowed values are <code>all</code>, <code>headings</code>, or <code>lists</code>. The <code>all</code> context sets the value for all tags; the <code>headings</code> context sets the value only for headings; the <code>lists</code> context sets the value only for children of ordered, unordered, and definition lists.</dd>
+				<dt>$measure</dt>
+				<dd><em>optional</em></dd>
+				<dd>Default value is <code>$tyfy-spacing-standard</code></dd>
+				<dd>A rem-unit size of the adjacent sibling margins to apply in the given context</dd>
+			</dl>
+			<h3 class="font-size-h4">Example</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code>tag.class {
+  @include set-sibling-margins(all,tygrid(1));
+}</code></pre>
+			<h2 id="mixin-sibling-margins">@mixin sibling-margins</h2>
+			<p>Use this mixin to turn adjacent sibling margins on or off for children of the selected elements. If the state is <code>on</code>, the margins are set to the <strong class="tyfy">Tyfy</strong> default values. To override with specific values, use the <code>set-sibling-margins</code> mixin.</p>
+			<h3 class="font-size-h4">Arguments</h3>
+			<dl>
+				<dt>$state</dt>
+				<dd><em>optional</em></dd>
+				<dd>Default value is <code>on</code></dd>
+				<dd>Allowed values are <code>on</code> or <code>off</code></dd>
+			</dl>
+			<h3 class="font-size-h4">Example</h3>
+			<pre class="codebox mini" data-lang="SCSS"><code>tag.class {
+  @include sibling-margins(off);
+}</code></pre>
+			<h2 id="mixin-visuallyhidden">@mixin visuallyhidden</h2>
+			<p>Use this mixin to visually hide an element, but allow screen readers and search engines to read the element’s content. The default <code>true</code> argument hides the element. The <code>false</code> argument is used to reverse the default styles. Code is adapted from <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a></p>
+			<h3 class="font-size-h4">Arguments</h3>
+			<dl>
+				<dt>$state</dt>
+				<dd><em>optional</em></dd>
+				<dd>Default value is <code>true</code></dd>
+				<dd>Allowed values are <code>true</code> or <code>false</code></dd>
+			</dl>
+			<h3 class="font-size-h4">Example</h3>
+      <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">tag.hide-me {
+  @include visuallyhidden;
+  &amp;.show-me {
+    @include visuallyhidden(false);
+  }
+}</code></pre>
 		</section>
 		<!-- COMMON FOOTER -->
 		<footer>
-			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+			<p>&copy; Copyright 2017–2019 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
 		</footer>
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>

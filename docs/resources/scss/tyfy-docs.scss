@@ -9,6 +9,8 @@ $tyfont-table:$tyfont-sans;
 $tyfont-input:$tyfont-sans;
 $tycolor-bg-rev:#333;
 $tywidth-constrained:55rem;
+$color-codebox:#508066;
+$color-example:#609077;
 @import "../../../source/scss/tyfy.scss";
 @import "../../../source/scss/extras/_effects.scss";
 @import "../../../source/scss/extras/_responsive_text.scss";
@@ -23,7 +25,7 @@ body {
   margin-right:auto;
   max-width:$tywidth-constrained;
 }
-h1 {
+h1:not(.demo) {
   font-family:$tyfont-condensed;
   text-transform:uppercase;
   small {
@@ -136,54 +138,127 @@ section.demo {
 section.demo.reverse {
   border:none;
 }
-
-#lists-demo {
+pre.codebox {
+  background-color:$tycolor-shade;
+  border:$tywidth-border $tycolor-border solid;
+  color:$color-codebox;
+  padding:calc(#{$tyspacing-md} - #{$tywidth-border});
+  overflow:auto;
+  & + figure.example {
+    border:$tywidth-border $tycolor-border solid;
+    border-top:none;
+    color:$color-example;
+    margin:0;
+    padding:calc(#{$tyspacing-md} - #{$tywidth-border});
+    padding-top:$tyspacing-md;
+    a:not([href]) {
+      color:$color-example;
+    }
+  }
+}
+code.val-default {
+  background-color:transparent;
+  color:lighten(mix($tycolor-link-default,$tycolor-link-active),10%);
+  font-style:italic;
+  font-weight:normal;
+  padding-left:0;
+  padding-right:0;
+}
+.tyfyicons.example {
+  color:lighten(mix($tycolor-link-default,$tycolor-link-active),10%);
+  margin-left:0.25em;
+  margin-right:0.25em;
+  vertical-align:bottom;
+}
+table.utility {
+  th[scope="col"] {
+    border-bottom:(2 * $tywidth-border) var(--tycolor-border) solid;
+  }
+}
+.form-demo {
   @include tymargins(off);
-  border:$tywidth-border dashed darken($tycolor-bg,10%);
-  border-radius:tygrid(0.5);
+  border:$tywidth-border solid $tycolor-border;
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
   display:flex;
   flex-wrap:wrap;
   padding:tygrid() tygrid(2);
-  .form-control {
+  label {
     display:block;
+    font-weight:bold;
+    width:100%;
+    &.option {
+      font-weight:normal;
+    }
+    &.disabled {
+      color:$tycolor-text-light;
+    }
+  }
+  .form-control {
+    box-sizing:border-box;
+    display:block;
+    font-family:$tyfont-sans;
+    font-size:$tyfont-size-base;
     padding-top:tygrid();
     padding-bottom:tygrid();
-    label {
-      width:11rem;
-      &.disabled {
-        color:$tycolor-text-light;
-      }
+    width:100%;
+    &.form-control-classes,
+    &.form-control-headers {
+      display:flex;
+      flex-wrap:wrap;
     }
+  }
+  &#lists-demo .form-control {
     &.form-control-type {
       @media (min-width:55em) {
-        border-right:2px dashed darken($tycolor-bg,10%);
+        border-right:$tywidth-border solid $tycolor-border;
+        width:25%;
       }
     }
     &.form-control-classes {
-      display:flex;
-      flex-wrap:wrap;
       @media (min-width:55em) {
-        box-sizing:border-box;
         padding-left:$tyspacing-md;
         width:75%;
       }
       label {
-        &:first-child {
-          width:100%;
+        @media (min-width:40em) {
+          width:33%;
+          &:first-child {
+            width:100%;
+          }
         }
       }
     }
   }
-  label {
-    display:block;
-    font-weight:bold;
-    &.option {
-      font-weight:normal;
+  &#tables-demo .form-control {
+    label:not(:first-child) {
+      @media (min-width:30em) {
+        width:50%;
+      }
+      @media (min-width:50em) {
+        width:25%;
+      }
+    }
+  }
+  & + figure.example {
+    --tycolor-fg:#{$color-example};
+    border:$tywidth-border $tycolor-border solid;
+    border-top:none;
+    color:$color-example;
+    margin:0;
+    padding:calc(#{$tyspacing-md} - #{$tywidth-border});
+    padding-top:$tyspacing-md;
+  }
+}
+.tables-demo-table {
+  th.row-hidden {
+    display:none !important;
+  }
+  &:not(.striped):not(.vertical-rules):not(.responsive) {
+    th.row-hidden + * {
+      padding-left:0;
     }
   }
 }
-
 footer {
   p {
     @extend .constrained;
