@@ -9,9 +9,6 @@ $tyfont-table:$tyfont-sans;
 $tyfont-input:$tyfont-sans;
 $tycolor-bg-rev:#333;
 $tywidth-constrained:55rem;
-$color-codebox:darken(#80cc33,25%);
-$color-codebox-text:mix(#8033cc,#999999,20%);
-$color-codebox-attr:darken(#cc3380,10%);
 $color-example:darken(#80cc33,25%);
 $color-value:mix(#8033cc,#999999,75%);
 @import "../../../source/scss/tyfy.scss";
@@ -144,7 +141,6 @@ section.demo.reverse {
 pre.codebox {
   background-color:$tycolor-shade;
   border:$tywidth-border $tycolor-border solid;
-  color:$color-codebox;
   padding:calc(#{$tyspacing-md} - #{$tywidth-border});
   overflow:auto;
   & + figure.example {
@@ -158,12 +154,20 @@ pre.codebox {
       color:$color-example;
     }
   }
-  span.txt {
-    color:$color-codebox-text;
+}
+// customizing prism css
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family:$tyfont-mono !important;
+}
+:not(pre) > code[class*="language-"],
+pre.codebox[class*="language-"] {
+  background-color:$tycolor-shade !important;
+  margin:0 !important;
+  * + & {
+    margin-top:$tyspacing-md !important;
   }
-  span.attr {
-    color:$color-codebox-attr;
-  }
+  padding:calc(#{$tyspacing-md} - #{$tywidth-border}) !important;
 }
 code.val-default {
   background-color:transparent;
