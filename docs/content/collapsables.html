@@ -20,23 +20,21 @@
 			<p>The display of collapsable headings is responsive. At large screen widths, collapsable headings and content are fully bordered. At small screen widths, the design changes to remove the full border and maximize horizontal space.</p>
       <h2><span class="smallcaps">HTML</span> Structure</h2>
       <p>Create a collapsable heading by adding the <code>collapsable</code> class to a heading (H2 through H6).</p>
-      <pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;h2 class="<span class="attr">collapsable</span>"&gt;<span class="txt">Collapsable Heading</span>&lt;/h2&gt;
-&lt;p&gt;<span class="txt">[content under the heading]</span>&lt;/p&gt;
-&lt;ul&gt;<span class="txt">[content under the heading]</span>&lt;/ul&gt;
-
-&lt;h2&gt;<span class="txt">Regular Heading 2</span>&lt;/h2&gt;
-&lt;p&gt;<span class="txt">[content under the heading]</span>&lt;/p&gt;
-&lt;ul&gt;<span class="txt">[content under the heading]</span>&lt;/ul&gt;</code></pre>
+      <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;h2 class="collapsable"&gt;Collapsable Heading&lt;/h2&gt;
+&lt;p&gt;[content under the heading]&lt;/p&gt;
+&lt;ul&gt;[content under the heading]&lt;/ul&gt;
+&lt;h2&gt;Regular Heading 2&lt;/h2&gt;
+&lt;p&gt;[content under the heading]&lt;/p&gt;
+&lt;ul&gt;[content under the heading]&lt;/ul&gt;</code></pre>
       <p>JavaScript identifies the content belonging to the heading. The content belonging to a heading is defined as <em>all the sibling elements following the heading element up to the next heading of the same or higher level</em>. JavaScript wraps the content belonging to the heading in a <code>&lt;div&gt;</code> with the class <code>collapsables</code>. To indicate that JavaScript has acted on the collapsable heading, the class <code>collapsable-processed</code> is added to the heading. So, after JavaScript has run, the code will appear as follows:</p>
-      <pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;h2 class="<span class="attr">collapsable collapsable-processed</span>"&gt;<span class="txt">Collapsable Heading</span>&lt;/h2&gt;
-&lt;div class="<span class="attr">collapsables</span>"&gt;
-  &lt;p&gt;<span class="txt">[content under the heading]</span>&lt;/p&gt;
-  &lt;ul&gt;<span class="txt">[content under the heading]</span>&lt;/ul&gt;
+      <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;h2 class="collapsable collapsable-processed"&gt;Collapsable Heading&lt;/h2&gt;
+&lt;div class="collapsables"&gt;
+  &lt;p&gt;[content under the heading]&lt;/p&gt;
+  &lt;ul&gt;[content under the heading]&lt;/ul&gt;
 &lt;/div&gt;
-
-&lt;h2&gt;<span class="txt">Regular Heading 2</span>&lt;/h2&gt;
-&lt;p&gt;<span class="txt">[content under the heading]</span>&lt;/p&gt;
-&lt;ul&gt;<span class="txt">[content under the heading]</span>&lt;/ul&gt;</code></pre>
+&lt;h2&gt;Regular Heading 2&lt;/h2&gt;
+&lt;p&gt;[content under the heading]&lt;/p&gt;
+&lt;ul&gt;[content under the heading]&lt;/ul&gt;</code></pre>
       <h2>Variables</h2>
       <dl>
         <dt>$tybreak-collapsables</dt>
@@ -56,46 +54,30 @@
         <dd>The character code for the icon indicating a collapsable section can be closed</dd>
       </dl>
 			<h2>Example</h2>
-			<pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;p&gt;&lt;a href="<span class="attr">#testanchor</span>"&gt;<span class="txt">Test anchor link</span>&lt;/a&gt;&lt;/p&gt;
-  			
-&lt;h2 class="<span class="attr">collapsable</span>"&gt;<span class="txt">Lorem ipsum dolor sit amet</span>&lt;/h2&gt;
-&lt;p&gt;<span class="txt">Consectetur adipiscing elit. Maecenas euismod varius purus et accumsan. Suspendisse mollis augue sem, eu varius ex ornare at. Cras convallis lorem in malesuada porttitor. Integer malesuada, nisi vel gravida luctus, tellus mi finibus est, ac dignissim elit tortor quis erat</span>.&lt;/p&gt;
-
-&lt;h2 class="<span class="attr">collapsable</span>"&gt;<span class="txt">Praesent accumsan</span>&lt;/h2&gt;
-&lt;p&gt;<span class="txt">Ligula volutpat luctus volutpat, arcu enim sagittis mi, scelerisque placerat felis ipsum ut tellus. Phasellus eget augue sit amet mauris lacinia fermentum et id ligula. Duis in odio velit. Proin tempor dolor non ultrices aliquam.</span>&lt;/p&gt;
-
-&lt;h3&gt;<span class="txt">Vestibulum consequat erat orci</span>&lt;/h3&gt;
-&lt;p&gt;<span class="txt">Non bibendum tortor condimentum id. Etiam posuere nunc at ligula interdum, sit amet placerat enim molestie. Sed maximus nulla ac orci accumsan interdum.</span>&lt;/p&gt;
-
-&lt;h3&gt;<span class="txt">Pellentesque viverra felis non est vehicula</span>&lt;/h3&gt;
-&lt;p&gt;<span class="txt">A efficitur magna mollis. Vestibulum ultricies ligula vel suscipit pretium. Nullam varius bibendum nisi ac tempor. Morbi non nibh ac eros elementum vehicula sed a enim. Donec in venenatis libero. Integer convallis sapien sit amet est iaculis fringilla.</span>&lt;/p&gt;
-
-&lt;h4 class="<span class="attr">collapsable</span>"&gt;<span class="txt">Morbi ac quam ac leo accumsan tempor sed in mauris</span>&lt;/h4&gt;
-&lt;p&gt;&lt;a name="<span class="attr">testanchor</span>"&gt;&lt;em&gt;<span class="txt">Test anchor destination</span>&lt;/em&gt;&lt;/a&gt;<span class="txt"> lacinia congue. Quisque consectetur metus vitae aliquet pellentesque. Integer non accumsan augue, nec mollis quam. Sed congue diam quis est eleifend, sed pulvinar tellus ullamcorper. Phasellus ante velit, blandit id urna sit amet, sagittis tincidunt magna. Etiam turpis neque, dignissim vitae lacus sed, sagittis consequat sapien.</span>&lt;/p&gt;
-
-&lt;h4 class="<span class="attr">collapsable</span>"&gt;<span class="txt">Quisque ultricies et ipsum ut posuere</span>&lt;/h4&gt;
-&lt;p&gt;<span class="txt">Nulla vitae massa et orci ornare convallis. Integer non aliquam eros. Aenean tempus iaculis malesuada. Proin lobortis quam ac erat dapibus, vitae dictum ex placerat. Aenean lobortis accumsan arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</span>&lt;/p&gt;
-
-&lt;h4 class="<span class="attr">collapsable</span>"&gt;<span class="txt">Sed sed quam convallis</span>&lt;/h4&gt;
-&lt;p&gt;<span class="txt">Porttitor magna vitae, iaculis nulla. Morbi in sem molestie, hendrerit velit id, egestas dolor. Nulla facilisi. Sed at augue finibus, interdum justo a, tincidunt urna.</span>&lt;/p&gt;
-
-&lt;h2 class="<span class="attr">collapsable</span>"&gt;<span class="txt">Morbi interdum tempus lorem</span>&lt;/h2&gt;
-&lt;p&gt;<span class="txt">Eu dictum orci venenatis id. Pellentesque consectetur accumsan ex id lobortis. Duis eget blandit ante, in iaculis lacus. Sed justo ipsum, euismod et venenatis quis, pharetra eu dolor. In condimentum placerat augue vel consequat. Quisque euismod fringilla tristique. Nunc convallis lectus ut tellus finibus, sit amet efficitur tortor blandit.</span>&lt;/p&gt;</code></pre>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p&gt;&lt;a href="#testanchor"&gt;Test anchor link&lt;/a&gt;&lt;/p&gt;
+&lt;h2 class="collapsable"&gt;Lorem ipsum dolor sit amet&lt;/h2&gt;
+&lt;p&gt;Consectetur adipiscing elit. Maecenas euismod varius purus et accumsan. Suspendisse mollis augue sem, eu varius ex ornare at. Cras convallis lorem in malesuada porttitor. Integer malesuada, nisi vel gravida luctus, tellus mi finibus est, ac dignissim elit tortor quis erat.&lt;/p&gt;
+&lt;h2 class="collapsable"&gt;Praesent accumsan&lt;/h2&gt;
+&lt;p&gt;Ligula volutpat luctus volutpat, arcu enim sagittis mi, scelerisque placerat felis ipsum ut tellus. Phasellus eget augue sit amet mauris lacinia fermentum et id ligula. Duis in odio velit. Proin tempor dolor non ultrices aliquam.&lt;/p&gt;
+&lt;h3 class="collapsable"&gt;Morbi ac quam ac leo accumsan tempor sed in mauris&lt;/h3&gt;
+&lt;p&gt;&lt;a name="testanchor"&gt;&lt;em&gt;Test anchor destination&lt;/em&gt;&lt;/a&gt; lacinia congue. Quisque consectetur metus vitae aliquet pellentesque. Integer non accumsan augue, nec mollis quam. Sed congue diam quis est eleifend, sed pulvinar tellus ullamcorper. Phasellus ante velit, blandit id urna sit amet, sagittis tincidunt magna. Etiam turpis neque, dignissim vitae lacus sed, sagittis consequat sapien.&lt;/p&gt;
+&lt;h3 class="collapsable"&gt;Quisque ultricies et ipsum ut posuere&lt;/h3&gt;
+&lt;p&gt;Nulla vitae massa et orci ornare convallis. Integer non aliquam eros. Aenean tempus iaculis malesuada. Proin lobortis quam ac erat dapibus, vitae dictum ex placerat. Aenean lobortis accumsan arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
+&lt;h3 class="collapsable"&gt;Sed sed quam convallis&lt;/h3&gt;
+&lt;p&gt;Porttitor magna vitae, iaculis nulla. Morbi in sem molestie, hendrerit velit id, egestas dolor. Nulla facilisi. Sed at augue finibus, interdum justo a, tincidunt urna.&lt;/p&gt;
+&lt;h2 class="collapsable"&gt;Morbi interdum tempus lorem&lt;/h2&gt;
+&lt;p&gt;Eu dictum orci venenatis id. Pellentesque consectetur accumsan ex id lobortis. Duis eget blandit ante, in iaculis lacus. Sed justo ipsum, euismod et venenatis quis, pharetra eu dolor. In condimentum placerat augue vel consequat. Quisque euismod fringilla tristique. Nunc convallis lectus ut tellus finibus, sit amet efficitur tortor blandit.&lt;/p&gt;</code></pre>
 			<figure class="example">
     			<p><a href="#testanchor">Test anchor link</a></p>
     			<h2 class="collapsable">Lorem ipsum dolor sit amet</h2>
     			<p>Consectetur adipiscing elit. Maecenas euismod varius purus et accumsan. Suspendisse mollis augue sem, eu varius ex ornare at. Cras convallis lorem in malesuada porttitor. Integer malesuada, nisi vel gravida luctus, tellus mi finibus est, ac dignissim elit tortor quis erat.</p>
     			<h2 class="collapsable">Praesent accumsan</h2>
     			<p>Ligula volutpat luctus volutpat, arcu enim sagittis mi, scelerisque placerat felis ipsum ut tellus. Phasellus eget augue sit amet mauris lacinia fermentum et id ligula. Duis in odio velit. Proin tempor dolor non ultrices aliquam.</p>
-    			<h3>Vestibulum consequat erat orci</h3>
-    			<p>Non bibendum tortor condimentum id. Etiam posuere nunc at ligula interdum, sit amet placerat enim molestie. Sed maximus nulla ac orci accumsan interdum.</p>
-    			<h3>Pellentesque viverra felis non est vehicula</h3>
-    			<p>A efficitur magna mollis. Vestibulum ultricies ligula vel suscipit pretium. Nullam varius bibendum nisi ac tempor. Morbi non nibh ac eros elementum vehicula sed a enim. Donec in venenatis libero. Integer convallis sapien sit amet est iaculis fringilla.</p>
-    			<h4 class="collapsable">Morbi ac quam ac leo accumsan tempor sed in mauris</h4>
+    			<h3 class="collapsable">Morbi ac quam ac leo accumsan tempor sed in mauris</h3>
     			<p><a name="testanchor"><em>Test anchor destination</em></a> lacinia congue. Quisque consectetur metus vitae aliquet pellentesque. Integer non accumsan augue, nec mollis quam. Sed congue diam quis est eleifend, sed pulvinar tellus ullamcorper. Phasellus ante velit, blandit id urna sit amet, sagittis tincidunt magna. Etiam turpis neque, dignissim vitae lacus sed, sagittis consequat sapien.</p>
-    			<h4 class="collapsable">Quisque ultricies et ipsum ut posuere</h4>
+    			<h3 class="collapsable">Quisque ultricies et ipsum ut posuere</h3>
     			<p>Nulla vitae massa et orci ornare convallis. Integer non aliquam eros. Aenean tempus iaculis malesuada. Proin lobortis quam ac erat dapibus, vitae dictum ex placerat. Aenean lobortis accumsan arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-    			<h4 class="collapsable">Sed sed quam convallis</h4>
+    			<h3 class="collapsable">Sed sed quam convallis</h3>
     			<p>porttitor magna vitae, iaculis nulla. Morbi in sem molestie, hendrerit velit id, egestas dolor. Nulla facilisi. Sed at augue finibus, interdum justo a, tincidunt urna.</p>
     			<h2 class="collapsable">Morbi interdum tempus lorem</h2>
     			<p>eu dictum orci venenatis id. Pellentesque consectetur accumsan ex id lobortis. Duis eget blandit ante, in iaculis lacus. Sed justo ipsum, euismod et venenatis quis, pharetra eu dolor. In condimentum placerat augue vel consequat. Quisque euismod fringilla tristique. Nunc convallis lectus ut tellus finibus, sit amet efficitur tortor blandit.</p>
