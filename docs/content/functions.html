@@ -22,28 +22,28 @@
 				<dd>Accepted values are <code>base</code>, <code>heading</code>, <code>tall</code>, or <code>short</code></dd>
 			</dl>
 			<h3 class="font-size-h4">Variables</h3>
-			<p>The leading styles listed above correspond to scalar values that are used in the function’s line height calculation. The values are used to adjust the line height to achieve a particular style. Generally speaking, a larger value will result in a smaller line height, and a smaller value will give a larger line height. These values have been determined through experimentation and should not need to be changed. However, the values are available as variables if it is necessary to change the behavior of the tylead function.</p>
+			<p>The leading styles listed above correspond to scalar values. The values adjust the calculated line height to achieve a particular style. A larger value will result in a smaller line height and a smaller value will give a larger line height. These values were determined through experimentation and should not need to be changed. However, the values are available as variables. They can be overridden if you wish to modify the line height calculation.</p>
 			<dl>
-  			<dt>$tyfy-leading-adjustment-tall</dt>
+  			<dt>$tylead-adjustment-tall</dt>
   			<dd><code class="val val-default">0.8 !default;</code></dd>
-  			<dt>$tyfy-leading-adjustment-base</dt>
+  			<dt>$tylead-adjustment-base</dt>
   			<dd><code class="val val-default">0.9 !default;</code></dd>
-  			<dt>$tyfy-leading-adjustment-heading</dt>
+  			<dt>$tylead-adjustment-heading</dt>
   			<dd><code class="val val-default">1 !default;</code></dd>
-  			<dt>$tyfy-leading-adjustment-short</dt>
+  			<dt>$tylead-adjustment-short</dt>
   			<dd><code class="val val-default">1.2 !default;</code></dd>
 			</dl>
 			<h3 class="font-size-h4">Examples</h3>
-			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">p {
-  font-size:$tyfy-font-size-base;
-  line-height:tylead($tyfy-font-size-base);
+			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">p {
+  font-size:$tyfont-size-base;
+  line-height:tylead($tyfont-size-base);
 }
 p.special {
   font-size:1.2rem;
   line-height:tylead(1.2rem,tall);
 }</code></pre>
 			<h2 id="fn-tygrid">@function tygrid</h2>
-			<p>This function calculates a grid-based length value. This function facilitates the use of the $tyfy-grid-unit variable by making your <span class="smallcaps">SCSS</span> easier to read, write, and maintain.</p>
+			<p>This function calculates a grid-based length value. This function facilitates the use of the $tygrid-unit variable by making your <span class="smallcaps">SCSS</span> easier to read, write, and maintain.</p>
 			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
 				<dt>$multiplier</dt>
@@ -52,20 +52,21 @@ p.special {
 				<dd>A floating point value representing the number of grid units in the desired size</dd>
 			</dl>
 			<h3 class="font-size-h4">Examples</h3>
-			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">div {
+			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div {
   margin-bottom:tygrid(1.5); <em class="light">// 1.5 times the default grid unit length</em>
   width:tygrid(50); <em class="light">// 50 times the default grid unit length</em>
 }</code></pre>
 			<h2 id="fn-tyscale">@function tyscale</h2>
-			<p>This function facilitates use of the <a href="scale.html">modular typographic scale</a> by automating the calculation of font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</p>
+			<p>This function facilitates use of the <a href="scale.html">modular typographic scale</a> by automating the calculation of scale-based font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</p>
 			<h3 class="font-size-h4">Arguments</h3>
 			<dl>
 				<dt>$exponent</dt>
-				<dd><em>required</em></dd>
+				<dd><em>optional</em></dd>
+				<dd>default value is <code>0</code></dd>
 				<dd>Integer representing a number of steps from the base font size on the modular scale to calculate; positive and negative values allowed.</dd>
 			</dl>
 			<h3 class="font-size-h4">Examples</h3>
-			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">$tyfy-font-size-base: 1rem;
+			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">$tyfont-size-base: 1rem;
 small {
   font-size: tyscale(-1) !default; <em class="light">// 0.833rem; one scale step down from the base size</em>
 }
@@ -81,11 +82,11 @@ h5 {
 			<dl>
 				<dt>$code</dt>
 				<dd><em>required</em></dd>
-				<dd>A character code without the preceding slash (“\”). For use with the <strong>tyfyicons</strong>, there are <a href="settings.html"><span class="smallcaps">SASS</span> variables for each of the character codes</a>.</dd>
+				<dd>A character code without the preceding slash (“\”). For use with the <strong>tyicons</strong>, there are <a href="settings.html"><span class="smallcaps">SASS</span> variables for each of the character codes</a>.</dd>
 			</dl>
 			<h3 class="font-size-h4">Examples</h3>
-			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg">div::before {
-  content: tychar($tyfyicons-angle-left);
+			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div::before {
+  content: tychar($tyicons-angle-left);
 }</code></pre>
 		</section>
 		<%include footer.html%>
