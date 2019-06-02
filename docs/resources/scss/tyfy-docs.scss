@@ -177,12 +177,6 @@ code.val-default {
   padding-left:0;
   padding-right:0;
 }
-.tyfyicons.example {
-  color:$color-value;
-  margin-left:0.25em;
-  margin-right:0.25em;
-  vertical-align:bottom;
-}
 table.utility {
   th[scope="col"] {
     border-bottom:(2 * $tywidth-border) var(--tycolor-border) solid;

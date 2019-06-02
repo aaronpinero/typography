@@ -44,38 +44,38 @@
   text-align:center;
 }
 .tyicons-angle-down::before {
-  content:"\ea01";
+  content:tychar($tyicons-angle-down);
 }
 .tyicons-angle-left::before {
-  content:"\ea02";
+  content:tychar($tyicons-angle-left);
 }
 .tyicons-angle-right::before {
-  content:"\ea03";
+  content:tychar($tyicons-angle-right);
 }
 .tyicons-angle-up-down::before {
-  content:"\ea04";
+  content:tychar($tyicons-angle-up-down);
 }
 .tyicons-angle-up::before {
-  content:"\ea08";
+  content:tychar($tyicons-angle-up);
 }
 .tyicons-bars::before {
-  content:"\ea07";
+  content:tychar($tyicons-bars);
 }
 .tyicons-check::before {
-  content:"\ea05";
+  content:tychar($tyicons-check);
 }
 .tyicons-dash::before {
-  content:"\ea06";
+  content:tychar($tyicons-dash);
 }
 .tyicons-quote-left::before {
-  content:"\ea0a";
+  content:tychar($tyicons-quote-left);
 }
 .tyicons-quote-right::before {
-  content:"\ea0b";
+  content:tychar($tyicons-quote-right);
 }
 .tyicons-search::before {
-  content:"\ea09";
+  content:tychar($tyicons-search);
 }
 .tyicons-x::before {
-  content:"\ea0c";
+  content:tychar($tyicons-x);
 }
