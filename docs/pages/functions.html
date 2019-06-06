@@ -78,7 +78,7 @@
   			<dt>$tylead-adjustment-short</dt>
   			<dd><code class="val val-default">1.2 !default;</code></dd>
 			</dl>
-			<h3 class="font-size-h4">Examples</h3>
+			<h3 class="font-size-h4">Example</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">p {
   font-size:$tyfont-size-base;
   line-height:tylead($tyfont-size-base);
@@ -96,10 +96,10 @@ p.special {
 				<dd>default value is <code>1</code></dd>
 				<dd>A floating point value representing the number of grid units in the desired size</dd>
 			</dl>
-			<h3 class="font-size-h4">Examples</h3>
+			<h3 class="font-size-h4">Example</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div {
-  margin-bottom:tygrid(1.5); <em class="light">// 1.5 times the default grid unit length</em>
-  width:tygrid(50); <em class="light">// 50 times the default grid unit length</em>
+  margin-bottom:tygrid(1.5); // 1.5 times the default grid unit length
+  width:tygrid(50); // 50 times the default grid unit length
 }</code></pre>
 			<h2 id="fn-tyscale">@function tyscale</h2>
 			<p>This function facilitates use of the <a href="scale.html">modular typographic scale</a> by automating the calculation of scale-based font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</p>
@@ -108,18 +108,18 @@ p.special {
 				<dt>$exponent</dt>
 				<dd><em>optional</em></dd>
 				<dd>default value is <code>0</code></dd>
-				<dd>Integer representing a number of steps from the base font size on the modular scale to calculate; positive and negative values allowed.</dd>
+				<dd>Integer representing a number of steps from the base font size on the modular scale to calculate; positive and negative values allowed</dd>
 			</dl>
-			<h3 class="font-size-h4">Examples</h3>
+			<h3 class="font-size-h4">Example</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">$tyfont-size-base: 1rem;
 small {
-  font-size: tyscale(-1) !default; <em class="light">// 0.833rem; one scale step down from the base size</em>
+  font-size: tyscale(-1) !default; // 0.833rem; one scale step down from the base size
 }
 h6 {
-  font-size: tyscale(0) !default;  <em class="light">// 1rem; using 0 as the exponent is the same as setting the value to the base size</em>
-}
+  font-size: tyscale(0) !default;  // 1rem; using 0 as the exponent is the same as setting the value to the base size
+  }
 h5 {
-  font-size: tyscale(1) !default;  <em class="light">// 1.2rem; one scale step up from the base size</em>
+  font-size: tyscale(1) !default;  // 1.2rem; one scale step up from the base size
 }</code></pre>
 			<h2 id="fn-tychar">@function tychar</h2>
 			<p>This function facilitates the use of the icon font in <span class="smallcaps">CSS</span> pseudo-elements by working around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> related to character codes. This function properly applies icons when used in the <em>content</em> attribute of a pseudo-element.</p>
@@ -127,9 +127,9 @@ h5 {
 			<dl>
 				<dt>$code</dt>
 				<dd><em>required</em></dd>
-				<dd>A character code without the preceding slash (“\”). For use with the <strong>tyicons</strong>, there are <a href="settings.html"><span class="smallcaps">SASS</span> variables for each of the character codes</a>.</dd>
+				<dd>A character code without the preceding slash (“\”); there are <a href="settings.html"><span class="smallcaps">SASS</span> variables for the character codes</a></dd>
 			</dl>
-			<h3 class="font-size-h4">Examples</h3>
+			<h3 class="font-size-h4">Example</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div::before {
   content: tychar($tyicons-angle-left);
 }</code></pre>
