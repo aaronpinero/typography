@@ -8,7 +8,7 @@
 		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>List Styles</h1>
-			<p>Ordered, unordered, and definition lists inherit styles from the essential/body and essential/spacing modules. In addition to the default list types, <strong class="tyfy">Tyfy</strong> offers several display options for ordered and unordered lists.</p>
+			<p>Ordered, unordered, and definition lists inherit styles from the <a href="body.html">body</a> and <a href="spacing.html">spacing</a> modules. In addition to the default list types, <strong class="tyfy">Tyfy</strong> offers several display options for ordered and unordered lists.</p>
 			<h2 id="classes">Classes</h2>
 			<dl>
   			<dt>.list-icons</dt>
@@ -32,12 +32,12 @@
   			  </dl>
         </dd>
   			<dt>.list-cols-2, .list-cols-3</dt>
-  			<dd>Applied to ordered and unordered lists to display items in columns. These classes use CSS columns; columns are read top to bottom and then left to right. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths. These classes do not account for nested lists.</dd>
+  			<dd>Applied to ordered and unordered lists to display items in columns. These classes use CSS columns; columns are read top to bottom and then left to right. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths. These classes <em>do not work with nested lists</em>.</dd>
   			<dt>.list-grid-2, .list-grid-3, .list-grid-4</dt>
-  			<dd>Applied to ordered and unordered lists to display items in rows. These classes use CSS flexbox; rows are read left to right and then top to bottom. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths. These classes does not account for nested lists.</dd>
+  			<dd>Applied to ordered and unordered lists to display items in rows. These classes use CSS flexbox; rows are read left to right and then top to bottom. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths. These classes <em>do not work with nested lists</em>.</dd>
   			<dt>.list-flex</dt>
   			<dd>
-  			  <div>Applied to unordered lists to display list items in an in-line fashion. This class uses CSS flexbox. While this class is intended for use with the <code>list-nobullet</code> class, it can also be used alone or with the <code>list-icons</code> class. The default alignment of items is left.</div>
+  			  <div>Applied to unordered lists to display list items in an in-line fashion. This class uses CSS flexbox. While this class is intended for use with the <code>list-nobullet</code> class, it can also be used alone or with the <code>list-icons</code> class. The default alignment of items is left. These classes <em>do not work with ordered lists or nested lists</em>.</div>
   			  <dl>
     			  <dt>.list-flex-center</dt>
     			  <dd>Used with the <code>list-flex</code> class to center align the list items.</dd>
@@ -48,26 +48,26 @@
 			</dl>
 			<h2 id="variables">Variables</h2>
 			<dl>
-  			<dt>$tyfy-font-heading</dt>
+  			<dt>$tyfont-heading</dt>
 				<dd><code class="val val-default">$tyfy-sans !default;</code></dd>
   			<dd>Font family applied to the <code>&lt;dt&gt;</code> tag.</dd>
-  			<dt>$tyfy-spacing-standard</dt>
-				<dd><code class="val val-default">tygrid(map-get($tyfy-spacings,"standard")) !default;</code></dd>
-  			<dd>$tyfy-spacing-standard is the margin between lists and other elements. Inside lists, $tyfy-spacing-standard/2 is the spacing between list items.</dd>
-				<dt>$tyfy-indent-standard</dt>
-				<dd><code class="val val-default">tygrid(map-get($tyfy-indents,"standard")) !default;</code></dd>
-  			<dd>The amount of indentation for list items and definition list definitions. For text indented using the <code>list-indented</code> class, the value is half the value of <code>$tyfy-indent-standard</code>.</dd>
-				<dt>$tyfy-break-list-cols-2</dt>
+  			<dt>$tyspacing-md</dt>
+				<dd><code class="val val-default">tygrid(map-get($tyspacing,"medium")) !default;</code></dd>
+  			<dd>$tyspacing-md is the margin between lists and other elements. Inside lists, $tyspacing-md/2 is the spacing between list items.</dd>
+				<dt>$tyindent-md</dt>
+				<dd><code class="val val-default">tygrid(map-get($tyindent,"medium")) !default;</code></dd>
+  			<dd>The amount of indentation for list items and definition list definitions. For text indented using the <code>list-indented</code> class, the value is half the value of <code>$tyindent-md</code>.</dd>
+				<dt>$tybreak-list-cols2</dt>
 				<dd><code class="val val-default">35em !default;</code></dd>
 				<dd>Above this em-based screen width grid and column lists can be 2 columns.</dd>
-				<dt>$tyfy-break-list-cols-3</dt>
+				<dt>$tybreak-list-cols3</dt>
 				<dd><code class="val val-default">55em !default;</code></dd>
 				<dd>Above this em-based screen width grid and column lists can be 3 columns.</dd>
-				<dt>$tyfy-break-list-cols-4</dt>
+				<dt>$tybreak-list-cols4</dt>
 				<dd><code class="val val-default">75em !default;</code></dd>
 				<dd>Above this em-based screen width grid and column lists can be 4 columns.</dd>
-				<dt>$tyfy-spacing-large</dt>
-				<dd><code class="val val-default">tygrid(map-get($tyfy-spacings,"large")) !default;</code></dd>
+				<dt>$tyspacing-lg</dt>
+				<dd><code class="val val-default">tygrid(map-get($tyspacing,"large")) !default;</code></dd>
 				<dd>The amount of horizontal space between list items when using the <code>list-col-[x]</code> or <code>list-grid-[x]</code> styles.</dd>
 				<dt>$tycolor-text-light</dt>
 				<dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,45%) !default;</code></dd>
@@ -90,7 +90,7 @@
     			<label class="option" for="list-class-grid2"><input type="checkbox" name="list-class" id="list-class-grid2" value="list-grid-2"> .list-grid-2</label>
     			<label class="option" for="list-class-grid3"><input type="checkbox" name="list-class" id="list-class-grid3" value="list-grid-3"> .list-grid-3</label>
     			<label class="option" for="list-class-grid4"><input type="checkbox" name="list-class" id="list-class-grid4" value="list-grid-4"> .list-grid-4</label>
-    			<label class="option" for="list-class-marginsoff"><input type="checkbox" name="list-class" id="list-class-marginsoff" value="sibling-margins-off"> .sibling-margins-off</label>
+    			<label class="option" for="list-class-marginsoff"><input type="checkbox" name="list-class" id="list-class-marginsoff" value="tymargins-off"> .tymargins-off</label>
     			<label class="option" for="list-class-flex"><input type="checkbox" name="list-class" id="list-class-flex" value="list-flex"> .list-flex</label>
     			<label class="option disabled" for="list-class-flexcenter"><input type="checkbox" name="list-class" id="list-class-flexcenter" value="list-flex-center" disabled="disabled"> .list-flex-center</label>
     			<label class="option disabled" for="list-class-flexright"><input type="checkbox" name="list-class" id="list-class-flexright" value="list-flex-right" disabled="disabled"> .list-flex-right</label>
