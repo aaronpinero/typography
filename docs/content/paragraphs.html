@@ -11,32 +11,32 @@
 			<p>Paragraphs inherit font size and line height from the <code>&lt;body&gt;</code>. <strong class="tyfy">Tyfy</strong> provides <span class="smallcaps">CSS</span> classes for common style variations.</p>
 			<h2 id="classes">Classes</h2>
 			<dl>
-  			<dt>.cols-2</dt>
-    		<dd>Applied to a containing element to a make child content display in 2 columns using <span class="smallcaps">CSS</span> columns. The style is responsive and degrades to a single column when the screen width is less than <code>$tyfy-break-cols-2</code>.</dd>
+  			<dt>.cols2</dt>
+    		<dd>Applied to a containing element to a make child content display in 2 columns using <span class="smallcaps">CSS</span> columns. The style is responsive and degrades to a single column when the screen width is less than <code>$tybreak-cols2</code>.</dd>
   			<dt>.justified</dt>
   			<dd>Applied to a <code>&lt;p&gt;</code> tag to justify that paragraph. If applied to a containing element, all descendant paragraphs are justified.</dd>
   			<dt>.lede</dt>
-  			<dd>Applied to a <code>&lt;p&gt;</code> tag to display the paragraph as a lede, with the font-size increased to <code>$tyfy-font-size-lede</code> and a proportionally larger line height.</dd>
+  			<dd>Applied to a <code>&lt;p&gt;</code> tag to display the paragraph as a lede, with the font-size increased to <code>$tyfont-size-lede</code> and a proportionally larger line height.</dd>
 			</dl>
 			<h2 id="variables">Variables</h2>
 			<dl>
-  			<dt>$tyfy-break-cols-2</dt>
+  			  <dt>$tybreak-cols2</dt>
 				<dd><code class="val val-default">50em !default;</code></dd>
-  			<dd>Breakpoint above which text inside an element with the <code>cols-2</code> class is displayed in two columns.</dd>
-  			<dt>$tyfy-font-size-lede</dt>
-				<dd><code class="val val-default">tyscale(map-get($tyfy-font-sizes,"lede")) !default;</code></dd>
-  			<dd>Font size applied to a paragraph with the <code>lede</code> class.</dd>
+				<dd>Breakpoint above which text inside an element with the <code>cols2</code> class is displayed in two columns.</dd>
+        <dt>$tyfont-size-lede</dt>
+				<dd><code class="val val-default">tyscale(map-get($tyfont-size,"lede")) !default;</code></dd>
+  			  <dd>Font size applied to a paragraph with the <code>lede</code> class.</dd>
 			</dl>
 			<h2 id="examples">Examples</h2>
 			<h3>Lede</h3>
-			<pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;p class="lede"&gt;Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.&lt;/p&gt;
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p class="lede"&gt;Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.&lt;/p&gt;
 &lt;p&gt;I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. May the Force be with you.&lt;/p&gt;</code></pre>
 			<figure class="example">
 			  <p class="lede">Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.</p>
         <p>I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. May the Force be with you.</p>
 			</figure>
 			<h3>Justified</h3>
-			<pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;p class="justified"&gt;I heard the command center had been hit. You got your clearance to leave. Don’t worry. I’ll leave. First I’m going to get you to your ship. Your Highness, we must take this last transport. It’s our only hope. Send all troops in sector twelve to the south slope to protect the fighters. Imperial troops have entered the base. Come on… that’s it. Give the evacuation code signal.&lt;/p&gt;
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p class="justified"&gt;I heard the command center had been hit. You got your clearance to leave. Don’t worry. I’ll leave. First I’m going to get you to your ship. Your Highness, we must take this last transport. It’s our only hope. Send all troops in sector twelve to the south slope to protect the fighters. Imperial troops have entered the base. Come on… that’s it. Give the evacuation code signal.&lt;/p&gt;
 &lt;div class="justified"&gt;
   &lt;p&gt;Hokey religions and ancient weapons are no match for a good blaster at your side, kid. You don’t believe in the Force, do you? Kid, I’ve flown from one side of this galaxy to the other. I’ve seen a lot of strange stuff, but I’ve never seen anything to make me believe there’s one all-powerful force controlling everything.&lt;/p&gt;
   &lt;p&gt;There’s no mystical energy field that controls my destiny. It’s all a lot of simple tricks and nonsense. I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. With the blast shield down, I can’t even see. How am I supposed to fight? Your eyes can deceive you. Don’t trust them.&lt;/p&gt;
@@ -49,12 +49,12 @@
 			  </div>
 			</figure>
 			<h3>Two Columns</h3>
-			<pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;div class="cols-2"&gt;
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;div class="cols2"&gt;
   &lt;p&gt;I want to come with you to Alderaan. There’s nothing here for me now. I want to learn the ways of the Force and become a Jedi like my father.&lt;/p&gt;
   &lt;p&gt;Mos Eisley Spaceport. You will never find a more wretched hive of scum and villainy. We must be cautious. How long have you had these droids? About three or four seasons. They’re for sale if you want them.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
   		<figure class="example">
-  			<div class="cols-2">
+  			<div class="cols2">
     			<p>I want to come with you to Alderaan. There’s nothing here for me now. I want to learn the ways of the Force and become a Jedi like my father.</p>
           <p>Mos Eisley Spaceport. You will never find a more wretched hive of scum and villainy. We must be cautious. How long have you had these droids? About three or four seasons. They’re for sale if you want them.</p>
         </div>

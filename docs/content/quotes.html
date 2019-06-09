@@ -9,63 +9,97 @@
 		<section class="main links-underlined">
 			<h1>Quotes</h1>
 			<p>The <code>&lt;blockquote&gt;</code> tag is commonly used for both long quotations and pull quotes. <strong class="tyfy">Tyfy</strong> provides classes that allow the basic <code>&lt;blockquote&gt;</code> to also be used for fancier pull quotes.</p>
-			<h2>Classes</h2>
+			<h2 id="classes">Classes</h2>
 			<dl>
   			<dt>.pullquote</dt>
   			<dd>Applied to a <code>&lt;blockquote&gt;</code> to render as a pull quote. </dd>
   			<dt>.pullquote-roof-fixed</dt>
-  			<dd>Added to the <code>pullquote</code> class to display a decorative, fixed-width border element above the pullquote; the decorative border is the <code>$tyfy-quote-roof</code> icon.</dd>
+  			<dd>Added to the <code>pullquote</code> class to display a decorative, fixed-width border element above the pullquote; the decorative border uses an svg background rule and the <code>$tyicons-quote-right</code> icon.</dd>
   			<dt>.pullquote-roof-full</dt>
-				<dd>Added to the <code>pullquote</code> class to display a decorative, relative-width border element above the pullquote; the decorative border is a background svg based on the the <code>$tyfy-quote-roof</code> icon.</dd>
+				<dd>Added to the <code>pullquote</code> class to display a decorative, relative-width border element above the pullquote; the decorative border uses an svg background rule and the <code>$tyicons-quote-right</code> icon.</dd>
   			<dt>.float-left</dt>
-  			<dd>Added to the <code>pullquote</code> class to position the pull quote float-left. This degrades to a regular pull quote at screen widths smaller than <code>$tyfy-break-floats</code>.</dd>
+  			<dd>Added to the <code>pullquote</code> class to position the pull quote float-left. This degrades to a regular pull quote at screen widths smaller than <code>$tybreak-float</code>.</dd>
   			<dt>.float-right</dt>
-				<dd>Added to the <code>pullquote</code> class to position the pull quote float-right. This degrades to a regular pull quote at screen widths smaller than <code>$tyfy-break-floats</code>.</dd>
+				<dd>Added to the <code>pullquote</code> class to position the pull quote float-right. This degrades to a regular pull quote at screen widths smaller than <code>$tybreak-float</code>.</dd>
 			</dl>
-			<h2>Related Variables</h2>
+			<h2 id="variables">Variables</h2>
 			<dl>
-  			<dt>$tyfy-font-size-pullquote</dt>
-  			<dd>Font size for <code>&lt;blockquote&gt;</code> with the <code>pullquote</code> class.</dd>
-  			<dt>$tycolor-border</dt>
-  			<dd>Color of the decorative border on pullquotes using the <code>pullquote-roof-fixed</code> or <code>pullquote-roof-full</code> class.</dd>
-				<dt>$tyfy-indent-standard</dt>
-  			<dd>Horizontal margin for <code>&lt;blockquote&gt;</code> elements. This margin reduces to <code>$tyfy-indent-standard</code> at screen widths below below <code>$tyfy-break-pullquote-large</code>.</dd>
-				<dt>$tyfy-break-floats</dt>
-  			<dd>Screen width breakpoint above which the float classes take effect.</dd>
-				<dt>$tyfy-break-floats</dt>
-				<dd>Screen width breakpoint above which quotes have increased margin.</dd>
+				<dt>$tybreak-float</dt>
+				<dd><code class="val val-default">40em !default;</code></dd>
+  			  <dd>Screen width above which the float classes take effect.</dd>
+				<dt>$tybreak-quote</dt>
+				<dd><code class="val val-default">40em !default;</code></dd>
+				<dd>Screen width above which quotes have increased margin.</dd>
+        <dt>$tycolor-border</dt>
+  			  <dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,12%) !default;</code></dd>
+        <dd>Color of the decorative border on pullquotes using the <code>pullquote-roof-fixed</code> or <code>pullquote-roof-full</code> class.</dd>
+  			  <dt>$tyfont-size-quote</dt>
+  			  <dd><code class="val val-default">tyscale(map-get($tyfont-size,"quote")) !default;</code></dd>
+        <dd>Font size for <code>&lt;blockquote&gt;</code> with the <code>pullquote</code> class.</dd>
+				<dt>$tyindent-md</dt>
+  			  <dd><code class="val val-default">tygrid(map-get($tyindent,"medium")) !default;</code></dd>
+  			  <dd>Horizontal margin for <code>&lt;blockquote&gt;</code> elements. This margin reduces to <code>$tyindent-sm</code> at screen widths below below <code>$tybreak-quote</code>.</dd>
 			</dl>
-		</section>
-		<section class="main links-underlined demo">
-			<h1>Demo</h1>
-			<h2>Dolorem id Sapiente in Sed</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus. Cras odio mauris, varius nec tempor nec, elementum eget augue. Vivamus pretium ante sed ex ultrices semper. Donec ante diam, convallis at rutrum sit amet, sodales nec est. Integer tincidunt felis luctus placerat fermentum. Duis et felis mi. Mauris sed faucibus neque. Morbi facilisis blandit est, vel pellentesque nisi elementum ut.</p>
-			<blockquote>
-				“A regular block quote magna ut lorem cursus, sed molestie turpis dictum. Maecenas at imperdiet justo, sit amet vulputate ligula. Aliquam erat volutpat. Sed non dignissim neque, non varius arcu.”
-			</blockquote>
-			<p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla. Nam ornare interdum tincidunt. In a porta diam.</p>
-			<blockquote class="pullquote">
-				“A block quote as pull quote donec nulla sem, porta nec dolor a, facilisis gravida nibh. Mauris vel dolor metus. Integer ut pharetra lacus.”
-			</blockquote>
-			<p>Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas quis nisi sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.</p>
-			<blockquote class="pullquote pullquote-roof-fixed">
-				<p>Quis natus excepturi consectetur necessitatibus. Pariatur culpa rerum saepe aperiam molestiae. Optio aut recusandae amet aperiam.</p>
-			</blockquote>
-			<p>Laborum accusantium in aut molestias voluptas exercitationem sint fugiat. Ea ratione eligendi dolor autem nemo nesciunt porro facere. Facere asperiores sequi quibusdam molestiae. Voluptas maxime nihil nesciunt est. Quo fugiat reiciendis laudantium voluptatem. Et quia consequatur autem qui sapiente.</p>
-
-			<h3>Et Omnis Officia Sint</h3>
-			<blockquote class="pullquote float-left pullquote-roof-full">
-				“Dolorum nobis deleniti. Sunt nobis doloremque ab eveniet eum earum sunt. Iure dolorem libero dolorum labore ad et magni. Voluptatibus est reiciendis dignissimos laborum quia.”
-			</blockquote>
-			<p>Phasellus a nisl a massa congue lobortis. Suspendisse convallis, ante at rutrum dapibus, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
-			<p>In fringilla consectetur lorem varius bibendum. Pellentesque egestas eros lectus, eu gravida eros imperdiet vel. Nullam finibus quam eget nisi vehicula tempor. Etiam interdum odio ligula, ac imperdiet eros cursus sed. Aliquam a convallis orci, eu aliquam dui.</p>
-			<h2>Molestiae Soluta Repellat Rerum Commodi</h2>
-			<blockquote class="pullquote float-right pullquote-roof-full">
-			  <p>“Et voluptatem sed sit alias sunt. Qui qui dolores ipsa aliquid est dolor. Labore totam sit repellendus illo quod. Mollitia id voluptatem rerum. Soluta asperiores dolores ullam deleniti provident.”</p>
-			  <cite>– Aaron Pinero, designer</cite>
-			</blockquote>
-			<p>Etiam fermentum efficitur nisl, eu tempor eros lobortis et. Sed dapibus nisi eget euismod tincidunt. Aenean mattis imperdiet ex, gravida rutrum quam. Praesent condimentum, augue nec elementum ultricies, arcu magna convallis dui, id accumsan ex diam in tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur non metus et enim iaculis imperdiet.</p>
-			<p>Phasellus a metus nisl. Pellentesque condimentum lorem eu magna faucibus, ut volutpat felis pellentesque. Nulla a consectetur nisi. Sed eu nulla bibendum, tincidunt eros a, sodales sapien. Cras scelerisque vehicula massa, euismod hendrerit nunc suscipit in. Ut in tortor vitae ligula eleifend tristique ac vel ex.</p>
+			<h2 id="examples">Examples</h2>
+			<h3>Block Quote</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus. Cras odio mauris, varius nec tempor nec, elementum eget augue.&lt;/p&gt;
+&lt;blockquote&gt;
+  “A regular block quote magna ut lorem cursus, sed molestie turpis dictum. Maecenas at imperdiet justo, sit amet vulputate ligula. Aliquam erat volutpat. Sed non dignissim neque, non varius arcu.”
+&lt;/blockquote&gt;</code></pre>
+			<figure class="example">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus. Cras odio mauris, varius nec tempor nec, elementum eget augue.</p>
+        <blockquote>
+          “A regular block quote magna ut lorem cursus, sed molestie turpis dictum. Maecenas at imperdiet justo, sit amet vulputate ligula. Aliquam erat volutpat. Sed non dignissim neque, non varius arcu.”
+        </blockquote>
+			</figure>
+			<h3>Pull Quote</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p&gt;Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla.&lt;/p&gt;
+&lt;blockquote class="pullquote"&gt;
+  “A block quote as pull quote donec nulla sem, porta nec dolor a, facilisis gravida nibh. Mauris vel dolor metus. Integer ut pharetra lacus.”
+&lt;/blockquote&gt;</code></pre>
+			<figure class="example">
+        <p>Quisque finibus, nisl et luctus congue, velit lectus commodo sem, sit amet sodales dui ex eget dolor. Nunc ac diam diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ullamcorper, est sed rutrum vulputate, augue erat euismod nibh, id bibendum neque lorem at nulla.</p>
+        <blockquote class="pullquote">
+          “A block quote as pull quote donec nulla sem, porta nec dolor a, facilisis gravida nibh. Mauris vel dolor metus. Integer ut pharetra lacus.”
+        </blockquote>
+			</figure>
+			<h3>Pull Quote, Fixed-Width Roof</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p&gt;Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas quis nisi sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.&lt;/p&gt;
+&lt;blockquote class="pullquote pullquote-roof-fixed"&gt;
+  &lt;p&gt;Quis natus excepturi consectetur necessitatibus. Pariatur culpa rerum saepe aperiam molestiae. Optio aut recusandae amet aperiam.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+			<figure class="example">
+        <p>Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas quis nisi sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.</p>
+        <blockquote class="pullquote pullquote-roof-fixed">
+          <p>Quis natus excepturi consectetur necessitatibus. Pariatur culpa rerum saepe aperiam molestiae. Optio aut recusandae amet aperiam.</p>
+        </blockquote>
+			</figure>
+			<h3>Pull Quote, Full-Width Roof</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p&gt;Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas quis nisi sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.&lt;/p&gt;
+&lt;blockquote class="pullquote pullquote-roof-full"&gt;
+  &lt;p&gt;Quis natus excepturi consectetur necessitatibus. Pariatur culpa rerum saepe aperiam molestiae. Optio aut recusandae amet aperiam.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+			<figure class="example">
+        <p>Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas quis nisi sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.</p>
+        <blockquote class="pullquote pullquote-roof-full">
+          <p>Quis natus excepturi consectetur necessitatibus. Pariatur culpa rerum saepe aperiam molestiae. Optio aut recusandae amet aperiam.</p>
+        </blockquote>
+			</figure>
+			<h3>Pull Quote, Floated</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;blockquote class="pullquote float-right pullquote-roof-full"&gt;
+  &lt;p&gt;“Et voluptatem sed sit alias sunt. Qui qui dolores ipsa aliquid est dolor. Labore totam sit repellendus illo quod. Mollitia id voluptatem rerum. Soluta asperiores dolores ullam deleniti provident.”&lt;/p&gt;
+  &lt;cite&gt;– Aaron Pinero, designer&lt;/cite&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Etiam fermentum efficitur nisl, eu tempor eros lobortis et. Sed dapibus nisi eget euismod tincidunt. Aenean mattis imperdiet ex, gravida rutrum quam. Praesent condimentum, augue nec elementum ultricies, arcu magna convallis dui, id accumsan ex diam in tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur non metus et enim iaculis imperdiet.&lt;/p&gt;
+&lt;p&gt;Phasellus a metus nisl. Pellentesque condimentum lorem eu magna faucibus, ut volutpat felis pellentesque. Nulla a consectetur nisi. Sed eu nulla bibendum, tincidunt eros a, sodales sapien. Cras scelerisque vehicula massa, euismod hendrerit nunc suscipit in. Ut in tortor vitae ligula eleifend tristique ac vel ex.&lt;/p&gt;</code></pre>
+			<figure class="example">
+        <blockquote class="pullquote float-right pullquote-roof-full">
+          <p>“Et voluptatem sed sit alias sunt. Qui qui dolores ipsa aliquid est dolor. Labore totam sit repellendus illo quod. Mollitia id voluptatem rerum. Soluta asperiores dolores ullam deleniti provident.”</p>
+          <cite>– Aaron Pinero, designer</cite>
+        </blockquote>
+        <p>Etiam fermentum efficitur nisl, eu tempor eros lobortis et. Sed dapibus nisi eget euismod tincidunt. Aenean mattis imperdiet ex, gravida rutrum quam. Praesent condimentum, augue nec elementum ultricies, arcu magna convallis dui, id accumsan ex diam in tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur non metus et enim iaculis imperdiet.</p>
+        <p>Phasellus a metus nisl. Pellentesque condimentum lorem eu magna faucibus, ut volutpat felis pellentesque. Nulla a consectetur nisi. Sed eu nulla bibendum, tincidunt eros a, sodales sapien. Cras scelerisque vehicula massa, euismod hendrerit nunc suscipit in. Ut in tortor vitae ligula eleifend tristique ac vel ex.</p>
+			</figure>
 		</section>
 		<%include footer.html%>
 	</body>

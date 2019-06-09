@@ -59,6 +59,9 @@ blockquote {
         text-align:left;
         margin-bottom:$tyspacing-md;
         width:calc(50% - #{$tyspacing-md});
+        &:first-child + * {
+          margin-top:0;
+        }
       }
     }
     &.float-left {
