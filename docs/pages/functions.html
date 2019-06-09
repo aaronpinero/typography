@@ -60,11 +60,11 @@
 			<dl>
 				<dt>$font-size</dt>
 				<dd><em>required</em></dd>
-				<dd>Font size value in rem units</dd>
+				<dd>Font size value in rem units.</dd>
 				<dt>$leading-style</dt>
 				<dd><em>optional</em></dd>
-				<dd>Default value is <code>base</code></dd>
-				<dd>Accepted values are <code>base</code>, <code>heading</code>, <code>tall</code>, or <code>short</code></dd>
+				<dd>Default value is <code class="val val-default">base</code></dd>
+				<dd>Accepted values are <code>base</code>, <code>heading</code>, <code>tall</code>, or <code>short</code>.</dd>
 			</dl>
 			<h3 class="font-size-h4">Variables</h3>
 			<p>The leading styles listed above correspond to scalar values. The values adjust the calculated line height to achieve a particular style. A larger value will result in a smaller line height and a smaller value will give a larger line height. These values were determined through experimentation and should not need to be changed. However, the values are available as variables. They can be overridden if you wish to modify the line height calculation.</p>
@@ -93,8 +93,8 @@ p.special {
 			<dl>
 				<dt>$multiplier</dt>
 				<dd><em>optional</em></dd>
-				<dd>default value is <code>1</code></dd>
-				<dd>A floating point value representing the number of grid units in the desired size</dd>
+				<dd>default value is <code class="val val-default">1</code></dd>
+				<dd>Floating point value representing the number of grid units in the desired size.</dd>
 			</dl>
 			<h3 class="font-size-h4">Example</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div {
@@ -107,8 +107,8 @@ p.special {
 			<dl>
 				<dt>$exponent</dt>
 				<dd><em>optional</em></dd>
-				<dd>default value is <code>0</code></dd>
-				<dd>Integer representing a number of steps from the base font size on the modular scale to calculate; positive and negative values allowed</dd>
+				<dd>default value is <code class="val val-default">0</code></dd>
+				<dd>Integer representing a number of steps from the base font size on the modular scale to calculate; positive and negative values allowed.</dd>
 			</dl>
 			<h3 class="font-size-h4">Example</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">$tyfont-size-base: 1rem;
@@ -127,7 +127,7 @@ h5 {
 			<dl>
 				<dt>$code</dt>
 				<dd><em>required</em></dd>
-				<dd>A character code without the preceding slash (“\”); there are <a href="settings.html"><span class="smallcaps">SASS</span> variables for the character codes</a></dd>
+				<dd>A character code without the preceding slash (“\”); there are <a href="settings.html"><span class="smallcaps">SASS</span> variables for the character codes</a>.</dd>
 			</dl>
 			<h3 class="font-size-h4">Example</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div::before {
