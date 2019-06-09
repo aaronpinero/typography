@@ -53,62 +53,62 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Modules</h1>
-			<p>The tyfy.scss file is an inventory of the modules that make up the framework. The required, essential, and optional modules are are @imported in the following order. The extras modules are not, by default, part of <strong class="tyfy">Tyfy</strong> but can be added if desired.</p>
+			<p>Below is an inventory of the modules that make up the framework. The required, essential, and optional modules are @imported in the following order. The extras modules are not all part of the default <strong class="tyfy">Tyfy</strong> distribution but can be added if desired.</p>
 			<h2>Required</h2>
 			<p>These modules are required to use <strong class="tyfy">Tyfy</strong>. They define the framework's variables, functions, and mixins.</p>
 			<dl>
 				<dt>@import "<a href="core.html">required/core</a>"</dt>
-				<dd>Defines and provides default values for the core <strong class="tyfy">Tyfy</strong> variables; these variables are used in the calculation of many of the framework settings and are required by the functions module</dd>
+				<dd>Defines the core <strong class="tyfy">Tyfy</strong> variables; these variables are used in the calculation of many of the framework settings and are required by the functions module.</dd>
 				<dt>@import "<a href="functions.html">required/functions</a>"</dt>
-				<dd>Defines functions that facilitate use of the grid and modular typographic scale</dd>
+				<dd>Defines functions that make it easy to use the grid and modular typographic scale.</dd>
 				<dt>@import "<a href="settings.html">required/settings</a>"</dt>
-				<dd>Defines and provides default values for the framework’s colors, fonts, breakpoints, etc.</dd>
+				<dd>Defines the framework’s colors, fonts, breakpoints, etc.</dd>
 				<dt>@import "<a href="mixins.html">required/mixins</a>"</dt>
-				<dd>Defines <span class="smallcaps">SASS</span> mixins that facilitate the application of the framework’s styles and effects</dd>
+				<dd>Defines <span class="smallcaps">SASS</span> mixins that make it easy to use the sibling margins, styles, and effects.</dd>
 			</dl>
 			<h2>Essential</h2>
 			<p>These modules are not hard requirements for <strong class="tyfy">Tyfy</strong> but are highly recommended.</p>
 			<dl>
-				<dt>@import "essential/normalize"</dt>
-				<dd>Selected styles from <a href="https://github.com/necolas/normalize.css/">normalize.css</a></dd>
-				<dt>@import "essential/body"</dt>
-				<dd>Apply the base colors, font styles, and line height</dd>
-				<dt>@import "essential/spacing"</dt>
-				<dd>Apply 'smart' vertical margins between all adjacent sibling <span class="smallcaps">HTML</span> elements; also contains utility classes for turning on and off the adjacent sibling margins</dd>
+				<dt>@import "<a href="normalize.html">essential/normalize</a>"</dt>
+				<dd>Apply selected styles from <a href="https://github.com/necolas/normalize.css/">normalize.css</a>.</dd>
+				<dt>@import "<a href="body.html">essential/body</a>"</dt>
+				<dd>Apply the base colors, font styles, and line height.</dd>
+				<dt>@import "<a href="spacing.html">essential/spacing</a>"</dt>
+				<dd>Apply margins between adjacent sibling <span class="smallcaps">HTML</span> elements; also contains classes for toggling the adjacent sibling margins.</dd>
 			</dl>
 			<h2>Optional</h2>
-			<p>These optional modules provide specific typographic or presentation styles.</p> 
+			<p>These optional modules provide specific typographic styles and UI patterns.</p> 
 			<dl>
-				<dt>@import "optional/paragraphs"</dt>
-				<dd>Styles and utility classes for paragraphs</dd>
-				<dt>@import "optional/headings"</dt>
-				<dd>Styles and utility classes for headings</dd>
-				<dt>@import "optional/links"</dt>
-				<dd>Styles and utility classes for links</dd>
-				<dt>@import "optional/lists"</dt>
-				<dd>Styles and utility classes for lists</dd>
-				<dt>@import "optional/inline"</dt>
-				<dd>Styles and utility classes for inline-level elements</dd>
-				<dt>@import "optional/quotes"</dt>
-				<dd>Styles and utility classes for blockquotes and pullquotes</dd>
-				<dt>@import "optional/tables"</dt>
-				<dd>Styles and utility classes for tables; responsive tables requires tables.js</dd>
-				<dt>@import "optional/reverse"</dt>
-				<dd>A utility class for reversed colors</dd>
-				<dt>@import "optional/collapsables"</dt>
-				<dd>A presentation style for collapsable sections; requires collapsable.js</dd>
+				<dt>@import "<a href="paragraphs.html">optional/paragraphs</a>"</dt>
+				<dd>Styles and classes for paragraphs.</dd>
+				<dt>@import "<a href="headings.html">optional/headings</a>"</dt>
+				<dd>Styles and classes for headings and heading sizes.</dd>
+				<dt>@import "<a href="links.html">optional/links</a>"</dt>
+				<dd>Styles and classes for links.</dd>
+				<dt>@import "<a href="lists.html">optional/lists</a>"</dt>
+				<dd>Styles and classes for lists.</dd>
+				<dt>@import "<a href="utility.html">optional/utility</a>"</dt>
+				<dd>Styles and classes for other inline- and block-level elements; additional classes for typographic enhancements.</dd>
+				<dt>@import "<a href="quotes.html">optional/quotes</a>"</dt>
+				<dd>Styles and classes for blockquotes and pullquotes.</dd>
+				<dt>@import "<a href="tables.html">optional/tables</a>"</dt>
+				<dd>Styles and classes for tables; responsive tables require tables.js.</dd>
+				<dt>@import "<a href="collapsables.html">optional/collapsables</a>"</dt>
+				<dd>Styles for a UI pattern similar to an accordion; requires collapsable.js.</dd>
 				<dt>@import "optional/tabs"</dt>
-				<dd>A presentation style for responsive tabs; requires tabs.js</dd>
-				<dt>@import "optional/forms" <em class="small"><small>beta</small></em></dt>
-				<dd>Styles and utility classes for form elements</dd>
-				<dt>@import "optional/effects" <em class="small"><small>experimental</small></em></dt>
-				<dd>A <span class="smallcaps">SASS</span> map that generates classes for <span class="smallcaps">CSS</span> animations</dd>
+				<dd>Styles for responsive tabs; requires tabs.js.</dd>
+				<dt>@import "<a href="forms.html">optional/forms</a>"</dt>
+				<dd>Styles and classes for form elements.</dd>
 			</dl>
 			<h2>Extras</h2>
 			<p>These modules are not part of the default <strong class="tyfy">Tyfy</strong> stylesheet but can be added if desired. They provide additional functionality that might not be needed in every case. See the <a href="extras.html">Extras documentation</a> for more information.</p>
 			<dl>
 				<dt>@import "extras/icons"</dt>
 				<dd>Defines the font face and classes for a custom icon webfont</dd>
+				<dt>@import "optional/reverse"</dt>
+				<dd>A utility class for reversed colors</dd>
+				<dt>@import "optional/effects" <em class="small"><small>experimental</small></em></dt>
+				<dd>A <span class="smallcaps">SASS</span> map that generates classes for <span class="smallcaps">CSS</span> animations</dd>
 				<dt>@import "extras/drupal"</dt>
 				<dd><strong class="tyfy">Tyfy</strong>-based style overrides for user interface elements in Drupal</dd>
 				<dt>@import "extras/responsive_text"</dt>
