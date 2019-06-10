@@ -1,4 +1,4 @@
-<!doctype html>
+  <!doctype html>
 <html lang="en">
 	<head>
 		<%include head.html%>
@@ -8,74 +8,39 @@
 		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>Reverse Styles</h1>
-			<p>When foreground and background colors are reversed, the <code>reverse</code> class applies readable text, heading and link colors to child elements. The <code>reverse</code> class can contain, be contained by, or be applied to the same element as the <code>links-underlined</code> class.</p>
-		</section>
-		<section class="main demo reverse links-underlined">
-			<h1>Demo</h1>
-			<h2>Pariatur Alias <a href="http://aaronpinero.net">Reprehenderit</a> Soluta Dolor</h2>
-			<p>Phasellus id imperdiet sapien, mollis facilisis dui. Aliquam sed euismod nibh. Maecenas <a href="http://aaronpinero.net">quis nisi</a> sed nisl luctus vehicula. Aliquam vitae lacinia sem. Vestibulum erat leo, interdum sed purus eu, tincidunt sagittis ex. Cras ut bibendum purus. Proin non bibendum orci. Pellentesque porta ut risus eget aliquam. Vestibulum lectus libero, condimentum a mauris et, luctus gravida neque.</p>
-			<p><a class="button" href="http://aaronpinero.net">Learn More</a> <a class="button-outline" href="http://aaronpinero.net">Learn Even More</a></p>
-			<h3>Dolorem id Sapiente in Sed</h3>
-			<ul>
-				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-				<li>
-					Nulla interdum erat sit amet lectus mattis, eu facilisis lorem finibus.
-					<ul>
-						<li>Cras odio mauris, varius nec tempor nec, elementum eget augue.</li>
-						<li>Vivamus pretium ante sed ex ultrices semper.</li>
-						<li>Donec ante diam, convallis at rutrum sit amet, sodales nec est.</li>
-					</ul>
-				</li>
-				<li>Integer tincidunt felis luctus placerat fermentum.</li>
-				<li>Duis et felis mi. Mauris sed faucibus neque.</li>
-			</ul>
-			<h3>Et Omnis Officia Sint</h3>
-			<blockquote class="pullquote right">
-				“Dolorum nobis deleniti. Sunt nobis doloremque ab eveniet eum earum sunt. Iure dolorem libero dolorum labore ad et magni. Voluptatibus est reiciendis dignissimos laborum quia.”
-			</blockquote>
-			<p>Phasellus a nisl a massa congue lobortis. Suspendisse convallis, <code>ante at rutrum dapibus</code>, lectus nisl egestas erat, eget ullamcorper leo justo eu lacus. Donec pellentesque ligula ex, ac sodales magna faucibus quis. Nulla pretium tellus et tellus finibus, vitae euismod mi commodo. Pellentesque vulputate sit amet neque sed consequat. Curabitur pretium posuere libero, id dictum ante eleifend quis. Nunc feugiat dolor ac malesuada bibendum.</p>
-			<p>In fringilla consectetur lorem varius bibendum. Pellentesque egestas eros lectus, eu gravida eros imperdiet vel. Nullam finibus quam eget nisi vehicula tempor. Etiam interdum odio ligula, ac imperdiet eros cursus sed. Aliquam a convallis orci, eu aliquam dui.</p>
-      <table class="clean horizontal-rules responsive">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
+			<p>Sometimes a design will have an element that uses a different background color. For example, you may have a page that is mostly white background and dark text. But that page may have a footer that is a black background with light text. In the context of that footer, you will need to define text, link, and border colors that will be visible. These colors will be different than – the reverse of – the page’s default colors.</p>
+			<p><em>The reverse module makes it easy to define and apply these reverse colors with a single class.</em></p>
+			<h2 id="implementation">Implementation</h2>
+			<p>In the body module, colors from the settings file are assigned to custom properties of the <code>:root</code> pseudo-element.</p>
+      <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">:root {
+  --tycolor-bg:                   #{$tycolor-bg};
+  --tycolor-bg-tab-active:        #{$tycolor-bg-tab-active};
+  --tycolor-fg:                   #{$tycolor-fg};
+  --tycolor-text-light:           #{$tycolor-text-light};
+  --tycolor-link-default:         #{$tycolor-link-default};
+  --tycolor-link-active:          #{$tycolor-link-active};
+  --tycolor-border:               #{$tycolor-border};
+  --tycolor-border-link-default:  #{$tycolor-border-link-default};
+  --tycolor-border-link-active:   #{$tycolor-border-link-active};
+  --tycolor-shade:                #{$tycolor-shade};
+}</code></pre>
+			<p>The reverse module defines a class, <code>reverse</code>. The reverse class modifies the value of those custom properties. The new values are, by default, the reverse of <strong class="tyfy">Tyfy</strong>’s default colors. The module provides <span class="smallcaps">SASS</span> variables for these reverse colors that can be customized. This implementation allows you to create a new color context that can be applied with a single class.</p>
+      <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">.reverse {
+  --tycolor-bg:                   #{$tycolor-bg-rev};
+  --tycolor-bg-tab-active:        #{$tycolor-bg-tab-active-rev};
+  --tycolor-fg:                   #{$tycolor-fg-rev};
+  --tycolor-text-light:           #{$tycolor-text-light-rev};
+  --tycolor-link-default:         #{$tycolor-link-default-rev};
+  --tycolor-link-active:          #{$tycolor-link-active-rev};
+  --tycolor-border:               #{$tycolor-border-rev};
+  --tycolor-border-link-default:  #{$tycolor-border-link-default-rev};
+  --tycolor-border-link-active:   #{$tycolor-border-link-active-rev};
+  --tycolor-shade:                #{$tycolor-shade-rev};
+  
+  background-color:var(--tycolor-bg);
+  color:var(--tycolor-fg);
+}</code></pre>
+			<p>The reverse module accounts for all of <strong class="tyfy">Tyfy</strong>’s styles and patterns.</p>
 		</section>
 		<%include footer.html%>
     <script src="../dist/script/tables.js"></script>

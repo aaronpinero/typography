@@ -8,61 +8,60 @@
 		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>Settings</h1>
-			<p>The settings module is a library of <span class="smallcaps">SASS</span> variables that define the margins, colors, fonts, font sizes, breakpoints, and other characteristics.</p>
-			<p>Variable names begin with the prefix <code>$tyfy-</code> (or <code>$tycolor-</code> for color variables) to avoid name collision with other projects. Variable values are assigned using the <code>!default</code> declaration so they may be overridden when including the <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SASS</span> files in your project.</p>
+			<p>The settings module is a library of <span class="smallcaps">SASS</span> variables that define the characteristics of the framework. Variable names begin with the prefix <code>$ty</code> to avoid name collision with other projects. Variable values are assigned using the <code>!default</code> declaration so they may be easily changed.</p>
 			<h2>// grid and spacing</h2>
 			<dl>
-				<dt>$tyfy-spacings</dt>
-				<dd><code class="val val-default">("standard":2, "large":3,) !default;</code></dd>
-				<dd>A <span class="smallcaps">SASS</span> map of values indicating the number of grid units for each spacing variable value</dd>
-				<dt>$tyfy-spacing-standard</dt>
-				<dd><code class="val val-default">tygrid(map-get($tyfy-spacings,"standard")) !default;</code></dd>
-				<dd>Standard spacing between <span class="smallcaps">HTML</span> elements defined as a number of grid units</dd>
-				<dt>$tyfy-spacing-large</dt>
-				<dd><code class="val val-default">tygrid(map-get($tyfy-spacings,"large")) !default;</code></dd>
-				<dd>Larger spacing between HTML elements defined as a number of grid units; used for spacing above headings</dd>
-				<dt>$tyfy-indents</dt>
-				<dd><code class="val val-default">("standard":3, "small":2,) !default;</code></dd>
-				<dd>A <span class="smallcaps">SASS</span> map of values indicating the number of grid units for each indent variable value</dd>
-				<dt>$tyfy-indent-standard</dt>
-				<dd><code class="val val-default">tygrid(map-get($tyfy-indents,"standard")) !default;</code></dd>
-				<dd>Standard indent distance for lists and blockquotes defined as a number of grid units</dd>
-				<dt>$tyfy-indent-small</dt>
-				<dd><code class="val val-default">tygrid(map-get($tyfy-indents,"small")) !default;</code></dd>
-				<dd>Small indent distance for lists and blockquotes at small screen sizes</dd>
-				<dt>$tyfy-margins-on</dt>
+				<dt>$tyspacing</dt>
+				<dd><code class="val val-default">("medium":2, "large":3,) !default;</code></dd>
+				<dd><span class="smallcaps">SASS</span> map of values indicating the number of grid units for each spacing variable value.</dd>
+				<dt>$tyspacing-md</dt>
+				<dd><code class="val val-default">tygrid(map-get($tyspacing,"medium")) !default;</code></dd>
+				<dd>Medium spacing between <span class="smallcaps">HTML</span> elements defined as a multiple of the grid unit.</dd>
+				<dt>$tyspacing-lg</dt>
+				<dd><code class="val val-default">tygrid(map-get($tyspacing,"large")) !default;</code></dd>
+				<dd>Large spacing between <span class="smallcaps">HTML</span> elements defined as a multiple of the grid unit; used for spacing above headings.</dd>
+				<dt>$tyindent</dt>
+				<dd><code class="val val-default">("medium":3, "small":2,) !default;</code></dd>
+				<dd><span class="smallcaps">SASS</span> map of values indicating the number of grid units for each indent variable value.</dd>
+				<dt>$tyindent-md</dt>
+				<dd><code class="val val-default">tygrid(map-get($tyindent,"medium")) !default;</code></dd>
+				<dd>Standard indent distance for lists and block quotes defined as a multiple of the grid unit.</dd>
+				<dt>$tyindent-sm</dt>
+				<dd><code class="val val-default">tygrid(map-get($tyindent,"small")) !default;</code></dd>
+				<dd>Small indent distance for lists and block quotes at small screen sizes; defined as a multiple of the grid unit.</dd>
+				<dt>$tymargins-on</dt>
 				<dd><code class="val val-default">true !default;</code></dd>
-				<dd>Determines if adjacent sibling margins styles should be applied on the <code>&lt;body&gt;</code> tag</dd>
+				<dd>Boolean value indicating if adjacent sibling margins styles are applied on the <code>&lt;body&gt;</code> tag.</dd>
 			</dl>
 			<h3>// fonts</h3>
 			<dl>
-				<dt>$tyfy-serif</dt>
+				<dt>$tyfont-serif</dt>
 				<dd><code class="val val-default">georgia, serif !default;</code></dd>
-				<dd>Serif font selection</dd>
-				<dt>$tyfy-sans</dt>
+				<dd>Serif font selection.</dd>
+				<dt>$tyfont-sans</dt>
 				<dd><code class="val val-default">helvetica, arial, sans-serif !default;</code></dd>
-				<dd>Sans-serif font selection</dd>
-				<dt>$tyfy-mono</dt>
+				<dd>Sans-serif font selection.</dd>
+				<dt>$tyfont-mono</dt>
 				<dd><code class="val val-default">monaco, courier, monospace !default;</code></dd>
-				<dd>Monospace font selection</dd>
-				<dt>$tyfy-symbol</dt>
-				<dd><code class="val val-default">tyfyicons !default;</code></dd>
-				<dd>Icon font selection</dd>
+				<dd>Monospace font selection.</dd>
+				<dt>$tyfont-symbol</dt>
+				<dd><code class="val val-default">tyicons !default;</code></dd>
+				<dd>Icon font selection.</dd>
 			</dl>
 			<h3>// font assignments</h3>
 			<dl>
-				<dt>$tyfy-font-base</dt>
-				<dd><code class="val val-default">$tyfy-serif !default;</code></dd>
-				<dd>Base font selection, used for <code>&lt;body&gt;</code></dd>
-				<dt>$tyfy-font-heading</dt>
-				<dd><code class="val val-default">$tyfy-sans !default;</code></dd>
-				<dd>Heading font selection</dd>
-				<dt>$tyfy-font-table</dt>
-				<dd><code class="val val-default">$tyfy-sans !default;</code></dd>
-				<dd>Table cell font selection</dd>
-				<dt>$tyfy-font-input</dt>
-				<dd><code class="val val-default">$tyfy-sans !default;</code></dd>
-				<dd>Form input element font selection</dd>
+				<dt>$tyfont-base</dt>
+				<dd><code class="val val-default">$tyfont-serif !default;</code></dd>
+				<dd>Base font selection, used for <code>&lt;body&gt;</code>.</dd>
+				<dt>$tyfont-heading</dt>
+				<dd><code class="val val-default">$tyfont-sans !default;</code></dd>
+				<dd>Heading font selection.</dd>
+				<dt>$tyfont-table</dt>
+				<dd><code class="val val-default">$tyfont-sans !default;</code></dd>
+				<dd>Table cell font selection.</dd>
+				<dt>$tyfont-input</dt>
+				<dd><code class="val val-default">$tyfont-sans !default;</code></dd>
+				<dd>Form input element font selection.</dd>
 			</dl>
 			<h3>// typographic scale</h3>
 			<dl>

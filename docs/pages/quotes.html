@@ -53,37 +53,37 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Quotes</h1>
-			<p>The <code>&lt;blockquote&gt;</code> tag is commonly used for both long quotations and pull quotes. <strong class="tyfy">Tyfy</strong> provides classes that allow the basic <code>&lt;blockquote&gt;</code> to also be used for fancier pull quotes.</p>
+			<p>The <code>&lt;blockquote&gt;</code> tag is commonly used for both long quotations and pull quotes. <strong class="tyfy">Tyfy</strong> provides styles for basic quotations and classes that allow the <code>&lt;blockquote&gt;</code> tag to be used for pull quotes.</p>
 			<h2 id="classes">Classes</h2>
 			<dl>
   			<dt>.pullquote</dt>
   			<dd>Applied to a <code>&lt;blockquote&gt;</code> to render as a pull quote. </dd>
   			<dt>.pullquote-roof-fixed</dt>
-  			<dd>Added to the <code>pullquote</code> class to display a decorative, fixed-width border element above the pullquote; the decorative border uses an svg background rule and the <code>$tyicons-quote-right</code> icon.</dd>
+  			<dd>Added to the <code>pullquote</code> class to display a decorative, fixed-width rule above the pullquote; the decorative rule uses an svg background and the <code>$tyicons-quote-right</code> icon.</dd>
   			<dt>.pullquote-roof-full</dt>
-				<dd>Added to the <code>pullquote</code> class to display a decorative, relative-width border element above the pullquote; the decorative border uses an svg background rule and the <code>$tyicons-quote-right</code> icon.</dd>
+				<dd>Added to the <code>pullquote</code> class to display a decorative, full-width rule above the pullquote; the decorative rule uses an svg background and the <code>$tyicons-quote-right</code> icon.</dd>
   			<dt>.float-left</dt>
-  			<dd>Added to the <code>pullquote</code> class to position the pull quote float-left. This degrades to a regular pull quote at screen widths smaller than <code>$tybreak-float</code>.</dd>
+  			<dd>Added to the <code>pullquote</code> class to float the pull quote on the left. The width of the floated quote is 50% of the parent. The style is responsive. The screen width must be at least <code>$tybreak-float</code> for the quote to be floated.</dd>
   			<dt>.float-right</dt>
-				<dd>Added to the <code>pullquote</code> class to position the pull quote float-right. This degrades to a regular pull quote at screen widths smaller than <code>$tybreak-float</code>.</dd>
+				<dd>Added to the <code>pullquote</code> class to float the pull quote on the right. The width of the floated quote is 50% of the parent. The style is responsive. The screen width must be at least <code>$tybreak-float</code> for the quote to be floated.</dd>
 			</dl>
 			<h2 id="variables">Variables</h2>
 			<dl>
 				<dt>$tybreak-float</dt>
 				<dd><code class="val val-default">40em !default;</code></dd>
-  			  <dd>Screen width above which the float classes take effect.</dd>
+  			  <dd>Minimum screen width for the float classes take effect.</dd>
 				<dt>$tybreak-quote</dt>
 				<dd><code class="val val-default">40em !default;</code></dd>
-				<dd>Screen width above which quotes have increased margin.</dd>
+				<dd>Minimum screen width for quotes to have increased left and right margin – from $tymargin-sm to $tymargin-md.</dd>
         <dt>$tycolor-border</dt>
   			  <dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,12%) !default;</code></dd>
-        <dd>Color of the decorative border on pullquotes using the <code>pullquote-roof-fixed</code> or <code>pullquote-roof-full</code> class.</dd>
+        <dd>Color of the decorative rule on pullquotes using the <code>pullquote-roof-fixed</code> or <code>pullquote-roof-full</code> class.</dd>
   			  <dt>$tyfont-size-quote</dt>
   			  <dd><code class="val val-default">tyscale(map-get($tyfont-size,"quote")) !default;</code></dd>
         <dd>Font size for <code>&lt;blockquote&gt;</code> with the <code>pullquote</code> class.</dd>
 				<dt>$tyindent-md</dt>
   			  <dd><code class="val val-default">tygrid(map-get($tyindent,"medium")) !default;</code></dd>
-  			  <dd>Horizontal margin for <code>&lt;blockquote&gt;</code> elements. This margin reduces to <code>$tyindent-sm</code> at screen widths below below <code>$tybreak-quote</code>.</dd>
+  			  <dd>Left and right margin for <code>&lt;blockquote&gt;</code> elements. This margin reduces to <code>$tyindent-sm</code> at screen widths below below <code>$tybreak-quote</code>.</dd>
 			</dl>
 			<h2 id="examples">Examples</h2>
 			<h3>Block Quote</h3>
