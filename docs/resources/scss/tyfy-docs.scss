@@ -7,7 +7,7 @@ $tyfont-base:$tyfont-serif;
 $tyfont-heading:$tyfont-sans;
 $tyfont-table:$tyfont-sans;
 $tyfont-input:$tyfont-sans;
-$tycolor-bg-rev:#333;
+$tycolor-rev-bg:#333;
 $tywidth-constrained:55rem;
 $color-example:darken(#80cc33,25%);
 $color-value:mix(#8033cc,#999999,75%);
@@ -86,7 +86,7 @@ header.brand {
     &.nav-processed {
       position:relative;
       h2 {
-        color:$tycolor-link-default-rev;
+        color:$tycolor-rev-link-default;
         cursor:pointer;
         height:tylead($tyfont-size-h3,heading);
         line-height:tylead($tyfont-size-h3,heading);
@@ -106,7 +106,7 @@ header.brand {
           width:tylead($tyfont-size-h3,heading);
         }
         &:hover {
-          color:$tycolor-link-active-rev;
+          color:$tycolor-rev-link-active;
         }
       }
       ul {

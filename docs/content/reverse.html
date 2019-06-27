@@ -8,7 +8,7 @@
 		<%include header.html%>
 		<section class="main links-underlined">
 			<h1>Reverse Styles</h1>
-			<p>Sometimes a design will have an element that uses a different background color. For example, you may have a page that is mostly white background and dark text. But that page may have a footer that is a black background with light text. In the context of that footer, you will need to define text, link, and border colors that will be visible. These colors will be different than – the reverse of – the page’s default colors.</p>
+			<p>Sometimes a design will have an section that uses a different background color. For example, you may have a page that is mostly white background and dark text. But that page may have a footer that is a black background with light text. In the context of that footer, you will need to define text, link, and border colors that will be visible. These colors will be different from – the reverse of – the page’s default colors.</p>
 			<p><em>The reverse module makes it easy to define and apply these reverse colors with a single class.</em></p>
 			<h2 id="implementation">Implementation</h2>
 			<p>In the body module, colors from the settings file are assigned to custom properties of the <code>:root</code> pseudo-element.</p>
@@ -24,7 +24,7 @@
   --tycolor-border-link-active:   #{$tycolor-border-link-active};
   --tycolor-shade:                #{$tycolor-shade};
 }</code></pre>
-			<p>The reverse module defines a class, <code>reverse</code>. The reverse class modifies the value of those custom properties. The new values are, by default, the reverse of <strong class="tyfy">Tyfy</strong>’s default colors. The module provides <span class="smallcaps">SASS</span> variables for these reverse colors that can be customized. This implementation allows you to create a new color context that can be applied with a single class.</p>
+			<p>The reverse module defines a class, <code>reverse</code>. Within the reverse class the values of those custom properties are modified. The new values are, by default, the reverse of <strong class="tyfy">Tyfy</strong>’s default colors. The module provides <span class="smallcaps">SASS</span> variables for these reverse colors that can be customized. This implementation allows you to quickly create and apply a new color context.</p>
       <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">.reverse {
   --tycolor-bg:                   #{$tycolor-bg-rev};
   --tycolor-bg-tab-active:        #{$tycolor-bg-tab-active-rev};
@@ -40,7 +40,7 @@
   background-color:var(--tycolor-bg);
   color:var(--tycolor-fg);
 }</code></pre>
-			<p>The reverse module accounts for all of <strong class="tyfy">Tyfy</strong>’s styles and patterns.</p>
+			<p>The reverse module accounts for colors in all of <strong class="tyfy">Tyfy</strong>’s styles and patterns.</p>
 		</section>
 		<%include footer.html%>
     <script src="../dist/script/tables.js"></script>
