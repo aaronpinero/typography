@@ -153,6 +153,9 @@ pre.codebox {
     a:not([href]) {
       color:$color-example;
     }
+    &.reverse {
+      border-color:$tycolor-rev-border;
+    }
   }
 }
 // customizing prism css

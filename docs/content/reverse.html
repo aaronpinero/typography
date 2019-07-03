@@ -9,7 +9,7 @@
 		<section class="main links-underlined">
 			<h1>Reverse Styles</h1>
 			<p>Sometimes a design will have an section that uses a different background color. For example, you may have a page that is mostly white background and dark text. But that page may have a footer that is a black background with light text. In the context of that footer, you will need to define text, link, and border colors that will be visible. These colors will be different from – the reverse of – the page’s default colors.</p>
-			<p><em>The reverse module makes it easy to define and apply these reverse colors with a single class.</em></p>
+			<p>The reverse module makes it easy to define and apply these reverse colors with <em>a single class.</em></p>
 			<h2 id="implementation">Implementation</h2>
 			<p>In the body module, colors from the settings file are assigned to custom properties of the <code>:root</code> pseudo-element.</p>
       <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">:root {
@@ -26,23 +26,58 @@
 }</code></pre>
 			<p>The reverse module defines a class, <code>reverse</code>. Within the reverse class the values of those custom properties are modified. The new values are, by default, the reverse of <strong class="tyfy">Tyfy</strong>’s default colors. The module provides <span class="smallcaps">SASS</span> variables for these reverse colors that can be customized. This implementation allows you to quickly create and apply a new color context.</p>
       <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">.reverse {
-  --tycolor-bg:                   #{$tycolor-bg-rev};
-  --tycolor-bg-tab-active:        #{$tycolor-bg-tab-active-rev};
-  --tycolor-fg:                   #{$tycolor-fg-rev};
-  --tycolor-text-light:           #{$tycolor-text-light-rev};
-  --tycolor-link-default:         #{$tycolor-link-default-rev};
-  --tycolor-link-active:          #{$tycolor-link-active-rev};
-  --tycolor-border:               #{$tycolor-border-rev};
-  --tycolor-border-link-default:  #{$tycolor-border-link-default-rev};
-  --tycolor-border-link-active:   #{$tycolor-border-link-active-rev};
-  --tycolor-shade:                #{$tycolor-shade-rev};
+  --tycolor-bg:                   #{$tycolor-rev-bg};
+  --tycolor-bg-tab-active:        #{$tycolor-rev-bg-tab-active};
+  --tycolor-fg:                   #{$tycolor-rev-fg};
+  --tycolor-text-light:           #{$tycolor-rev-text-light};
+  --tycolor-link-default:         #{$tycolor-rev-link-default};
+  --tycolor-link-active:          #{$tycolor-rev-link-active};
+  --tycolor-border:               #{$tycolor-rev-border};
+  --tycolor-border-link-default:  #{$tycolor-rev-border-link-default};
+  --tycolor-border-link-active:   #{$tycolor-rev-border-link-active};
+  --tycolor-shade:                #{$tycolor-rev-shade};
   
   background-color:var(--tycolor-bg);
   color:var(--tycolor-fg);
 }</code></pre>
 			<p>The reverse module accounts for colors in all of <strong class="tyfy">Tyfy</strong>’s styles and patterns.</p>
+      <h2 id="examples">Examples</h2>
+      <h3>Headings, Paragraphs, & Links</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;div class="reverse"&gt;
+  &lt;h4&gt;Heading 4&lt;/h4&gt;
+  &lt;p&gt;I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. &lt;a href="https://forcemipsum.com"&gt;May the Force be with you&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;&lt;a class="tybutton" href="https://forcemipsum.com"&gt;Learn More&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+			<figure class="example reverse">
+			  <div class="reverse">
+          <h4>Heading 4</h4>
+          <p>I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. <a href="https://forcemipsum.com">May the Force be with you</a>.</p>
+          <p><a class="tybutton" href="https://forcemipsum.com">Learn More</a></p>
+        </div>
+			</figure>
+      <h3>Lists</h3>
+      <h3>Quotes</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;div class="reverse"&gt;
+  &lt;blockquote class="pullquote float-right pullquote-roof-full"&gt;
+    &lt;p&gt;“Et voluptatem sed sit alias sunt. Qui qui dolores ipsa aliquid est dolor. Labore totam sit repellendus illo quod.”&lt;/p&gt;
+    &lt;cite&gt;– Aaron Pinero, designer&lt;/cite&gt;
+  &lt;/blockquote&gt;
+  &lt;p&gt;Etiam fermentum efficitur nisl, eu tempor eros lobortis et. Sed dapibus nisi eget euismod tincidunt. Aenean mattis imperdiet ex, gravida rutrum quam. Praesent condimentum, augue nec elementum ultricies, arcu magna convallis dui, id accumsan ex diam in tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur non metus et enim iaculis imperdiet.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+			<figure class="example reverse">
+			  <div class="reverse">
+          <blockquote class="pullquote float-right pullquote-roof-full">
+            <p>“Et voluptatem sed sit alias sunt. Qui qui dolores ipsa aliquid est dolor. Labore totam sit repellendus illo quod.”</p>
+            <cite>– Aaron Pinero, designer</cite>
+          </blockquote>
+          <p>Etiam fermentum efficitur nisl, eu tempor eros lobortis et. Sed dapibus nisi eget euismod tincidunt. Aenean mattis imperdiet ex, gravida rutrum quam. Praesent condimentum, augue nec elementum ultricies, arcu magna convallis dui, id accumsan ex diam in tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur non metus et enim iaculis imperdiet.</p>
+        </div>
+			</figure>
+      <h3>Collapsable Headings</h3>
+      <h3>Tabs</h3>
+      <h3>Tables</h3>
+      <h3>Forms</h3>
 		</section>
 		<%include footer.html%>
-    <script src="../dist/script/tables.js"></script>
 	</body>
 </html>
