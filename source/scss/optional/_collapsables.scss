@@ -93,7 +93,7 @@ h6.tyfy-collapsable-processed {
 }
 
 .tyfy-collapsables {
-  box-sizing:border-box;
+  box-sizing:content-box;
   border-bottom:$tyfy-width-border var(--tycolor-border) solid;
   margin:0rem;
   overflow:hidden;
@@ -103,11 +103,15 @@ h6.tyfy-collapsable-processed {
     border-top:none !important;
     padding:calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
   }
+  &.transition {
+    transition-duration:$tyfy-transition-duration-move;
+    transition-property:padding-top,padding-bottom,height;
+    transition-timing-function:ease-in-out;
+  }
   &.closed {
     border:none;
-    height:0;
+    height:0 !important;
     padding-bottom:0;
     padding-top:0;
-    position:absolute;
   }
 }

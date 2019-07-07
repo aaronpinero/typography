@@ -56,14 +56,12 @@ if (all_collapsables.length) {
       // adding them to the wrapper
       // until a tag that is in the break_at list
       let next_sib = ty_collapsables_wrapper.nextElementSibling;
-      console.log(next_sib);
       while (next_sib && !break_at.includes(next_sib.tagName)) {
         // add the element to the wrapper
         ty_collapsables_wrapper.appendChild(next_sib);
         
         // move on to the next sibling
         next_sib = ty_collapsables_wrapper.nextElementSibling;
-        console.log(next_sib);
       }
       
       // set 'closed' as the initial state
@@ -71,14 +69,46 @@ if (all_collapsables.length) {
 
       // add event listener for click action
       ty_collapsables[a].addEventListener("click",function(){
+        // find the collapsed content
+        var collapsables = this.nextElementSibling;
+        
+        // if we are opening
         if (this.classList.contains('closed')) {
+          // remove the closed state on the heading
           this.classList.remove('closed');
-          this.nextElementSibling.classList.remove('closed');
+          // get the scroll height of the collapsed content, will be the clientHeight value
+          let h = collapsables.scrollHeight;
+          // add the transition state class
+          collapsables.classList.add('transition');
+          // set the height for transition
+          collapsables.setAttribute('style','height:'+h+'px;');
+          // remove the closed class
+          collapsables.classList.remove('closed');
         }
+        
+        // otherwise we are closing
         else {
+          // add the closed stat on the heading
           this.classList.add('closed');
-          this.nextElementSibling.classList.add('closed');
+          // get clientHeight value of collapsed content
+          let h = collapsables.clientHeight;
+          // set the height for the transition
+          collapsables.setAttribute('style','height:'+h+'px;');
+          // set the transition state class
+          collapsables.classList.add('transition');
+          // need to delay the addition of the closed class by a tick
+          // otherwise the transition will not happen properly
+          that = this;
+          setTimeout("that.nextElementSibling.classList.add('closed');",1);
         }
+      });
+      
+      // add event listener for transitions ends on the collapsed content
+      ty_collapsables[a].nextElementSibling.addEventListener("transitionend",function(){
+        // when a transition ends, remove the style attribute
+        // and the transition state class
+        this.setAttribute("style","");
+        this.classList.remove('transition');
       });
             
       // indicate that the heading has been processed by javascript
