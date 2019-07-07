@@ -76,12 +76,17 @@ if (all_collapsables.length) {
         if (this.classList.contains('closed')) {
           // remove the closed state on the heading
           this.classList.remove('closed');
-          // get the scroll height of the collapsed content, will be the clientHeight value
+
+          // get the scroll height of the collapsed content, will be the equivalent to
+          // clientHeight minus top and bottom padding
           let h = collapsables.scrollHeight;
+
           // add the transition state class
           collapsables.classList.add('transition');
+
           // set the height for transition
           collapsables.setAttribute('style','height:'+h+'px;');
+
           // remove the closed class
           collapsables.classList.remove('closed');
         }
@@ -90,16 +95,24 @@ if (all_collapsables.length) {
         else {
           // add the closed stat on the heading
           this.classList.add('closed');
-          // get clientHeight value of collapsed content
+          
+          // get the height value of collapsed content, will be the equivalent to
+          // clientHeight minus top and bottom padding
           let h = collapsables.clientHeight;
+          let collaspableStyles = window.getComputedStyle(collapsables);
+          h = h - parseInt(collaspableStyles.getPropertyValue('padding-bottom')) - parseInt(collaspableStyles.getPropertyValue('padding-top'));
+          
           // set the height for the transition
           collapsables.setAttribute('style','height:'+h+'px;');
+          
           // set the transition state class
           collapsables.classList.add('transition');
+          
           // need to delay the addition of the closed class by a tick
           // otherwise the transition will not happen properly
           that = this;
-          setTimeout("that.nextElementSibling.classList.add('closed');",1);
+          setTimeout("that.nextElementSibling.classList.add('closed');",25);
+          // used 25 as this seemed to be enough delay to get the transition to work in Firefox, Chrome, and Safari
         }
       });
       
