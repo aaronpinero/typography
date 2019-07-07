@@ -33,9 +33,6 @@ h6.tyfy-collapsable-processed {
       content:tychar($tyfyicons-angle-down);
     }
   }
-  &.transition.closed {
-    border-bottom:$tyfy-width-border transparent solid;
-  }
   @media (min-width:$tyfy-break-collapsables-pad) {
     border:$tyfy-width-border var(--tycolor-border) solid;
     border-bottom:$tyfy-width-border transparent solid;
@@ -43,6 +40,7 @@ h6.tyfy-collapsable-processed {
     position:relative;
     transition-duration:$tyfy-transition-duration-move;
     transition-property:padding-top;
+    transition-timing-function:ease-in-out;
     &::before {
       right:tygrid(2);
       top:tygrid(2);
@@ -53,19 +51,6 @@ h6.tyfy-collapsable-processed {
       &::before {
         content:tychar($tyfyicons-angle-down);
         top:tygrid(1);
-      }
-    }
-    &.transition {
-      padding-top:calc(#{tygrid(1)} - #{$tyfy-width-border});
-      &::before {
-        top:tygrid(1);
-      }
-    }
-    &.transition.closed {
-      border-bottom:$tyfy-width-border transparent solid;
-      padding-top:calc(#{tygrid(2)} - #{$tyfy-width-border});
-      &::before {
-        top:tygrid(2);
       }
     }
   }

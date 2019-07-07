@@ -19,6 +19,7 @@ if (all_collapsables.length) {
   if (ty_collapsables.length) {
   
     // for each ty_collapsable
+    // identify and wrap the heading's children
     // NOTE: iterate in reverse because javascript doesn't like what I'm doing
     // when I remove nodes and then add them back; starting from the end
     // avoids this problem)
@@ -48,29 +49,40 @@ if (all_collapsables.length) {
         b++;
       } while (b <= h_index);
       
-      // cycle through following siblings of the collapsable heading
-      // adding them to the wrapper
-      // until a tag that is in the break_at list
-      let next_sib = ty_collapsables[a].nextElementSibling; console.log(next_sib.tagName);
-      while (next_sib && !break_at.includes(next_sib.tagName)) {
-        // add the element to the wrapper
-        ty_collapsables_wrapper.appendChild(next_sib.cloneNode(true));
-        
-        // delete it from the dom
-        next_sib.remove();
-        
-        // move on to the next sibling
-        next_sib = ty_collapsables[a].nextElementSibling;
-      }
-      
       // add the wrapper to the page below the collapsable heading
       ty_collapsables[a].parentNode.insertBefore(ty_collapsables_wrapper,ty_collapsables[a].nextElementSibling);
       
-      // indicate that the heading has been processed by javascript
-      ty_collapsables[a].classList.add('tyfy-collapsable-processed');
+      // cycle through following siblings of the collapsable heading
+      // adding them to the wrapper
+      // until a tag that is in the break_at list
+      let next_sib = ty_collapsables_wrapper.nextElementSibling;
+      console.log(next_sib);
+      while (next_sib && !break_at.includes(next_sib.tagName)) {
+        // add the element to the wrapper
+        ty_collapsables_wrapper.appendChild(next_sib);
+        
+        // move on to the next sibling
+        next_sib = ty_collapsables_wrapper.nextElementSibling;
+        console.log(next_sib);
+      }
       
       // set 'closed' as the initial state
       ty_collapsables[a].classList.add('closed');
+
+      // add event listener for click action
+      ty_collapsables[a].addEventListener("click",function(){
+        if (this.classList.contains('closed')) {
+          this.classList.remove('closed');
+          this.nextElementSibling.classList.remove('closed');
+        }
+        else {
+          this.classList.add('closed');
+          this.nextElementSibling.classList.add('closed');
+        }
+      });
+            
+      // indicate that the heading has been processed by javascript
+      ty_collapsables[a].classList.add('tyfy-collapsable-processed');
     }
   }
 }
