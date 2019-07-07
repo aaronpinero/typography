@@ -17,22 +17,30 @@ if (all_collapsables.length) {
   
   // if there are any ty_collapsables
   if (ty_collapsables.length) {
+  
     // for each ty_collapsable
-    let a = 0;
-    for (a; a < ty_collapsables.length; a++) {
+    // NOTE: iterate in reverse because javascript doesn't like what I'm doing
+    // when I remove nodes and then add them back; starting from the end
+    // avoids this problem)
+    
+    let a = ty_collapsables.length - 1;
+    for (a; a >= 0; a--) {
       // wrap my children in a div that has the class 'ty-collapsables'
       // children are defined as all following sibling tags up to
       // the next heading tag of equal or higher ordinal
       
       // create the wrapper
       let ty_collapsables_wrapper = document.createElement("div");
-      ty_collapsables_wrapper.className = "ty-collapsables";
+      
+      // apply class to the wrapper
+      // apply state class to the wrapper (default closed)
+      ty_collapsables_wrapper.className = "tyfy-collapsables closed";
       
       // what's my tag?
-      let my_tag = ty_collapsables[a].tagName; // console.log('my tag name is ' + my_tag);
+      let my_tag = ty_collapsables[a].tagName;
       
       // what tags am I looking for to end the collapsable section?
-      let h_index = heading_tags.indexOf(my_tag); // console.log('my index is ' + h_index);
+      let h_index = heading_tags.indexOf(my_tag);
       let break_at = new Array();
       let b = 0;
       do {
@@ -43,7 +51,26 @@ if (all_collapsables.length) {
       // cycle through following siblings of the collapsable heading
       // adding them to the wrapper
       // until a tag that is in the break_at list
+      let next_sib = ty_collapsables[a].nextElementSibling; console.log(next_sib.tagName);
+      while (next_sib && !break_at.includes(next_sib.tagName)) {
+        // add the element to the wrapper
+        ty_collapsables_wrapper.appendChild(next_sib.cloneNode(true));
+        
+        // delete it from the dom
+        next_sib.remove();
+        
+        // move on to the next sibling
+        next_sib = ty_collapsables[a].nextElementSibling;
+      }
       
+      // add the wrapper to the page below the collapsable heading
+      ty_collapsables[a].parentNode.insertBefore(ty_collapsables_wrapper,ty_collapsables[a].nextElementSibling);
+      
+      // indicate that the heading has been processed by javascript
+      ty_collapsables[a].classList.add('tyfy-collapsable-processed');
+      
+      // set 'closed' as the initial state
+      ty_collapsables[a].classList.add('closed');
     }
   }
 }

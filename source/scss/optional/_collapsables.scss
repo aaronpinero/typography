@@ -1,9 +1,9 @@
 // collapsable areas
-h2.collapsable-processed,
-h3.collapsable-processed,
-h4.collapsable-processed,
-h5.collapsable-processed,
-h6.collapsable-processed {
+h2.tyfy-collapsable-processed,
+h3.tyfy-collapsable-processed,
+h4.tyfy-collapsable-processed,
+h5.tyfy-collapsable-processed,
+h6.tyfy-collapsable-processed {
   background-color:transparent;
   border-bottom:$tyfy-width-border transparent solid;
   clear:both;
@@ -74,31 +74,31 @@ h6.collapsable-processed {
     margin-top:$tyfy-spacing-standard;
   }
 }
-h3.collapsable-processed {
+h3.tyfy-collapsable-processed {
   &::before {
     width:tylead($tyfy-font-size-h3,heading);
   }
 }
-h4.collapsable-processed {
+h4.tyfy-collapsable-processed {
   &::before {
     width:tylead($tyfy-font-size-h4,heading);
   }
 }
-h5.collapsable-processed {
+h5.tyfy-collapsable-processed {
   &::before {
     width:tylead($tyfy-font-size-h5,heading);
   }
 }
-h6.collapsable-processed {
+h6.tyfy-collapsable-processed {
   &::before {
     width:tylead($tyfy-font-size-h6,heading);
   }
 }
-h2.collapsable-processed,
-h3.collapsable-processed,
-h4.collapsable-processed,
-h5.collapsable-processed,
-h6.collapsable-processed {
+h2.tyfy-collapsable-processed,
+h3.tyfy-collapsable-processed,
+h4.tyfy-collapsable-processed,
+h5.tyfy-collapsable-processed,
+h6.tyfy-collapsable-processed {
   &:hover {
     &::before {
       background-color:var(--tycolor-link-active);
@@ -107,7 +107,7 @@ h6.collapsable-processed {
   }
 }
 
-.collapsables {
+.tyfy-collapsables {
   box-sizing:border-box;
   border-bottom:$tyfy-width-border var(--tycolor-border) solid;
   margin:0rem;
