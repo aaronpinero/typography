@@ -125,13 +125,18 @@ if (all_collapsables.length) {
     }
   }
 
+  // perform hash detection
+  TYFY_DetectAnchorLink();
+  
   // set window hashchange event
+  window.addEventListener("hashchange", TYFY_DetectAnchorLink);
 }
 
 function TYFY_DetectAnchorLink() {
   if (window.location.hash != '') {
     // get the anchor name
     let selected_anchor_name = window.location.hash.substring(1);
+    
     
     // get the anchor item
     // the item is either an element where the id attribute is equal to the anchor name
@@ -152,8 +157,16 @@ function TYFY_DetectAnchorLink() {
       }
       
       // open all collapsable parents
-      
-      // move the page to the anchor item
+      if (parents.length) {
+        let a = 0;
+        for(a; a<parents.length; a++) {
+          parents[a].classList.remove('closed');
+          parents[a].previousElementSibling.classList.remove('closed');
+        }
+        
+        // move the page to the anchor item
+        window.location.href = window.location.href
+      }
     }
   }
 }
