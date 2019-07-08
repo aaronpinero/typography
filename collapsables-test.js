@@ -126,4 +126,21 @@ if (all_collapsables.length) {
   }
 }
 
-
+function TYFY_DetectAnchorLink() {
+  if (window.location.hash != '') {
+    // get the anchor name
+    selected_anchor_name = window.location.hash.substring(1);
+    
+    // does any element have this ID?
+    
+    // does any link have this name attribute?
+    
+    // if there is a match
+    
+      // identify all collapsable parents
+      
+      // open all collapsable parents
+      
+      // move the page to the anchor item
+  }
+}
