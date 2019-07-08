@@ -124,23 +124,36 @@ if (all_collapsables.length) {
       ty_collapsables[a].classList.add('tyfy-collapsable-processed');
     }
   }
+
+  // set window hashchange event
 }
 
 function TYFY_DetectAnchorLink() {
   if (window.location.hash != '') {
     // get the anchor name
-    selected_anchor_name = window.location.hash.substring(1);
+    let selected_anchor_name = window.location.hash.substring(1);
     
-    // does any element have this ID?
-    
-    // does any link have this name attribute?
+    // get the anchor item
+    // the item is either an element where the id attribute is equal to the anchor name
+    // or the item is a link where the name attribute is equal to the anchor name
+    let selected_anchor = (document.getElementById(selected_anchor_name) !== null) ? document.getElementById(selected_anchor_name) :  Array.from(document.getElementsByTagName('a')).filter(tag => tag.getAttribute('name') == selected_anchor_name)[0];
     
     // if there is a match
+    if (selected_anchor) {
     
       // identify all collapsable parents
+      let parents = new Array();
+      let parent = selected_anchor.parentNode;
+      while (parent !== document) {
+        if (parent.classList.contains('tyfy-collapsables')) {
+          parents.push(parent);
+        }
+        parent = parent.parentNode;
+      }
       
       // open all collapsable parents
       
       // move the page to the anchor item
+    }
   }
 }
