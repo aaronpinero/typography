@@ -81,9 +81,6 @@ if (all_collapsables.length) {
           // equivalent to clientHeight minus top and bottom padding
           let h = collapsables.scrollHeight;
 
-          // add the transition state class
-          collapsables.classList.add('transition');
-
           // set the height for transition
           collapsables.setAttribute('style','height:'+h+'px;');
 
@@ -98,7 +95,6 @@ if (all_collapsables.length) {
 
           // add the transition and closed states on the heading
           // delay the closed to match the collapsing content
-          this.classList.add('transition');
           setTimeout("that.classList.add('closed');",25);
           
           // get the height value of collapsed content; the value will be
@@ -110,9 +106,6 @@ if (all_collapsables.length) {
           // set the height for the transition
           collapsables.setAttribute('style','height:'+h+'px;');
           
-          // set the transition state class
-          collapsables.classList.add('transition');
-          
           // need to delay the addition of the closed class by a tick
           // otherwise the transition will not happen properly
           setTimeout("that.nextElementSibling.classList.add('closed');",25);
@@ -120,18 +113,11 @@ if (all_collapsables.length) {
         }
       });
       
-      // add event listener for transition ends on the collapsable header
-      ty_collapsables[a].addEventListener("transitionend",function(){
-        // when a transition ends, remove the transition state class
-        this.classList.remove('transition');
-      });
-
       // add event listener for transitions ends on the collapsed content
       ty_collapsables[a].nextElementSibling.addEventListener("transitionend",function(){
         // when a transition ends, remove the style attribute
         // and the transition state class
         this.setAttribute("style","");
-        this.classList.remove('transition');
       });
             
       // indicate that the heading has been processed by javascript

@@ -5,7 +5,6 @@ h4.tyfy-collapsable-processed,
 h5.tyfy-collapsable-processed,
 h6.tyfy-collapsable-processed {
   background-color:transparent;
-  border-bottom:$tyfy-width-border transparent solid;
   clear:both;
   cursor:pointer;
   padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tyfy-width-border}) 0;
@@ -28,14 +27,13 @@ h6.tyfy-collapsable-processed {
     width:tylead($tyfy-font-size-h2,heading);
   }
   &.closed {
-    border-bottom:$tyfy-width-border var(--tycolor-border) solid;
     &::before {
       transform:rotate(180deg);
     }
   }
   @media (min-width:$tyfy-break-collapsables-pad) {
     border:$tyfy-width-border var(--tycolor-border) solid;
-    border-bottom:$tyfy-width-border transparent solid;
+    border-bottom:none;
     padding:calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(6)} - #{$tyfy-width-border}) calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
     position:relative;
     transition-duration:$tyfy-transition-duration-move;
@@ -46,14 +44,10 @@ h6.tyfy-collapsable-processed {
       top:tygrid(2);
     }
     &.closed {
-      border-bottom:$tyfy-width-border var(--tycolor-border) solid;
       padding-top:calc(#{tygrid(1)} - #{$tyfy-width-border});
       &::before {
         top:tygrid(1);
       }
-    }
-    &.transition.closed {
-      border-bottom:$tyfy-width-border transparent solid;
     }
   }
   * + &,
@@ -100,24 +94,17 @@ h6.tyfy-collapsable-processed {
   margin:0rem;
   overflow:hidden;
   padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tyfy-width-border}) 0;
+  transition-duration:$tyfy-transition-duration-move;
+  transition-property:padding-top,padding-bottom,height;
+  transition-timing-function:ease-in-out;
   @media (min-width:$tyfy-break-collapsables-pad) {
     border:$tyfy-width-border var(--tycolor-border) solid;
     border-top:none !important;
     padding:calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
   }
-  &.transition {
-    transition-duration:$tyfy-transition-duration-move;
-    transition-property:padding-top,padding-bottom,height;
-    transition-timing-function:ease-in-out;
-  }
   &.closed {
-    border:none;
     height:0 !important;
     padding-bottom:0;
     padding-top:0;
-  }
-  &.transition.closed {
-    border:$tyfy-width-border var(--tycolor-border) solid;
-    border-top:none !important;
   }
 }
