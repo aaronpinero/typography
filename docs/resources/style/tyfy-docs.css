@@ -1111,7 +1111,7 @@ h6.tyfy-collapsable-processed {
     text-align: center;
     top: 0rem;
     transition-duration: 0.5s;
-    transition-property: background-color,color,top;
+    transition-property: background-color,color,top,transform;
     transition-timing-function: ease-in-out;
     width: 2.625rem; }
   /* line 30, source/scss/optional/_collapsables.scss */
@@ -1127,7 +1127,7 @@ h6.tyfy-collapsable-processed {
     h4.tyfy-collapsable-processed.closed::before,
     h5.tyfy-collapsable-processed.closed::before,
     h6.tyfy-collapsable-processed.closed::before {
-      content: "\ea01"; }
+      transform: rotate(180deg); }
   @media (min-width: 50em) {
     /* line 2, source/scss/optional/_collapsables.scss */
     h2.tyfy-collapsable-processed,
@@ -1164,9 +1164,15 @@ h6.tyfy-collapsable-processed {
         h4.tyfy-collapsable-processed.closed::before,
         h5.tyfy-collapsable-processed.closed::before,
         h6.tyfy-collapsable-processed.closed::before {
-          content: "\ea01";
-          top: 0.875rem; } }
-  /* line 57, source/scss/optional/_collapsables.scss */
+          top: 0.875rem; }
+      /* line 55, source/scss/optional/_collapsables.scss */
+      h2.tyfy-collapsable-processed.transition.closed,
+      h3.tyfy-collapsable-processed.transition.closed,
+      h4.tyfy-collapsable-processed.transition.closed,
+      h5.tyfy-collapsable-processed.transition.closed,
+      h6.tyfy-collapsable-processed.transition.closed {
+        border-bottom: 2px transparent solid; } }
+  /* line 59, source/scss/optional/_collapsables.scss */
   * + h2.tyfy-collapsable-processed,
   .sibling-margins-on * + h2.tyfy-collapsable-processed, * +
   h3.tyfy-collapsable-processed,
@@ -1183,23 +1189,23 @@ h6.tyfy-collapsable-processed {
   h6.tyfy-collapsable-processed {
     margin-top: 1.75rem; }
 
-/* line 63, source/scss/optional/_collapsables.scss */
+/* line 65, source/scss/optional/_collapsables.scss */
 h3.tyfy-collapsable-processed::before {
   width: 1.75rem; }
 
-/* line 68, source/scss/optional/_collapsables.scss */
+/* line 70, source/scss/optional/_collapsables.scss */
 h4.tyfy-collapsable-processed::before {
   width: 1.75rem; }
 
-/* line 73, source/scss/optional/_collapsables.scss */
+/* line 75, source/scss/optional/_collapsables.scss */
 h5.tyfy-collapsable-processed::before {
   width: 1.75rem; }
 
-/* line 78, source/scss/optional/_collapsables.scss */
+/* line 80, source/scss/optional/_collapsables.scss */
 h6.tyfy-collapsable-processed::before {
   width: 1.75rem; }
 
-/* line 88, source/scss/optional/_collapsables.scss */
+/* line 90, source/scss/optional/_collapsables.scss */
 h2.tyfy-collapsable-processed:hover::before,
 h3.tyfy-collapsable-processed:hover::before,
 h4.tyfy-collapsable-processed:hover::before,
@@ -1208,7 +1214,7 @@ h6.tyfy-collapsable-processed:hover::before {
   background-color: var(--tycolor-link-active);
   color: var(--tycolor-bg); }
 
-/* line 95, source/scss/optional/_collapsables.scss */
+/* line 97, source/scss/optional/_collapsables.scss */
 .tyfy-collapsables {
   box-sizing: content-box;
   border-bottom: 2px var(--tycolor-border) solid;
@@ -1216,22 +1222,26 @@ h6.tyfy-collapsable-processed:hover::before {
   overflow: hidden;
   padding: 0.875rem 0 calc(1.75rem - 2px) 0; }
   @media (min-width: 50em) {
-    /* line 95, source/scss/optional/_collapsables.scss */
+    /* line 97, source/scss/optional/_collapsables.scss */
     .tyfy-collapsables {
       border: 2px var(--tycolor-border) solid;
       border-top: none !important;
       padding: calc(0.875rem - 2px) calc(1.75rem - 2px) calc(1.75rem - 2px); } }
-  /* line 106, source/scss/optional/_collapsables.scss */
+  /* line 108, source/scss/optional/_collapsables.scss */
   .tyfy-collapsables.transition {
     transition-duration: 0.5s;
     transition-property: padding-top,padding-bottom,height;
     transition-timing-function: ease-in-out; }
-  /* line 111, source/scss/optional/_collapsables.scss */
+  /* line 113, source/scss/optional/_collapsables.scss */
   .tyfy-collapsables.closed {
     border: none;
     height: 0 !important;
     padding-bottom: 0;
     padding-top: 0; }
+  /* line 119, source/scss/optional/_collapsables.scss */
+  .tyfy-collapsables.transition.closed {
+    border: 2px var(--tycolor-border) solid;
+    border-top: none !important; }
 
 /* line 1, source/scss/optional/_tabs.scss */
 * + .tabs-container {

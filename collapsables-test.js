@@ -77,8 +77,8 @@ if (all_collapsables.length) {
           // remove the closed state on the heading
           this.classList.remove('closed');
 
-          // get the scroll height of the collapsed content, will be the equivalent to
-          // clientHeight minus top and bottom padding
+          // get the scroll height of the collapsed content; the value will be
+          // equivalent to clientHeight minus top and bottom padding
           let h = collapsables.scrollHeight;
 
           // add the transition state class
@@ -93,11 +93,16 @@ if (all_collapsables.length) {
         
         // otherwise we are closing
         else {
-          // add the closed stat on the heading
-          this.classList.add('closed');
+          // reference this
+          that = this;
+
+          // add the transition and closed states on the heading
+          // delay the closed to match the collapsing content
+          this.classList.add('transition');
+          setTimeout("that.classList.add('closed');",25);
           
-          // get the height value of collapsed content, will be the equivalent to
-          // clientHeight minus top and bottom padding
+          // get the height value of collapsed content; the value will be
+          // equivalent to clientHeight minus top and bottom padding
           let h = collapsables.clientHeight;
           let collaspableStyles = window.getComputedStyle(collapsables);
           h = h - parseInt(collaspableStyles.getPropertyValue('padding-bottom')) - parseInt(collaspableStyles.getPropertyValue('padding-top'));
@@ -110,12 +115,17 @@ if (all_collapsables.length) {
           
           // need to delay the addition of the closed class by a tick
           // otherwise the transition will not happen properly
-          that = this;
           setTimeout("that.nextElementSibling.classList.add('closed');",25);
           // used 25 as this seemed to be enough delay to get the transition to work in Firefox, Chrome, and Safari
         }
       });
       
+      // add event listener for transition ends on the collapsable header
+      ty_collapsables[a].addEventListener("transitionend",function(){
+        // when a transition ends, remove the transition state class
+        this.classList.remove('transition');
+      });
+
       // add event listener for transitions ends on the collapsed content
       ty_collapsables[a].nextElementSibling.addEventListener("transitionend",function(){
         // when a transition ends, remove the style attribute
