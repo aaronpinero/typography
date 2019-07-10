@@ -12,6 +12,7 @@
     "build-css-test": "./bin/build-css-test",
     "build-icons": "./bin/build-icons",
     "build-docs-html": "node docs/docs.js",
+    "build-js": "node source/terser.js",
     "watch-css": "./bin/watch-css",
     "watch-css-dev": "./bin/watch-css-dev",
     "watch-css-test": "./bin/watch-css-test"
@@ -33,6 +34,7 @@
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.6.1",
+    "glob": "^7.1.4",
     "node-sass": "^4.12.0",
     "nodemon": "^1.19.1",
     "postcss-cli": "^6.1.3",
