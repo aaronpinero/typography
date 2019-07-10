@@ -1,11 +1,10 @@
 // collapsable areas
-h2.collapsable-processed,
-h3.collapsable-processed,
-h4.collapsable-processed,
-h5.collapsable-processed,
-h6.collapsable-processed {
+h2.tyfy-collapsable-processed,
+h3.tyfy-collapsable-processed,
+h4.tyfy-collapsable-processed,
+h5.tyfy-collapsable-processed,
+h6.tyfy-collapsable-processed {
   background-color:transparent;
-  border-bottom:$tyfy-width-border transparent solid;
   clear:both;
   cursor:pointer;
   padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tyfy-width-border}) 0;
@@ -23,49 +22,31 @@ h6.collapsable-processed {
     text-align:center;
     top:tygrid(0);
     transition-duration:$tyfy-transition-duration-move;
-    transition-property:background-color,color,top;
+    transition-property:background-color,color,top,transform;
     transition-timing-function:ease-in-out;
     width:tylead($tyfy-font-size-h2,heading);
   }
   &.closed {
-    border-bottom:$tyfy-width-border var(--tycolor-border) solid;
     &::before {
-      content:tychar($tyfyicons-angle-down);
+      transform:rotate(180deg);
     }
-  }
-  &.transition.closed {
-    border-bottom:$tyfy-width-border transparent solid;
   }
   @media (min-width:$tyfy-break-collapsables-pad) {
     border:$tyfy-width-border var(--tycolor-border) solid;
-    border-bottom:$tyfy-width-border transparent solid;
+    border-bottom:none;
     padding:calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(6)} - #{$tyfy-width-border}) calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
     position:relative;
     transition-duration:$tyfy-transition-duration-move;
     transition-property:padding-top;
+    transition-timing-function:ease-in-out;
     &::before {
       right:tygrid(2);
       top:tygrid(2);
     }
     &.closed {
-      border-bottom:$tyfy-width-border var(--tycolor-border) solid;
-      padding-top:calc(#{tygrid(1)} - #{$tyfy-width-border});
-      &::before {
-        content:tychar($tyfyicons-angle-down);
-        top:tygrid(1);
-      }
-    }
-    &.transition {
       padding-top:calc(#{tygrid(1)} - #{$tyfy-width-border});
       &::before {
         top:tygrid(1);
-      }
-    }
-    &.transition.closed {
-      border-bottom:$tyfy-width-border transparent solid;
-      padding-top:calc(#{tygrid(2)} - #{$tyfy-width-border});
-      &::before {
-        top:tygrid(2);
       }
     }
   }
@@ -74,31 +55,31 @@ h6.collapsable-processed {
     margin-top:$tyfy-spacing-standard;
   }
 }
-h3.collapsable-processed {
+h3.tyfy-collapsable-processed {
   &::before {
     width:tylead($tyfy-font-size-h3,heading);
   }
 }
-h4.collapsable-processed {
+h4.tyfy-collapsable-processed {
   &::before {
     width:tylead($tyfy-font-size-h4,heading);
   }
 }
-h5.collapsable-processed {
+h5.tyfy-collapsable-processed {
   &::before {
     width:tylead($tyfy-font-size-h5,heading);
   }
 }
-h6.collapsable-processed {
+h6.tyfy-collapsable-processed {
   &::before {
     width:tylead($tyfy-font-size-h6,heading);
   }
 }
-h2.collapsable-processed,
-h3.collapsable-processed,
-h4.collapsable-processed,
-h5.collapsable-processed,
-h6.collapsable-processed {
+h2.tyfy-collapsable-processed,
+h3.tyfy-collapsable-processed,
+h4.tyfy-collapsable-processed,
+h5.tyfy-collapsable-processed,
+h6.tyfy-collapsable-processed {
   &:hover {
     &::before {
       background-color:var(--tycolor-link-active);
@@ -107,22 +88,23 @@ h6.collapsable-processed {
   }
 }
 
-.collapsables {
-  box-sizing:border-box;
+.tyfy-collapsables {
+  box-sizing:content-box;
   border-bottom:$tyfy-width-border var(--tycolor-border) solid;
   margin:0rem;
   overflow:hidden;
   padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tyfy-width-border}) 0;
+  transition-duration:$tyfy-transition-duration-move;
+  transition-property:padding-top,padding-bottom,height;
+  transition-timing-function:ease-in-out;
   @media (min-width:$tyfy-break-collapsables-pad) {
     border:$tyfy-width-border var(--tycolor-border) solid;
     border-top:none !important;
     padding:calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
   }
   &.closed {
-    border:none;
-    height:0;
+    height:0 !important;
     padding-bottom:0;
     padding-top:0;
-    position:absolute;
   }
 }
