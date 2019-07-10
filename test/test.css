@@ -29,7 +29,8 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted; }
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; }
 
 /* line 24, source/scss/essential/_normalize.scss */
 b,
@@ -892,16 +893,19 @@ blockquote {
         box-sizing: border-box;
         text-align: left;
         margin-bottom: 1.5rem;
-        width: calc(50% - 1.5rem); } }
+        width: calc(50% - 1.5rem); }
+        /* line 62, source/scss/optional/_quotes.scss */
+        blockquote.pullquote.float-left:first-child + *, blockquote.pullquote.float-right:first-child + * {
+          margin-top: 0; } }
     @media (min-width: 40em) {
-      /* line 64, source/scss/optional/_quotes.scss */
+      /* line 67, source/scss/optional/_quotes.scss */
       blockquote.pullquote.float-left {
         clear: left;
         float: left;
         margin-left: 0;
         margin-right: 3rem; } }
     @media (min-width: 40em) {
-      /* line 72, source/scss/optional/_quotes.scss */
+      /* line 75, source/scss/optional/_quotes.scss */
       blockquote.pullquote.float-right {
         clear: right;
         float: right;
@@ -1097,23 +1101,22 @@ table.responsive.striped tbody td .tyfy-td-label, table.responsive.vertical-rule
     margin-left: 1.5rem; } }
 
 /* line 2, source/scss/optional/_collapsables.scss */
-h2.collapsable-processed,
-h3.collapsable-processed,
-h4.collapsable-processed,
-h5.collapsable-processed,
-h6.collapsable-processed {
+h2.tyfy-collapsable-processed,
+h3.tyfy-collapsable-processed,
+h4.tyfy-collapsable-processed,
+h5.tyfy-collapsable-processed,
+h6.tyfy-collapsable-processed {
   background-color: transparent;
-  border-bottom: 2px transparent solid;
   clear: both;
   cursor: pointer;
   padding: 0 3rem calc(0.75rem - 2px) 0;
   position: relative; }
-  /* line 13, source/scss/optional/_collapsables.scss */
-  h2.collapsable-processed::before,
-  h3.collapsable-processed::before,
-  h4.collapsable-processed::before,
-  h5.collapsable-processed::before,
-  h6.collapsable-processed::before {
+  /* line 12, source/scss/optional/_collapsables.scss */
+  h2.tyfy-collapsable-processed::before,
+  h3.tyfy-collapsable-processed::before,
+  h4.tyfy-collapsable-processed::before,
+  h5.tyfy-collapsable-processed::before,
+  h6.tyfy-collapsable-processed::before {
     border-radius: 50%;
     color: var(--tycolor-text-light);
     content: "\ea04";
@@ -1126,158 +1129,115 @@ h6.collapsable-processed {
     text-align: center;
     top: 0rem;
     transition-duration: 667ms;
-    transition-property: background-color,color,top;
+    transition-property: background-color,color,top,transform;
     transition-timing-function: ease-in-out;
     width: 2.25rem; }
   /* line 30, source/scss/optional/_collapsables.scss */
-  h2.collapsable-processed.closed,
-  h3.collapsable-processed.closed,
-  h4.collapsable-processed.closed,
-  h5.collapsable-processed.closed,
-  h6.collapsable-processed.closed {
-    border-bottom: 2px var(--tycolor-border) solid; }
-    /* line 32, source/scss/optional/_collapsables.scss */
-    h2.collapsable-processed.closed::before,
-    h3.collapsable-processed.closed::before,
-    h4.collapsable-processed.closed::before,
-    h5.collapsable-processed.closed::before,
-    h6.collapsable-processed.closed::before {
-      content: "\ea01"; }
-  /* line 36, source/scss/optional/_collapsables.scss */
-  h2.collapsable-processed.transition.closed,
-  h3.collapsable-processed.transition.closed,
-  h4.collapsable-processed.transition.closed,
-  h5.collapsable-processed.transition.closed,
-  h6.collapsable-processed.transition.closed {
-    border-bottom: 2px transparent solid; }
+  h2.tyfy-collapsable-processed.closed::before,
+  h3.tyfy-collapsable-processed.closed::before,
+  h4.tyfy-collapsable-processed.closed::before,
+  h5.tyfy-collapsable-processed.closed::before,
+  h6.tyfy-collapsable-processed.closed::before {
+    transform: rotate(180deg); }
   @media (min-width: 50em) {
     /* line 2, source/scss/optional/_collapsables.scss */
-    h2.collapsable-processed,
-    h3.collapsable-processed,
-    h4.collapsable-processed,
-    h5.collapsable-processed,
-    h6.collapsable-processed {
+    h2.tyfy-collapsable-processed,
+    h3.tyfy-collapsable-processed,
+    h4.tyfy-collapsable-processed,
+    h5.tyfy-collapsable-processed,
+    h6.tyfy-collapsable-processed {
       border: 2px var(--tycolor-border) solid;
-      border-bottom: 2px transparent solid;
+      border-bottom: none;
       padding: calc(1.5rem - 2px) calc(4.5rem - 2px) calc(0.75rem - 2px) calc(1.5rem - 2px);
       position: relative;
       transition-duration: 667ms;
-      transition-property: padding-top; }
-      /* line 46, source/scss/optional/_collapsables.scss */
-      h2.collapsable-processed::before,
-      h3.collapsable-processed::before,
-      h4.collapsable-processed::before,
-      h5.collapsable-processed::before,
-      h6.collapsable-processed::before {
+      transition-property: padding-top;
+      transition-timing-function: ease-in-out; }
+      /* line 42, source/scss/optional/_collapsables.scss */
+      h2.tyfy-collapsable-processed::before,
+      h3.tyfy-collapsable-processed::before,
+      h4.tyfy-collapsable-processed::before,
+      h5.tyfy-collapsable-processed::before,
+      h6.tyfy-collapsable-processed::before {
         right: 1.5rem;
         top: 1.5rem; }
-      /* line 50, source/scss/optional/_collapsables.scss */
-      h2.collapsable-processed.closed,
-      h3.collapsable-processed.closed,
-      h4.collapsable-processed.closed,
-      h5.collapsable-processed.closed,
-      h6.collapsable-processed.closed {
-        border-bottom: 2px var(--tycolor-border) solid;
+      /* line 46, source/scss/optional/_collapsables.scss */
+      h2.tyfy-collapsable-processed.closed,
+      h3.tyfy-collapsable-processed.closed,
+      h4.tyfy-collapsable-processed.closed,
+      h5.tyfy-collapsable-processed.closed,
+      h6.tyfy-collapsable-processed.closed {
         padding-top: calc(0.75rem - 2px); }
-        /* line 53, source/scss/optional/_collapsables.scss */
-        h2.collapsable-processed.closed::before,
-        h3.collapsable-processed.closed::before,
-        h4.collapsable-processed.closed::before,
-        h5.collapsable-processed.closed::before,
-        h6.collapsable-processed.closed::before {
-          content: "\ea01";
-          top: 0.75rem; }
-      /* line 58, source/scss/optional/_collapsables.scss */
-      h2.collapsable-processed.transition,
-      h3.collapsable-processed.transition,
-      h4.collapsable-processed.transition,
-      h5.collapsable-processed.transition,
-      h6.collapsable-processed.transition {
-        padding-top: calc(0.75rem - 2px); }
-        /* line 60, source/scss/optional/_collapsables.scss */
-        h2.collapsable-processed.transition::before,
-        h3.collapsable-processed.transition::before,
-        h4.collapsable-processed.transition::before,
-        h5.collapsable-processed.transition::before,
-        h6.collapsable-processed.transition::before {
-          top: 0.75rem; }
-      /* line 64, source/scss/optional/_collapsables.scss */
-      h2.collapsable-processed.transition.closed,
-      h3.collapsable-processed.transition.closed,
-      h4.collapsable-processed.transition.closed,
-      h5.collapsable-processed.transition.closed,
-      h6.collapsable-processed.transition.closed {
-        border-bottom: 2px transparent solid;
-        padding-top: calc(1.5rem - 2px); }
-        /* line 67, source/scss/optional/_collapsables.scss */
-        h2.collapsable-processed.transition.closed::before,
-        h3.collapsable-processed.transition.closed::before,
-        h4.collapsable-processed.transition.closed::before,
-        h5.collapsable-processed.transition.closed::before,
-        h6.collapsable-processed.transition.closed::before {
-          top: 1.5rem; } }
-  /* line 72, source/scss/optional/_collapsables.scss */
-  * + h2.collapsable-processed,
-  .tymargins-on * + h2.collapsable-processed, * +
-  h3.collapsable-processed,
+        /* line 48, source/scss/optional/_collapsables.scss */
+        h2.tyfy-collapsable-processed.closed::before,
+        h3.tyfy-collapsable-processed.closed::before,
+        h4.tyfy-collapsable-processed.closed::before,
+        h5.tyfy-collapsable-processed.closed::before,
+        h6.tyfy-collapsable-processed.closed::before {
+          top: 0.75rem; } }
+  /* line 53, source/scss/optional/_collapsables.scss */
+  * + h2.tyfy-collapsable-processed,
+  .tymargins-on * + h2.tyfy-collapsable-processed, * +
+  h3.tyfy-collapsable-processed,
   .tymargins-on * +
-  h3.collapsable-processed, * +
-  h4.collapsable-processed,
+  h3.tyfy-collapsable-processed, * +
+  h4.tyfy-collapsable-processed,
   .tymargins-on * +
-  h4.collapsable-processed, * +
-  h5.collapsable-processed,
+  h4.tyfy-collapsable-processed, * +
+  h5.tyfy-collapsable-processed,
   .tymargins-on * +
-  h5.collapsable-processed, * +
-  h6.collapsable-processed,
+  h5.tyfy-collapsable-processed, * +
+  h6.tyfy-collapsable-processed,
   .tymargins-on * +
-  h6.collapsable-processed {
+  h6.tyfy-collapsable-processed {
     margin-top: 1.5rem; }
 
-/* line 78, source/scss/optional/_collapsables.scss */
-h3.collapsable-processed::before {
+/* line 59, source/scss/optional/_collapsables.scss */
+h3.tyfy-collapsable-processed::before {
   width: 2.25rem; }
 
-/* line 83, source/scss/optional/_collapsables.scss */
-h4.collapsable-processed::before {
+/* line 64, source/scss/optional/_collapsables.scss */
+h4.tyfy-collapsable-processed::before {
   width: 1.5rem; }
 
-/* line 88, source/scss/optional/_collapsables.scss */
-h5.collapsable-processed::before {
+/* line 69, source/scss/optional/_collapsables.scss */
+h5.tyfy-collapsable-processed::before {
   width: 1.5rem; }
 
-/* line 93, source/scss/optional/_collapsables.scss */
-h6.collapsable-processed::before {
+/* line 74, source/scss/optional/_collapsables.scss */
+h6.tyfy-collapsable-processed::before {
   width: 1.5rem; }
 
-/* line 103, source/scss/optional/_collapsables.scss */
-h2.collapsable-processed:hover::before,
-h3.collapsable-processed:hover::before,
-h4.collapsable-processed:hover::before,
-h5.collapsable-processed:hover::before,
-h6.collapsable-processed:hover::before {
+/* line 84, source/scss/optional/_collapsables.scss */
+h2.tyfy-collapsable-processed:hover::before,
+h3.tyfy-collapsable-processed:hover::before,
+h4.tyfy-collapsable-processed:hover::before,
+h5.tyfy-collapsable-processed:hover::before,
+h6.tyfy-collapsable-processed:hover::before {
   background-color: var(--tycolor-link-active);
   color: var(--tycolor-bg); }
 
-/* line 110, source/scss/optional/_collapsables.scss */
-.collapsables {
-  box-sizing: border-box;
+/* line 91, source/scss/optional/_collapsables.scss */
+.tyfy-collapsables {
+  box-sizing: content-box;
   border-bottom: 2px var(--tycolor-border) solid;
   margin: 0rem;
   overflow: hidden;
-  padding: 0.75rem 0 calc(1.5rem - 2px) 0; }
+  padding: 0.75rem 0 calc(1.5rem - 2px) 0;
+  transition-duration: 667ms;
+  transition-property: padding-top,padding-bottom,height;
+  transition-timing-function: ease-in-out; }
   @media (min-width: 50em) {
-    /* line 110, source/scss/optional/_collapsables.scss */
-    .collapsables {
+    /* line 91, source/scss/optional/_collapsables.scss */
+    .tyfy-collapsables {
       border: 2px var(--tycolor-border) solid;
       border-top: none !important;
       padding: calc(0.75rem - 2px) calc(1.5rem - 2px) calc(1.5rem - 2px); } }
-  /* line 121, source/scss/optional/_collapsables.scss */
-  .collapsables.closed {
-    border: none;
-    height: 0;
+  /* line 105, source/scss/optional/_collapsables.scss */
+  .tyfy-collapsables.closed {
+    height: 0 !important;
     padding-bottom: 0;
-    padding-top: 0;
-    position: absolute; }
+    padding-top: 0; }
 
 /* line 1, source/scss/optional/_tabs.scss */
 * + .tabs-container {
@@ -1709,35 +1669,35 @@ select.tyselect {
 
 /* line 55, source/scss/extras/_icons.scss */
 .tyicons-angle-up-down::before {
-  content: "\ea04"; }
+  content: "\ea05"; }
 
 /* line 58, source/scss/extras/_icons.scss */
 .tyicons-angle-up::before {
-  content: "\ea08"; }
+  content: "\ea04"; }
 
 /* line 61, source/scss/extras/_icons.scss */
 .tyicons-bars::before {
-  content: "\ea07"; }
+  content: "\ea06"; }
 
 /* line 64, source/scss/extras/_icons.scss */
 .tyicons-check::before {
-  content: "\ea05"; }
+  content: "\ea07"; }
 
 /* line 67, source/scss/extras/_icons.scss */
 .tyicons-dash::before {
-  content: "\ea06"; }
+  content: "\ea08"; }
 
 /* line 70, source/scss/extras/_icons.scss */
 .tyicons-quote-left::before {
-  content: "\ea0a"; }
+  content: "\ea09"; }
 
 /* line 73, source/scss/extras/_icons.scss */
 .tyicons-quote-right::before {
-  content: "\ea0b"; }
+  content: "\ea0a"; }
 
 /* line 76, source/scss/extras/_icons.scss */
 .tyicons-search::before {
-  content: "\ea09"; }
+  content: "\ea0b"; }
 
 /* line 79, source/scss/extras/_icons.scss */
 .tyicons-x::before {
@@ -1745,13 +1705,13 @@ select.tyselect {
 
 /* line 14, source/scss/extras/_reverse.scss */
 .reverse {
-  --tycolor-bg:                   #333;
+  --tycolor-bg:                   black;
   --tycolor-bg-tab-active:        rgba(230, 153, 179, 0.12);
   --tycolor-fg:                   white;
-  --tycolor-text-light:           #999999;
+  --tycolor-text-light:           gray;
   --tycolor-link-default:         #99b3e6;
   --tycolor-link-active:          #e699b3;
-  --tycolor-border:               #525252;
+  --tycolor-border:               #1f1f1f;
   --tycolor-border-link-default:  rgba(153, 179, 230, 0.5);
   --tycolor-border-link-active:   rgba(230, 153, 179, 0.75);
   --tycolor-shade:                rgba(255, 255, 255, 0.05);
@@ -1878,11 +1838,11 @@ select.tyselect {
       border-color: #da91aa; }
   /* line 45, source/scss/extras/_reverse.scss */
   .reverse blockquote.pullquote-roof-fixed::before, .reverse blockquote.pullquote-roof-full::before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#525252%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#1f1f1f%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
   /* line 54, source/scss/extras/_reverse.scss */
   .reverse .tyselect select:not([multiple]),
   .reverse select.tyselect:not([multiple]) {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#999999'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#999999'/%3E%3C/svg%3E"); }
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='gray'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='gray'/%3E%3C/svg%3E"); }
 
 /* line 2, source/scss/extras/_effects.scss */
 .fade-hover {
