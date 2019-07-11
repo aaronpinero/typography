@@ -263,6 +263,14 @@ table.utility {
   th.row-hidden {
     display:none !important;
   }
+  &.responsive th.row-hidden {
+    @media (min-width:$tybreak-table) {
+      & + td,
+      & + th {
+        padding-left:0;
+      }
+    }
+  }
   &:not(.striped):not(.vertical-rules):not(.responsive) {
     th.row-hidden + * {
       padding-left:0;
