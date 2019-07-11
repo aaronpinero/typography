@@ -26,9 +26,9 @@
 &lt;h2&gt;Regular Heading 2&lt;/h2&gt;
 &lt;p&gt;[content under the heading]&lt;/p&gt;
 &lt;ul&gt;[content under the heading]&lt;/ul&gt;</code></pre>
-      <p>JavaScript identifies the content belonging to the heading. The content belonging to a heading is defined as <em>all the sibling elements following the heading element up to the next heading of the same or higher level</em>. JavaScript wraps the content belonging to the heading in a <code>&lt;div&gt;</code> with the class <code>collapsables</code>. To indicate that JavaScript has acted on the collapsable heading, the class <code>collapsable-processed</code> is added to the heading. So, after JavaScript has run, the code will appear as follows:</p>
-      <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;h2 class="collapsable collapsable-processed"&gt;Collapsable Heading&lt;/h2&gt;
-&lt;div class="collapsables"&gt;
+      <p>JavaScript identifies the content belonging to the heading. The content belonging to a heading is defined as <em>all the sibling elements following the heading element up to the next heading of the same or higher level</em>. JavaScript wraps the content belonging to the heading in a <code>&lt;div&gt;</code> with the class <code>tyfy-collapsables</code>. To indicate that JavaScript has acted on the collapsable heading, the class <code>tyfy-collapsable-processed</code> is added to the heading. So, after JavaScript has run, the code will appear as follows:</p>
+      <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;h2 class="collapsable tyfy-collapsable-processed"&gt;Collapsable Heading&lt;/h2&gt;
+&lt;div class="tyfy-collapsables"&gt;
   &lt;p&gt;[content under the heading]&lt;/p&gt;
   &lt;ul&gt;[content under the heading]&lt;/ul&gt;
 &lt;/div&gt;
@@ -46,12 +46,9 @@
 				<dt>$tycolor-border</dt>
 				<dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,12%) !default;</code></dd>
 				<dd>Default border color.</dd>
-        <dt>$tyicons-angle-down</dt>
-				<dd><code class="val val-default">"ea01" !default;</code></dd>
-        <dd>Character code for the icon indicating a collapsable section can be opened.</dd>
         <dt>$tyicons-angle-up</dt>
 				<dd><code class="val val-default">"ea08" !default;</code></dd>
-        <dd>Character code for the icon indicating a collapsable section can be closed.</dd>
+        <dd>Character code for the icon applied to a collapsable heading. The icon is rotated 180 degrees when the collapsable heading is in the closed state.</dd>
       </dl>
 			<h2>Example</h2>
 			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p&gt;&lt;a href="#testanchor"&gt;Test anchor link&lt;/a&gt;&lt;/p&gt;
