@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<!-- COMMON HEAD TAGS -->
+  <head>
+    <!-- COMMON HEAD TAGS -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
 		<script>
@@ -18,10 +18,10 @@
 		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
 		<link rel="stylesheet" href="../resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy - Get Started</title>
-	</head>
-	<body class="">
-		<!-- COMMON HEADER -->
+    <title>Tyfy - Get Started</title>
+  </head>
+  <body class="">
+    <!-- COMMON HEADER -->
 		<header class="brand tymargins-off reverse">
 			<h1><a href="index.html">Tyfy</a></h1>
 			<nav>
@@ -51,34 +51,79 @@
 			</nav>
 		</header>
 		<!--/ COMMON HEADER -->
-		<section class="main links-underlined">
-			<h1>Get Started</h1>
-			<h2>Overview</h2>
-			<p><strong class="tyfy">Tyfy</strong> is intended as a companion to your web project. It is a collection of <span class="smallcaps">SCSS</span> stylesheets and jQuery-based JavaScript that provide a baseline grid, modular scale, and intelligent margins. The styles can be customized by overriding the default <span class="smallcaps">SASS</span> variable values.</p>
-			<p>I have tried to make <strong class="tyfy">Tyfy</strong> as modular as possible. You can use all of it (as <span class="smallcaps">CSS</span> or <span class="smallcaps">SCSS</span>) or pick the modules that are right for your project. JavaScript is only required for certain presentation styles, and the JavaScript files are modular; each script is required only when using the associated module.</p>
-			<h2>Setup</h2>
-			<ol>
-				<li>Clone the github project or install using <code>npm install tyfy</code></li>
-				<li>
-					Add <strong class="tyfy">Tyfy</strong> to your project:
-					<ul>
-						<li>As s SCSS file: <code>@import "[path to tyfy]/source/scss/tyfy.scss"</code></li>
-						<li>As a CSS file: <code>@import "[path to tyfy]/dist/style/tyfy.css"</code></li>
-					</ul>
-				</li>
-				<li>Add <a href="https://jquery.com">jQuery</a> (1.12.4 or above) to your project</li>
-				<li>
-					Add <strong class="tyfy">Tyfy</strong> JavaScript to your project in the contexts where it is appropriate.
-					<ul>
-						<li><code>[path to tyfy]/dist/script/collapsables.js</code> for <a href="collapsables.html">collapsable sections</a></li>
-						<li><code>[path to tyfy]/dist/script/tabs.js</code> for <a href="tabs.html">responsive tabs</a></li>
-						<li><code>[path to tyfy]/dist/script/tables.js</code> for <a href="tables.html">responsive tables</a></li>
-					</ul>
-				</li>
-			</ol>
-			<p>If you want to only use parts of <strong class="tyfy">Tyfy</strong>, you can review the tyfy.scss file or the <a href="modules.html">modules</a> documentation and use add the specific stylesheets that are useful for your project.</p>
-		</section>
-		<!-- COMMON FOOTER -->
+    <section class="main links-underlined">
+      <h1>Get Started</h1>
+      <p><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to your front-end development. It provides a <a href="grid.html">baseline grid</a>, <a href="scale.html">modular scale</a>, <a href="margins.html">sensible margins</a>, and styles for common HTML elements and content patterns.</p>
+      <p>To get started you can either <a href="#css">use the compiled <span class="smallcaps">CSS</span></a> or <a href="#scss">begin with the <span class="smallcaps">SCSS</span> files</a> and customize the framework by overriding the default variable values. The latter approach is recommended as it allows you to take full advantage of the <a href="mixins.html">mixins</a> and <a href="functions.html">functions</a> for the baseline grid and modular scale.</p>
+      <h2 id="start-scss"><a name="scss">Start with <span class="smallcaps">SCSS</span></a> <small>(recommended)</small></h2>
+      <p>Use this approach if you want to customize <strong class="tyfy">Tyfy</strong> and use the framework as a foundation for your project.</p>
+      <ol>
+        <li>Clone the github project or install using <code>npm install tyfy</code></li>
+        <li>
+          <p>If you want to customize any of the <strong class="tyfy">Tyfy</strong> variable values, declare the custom values at the top of your <span class="smallcaps">SCSS</span> file. Begin with the <a href="core.html">core</a> values and then any <a href="settings.html">settings</a> values. The following sample comes from the <span class="smallcaps">SCSS</span> file for this documentation:</p>
+          <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">// custom core variable values
+$tyfont-serif:"IBM Plex Serif", serif;
+$tyfont-sans:"IBM Plex Sans", sans-serif;
+$tyfont-mono:"IBM Plex Mono", monospace;
+
+// custom settings variable values
+$tyfont-base:$tyfont-serif;
+$tyfont-heading:$tyfont-sans;</code></pre>
+        </li>
+        <li>
+          <p>Import the main <strong class="tyfy">Tyfy</strong> <span class="smallcaps">SCSS</span> file.</p>
+          <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">@import "[path to tyfy]/source/scss/tyfy.scss";</code></pre>
+          <p>The main <span class="smallcaps">SCSS</span> file includes all of the <a href="required.html">required</a>, <a href="essential.html">essential</a> and <a href="optional.html">optional</a> <strong class="tyfy">Tyfy</strong> modules. It also includes the <a href="icons.html">icons</a> and <a href="reverse.html">reverse</a> extras modules.</p>
+        </li>
+        <li>
+          <p>Import any other <a href="extras.html">extras</a> modules you may need for your project.</p>
+          <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">@import "[path to tyfy]/source/scss/extras/responsive_text";</code></pre>
+        </li>
+        <li>
+          <p>Add the <strong class="tyfy">Tyfy</strong> JavaScript files to the end of your <span class="smallcaps">HTML</span>.</p>
+          <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;body&gt;
+  &lt;!-- content of page --&gt;
+  &lt;script src="[path to tyfy]/dist/script/collapsables.js"&gt;&lt;/script&gt;
+  &lt;script src="[path to tyfy]/dist/script/tables.js"&gt;&lt;/script&gt;
+  &lt;script src="[path to tyfy]/dist/script/tabs.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+        </li>
+        <li>
+          Now you’re ready to begin development. Review the documentation to learn more about:
+          <ul class="sibling-margins-off">
+            <li><a href="customize.html">customizing</a> the framework for your project</li>
+            <li>using the <a href="mixins.html">mixins</a> and <a href="functions.html">functions</a></li>
+            <li>styles, variables, and classes provided by the <a href="#modules">modules</a></li>
+            <li><a href="tools.html">build tools</a> that can be used with <strong class="tyfy">Tyfy</strong></li>
+          </ul>
+        </li>
+      </ol>
+      <h2 id="start-css"><a name="css">Start with <span class="smallcaps">CSS</span></a></h2>
+      <p>Use this approach if you want to get started quickly and will not need to customize or extend the framework.</p>
+      <ol>
+        <li>Clone the github project or install using <code>npm install tyfy</code></li>
+        <li>Within the <em>tyfy</em> project folder, the <em>dist</em> directory contains the framework's compiled stylesheet, JavaScript files, and icon font. Move the <em>dist</em> directory into your project folder.</li>
+        <li>
+          <p>Add the <strong class="tyfy">Tyfy</strong> stylesheet to the your <span class="smallcaps">HTML</span> <code>&lt;head&gt;</code>.</p>
+          <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;head&gt;
+  &lt;!-- head tags --&gt;
+  &lt;link rel="stylesheet" href="dist/style/tyfy.css"&gt;
+&lt;/head&gt;</code></pre>
+          <p>The compiled <span class="smallcaps">CSS</span> includes all of the required, essential, and optional <strong class="tyfy">Tyfy</strong> modules. It also adds the <a href="icons.html">icons</a> and <a href="reverse.html">reverse colors</a> modules from the extras collection.</p>
+        </li>
+        <li>
+          <p>Add the <strong class="tyfy">Tyfy</strong> JavaScript files to the end of your <span class="smallcaps">HTML</span> <code>&lt;body&gt;</code>.</p>
+          <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;body&gt;
+  &lt;!-- content of page --&gt;
+  &lt;script src="dist/script/collapsables.js"&gt;&lt;/script&gt;
+  &lt;script src="dist/script/tables.js"&gt;&lt;/script&gt;
+  &lt;script src="dist/script/tabs.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+        </li>
+        <li>Now you’re ready to go. Review the <a href="#modules">modules documentation</a> to learn more about <strong class="tyfy">Tyfy</strong> styles and <span class="smallcaps">CSS</span> classes.</li>
+      </ol>
+    </section>
+    <!-- COMMON FOOTER -->
 		<footer>
 			<p>&copy; Copyright 2017–2019 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
 		</footer>
@@ -94,5 +139,5 @@
     <script src="../resources/script/docs-nav.js"></script>
     <script src="../resources/vendor/prism/prism.js"></script>
 		<!--/ COMMON FOOTER -->
-	</body>
+  </body>
 </html>

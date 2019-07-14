@@ -56,7 +56,7 @@
 			<p><strong class="tyfy">Tyfy</strong> mixins make it easier to use the some of the framework’s styles and effects.</p>
 			<h2 id="mixin-tybutton">@mixin tybutton</h2>
 			<p>Use this mixin to display an <span class="smallcaps">HTML</span> element as a button. The button’s text color will be black or white – whichever provides the best contrast with the button’s background color. To apply the mixin to a link, use the [href] attribute selector. See the <a href="links.html">links</a> and <a href="utility.html">utility</a> documentation for more information.</p>
-			<h3 class="font-size-h4">Arguments</h3>
+			<h3 class="tyfont-size-h4">Arguments</h3>
 			<dl>
 				<dt>$color_default</dt>
 				<dd><em>optional</em></dd>
@@ -71,7 +71,7 @@
 				<dd>Default value is <code class="val val-default">$tyradius-border</code></dd>
 				<dd>Border radius of the button.</dd>
 			</dl>
-			<h3 class="font-size-h4">Example</h3>
+			<h3 class="tyfont-size-h4">Example</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">tag.button {
   @include tybutton;
 }
@@ -80,7 +80,7 @@ a.button[href] {
 }</code></pre>
 			<h2 id="mixin-tybutton-outline">@mixin tybutton-outline</h2>
 			<p>Use this mixin to display an <span class="smallcaps">HTML</span> element as an outlined button. In the default state, the button background color is transparent and the button text color is the default color. In the active state, the button background color is the active color and the text color is either black or white – whichever provides the best contrast with the background color. To apply the mixin to a link, use the [href] attribute selector. See the <a href="links.html">links</a> and <a href="utility.html">utility</a> documentation for more information.</p>
-			<h3 class="font-size-h4">Arguments</h3>
+			<h3 class="tyfont-size-h4">Arguments</h3>
 			<dl>
 				<dt>$color_default</dt>
 				<dd><em>optional</em></dd>
@@ -95,7 +95,7 @@ a.button[href] {
 				<dd>Default value is <code class="val val-default">$tyradius-border</code></dd>
 				<dd>Border radius of the button.</dd>
 			</dl>
-			<h3 class="font-size-h4">Example</h3>
+			<h3 class="tyfont-size-h4">Example</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">tag.button-outline {
   @include tybutton-outline;
 }
@@ -104,13 +104,13 @@ a.button-outline[href] {
 }</code></pre>
 			<h2 id="mixin-tyclear">@mixin tyclear</h2>
 			<p>Use this mixin to clear floats within an element. This mixin does not accept any arguments. Code comes from <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>.</p>
-			<h3 class="font-size-h4">Example</h3>
+			<h3 class="tyfont-size-h4">Example</h3>
       <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">tag.class {
   @include tyclear;
 }</code></pre>
 			<h2 id="mixin-tyfadein">@mixin tyfadein</h2>
 			<p>Use this mixin to apply a non-looping fade in animation to an element with the given animation duration.</p>
-			<h3 class="font-size-h4">Arguments</h3>
+			<h3 class="tyfont-size-h4">Arguments</h3>
 			<dl>
 				<dt>$duration</dt>
 				<dd><em>optional</em></dd>
@@ -123,14 +123,14 @@ a.button-outline[href] {
 }</code></pre>
 			<h2 id="mixin-tyhidden">@mixin tyhidden</h2>
 			<p>Use this mixin to visually hide an element, but allow screen readers and search engines to read the element’s content. The default <code>true</code> argument hides the element. The <code>false</code> argument is used to reverse the default styles. Code is adapted from <a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a></p>
-			<h3 class="font-size-h4">Arguments</h3>
+			<h3 class="tyfont-size-h4">Arguments</h3>
 			<dl>
 				<dt>$state</dt>
 				<dd><em>optional</em></dd>
 				<dd>Default value is <code class="val val-default">true</code></dd>
 				<dd>Allowed values are <code>true</code> or <code>false</code>.</dd>
 			</dl>
-			<h3 class="font-size-h4">Example</h3>
+			<h3 class="tyfont-size-h4">Example</h3>
       <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">tag.hide-me {
   @include tyhidden;
   &amp;.show-me {
@@ -139,7 +139,7 @@ a.button-outline[href] {
 }</code></pre>
 			<h2 id="mixin-tymargins-size">@mixin tymargins-size</h2>
 			<p>Use this mixin to set the size of adjacent sibling margins for all children of the selected elements. For more information, see the <a href="margins.html">Margins</a> documentation.</p>
-			<h3 class="font-size-h4">Arguments</h3>
+			<h3 class="tyfont-size-h4">Arguments</h3>
 			<dl>
 				<dt>$context</dt>
 				<dd><em>optional</em></dd>
@@ -150,20 +150,20 @@ a.button-outline[href] {
 				<dd>Default value is <code class="val val-default">$tyspacing-md</code></dd>
 				<dd>A rem-unit size of the adjacent sibling margins to apply in the given context.</dd>
 			</dl>
-			<h3 class="font-size-h4">Example</h3>
+			<h3 class="tyfont-size-h4">Example</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">tag.class {
   @include tymargins-size(all,tygrid(1));
 }</code></pre>
 			<h2 id="mixin-tymargins">@mixin tymargins</h2>
 			<p>Use this mixin to turn adjacent sibling margins on or off for children of the selected elements. If the state is <code>on</code>, the margins are set to the <strong class="tyfy">Tyfy</strong> default values. To override with specific values, use the <code>tymargins-size</code> mixin.</p>
-			<h3 class="font-size-h4">Arguments</h3>
+			<h3 class="tyfont-size-h4">Arguments</h3>
 			<dl>
 				<dt>$state</dt>
 				<dd><em>optional</em></dd>
 				<dd>Default value is <code class="val val-default">on</code></dd>
 				<dd>Allowed values are <code>on</code> or <code>off</code>.</dd>
 			</dl>
-			<h3 class="font-size-h4">Example</h3>
+			<h3 class="tyfont-size-h4">Example</h3>
 			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">tag.class {
   @include tymargins(off);
 }</code></pre>

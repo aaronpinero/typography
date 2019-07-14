@@ -181,14 +181,17 @@ pre.codebox {
 code[class*="language-"],
 pre[class*="language-"] {
   font-family:$tyfont-mono !important;
-}
-:not(pre) > code[class*="language-"],
-pre.codebox[class*="language-"] {
-  background-color:$tycolor-shade !important;
   margin:0 !important;
   * + & {
     margin-top:$tyspacing-md !important;
   }
+  li * + & {
+    margin-top:$tyspacing-md / 2 !important;
+  }
+}
+:not(pre) > code[class*="language-"],
+pre.codebox[class*="language-"] {
+  background-color:$tycolor-shade !important;
   padding:calc(#{$tyspacing-md} - #{$tywidth-border}) !important;
 }
 code.val-default {
