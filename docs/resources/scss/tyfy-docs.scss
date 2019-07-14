@@ -42,6 +42,9 @@ strong.tyfy {
   font-weight:bold;
   text-transform:uppercase;
 }
+.tyhidden {
+  @include tyhidden;
+}
 header.brand {
   h1 {
     @extend .constrained;

@@ -17,14 +17,30 @@ for (x;x<figures.length;x++) {
   figures[x].appendChild(toggle);
   
   // set an event handler for this toggle button
-  
+  toggle.addEventListener("click",function(){
     // if this figure has the reverse class
-    
+    figure = this.parentNode;
+    if (figure.classList.contains('reverse')) {
       // remove the reverse class on this element
-      
+      figure.classList.remove('reverse');
+
       // remove the reverse class on this element's first child div
+      figure.firstElementChild.classList.remove('reverse');
       
       // hide the class attribute in the codebox associated with this figure
+      figure.previousElementSibling.getElementsByClassName('attr-value').item(0).classList.add('tyhidden');
+    }
+    else {
+      // add the reverse class on this element
+      figure.classList.add('reverse');
+
+      // add the reverse class on this element's first child div
+      figure.firstElementChild.classList.add('reverse');
+      
+      // show the class attribute in the codebox associated with this figure
+      figure.previousElementSibling.getElementsByClassName('attr-value').item(0).classList.remove('tyhidden');
+    }
+  });
 }
   
       
