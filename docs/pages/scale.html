@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<link rel="stylesheet" href="../resources/vendor/prism/prism.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Benefits - Modular Scale</title>
+	</head>
+	<body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand tymargins-off reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="list-nobullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="mixins.html">Mixins</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="forms.html">Forms</a></li>
+  				<li><a href="effects.html">Effects</a></li>
+  				<li><a href="extras.html">Extras</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+		<section class="main links-underlined">
+      <h1>Modular Scale</h1>
+			<p><a href="http://tbrown.org" data-href="http://tbrown.org">Tim Brown</a>, Head of Typography at Adobe Typekit and co-developer of <a href="http://www.modularscale.com">modularscale.com</a> writes:</p>
+			<blockquote>“By basing the dimensions of our compositions on values from modular scales, we can achieve a visual harmony not found in layouts that use arbitrary, conventional, or easily divisible numbers.”</blockquote>
+			<p>More simply, <a href="https://en.wikipedia.org/wiki/Robert_Bringhurst">Robert Bringhurst</a> writes “don’t compose without a scale”. Is he talking about music or typgraphic design?</p>
+			<p><strong class="tyfy">Tyfy</strong> follows Bringhurst’s advice and uses a modular scale for font size values.</p>
+			<h2>Selecting a Modular Scale</h2>
+			<p>The modular scale for your project depends on the value of two <strong class="tyfy">Tyfy</strong> variables: a base and a scalar (or ratio). The default value of these variables is defined in the <a href="core.html">core</a> module.</p>
+			<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">$tyfont-size-base: 1rem !default;
+$tyfont-size-scalar: 1.2 !default;</code></pre>
+      <p>The base of the scale is <code>$tyfont-size-base</code> (this is also the default font size for the <code>&lt;body&gt;</code> in <strong class="tyfy">Tyfy</strong>). Every step in the modular scale of font size values is calculated as a function of the base font size and the scalar: <em>step font size = base &times; scalar<sup>(step)</sup></em>, where <em>step</em> is the number of steps above or below the base value. The ratio between any two adjacent steps in the scale is the value of the scalar.</p>
+      <p>Using a modular scale for font sizes not only provides the visual harmony that Tim Brown described above, but also consistent and effective visual contrast between elements with different text sizes. The modular scale also takes the mystery out of how to select font sizes for elements like headings, subheadings, and pull quotes.</p>
+      <h2>The <em>tyscale</em> Function</h2>
+			<p><strong class="tyfy">Tyfy</strong> provides a modular scale function that makes it easy to assign font size values based the modular scale. No math required! The function is named <em>tyscale</em> and is defined in the <a href="functions.html">functions</a> module.</p>
+			<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">@function tyscale($exponent:0) {
+  $i:0;
+  $scale:$tyfont-size-base;
+  @if $exponent < 0 {
+    @while $i > $exponent {
+      $scale:$scale/$tyfont-size-scalar;
+      $i:$i - 1;
+    }
+  }
+  @else if $exponent > 0 {
+    @while $i < $exponent {
+      $scale:$scale*$tyfont-size-scalar;
+      $i:$i + 1;
+    }
+  }
+  @return $scale;
+}</code></pre>
+			<p>The <em>tyscale</em> function accepts an integer argument and returns a font size value. The integer argument specifies the number of steps up or down the modular scale from the base font size.</p>
+			<p>This function is used in <strong class="tyfy">Tyfy</strong> to set all font size values. For example:</p>
+			<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">small {
+  font-size: tyscale(-1) !default; // 0.833rem; one scale step down from the base size
+}
+h6 {
+  font-size: tyscale(0) !default;  // 1rem; using 0 as the exponent is the same as setting the value to the base size
+}
+h5 {
+  font-size: tyscale(1) !default;  // 1.2rem; one scale step up from the base size
+}
+h4 {
+  font-size: tyscale(2) !default;  // 1.44rem; two scale steps up from the base size
+}
+[...]</code></pre>
+			<p>Since all font sizes in <strong class="tyfy">Tyfy</strong> are based on the modular scale, you can quickly change every element’s font size by modifying either the base size or the scalar value. In this way you can fine-tune the typographic design of your project.</p>
+
+		</section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017–2019 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i,700,700i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="../resources/script/docs-nav.js"></script>
+    <script src="../resources/vendor/prism/prism.js"></script>
+		<!--/ COMMON FOOTER -->
+	</body>
+</html>
