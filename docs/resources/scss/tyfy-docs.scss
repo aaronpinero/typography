@@ -45,6 +45,9 @@ strong.tyfy {
 .tyhidden {
   @include tyhidden;
 }
+.tyicons {
+  vertical-align:middle;
+}
 header.brand {
   h1 {
     @extend .constrained;
