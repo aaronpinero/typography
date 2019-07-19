@@ -53,7 +53,7 @@
 		<!--/ COMMON HEADER -->
     <section class="main links-underlined">
       <h1>Tables</h1>
-      <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and a few lines of JavaScript.</p>
+      <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and JavaScript.</p>
       <p>Proper application of styles and the responsive behavior depends on semantically correct structure of the tables. Tables should use the <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> tabs. Table headers should have the <code>scope</code> attribute to indicate how the headers should be interpreted.</p>
       <p>Using the <code>float-left</code> and <code>float-right</code> classes, a table can be positioned to the left or right of the main text. Positioning left or right is limited to larger screen sizes. At smaller screen sizes, the styled tables are displayed at full width.</p>
 			<h2 id="classes">Classes</h2>
@@ -73,16 +73,16 @@
 			</dl>
 			<h2 id="variables">Variables</h2>
 			<dl>
-  			<dt>$tyfy-break-floats</dt>
+  			<dt>$tybreak-floats</dt>
 				<dd><code class="val val-default">40em !default;</code></dd>
   			  <dd>Screen width above which float styles are enabled.</dd>
-				<dt>$tyfy-break-table</dt>
+				<dt>$tybreak-table</dt>
 				<dd><code class="val val-default">40em !default;</code></dd>
 				<dd>Screen width below which responsive tables are converted to labeled lists</dd>
-				<dt>$tyfy-font-table</dt>
-				<dd><code class="val val-default">$tyfy-sans !default;</code></dd>
+				<dt>$tyfont-table</dt>
+				<dd><code class="val val-default">$tyfont-sans !default;</code></dd>
 				<dd>Table cell font selection</dd>
-				<dt>$tyfy-width-border</dt>
+				<dt>$tywidth-border</dt>
 				<dd><code class="val val-default">2px !default;</code></dd>
 				<dd>Border thickness for table cells</dd>
 				<dt>$tycolor-border</dt>
@@ -96,8 +96,8 @@
 			<form class="form-demo" id="tables-demo">
   			<div class="form-control form-control-headers">
     			<label>Table Headers</label>
-    			<label class="option" for="table-headers-cols"><input type="checkbox" checked="checked" name="table-headers-cols" id="table-headers-cols" value="true">Columns</label>
-    			<label class="option" for="table-headers-rows"><input type="checkbox" checked="checked" name="table-headers-rows" id="table-headers-rows" value="true">Rows</label>
+    			<label class="option" for="table-headers-cols"><input type="checkbox" checked="checked" name="table-headers-cols" id="table-headers-cols" value="true"> Columns</label>
+    			<label class="option" for="table-headers-rows"><input type="checkbox" checked="checked" name="table-headers-rows" id="table-headers-rows" value="true"> Rows</label>
   			</div>
   			<div class="form-control form-control-classes">
     			<label>Table Class</label>
