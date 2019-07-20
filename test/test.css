@@ -359,7 +359,7 @@ a {
   a[href].tybutton {
     background-color: #3366cc;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     color: white;
     cursor: pointer;
     display: inline-block;
@@ -386,7 +386,7 @@ a {
   a[href].tybutton-outline {
     background-color: #3366cc;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     color: white;
     cursor: pointer;
     display: inline-block;
@@ -756,7 +756,7 @@ span.smallcaps {
 .tybutton {
   background-color: #3366cc;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -784,7 +784,7 @@ span.smallcaps {
 .tybutton-outline {
   background-color: #3366cc;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -1286,7 +1286,7 @@ h6.tyfy-collapsable-processed:hover::before {
   .tabs-container ul.tabs li {
     background-color: var(--tycolor-shade);
     border: 2px var(--tycolor-border) solid;
-    border-radius: 4px 4px 0 0;
+    border-radius: 6px 6px 0 0;
     color: var(--tycolor-text-light);
     cursor: pointer;
     display: block;
@@ -1369,7 +1369,7 @@ h6.tyfy-collapsable-processed:hover::before {
     /* line 102, source/scss/optional/_tabs.scss */
     .tabs-container.tabs-processed .tab-panel {
       border: 2px var(--tycolor-border) solid;
-      border-radius: 0 0 4px 4px;
+      border-radius: 0 0 6px 6px;
       border-top: none;
       display: none;
       padding: 1.5rem calc(1.5rem - 2px) calc(1.5rem - 2px); } }
@@ -1388,7 +1388,7 @@ h6.tyfy-collapsable-processed:hover::before {
 /* line 2, source/scss/optional/_forms.scss */
 fieldset {
   border-color: var(--tycolor-border);
-  border-radius: 4px;
+  border-radius: 6px;
   border-style: solid;
   display: block;
   margin-left: 0;
@@ -1476,7 +1476,7 @@ input[type="color"] {
   background-color: var(--tycolor-bg);
   border-color: var(--tycolor-border);
   border-style: solid;
-  border-radius: 4px;
+  border-radius: 6px;
   border-width: 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
   color: var(--tycolor-fg);
@@ -1544,7 +1544,7 @@ input[type="reset"],
 input[type="submit"] {
   background-color: #3366cc;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   color: white;
   cursor: pointer;
   display: inline-block;
@@ -1705,13 +1705,13 @@ select.tyselect {
 
 /* line 14, source/scss/extras/_reverse.scss */
 .reverse {
-  --tycolor-bg:                   black;
+  --tycolor-bg:                   #333;
   --tycolor-bg-tab-active:        rgba(230, 153, 179, 0.12);
   --tycolor-fg:                   white;
-  --tycolor-text-light:           gray;
+  --tycolor-text-light:           #999999;
   --tycolor-link-default:         #99b3e6;
   --tycolor-link-active:          #e699b3;
-  --tycolor-border:               #1f1f1f;
+  --tycolor-border:               #5c5c5c;
   --tycolor-border-link-default:  rgba(153, 179, 230, 0.5);
   --tycolor-border-link-active:   rgba(230, 153, 179, 0.75);
   --tycolor-shade:                rgba(255, 255, 255, 0.05);
@@ -1726,7 +1726,7 @@ select.tyselect {
   .reverse input[type="submit"] {
     background-color: #99b3e6;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     color: black;
     cursor: pointer;
     display: inline-block;
@@ -1794,7 +1794,7 @@ select.tyselect {
   .reverse a.tybutton-outline {
     background-color: #99b3e6;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     color: black;
     cursor: pointer;
     display: inline-block;
@@ -1838,11 +1838,11 @@ select.tyselect {
       border-color: #da91aa; }
   /* line 45, source/scss/extras/_reverse.scss */
   .reverse blockquote.pullquote-roof-fixed::before, .reverse blockquote.pullquote-roof-full::before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#1f1f1f%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#5c5c5c%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
   /* line 54, source/scss/extras/_reverse.scss */
   .reverse .tyselect select:not([multiple]),
   .reverse select.tyselect:not([multiple]) {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='gray'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='gray'/%3E%3C/svg%3E"); }
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#999999'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#999999'/%3E%3C/svg%3E"); }
 
 /* line 2, source/scss/extras/_effects.scss */
 .fade-hover {
@@ -2038,80 +2038,20 @@ select.tyselect {
   h6.collapsable-processed::before {
     width: 1.5rem; } }
 
-/* line 71, test/test.scss */
+/* line 86, test/test.scss */
 body {
-  background-color: var(--tycolor-shade);
   margin-left: auto;
   margin-right: auto;
   max-width: 52.5rem;
   padding: 1.5rem; }
-  /* line 77, test/test.scss */
-  body.reverse {
-    background-color: #666; }
 
-/* line 81, test/test.scss */
-figure {
-  background-color: var(--tycolor-bg);
-  border-radius: 4px;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
-  margin-left: 0;
-  margin-right: 0;
-  padding: 1.5rem; }
-  /* line 88, test/test.scss */
-  figure figcaption {
-    border-bottom: 2px var(--tycolor-border) solid;
-    color: var(--tycolor-text-light);
-    font-family: helvetica, arial, sans-serif;
-    font-size: 0.72rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    line-height: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    text-transform: uppercase; }
-  /* line 100, test/test.scss */
-  figure figcaption + * {
-    margin-top: 0 !important; }
-
-/* line 104, test/test.scss */
-.swatch {
-  border-radius: 50%;
-  display: inline-block;
-  height: 2.25rem;
-  vertical-align: middle;
-  width: 2.25rem; }
-  /* line 110, test/test.scss */
-  .swatch.foreground {
-    background-color: var(--tycolor-fg); }
-  /* line 113, test/test.scss */
-  .swatch.text-light {
-    background-color: var(--tycolor-text-light); }
-  /* line 116, test/test.scss */
-  .swatch.link-default {
-    background-color: var(--tycolor-link-default); }
-  /* line 119, test/test.scss */
-  .swatch.link-active {
-    background-color: var(--tycolor-link-active); }
-  /* line 122, test/test.scss */
-  .swatch.border {
-    background-color: var(--tycolor-border); }
-  /* line 125, test/test.scss */
-  .swatch.shade {
-    background-color: var(--tycolor-shade); }
-
-/* line 129, test/test.scss */
-hr.demo {
-  margin-bottom: 0.375rem;
-  margin-top: 0.375rem; }
-
-/* line 133, test/test.scss */
+/* line 92, test/test.scss */
 .button-rev {
   opacity: 0.25;
   position: fixed;
   right: 0.75rem;
   top: 0.75rem;
-  transition: all 333ms;
   z-index: 100; }
-  /* line 140, test/test.scss */
+  /* line 98, test/test.scss */
   .button-rev:hover {
     opacity: 1; }
