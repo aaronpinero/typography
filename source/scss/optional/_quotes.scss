@@ -1,10 +1,10 @@
 blockquote {
   font-style:italic;
-  margin-left:$tyfy-indent-small;
-  margin-right:$tyfy-indent-small;
-  @media (min-width:$tyfy-break-pullquote-large) {
-    margin-left:$tyfy-indent-standard;
-    margin-right:$tyfy-indent-standard;
+  margin-left:$tyindent-sm;
+  margin-right:$tyindent-sm;
+  @media (min-width:$tybreak-quote) {
+    margin-left:$tyindent-md;
+    margin-right:$tyindent-md;
   }
   p {
     font-style:italic;
@@ -12,21 +12,21 @@ blockquote {
   &.pullquote {
     background-color:transparent;
     border:none;
-    font-size:$tyfy-font-size-pullquote;
-    line-height:tylead($tyfy-font-size-pullquote,tall);
+    font-size:$tyfont-size-quote;
+    line-height:tylead($tyfont-size-quote,tall);
     margin-left:0;
     margin-right:0;
     position:relative;
     text-align:center;
     p {
-      font-size:$tyfy-font-size-pullquote;
-      line-height:tylead($tyfy-font-size-pullquote,tall);
+      font-size:$tyfont-size-quote;
+      line-height:tylead($tyfont-size-quote,tall);
     }
     cite {
       display:block;
-      font-size:$tyfy-font-size-sm;
+      font-size:$tyfont-size-sm;
       font-style:normal;
-      line-height:tylead($tyfy-font-size-sm,tall);
+      line-height:tylead($tyfont-size-sm,tall);
     }
     * + cite {
       margin-top:tygrid(1);
@@ -38,9 +38,9 @@ blockquote {
       background-position:center center;
       background-repeat:no-repeat;
       color:var(--tycolor-border);
-      content:tychar($tyfyicons-quote-right);
+      content:tychar($tyicons-quote-right);
       display:block;
-      font-family:$tyfy-symbol;
+      font-family:$tyfont-symbol;
       font-size:tygrid(2);
       font-style:normal;
       font-weight:normal;
@@ -54,26 +54,29 @@ blockquote {
     }
     &.float-left,
     &.float-right {
-      @media (min-width:$tyfy-break-floats) {
+      @media (min-width:$tybreak-float) {
         box-sizing:border-box;
         text-align:left;
-        margin-bottom:$tyfy-spacing-standard;
-        width:calc(50% - #{$tyfy-spacing-standard});
+        margin-bottom:$tyspacing-md;
+        width:calc(50% - #{$tyspacing-md});
+        &:first-child + * {
+          margin-top:0;
+        }
       }
     }
     &.float-left {
-      @media (min-width:$tyfy-break-floats) {
+      @media (min-width:$tybreak-float) {
         clear:left;
         float:left;
         margin-left:0;
-        margin-right:2 * $tyfy-spacing-standard;
+        margin-right:2 * $tyspacing-md;
       }
     }
     &.float-right {
-      @media (min-width:$tyfy-break-floats) {
+      @media (min-width:$tybreak-float) {
         clear:right;
         float:right;
-        margin-left:2 * $tyfy-spacing-standard;
+        margin-left:2 * $tyspacing-md;
         margin-right:0;
       }
     }

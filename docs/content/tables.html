@@ -8,327 +8,101 @@
 		<%include header.html%>
     <section class="main links-underlined">
       <h1>Tables</h1>
-      <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic, required class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and a few lines of JavaScript.</p>
+      <p>Classes for table styles are defined to allow style rules to be “layered onto” a table. The <code>clean</code> class is the basic class. Additional classes apply zebra-striping, borders, and responsive behavior. The responsive behavior is enabled using both <span class="smallcaps">CSS</span> and JavaScript.</p>
       <p>Proper application of styles and the responsive behavior depends on semantically correct structure of the tables. Tables should use the <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> tabs. Table headers should have the <code>scope</code> attribute to indicate how the headers should be interpreted.</p>
       <p>Using the <code>float-left</code> and <code>float-right</code> classes, a table can be positioned to the left or right of the main text. Positioning left or right is limited to larger screen sizes. At smaller screen sizes, the styled tables are displayed at full width.</p>
-    </section>
-    <section class="main links-underlined demo paragraphs-justified">
-      <h1>Demo</h1>
-      <h2>Default (no style)</h2>
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
-        
-      <h2>Clean</h2>
-      <table class="clean">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
-        
-      <h2>Clean, Striped</h2>
-      <table class="clean striped">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <h2>Clean, Striped, Horizontal Rules</h2>
-      <table class="clean striped horizontal-rules">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <h2>Clean, Horizontal Rules, Vertical Rules</h2>
-      <table class="clean horizontal-rules vertical-rules">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Clean, Horizontal Rules, Responsive</h2>
-      <table class="clean horizontal-rules responsive">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Nisl et Luctus</th>
-            <th scope="col">Velit</th>
-            <th scope="col">Commodo Sem</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dolorum nobis deleniti</td>
-            <td>8971</td>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>Sunt nobis doloremque</td>
-            <td>205</td>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>Iure dolorem libero</td>
-            <td>3069</td>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-          <tr>
-            <td>Voluptatibus est reiciendis</td>
-            <td>5468</td>
-            <td>4352</td>
-            <td>43</td>
-            <td>6346</td>
-          </tr>
-        </tbody>
-      </table>
-      <h2>Floated Tables</h2>
-      <table class="clean horizontal-rules striped float-right">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Luctus</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>The House of Representatives shall be composed of Members chosen every second Year by the People of the several States, and the Electors in each State shall have the Qualifications requisite for Electors of the most numerous Branch of the State Legislature.</p>
-      <p>No Person shall be a Representative who shall not have attained to the Age of twenty five Years, and been seven Years a Citizen of the United States, and who shall not, when elected, be an Inhabitant of that State in which he shall be chosen.</p>
-      <table class="clean horizontal-rules float-left">
-        <thead>
-          <tr>
-            <th scope="col">Quisque</th>
-            <th scope="col">Finibus</th>
-            <th scope="col">Luctus</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>513</td>
-            <td>9435</td>
-            <td>235</td>
-          </tr>
-          <tr>
-            <td>29580</td>
-            <td>95</td>
-            <td>349</td>
-          </tr>
-          <tr>
-            <td>395</td>
-            <td>9358</td>
-            <td>284</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>Representatives and direct Taxes shall be apportioned among the several States which may be included within this Union, according to their respective Numbers, which shall be determined by adding to the whole Number of free Persons, including those bound to Service for a Term of Years, and excluding Indians not taxed, three fifths of all other Persons. The actual Enumeration shall be made within three Years after the first Meeting of the Congress of the United States, and within every subsequent Term of ten Years, in such Manner as they shall by Law direct. The Number of Representatives shall not exceed one for every thirty Thousand, but each State shall have at Least one Representative; and until such enumeration shall be made, the State of New Hampshire shall be entitled to chuse three, Massachusetts eight, Rhode-Island and Providence Plantations one, Connecticut five, New-York six, New Jersey four, Pennsylvania eight, Delaware one, Maryland six, Virginia ten, North Carolina five, South Carolina five, and Georgia three.</p>
+			<h2 id="classes">Classes</h2>
+			<dl>
+  			<dt>.clean</dt>
+    		<dd>Applied to a <code>&lt;table&gt;</code> tag for basic styles. Padding is applied to cells and the table width is set to 100%. All other <strong class="tyfy">TYFY</strong> table styles should be used in combination with this style.</dd>
+  			<dt>.striped</dt>
+  			<dd>Applied to a <code>&lt;table&gt;</code> tag to add shading to even-numbered rows in within the <code>&lt;tbody&gt;</code>.</dd>
+  			<dt>.horizontal-rules</dt>
+  			<dd>Applied to a <code>&lt;table&gt;</code> tag to add horizontal rules between table rows. Table heading cells with the attribute <code>scope="col"</code> will have increased rule thickness to distinguish them from table cells.</dd>
+  			<dt>.vertical-rules</dt>
+  			<dd>Applied to a <code>&lt;table&gt;</code> tag to add vertical rules between table columns. Table heading cells with the attribute <code>scope="row"</code> will have increased rule thickness to distinguish them from table cells.</dd>
+  			<dt>.responsive</dt>
+  			<dd>Applied to a <code>&lt;table&gt;</code> tag to add responsive behavior. Responsive behavior requires the inclusion of the tables.js javascript file.</dd>
+  			<dt>.float-left, .float-right</dt>
+  			<dd>Applied to a <code>&lt;table&gt;</code> tag to float the table left or right. Width of a floated table is approximately 50% of the containing element, including an appropriate margin. Adjacent tables can be floated left and right for a side-by-side layout. At screen widths below the value of <code>$tyfy-break-floats</code>, the float styles are disabled.</dd>
+			</dl>
+			<h2 id="variables">Variables</h2>
+			<dl>
+  			<dt>$tybreak-floats</dt>
+				<dd><code class="val val-default">40em !default;</code></dd>
+  			  <dd>Screen width above which float styles are enabled.</dd>
+				<dt>$tybreak-table</dt>
+				<dd><code class="val val-default">40em !default;</code></dd>
+				<dd>Screen width below which responsive tables are converted to labeled lists</dd>
+				<dt>$tyfont-table</dt>
+				<dd><code class="val val-default">$tyfont-sans !default;</code></dd>
+				<dd>Table cell font selection</dd>
+				<dt>$tywidth-border</dt>
+				<dd><code class="val val-default">2px !default;</code></dd>
+				<dd>Border thickness for table cells</dd>
+				<dt>$tycolor-border</dt>
+				<dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,12%) !default;</code></dd>
+				<dd>Default border color</dd>
+				<dt>$tycolor-shade</dt>
+				<dd><code class="val val-default">rgba($tycolor-fg,0.05) !default;</code></dd>
+				<dd>A background color for shading when using the <code>.striped</code> class</dd>
+			</dl>
+			<h2 id="demo">Demo</h2>
+			<form class="form-demo" id="tables-demo">
+  			<div class="form-control form-control-headers">
+    			<label>Table Headers</label>
+    			<label class="option" for="table-headers-cols"><input type="checkbox" checked="checked" name="table-headers-cols" id="table-headers-cols" value="true"> Columns</label>
+    			<label class="option" for="table-headers-rows"><input type="checkbox" checked="checked" name="table-headers-rows" id="table-headers-rows" value="true"> Rows</label>
+  			</div>
+  			<div class="form-control form-control-classes">
+    			<label>Table Class</label>
+    			<label class="option" for="table-class-clean"><input type="checkbox" name="table-class" id="table-class-clean" value="clean"> .clean</label>
+    			<label class="option" for="table-class-striped"><input type="checkbox" name="table-class" id="table-class-striped" value="striped"> .striped</label>
+    			<label class="option" for="table-class-horizontal-rules"><input type="checkbox" name="table-class" id="table-class-horizontal-rules" value="horizontal-rules"> .horizontal-rules</label>
+    			<label class="option" for="table-class-vertical-rules"><input type="checkbox" name="table-class" id="table-class-vertical-rules" value="vertical-rules"> .vertical-rules</label>
+    			<label class="option" for="table-class-responsive"><input type="checkbox" name="table-class" id="table-class-responsive" value="responsive"> .responsive</label>
+    			<label class="option" for="table-class-float-left"><input type="checkbox" name="table-class" id="table-class-float-left" value="float-left"> .float-left</label>
+    			<label class="option" for="table-class-float-right"><input type="checkbox" name="table-class" id="table-class-float-right" value="float-right"> .float-right</label>
+  			</div>
+			</form>
+			<figure class="example">
+			  <h3>TYFY Tables</h3>
+  			<table class="tables-demo-table">
+          <thead>
+            <tr>
+              <th scope="col">Quisque</th>
+              <th scope="col">Finibus</th>
+              <th scope="col">Luctus</th>
+              <th scope="col">Velit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Dolorum nobis</th>
+              <td>8971</td>
+              <td>513</td>
+              <td>9435</td>
+            </tr>
+            <tr>
+              <th scope="row">Sunt nobis</th>
+              <td>205</td>
+              <td>29580</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <th scope="row">Iure dolorem</th>
+              <td>3069</td>
+              <td>395</td>
+              <td>9358</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>The House of Representatives shall be composed of Members chosen every second Year by the People of the several States, and the Electors in each State shall have the Qualifications requisite for Electors of the most numerous Branch of the State Legislature.</p>
+        <p>No Person shall be a Representative who shall not have attained to the Age of twenty five Years, and been seven Years a Citizen of the United States, and who shall not, when elected, be an Inhabitant of that State in which he shall be chosen.</p>
+			</figure>
     </section>
 		<%include footer.html%>
     <script src="../../dist/script/tables.js"></script>
+    <script src="../resources/script/docs-demo-tables.js"></script>
   </body>
 </html>

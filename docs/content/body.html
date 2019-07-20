@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<%include head.html%>
+		<title>Tyfy - Modules - Body</title>
+	</head>
+	<body class="">
+		<%include header.html%>
+		<section class="main links-underlined">
+			<h1>Body</h1>
+      <p>In this module, colors from the settings file are assigned to custom properties of the <code>:root</code> pseudo-element. Using custom properties allows the colors to be easily modified. They can be assigned class-specific values. They can also be modified using JavaScript.</p>
+      <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">:root {
+  --tycolor-bg:                   #{$tycolor-bg};
+  --tycolor-bg-tab-active:        #{$tycolor-bg-tab-active};
+  --tycolor-fg:                   #{$tycolor-fg};
+  --tycolor-text-light:           #{$tycolor-text-light};
+  --tycolor-link-default:         #{$tycolor-link-default};
+  --tycolor-link-active:          #{$tycolor-link-active};
+  --tycolor-border:               #{$tycolor-border};
+  --tycolor-border-link-default:  #{$tycolor-border-link-default};
+  --tycolor-border-link-active:   #{$tycolor-border-link-active};
+  --tycolor-shade:                #{$tycolor-shade};
+}</code></pre>
+      <p>Also in this module, colors and fonts are applied to the <code>&lt;body&gt;</code>:</p>
+      <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">body {
+  background:var(--tycolor-bg);
+  color:var(--tycolor-fg);
+  font-family:$tyfont-base;
+  font-size:$tyfont-size-base;
+  line-height:tylead($tyfont-size-base);
+}</code></pre>
+		</section>
+		<%include footer.html%>
+	</body>
+</html>

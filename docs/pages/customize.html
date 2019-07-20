@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<link rel="stylesheet" href="../resources/vendor/prism/prism.css">
+		<!--/ COMMON HEAD TAGS -->
+    <title>Tyfy - Customize TYFY</title>
+  </head>
+  <body class="">
+    <!-- COMMON HEADER -->
+		<header class="brand tymargins-off reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="list-nobullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="mixins.html">Mixins</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="forms.html">Forms</a></li>
+  				<li><a href="effects.html">Effects</a></li>
+  				<li><a href="extras.html">Extras</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+    <section class="main links-underlined">
+		  <h1>Customize TYFY</h1>
+			<p>You can customize <strong class="tyfy">Tyfy</strong> by adding or removing modules or by changing the value of the framework's variables.</p>
+			<h2>Selecting Modules</h2>
+			<p>If you inspect the main <span class="smallcaps">SCSS</span> file, you will see how <strong class="tyfy">Tyfy</strong> is organized as groups of modules. Each module provides a specific set of features or styles.</p>
+			<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">@import "required/core";
+@import "required/functions";
+@import "required/settings";
+@import "required/mixins";
+
+@import "essential/normalize";
+@import "essential/body";
+@import "essential/spacing";
+
+@import "optional/paragraphs";
+@import "optional/headings";
+@import "optional/links";
+@import "optional/lists";
+@import "optional/utility";
+@import "optional/quotes";
+@import "optional/tables";
+@import "optional/collapsables";
+@import "optional/tabs";
+@import "optional/forms";
+
+@import "extras/icons";
+@import "extras/reverse";</code></pre>
+			<ul>
+				<li><em>Required</em> modules must be included for <strong class="tyfy">Tyfy</strong> to work. The <span class="smallcaps">SCSS</span> will not compile without these modules.</li>
+				<li><em>Essential</em> modules are not strictly required but are highly recommended. Some <strong class="tyfy">Tyfy</strong> features will not work without these modules.</li>
+				<li><em>Optional</em> modules are not required and can be added or removed as desired. These modules provides styles and classes for common content and user interface patterns.</li>
+				<li><em>Extras</em> modules, like the optional modules, can be added or removed as desired. These modules provide enhancements that may not be necessary or desired in every case.</li>
+			</ul>
+			<h3>Example</h3>
+			<p>You have a simple front-end development project. There will not be any forms, quotes, tables, or tabs in the content. However, you would like text sizes to be responsive based on the screen size. Your <span class="smallcaps">SCSS</span> file may look like this:</p>
+			<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">@import "[path to tyfy]/source/scss/required/core.scss";
+@import "[path to tyfy]/source/scss/required/functions.scss";
+@import "[path to tyfy]/source/scss/required/settings.scss";
+@import "[path to tyfy]/source/scss/required/mixins.scss";
+
+@import "[path to tyfy]/source/scss/essential/normalize.scss";
+@import "[path to tyfy]/source/scss/essential/body.scss";
+@import "[path to tyfy]/source/scss/essential/spacing.scss";
+
+@import "[path to tyfy]/source/scss/essential/paragraphs.scss";
+@import "[path to tyfy]/source/scss/essential/headings.scss";
+@import "[path to tyfy]/source/scss/essential/links.scss";
+@import "[path to tyfy]/source/scss/essential/lists.scss";
+@import "[path to tyfy]/source/scss/essential/styles.scss";
+@import "[path to tyfy]/source/scss/essential/collapsables.scss";
+
+@import "[path to tyfy]/source/scss/extras/responsive_text.scss";</code></pre>
+			<h2>Customizing Variables</h2>
+			<p><strong class="tyfy">Tyfy</strong> styles are based on <span class="smallcaps">SASS</span> variables that help define the baseline grid, element margins, fonts, text sizes, colors, and more. Sensible defaults are defined so you can get up and running quickly. Overriding the default values can alter the framework’s appearance to fit your brand.</p>
+			<p>To override the default variable values, declare the custom values at the top of your <span class="smallcaps">SCSS</span> file. Begin with any <a href="core.html">core</a> values and then any <a href="settings.html">settings</a> values. The following sample comes from the <span class="smallcaps">SCSS</span> file for this documentation:</p>
+			<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">// custom core variable values
+$tyfont-serif:"IBM Plex Serif", serif;
+$tyfont-sans:"IBM Plex Sans", sans-serif;
+$tyfont-mono:"IBM Plex Mono", monospace;
+
+// custom settings variable values
+$tyfont-base:$tyfy-serif;
+$tyfont-heading:$tyfy-sans;
+
+// include tyfy
+@import "[path to tyfy]/source/scss/tyfy.scss"</code></pre>
+			<p>For a full list of variables and their default values, see the documentation for the <a href="core.html">core</a> and <a href="settings.html">settings</a> modules.</p>
+    </section>
+    <!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017–2019 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i,700,700i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="../resources/script/docs-nav.js"></script>
+    <script src="../resources/vendor/prism/prism.js"></script>
+		<!--/ COMMON FOOTER -->
+  </body>
+</html>

@@ -3,20 +3,20 @@
   margin-top:0;
   margin-bottom:0;
 }
-@if $tyfy-margins-on {
+@if $tymargins-on {
   body {
-    @include sibling-margins(on);
+    @include tymargins(on);
   }
 }
 hr {
-  margin-bottom:$tyfy-spacing-large;
-  margin-top:$tyfy-spacing-large;
+  margin-bottom:$tyspacing-lg;
+  margin-top:$tyspacing-lg;
 }
 
-// spacing style utility classes
-.sibling-margins-on {
-  @include sibling-margins(on);
+// adjacent sibling margin utility classes
+.tymargins-on {
+  @include tymargins(on);
 }
-.sibling-margins-off {
-  @include sibling-margins(off);
+.tymargins-off {
+  @include tymargins(off);
 }

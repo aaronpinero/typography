@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<link rel="stylesheet" href="../resources/vendor/prism/prism.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Modules - Spacing</title>
+	</head>
+	<body class="">
+		<!-- COMMON HEADER -->
+		<header class="brand tymargins-off reverse">
+			<h1><a href="index.html">Tyfy</a></h1>
+			<nav>
+				<h2>Contents</h2>
+				<ul class="list-nobullet list-grid-4">
+					<li><a href="startup.html">Get Started</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="variables.html">Variables</a></li>
+					<li><a href="functions.html">Functions</a></li>
+					<li><a href="mixins.html">Mixins</a></li>
+					<li><a href="icons.html">Icons</a></li>
+					<li><a href="paragraphs.html">Paragraphs</a></li>
+					<li><a href="headings.html">Headings</a></li>
+					<li><a href="links.html">Links</a></li>
+					<li><a href="lists.html">Lists</a></li>
+					<li><a href="utility.html">Utility</a></li>
+					<li><a href="quotes.html">Quotes</a></li>
+					<li><a href="tables.html">Tables</a></li>
+					<li><a href="reverse.html">Reverse</a></li>
+					<li><a href="collapsables.html">Collapsables</a></li>
+					<li><a href="tabs.html">Tabs</a></li>
+					<li><a href="forms.html">Forms</a></li>
+  				<li><a href="effects.html">Effects</a></li>
+  				<li><a href="extras.html">Extras</a></li>
+					<li><a href="about.html">About Tyfy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--/ COMMON HEADER -->
+		<section class="main links-underlined">
+			<h1>Spacing</h1>
+      <p>The spacing module removes the default top and bottom margins for all <span class="smallcaps">HTML</span> elements, replacing those styles with <strong class="tyfy">Tyfy</strong>s adjacent sibling margin rules. The adjacent sibling margin rules are applied if the value of the <code>$tymargins-on</code> setting is <code>true</code>.</p>
+      <h2>Horizontal Rule</h2>
+      <p><strong class="tyfy">Tyfy</strong> treats the horizontal rule tag (<code>&lt;hr&gt;</code>) as a special case. In the spacing module, this tag’s top and bottom margin are set to the value of the <code>$tyspacing-lg</code> variable.
+      <h2>Classes</h2>
+      <p>The following classes are defined by the spacing module. They can be used to enable or disable the adjacent sibling margins in specific contexts. <em>Please note</em>: these classes may not behave as expected if nested. So, it is not recommended to use the <code>.tymargins-on</code> class on a descendant of an element that is using the <code>.tymargins-off</code>, or vice versa. This is because of how CSS interprets the wildcard selector.</p>
+			<dl>
+  			<dt>.tymargins-on</dt>
+  			<dd>Apply the default adjacent sibling margin rules to descendants of the element with this class</dd>
+  			<dt>.tymargins-off</dt>
+  			<dd>Remove the default adjacent sibling margin rules from descendants of the element with this class</dd>
+			</dl>
+		</section>
+		<!-- COMMON FOOTER -->
+		<footer>
+			<p>&copy; Copyright 2017–2019 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i,700,700i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="../resources/script/docs-nav.js"></script>
+    <script src="../resources/vendor/prism/prism.js"></script>
+		<!--/ COMMON FOOTER -->
+	</body>
+</html>

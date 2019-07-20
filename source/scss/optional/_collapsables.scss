@@ -7,13 +7,13 @@ h6.tyfy-collapsable-processed {
   background-color:transparent;
   clear:both;
   cursor:pointer;
-  padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tyfy-width-border}) 0;
+  padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tywidth-border}) 0;
   position:relative;
   &::before {
     border-radius:50%;
     color:var(--tycolor-text-light);
-    content:tychar($tyfyicons-angle-up);
-    font-family:$tyfy-symbol;
+    content:tychar($tyicons-angle-up);
+    font-family:$tyfont-symbol;
     font-size:60%;
     font-style:normal;
     font-weight:normal;
@@ -21,22 +21,22 @@ h6.tyfy-collapsable-processed {
     right:tygrid(0);
     text-align:center;
     top:tygrid(0);
-    transition-duration:$tyfy-transition-duration-move;
+    transition-duration:$tyduration-move;
     transition-property:background-color,color,top,transform;
     transition-timing-function:ease-in-out;
-    width:tylead($tyfy-font-size-h2,heading);
+    width:tylead($tyfont-size-h2,heading);
   }
   &.closed {
     &::before {
       transform:rotate(180deg);
     }
   }
-  @media (min-width:$tyfy-break-collapsables-pad) {
-    border:$tyfy-width-border var(--tycolor-border) solid;
+  @media (min-width:$tybreak-collapsables) {
+    border:$tywidth-border var(--tycolor-border) solid;
     border-bottom:none;
-    padding:calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(6)} - #{$tyfy-width-border}) calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
+    padding:calc(#{tygrid(2)} - #{$tywidth-border}) calc(#{tygrid(6)} - #{$tywidth-border}) calc(#{tygrid(1)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
     position:relative;
-    transition-duration:$tyfy-transition-duration-move;
+    transition-duration:$tyduration-move;
     transition-property:padding-top;
     transition-timing-function:ease-in-out;
     &::before {
@@ -44,35 +44,35 @@ h6.tyfy-collapsable-processed {
       top:tygrid(2);
     }
     &.closed {
-      padding-top:calc(#{tygrid(1)} - #{$tyfy-width-border});
+      padding-top:calc(#{tygrid(1)} - #{$tywidth-border});
       &::before {
         top:tygrid(1);
       }
     }
   }
   * + &,
-  .sibling-margins-on * + & {
-    margin-top:$tyfy-spacing-standard;
+  .tymargins-on * + & {
+    margin-top:$tyspacing-md;
   }
 }
 h3.tyfy-collapsable-processed {
   &::before {
-    width:tylead($tyfy-font-size-h3,heading);
+    width:tylead($tyfont-size-h3,heading);
   }
 }
 h4.tyfy-collapsable-processed {
   &::before {
-    width:tylead($tyfy-font-size-h4,heading);
+    width:tylead($tyfont-size-h4,heading);
   }
 }
 h5.tyfy-collapsable-processed {
   &::before {
-    width:tylead($tyfy-font-size-h5,heading);
+    width:tylead($tyfont-size-h5,heading);
   }
 }
 h6.tyfy-collapsable-processed {
   &::before {
-    width:tylead($tyfy-font-size-h6,heading);
+    width:tylead($tyfont-size-h6,heading);
   }
 }
 h2.tyfy-collapsable-processed,
@@ -90,17 +90,17 @@ h6.tyfy-collapsable-processed {
 
 .tyfy-collapsables {
   box-sizing:content-box;
-  border-bottom:$tyfy-width-border var(--tycolor-border) solid;
+  border-bottom:$tywidth-border var(--tycolor-border) solid;
   margin:0rem;
   overflow:hidden;
-  padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tyfy-width-border}) 0;
-  transition-duration:$tyfy-transition-duration-move;
+  padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tywidth-border}) 0;
+  transition-duration:$tyduration-move;
   transition-property:padding-top,padding-bottom,height;
   transition-timing-function:ease-in-out;
-  @media (min-width:$tyfy-break-collapsables-pad) {
-    border:$tyfy-width-border var(--tycolor-border) solid;
+  @media (min-width:$tybreak-collapsables) {
+    border:$tywidth-border var(--tycolor-border) solid;
     border-top:none !important;
-    padding:calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
+    padding:calc(#{tygrid(1)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
   }
   &.closed {
     height:0 !important;

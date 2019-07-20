@@ -1,22 +1,22 @@
 * + .tabs-container {
-  margin-top:$tyfy-spacing-standard;
+  margin-top:$tyspacing-md;
 }
 .tabs-container + h2,
 .tabs-container + h3,
 .tabs-container + h4,
 .tabs-container + h5,
 .tabs_container + h6 {
-  margin-top:$tyfy-spacing-large;
+  margin-top:$tyspacing-lg;
 }
 .tabs-container {
   ul.tabs {
-    @include sibling-margins(off);
+    @include tymargins(off);
     align-items:stretch;
-    border-bottom:$tyfy-width-border var(--tycolor-border) solid;
+    border-bottom:$tywidth-border var(--tycolor-border) solid;
     display:none;
     margin:0;
     padding:0;
-    @media (min-width:$tyfy-break-tabs) {
+    @media (min-width:$tybreak-tabs) {
       display:flex;
     }
     li + li {
@@ -24,17 +24,17 @@
     }
     li {
       background-color:var(--tycolor-shade);
-      border:$tyfy-width-border var(--tycolor-border) solid;
-      border-radius:$tyfy-radius-border $tyfy-radius-border 0 0;
+      border:$tywidth-border var(--tycolor-border) solid;
+      border-radius:$tyradius-border $tyradius-border 0 0;
       color:var(--tycolor-text-light);
       cursor:pointer;
       display:block;
       flex:1;
-      font-family:$tyfy-font-heading;
-      margin:0 0 ($tyfy-width-border * -1) 0;
-      padding:calc(#{tygrid(1)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
+      font-family:$tyfont-heading;
+      margin:0 0 ($tywidth-border * -1) 0;
+      padding:calc(#{tygrid(1)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
       text-align:center;
-      transition-duration:$tyfy-transition-duration-hover;
+      transition-duration:$tyduration-hover;
       transition-property:background-color;
       &:hover {
         background-color:var(--tycolor-bg-tab-active);
@@ -42,7 +42,7 @@
       }
       &.open {
         background-color:var(--tycolor-bg);
-        border-bottom:$tyfy-width-border var(--tycolor-bg) solid;
+        border-bottom:$tywidth-border var(--tycolor-bg) solid;
         color:var(--tycolor-fg);
         font-weight:600;
       }
@@ -50,24 +50,24 @@
   }
   &.tabs-processed {
     * + .tab-label {
-      margin-top:$tyfy-spacing-standard;
+      margin-top:$tyspacing-md;
     }
     .tab-label {
       background-color:transparent;
-      border-bottom:$tyfy-width-border transparent solid;
+      border-bottom:$tywidth-border transparent solid;
       clear:both;
       cursor:pointer;
-      font-size:$tyfy-font-size-h3;
-      line-height:tylead($tyfy-font-size-h3,heading);
-      padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tyfy-width-border}) 0;
+      font-size:$tyfont-size-h3;
+      line-height:tylead($tyfont-size-h3,heading);
+      padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tywidth-border}) 0;
       position:relative;
-      transition-duration:$tyfy-transition-duration-move;
+      transition-duration:$tyduration-move;
       transition-property:padding-top;
       &::before {
         border-radius:50%;
         color:var(--tycolor-text-light);
-        content:tychar($tyfyicons-angle-up);
-        font-family:$tyfy-symbol;
+        content:tychar($tyicons-angle-up);
+        font-family:$tyfont-symbol;
         font-size:60%;
         font-style:normal;
         font-weight:normal;
@@ -75,18 +75,18 @@
         right:0;
         text-align:center;
         top:0;
-        transition-duration:$tyfy-transition-duration-move;
+        transition-duration:$tyduration-move;
         transition-property:background-color,color,top;
         transition-timing-function:ease-in-out;
-        width:tylead($tyfy-font-size-h3,heading);
+        width:tylead($tyfont-size-h3,heading);
       }
-      @media (min-width:$tyfy-break-tabs) {
+      @media (min-width:$tybreak-tabs) {
         display:none;
       }
       &.collapsed {
-        border-bottom:$tyfy-width-border var(--tycolor-border) solid;
+        border-bottom:$tywidth-border var(--tycolor-border) solid;
         &::before {
-          content:tychar($tyfyicons-angle-down);
+          content:tychar($tyicons-angle-down);
         }
       }
       &.transition {
@@ -100,22 +100,22 @@
       }
     }
     .tab-panel {
-      border-bottom:$tyfy-width-border var(--tycolor-border) solid;
+      border-bottom:$tywidth-border var(--tycolor-border) solid;
       overflow:hidden;
       margin-top:0;
-      padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tyfy-width-border}) 0;
-      @media (min-width:$tyfy-break-tabs) {
-        border:$tyfy-width-border var(--tycolor-border) solid;
-        border-radius:0 0 $tyfy-radius-border $tyfy-radius-border;
+      padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tywidth-border}) 0;
+      @media (min-width:$tybreak-tabs) {
+        border:$tywidth-border var(--tycolor-border) solid;
+        border-radius:0 0 $tyradius-border $tyradius-border;
         border-top:none;
         display:none;
-        padding:tygrid(2) calc(#{tygrid(2)} - #{$tyfy-width-border}) calc(#{tygrid(2)} - #{$tyfy-width-border});
+        padding:tygrid(2) calc(#{tygrid(2)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
       }
       &.open {
         display:block;
       }
       &.collapsed {
-        @media (max-width:$tyfy-break-tabs*0.9999) {
+        @media (max-width:$tybreak-tabs*0.9999) {
           border:none;
           height:0;
           padding-bottom:0;

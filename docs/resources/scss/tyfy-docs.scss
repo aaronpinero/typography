@@ -1,29 +1,32 @@
-$tyfyicons-path:"../../../dist/fonts/tyfyicons";
-$tyfy-serif:"IBM Plex Serif", georgia, serif;
-$tyfy-sans:"IBM Plex Sans", helvetica, arial, sans-serif;
-$tyfy-mono:"IBM Plex Mono", courier, monospace;
-$tyfy-condensed:"IBM Plex Sans Condensed",sans-serif;
-$tyfy-font-base:$tyfy-serif;
-$tyfy-font-heading:$tyfy-sans;
-$tyfy-font-table:$tyfy-sans;
-$tyfy-font-input:$tyfy-sans;
-$tycolor-bg-rev:#333;
-$width-constrained:55rem;
+$tyicons-path:"../../../dist/fonts/tyicons";
+$tyfont-serif:"IBM Plex Serif", georgia, serif;
+$tyfont-sans:"IBM Plex Sans", helvetica, arial, sans-serif;
+$tyfont-mono:"IBM Plex Mono", courier, monospace;
+$tyfont-condensed:"IBM Plex Sans Condensed",sans-serif;
+$tyfont-base:$tyfont-serif;
+$tyfont-heading:$tyfont-sans;
+$tyfont-table:$tyfont-sans;
+$tyfont-input:$tyfont-sans;
+$tycolor-rev-bg:#333;
+$tywidth-constrained:55rem;
+$color-example:darken(#80cc33,25%);
+$color-value:mix(#8033cc,#999999,75%);
 @import "../../../source/scss/tyfy.scss";
 @import "../../../source/scss/extras/_effects.scss";
 @import "../../../source/scss/extras/_responsive_text.scss";
+
 body {
-  @include fade-in(2000ms);
+  @include tyfadein(2000ms);
   margin:0 0 tygrid(2) 0;
   padding:0;
 }
 .constrained {
   margin-left:auto;
   margin-right:auto;
-  max-width:$width-constrained;
+  max-width:$tywidth-constrained;
 }
-h1 {
-  font-family:$tyfy-condensed;
+h1:not(.demo) {
+  font-family:$tyfont-condensed;
   text-transform:uppercase;
   small {
     font-size:tyscale(1);
@@ -35,46 +38,52 @@ hr.demo {
   margin-top:tygrid(1);
 }
 strong.tyfy {
-  font-family:$tyfy-condensed;
+  font-family:$tyfont-condensed;
   font-weight:bold;
   text-transform:uppercase;
+}
+.tyhidden {
+  @include tyhidden;
+}
+.tyicons {
+  vertical-align:middle;
 }
 header.brand {
   h1 {
     @extend .constrained;
-    font-size:$tyfy-font-size-h3;
-    line-height:tylead($tyfy-font-size-h3,heading);
+    font-size:$tyfont-size-h3;
+    line-height:tylead($tyfont-size-h3,heading);
     padding:tygrid() tygrid(2);
   }
   nav {
     @extend .constrained;
     padding:0 tygrid(2);
     h2 {
-      font-size:$tyfy-font-size-h5;
-      line-height:tylead($tyfy-font-size-h5,heading);
+      font-size:$tyfont-size-h5;
+      line-height:tylead($tyfont-size-h5,heading);
     }
     ul.list-grid-4 {
       display:flex;
       flex-wrap:wrap;
-      font-family:$tyfy-sans;
+      font-family:$tyfont-sans;
       margin-top:tygrid();
       padding-bottom:tygrid();
       padding-left:0;
       li {
-        @media (max-width:$tyfy-break-list-cols-2 * 0.9999) {
+        @media (max-width:$tybreak-list-cols2 * 0.9999) {
           box-sizing:border-box;
-          width:calc(50% - #{(0.5 * $tyfy-spacing-large)});
+          width:calc(50% - #{(0.5 * $tyspacing-lg)});
           &:nth-child(2) {
             margin-top:0; // override of the default margin
           }
           &:nth-child(2n+1) {
-            margin-right:$tyfy-spacing-large;
+            margin-right:$tyspacing-lg;
           }
         }
         a {
           border-top:tygrid(0.25) rgba(white,0.05) solid;
           display:block;
-          font-size:$tyfy-font-size-sm;
+          font-size:$tyfont-size-sm;
           padding-top:tygrid(0.5);
           padding-bottom:tygrid(0.5);
         }
@@ -83,27 +92,27 @@ header.brand {
     &.nav-processed {
       position:relative;
       h2 {
-        color:$tycolor-link-default-rev;
+        color:$tycolor-rev-link-default;
         cursor:pointer;
-        height:tylead($tyfy-font-size-h3,heading);
-        line-height:tylead($tyfy-font-size-h3,heading);
+        height:tylead($tyfont-size-h3,heading);
+        line-height:tylead($tyfont-size-h3,heading);
         overflow:hidden;
         position:absolute;
         right:tygrid(2);
         top:tygrid(-3);
-        transition-duration:$tyfy-transition-duration-hover;
+        transition-duration:$tyduration-hover;
         transition-property:color;
-        width:tylead($tyfy-font-size-h3,heading);
+        width:tylead($tyfont-size-h3,heading);
         &::before {
-          content:tychar($tyfyicons-bars);
+          content:tychar($tyicons-bars);
           display:block;
-          font-family:$tyfy-symbol;
-          height:tylead($tyfy-font-size-h3,heading);
+          font-family:$tyfont-symbol;
+          height:tylead($tyfont-size-h3,heading);
           text-align:center;
-          width:tylead($tyfy-font-size-h3,heading);
+          width:tylead($tyfont-size-h3,heading);
         }
         &:hover {
-          color:$tycolor-link-active-rev;
+          color:$tycolor-rev-link-active;
         }
       }
       ul {
@@ -124,71 +133,178 @@ header.brand {
 section.main {
   @extend .constrained;
   margin-top:0;
-  padding:$tyfy-spacing-standard;
+  padding:$tyspacing-md;
 }
 section.demo {
-  border:2px dashed darken($tycolor-bg,10%);
+  border:$tywidth-border dashed darken($tycolor-bg,10%);
   border-radius:tygrid();
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
-  margin-top:$tyfy-spacing-standard;
+  margin-top:$tyspacing-md;
 }
 section.demo.reverse {
   border:none;
 }
-
-#lists-demo {
-  @include sibling-margins(off);
-  border:2px dashed darken($tycolor-bg,10%);
-  border-radius:tygrid(0.5);
+pre.codebox {
+  background-color:$tycolor-shade;
+  border:$tywidth-border $tycolor-border solid;
+  padding:calc(#{$tyspacing-md} - #{$tywidth-border});
+  overflow:auto;
+  & + figure.example {
+    border:$tywidth-border $tycolor-border solid;
+    border-top:none;
+    color:$color-example;
+    margin:0;
+    padding:calc(#{$tyspacing-md} - #{$tywidth-border});
+    padding-top:$tyspacing-md;
+    position:relative;
+    a:not([href]) {
+      color:$color-example;
+    }
+    .reverse-toggle {
+      border:$tywidth-border white solid;
+      box-shadow:0 1px 3px rgba(black,0.33);
+      font-family:$tyfont-sans;
+      font-weight:bold;
+      letter-spacing:1px;
+      position:absolute;
+      right:0;
+      text-transform:uppercase;
+      top:tygrid(-1.5);
+      transform:scale(0.66);
+    }
+    &.reverse {
+      border-color:$tycolor-rev-border;
+    }
+  }
+}
+// customizing prism css
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family:$tyfont-mono !important;
+  margin:0 !important;
+  * + & {
+    margin-top:$tyspacing-md !important;
+  }
+  li * + & {
+    margin-top:$tyspacing-md / 2 !important;
+  }
+}
+:not(pre) > code[class*="language-"],
+pre.codebox[class*="language-"] {
+  background-color:$tycolor-shade !important;
+  padding:calc(#{$tyspacing-md} - #{$tywidth-border}) !important;
+}
+code.val-default {
+  background-color:transparent;
+  color:$color-value;
+  font-style:italic;
+  font-weight:normal;
+  padding-left:0;
+  padding-right:0;
+}
+table.utility {
+  th[scope="col"] {
+    border-bottom:(2 * $tywidth-border) var(--tycolor-border) solid;
+  }
+}
+.form-demo {
+  @include tymargins(off);
+  border:$tywidth-border solid $tycolor-border;
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
   display:flex;
   flex-wrap:wrap;
   padding:tygrid() tygrid(2);
-  .form-control {
+  label {
     display:block;
+    font-weight:bold;
+    width:100%;
+    &.option {
+      font-weight:normal;
+    }
+    &.disabled {
+      color:$tycolor-text-light;
+    }
+  }
+  .form-control {
+    box-sizing:border-box;
+    display:block;
+    font-family:$tyfont-sans;
+    font-size:$tyfont-size-base;
     padding-top:tygrid();
     padding-bottom:tygrid();
-    label {
-      width:11rem;
-      &.disabled {
-        color:$tycolor-text-light;
-      }
+    width:100%;
+    &.form-control-classes,
+    &.form-control-headers {
+      display:flex;
+      flex-wrap:wrap;
     }
+  }
+  &#lists-demo .form-control {
     &.form-control-type {
       @media (min-width:55em) {
-        border-right:2px dashed darken($tycolor-bg,10%);
+        border-right:$tywidth-border solid $tycolor-border;
+        width:25%;
       }
     }
     &.form-control-classes {
-      display:flex;
-      flex-wrap:wrap;
       @media (min-width:55em) {
-        box-sizing:border-box;
-        padding-left:$tyfy-spacing-standard;
+        padding-left:$tyspacing-md;
         width:75%;
       }
       label {
-        &:first-child {
-          width:100%;
+        @media (min-width:40em) {
+          width:33%;
+          &:first-child {
+            width:100%;
+          }
         }
       }
     }
   }
-  label {
-    display:block;
-    font-weight:bold;
-    &.option {
-      font-weight:normal;
+  &#tables-demo .form-control {
+    label:not(:first-child) {
+      @media (min-width:30em) {
+        width:50%;
+      }
+      @media (min-width:50em) {
+        width:25%;
+      }
+    }
+  }
+  & + figure.example {
+    --tycolor-fg:#{$color-example};
+    border:$tywidth-border $tycolor-border solid;
+    border-top:none;
+    color:$color-example;
+    margin:0;
+    padding:calc(#{$tyspacing-md} - #{$tywidth-border});
+    padding-top:$tyspacing-md;
+  }
+}
+.tables-demo-table {
+  th.row-hidden {
+    display:none !important;
+  }
+  &.responsive th.row-hidden {
+    @media (min-width:$tybreak-table) {
+      & + td,
+      & + th {
+        padding-left:0;
+      }
+    }
+  }
+  &:not(.striped):not(.vertical-rules):not(.responsive) {
+    th.row-hidden + * {
+      padding-left:0;
     }
   }
 }
-
 footer {
   p {
     @extend .constrained;
     color:$tycolor-text-light;
-    font-size:$tyfy-font-size-sm;
-    line-height:tylead($tyfy-font-size-sm,heading);
+    font-size:$tyfont-size-sm;
+    line-height:tylead($tyfont-size-sm,heading);
     padding:tygrid() tygrid(2);
   }
 }

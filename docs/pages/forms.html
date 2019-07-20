@@ -16,12 +16,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
 		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<link rel="stylesheet" href="../resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-    <title>Tyfy - Forms</title>
+    <title>Tyfy - Modules - Forms</title>
   </head>
   <body class="">
     <!-- COMMON HEADER -->
-		<header class="brand sibling-margins-off reverse">
+		<header class="brand tymargins-off reverse">
 			<h1><a href="index.html">Tyfy</a></h1>
 			<nav>
 				<h2>Contents</h2>
@@ -52,21 +53,53 @@
 		<!--/ COMMON HEADER -->
     <section class="main links-underlined">
       <h1>Forms</h1>
-      <p><strong class="tyfy">Tyfy</strong> provides basic styles for form elements. The styles are intended for simple forms where each form element consists of a label-input pair. Standard element spacing has been adjusted so labels are positioned more closely to their associated input than to surrounding elements. There are helper classes for <code>select</code> and <code>label</code> elements that provide some presentation options.</p>
+      <p><strong class="tyfy">Tyfy</strong> provides basic styles for form elements. The styles are intended for simple forms where each form element consists of a label-input pair.</p>
+      <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
+  &lt;div&gt;
+    &lt;label&gt;Text Input&lt;/label&gt;
+    &lt;input type="text" name="name"&gt;
+  &lt;/div&gt;  
+  &lt;div&gt;
+    &lt;label&gt;Number Input&lt;/label&gt;
+    &lt;input type="number" name="age"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+      <p>Element spacing has been adjusted so labels are more closely positioned to their associated input than to surrounding elements. There are <span class="smallcaps">CSS</span> classes for <code>select</code> and <code>label</code> elements that provide some presentation options.</p>
+      <h2>Variables</h2>
+      <dl>
+        <dt>$tyfont-input</dt>
+        <dd><code class="val val-default">$tyfont-sans !default;</code></dd>
+        <dd>Typeface for form elements.</dd>
+        <dt>$tywidth-border</dt>
+        <dd><code class="val val-default">2px !default;</code></dd>
+        <dd>Thickness of the borders around form elements.</dd>
+        <dt>$tycolor-border</dt>
+        <dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,12%) !default;</code></dd>
+        <dd>Default border color.</dd>
+      </dl>
       <h2>Classes</h2>
       <dl>
-        <dt>.tyfy-select</dt>
-        <dd>Apply to a <code>div</code> that contains a <code>select</code> element.</dd>
+        <dt>.tyselect</dt>
+        <dd>Adjusts the appearance of a <code>select</code> element so it is more consistent with other elements; this class can be applied directly to the <code>select</code> element or to a parent element.</dd>
         <dt>.label-option</dt>
         <dd>Apply to a <code>label</code> when used adjacent to or to encapsulate a radio button or checkbox input.</dd>
         <dt>.label-inline</dt>
         <dd>Apply to a <code>label</code> to display as an inline-block instead of block element.</dd>
       </dl>
-    </section>
-    <section class="main links-underlined demo">
-      <h1>Demo</h1>
-      <div class="tabs-container">
-        <h2 class="tab-label">Example</h2>
+			<h2>Examples</h2>
+			<h3>Inputs</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
+  &lt;div&gt;
+    &lt;label&gt;Text Input&lt;/label&gt;
+    &lt;input type="text" name="name"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label&gt;Number Input&lt;/label&gt;
+    &lt;input type="number" name="age"&gt;
+  &lt;/div&gt;
+  &lt;p&gt;&lt;input type="submit" name="submit" value="Submit Button"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>    
+			<figure class="example">
         <form>
           <div>
             <label>Text Input</label>
@@ -76,80 +109,14 @@
             <label>Number Input</label>
             <input type="number" name="age">
           </div>
-          <div>
-            <label>Select</label>
-            <div class="tyfy-select">
-              <select name="color">
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-                <option value="yellow">Yellow</option>
-                <option value="green">Green</option>
-                <option value="blue">Blue</option>
-                <option value="purple">Purple</option>
-                <option value="white">White</option>
-                <option value="gold">Gold</option>
-                <option value="silver">Silver</option>
-                <option value="black">Black</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label>Multiple Select</label>
-            <div class="tyfy-select">
-              <select name="color" multiple="multiple">
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-                <option value="yellow">Yellow</option>
-                <option value="green">Green</option>
-                <option value="blue">Blue</option>
-                <option value="purple">Purple</option>
-                <option value="white">White</option>
-                <option value="gold">Gold</option>
-                <option value="silver">Silver</option>
-                <option value="black">Black</option>
-              </select>
-            </div>
-          </div>
-          <fieldset>
-            <legend>Fieldset</legend>
-            <div>
-              <label>Option Labels, Inline</label>
-              <div>
-                <label class="label-option label-inline"><input type="checkbox" name="sky" value="a"> Option A</label>
-                <label class="label-option label-inline"><input type="checkbox" name="sky" value="b"> Option B</label>
-                <label class="label-option label-inline"><input type="checkbox" name="sky" value="c"> Option C</label>
-              </div>
-            </div>
-            <div>
-              <label>Option Labels, Inline</label>
-              <div>
-                <label class="label-option label-inline"><input type="radio" name="sky" value="true"> True</label>
-                <label class="label-option label-inline"><input type="radio" name="sky" value="false"> False</label>
-              </div>
-            </div>
-            <div>
-              <label>Option Labels</label>
-              <ul class="list-nobullet sibling-margins-off">
-                <li><label class="label-option"><input type="radio" name="roses" value="true"> True</label></li>
-                <li><label class="label-option"><input type="radio" name="roses" value="false"> False</label></li>
-              </ul>
-            </div>
-          </fieldset>
-          <p><input type="submit" name="submit" value="Submit Form"></p>
+          <p><input type="submit" name="submit" value="Submit Button"></p>
         </form>
-        <h2 class="tab-label">Code</h2>
-        <pre style="width:100%; overflow:auto;"><code class="code-nobg">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label&gt;Text Input&lt;/label&gt;
-    &lt;input type="text" name="name"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label&gt;Number Input&lt;/label&gt;
-    &lt;input type="number" name="age"&gt;
-  &lt;/div&gt;
+			</figure>
+			<h3>Selects</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
   &lt;div&gt;
     &lt;label&gt;Select&lt;/label&gt;
-    &lt;div class="tyfy-select"&gt;
+    &lt;div class="tyselect"&gt;
       &lt;select name="color"&gt;
         &lt;option value="red"&gt;Red&lt;/option&gt;
         &lt;option value="orange"&gt;Orange&lt;/option&gt;
@@ -157,16 +124,12 @@
         &lt;option value="green"&gt;Green&lt;/option&gt;
         &lt;option value="blue"&gt;Blue&lt;/option&gt;
         &lt;option value="purple"&gt;Purple&lt;/option&gt;
-        &lt;option value="white"&gt;White&lt;/option&gt;
-        &lt;option value="gold"&gt;Gold&lt;/option&gt;
-        &lt;option value="silver"&gt;Silver&lt;/option&gt;
-        &lt;option value="black"&gt;Black&lt;/option&gt;
       &lt;/select&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div&gt;
     &lt;label&gt;Multiple Select&lt;/label&gt;
-    &lt;div class="tyfy-select"&gt;
+    &lt;div class="tyselect"&gt;
       &lt;select name="color" multiple="multiple"&gt;
         &lt;option value="red"&gt;Red&lt;/option&gt;
         &lt;option value="orange"&gt;Orange&lt;/option&gt;
@@ -174,13 +137,44 @@
         &lt;option value="green"&gt;Green&lt;/option&gt;
         &lt;option value="blue"&gt;Blue&lt;/option&gt;
         &lt;option value="purple"&gt;Purple&lt;/option&gt;
-        &lt;option value="white"&gt;White&lt;/option&gt;
-        &lt;option value="gold"&gt;Gold&lt;/option&gt;
-        &lt;option value="silver"&gt;Silver&lt;/option&gt;
-        &lt;option value="black"&gt;Black&lt;/option&gt;
       &lt;/select&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+  &lt;p&gt;&lt;input type="submit" name="submit" value="Submit Button"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>    
+			<figure class="example">
+        <form>
+          <div>
+            <label>Select</label>
+            <div class="tyselect">
+              <select name="color">
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label>Multiple Select</label>
+            <div class="tyselect">
+              <select name="color" multiple="multiple">
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+              </select>
+            </div>
+          </div>
+          <p><input type="submit" name="submit" value="Submit Button"></p>
+        </form>
+			</figure>
+			<h3>Checkboxes and Radios</h3>
+			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Fieldset&lt;/legend&gt;
     &lt;div&gt;
@@ -206,13 +200,42 @@
       &lt;/ul&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
-  &lt;p&gt;&lt;input type="submit" name="submit" value="Submit Form"&gt;&lt;/p&gt;
-&lt;/form&gt;</code></pre>
-      </div>
+  &lt;p&gt;&lt;input type="submit" name="submit" value="Submit Button"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>    
+			<figure class="example">
+        <form>
+          <fieldset>
+            <legend>Fieldset</legend>
+            <div>
+              <label>Option Labels, Inline</label>
+              <div>
+                <label class="label-option label-inline"><input type="checkbox" name="sky" value="a"> Option A</label>
+                <label class="label-option label-inline"><input type="checkbox" name="sky" value="b"> Option B</label>
+                <label class="label-option label-inline"><input type="checkbox" name="sky" value="c"> Option C</label>
+              </div>
+            </div>
+            <div>
+              <label>Option Labels, Inline</label>
+              <div>
+                <label class="label-option label-inline"><input type="radio" name="sky" value="true"> True</label>
+                <label class="label-option label-inline"><input type="radio" name="sky" value="false"> False</label>
+              </div>
+            </div>
+            <div>
+              <label>Option Labels</label>
+              <ul class="list-nobullet sibling-margins-off">
+                <li><label class="label-option"><input type="radio" name="roses" value="true"> True</label></li>
+                <li><label class="label-option"><input type="radio" name="roses" value="false"> False</label></li>
+              </ul>
+            </div>
+          </fieldset>
+          <p><input type="submit" name="submit" value="Submit Button"></p>
+        </form>
+			</figure>
     </section>
     <!-- COMMON FOOTER -->
 		<footer>
-			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+			<p>&copy; Copyright 2017–2019 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
 		</footer>
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -224,7 +247,7 @@
       });
     </script>
     <script src="../resources/script/docs-nav.js"></script>
+    <script src="../resources/vendor/prism/prism.js"></script>
 		<!--/ COMMON FOOTER -->
-    <script src="../../dist/script/tabs.js"></script>
   </body>
 </html>

@@ -16,12 +16,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
 		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<link rel="stylesheet" href="../resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy - Core</title>
+		<title>Tyfy - Modules - Core</title>
 	</head>
 	<body class="">
 		<!-- COMMON HEADER -->
-		<header class="brand sibling-margins-off reverse">
+		<header class="brand tymargins-off reverse">
 			<h1><a href="index.html">Tyfy</a></h1>
 			<nav>
 				<h2>Contents</h2>
@@ -52,21 +53,25 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Core</h1>
-			<p>Three <span class="smallcaps">SASS</span> variables make up <strong class="tyfy">Tyfy</strong>’s core module. These variables define the size of the framework’s grid and all of the framework's font sizes. The value of these variables can have a significant impact on the character of your typographic design.</p>
-			<p>The core module is the first module listed in the main tyfy.scss file. Core variable values are <em>required</em> by the <a href="functions.html">functions module</a> and are used to calculate many of the default values for variables in the <a href="settings.html">settings module</a>.
-			<p>All <strong class="tyfy">Tyfy</strong> variable names begin with the prefix <code>$tyfy-</code> to avoid name collision with other projects.</p>
+			<p><strong class="tyfy">Tyfy</strong>’s core module defines three <span class="smallcaps">SASS</span> variables. These variables determine the size of the framework’s grid and text. The variable values can have a significant impact on your typographic design.</p>
+			<p>The core module is the first module listed in the tyfy.scss file. Core variables are required by the <a href="functions.html">functions</a> module and are used to calculate default values for variables in the <a href="settings.html">settings</a> module.</p>
+			<p><strong class="tyfy">Tyfy</strong> variable names begin with the prefix <code>$ty</code> to avoid name collision with other projects.</p>
+			<h2>Variables</h2>
 			<dl>
-				<dt><code class="code-nobg">$tyfy-grid-unit: 0.875rem !default;</code></dt>
-				<dd>Grid unit size in rem units; I recommend this value be half the desired line height. Smaller values will result in a more compact design; larger values will create a design with more breathing room.</dd>
-				<dt><code class="code-nobg">$tyfy-font-size-scalar: 1.2 !default;</code></dt>
+				<dt>$tygrid-unit</dt>
+				<dd><code class="val val-default">0.875rem !default;</code></dd>
+				<dd>Grid unit size in rem units. I recommend this value be half the desired line height. Smaller values will result in a more compact design. Larger values will create a design with more breathing room.</dd>
+				<dt>$tyfont-size-scalar</dt>
+				<dd><code class="val val-default">1.2 !default;</code></dd>
 				<dd>Scalar value that defines the proportion between font sizes on the modular scale. Larger values will create a scale with more typographic contrast.</dd>
-				<dt><code class="code-nobg">$tyfy-font-size-base: 1rem !default;</code></dt>
-				<dd>Font size in rem units applied to the <code>&lt;body&gt;</code> tag. All font sizes on the modular scale are calculated from on this size using the formula <em>font size = base font size &times; scalar<sup>(step)</sup></em> where <em>step</em> is an integer indicating the number of steps up (positive) or down (negative) the scale from the base size.</dd>
+				<dt>$tyfont-size-base</dt>
+				<dd><code class="val val-default">1rem !default;</code></dd>
+				<dd>Font size in rem units applied to the <code>&lt;body&gt;</code> tag. Font sizes on the modular scale are calculated as a function of the base font size and the scalar: <em>step font size = base font size &times; scalar<sup>(step)</sup></em>. In this function <em>step</em> is an integer indicating the number of steps up (positive) or down (negative) the scale from the base size.</dd>
 			</dl>
 		</section>
 		<!-- COMMON FOOTER -->
 		<footer>
-			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+			<p>&copy; Copyright 2017–2019 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
 		</footer>
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -78,6 +83,7 @@
       });
     </script>
     <script src="../resources/script/docs-nav.js"></script>
+    <script src="../resources/vendor/prism/prism.js"></script>
 		<!--/ COMMON FOOTER -->
 	</body>
 </html>

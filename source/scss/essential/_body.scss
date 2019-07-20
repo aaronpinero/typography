@@ -16,7 +16,7 @@ html {
 body {
   background:var(--tycolor-bg);
   color:var(--tycolor-fg);
-  font-family:$tyfy-font-base;
-  font-size:$tyfy-font-size-base;
-  line-height:tylead($tyfy-font-size-base);
+  font-family:$tyfont-base;
+  font-size:$tyfont-size-base;
+  line-height:tylead($tyfont-size-base);
 }

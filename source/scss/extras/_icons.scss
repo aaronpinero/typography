@@ -1,80 +1,81 @@
 // copied from the scss file that is output by running `npm build icons`
-@if $tyfy-symbol == tyfyicons {
+@if $tyfont-symbol == tyicons {
   @font-face {
-    font-family:tyfyicons;
-    src:url("#{$tyfyicons-path}/tyfyicons.eot");
-    src:url("#{$tyfyicons-path}/tyfyicons.eot?#iefix") format("embedded-opentype"), url("#{$tyfyicons-path}/tyfyicons.woff2") format("woff2"), url("#{$tyfyicons-path}/tyfyicons.woff") format("woff"), url("#{$tyfyicons-path}/tyfyicons.ttf") format("truetype"), url("#{$tyfyicons-path}/tyfyicons.svg#tyfyicons") format("svg");
+    font-family:tyicons;
+    src:url("#{$tyicons-path}/tyicons.eot");
+    src:url("#{$tyicons-path}/tyicons.eot?#iefix") format("embedded-opentype"), url("#{$tyicons-path}/tyicons.woff2") format("woff2"), url("#{$tyicons-path}/tyicons.woff") format("woff"), url("#{$tyicons-path}/tyicons.ttf") format("truetype"), url("#{$tyicons-path}/tyicons.svg#tyicons") format("svg");
     font-style:normal;
     font-weight:400;
   }
 }
-%tyfyicons {
+%tyicons {
   display:inline-block;
-  font-family:tyfyicons;
+  font-family:tyicons;
   font-size:inherit;
   font-weight:400;
+  margin-top:0;
   text-rendering:auto;
   transform:translate(0,0);
   -moz-osx-font-smoothing:grayscale;
   -webkit-font-smoothing:antialiased;
 }
-.tyfyicons {
-  @extend %tyfyicons;
+.tyicons {
+  @extend %tyicons;
 }
-.tyfyicons-lg {
+.tyicons-lg {
   vertical-align:-15%;
   line-height:0.75em;
   font-size:1.33333333em;
 }
-.tyfyicons-2x {
+.tyicons-2x {
   font-size:2em;
 }
-.tyfyicons-3x {
+.tyicons-3x {
   font-size:3em;
 }
-.tyfyicons-4x {
+.tyicons-4x {
   font-size:4em;
 }
-.tyfyicons-5x {
+.tyicons-5x {
   font-size:5em;
 }
-.tyfyicons-fw {
+.tyicons-fw {
   width:1.28571429em;
   text-align:center;
 }
-.tyfyicons-angle-down::before {
-  content:"\ea01";
+.tyicons-angle-down::before {
+  content:tychar($tyicons-angle-down);
 }
-.tyfyicons-angle-left::before {
-  content:"\ea02";
+.tyicons-angle-left::before {
+  content:tychar($tyicons-angle-left);
 }
-.tyfyicons-angle-right::before {
-  content:"\ea03";
+.tyicons-angle-right::before {
+  content:tychar($tyicons-angle-right);
 }
-.tyfyicons-angle-up-down::before {
-  content:"\ea04";
+.tyicons-angle-up-down::before {
+  content:tychar($tyicons-angle-up-down);
 }
-.tyfyicons-angle-up::before {
-  content:"\ea08";
+.tyicons-angle-up::before {
+  content:tychar($tyicons-angle-up);
 }
-.tyfyicons-bars::before {
-  content:"\ea07";
+.tyicons-bars::before {
+  content:tychar($tyicons-bars);
 }
-.tyfyicons-check::before {
-  content:"\ea05";
+.tyicons-check::before {
+  content:tychar($tyicons-check);
 }
-.tyfyicons-dash::before {
-  content:"\ea06";
+.tyicons-dash::before {
+  content:tychar($tyicons-dash);
 }
-.tyfyicons-quote-left::before {
-  content:"\ea0a";
+.tyicons-quote-left::before {
+  content:tychar($tyicons-quote-left);
 }
-.tyfyicons-quote-right::before {
-  content:"\ea0b";
+.tyicons-quote-right::before {
+  content:tychar($tyicons-quote-right);
 }
-.tyfyicons-search::before {
-  content:"\ea09";
+.tyicons-search::before {
+  content:tychar($tyicons-search);
 }
-.tyfyicons-x::before {
-  content:"\ea0c";
+.tyicons-x::before {
+  content:tychar($tyicons-x);
 }

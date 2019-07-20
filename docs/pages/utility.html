@@ -16,12 +16,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
 		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
+		<link rel="stylesheet" href="../resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy - Utility Styles</title>
+		<title>Tyfy - Styles</title>
 	</head>
 	<body class="">
 		<!-- COMMON HEADER -->
-		<header class="brand sibling-margins-off reverse">
+		<header class="brand tymargins-off reverse">
 			<h1><a href="index.html">Tyfy</a></h1>
 			<nav>
 				<h2>Contents</h2>
@@ -51,79 +52,98 @@
 		</header>
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
-			<h1>Utility Styles</h1>
-			<p><strong class="tyfy">Tyfy</strong> includes customizations for other block and inline HTML elements. There are also additional classes for styles that do not have an HTML equivalent.</p>
-		</section>
-		<section class="main links-underlined demo paragraphs-justified">
-			<h1>Demo</h1>
-			<table class="clean">
+			<h1>Styles</h1>
+			<p><strong class="tyfy">Tyfy</strong> includes style customizations for other block and inline HTML elements. There are also classes for styles that do not have an HTML equivalent.</p>
+			<table class="clean utility responsive">
+  			<thead>
+    			<tr>
+      			<th scope="col">Sample</th>
+      			<th scope="col" style="width:9em;">Tag.Class</th>
+      			<th scope="col">Description</th>
+    			</tr>
+  			</thead>
 				<tbody>
 					<tr>
 						<td width="25%"><strong>Bold text</strong></td>
-						<td>Bold text, applied using the <code>&lt;b&gt;</code> or <code>&lt;strong&gt;</code> tags</td>
+						<td>b<br>strong</td>
+						<td>Bold text</td>
 					</tr>
 					<tr>
 						<td><em>Italic text</em></td>
-						<td>Italic text, applied using the <code>&lt;em&gt;</code> or <code>&lt;i&gt;</code> tags</td>
+						<td>em<br>i</td>
+						<td>Italic text</td>
 					</tr>
 					<tr>
 						<td><code>Code</code></td>
-						<td>Text describing code, using the <code>&lt;code&gt;</code> tag</td>
+						<td>code</td>
+						<td>Text describing code computer code</td>
 					</tr>
 					<tr>
 						<td><code class="code-nobg">Code, no background</code></td>
-						<td>A version of <code>&lt;code&gt;</code> tag using the <code>code-nobg</code> class</td>
+						<td>code.code-nobg</td>
+						<td>The code tag with no background color</td>
 					</tr>
 					<tr>
 						<td><pre>Preformatted</pre></td>
-						<td>Preformatted text, using the <code>&lt;pre&gt;</code> tag</td>
+						<td>pre</td>
+						<td>Preformatted text</td>
 					</tr>
 					<tr>
 						<td><small>Small</small></td>
-						<td>Small text, using the <code>&lt;small&gt;</code> tag; makes text one scale step smaller</td>
+						<td>small</td>
+						<td>Small text; makes text one scale step smaller</td>
 					</tr>
 					<tr>
 						<td><hr class="demo"></td>
-						<td>Horizontal rule using the <code>&lt;hr&gt;</code> tag; the thickness is based on the value of the <code>$tyfy-width-border</code> variable</td>
+						<td>hr</td>
+						<td>Horizontal rule; the thickness is <code>$tyfy-width-border</code>; the color is <code>$tycolor-border</code></td>
 					</tr>
 					<tr>
 						<td><span class="light">Light</span></td>
-						<td>Lighter text, using the <code>light</code> class</td>
+						<td>.light</td>
+						<td>Lighter text; the color is <code>$tycolor-text-light</code></td>
 					</tr>
 					<tr>
 						<td><span class="smallcaps">Small Caps</span></td>
-						<td>Small caps text using the <code>&lt;span&gt;</code> tag with the <code>smallcaps</code> class</td>
+						<td>span.smallcaps</td>
+						<td>Small caps text</td>
 					</tr>
 					<tr>
 						<td><span class="button">Button</span></td>
-						<td>Text as a button using <code>&lt;span&gt;</code> tag with the <code>button</code> class; also works with other tags</td>
+						<td>.button</td>
+						<td>Text as a button</td>
 					</tr>
 					<tr>
 						<td><span class="button-outline">Outlined</span></td>
-						<td>Text as a outlined button using <code>&lt;span&gt;</code> tag with the <code>button-outline</code> class; also works with other tags</td>
+						<td>.button-outline</td>
+						<td>Text as an outlined button</td>
 					</tr>
 					<tr>
 						<td><span class="dropcap">D</span>rop cap</td>
-						<td>A decorative drop cap using the <code>&lt;span&gt;</code> tag with the <code>dropcap</code> class</td>
+						<td>span.dropcap</td>
+						<td>A decorative drop cap</td>
 					</tr>
 					<tr>
 						<td><span class="font-sans">Sans-serif font</span></td>
-						<td>Display text using the font indicated by the <code>$tyfy-sans</code> variable by applying the <code>font-sans</code> class</td>
+						<td>.font-sans</td>
+						<td>Display text using the <code>$tyfy-sans</code> font</td>
 					</tr>
 					<tr>
 						<td><span class="font-serif">Serif font</span></td>
-						<td>Display text using the font indicated by the <code>$tyfy-serif</code> variable by applying the <code>font-serif</code> class</td>
+						<td>.font-serif</td>
+						<td>Display text using the <code>$tyfy-serif</code> font</td>
 					</tr>
 					<tr>
 						<td><span class="font-mono">Monospace font</span></td>
-						<td>Display text using the font indicated by the <code>$tyfy-mono</code> variable by applying the <code>font-mono</code> class</td>
+						<td>.font-mono</td>
+						<td>Display text using the <code>$tyfy-mono</code> font</td>
 					</tr>
 				</tbody>
 			</table>
 		</section>
 		<!-- COMMON FOOTER -->
 		<footer>
-			<p>&copy; Copyright 2017, 2018 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
+			<p>&copy; Copyright 2017–2019 by <a href="http://aaronpinero.net">Aaron Pinero</a></p>
 		</footer>
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -135,6 +155,7 @@
       });
     </script>
     <script src="../resources/script/docs-nav.js"></script>
+    <script src="../resources/vendor/prism/prism.js"></script>
 		<!--/ COMMON FOOTER -->
 	</body>
 </html>

@@ -1,11 +1,16 @@
 ////////// grid //////////
-// the grid unit defines the size of the vertical (baseline) and horizontal grid
-// the value should be half the desired line height (leading) of the body text
-$tyfy-grid-unit:0.875rem !default;
+//
+// the grid unit defines the size of the vertical (baseline) and
+// horizontal grid the value should be half the desired line height
+// (leading) of the body text
+
+$tygrid-unit:                  0.875rem !default;
 
 ////////// modular typographic scale //////////
+//
 // the modular scale is a set of mathematically harmonious font sizes
 // the scalar value defines the proportion between steps on the scale
-// all steps on the scale are calculated using the base value and the scalar
-$tyfy-font-size-scalar:1.2 !default;
-$tyfy-font-size-base:1rem !default;
+// all step sizes are calculated using the base value and the scalar
+
+$tyfont-size-scalar:           1.2 !default;
+$tyfont-size-base:             1rem !default;
