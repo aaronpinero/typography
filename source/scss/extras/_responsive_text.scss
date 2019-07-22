@@ -6,7 +6,7 @@ $tyfont-size-base-lg:$tyfont-size-base / 0.9;
 
 // body
 body {
-  @media (max-width:$tybreak-font-sm * 0.9999) {
+  @media (max-width:$tybreak-font-sm - 1em/32) {
     font-size:$tyfont-size-base-sm;
     line-height:tylead($tyfont-size-base-sm);
   }
@@ -20,7 +20,7 @@ pre,
 code,
 kbd,
 samp {
-  @media (max-width:$tybreak-font-sm * 0.9999) {
+  @media (max-width:$tybreak-font-sm - 1em/32) {
     font-size:$tyfont-size-base-sm;
   }
   @media (min-width:$tybreak-font-lg) {
@@ -29,7 +29,7 @@ samp {
 }
 // paragraphs
 p.lede {
-  @media (max-width:$tybreak-font-sm * 0.9999) {
+  @media (max-width:$tybreak-font-sm - 1em/32) {
     font-size:$tyfont-size-lede / $tyfont-size-scalar;
     line-height:tylead(($tyfont-size-lede / $tyfont-size-scalar),tall);
   }
@@ -40,8 +40,8 @@ p.lede {
 }
 // headings
 h1,
-.font-size-h1 {
-  @media (max-width:$tybreak-font-sm * 0.9999) {
+.tyfont-size-h1 {
+  @media (max-width:$tybreak-font-sm - 1em/32) {
     font-size:$tyfont-size-h1 / $tyfont-size-scalar;
     line-height:tylead(($tyfont-size-h1 / $tyfont-size-scalar),heading);
   }
@@ -51,8 +51,8 @@ h1,
   }
 }
 h2,
-.font-size-h2 {
-  @media (max-width:$tybreak-font-sm * 0.9999) {
+.tyfont-size-h2 {
+  @media (max-width:$tybreak-font-sm - 1em/32) {
     font-size:$tyfont-size-h2 / $tyfont-size-scalar;
     line-height:tylead(($tyfont-size-h2 / $tyfont-size-scalar),heading);
   }
@@ -62,8 +62,8 @@ h2,
   }
 }
 h3,
-.font-size-h3 {
-  @media (max-width:$tybreak-font-sm * 0.9999) {
+.tyfont-size-h3 {
+  @media (max-width:$tybreak-font-sm - 1em/32) {
     font-size:$tyfont-size-h3 / $tyfont-size-scalar;
     line-height:tylead(($tyfont-size-h3 / $tyfont-size-scalar),heading);
   }
@@ -73,8 +73,8 @@ h3,
   }
 }
 h4,
-.font-size-h4 {
-  @media (max-width:$tybreak-font-sm * 0.9999) {
+.tyfont-size-h4 {
+  @media (max-width:$tybreak-font-sm - 1em/32) {
     font-size:$tyfont-size-h4 / $tyfont-size-scalar;
     line-height:tylead(($tyfont-size-h4 / $tyfont-size-scalar),heading);
   }
@@ -84,8 +84,8 @@ h4,
   }
 }
 h5,
-.font-size-h5 {
-  @media (max-width:$tybreak-font-sm * 0.9999) {
+.tyfont-size-h5 {
+  @media (max-width:$tybreak-font-sm - 1em/32) {
     font-size:$tyfont-size-h5 / $tyfont-size-scalar;
     line-height:tylead(($tyfont-size-h5 / $tyfont-size-scalar),heading);
   }
@@ -95,8 +95,8 @@ h5,
   }
 }
 h6,
-.font-size-h6 {
-  @media (max-width:$tybreak-font-sm * 0.9999) {
+.tyfont-size-h6 {
+  @media (max-width:$tybreak-font-sm - 1em/32) {
     font-size:$tyfont-size-h6 / $tyfont-size-scalar;
     line-height:tylead(($tyfont-size-h6 / $tyfont-size-scalar),heading);
   }
@@ -106,9 +106,9 @@ h6,
   }
 }
 // collapsables
-h2.collapsable-processed {
+h2.tyfy-collapsable-processed {
   &::before {
-    @media (max-width:$tybreak-font-sm * 0.9999) {
+    @media (max-width:$tybreak-font-sm - 1em/32) {
       width:tylead(($tyfont-size-h2 / $tyfont-size-scalar),heading);
     }
     @media (min-width:$tybreak-font-lg) {
@@ -116,9 +116,9 @@ h2.collapsable-processed {
     }
   }
 }
-h3.collapsable-processed {
+h3.tyfy-collapsable-processed {
   &::before {
-    @media (max-width:$tybreak-font-sm * 0.9999) {
+    @media (max-width:$tybreak-font-sm - 1em/32) {
       width:tylead(($tyfont-size-h3 / $tyfont-size-scalar),heading);
     }
     @media (min-width:$tybreak-font-lg) {
@@ -126,9 +126,9 @@ h3.collapsable-processed {
     }
   }
 }
-h4.collapsable-processed {
+h4.tyfy-collapsable-processed {
   &::before {
-    @media (max-width:$tybreak-font-sm * 0.9999) {
+    @media (max-width:$tybreak-font-sm - 1em/32) {
       width:tylead(($tyfont-size-h4 / $tyfont-size-scalar),heading);
     }
     @media (min-width:$tybreak-font-lg) {
@@ -136,9 +136,9 @@ h4.collapsable-processed {
     }
   }
 }
-h5.collapsable-processed {
+h5.tyfy-collapsable-processed {
   &::before {
-    @media (max-width:$tybreak-font-sm * 0.9999) {
+    @media (max-width:$tybreak-font-sm - 1em/32) {
       width:tylead(($tyfont-size-h5 / $tyfont-size-scalar),heading);
     }
     @media (min-width:$tybreak-font-lg) {
@@ -146,9 +146,9 @@ h5.collapsable-processed {
     }
   }
 }
-h6.collapsable-processed {
+h6.tyfy-collapsable-processed {
   &::before {
-    @media (max-width:$tybreak-font-sm * 0.9999) {
+    @media (max-width:$tybreak-font-sm - 1em/32) {
       width:tylead(($tyfont-size-h6 / $tyfont-size-scalar),heading);
     }
     @media (min-width:$tybreak-font-lg) {
