@@ -3,14 +3,11 @@
   margin-top:0;
   margin-bottom:0;
 }
+
 @if $tymargins-on {
   body {
     @include tymargins(on);
   }
-}
-hr {
-  margin-bottom:$tyspacing-lg;
-  margin-top:$tyspacing-lg;
 }
 
 // adjacent sibling margin utility classes
