@@ -9,6 +9,7 @@
 	</head>
 	<body>
 	  <h1>Tests</h1>
+	  <p>Tests include the reverse module (triggered by the <span class="smallcaps">REV</span> toggle) and the responsive text module.</p>
 	  <ul>
 	    <li><a href="spacing.html">Spacing module</a></li>
 	    <li><a href="paragraphs.html">Paragraphs module</a></li>
@@ -20,117 +21,8 @@
 	    <li><a href="tables.html">Tables module</a></li>
 	    <li><a href="collapsables.html">Collapsables module</a></li>
 	    <li><a href="tabs.html">Tabs module</a></li>
+	    <li><a href="forms.html">Forms module</a></li>
+	    <li><a href="icons.html">Icons module</a></li>
 	  </ul>
-		<figure>
-			<figcaption>Forms</figcaption>
-			<form>
-				<div>
-					<label>Text Input</label>
-					<input type="text" name="name">
-				</div>
-				<div>
-					<label>Number Input</label>
-					<input type="number" name="age">
-				</div>
-				<div>
-					<label>Select</label>
-					<select name="color">
-						<option value="red">Red</option>
-						<option value="orange">Orange</option>
-						<option value="yellow">Yellow</option>
-						<option value="green">Green</option>
-						<option value="blue">Blue</option>
-						<option value="purple">Purple</option>
-						<option value="white">White</option>
-						<option value="gold">Gold</option>
-						<option value="silver">Silver</option>
-						<option value="black">Black</option>
-					</select>
-				</div>
-				<div>
-					<label>Multiple Select</label>
-					<select name="color" multiple="multiple">
-						<option value="red">Red</option>
-						<option value="orange">Orange</option>
-						<option value="yellow">Yellow</option>
-						<option value="green">Green</option>
-						<option value="blue">Blue</option>
-						<option value="purple">Purple</option>
-						<option value="white">White</option>
-						<option value="gold">Gold</option>
-						<option value="silver">Silver</option>
-						<option value="black">Black</option>
-					</select>
-				</div>
-				<div>
-					<label>Styled Select</label>
-					<div class="tyfy-select">
-						<select name="color">
-							<option value="red">Red</option>
-							<option value="orange">Orange</option>
-							<option value="yellow">Yellow</option>
-							<option value="green">Green</option>
-							<option value="blue">Blue</option>
-							<option value="purple">Purple</option>
-							<option value="white">White</option>
-							<option value="gold">Gold</option>
-							<option value="silver">Silver</option>
-							<option value="black">Black</option>
-						</select>
-					</div>
-				</div>
-				<div>
-					<label>Styled Multiple Select</label>
-					<div class="tyfy-select">
-						<select name="color" multiple="multiple">
-							<option value="red">Red</option>
-							<option value="orange">Orange</option>
-							<option value="yellow">Yellow</option>
-							<option value="green">Green</option>
-							<option value="blue">Blue</option>
-							<option value="purple">Purple</option>
-							<option value="white">White</option>
-							<option value="gold">Gold</option>
-							<option value="silver">Silver</option>
-							<option value="black">Black</option>
-						</select>
-					</div>
-				</div>
-				<fieldset>
-					<legend>Fieldset</legend>
-					<div>
-						<label>Option Labels, Inline</label>
-						<div>
-							<label class="label-option label-inline"><input type="checkbox" name="sky" value="a"> Option A</label>
-							<label class="label-option label-inline"><input type="checkbox" name="sky" value="b"> Option B</label>
-							<label class="label-option label-inline"><input type="checkbox" name="sky" value="c"> Option C</label>
-						</div>
-					</div>
-					<div>
-						<label>Option Labels, Inline</label>
-						<div>
-							<label class="label-option label-inline"><input type="radio" name="sky" value="true"> True</label>
-							<label class="label-option label-inline"><input type="radio" name="sky" value="false"> False</label>
-						</div>
-					</div>
-					<div>
-						<label>Option Labels</label>
-						<ul class="list-nobullet sibling-margins-off">
-							<li><label class="label-option"><input type="radio" name="roses" value="true"> True</label></li>
-							<li><label class="label-option"><input type="radio" name="roses" value="false"> False</label></li>
-						</ul>
-					</div>
-				</fieldset>
-				<p><input type="submit" name="submit" value="Submit Form"></p>
-			</form>
-		</figure>
-    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="../dist/script/collapsables.js"></script>
-		<script src="../dist/script/tabs.js"></script>
-		<script src="../dist/script/tables.js"></script>
-		<script>
-			$('body').append('<div class="tybutton button-rev">Rev</div>');
-			$('.button-rev').click(function(){ $('body').toggleClass('reverse'); });
-		</script>
 	</body>
 </html>
