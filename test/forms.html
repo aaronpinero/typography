@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="test.css">
+		<title>Tyfy Test - Forms</title>
+	</head>
+	<body>
+	  <header class="tymargins-off">
+	    <div class="tyfont-sans"><strong><a href="test.html">Tests</a></strong></div>
+      <h1>Forms Module</h1>
+    </header>
+  
+    <form>
+      <div>
+        <label>Text Input</label>
+        <input type="text" name="name">
+      </div>
+      <div>
+        <label>Number Input</label>
+        <input type="number" name="age">
+      </div>
+      <div>
+        <label>Select</label>
+        <select name="color">
+          <option value="red">Red</option>
+          <option value="orange">Orange</option>
+          <option value="yellow">Yellow</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="purple">Purple</option>
+          <option value="white">White</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="black">Black</option>
+        </select>
+      </div>
+      <div>
+        <label>Multiple Select</label>
+        <select name="color" multiple="multiple">
+          <option value="red">Red</option>
+          <option value="orange">Orange</option>
+          <option value="yellow">Yellow</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="purple">Purple</option>
+          <option value="white">White</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="black">Black</option>
+        </select>
+      </div>
+      <div>
+        <label>Styled Select</label>
+        <div class="tyselect">
+          <select name="color">
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="white">White</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="black">Black</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label>Styled Multiple Select</label>
+        <div class="tyselect">
+          <select name="color" multiple="multiple">
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="white">White</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="black">Black</option>
+          </select>
+        </div>
+      </div>
+      <fieldset>
+        <legend>Fieldset</legend>
+        <div>
+          <label>Option Labels, Inline</label>
+          <div>
+            <label class="label-option label-inline"><input type="checkbox" name="sky" value="a"> Option A</label>
+            <label class="label-option label-inline"><input type="checkbox" name="sky" value="b"> Option B</label>
+            <label class="label-option label-inline"><input type="checkbox" name="sky" value="c"> Option C</label>
+          </div>
+        </div>
+        <div>
+          <label>Option Labels, Inline</label>
+          <div>
+            <label class="label-option label-inline"><input type="radio" name="sky" value="true"> True</label>
+            <label class="label-option label-inline"><input type="radio" name="sky" value="false"> False</label>
+          </div>
+        </div>
+        <div>
+          <label>Option Labels</label>
+          <ul class="list-nobullet sibling-margins-off">
+            <li><label class="label-option"><input type="radio" name="roses" value="true"> True</label></li>
+            <li><label class="label-option"><input type="radio" name="roses" value="false"> False</label></li>
+          </ul>
+        </div>
+      </fieldset>
+      <p><input type="submit" name="submit" value="Submit Input"></p>
+      <p><button type="submit" name="submit">Submit Button</button></p>
+      <p><button type="reset" name="reset">Reset Input</button></p>
+    </form>
+
+    <script src="test.js"></script>    
+	</body>
+</html>

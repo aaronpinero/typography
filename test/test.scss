@@ -13,6 +13,7 @@ $tyindent: (
   "small":2,
 );
 $tymargins-on:true;
+
 $tyfont-serif:georgia, serif;
 $tyfont-sans:helvetica, arial, sans-serif;
 $tyfont-mono:monaco, courier, monospace;
@@ -32,7 +33,10 @@ $tyfont-size: (
   "quote":2,
   "lede":2
 );
+
 $tywidth-border:2px;
+$tyradius-border:6px;
+
 $tybreak-float:40em;
 $tybreak-quote:40em;
 $tybreak-cols2:50em;
@@ -42,6 +46,7 @@ $tybreak-list-cols4:75em;
 $tybreak-collapsables:50em;
 $tybreak-tabs:40em;
 $tybreak-table:40em;
+
 $tyduration: (
   "hover":    333ms,
   "move":     667ms,
@@ -49,93 +54,46 @@ $tyduration: (
   "longer":   2000ms,
   "longest":  3000ms
 );
+
 $tycolor-bg:white;
 $tycolor-fg:black;
 $tycolor-text-light:mix($tycolor-fg,$tycolor-bg,45%);
 $tycolor-link-default:#3366cc;
-$tycolor-link-active:#cc3366;
+$tycolor-link-active:#339933;
+$tycolor-bg-tab-active:rgba($tycolor-link-active,0.12);
 $tycolor-border:mix($tycolor-fg,$tycolor-bg,12%);
+$tycolor-border-link-default:rgba($tycolor-link-default,0.5);
+$tycolor-border-link-active:rgba($tycolor-link-active,0.75);
 $tycolor-shade:rgba($tycolor-fg,0.05);
-$tycolor-bg-rev:#333;
-$tycolor-fg-rev:white;
-$tycolor-text-light-rev:mix($tycolor-fg-rev,$tycolor-bg-rev,50%);
-$tycolor-link-default-rev:hsl(hue($tycolor-link-default),saturation($tycolor-link-default),(100% - lightness(darken($tycolor-link-default,25%))));
-$tycolor-link-active-rev:hsl(hue($tycolor-link-active),saturation($tycolor-link-active),(100% - lightness(darken($tycolor-link-active,25%))));
-$tycolor-border-rev:mix($tycolor-fg-rev,$tycolor-bg-rev,15%);
-$tycolor-shade-rev:rgba($tycolor-fg-rev,0.05);
+
 $tyicons-path:"../dist/fonts/tyicons";
+
+$tycolor-rev-bg:#333;
+$tycolor-rev-fg:white;
+$tycolor-rev-text-light:mix($tycolor-rev-fg,$tycolor-rev-bg,50%);
+$tycolor-rev-link-default:hsl(hue($tycolor-link-default),saturation($tycolor-link-default),(100% - lightness(darken($tycolor-link-default,25%))));
+$tycolor-rev-link-active:hsl(hue($tycolor-link-active),saturation($tycolor-link-active),(100% - lightness(darken($tycolor-link-active,25%))));
+$tycolor-rev-bg-tab-active:rgba($tycolor-rev-link-active,0.12);
+$tycolor-rev-border:mix($tycolor-rev-fg,$tycolor-rev-bg,20%);
+$tycolor-rev-border-link-default:rgba($tycolor-rev-link-default,0.5);
+$tycolor-rev-border-link-active:rgba($tycolor-rev-link-active,0.75);
+$tycolor-rev-shade:rgba($tycolor-rev-fg,0.05);
 
 @import "../source/scss/tyfy.scss";
 @import "../source/scss/extras/_effects.scss";
 @import "../source/scss/extras/_responsive_text.scss";
+
 body {
-  background-color:var(--tycolor-shade);
   margin-left:auto;
   margin-right:auto;
   max-width:tygrid(70);
   padding:$tyspacing-md;
-  &.reverse {
-    background-color:#666;
-  }
-}
-figure {
-  background-color:var(--tycolor-bg);
-  border-radius:4px;
-  box-shadow:1px 1px 6px rgba(0,0,0,0.2);
-  margin-left:0;
-  margin-right:0;
-  padding:$tyspacing-md;
-  figcaption {
-    border-bottom:$tywidth-border var(--tycolor-border) solid;
-    color:var(--tycolor-text-light);
-    font-family:$tyfont-sans;
-    font-size:tyscale(-2);
-    font-weight:bold;
-    letter-spacing:1px;
-    line-height:tylead(tyscale(-2));
-    margin-bottom:$tyspacing-md;
-    padding-bottom:$tyspacing-md;
-    text-transform:uppercase;
-  }
-  figcaption + * {
-    margin-top:0 !important;
-  }
-}
-.swatch {
-  border-radius:50%;
-  display:inline-block;
-  height:tygrid(3);
-  vertical-align:middle;
-  width:tygrid(3);
-  &.foreground {
-    background-color:var(--tycolor-fg);
-  }
-  &.text-light {
-    background-color:var(--tycolor-text-light);
-  }
-  &.link-default {
-    background-color:var(--tycolor-link-default);
-  }
-  &.link-active {
-    background-color:var(--tycolor-link-active);
-  }
-  &.border {
-    background-color:var(--tycolor-border);
-  }
-  &.shade {
-    background-color:var(--tycolor-shade);
-  }
-}
-hr.demo {
-  margin-bottom:tygrid(0.5);
-  margin-top:tygrid(0.5);
 }
 .button-rev {
   opacity:0.25;
   position:fixed;
   right:tygrid();
   top:tygrid();
-  transition:all $tyduration-hover;
   z-index:100;
   &:hover {
     opacity:1;
