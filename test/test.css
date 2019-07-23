@@ -205,11 +205,6 @@ body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
 body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
   margin-top: 3rem; }
 
-/* line 11, source/scss/essential/_spacing.scss */
-hr {
-  margin-bottom: 3rem;
-  margin-top: 3rem; }
-
 /* line 93, source/scss/required/_mixins.scss */
 .tymargins-on * + * {
   margin-top: 1.5rem; }
@@ -716,25 +711,35 @@ em {
 hr {
   border: none;
   border-top: 2px var(--tycolor-border) solid;
-  height: 0; }
+  height: 0;
+  margin-bottom: 3rem;
+  margin-top: 3rem; }
+  /* line 27, source/scss/optional/_utility.scss */
+  .tymargins-off hr {
+    margin-bottom: 0;
+    margin-top: 0; }
+  /* line 31, source/scss/optional/_utility.scss */
+  .tymargins-on hr {
+    margin-bottom: 3rem;
+    margin-top: 3rem; }
 
-/* line 24, source/scss/optional/_utility.scss */
+/* line 36, source/scss/optional/_utility.scss */
 i {
   font-style: italic; }
 
-/* line 27, source/scss/optional/_utility.scss */
+/* line 39, source/scss/optional/_utility.scss */
 pre {
   font-family: monaco, courier, monospace; }
 
-/* line 30, source/scss/optional/_utility.scss */
+/* line 42, source/scss/optional/_utility.scss */
 small {
   font-size: 80%; }
 
-/* line 33, source/scss/optional/_utility.scss */
+/* line 45, source/scss/optional/_utility.scss */
 strong {
   font-weight: 700; }
 
-/* line 37, source/scss/optional/_utility.scss */
+/* line 49, source/scss/optional/_utility.scss */
 span.dropcap {
   display: inline-block;
   float: left;
@@ -744,7 +749,7 @@ span.dropcap {
   margin: 0 0.25em 0 0.125em;
   text-align: center; }
 
-/* line 46, source/scss/optional/_utility.scss */
+/* line 58, source/scss/optional/_utility.scss */
 span.smallcaps {
   font-feature-settings: "c2sc", "smcp";
   font-variant-caps: all-small-caps;
@@ -752,7 +757,7 @@ span.smallcaps {
   letter-spacing: 0.075em;
   margin-right: -0.0375em; }
 
-/* line 54, source/scss/optional/_utility.scss */
+/* line 66, source/scss/optional/_utility.scss */
 .tybutton {
   background-color: #3366cc;
   border: none;
@@ -780,7 +785,7 @@ span.smallcaps {
   .tybutton:focus, .tybutton[href]:focus {
     outline: none; }
 
-/* line 57, source/scss/optional/_utility.scss */
+/* line 69, source/scss/optional/_utility.scss */
 .tybutton-outline {
   background-color: #3366cc;
   border: none;
@@ -815,19 +820,19 @@ span.smallcaps {
   .tybutton-outline:hover, .tybutton-outline:active, .tybutton-outline[href]:hover, .tybutton-outline[href]:active {
     border-color: #309130; }
 
-/* line 60, source/scss/optional/_utility.scss */
+/* line 72, source/scss/optional/_utility.scss */
 .tyfont-sans {
   font-family: helvetica, arial, sans-serif; }
 
-/* line 63, source/scss/optional/_utility.scss */
+/* line 75, source/scss/optional/_utility.scss */
 .tyfont-serif {
   font-family: georgia, serif; }
 
-/* line 66, source/scss/optional/_utility.scss */
+/* line 78, source/scss/optional/_utility.scss */
 .tyfont-mono {
   font-family: monaco, courier, monospace; }
 
-/* line 69, source/scss/optional/_utility.scss */
+/* line 81, source/scss/optional/_utility.scss */
 .light {
   color: var(--tycolor-text-light); }
 
