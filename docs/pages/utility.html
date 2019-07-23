@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
 		<link rel="stylesheet" href="../resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy - Styles</title>
+		<title>Tyfy - Modules - Styles</title>
 	</head>
 	<body class="">
 		<!-- COMMON HEADER -->
@@ -53,7 +53,15 @@
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Styles</h1>
-			<p><strong class="tyfy">Tyfy</strong> includes style customizations for other block and inline HTML elements. There are also classes for styles that do not have an HTML equivalent.</p>
+			<p><strong class="tyfy">Tyfy</strong> includes style customizations for block and inline HTML elements used in typographic design. In addition, custom classes are defined for additional typographic enhancement.</p>
+			<h2>Special Case: Horizontal Rule</h2>
+			<p>The horizontal rule (<code>&lt;hr&gt;</code>) has unique margin styles. While all other elements in the framework inherit by the adjacent sibling margin styles, the horizontal rule is given both top and bottom margin. This exception is justified by the purpose of the horizontal rule, which is to act as a separator between other elements.</p>
+			<p>The top and bottom margins are equal to the value of the <code>$tyspacing-lg</code> variable. The margins are applied in two cases:</p>
+			<ul>
+			  <li>when the value of the <code>$tymargins-on</code> variable is <code>true</code>; or</li>
+			  <li>when a parent element has the <code>.tymargins-on</code> class.</li>
+			</ul>
+			<h2>Examples</h2>
 			<table class="clean utility responsive">
   			<thead>
     			<tr>
@@ -76,7 +84,7 @@
 					<tr>
 						<td><code>Code</code></td>
 						<td>code</td>
-						<td>Text describing code computer code</td>
+						<td>Text describing computer code</td>
 					</tr>
 					<tr>
 						<td><code class="code-nobg">Code, no background</code></td>
@@ -96,7 +104,7 @@
 					<tr>
 						<td><hr class="demo"></td>
 						<td>hr</td>
-						<td>Horizontal rule; the thickness is <code>$tyfy-width-border</code>; the color is <code>$tycolor-border</code></td>
+						<td>Horizontal rule; the thickness is <code>$tywidth-border</code>; the color is <code>$tycolor-border</code></td>
 					</tr>
 					<tr>
 						<td><span class="light">Light</span></td>
@@ -109,13 +117,13 @@
 						<td>Small caps text</td>
 					</tr>
 					<tr>
-						<td><span class="button">Button</span></td>
-						<td>.button</td>
+						<td><span class="tybutton">Button</span></td>
+						<td>.tybutton</td>
 						<td>Text as a button</td>
 					</tr>
 					<tr>
-						<td><span class="button-outline">Outlined</span></td>
-						<td>.button-outline</td>
+						<td><span class="tybutton-outline">Outlined</span></td>
+						<td>.tybutton-outline</td>
 						<td>Text as an outlined button</td>
 					</tr>
 					<tr>
@@ -124,19 +132,19 @@
 						<td>A decorative drop cap</td>
 					</tr>
 					<tr>
-						<td><span class="font-sans">Sans-serif font</span></td>
-						<td>.font-sans</td>
-						<td>Display text using the <code>$tyfy-sans</code> font</td>
+						<td><span class="tyfont-sans">Sans-serif font</span></td>
+						<td>.tyfont-sans</td>
+						<td>Display text using the <code>$tyfont-sans</code> font</td>
 					</tr>
 					<tr>
-						<td><span class="font-serif">Serif font</span></td>
-						<td>.font-serif</td>
-						<td>Display text using the <code>$tyfy-serif</code> font</td>
+						<td><span class="tyfont-serif">Serif font</span></td>
+						<td>.tyfont-serif</td>
+						<td>Display text using the <code>$tyfont-serif</code> font</td>
 					</tr>
 					<tr>
-						<td><span class="font-mono">Monospace font</span></td>
-						<td>.font-mono</td>
-						<td>Display text using the <code>$tyfy-mono</code> font</td>
+						<td><span class="tyfont-mono">Monospace font</span></td>
+						<td>.tyfont-mono</td>
+						<td>Display text using the <code>$tyfont-mono</code> font</td>
 					</tr>
 				</tbody>
 			</table>
