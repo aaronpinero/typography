@@ -1,30 +1,3 @@
-$tyicons-path:"../../../dist/fonts/tyicons";
-$tyfont-serif:"IBM Plex Serif", georgia, serif;
-$tyfont-sans:"IBM Plex Sans", helvetica, arial, sans-serif;
-$tyfont-mono:"IBM Plex Mono", courier, monospace;
-$tyfont-condensed:"IBM Plex Sans Condensed",sans-serif;
-$tyfont-base:$tyfont-serif;
-$tyfont-heading:$tyfont-sans;
-$tyfont-table:$tyfont-sans;
-$tyfont-input:$tyfont-sans;
-$tycolor-rev-bg:#333;
-$tywidth-constrained:55rem;
-$color-example:darken(#80cc33,25%);
-$color-value:mix(#8033cc,#999999,75%);
-@import "../../../source/scss/tyfy.scss";
-@import "../../../source/scss/extras/_effects.scss";
-@import "../../../source/scss/extras/_responsive_text.scss";
-
-body {
-  @include tyfadein(2000ms);
-  margin:0 0 tygrid(2) 0;
-  padding:0;
-}
-.constrained {
-  margin-left:auto;
-  margin-right:auto;
-  max-width:$tywidth-constrained;
-}
 h1:not(.demo) {
   font-family:$tyfont-condensed;
   text-transform:uppercase;
@@ -145,10 +118,6 @@ section.demo.reverse {
   border:none;
 }
 pre.codebox {
-  background-color:$tycolor-shade;
-  border:$tywidth-border $tycolor-border solid;
-  padding:calc(#{$tyspacing-md} - #{$tywidth-border});
-  overflow:auto;
   & + figure.example {
     border:$tywidth-border $tycolor-border solid;
     border-top:none;

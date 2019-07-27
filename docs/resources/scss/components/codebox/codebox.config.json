@@ -1,0 +1,29 @@
+{
+  "title": "Code Example Box",
+  "notes": "Default element for code examples, no length limit",
+  "context": {
+    "modifier": "default",
+    "lang": "SCSS",
+    "code": "// custom core variable values\n$tyfy-serif:\"IBM Plex Serif\", serif;\n$tyfy-sans:\"IBM Plex Sans\", sans-serif;\n$tyfy-mono:\"IBM Plex Mono\", monospace;\n\n// custom settings variable values\n$tyfy-font-base:$tyfy-serif;\n$tyfy-font-heading:$tyfy-sans;"
+  },
+  "variants": [
+    {
+      "name": "small",
+      "notes": "Small element for code examples; height is limited; content will scroll within box",
+      "context": {
+        "modifier": "small",
+        "lang": "SCSS",
+        "code": "// custom core variable values\n$tyfy-serif:\"IBM Plex Serif\", serif;\n$tyfy-sans:\"IBM Plex Sans\", sans-serif;\n$tyfy-mono:\"IBM Plex Mono\", monospace;\n\n// custom settings variable values\n$tyfy-font-base:$tyfy-serif;\n$tyfy-font-heading:$tyfy-sans;"
+      }
+    },
+    {
+      "name": "mini",
+      "notes": "Mini element for code examples; height is limited; padding is reduced; content will scroll within box",
+      "context": {
+        "modifier": "mini",
+        "lang": "SCSS",
+        "code": "$tyfy-serif:\"IBM Plex Serif\", serif;\n$tyfy-sans:\"IBM Plex Sans\", sans-serif;\n$tyfy-mono:\"IBM Plex Mono\", monospace;"
+      }
+    }
+  ]
+}

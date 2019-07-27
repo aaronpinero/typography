@@ -1,0 +1,41 @@
+div.codebox-label {
+  color:rgba(black,0.33);
+  font-family:$tyfont-mono;
+  font-size:tyscale(-2);
+  font-weight:bold;
+  height:0;
+  line-height:3;
+  padding-right:tygrid(1);
+  position:relative;
+  text-align:right;
+  z-index:5;
+}
+pre.codebox {
+  background-color:$tycolor-shade;
+  border:$tywidth-border $tycolor-border solid;
+  box-shadow:0 0 tygrid(0.5) rgba(black,0.05) inset;
+  box-sizing:border-box;
+  overflow:auto;
+  padding:calc(#{$tyspacing-md / 2} - #{$tywidth-border});
+  position:relative;
+  z-index:4;
+  &.codebox-small {
+    max-height:tygrid(12);
+  }
+  &.codebox-mini {
+    max-height:tygrid(6);
+  }
+  &:not(.codebox-mini) {
+    @media (min-width:480px) {
+      box-shadow:0 0 tygrid(1) rgba(0,0,0,0.05) inset;
+      padding:calc(#{$tyspacing-md} - #{$tywidth-border});
+    }
+  }
+  code {
+    background-color:transparent;
+    padding:0;
+  }
+  .codebox-label + & {
+    margin-top:0;
+  }
+}

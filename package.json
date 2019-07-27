@@ -11,7 +11,7 @@
     "build-css-dev": "./bin/build-css-dev",
     "build-css-test": "./bin/build-css-test",
     "build-icons": "./bin/build-icons",
-    "build-docs-html": "node docs/docs.js",
+    "build-docs": "node docs/docs.js",
     "build-js": "node source/terser.js",
     "fractal-start": "fractal start --sync",
     "watch-css": "./bin/watch-css",
