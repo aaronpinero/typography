@@ -1,1 +1,8 @@
-<pre class="codebox codebox-{{ modifier }}" data-lang="{{ lang }}"><code>{{ code }}</code></pre>
+<style>
+  @import "{{ path '/vendor/prism/prism.css' }}";
+</style>
+
+<pre class="codebox codebox-{{ modifier }}" data-lang="{{ lang }}"><code class="language-scss">{{ code }}</code></pre>
+
+<script src="{{ path '/vendor/prism/prism.js' }}"></script>
+<script src="{{ path '/scss/components/codebox/codebox.js' }}"></script>
