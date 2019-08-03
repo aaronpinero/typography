@@ -1,10 +1,12 @@
 {
   "title": "Code Example Box",
-  "notes": "Default element for code examples, no length limit. Syntactic sugar is provided by prism.js (https://prismjs.com)",
+  "label": "Code Box",
+  "notes": "Default element for code examples, no length limit. Based on best practice described on <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code\">MDN</a>, this code box uses a <code>code</code> tag inside a <code>pre</code> tag. Syntactic sugar is provided by <a href=\"prismjs.com\">prism.js</a>.",
+  "preview": "@preview-codebox",
   "status": "ready",
   "context": {
     "modifier": "default",
-    "lang": "SCSS",
+    "lang": "scss",
     "code": "// custom core variable values\n$tyfy-serif:\"IBM Plex Serif\", serif;\n$tyfy-sans:\"IBM Plex Sans\", sans-serif;\n$tyfy-mono:\"IBM Plex Mono\", monospace;\n\n// custom settings variable values\n$tyfy-font-base:$tyfy-serif;\n$tyfy-font-heading:$tyfy-sans;"
   },
   "variants": [
@@ -13,7 +15,7 @@
       "notes": "Short element for code examples; height is limited; content will scroll within box",
       "context": {
         "modifier": "short",
-        "lang": "SCSS",
+        "lang": "scss",
         "code": "// custom core variable values\n$tyfy-serif:\"IBM Plex Serif\", serif;\n$tyfy-sans:\"IBM Plex Sans\", sans-serif;\n$tyfy-mono:\"IBM Plex Mono\", monospace;\n\n// custom settings variable values\n$tyfy-font-base:$tyfy-serif;\n$tyfy-font-heading:$tyfy-sans;"
       }
     }

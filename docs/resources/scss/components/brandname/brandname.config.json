@@ -1,5 +1,6 @@
 {
   "title": "Tyfy Brand Name",
-  "notes": "Style to be applied to the name of the framework as it appears in text.",
+  "label": "Brand Name",
+  "notes": "Style applied to the name of the framework as it appears in text.",
   "status": "ready"
 }

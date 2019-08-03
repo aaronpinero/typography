@@ -1,0 +1,12 @@
+// $tycolor-example is defined in the base css for the documentation
+
+figure.output {
+  --tycolor-fg:#{$tycolor-example};
+  border:$tywidth-border $tycolor-border solid;
+  box-shadow:0 0 tygrid(1) rgba(black,0.05);
+  color:$tycolor-example;
+  margin-left:0; // override browser default
+  margin-right:0; // override browser default
+  padding:calc(#{$tyspacing-md} - #{$tywidth-border});
+  position:relative;
+}
