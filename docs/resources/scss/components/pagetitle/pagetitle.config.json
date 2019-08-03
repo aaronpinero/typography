@@ -1,0 +1,10 @@
+{
+  "title": "Page Title",
+  "label": "Page Title",
+  "notes": "The header that displays the title of a documentation page.",
+  "preview": "@preview-template",
+  "status": "ready",
+  "context": {
+    "title": "Module Name Here"
+  }
+}

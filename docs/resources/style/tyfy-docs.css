@@ -2111,7 +2111,7 @@ figure.output + pre.codebox {
   margin-top: 0;
   padding-top: 1.75rem; }
 
-/* line 95, docs/resources/scss/tyfy-docs-all.scss */
+/* line 96, docs/resources/scss/tyfy-docs-all.scss */
 figure.output {
   --tycolor-fg:#40661a;
   border: 2px #e2e2e2 solid;
@@ -2122,18 +2122,36 @@ figure.output {
   padding: calc(1.75rem - 2px);
   position: relative; }
 
-/* line 105, docs/resources/scss/tyfy-docs-all.scss */
+/* line 106, docs/resources/scss/tyfy-docs-all.scss */
+header.pagetitle {
+  --tycolor-fg:white;
+  background-color: #CC3380;
+  box-shadow: 0 1px 1.75rem rgba(0, 0, 0, 0.15);
+  color: white;
+  padding: 3.5rem 1.75rem;
+  text-align: center; }
+  @media (min-width: 52.5rem) {
+    /* line 106, docs/resources/scss/tyfy-docs-all.scss */
+    header.pagetitle {
+      padding: 5.25rem 1.75rem; } }
+  /* line 116, docs/resources/scss/tyfy-docs-all.scss */
+  header.pagetitle h1 {
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    text-shadow: 0 1px 0.4375rem rgba(0, 0, 0, 0.25);
+    text-transform: uppercase; }
+
+/* line 122, docs/resources/scss/tyfy-docs-all.scss */
 hr.demo {
   margin-bottom: 0.875rem;
   margin-top: 0.875rem; }
 
-/* line 109, docs/resources/scss/tyfy-docs-all.scss */
+/* line 126, docs/resources/scss/tyfy-docs-all.scss */
 strong.tyfy {
   font-family: "IBM Plex Sans Condensed", sans-serif;
   font-weight: bold;
   text-transform: uppercase; }
 
-/* line 114, docs/resources/scss/tyfy-docs-all.scss */
+/* line 131, docs/resources/scss/tyfy-docs-all.scss */
 .tyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2152,24 +2170,24 @@ strong.tyfy {
     position: static;
     width: auto; }
 
-/* line 117, docs/resources/scss/tyfy-docs-all.scss */
+/* line 134, docs/resources/scss/tyfy-docs-all.scss */
 .tyicons {
   vertical-align: middle; }
 
-/* line 121, docs/resources/scss/tyfy-docs-all.scss */
+/* line 138, docs/resources/scss/tyfy-docs-all.scss */
 header.brand h1 {
   font-size: 1.728rem;
   line-height: 1.75rem;
   padding: 0.875rem 1.75rem; }
 
-/* line 127, docs/resources/scss/tyfy-docs-all.scss */
+/* line 144, docs/resources/scss/tyfy-docs-all.scss */
 header.brand nav {
   padding: 0 1.75rem; }
-  /* line 130, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 147, docs/resources/scss/tyfy-docs-all.scss */
   header.brand nav h2 {
     font-size: 1.2rem;
     line-height: 1.75rem; }
-  /* line 134, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 151, docs/resources/scss/tyfy-docs-all.scss */
   header.brand nav ul.list-grid-4 {
     display: flex;
     flex-wrap: wrap;
@@ -2178,27 +2196,27 @@ header.brand nav {
     padding-bottom: 0.875rem;
     padding-left: 0; }
     @media (max-width: 34.9965em) {
-      /* line 141, docs/resources/scss/tyfy-docs-all.scss */
+      /* line 158, docs/resources/scss/tyfy-docs-all.scss */
       header.brand nav ul.list-grid-4 li {
         box-sizing: border-box;
         width: calc(50% - 1.3125rem); }
-        /* line 145, docs/resources/scss/tyfy-docs-all.scss */
+        /* line 162, docs/resources/scss/tyfy-docs-all.scss */
         header.brand nav ul.list-grid-4 li:nth-child(2) {
           margin-top: 0; }
-        /* line 148, docs/resources/scss/tyfy-docs-all.scss */
+        /* line 165, docs/resources/scss/tyfy-docs-all.scss */
         header.brand nav ul.list-grid-4 li:nth-child(2n+1) {
           margin-right: 2.625rem; } }
-    /* line 152, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 169, docs/resources/scss/tyfy-docs-all.scss */
     header.brand nav ul.list-grid-4 li a {
       border-top: 0.21875rem rgba(255, 255, 255, 0.05) solid;
       display: block;
       font-size: 0.83333rem;
       padding-top: 0.4375rem;
       padding-bottom: 0.4375rem; }
-  /* line 161, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 178, docs/resources/scss/tyfy-docs-all.scss */
   header.brand nav.nav-processed {
     position: relative; }
-    /* line 163, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 180, docs/resources/scss/tyfy-docs-all.scss */
     header.brand nav.nav-processed h2 {
       color: #99c0e6;
       cursor: pointer;
@@ -2211,7 +2229,7 @@ header.brand nav {
       transition-duration: 250ms;
       transition-property: color;
       width: 1.75rem; }
-      /* line 175, docs/resources/scss/tyfy-docs-all.scss */
+      /* line 192, docs/resources/scss/tyfy-docs-all.scss */
       header.brand nav.nav-processed h2::before {
         content: "\ea06";
         display: block;
@@ -2219,42 +2237,42 @@ header.brand nav {
         height: 1.75rem;
         text-align: center;
         width: 1.75rem; }
-      /* line 183, docs/resources/scss/tyfy-docs-all.scss */
+      /* line 200, docs/resources/scss/tyfy-docs-all.scss */
       header.brand nav.nav-processed h2:hover {
         color: #e699c0; }
-    /* line 187, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 204, docs/resources/scss/tyfy-docs-all.scss */
     header.brand nav.nav-processed ul {
       height: 0;
       margin-top: 0;
       overflow: hidden;
       padding-bottom: 0; }
-    /* line 194, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 211, docs/resources/scss/tyfy-docs-all.scss */
     header.brand nav.nav-processed.nav-open ul {
       height: auto;
       padding-bottom: 0.875rem; }
 
-/* line 202, docs/resources/scss/tyfy-docs-all.scss */
+/* line 219, docs/resources/scss/tyfy-docs-all.scss */
 section.main {
   margin-top: 0;
   padding: 1.75rem; }
 
-/* line 207, docs/resources/scss/tyfy-docs-all.scss */
+/* line 224, docs/resources/scss/tyfy-docs-all.scss */
 section.demo {
   border: 2px dashed #e6e6e6;
   border-radius: 0.875rem;
   box-shadow: inset 0px 0px 1.75rem rgba(0, 0, 0, 0.05);
   margin-top: 1.75rem; }
 
-/* line 213, docs/resources/scss/tyfy-docs-all.scss */
+/* line 230, docs/resources/scss/tyfy-docs-all.scss */
 section.demo.reverse {
   border: none; }
 
-/* line 217, docs/resources/scss/tyfy-docs-all.scss */
+/* line 234, docs/resources/scss/tyfy-docs-all.scss */
 pre.codebox + figure.example {
   border-top: none;
   margin: 0;
   padding-top: 1.75rem; }
-  /* line 221, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 238, docs/resources/scss/tyfy-docs-all.scss */
   pre.codebox + figure.example .reverse-toggle {
     border: 2px white solid;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.33);
@@ -2266,11 +2284,11 @@ pre.codebox + figure.example {
     text-transform: uppercase;
     top: -1.3125rem;
     transform: scale(0.66); }
-  /* line 233, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 250, docs/resources/scss/tyfy-docs-all.scss */
   pre.codebox + figure.example.reverse {
     border-color: #494949; }
 
-/* line 239, docs/resources/scss/tyfy-docs-all.scss */
+/* line 256, docs/resources/scss/tyfy-docs-all.scss */
 code.val-default {
   background-color: transparent;
   color: #864dbf;
@@ -2279,11 +2297,11 @@ code.val-default {
   padding-left: 0;
   padding-right: 0; }
 
-/* line 248, docs/resources/scss/tyfy-docs-all.scss */
+/* line 265, docs/resources/scss/tyfy-docs-all.scss */
 table.utility th[scope="col"] {
   border-bottom: 4px var(--tycolor-border) solid; }
 
-/* line 252, docs/resources/scss/tyfy-docs-all.scss */
+/* line 269, docs/resources/scss/tyfy-docs-all.scss */
 .form-demo {
   border: 2px solid #e2e2e2;
   box-shadow: inset 0px 0px 1.75rem rgba(0, 0, 0, 0.05);
@@ -2307,18 +2325,18 @@ table.utility th[scope="col"] {
   .form-demo :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
   .form-demo :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
     margin-top: 0rem; }
-  /* line 259, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 276, docs/resources/scss/tyfy-docs-all.scss */
   .form-demo label {
     display: block;
     font-weight: bold;
     width: 100%; }
-    /* line 263, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 280, docs/resources/scss/tyfy-docs-all.scss */
     .form-demo label.option {
       font-weight: normal; }
-    /* line 266, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 283, docs/resources/scss/tyfy-docs-all.scss */
     .form-demo label.disabled {
       color: #949494; }
-  /* line 270, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 287, docs/resources/scss/tyfy-docs-all.scss */
   .form-demo .form-control {
     box-sizing: border-box;
     display: block;
@@ -2327,36 +2345,36 @@ table.utility th[scope="col"] {
     padding-top: 0.875rem;
     padding-bottom: 0.875rem;
     width: 100%; }
-    /* line 278, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 295, docs/resources/scss/tyfy-docs-all.scss */
     .form-demo .form-control.form-control-classes, .form-demo .form-control.form-control-headers {
       display: flex;
       flex-wrap: wrap; }
   @media (min-width: 55em) {
-    /* line 285, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 302, docs/resources/scss/tyfy-docs-all.scss */
     .form-demo#lists-demo .form-control.form-control-type {
       border-right: 2px solid #e2e2e2;
       width: 25%; } }
   @media (min-width: 55em) {
-    /* line 291, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 308, docs/resources/scss/tyfy-docs-all.scss */
     .form-demo#lists-demo .form-control.form-control-classes {
       padding-left: 1.75rem;
       width: 75%; } }
   @media (min-width: 40em) {
-    /* line 296, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 313, docs/resources/scss/tyfy-docs-all.scss */
     .form-demo#lists-demo .form-control.form-control-classes label {
       width: 33%; }
-      /* line 299, docs/resources/scss/tyfy-docs-all.scss */
+      /* line 316, docs/resources/scss/tyfy-docs-all.scss */
       .form-demo#lists-demo .form-control.form-control-classes label:first-child {
         width: 100%; } }
   @media (min-width: 30em) {
-    /* line 307, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 324, docs/resources/scss/tyfy-docs-all.scss */
     .form-demo#tables-demo .form-control label:not(:first-child) {
       width: 50%; } }
   @media (min-width: 50em) {
-    /* line 307, docs/resources/scss/tyfy-docs-all.scss */
+    /* line 324, docs/resources/scss/tyfy-docs-all.scss */
     .form-demo#tables-demo .form-control label:not(:first-child) {
       width: 25%; } }
-  /* line 316, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 333, docs/resources/scss/tyfy-docs-all.scss */
   .form-demo + figure.example {
     --tycolor-fg:#40661a;
     border: 2px #e2e2e2 solid;
@@ -2366,21 +2384,21 @@ table.utility th[scope="col"] {
     padding: calc(1.75rem - 2px);
     padding-top: 1.75rem; }
 
-/* line 327, docs/resources/scss/tyfy-docs-all.scss */
+/* line 344, docs/resources/scss/tyfy-docs-all.scss */
 .tables-demo-table th.row-hidden {
   display: none !important; }
 
 @media (min-width: 40em) {
-  /* line 332, docs/resources/scss/tyfy-docs-all.scss */
+  /* line 349, docs/resources/scss/tyfy-docs-all.scss */
   .tables-demo-table.responsive th.row-hidden + td,
   .tables-demo-table.responsive th.row-hidden + th {
     padding-left: 0; } }
 
-/* line 339, docs/resources/scss/tyfy-docs-all.scss */
+/* line 356, docs/resources/scss/tyfy-docs-all.scss */
 .tables-demo-table:not(.striped):not(.vertical-rules):not(.responsive) th.row-hidden + * {
   padding-left: 0; }
 
-/* line 345, docs/resources/scss/tyfy-docs-all.scss */
+/* line 362, docs/resources/scss/tyfy-docs-all.scss */
 footer p {
   color: #949494;
   font-size: 0.83333rem;

@@ -1,0 +1,16 @@
+header.pagetitle {
+  --tycolor-fg:white;
+  background-color:#CC3380;
+  box-shadow:0 1px tygrid(2) rgba(black,0.15);
+  color:white;
+  padding:tygrid(4) tygrid(2);
+  text-align:center;
+  @media (min-width:tygrid(60)) {
+    padding:tygrid(6) tygrid(2);
+  }
+  h1 {
+    font-family:$tyfont-condensed;
+    text-shadow:0 1px tygrid(0.5) rgba(black,0.25);
+    text-transform:uppercase;
+  }
+}

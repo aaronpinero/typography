@@ -1,0 +1,11 @@
+{
+  "title": "Footer Link",
+  "label": "Footer Link",
+  "notes": "Style for a link appearing in the documentation footer.",
+  "preview": "@preview-footer",
+  "status": "ready",
+  "context": {
+    "linkhref": "https://www.github.com/aaronpinero",
+    "linktext": "Link to Something"
+  }
+}
