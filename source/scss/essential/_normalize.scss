@@ -9,10 +9,6 @@ body {
 main {
   display:block;
 }
-pre {
-  font-family:$tyfont-mono;
-  font-size:$tyfont-size-base;
-}
 a {
   background-color:transparent;
 }
@@ -27,6 +23,7 @@ strong {
 }
 code,
 kbd,
+pre,
 samp {
   font-family:$tyfont-mono;
   font-size:$tyfont-size-base;
