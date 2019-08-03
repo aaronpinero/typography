@@ -1,10 +1,10 @@
 {
   "title": "Code Example Box",
-  "notes": "Default element for code examples, no length limit. Syntactic sugar is provided by prism.js (https://prismjs.com)",
+  "notes": "Default element for code examples, no length limit.",
   "context": {
     "modifier": "default",
     "lang": "scss",
-    "code": "// custom core variable values\n$tyfy-serif:\"IBM Plex Serif\", serif;\n$tyfy-sans:\"IBM Plex Sans\", sans-serif;\n$tyfy-mono:\"IBM Plex Mono\", monospace;\n\n// custom settings variable values\n$tyfy-font-base:$tyfy-serif;\n$tyfy-font-heading:$tyfy-sans;"
+    "code": "// custom core variable values\n$tygrid-unit:0.75rem;\n$tyfont-size-base:1rem;\n$tyfont-size-scalar:1.25;\n\n// custom settings variable values\n$tyfont-base:$tyfy-serif;\n$tyfont-heading:$tyfy-sans;"
   },
   "variants": [
     {
@@ -13,7 +13,7 @@
       "context": {
         "modifier": "short",
         "lang": "scss",
-        "code": "// custom core variable values\n$tyfy-serif:\"IBM Plex Serif\", serif;\n$tyfy-sans:\"IBM Plex Sans\", sans-serif;\n$tyfy-mono:\"IBM Plex Mono\", monospace;\n\n// custom settings variable values\n$tyfy-font-base:$tyfy-serif;\n$tyfy-font-heading:$tyfy-sans;"
+        "code": "// custom core variable values\n$tygrid-unit:0.75rem;\n$tyfont-size-base:1rem;\n$tyfont-size-scalar:1.25;\n\n// custom settings variable values\n$tyfont-base:$tyfy-serif;\n$tyfont-heading:$tyfy-sans;"
       }
     }
   ]

@@ -1,11 +1,3 @@
-h1:not(.demo) {
-  font-family:$tyfont-condensed;
-  text-transform:uppercase;
-  small {
-    font-size:tyscale(1);
-    text-transform:none;
-  }
-}
 hr.demo {
   margin-bottom:tygrid(1);
   margin-top:tygrid(1);
