@@ -2,10 +2,30 @@
   "title": "Footer Link",
   "label": "Footer Link",
   "notes": "Style for a link appearing in the documentation footer.",
-  "preview": "@preview-footer",
   "status": "ready",
   "context": {
     "linkhref": "https://www.github.com/aaronpinero",
-    "linktext": "Link to Something"
-  }
+    "linktext": "Link to Something",
+    "modifier": "default"
+  },
+  "variants": [
+    {
+      "name": "github",
+      "title": "with Github Icon",
+      "label": "with Github Icon",
+      "notes": "Footer link with the github logo",
+      "context": {
+        "modifier": "github"
+      }
+    },
+    {
+      "name": "npm",
+      "title": "with npm Icon",
+      "label": "with npm Icon",
+      "notes": "Footer link with the npm logo",
+      "context": {
+        "modifier": "npm"
+      }
+    }
+  ]
 }
