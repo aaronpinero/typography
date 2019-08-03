@@ -10,6 +10,16 @@ for (x=0;x<codeboxes.length;x++) {
     var lang = (codetagclasses.length) ? codetagclasses[0].split('-')[1] : false;
     if (lang) {
       // write the lang into the codebox
+      var label = document.createElement("div");
+      var label_text = document.createTextNode('// ' + lang);
+      label.className = "codebox-label";
+      label.appendChild(label_text);
+      if (codeboxes[x].firstChild !== null) {
+        codeboxes[x].insertBefore(label,codeboxes[x].firstChild);
+      }
+      else {
+        codeboxes[x].appendChild(label);
+      }
     }
   }
 }
