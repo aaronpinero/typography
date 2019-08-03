@@ -1,0 +1,8 @@
+{
+  "title": "Example Box",
+  "notes": "For presenting framework examples; uses the &lt;figure&gt; element",
+  "status": "ready",
+  "context": {
+    "output": "<p class=\"lede\">Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.</p>\n<p>I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. May the Force be with you.</p>"
+  }
+}

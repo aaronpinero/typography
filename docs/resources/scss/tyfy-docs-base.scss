@@ -12,8 +12,9 @@ $tycolor-rev-bg:#333;
 
 // additional sass variables
 $tywidth-constrained:55rem;
-$color-example:darken(#80cc33,25%);
+$tycolor-example:darken(#80cc33,25%);
 $color-value:mix(#8033cc,#999999,75%);
+$tybreak-boxes:30rem;
 
 // import tyfy
 @import "../../../source/scss/tyfy.scss";

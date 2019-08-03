@@ -111,16 +111,9 @@ section.demo.reverse {
 }
 pre.codebox {
   & + figure.example {
-    border:$tywidth-border $tycolor-border solid;
     border-top:none;
-    color:$color-example;
     margin:0;
-    padding:calc(#{$tyspacing-md} - #{$tywidth-border});
     padding-top:$tyspacing-md;
-    position:relative;
-    a:not([href]) {
-      color:$color-example;
-    }
     .reverse-toggle {
       border:$tywidth-border white solid;
       box-shadow:0 1px 3px rgba(black,0.33);
@@ -217,10 +210,10 @@ table.utility {
     }
   }
   & + figure.example {
-    --tycolor-fg:#{$color-example};
+    --tycolor-fg:#{$tycolor-example};
     border:$tywidth-border $tycolor-border solid;
     border-top:none;
-    color:$color-example;
+    color:$tycolor-example;
     margin:0;
     padding:calc(#{$tyspacing-md} - #{$tywidth-border});
     padding-top:$tyspacing-md;
