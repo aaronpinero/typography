@@ -1,0 +1,31 @@
+nav.nav-inpage {
+  --tycolor-fg:#{$tycolor-text-light};
+  color:$tycolor-text-light;
+  font-size:tyscale(-1);
+  line-height:tylead(tyscale(0));
+  width:tygrid(9);
+  h2.tyfont-size-h6 {
+    font-family:$tyfont-condensed;
+    font-size:tyscale(-1);
+    line-height:tylead(tyscale(0));
+    padding-bottom:tygrid(1);
+    position:relative;
+    &::after {
+      background-color:rgba($tycolor-link-active,0.5);
+      bottom:calc(#{tygrid(0.5)} - 1px);
+      content:"";
+      height:2px;
+      left:0;
+      position:absolute;
+      width:18px;
+    }
+    text-transform:uppercase;
+    a[href] {
+      color:$tycolor-text-light;
+      &:hover,
+      &:active {
+        color:var(--tycolor-link-active);
+      }
+    }
+  }
+}

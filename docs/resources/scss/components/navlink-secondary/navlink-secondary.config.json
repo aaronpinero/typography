@@ -1,10 +1,10 @@
 {
-  "title": "Footer Link",
-  "label": "Footer Link",
-  "notes": "Style for a link appearing in the documentation footer.",
+  "title": "Nav Link, Secondary",
+  "label": "Nav Link, Secondary",
+  "notes": "Style for a nav link appearing in secondary navigation like the footer or sidebar.",
   "status": "ready",
   "context": {
-    "linkhref": "http://www.aaronpinero.com",
+    "linkurl": "http://www.aaronpinero.com",
     "linktext": "Aaron Pinero",
     "modifier": "default"
   },
@@ -13,9 +13,9 @@
       "name": "github",
       "title": "with Github Icon",
       "label": "with Github Icon",
-      "notes": "Footer link with the github logo",
+      "notes": "Nav link with the github logo",
       "context": {
-        "linkhref": "https://github.com/aaronpinero/typography",
+        "linkurl": "https://github.com/aaronpinero/typography",
         "linktext": "Fork on Github",
         "modifier": "github"
       }
@@ -24,9 +24,9 @@
       "name": "npm",
       "title": "with npm Icon",
       "label": "with npm Icon",
-      "notes": "Footer link with the npm logo",
+      "notes": "Nav link with the npm logo",
       "context": {
-        "linkhref": "https://www.npmjs.com/package/tyfy",
+        "linkurl": "https://www.npmjs.com/package/tyfy",
         "linktext": "npm install tyfy",
         "modifier": "npm"
       }
