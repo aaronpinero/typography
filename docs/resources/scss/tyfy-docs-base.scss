@@ -10,6 +10,11 @@ $tyfont-table:$tyfont-sans;
 $tyfont-input:$tyfont-sans;
 $tycolor-rev-bg:#333;
 
+// import tyfy
+@import "../../../source/scss/tyfy.scss";
+@import "../../../source/scss/extras/_effects.scss";
+@import "../../../source/scss/extras/_responsive_text.scss";
+
 // additional sass variables
 $tywidth-constrained:55rem;
 $tywidth-page:tygrid(60);
@@ -17,15 +22,18 @@ $tywidth-content:tygrid(45);
 $tycolor-example:darken(#80cc33,25%);
 $color-value:mix(#8033cc,#999999,75%);
 
-// import tyfy
-@import "../../../source/scss/tyfy.scss";
-@import "../../../source/scss/extras/_effects.scss";
-@import "../../../source/scss/extras/_responsive_text.scss";
-
 body {
-  @include tyfadein(2000ms);
+  @include tyfadein(1s);
   margin:0 0 tygrid(2) 0;
   padding:0;
+}
+.block {
+  box-sizing:border-box;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:$tywidth-page + $tyspacing-md + $tyspacing-md; // width plus padding
+  padding-left:$tyspacing-md;
+  padding-right:$tyspacing-md;
 }
 .constrained {
   margin-left:auto;

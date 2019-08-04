@@ -5,6 +5,6 @@
   "preview": "@preview-template",
   "status": "ready",
   "context": {
-    "title": "Module Name Here"
+    "title": "Page Title Here"
   }
 }

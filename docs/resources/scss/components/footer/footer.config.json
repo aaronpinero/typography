@@ -1,0 +1,7 @@
+{
+  "title": "Footer",
+  "label": "Footer",
+  "notes": "The page footer that include the copyright and links to the framework repository. The footer style extends the block class to gain standard padding and max width.",
+  "preview": "@preview-template",
+  "status": "ready"
+}

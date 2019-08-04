@@ -2,11 +2,6 @@ hr.demo {
   margin-bottom:tygrid(1);
   margin-top:tygrid(1);
 }
-strong.tyfy {
-  font-family:$tyfont-condensed;
-  font-weight:bold;
-  text-transform:uppercase;
-}
 .tyhidden {
   @include tyhidden;
 }
@@ -99,15 +94,6 @@ section.main {
   @extend .constrained;
   margin-top:0;
   padding:$tyspacing-md;
-}
-section.demo {
-  border:$tywidth-border dashed darken($tycolor-bg,10%);
-  border-radius:tygrid();
-  box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
-  margin-top:$tyspacing-md;
-}
-section.demo.reverse {
-  border:none;
 }
 pre.codebox {
   & + figure.example {

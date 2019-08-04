@@ -4,8 +4,8 @@
   "notes": "Style for a link appearing in the documentation footer.",
   "status": "ready",
   "context": {
-    "linkhref": "https://www.github.com/aaronpinero",
-    "linktext": "Link to Something",
+    "linkhref": "http://www.aaronpinero.com",
+    "linktext": "Aaron Pinero",
     "modifier": "default"
   },
   "variants": [
@@ -15,6 +15,8 @@
       "label": "with Github Icon",
       "notes": "Footer link with the github logo",
       "context": {
+        "linkhref": "https://github.com/aaronpinero/typography",
+        "linktext": "Fork on Github",
         "modifier": "github"
       }
     },
@@ -24,6 +26,8 @@
       "label": "with npm Icon",
       "notes": "Footer link with the npm logo",
       "context": {
+        "linkhref": "https://www.npmjs.com/package/tyfy",
+        "linktext": "npm install tyfy",
         "modifier": "npm"
       }
     }
