@@ -27,6 +27,8 @@ body {
   margin:0 0 tygrid(2) 0;
   padding:0;
 }
+
+// common width and padding
 .block {
   box-sizing:border-box;
   margin-left:auto;
@@ -35,6 +37,33 @@ body {
   padding-left:$tyspacing-md;
   padding-right:$tyspacing-md;
 }
+
+// element containing the page body text, present on all pages
+.section-body {
+  margin-left:auto;
+  margin-right:auto;
+  max-width:$tywidth-content;
+}
+
+// in-page nav, not present on all pages
+.nav-inpage {
+  float:right;
+  @media (max-width:$tybreak-cols2 - 1em/16) {
+    @include tyhidden;
+  }
+  & + .section-body {
+    @media (min-width:$tybreak-cols2) {
+      margin-left:0;
+      margin-right:tygrid(13);
+    }
+  }
+}
+
+// space between content and footer
+main.block + footer.footer {
+  padding-top:$tyspacing-md;
+}
+
 .constrained {
   margin-left:auto;
   margin-right:auto;
