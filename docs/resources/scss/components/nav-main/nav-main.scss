@@ -1,0 +1,195 @@
+// breakpoint dividing mobile nav and desktop nav
+$nav-show:50rem;
+
+// nav element
+nav.nav-main {
+  background-color:var(--tycolor-bg);
+  position:relative;
+  // styles when menu is js-active
+  &.js-nav-active {
+    @media (min-width:$nav-show) {
+      display:flex;
+      justify-content:space-between;
+    }
+  }
+}
+
+// title of menu that will serve as mobile menu button
+nav.nav-main {
+  h1 {
+    font-size:tyscale(0);
+    line-height:tygrid(4);
+    margin:0;
+    position:absolute;
+    right:0;
+    top:0;
+  }
+  &.js-nav-active {
+    h1 {
+      cursor:pointer;
+      height:tygrid(4);
+      overflow:hidden;
+      width:tygrid(4);
+      &::before {
+        background-color:var(--tycolor-bg);;
+        content:tychar($tyicons-bars);
+        display:block;
+        font-family:$tyfont-symbol;
+        font-weight:normal;
+        text-align:center;
+        transition:background-color $tyduration-hover, color $tyduration-hover;
+        width:tygrid(4);
+      }
+      &:hover {
+        &::before {
+          background-color:var(--tycolor-link-active);
+          color:var(--tycolor-bg);
+        }
+      }
+      @media (min-width:$nav-show) {
+        height:0;
+        overflow:hidden;
+        visibility:hidden;
+        width:0;
+      }
+    }
+  }
+  // change of state when mobile nav is open
+  &.nav-opened {
+    h1 {
+      &::before {
+        content:"\f00d";
+      }
+    }
+  }
+}
+
+// basic list styles
+nav.nav-main {
+  ul {
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+}
+
+// top level list styles
+nav.nav-main {
+  &.js-nav-active {
+    & > ul {
+      @media (min-width:$nav-show) {
+        flex-direction:row;
+      }
+      @media (max-width:$nav-show - 1rem/20) {
+        height:0;
+        visibility:hidden;
+        &.nav-transition {
+          visibility:visible;
+        }
+      }
+    }
+  }
+  &.nav-opened {
+    & > ul {
+      height:auto;
+      visibility:visible;
+    }
+  }
+}
+
+// second level list styles
+nav.nav-main {
+  & > ul ul {
+    border-left:$tycolor-bg tygrid(0.5) solid;
+    border-right:$tycolor-bg tygrid(0.5) solid;
+    position:relative;
+    &::before {
+      background-image:url('data:image/svg+xml;charset=UTF-8,<svg width="28px" height="14px" viewBox="0 0 28 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="0,14 14,0 28,14" fill="#{$tycolor-rev-bg}"></polygon></svg>');
+      background-repeat:no-repeat;
+      background-position:center center;
+      background-size:28px 14px;
+      content:"";
+      height:14px;
+      left:1.75rem;
+      position:absolute;
+      top:-14px;
+      width:28px;
+    }
+  }
+  &.js-nav-active {
+    & > ul ul {
+      height:0;
+      overflow:hidden;
+      &.ul-opened {
+        height:auto;
+        overflow:show;
+      }
+      @media (min-width:$nav-show) {
+        border-bottom:$tycolor-bg tygrid(0.5) solid;
+        position:absolute;
+        visibility:hidden;
+        &.ul-transition,
+        &.ul-opened {
+          visibility:visible;
+        }
+      }
+    }
+  }
+}
+
+// list item styles
+nav.nav-main {
+  li {
+    margin:0;
+    padding:0;
+  }
+}
+
+// menu links, default
+nav.nav-main {
+  ul {
+    a[href] {
+      display:block;
+      font-family:$tyfont-sans;
+      line-height:tylead(tyscale(0));
+      padding:tygrid(1) tygrid(2);
+      position:relative;
+    }
+    li + li > a[href] {
+      &::before {
+        background-color:var(--tycolor-border);
+        content:"";
+        height:$tywidth-border;
+        left:tygrid(2);
+        position:absolute;
+        top:0;
+        width:tygrid(18/14);
+      }
+    }
+  }
+  &.js-nav-active {
+    ul {
+      li + li > a[href] {
+        &::before {
+          height:tygrid(18/14);
+          left:0;
+          margin-top:tygrid(-9/14);
+          top:50%;
+          width:$tywidth-border;
+        }
+      }
+    }
+  }
+}
+
+// menu links, second level
+nav.nav-main {
+  & > ul ul {
+    a[href] {
+      padding:tygrid(1) tygrid(1.5);
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.tyfy.logo {
+  background-image:url('data:image/svg+xml;charset=UTF-8,<svg width="101px" height="18px" viewBox="0 0 101 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M54,3.5 L54,18 L50,18 L50,3.5 L46,3.5 L46,0 L58,0 L58,3.5 L54,3.5 Z M64,18 L64,11.5 L59,0 L63,0 L65.75,7.25 L66.25,7.25 L68.9951172,0 L73,0 L68,11.5 L68,18 L64,18 Z M92,18 L92,11.5 L87,0 L91,0 L93.75,7.25 L94.25,7.25 L96.9951172,0 L101,0 L96,11.5 L96,18 L92,18 Z M75,18 L75,0 L86,0 L86,3.5 L79,3.5 L79,7.00158691 L84.747851,7.00158691 L84.747851,10.5 L79,10.5 L79,18 L75,18 Z" id="Tyfy"></path><g id="tics"><rect x="0" y="0" width="2" height="18"></rect><rect x="5" y="8" width="2" height="10"></rect><rect x="10" y="8" width="2" height="10"></rect><rect x="15" y="0" width="2" height="18"></rect><rect x="30" y="0" width="2" height="18"></rect><rect x="20" y="8" width="2" height="10"></rect><rect x="25" y="8" width="2" height="10"></rect><rect x="35" y="8" width="2" height="10"></rect><rect x="40" y="8" width="2" height="10"></rect></g></svg>');
+  background-position:left tygrid(2) center;
+  background-repeat:no-repeat;
+  background-size:auto tygrid(20/14);
+  box-sizing:border-box;
+  display:block;
+  height:tygrid(4);
+  overflow:hidden;
+  padding-top:tygrid(4);
+  width:tygrid(12);
+}
