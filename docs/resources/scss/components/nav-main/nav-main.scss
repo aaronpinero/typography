@@ -31,7 +31,7 @@ nav.nav-main {
       overflow:hidden;
       width:tygrid(4);
       &::before {
-        background-color:var(--tycolor-bg);;
+        background-color:var(--tycolor-bg);
         content:tychar($tyicons-bars);
         display:block;
         font-family:$tyfont-symbol;
@@ -58,7 +58,7 @@ nav.nav-main {
   &.nav-opened {
     h1 {
       &::before {
-        content:"\f00d";
+        content:tychar($tyicons-x);
       }
     }
   }
@@ -174,11 +174,13 @@ nav.nav-main {
     ul {
       li + li > a[href] {
         &::before {
-          height:tygrid(18/14);
-          left:0;
-          margin-top:tygrid(-9/14);
-          top:50%;
-          width:$tywidth-border;
+          @media (min-width:$nav-show) {
+            height:tygrid(18/14);
+            left:0;
+            margin-top:tygrid(-9/14);
+            top:50%;
+            width:$tywidth-border;
+          }
         }
       }
     }
