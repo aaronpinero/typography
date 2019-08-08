@@ -1,12 +1,15 @@
 // breakpoint dividing mobile nav and desktop nav
 $nav-show:52rem;
 
+// max width of a block
+$width-max-block:$tywidth-page + $tyspacing-md + $tyspacing-md;
+
+
 // nav element
 nav.nav-main {
   background-color:var(--tycolor-bg);
   margin-left:auto;
   margin-right:auto;
-  max-width:$tywidth-page + $tyspacing-md + $tyspacing-md; // width plus padding
   position:relative;
   // styles when menu is js-active
   &.js-nav-active {
@@ -26,6 +29,9 @@ nav.nav-main {
     position:absolute;
     right:0;
     top:0;
+    @media (min-width:$width-max-block) {
+      right:calc(50vw - #{$width-max-block/2});
+    }
   }
   &.js-nav-active {
     h1 {
@@ -67,6 +73,15 @@ nav.nav-main {
   }
 }
 
+// logo
+nav.nav-main {
+  .tyfy.logo {
+    @media (min-width:$width-max-block) {
+      margin-left:calc(50vw - #{$width-max-block/2});
+    }
+  }
+}
+
 // basic list styles
 nav.nav-main {
   ul {
@@ -83,6 +98,11 @@ nav.nav-main {
 
 // top level list styles
 nav.nav-main {
+  & > ul {
+    @media (min-width:$width-max-block) {
+      margin-right:calc(50vw - #{$width-max-block/2});
+    }
+  }
   &.js-nav-active {
     & > ul {
       @media (min-width:$nav-show) {
