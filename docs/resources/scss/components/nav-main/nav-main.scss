@@ -1,9 +1,12 @@
 // breakpoint dividing mobile nav and desktop nav
-$nav-show:50rem;
+$nav-show:52rem;
 
 // nav element
 nav.nav-main {
   background-color:var(--tycolor-bg);
+  margin-left:auto;
+  margin-right:auto;
+  max-width:$tywidth-page + $tyspacing-md + $tyspacing-md; // width plus padding
   position:relative;
   // styles when menu is js-active
   &.js-nav-active {
@@ -70,6 +73,8 @@ nav.nav-main {
     box-sizing:border-box;
     display:flex;
     flex-direction:column;
+    font-size:tyscale(0);
+    line-height:tylead(tyscale(0));
     list-style:none;
     margin:0;
     padding:0;
@@ -95,49 +100,64 @@ nav.nav-main {
   }
   &.nav-opened {
     & > ul {
-      box-shadow:0 2px 2px rgba(black,0.1);
-      height:auto;
-      visibility:visible;
+      @media (max-width:$nav-show - 1rem/20) {
+        box-shadow:0 2px 2px rgba(black,0.1);
+        height:auto;
+        visibility:visible;
+      }
     }
   }
 }
 
 // second level list styles
 nav.nav-main {
-  & > ul ul {
+  & > ul > li > ul {
     border-left:$tycolor-bg tygrid(0.5) solid;
     border-right:$tycolor-bg tygrid(0.5) solid;
     position:relative;
-    &::before {
-      background-image:url('data:image/svg+xml;charset=UTF-8,<svg width="28px" height="14px" viewBox="0 0 28 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="0,14 14,0 28,14" fill="#{$tycolor-rev-bg}"></polygon></svg>');
-      background-repeat:no-repeat;
-      background-position:center center;
-      background-size:28px 14px;
-      content:"";
-      height:14px;
-      left:1.75rem;
-      position:absolute;
-      top:-14px;
-      width:28px;
-    }
   }
   &.js-nav-active {
-    & > ul ul {
+    & > ul > li > ul {
       height:0;
       overflow:hidden;
       &.ul-opened {
         height:auto;
-        overflow:show;
+        overflow:visible;
       }
       @media (min-width:$nav-show) {
         border-bottom:$tycolor-bg tygrid(0.5) solid;
+        flex-direction:row;
+        justify-content:center;
+        left:0;
         position:absolute;
         visibility:hidden;
+        width:100%;
         &.ul-transition,
         &.ul-opened {
+          box-shadow:0 2px 2px rgba(black,0.1);
           visibility:visible;
         }
       }
+    }
+    & > ul > li > ul.megamenu {
+      @media (max-width:$nav-show - 1rem/20) {
+        flex-direction:row;
+        flex-wrap:wrap;
+      }
+    }
+  }
+}
+
+// third level list items
+nav.nav-main {
+  & > ul > li > ul.megamenu ul {
+    flex-direction: column;
+    padding-bottom:tygrid(1);
+  }
+  & > ul > li > ul.megamenu li:nth-child(3) ul {
+    @media (min-width:$nav-show) {
+      flex-wrap:wrap;
+      max-height:tygrid(14);
     }
   }
 }
@@ -147,6 +167,24 @@ nav.nav-main {
   li {
     margin:0;
     padding:0;
+  }
+  &.js-nav-active {
+    & > ul ul.megamenu li {
+      flex:1;
+      &:nth-child(3) {
+        @media (min-width:$nav-show) {
+          flex:2;
+        }
+      }
+    }
+  }
+}
+
+// strong
+nav.nav-main {
+  ul li a strong {
+    font-family:$tyfont-condensed;
+    text-transform:uppercase;
   }
 }
 
@@ -189,11 +227,72 @@ nav.nav-main {
   }
 }
 
+// menu links, first level expandable
+nav.nav-main {
+  &.js-nav-active {
+    a[href].expandable {
+      &::after {
+        background-image:url('data:image/svg+xml;charset=UTF-8,<svg width="28px" height="14px" viewBox="0 0 28 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="0,14 14,0 28,14" fill="#{$tycolor-rev-bg}"></polygon></svg>');
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:28px 14px;
+        bottom:0;
+        content:"";
+        height:0px;
+        left:1.75rem;
+        position:absolute;
+        transition:all $tyduration-hover;
+        visibility:hidden;
+        width:28px;
+      }
+    }
+    a[href].expandable.ul-opened {
+      &::after {
+        @media (min-width:$nav-show) {
+          height:14px;
+          visibility:visible;
+        }
+      }
+    }
+  }
+  &.nav-opened {
+    a[href].expandable.ul-opened {
+      &::after {
+        @media (max-width:$nav-show - 1rem/20) {
+          height:14px;
+          visibility:visible;
+        }
+      }
+    }
+  }
+}
+
 // menu links, second level
 nav.nav-main {
   & > ul ul {
     a[href] {
       padding:tygrid(1) tygrid(1.5);
+    }
+    li + li > a[href] {
+      &::before {
+        @media (max-width:$nav-show - 1rem/20) {
+          left:tygrid(1.5);
+        }
+      }
+    }
+  }
+}
+
+// menu links, third level
+nav.nav-main {
+  & > ul > li > ul.megamenu ul {
+    a[href] {
+      padding:tygrid(0) tygrid(1.5);
+    }
+    li + li > a[href] {
+      &::before {
+        display:none;
+      }
     }
   }
 }

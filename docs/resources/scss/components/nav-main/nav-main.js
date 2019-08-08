@@ -12,7 +12,7 @@ if (!nav.hasClass('js-nav-active')) {
   // indicate that javascript is enabled
   nav.addClass('js-nav-active');
   // mark items that have a submenu as expandable
-  nav.find('ul').prev('a').addClass('expandable');
+  nav.find('> ul > li > ul').prev('a').addClass('expandable');
 }
 
 // show/hide menu, mobile
@@ -59,7 +59,61 @@ navHead.click(function(){
   }
 });
 
-
+// show/hide submenu options
+var expandable_options = nav.find('a.expandable');
+expandable_options.each(function(){
+  $(this).on('click',function(e){
+    e.preventDefault();
+    // if this is not open, open it
+    if (!$(this).hasClass('ul-opened')) {
+      var self = $(this);
+      var next = self.next();
+      // if there is another open sibling item and this is the wide screen menu, close it
+      if ($(this).parent().parent().find('.ul-opened').length && !NavIsMobile()) {
+        var opened_height = $(this).parent().parent().find('ul.ul-opened').outerHeight();
+        $(this).parent().parent().find('a.ul-opened').removeClass('ul-opened');
+        $(this).parent().parent().find('ul.ul-opened').css('height',opened_height+'px').addClass('ul-transition').animate({
+          'height':0
+        },nav_animation_timing,function(){
+          $(this).removeAttr('style').removeClass('ul-transition').removeClass('ul-opened');
+        });
+      }
+      self.addClass('ul-opened');
+      next.css('height','auto').addClass('ul-transition');
+      var ul_height = next.outerHeight();
+      next.css('height','0px').animate({
+        'height':ul_height+'px'
+      },nav_animation_timing,function(){
+        $(this).removeAttr('style').removeClass('ul-transition').addClass('ul-opened');
+        // set an event handler that closes the menu if you click away from the navigation
+        $('body').off('click.navclickout').on('click.navclickout',function(e){
+          var isNav = false;
+          if ($(e.target).is('nav.nav-main > ul') || $(e.target).parents('nav.nav-main > ul').length > 0) {
+            isNav = true;
+          }
+          else {
+            ClickOut();
+            $('body').off('click.navclickout');
+          }
+        });
+      });
+    }
+    // else, close it
+    else {
+      var self = $(this);
+      var next = self.next();
+      self.removeClass('ul-opened');
+      var ul_height = next.outerHeight();
+      next.css('height',ul_height+'px').addClass('ul-transition').animate({
+        'height':0
+      },nav_animation_timing,function(){
+        $(this).removeAttr('style').removeClass('ul-transition').removeClass('ul-opened');
+        // remove the click event handler that is no longer needed
+        $('body').off('click.navclickout');
+      });
+    }
+  });
+});
 
 function ClickOut() {
   // if this is the larger screen case, close any submenu
