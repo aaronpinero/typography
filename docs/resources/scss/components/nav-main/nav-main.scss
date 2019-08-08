@@ -18,6 +18,9 @@ nav.nav-main {
       justify-content:space-between;
     }
   }
+  & + * {
+    margin-top:0;
+  }
 }
 
 // title of menu that will serve as mobile menu button
@@ -141,6 +144,7 @@ nav.nav-main {
       height:0;
       overflow:hidden;
       &.ul-opened {
+        border-bottom:$tycolor-bg tygrid(0.5) solid;
         height:auto;
         overflow:visible;
       }
@@ -168,7 +172,7 @@ nav.nav-main {
   }
 }
 
-// third level list items
+// third level list styles
 nav.nav-main {
   & > ul > li > ul.megamenu ul {
     flex-direction: column;
@@ -191,9 +195,11 @@ nav.nav-main {
   &.js-nav-active {
     & > ul ul.megamenu li {
       flex:1;
+      max-width:($width-max-block - tygrid(1)) / 5; // max width minus the borders, divided into fifths
       &:nth-child(3) {
         @media (min-width:$nav-show) {
           flex:2;
+          max-width:2 * (($width-max-block - tygrid(1)) / 5); // max width minus the borders, divided into fifths, allowing 2 fifths
         }
       }
     }

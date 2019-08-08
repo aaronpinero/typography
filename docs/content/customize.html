@@ -4,14 +4,24 @@
     <%include head.html%>
     <title>Tyfy - Customize TYFY</title>
   </head>
-  <body class="">
+  <body>
     <%include header.html%>
-    <section class="main links-underlined">
+    <header class="pagetitle">
 		  <h1>Customize TYFY</h1>
-			<p>You can customize <strong class="tyfy">Tyfy</strong> by adding or removing modules or by changing the value of the framework's variables.</p>
-			<h2>Selecting Modules</h2>
-			<p>If you inspect the main <span class="smallcaps">SCSS</span> file, you will see how <strong class="tyfy">Tyfy</strong> is organized as groups of modules. Each module provides a specific set of features or styles.</p>
-			<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">@import "required/core";
+		</header>
+    <main class="block">
+      <nav class="nav-inpage tymargins-off">
+        <h2 class="tyfont-size-h6"><a href="#top">In This Page</a></h2>
+        <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#modules">Selecting Modules</a></li>
+          <li><a class="navlink-secondary" href="#settings">Custom Settings</a></li>
+        </ul>
+      </nav>
+      <section class="section-body links-underlined">
+        <p>You can customize <strong class="tyfy">Tyfy</strong> by adding or removing modules or by changing the value of the framework's variables.</p>
+        <h2 id="modules">Selecting Modules</h2>
+        <p>If you inspect the main <span class="smallcaps">SCSS</span> file, you will see how <strong class="tyfy">Tyfy</strong> is organized as groups of modules. Each module provides a specific set of features or styles.</p>
+        <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">@import "required/core";
 @import "required/functions";
 @import "required/settings";
 @import "required/mixins";
@@ -33,15 +43,15 @@
 
 @import "extras/icons";
 @import "extras/reverse";</code></pre>
-			<ul>
-				<li><em>Required</em> modules must be included for <strong class="tyfy">Tyfy</strong> to work. The <span class="smallcaps">SCSS</span> will not compile without these modules.</li>
-				<li><em>Essential</em> modules are not strictly required but are highly recommended. Some <strong class="tyfy">Tyfy</strong> features will not work without these modules.</li>
-				<li><em>Optional</em> modules are not required and can be added or removed as desired. These modules provides styles and classes for common content and user interface patterns.</li>
-				<li><em>Extras</em> modules, like the optional modules, can be added or removed as desired. These modules provide enhancements that may not be necessary or desired in every case.</li>
-			</ul>
-			<h3>Example</h3>
-			<p>You have a simple front-end development project. There will not be any forms, quotes, tables, or tabs in the content. However, you would like text sizes to be responsive based on the screen size. Your <span class="smallcaps">SCSS</span> file may look like this:</p>
-			<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">@import "[path to tyfy]/source/scss/required/core.scss";
+        <ul>
+          <li><em>Required</em> modules must be included for <strong class="tyfy">Tyfy</strong> to work. The <span class="smallcaps">SCSS</span> will not compile without these modules.</li>
+          <li><em>Essential</em> modules are not strictly required but are highly recommended. Some <strong class="tyfy">Tyfy</strong> features will not work without these modules.</li>
+          <li><em>Optional</em> modules are not required and can be added or removed as desired. These modules provides styles and classes for common content and user interface patterns.</li>
+          <li><em>Extras</em> modules, like the optional modules, can be added or removed as desired. These modules provide enhancements that may not be necessary or desired in every case.</li>
+        </ul>
+        <h3>Example</h3>
+        <p>You have a simple front-end development project. There will not be any forms, quotes, tables, or tabs in the content. However, you would like text sizes to be responsive based on the screen size. Your <span class="smallcaps">SCSS</span> file may look like this:</p>
+        <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">@import "[path to tyfy]/source/scss/required/core.scss";
 @import "[path to tyfy]/source/scss/required/functions.scss";
 @import "[path to tyfy]/source/scss/required/settings.scss";
 @import "[path to tyfy]/source/scss/required/mixins.scss";
@@ -58,10 +68,10 @@
 @import "[path to tyfy]/source/scss/essential/collapsables.scss";
 
 @import "[path to tyfy]/source/scss/extras/responsive_text.scss";</code></pre>
-			<h2>Customizing Variables</h2>
-			<p><strong class="tyfy">Tyfy</strong> styles are based on <span class="smallcaps">SASS</span> variables that help define the baseline grid, element margins, fonts, text sizes, colors, and more. Sensible defaults are defined so you can get up and running quickly. Overriding the default values can alter the framework’s appearance to fit your brand.</p>
-			<p>To override the default variable values, declare the custom values at the top of your <span class="smallcaps">SCSS</span> file. Begin with any <a href="core.html">core</a> values and then any <a href="settings.html">settings</a> values. The following sample comes from the <span class="smallcaps">SCSS</span> file for this documentation:</p>
-			<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">// custom core variable values
+        <h2 id="settings">Custom Settings</h2>
+        <p><strong class="tyfy">Tyfy</strong> styles are based on <span class="smallcaps">SASS</span> variables that help define the baseline grid, element margins, fonts, text sizes, colors, and more. Sensible defaults are defined so you can get up and running quickly. Overriding the default values can alter the framework’s appearance to fit your brand.</p>
+        <p>To override the default variable values, declare the custom values at the top of your <span class="smallcaps">SCSS</span> file. Begin with any <a href="core.html">core</a> values and then any <a href="settings.html">settings</a> values. The following sample comes from the <span class="smallcaps">SCSS</span> file for this documentation:</p>
+        <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">// custom core variable values
 $tyfont-serif:"IBM Plex Serif", serif;
 $tyfont-sans:"IBM Plex Sans", sans-serif;
 $tyfont-mono:"IBM Plex Mono", monospace;
@@ -72,8 +82,9 @@ $tyfont-heading:$tyfy-sans;
 
 // include tyfy
 @import "[path to tyfy]/source/scss/tyfy.scss"</code></pre>
-			<p>For a full list of variables and their default values, see the documentation for the <a href="core.html">core</a> and <a href="settings.html">settings</a> modules.</p>
-    </section>
+        <p>For a full list of variables and their default values, see the documentation for the <a href="core.html">core</a> and <a href="settings.html">settings</a> modules.</p>
+      </section>
+    </main>
     <%include footer.html%>
   </body>
 </html>

@@ -21,35 +21,77 @@
 		<title>Tyfy - Modules - Styles</title>
 	</head>
 	<body class="">
-		<!-- COMMON HEADER -->
-		<header class="brand tymargins-off reverse" id="top">
-			<h1><a href="index.html">Tyfy</a></h1>
-			<nav>
-				<h2>Contents</h2>
-				<ul class="list-nobullet list-grid-4">
-					<li><a href="startup.html">Get Started</a></li>
-					<li><a href="modules.html">Modules</a></li>
-					<li><a href="variables.html">Variables</a></li>
-					<li><a href="functions.html">Functions</a></li>
-					<li><a href="mixins.html">Mixins</a></li>
-					<li><a href="icons.html">Icons</a></li>
-					<li><a href="paragraphs.html">Paragraphs</a></li>
-					<li><a href="headings.html">Headings</a></li>
-					<li><a href="links.html">Links</a></li>
-					<li><a href="lists.html">Lists</a></li>
-					<li><a href="utility.html">Utility</a></li>
-					<li><a href="quotes.html">Quotes</a></li>
-					<li><a href="tables.html">Tables</a></li>
-					<li><a href="reverse.html">Reverse</a></li>
-					<li><a href="collapsables.html">Collapsables</a></li>
-					<li><a href="tabs.html">Tabs</a></li>
-					<li><a href="forms.html">Forms</a></li>
-  				<li><a href="effects.html">Effects</a></li>
-  				<li><a href="extras.html">Extras</a></li>
-					<li><a href="about.html">About Tyfy</a></li>
-				</ul>
-			</nav>
-		</header>
+		    <!-- COMMON HEADER -->
+    <nav class="nav-main" id="top">
+      <a href="index.html" class="tyfy logo">Tyfy: A Web Framework</a>
+      <h1 class="nav-heading">Main Menu</h1>
+      <ul class="menu">
+        <li><a href="startup.html">Get Started</a></li>
+        <li><a href="customize.html">Customize</a></li>
+        <li>
+          <a href="benefits.html">Benefits</a>
+          <ul class="reverse">
+            <li><a href="scale.html">Modular Scale</a></li>
+            <li><a href="grid.html">Baseline Grid</a></li>
+            <li><a href="margins.html">Sensible Margins</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="modules.html">Modules</a>
+          <ul class="reverse megamenu">
+            <li>
+              <a href="required.html"><strong>Required</strong></a>
+              <ul>
+                <li><a href="core.html">Core</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="mixins.html">Mixins</a></li>
+                <li><a href="settings.html">Settings</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="essential.html"><strong>Essential</strong></a>
+              <ul>
+                <li><a href="body.html">Body</a></li>
+                <li><a href="normalize.html">Normalize</a></li>
+                <li><a href="spacing.html">Spacing</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="optional.html"><strong>Optional</strong></a>
+              <ul>
+                <li><a href="paragraphs.html">Paragraphs</a></li>
+                <li><a href="headings.html">Headings</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="lists.html">Lists</a></li>
+                <li><a href="utility.html">Text Styles</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="collapsables.html">Collapsables</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="extras.html"><strong>Extras</strong></a>
+              <ul>
+                <li><a href="effects.html">Effects</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="responsive_text.html">Responsive Text</a></li>
+                <li><a href="reverse.html">Reverse</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+          <ul class="reverse">
+            <li><a href="about.html">Read Me</a></li>
+            <li><a href="compatibility.html">Browser Compatibility</a></li>
+            <li><a href="tools.html">Build Tools</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 		<!--/ COMMON HEADER -->
 		<section class="main links-underlined">
 			<h1>Styles</h1>
@@ -164,7 +206,7 @@
         }
       });
     </script>
-    <script src="../resources/script/docs-nav.js"></script>
+    <script src="../resources/scss/components/nav-main/nav-main.js"></script>
     <script src="../resources/vendor/prism/prism.js"></script>
 		<!--/ COMMON FOOTER -->
 	</body>
