@@ -11,27 +11,29 @@
     </header>
     <main class="block">
       <nav class="nav-inpage tymargins-off">
-        <h2 class="tyfont-size-h6"><a href="#top">In This Page</a></h2>
+        <h2 class="tyfont-size-h6"><a href="#top">Get Started</a></h2>
         <ul class="list-nobullet">
           <li><a class="navlink-secondary" href="#start-scss">Start with <span class="smallcaps">SCSS</span></a></li>
           <li><a class="navlink-secondary" href="#start-css">Start with <span class="smallcaps">CSS</span></a></li>
         </ul>
       </nav>
       <section class="section-body links-underlined">
-        <p><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to your front-end development. It provides a <a href="grid.html">baseline grid</a>, <a href="scale.html">modular scale</a>, <a href="margins.html">sensible margins</a>, and styles for common HTML elements and content patterns.</p>
+        <p><strong class="tyfy">Tyfy</strong> is a framework for applying elements of typographic style to your front-end development. It provides a <a href="grid.html">baseline grid</a>, <a href="scale.html">modular scale</a>, <a href="margins.html">sensible margins</a>, and styles for common HTML elements and design patterns.</p>
         <p>To get started you can either <a href="#css">use the compiled <span class="smallcaps">CSS</span></a> or <a href="#scss">begin with the <span class="smallcaps">SCSS</span> files</a> and customize the framework by overriding the default variable values. The latter approach is recommended as it allows you to take full advantage of the <a href="mixins.html">mixins</a> and <a href="functions.html">functions</a> for the baseline grid and modular scale.</p>
         <h2 id="start-scss">Start with <span class="smallcaps">SCSS</span> <small>(recommended)</small></h2>
         <p>Use this approach if you want to customize <strong class="tyfy">Tyfy</strong> and use the framework as a foundation for your project.</p>
         <ol>
           <li>Clone the github project or install using <code>npm install tyfy</code></li>
           <li>
-            <p>If you want to customize any of the <strong class="tyfy">Tyfy</strong> variable values, declare the custom values at the top of your <span class="smallcaps">SCSS</span> file. Begin with the <a href="core.html">core</a> values and then any <a href="settings.html">settings</a> values. The following sample comes from the <span class="smallcaps">SCSS</span> file for this documentation:</p>
+            <p>If you want to customize any of the <strong class="tyfy">Tyfy</strong> variable values, declare the custom values at the top of your <span class="smallcaps">SCSS</span> file. Begin with the <a href="core.html">core</a> values and then any <a href="settings.html">settings</a> values. For example:</p>
             <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">// custom core variable values
+$tygrid-unit:0.75rem;
+$tyfont-size-scalar:1.25;
+
+// custom settings variable values
 $tyfont-serif:"IBM Plex Serif", serif;
 $tyfont-sans:"IBM Plex Sans", sans-serif;
 $tyfont-mono:"IBM Plex Mono", monospace;
-
-// custom settings variable values
 $tyfont-base:$tyfont-serif;
 $tyfont-heading:$tyfont-sans;</code></pre>
           </li>
@@ -41,7 +43,7 @@ $tyfont-heading:$tyfont-sans;</code></pre>
             <p>The main <span class="smallcaps">SCSS</span> file includes all of the <a href="required.html">required</a>, <a href="essential.html">essential</a> and <a href="optional.html">optional</a> <strong class="tyfy">Tyfy</strong> modules. It also includes the <a href="icons.html">icons</a> and <a href="reverse.html">reverse</a> extras modules.</p>
           </li>
           <li>
-            <p>Import any other <a href="extras.html">extras</a> modules you may need for your project.</p>
+            <p>Import any other <a href="extras.html">extras</a> modules you may need for your project. For example:</p>
             <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">@import "[path to tyfy]/source/scss/extras/responsive_text";</code></pre>
           </li>
           <li>
@@ -58,8 +60,8 @@ $tyfont-heading:$tyfont-sans;</code></pre>
             <ul class="sibling-margins-off">
               <li><a href="customize.html">customizing</a> the framework for your project</li>
               <li>using the <a href="mixins.html">mixins</a> and <a href="functions.html">functions</a></li>
-              <li>styles, variables, and classes provided by the <a href="#modules">modules</a></li>
-              <li><a href="tools.html">build tools</a> that can be used with <strong class="tyfy">Tyfy</strong></li>
+              <li>styles, variables, and classes provided by the <a href="modules.html">modules</a></li>
+              <li><a href="tools.html">tools</a> that have been used to build <strong class="tyfy">Tyfy</strong></li>
             </ul>
           </li>
         </ol>
@@ -85,7 +87,7 @@ $tyfont-heading:$tyfont-sans;</code></pre>
   &lt;script src="dist/script/tabs.js"&gt;&lt;/script&gt;
 &lt;/body&gt;</code></pre>
           </li>
-          <li>Now you’re ready to go. Review the <a href="#modules">modules documentation</a> to learn more about <strong class="tyfy">Tyfy</strong> styles and <span class="smallcaps">CSS</span> classes.</li>
+          <li>Now you’re ready to go. Review the <a href="modules.html">modules documentation</a> to learn more about <strong class="tyfy">Tyfy</strong> styles and <span class="smallcaps">CSS</span> classes.</li>
         </ol>
       </section>
     </main>
