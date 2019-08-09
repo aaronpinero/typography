@@ -9,4 +9,19 @@ figure.output {
   margin-right:0; // override browser default
   padding:calc(#{$tyspacing-md} - #{$tywidth-border});
   position:relative;
+  &.reverse {
+    border-color:$tycolor-rev-border;
+  }
+  .reverse-toggle {
+    border:$tywidth-border white solid;
+    box-shadow:0 1px 3px rgba(black,0.33);
+    font-family:$tyfont-sans;
+    font-weight:bold;
+    letter-spacing:1px;
+    position:absolute;
+    right:0;
+    text-transform:uppercase;
+    top:tygrid(-1.5);
+    transform:scale(0.66);
+  }
 }

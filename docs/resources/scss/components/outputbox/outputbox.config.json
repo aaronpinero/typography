@@ -2,8 +2,20 @@
   "title": "Output Box",
   "label": "Output Box",
   "notes": "A &lt;figure&gt; that displays the output resulting from some code; uses the <code>output</code> class",
+  "preview": "@preview-output",
   "status": "ready",
   "context": {
+    "modifier": "",
     "output": "<p class=\"lede\">Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.</p>\n<p>I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. May the Force be with you.</p>"
-  }
+  },
+  "variants": [
+    {
+      "name": "reverse",
+      "notes": "Version of the figure that allows the user to toggle between default display and display using the reverse class",
+      "context": {
+        "modifier": "reverse",
+        "output": "<div class=\"reverse\"><p class=\"lede\">Luke, we’re ready for takeoff. Good luck, Lando When we find Jabba the Hut and that bounty hunter, we’ll contact you.</p>\n<p>I’ll meet you at the rendezvous point on Tatooine. Princess, we’ll find Han. I promise. Chewie, I’ll be waiting for your signal. Take care, you two. May the Force be with you.</p></div>"
+      }
+    }
+  ]
 }
