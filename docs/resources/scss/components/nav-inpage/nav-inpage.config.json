@@ -1,7 +1,7 @@
 {
   "title": "In-Page Nav",
   "label": "In-Page Nav",
-  "notes": "Nav that show the names of and provides links to the major headings within a page",
+  "notes": "Nav that show the names of and provides links to the major headings within a page. This nave is not shown below a certain screen width",
   "status": "ready",
   "context": {
     "navheading": "In This Section",
