@@ -17,33 +17,29 @@ main {
   display: block; }
 
 /* line 12, source/scss/essential/_normalize.scss */
-pre {
-  font-family: "IBM Plex Mono", courier, monospace;
-  font-size: 1rem; }
-
-/* line 16, source/scss/essential/_normalize.scss */
 a {
   background-color: transparent; }
 
-/* line 19, source/scss/essential/_normalize.scss */
+/* line 15, source/scss/essential/_normalize.scss */
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   text-decoration: underline dotted; }
 
-/* line 24, source/scss/essential/_normalize.scss */
+/* line 20, source/scss/essential/_normalize.scss */
 b,
 strong {
   font-weight: bolder; }
 
-/* line 28, source/scss/essential/_normalize.scss */
+/* line 24, source/scss/essential/_normalize.scss */
 code,
 kbd,
+pre,
 samp {
   font-family: "IBM Plex Mono", courier, monospace;
   font-size: 1rem; }
 
-/* line 34, source/scss/essential/_normalize.scss */
+/* line 31, source/scss/essential/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -51,19 +47,19 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 41, source/scss/essential/_normalize.scss */
+/* line 38, source/scss/essential/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
-/* line 44, source/scss/essential/_normalize.scss */
+/* line 41, source/scss/essential/_normalize.scss */
 sup {
   top: -0.5em; }
 
-/* line 47, source/scss/essential/_normalize.scss */
+/* line 44, source/scss/essential/_normalize.scss */
 img {
   border-style: none; }
 
-/* line 50, source/scss/essential/_normalize.scss */
+/* line 47, source/scss/essential/_normalize.scss */
 button,
 input,
 optgroup,
@@ -73,24 +69,24 @@ textarea {
   font-size: 100%;
   margin: 0; }
 
-/* line 60, source/scss/essential/_normalize.scss */
+/* line 57, source/scss/essential/_normalize.scss */
 button,
 input {
   overflow: visible; }
 
-/* line 64, source/scss/essential/_normalize.scss */
+/* line 61, source/scss/essential/_normalize.scss */
 button,
 select {
   text-transform: none; }
 
-/* line 68, source/scss/essential/_normalize.scss */
+/* line 65, source/scss/essential/_normalize.scss */
 button,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; }
 
-/* line 74, source/scss/essential/_normalize.scss */
+/* line 71, source/scss/essential/_normalize.scss */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -98,20 +94,20 @@ button::-moz-focus-inner,
   border-style: none;
   padding: 0; }
 
-/* line 81, source/scss/essential/_normalize.scss */
+/* line 78, source/scss/essential/_normalize.scss */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText; }
 
-/* line 87, source/scss/essential/_normalize.scss */
+/* line 84, source/scss/essential/_normalize.scss */
 fieldset {
   border-width: 2px;
   padding: calc(1.75rem - 2px);
   padding-top: calc(1.3125rem - 2px); }
 
-/* line 92, source/scss/essential/_normalize.scss */
+/* line 89, source/scss/essential/_normalize.scss */
 legend {
   box-sizing: border-box;
   color: inherit;
@@ -120,50 +116,50 @@ legend {
   padding: 0;
   white-space: normal; }
 
-/* line 100, source/scss/essential/_normalize.scss */
+/* line 97, source/scss/essential/_normalize.scss */
 textarea {
   overflow: auto; }
 
-/* line 103, source/scss/essential/_normalize.scss */
+/* line 100, source/scss/essential/_normalize.scss */
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
   padding: 0; }
 
-/* line 108, source/scss/essential/_normalize.scss */
+/* line 105, source/scss/essential/_normalize.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
-/* line 112, source/scss/essential/_normalize.scss */
+/* line 109, source/scss/essential/_normalize.scss */
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px; }
 
-/* line 116, source/scss/essential/_normalize.scss */
+/* line 113, source/scss/essential/_normalize.scss */
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/* line 119, source/scss/essential/_normalize.scss */
+/* line 116, source/scss/essential/_normalize.scss */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit; }
 
-/* line 123, source/scss/essential/_normalize.scss */
+/* line 120, source/scss/essential/_normalize.scss */
 [hidden] {
   display: none; }
 
 /* line 1, source/scss/essential/_body.scss */
 :root {
   --tycolor-bg:                   white;
-  --tycolor-bg-tab-active:        rgba(204, 51, 128, 0.12);
+  --tycolor-bg-tab-active:        rgba(204, 0, 102, 0.12);
   --tycolor-fg:                   #111111;
-  --tycolor-text-light:           #949494;
-  --tycolor-link-default:         #3380cc;
-  --tycolor-link-active:          #cc3380;
+  --tycolor-text-light:           #707070;
+  --tycolor-link-default:         #0066CC;
+  --tycolor-link-active:          #cc0066;
   --tycolor-border:               #e2e2e2;
-  --tycolor-border-link-default:  rgba(51, 128, 204, 0.5);
-  --tycolor-border-link-active:   rgba(204, 51, 128, 0.75);
+  --tycolor-border-link-default:  rgba(0, 102, 204, 0.5);
+  --tycolor-border-link-active:   rgba(204, 0, 102, 0.75);
   --tycolor-shade:                rgba(17, 17, 17, 0.05); }
 
 /* line 13, source/scss/essential/_body.scss */
@@ -351,7 +347,7 @@ a {
     border-bottom-width: 0; }
   /* line 27, source/scss/optional/_links.scss */
   a[href].tybutton {
-    background-color: #3380cc;
+    background-color: #0066CC;
     border: none;
     border-radius: 4px;
     color: white;
@@ -367,7 +363,7 @@ a {
     vertical-align: middle; }
     /* line 176, source/scss/required/_mixins.scss */
     a[href].tybutton:hover, a[href].tybutton:active, a[href].tybutton[href]:hover, a[href].tybutton[href]:active {
-      background-color: #cc3380;
+      background-color: #cc0066;
       background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
       color: white; }
     /* line 187, source/scss/required/_mixins.scss */
@@ -378,7 +374,7 @@ a {
       outline: none; }
   /* line 30, source/scss/optional/_links.scss */
   a[href].tybutton-outline {
-    background-color: #3380cc;
+    background-color: #0066CC;
     border: none;
     border-radius: 4px;
     color: white;
@@ -393,12 +389,12 @@ a {
     transition: all 250ms;
     vertical-align: middle;
     background-color: transparent;
-    border: 2px #3380cc solid;
-    color: #3380cc;
+    border: 2px #0066CC solid;
+    color: #0066CC;
     padding: calc(0.4375rem - 2px) calc(1.3125rem - 2px); }
     /* line 176, source/scss/required/_mixins.scss */
     a[href].tybutton-outline:hover, a[href].tybutton-outline:active, a[href].tybutton-outline[href]:hover, a[href].tybutton-outline[href]:active {
-      background-color: #cc3380;
+      background-color: #cc0066;
       background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
       color: white; }
     /* line 187, source/scss/required/_mixins.scss */
@@ -409,7 +405,7 @@ a {
       outline: none; }
     /* line 217, source/scss/required/_mixins.scss */
     a[href].tybutton-outline:hover, a[href].tybutton-outline:active, a[href].tybutton-outline[href]:hover, a[href].tybutton-outline[href]:active {
-      border-color: #c2307a; }
+      border-color: #c20061; }
 
 /* line 2, source/scss/optional/_lists.scss */
 ol,
@@ -759,7 +755,7 @@ span.smallcaps {
 
 /* line 66, source/scss/optional/_utility.scss */
 .tybutton {
-  background-color: #3380cc;
+  background-color: #0066CC;
   border: none;
   border-radius: 4px;
   color: white;
@@ -775,7 +771,7 @@ span.smallcaps {
   vertical-align: middle; }
   /* line 176, source/scss/required/_mixins.scss */
   .tybutton:hover, .tybutton:active, .tybutton[href]:hover, .tybutton[href]:active {
-    background-color: #cc3380;
+    background-color: #cc0066;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
     color: white; }
   /* line 187, source/scss/required/_mixins.scss */
@@ -787,7 +783,7 @@ span.smallcaps {
 
 /* line 69, source/scss/optional/_utility.scss */
 .tybutton-outline {
-  background-color: #3380cc;
+  background-color: #0066CC;
   border: none;
   border-radius: 4px;
   color: white;
@@ -802,12 +798,12 @@ span.smallcaps {
   transition: all 250ms;
   vertical-align: middle;
   background-color: transparent;
-  border: 2px #3380cc solid;
-  color: #3380cc;
+  border: 2px #0066CC solid;
+  color: #0066CC;
   padding: calc(0.4375rem - 2px) calc(1.3125rem - 2px); }
   /* line 176, source/scss/required/_mixins.scss */
   .tybutton-outline:hover, .tybutton-outline:active, .tybutton-outline[href]:hover, .tybutton-outline[href]:active {
-    background-color: #cc3380;
+    background-color: #cc0066;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
     color: white; }
   /* line 187, source/scss/required/_mixins.scss */
@@ -818,7 +814,7 @@ span.smallcaps {
     outline: none; }
   /* line 217, source/scss/required/_mixins.scss */
   .tybutton-outline:hover, .tybutton-outline:active, .tybutton-outline[href]:hover, .tybutton-outline[href]:active {
-    border-color: #c2307a; }
+    border-color: #c20061; }
 
 /* line 72, source/scss/optional/_utility.scss */
 .tyfont-sans {
@@ -1547,7 +1543,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: #3380cc;
+  background-color: #0066CC;
   border: none;
   border-radius: 4px;
   color: white;
@@ -1579,7 +1575,7 @@ input[type="submit"] {
   input[type="submit"]:active,
   input[type="submit"][href]:hover,
   input[type="submit"][href]:active {
-    background-color: #cc3380;
+    background-color: #cc0066;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
     color: white; }
   /* line 187, source/scss/required/_mixins.scss */
@@ -1608,7 +1604,7 @@ select.tyselect {
   /* line 131, source/scss/optional/_forms.scss */
   .tyselect select:not([multiple]),
   select.tyselect:not([multiple]) {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#949494'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#949494'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#707070'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#707070'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: calc(100% - 0.4375rem) center;
     background-size: 1.09375rem auto; }
@@ -1710,14 +1706,14 @@ select.tyselect {
 /* line 14, source/scss/extras/_reverse.scss */
 .reverse {
   --tycolor-bg:                   #333;
-  --tycolor-bg-tab-active:        rgba(230, 153, 192, 0.12);
+  --tycolor-bg-tab-active:        rgba(255, 179, 217, 0.12);
   --tycolor-fg:                   #eeeeee;
   --tycolor-text-light:           #919191;
-  --tycolor-link-default:         #99c0e6;
-  --tycolor-link-active:          #e699c0;
+  --tycolor-link-default:         #b3d9ff;
+  --tycolor-link-active:          #ffb3d9;
   --tycolor-border:               #494949;
-  --tycolor-border-link-default:  rgba(153, 192, 230, 0.5);
-  --tycolor-border-link-active:   rgba(230, 153, 192, 0.75);
+  --tycolor-border-link-default:  rgba(179, 217, 255, 0.5);
+  --tycolor-border-link-active:   rgba(255, 179, 217, 0.75);
   --tycolor-shade:                rgba(238, 238, 238, 0.05);
   background-color: var(--tycolor-bg);
   color: var(--tycolor-fg); }
@@ -1728,7 +1724,7 @@ select.tyselect {
   .reverse input[type="button"],
   .reverse input[type="reset"],
   .reverse input[type="submit"] {
-    background-color: #99c0e6;
+    background-color: #b3d9ff;
     border: none;
     border-radius: 4px;
     color: black;
@@ -1764,7 +1760,7 @@ select.tyselect {
     .reverse input[type="submit"]:active,
     .reverse input[type="submit"][href]:hover,
     .reverse input[type="submit"][href]:active {
-      background-color: #e699c0;
+      background-color: #ffb3d9;
       background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
       color: black; }
     /* line 187, source/scss/required/_mixins.scss */
@@ -1796,7 +1792,7 @@ select.tyselect {
   /* line 38, source/scss/extras/_reverse.scss */
   .reverse .tybutton-outline,
   .reverse a.tybutton-outline {
-    background-color: #99c0e6;
+    background-color: #b3d9ff;
     border: none;
     border-radius: 4px;
     color: black;
@@ -1811,8 +1807,8 @@ select.tyselect {
     transition: all 250ms;
     vertical-align: middle;
     background-color: transparent;
-    border: 2px #99c0e6 solid;
-    color: #99c0e6;
+    border: 2px #b3d9ff solid;
+    color: #b3d9ff;
     padding: calc(0.4375rem - 2px) calc(1.3125rem - 2px); }
     /* line 176, source/scss/required/_mixins.scss */
     .reverse .tybutton-outline:hover, .reverse .tybutton-outline:active, .reverse .tybutton-outline[href]:hover, .reverse .tybutton-outline[href]:active,
@@ -1820,7 +1816,7 @@ select.tyselect {
     .reverse a.tybutton-outline:active,
     .reverse a.tybutton-outline[href]:hover,
     .reverse a.tybutton-outline[href]:active {
-      background-color: #e699c0;
+      background-color: #ffb3d9;
       background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
       color: black; }
     /* line 187, source/scss/required/_mixins.scss */
@@ -1839,7 +1835,7 @@ select.tyselect {
     .reverse a.tybutton-outline:active,
     .reverse a.tybutton-outline[href]:hover,
     .reverse a.tybutton-outline[href]:active {
-      border-color: #da91b6; }
+      border-color: #f2aace; }
   /* line 45, source/scss/extras/_reverse.scss */
   .reverse blockquote.pullquote-roof-fixed::before, .reverse blockquote.pullquote-roof-full::before {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#494949%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
@@ -2182,8 +2178,8 @@ figure.output + pre.codebox {
 
 /* line 153, docs/resources/scss/tyfy-docs-all.scss */
 footer.footer {
-  --tycolor-fg:#949494;
-  color: #949494;
+  --tycolor-fg:#707070;
+  color: #707070;
   font-size: 0.83333rem;
   line-height: 1.75rem; }
   /* line 93, source/scss/required/_mixins.scss */
@@ -2226,8 +2222,8 @@ footer.footer {
 
 /* line 182, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-inpage {
-  --tycolor-fg:#949494;
-  color: #949494;
+  --tycolor-fg:#707070;
+  color: #707070;
   font-size: 0.83333rem;
   line-height: 1.75rem;
   width: 7.875rem; }
@@ -2241,7 +2237,7 @@ nav.nav-inpage {
     text-transform: uppercase; }
     /* line 194, docs/resources/scss/tyfy-docs-all.scss */
     nav.nav-inpage h2.tyfont-size-h6::after {
-      background-color: rgba(204, 51, 128, 0.5);
+      background-color: rgba(204, 0, 102, 0.5);
       bottom: calc(0.4375rem - 1px);
       content: "";
       height: 2px;
@@ -2250,7 +2246,7 @@ nav.nav-inpage {
       width: 18px; }
     /* line 204, docs/resources/scss/tyfy-docs-all.scss */
     nav.nav-inpage h2.tyfont-size-h6 a[href] {
-      color: #949494; }
+      color: #707070; }
       /* line 206, docs/resources/scss/tyfy-docs-all.scss */
       nav.nav-inpage h2.tyfont-size-h6 a[href]:hover, nav.nav-inpage h2.tyfont-size-h6 a[href]:active {
         color: var(--tycolor-link-active); }
@@ -2498,7 +2494,7 @@ nav.nav-main > ul > li > ul.megamenu ul li + li > a[href]::before {
 
 /* line 537, docs/resources/scss/tyfy-docs-all.scss */
 a[href].navlink-secondary {
-  color: #949494;
+  color: #707070;
   font-family: "IBM Plex Sans", helvetica, arial, sans-serif; }
   /* line 540, docs/resources/scss/tyfy-docs-all.scss */
   a[href].navlink-secondary:hover, a[href].navlink-secondary:active {
@@ -2514,19 +2510,19 @@ a[href].navlink-secondary {
     width: 1.09375rem; }
   /* line 557, docs/resources/scss/tyfy-docs-all.scss */
   a[href].navlink-secondary.navlink-github:before {
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="#949494"/></svg>'); }
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="#707070"/></svg>'); }
   /* line 562, docs/resources/scss/tyfy-docs-all.scss */
   a[href].navlink-secondary.navlink-github:hover:before, a[href].navlink-secondary.navlink-github:active:before {
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="#cc3380"/></svg>'); }
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="#cc0066"/></svg>'); }
   /* line 567, docs/resources/scss/tyfy-docs-all.scss */
   a[href].navlink-secondary.navlink-npm {
     font-family: "IBM Plex Mono", courier, monospace; }
     /* line 569, docs/resources/scss/tyfy-docs-all.scss */
     a[href].navlink-secondary.navlink-npm:before {
-      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z" fill="#949494"/></svg>'); }
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z" fill="#707070"/></svg>'); }
     /* line 574, docs/resources/scss/tyfy-docs-all.scss */
     a[href].navlink-secondary.navlink-npm:hover:before, a[href].navlink-secondary.navlink-npm:active:before {
-      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z" fill="#cc3380"/></svg>'); }
+      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z" fill="#cc0066"/></svg>'); }
 
 /* line 582, docs/resources/scss/tyfy-docs-all.scss */
 figure.output {
@@ -2644,7 +2640,7 @@ header.brand nav {
     position: relative; }
     /* line 676, docs/resources/scss/tyfy-docs-all.scss */
     header.brand nav.nav-processed h2 {
-      color: #99c0e6;
+      color: #b3d9ff;
       cursor: pointer;
       height: 1.75rem;
       line-height: 1.75rem;
@@ -2665,7 +2661,7 @@ header.brand nav {
         width: 1.75rem; }
       /* line 696, docs/resources/scss/tyfy-docs-all.scss */
       header.brand nav.nav-processed h2:hover {
-        color: #e699c0; }
+        color: #ffb3d9; }
     /* line 700, docs/resources/scss/tyfy-docs-all.scss */
     header.brand nav.nav-processed ul {
       height: 0;
@@ -2726,7 +2722,7 @@ table.utility th[scope="col"] {
       font-weight: normal; }
     /* line 747, docs/resources/scss/tyfy-docs-all.scss */
     .form-demo label.disabled {
-      color: #949494; }
+      color: #707070; }
   /* line 751, docs/resources/scss/tyfy-docs-all.scss */
   .form-demo .form-control {
     box-sizing: border-box;
@@ -2791,7 +2787,7 @@ table.utility th[scope="col"] {
 
 /* line 826, docs/resources/scss/tyfy-docs-all.scss */
 footer p {
-  color: #949494;
+  color: #707070;
   font-size: 0.83333rem;
   line-height: 0.875rem;
   padding: 0.875rem 1.75rem; }

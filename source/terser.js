@@ -1,3 +1,5 @@
+// this script collects the source js, minifies it, and outputs it to the distribution folder
+
 // module for minifying js
 var Terser = require("terser");
 
