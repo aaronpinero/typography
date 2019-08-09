@@ -19,8 +19,8 @@ $tycolor-rev-bg:#333;
 $tywidth-constrained:55rem;
 $tywidth-page:tygrid(65);
 $tywidth-content:tygrid(50);
-$tycolor-example:darken(#80cc33,25%);
-$color-value:mix(#8033cc,#999999,75%);
+$tycolor-example:#407010;
+$color-value:#6600cc;
 
 body {
   @include tyfadein(1s);

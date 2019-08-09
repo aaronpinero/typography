@@ -2158,7 +2158,7 @@ pre.codebox[class*="language-"] {
 /* line 132, docs/resources/scss/tyfy-docs-all.scss */
 code.val-default {
   background-color: transparent;
-  color: #864dbf;
+  color: #6600cc;
   font-style: italic;
   font-weight: normal;
   padding-left: 0;
@@ -2526,10 +2526,10 @@ a[href].navlink-secondary {
 
 /* line 582, docs/resources/scss/tyfy-docs-all.scss */
 figure.output {
-  --tycolor-fg:#40661a;
+  --tycolor-fg:#407010;
   border: 2px #e2e2e2 solid;
   box-shadow: 0 0 0.875rem rgba(0, 0, 0, 0.05);
-  color: #40661a;
+  color: #407010;
   margin-left: 0;
   margin-right: 0;
   padding: calc(1.75rem - 2px);
@@ -2553,7 +2553,7 @@ figure.output {
 /* line 607, docs/resources/scss/tyfy-docs-all.scss */
 header.pagetitle {
   --tycolor-fg:white;
-  background-color: #CC3380;
+  background-color: #cc0066;
   box-shadow: 0 1px 1.75rem rgba(0, 0, 0, 0.15);
   color: white;
   padding: 3.5rem 1.75rem;
@@ -2763,10 +2763,10 @@ table.utility th[scope="col"] {
       width: 25%; } }
   /* line 797, docs/resources/scss/tyfy-docs-all.scss */
   .form-demo + figure.example {
-    --tycolor-fg:#40661a;
+    --tycolor-fg:#407010;
     border: 2px #e2e2e2 solid;
     border-top: none;
-    color: #40661a;
+    color: #407010;
     margin: 0;
     padding: calc(1.75rem - 2px);
     padding-top: 1.75rem; }
