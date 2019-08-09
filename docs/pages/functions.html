@@ -93,35 +93,47 @@
       </ul>
     </nav>
 		<!--/ COMMON HEADER -->
-		<section class="main links-underlined">
-			<h1>Functions</h1>
-			<p><strong class="tyfy">Tyfy</strong> includes custom <span class="smallcaps">SASS</span> functions that make the framework easier to use.</p>
-			<h2 id="fn-tylead">@function tylead</h2>
-			<p>This function calculates a <a href="grid.html">grid-based</a> line height for a given font size and (optional) line height style. The function helps maintain the baseline grid.</p>
-			<h3 class="tyfont-size-h4">Arguments</h3>
-			<dl>
-				<dt>$font-size</dt>
-				<dd><em>required</em></dd>
-				<dd>Font size value in rem units.</dd>
-				<dt>$leading-style</dt>
-				<dd><em>optional</em></dd>
-				<dd>Default value is <code class="val val-default">base</code></dd>
-				<dd>Accepted values are <code>base</code>, <code>heading</code>, <code>tall</code>, or <code>short</code>.</dd>
-			</dl>
-			<h3 class="tyfont-size-h4">Variables</h3>
-			<p>The leading styles listed above correspond to scalar values. The values adjust the calculated line height to achieve a particular style. A larger value will result in a smaller line height and a smaller value will give a larger line height. These values were determined through experimentation and should not need to be changed. However, the values are available as variables. They can be overridden if you wish to modify the line height calculation.</p>
-			<dl>
-  			<dt>$tylead-adjustment-tall</dt>
-  			<dd><code class="val val-default">0.8 !default;</code></dd>
-  			<dt>$tylead-adjustment-base</dt>
-  			<dd><code class="val val-default">0.9 !default;</code></dd>
-  			<dt>$tylead-adjustment-heading</dt>
-  			<dd><code class="val val-default">1 !default;</code></dd>
-  			<dt>$tylead-adjustment-short</dt>
-  			<dd><code class="val val-default">1.2 !default;</code></dd>
-			</dl>
-			<h3 class="tyfont-size-h4">Example</h3>
-			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">p {
+    <header class="pagetitle">
+      <h1>Functions</h1>
+    </header>
+    <main class="block">
+      <nav class="nav-inpage tymargins-off">
+        <h2 class="tyfont-size-h6"><a href="#top">Functions</a></h2>
+        <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#fn-tylead">tylead</a></li>
+          <li><a class="navlink-secondary" href="#fn-tygrid">tygrid</a></li>
+          <li><a class="navlink-secondary" href="#fn-tyscale">tyscale</a></li>
+          <li><a class="navlink-secondary" href="#fn-tychar">tychar</a></li>
+        </ul>
+      </nav>
+      <section class="section-body links-underlined">
+        <p><strong class="tyfy">Tyfy</strong> includes custom <span class="smallcaps">SASS</span> functions that make the framework easier to use.</p>
+        <h2 id="fn-tylead">@function tylead</h2>
+        <p>This function calculates a <a href="grid.html">grid-based</a> line height for a given font size and (optional) line height style. The function helps maintain the baseline grid.</p>
+        <h3 class="tyfont-size-h4">Arguments</h3>
+        <dl>
+          <dt>$font-size</dt>
+          <dd><em>required</em></dd>
+          <dd>Font size value in rem units.</dd>
+          <dt>$leading-style</dt>
+          <dd><em>optional</em></dd>
+          <dd>Default value is <code class="val val-default">base</code></dd>
+          <dd>Accepted values are <code>base</code>, <code>heading</code>, <code>tall</code>, or <code>short</code>.</dd>
+        </dl>
+        <h3 class="tyfont-size-h4">Variables</h3>
+        <p>The leading styles listed above correspond to scalar values. The values adjust the calculated line height to achieve a particular style. A larger value will result in a smaller line height and a smaller value will give a larger line height. These values were determined through experimentation and should not need to be changed. However, the values are available as variables. They can be overridden if you wish to modify the line height calculation.</p>
+        <dl>
+          <dt>$tylead-adjustment-tall</dt>
+          <dd><code class="val val-default">0.8 !default;</code></dd>
+          <dt>$tylead-adjustment-base</dt>
+          <dd><code class="val val-default">0.9 !default;</code></dd>
+          <dt>$tylead-adjustment-heading</dt>
+          <dd><code class="val val-default">1 !default;</code></dd>
+          <dt>$tylead-adjustment-short</dt>
+          <dd><code class="val val-default">1.2 !default;</code></dd>
+        </dl>
+        <h3 class="tyfont-size-h4">Example</h3>
+        <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">p {
   font-size:$tyfont-size-base;
   line-height:tylead($tyfont-size-base);
 }
@@ -129,31 +141,31 @@ p.special {
   font-size:1.2rem;
   line-height:tylead(1.2rem,tall);
 }</code></pre>
-			<h2 id="fn-tygrid">@function tygrid</h2>
-			<p>This function calculates a grid-based length value. This function facilitates the use of the $tygrid-unit variable by making your <span class="smallcaps">SCSS</span> easier to read, write, and maintain.</p>
-			<h3 class="tyfont-size-h4">Arguments</h3>
-			<dl>
-				<dt>$multiplier</dt>
-				<dd><em>optional</em></dd>
-				<dd>default value is <code class="val val-default">1</code></dd>
-				<dd>Floating point value representing the number of grid units in the desired size.</dd>
-			</dl>
-			<h3 class="tyfont-size-h4">Example</h3>
-			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div {
+        <h2 id="fn-tygrid">@function tygrid</h2>
+        <p>This function calculates a grid-based length value. This function facilitates the use of the $tygrid-unit variable by making your <span class="smallcaps">SCSS</span> easier to read, write, and maintain.</p>
+        <h3 class="tyfont-size-h4">Arguments</h3>
+        <dl>
+          <dt>$multiplier</dt>
+          <dd><em>optional</em></dd>
+          <dd>default value is <code class="val val-default">1</code></dd>
+          <dd>Floating point value representing the number of grid units in the desired size.</dd>
+        </dl>
+        <h3 class="tyfont-size-h4">Example</h3>
+        <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div {
   margin-bottom:tygrid(1.5); // 1.5 times the default grid unit length
   width:tygrid(50); // 50 times the default grid unit length
 }</code></pre>
-			<h2 id="fn-tyscale">@function tyscale</h2>
-			<p>This function facilitates use of the <a href="scale.html">modular typographic scale</a> by automating the calculation of scale-based font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</p>
-			<h3 class="tyfont-size-h4">Arguments</h3>
-			<dl>
-				<dt>$exponent</dt>
-				<dd><em>optional</em></dd>
-				<dd>default value is <code class="val val-default">0</code></dd>
-				<dd>Integer representing a number of steps from the base font size on the modular scale to calculate; positive and negative values allowed.</dd>
-			</dl>
-			<h3 class="tyfont-size-h4">Example</h3>
-			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">$tyfont-size-base: 1rem;
+        <h2 id="fn-tyscale">@function tyscale</h2>
+        <p>This function facilitates use of the <a href="scale.html">modular typographic scale</a> by automating the calculation of scale-based font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</p>
+        <h3 class="tyfont-size-h4">Arguments</h3>
+        <dl>
+          <dt>$exponent</dt>
+          <dd><em>optional</em></dd>
+          <dd>default value is <code class="val val-default">0</code></dd>
+          <dd>Integer representing a number of steps from the base font size on the modular scale to calculate; positive and negative values allowed.</dd>
+        </dl>
+        <h3 class="tyfont-size-h4">Example</h3>
+        <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">$tyfont-size-base: 1rem;
 small {
   font-size: tyscale(-1) !default; // 0.833rem; one scale step down from the base size
 }
@@ -163,19 +175,20 @@ h6 {
 h5 {
   font-size: tyscale(1) !default;  // 1.2rem; one scale step up from the base size
 }</code></pre>
-			<h2 id="fn-tychar">@function tychar</h2>
-			<p>This function facilitates the use of the icon font in <span class="smallcaps">CSS</span> pseudo-elements by working around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> related to character codes. This function properly applies icons when used in the <em>content</em> attribute of a pseudo-element.</p>
-			<h3 class="tyfont-size-h4">Arguments</h3>
-			<dl>
-				<dt>$code</dt>
-				<dd><em>required</em></dd>
-				<dd>A character code without the preceding slash (“\”); there are <a href="settings.html"><span class="smallcaps">SASS</span> variables for the character codes</a>.</dd>
-			</dl>
-			<h3 class="tyfont-size-h4">Example</h3>
-			<pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div::before {
+        <h2 id="fn-tychar">@function tychar</h2>
+        <p>This function facilitates the use of the icon font in <span class="smallcaps">CSS</span> pseudo-elements by working around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> related to character codes. This function properly applies icons when used in the <em>content</em> attribute of a pseudo-element.</p>
+        <h3 class="tyfont-size-h4">Arguments</h3>
+        <dl>
+          <dt>$code</dt>
+          <dd><em>required</em></dd>
+          <dd>A character code without the preceding slash (“\”); there are <a href="settings.html"><span class="smallcaps">SASS</span> variables for the character codes</a>.</dd>
+        </dl>
+        <h3 class="tyfont-size-h4">Example</h3>
+        <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div::before {
   content: tychar($tyicons-angle-left);
 }</code></pre>
-		</section>
+		  </section>
+		</main>
 		<!-- COMMON FOOTER -->
 		<footer class="footer">
 			<div>© Copyright 2017-2019 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>
