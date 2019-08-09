@@ -85,9 +85,9 @@ $tyduration-move:              map-get($tyduration,"move") !default;
 // colors
 $tycolor-bg:                   white !default;
 $tycolor-fg:                   #111111 !default;
-$tycolor-text-light:           mix($tycolor-fg,$tycolor-bg,45%) !default;
-$tycolor-link-default:         #3380cc !default;
-$tycolor-link-active:          #cc3380 !default;
+$tycolor-text-light:           mix($tycolor-fg,$tycolor-bg,60%) !default;
+$tycolor-link-default:         #0066CC !default;
+$tycolor-link-active:          #cc0066 !default;
 $tycolor-bg-tab-active:        rgba($tycolor-link-active,0.12) !default;
 $tycolor-border:               mix($tycolor-fg,$tycolor-bg,12%) !default;
 $tycolor-border-link-default:  rgba($tycolor-link-default,0.5) !default;
