@@ -1,7 +1,3 @@
 stylelint --syntax scss "source/scss/**/*.scss"
 node-sass --source-comments source/scss/ -o dist/style/
 postcss dist/style/*.css --replace --config config/postcss.config.js
-
-stylelint --syntax scss "docs/resources/scss/**/*.scss"
-node-sass --source-comments docs/resources/scss/ -o docs/resources/style/
-postcss docs/resources/style/*.css --replace --config config/postcss.config.js

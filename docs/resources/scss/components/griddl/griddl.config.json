@@ -1,0 +1,6 @@
+{
+  "title": "Grid Definition List",
+  "label": "Grid Definition List",
+  "notes": "A variation on the definition list that uses CSS grid to display &lt;dt&gt; and &lt;dd&gt; pairs side by side.",
+  "status": "ready"
+}
