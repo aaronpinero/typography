@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
 		<link rel="stylesheet" href="../resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy - About - Browser Compatibility</title>
+		<title>Tyfy - Benefits - Baseline Grid</title>
 	</head>
 	<body class="">
 		    <!-- COMMON HEADER -->
@@ -94,24 +94,33 @@
     </nav>
 		<!--/ COMMON HEADER -->
     <header class="pagetitle">
-			<h1>Browser Compatibility</h1>
+			<h1>Baseline Grid</h1>
     </header>
     <main class="block">
       <section class="section-body links-underlined">
-        <p><strong class="tyfy">Tyfy</strong> depends on the support of the following  <span class="smallcaps">CSS</span> standards. Some styles may not work properly if your target web browser lacks the necessary support. You can assess support for each standard at <a href="https://caniuse.com/#home">caniuse.com</a>.</p>
-        <ul class="list-cols-2">
-          <li><a href="https://caniuse.com/#feat=css-mediaqueries"><span class="smallcaps">CSS</span> Media Queries</a></li>
-          <li><a href="https://caniuse.com/#search=calc">calc() as <span class="smallcaps">CSS</span> unit value</a></li>
-          <li><a href="https://caniuse.com/#feat=css-gencontent">pseudo-elements</a></li>
-          <li><a href="https://caniuse.com/#feat=css-hyphens"><span class="smallcaps">CSS</span> Hyphenation</a></li>
-          <li><a href="https://caniuse.com/#feat=multicolumn"><span class="smallcaps">CSS3</span> Multiple column layout</a></li>
-          <li><a href="https://caniuse.com/#feat=css-transitions"><span class="smallcaps">CSS3</span> Transitions</a></li>
-          <li><a href="https://caniuse.com/#feat=css-animation"><span class="smallcaps">CSS</span> Animation</a></li>
-          <li><a href="https://caniuse.com/#feat=flexbox"><span class="smallcaps">CSS</span> Flexbox</a></li>
-          <li><a href="https://caniuse.com/#feat=css-appearance"><span class="smallcaps">CSS</span> Appearance</a></li>
-          <li><a href="https://caniuse.com/#feat=css-sel3"><span class="smallcaps">CSS3</span> Selectors</a></li>
-          <li><a href="https://caniuse.com/#feat=css-variables"><span class="smallcaps">CSS</span> Custom Properties</a></li>
-        </ul>
+        <p>A baseline grid adds visual rhythm to your design. This rhythm is as important as a regular beat in music. Robert Bringhurst writes:</p>
+        <blockquote>“Headings, subheads, block quotations, footnotes, illustrations, captions, and other intrusions into the text create syncopations and variations against the base rhythm of regularly leaded lines. These variations can and should add life to the page, but the main text should also return after each variation precisely on beat and in phase. This means that the total amount of vertical space consumed by each departure from the main text should be an even multiple of the basic leading.”</blockquote>
+        <h2 id="gridunit">Selecting a Grid Size</h2>
+        <p><strong class="tyfy">Tyfy</strong> has a grid unit variable that, by default, is half the base line height. Line heights for all text elements are defined as multiples of the grid unit, enforcing the baseline grid. Paddings and margins for most elements are also defined as multiples of the grid unit. Smaller grid unit values create tighter designs. Larger values result in a design with more breathing room.</p>
+        <p><strong class="tyfy">Tyfy</strong> provides custom <span class="smallcaps">SASS</span> functions to calculate line heights and other grid unit-based measures. These functions help to maintain the grid.</p>
+        <h2 id="tylead">The <em>tylead</em> Function</h2>
+        <p>Frameworks like Bootstrap will apply a relative line height that applies to every element. While this is very easy to implement, the result will lack the consistent beat of vertical rhythm that Bringhurst describes. However, establishing that rhythm across elements with a range of font sizes can be difficult. To make things easier, <strong class="tyfy">Tyfy</strong> provides a custom <span class="smallcaps">SASS</span> function called <em>tylead</em> ("tyfy leading"). The function calculates a grid-based line height for a given font size.</p>
+        <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">p {
+  font-size:$tyfont-size-base;
+  line-height:tylead($tyfont-size-base);
+}
+p.special {
+  font-size:1.2rem;
+  line-height:tylead(1.2rem,tall);
+}</code></pre>
+        <p>Using this function eliminates manual line-height calculations. For more information about the use of the <em>tylead</em> function, see the <a href="functions.html">functions</a> documentation.</p>
+        <h2 id="tygrid">The <em>tygrid</em> Function</h2>
+        <p>The <em>tygrid</em> function is syntactic sugar. Instead of writing mathematical expressions using the name of the grid unit variable, you can use the (much shorter) <em>tygrid</em> function. The function takes a number argument and returns the number multiplied by the grid unit. The result is cleaner code where measures are written in terms of grid units.</p>
+        <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div {
+  margin-bottom:tygrid(1.5); // 1.5 times the default grid unit length
+  width:tygrid(50); // 50 times the default grid unit length
+}</code></pre>
+        <p>For more information about the use of the <em>tygrid</em> function, see the <a href="functions.html">functions</a> documentation.</p>
       </section>
     </main>
 		<!-- COMMON FOOTER -->

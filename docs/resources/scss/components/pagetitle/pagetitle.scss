@@ -1,7 +1,7 @@
 header.pagetitle {
   --tycolor-fg:white;
   background-color:$tycolor-link-active;
-  box-shadow:0 1px tygrid(2) rgba(black,0.15);
+  box-shadow:0 1px tygrid(2) rgba(black,0.15) inset;
   color:white;
   padding:tygrid(4) tygrid(2);
   text-align:center;

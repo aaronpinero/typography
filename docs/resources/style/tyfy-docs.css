@@ -2582,7 +2582,7 @@ figure.output {
 header.pagetitle {
   --tycolor-fg:white;
   background-color: #cc0066;
-  box-shadow: 0 1px 1.75rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1.75rem rgba(0, 0, 0, 0.15) inset;
   color: white;
   padding: 3.5rem 1.75rem;
   text-align: center; }
