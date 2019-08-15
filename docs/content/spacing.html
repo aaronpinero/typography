@@ -6,20 +6,34 @@
 	</head>
 	<body class="">
 		<%include header.html%>
-		<section class="main links-underlined">
+    <header class="pagetitle">
 			<h1>Spacing</h1>
-      <p>The spacing module removes the default top and bottom margins for all <span class="smallcaps">HTML</span> elements, replacing those styles with <strong class="tyfy">Tyfy</strong>s adjacent sibling margin rules. The adjacent sibling margin rules are applied if the value of the <code>$tymargins-on</code> setting is <code>true</code>.</p>
-      <h2>Horizontal Rule</h2>
-      <p><strong class="tyfy">Tyfy</strong> treats the horizontal rule tag (<code>&lt;hr&gt;</code>) as a special case. In the spacing module, this tag’s top and bottom margin are set to the value of the <code>$tyspacing-lg</code> variable.
-      <h2>Classes</h2>
-      <p>The following classes are defined by the spacing module. They can be used to enable or disable the adjacent sibling margins in specific contexts. <em>Please note</em>: these classes may not behave as expected if nested. So, it is not recommended to use the <code>.tymargins-on</code> class on a descendant of an element that is using the <code>.tymargins-off</code>, or vice versa. This is because of how CSS interprets the wildcard selector.</p>
-			<dl>
-  			<dt>.tymargins-on</dt>
-  			<dd>Apply the default adjacent sibling margin rules to descendants of the element with this class</dd>
-  			<dt>.tymargins-off</dt>
-  			<dd>Remove the default adjacent sibling margin rules from descendants of the element with this class</dd>
-			</dl>
-		</section>
+    </header>
+    <main class="block">
+      <section class="section-body links-underlined">
+        <p>The spacing module removes the default top and bottom margins for all <span class="smallcaps">HTML</span> elements, replacing those styles with <strong class="tyfy">Tyfy</strong>s adjacent sibling margin rules. The adjacent sibling margin rules are applied if the value of the <code>$tymargins-on</code> setting is <code>true</code>. If you wish to apply the adjacent sibling margins only in specific contexts, you can set the value to <code>false</code> and use the <a href="mixins.html">mixins</a> or utility classes to selectively activate the margins.</p>
+        <h2 id="variables">Variables</h2>
+        <dl>
+          <dt>$tymargins-on</dt>
+          <dd><code class="val val-default">true !default;</code></dd>
+          <dd>If true, adjacent sibling selectors will be applied to all elements; if false, the default top and bottom margin of all elements is zero.</dd>
+          <dt>$tyspacing-md</dt>
+          <dd><code class="val val-default">tygrid(map-get($tyspacing,"medium")) !default;</code></dd>
+          <dd>The default adjacent sibling margin size; adjacent sibling margins between elements in a list will be half this value.</dd>
+          <dt>$tyspacing-lg</dt>
+          <dd><code class="val val-default">tygrid(map-get($tyspacing,"large")) !default;</code></dd>
+          <dd>The default top margin for a heading if preceded by a non-heading element.</dd>
+        </dl>
+        <h2>Classes</h2>
+        <p>The following classes are defined by the spacing module. They can be used to enable or disable the adjacent sibling margins in specific contexts. <em>Please note</em>: these classes may not behave as expected if nested. So, it is not recommended to use the <code>.tymargins-on</code> class on a descendant of an element that is using the <code>.tymargins-off</code>, or vice versa. This is because of how CSS interprets the wildcard selector.</p>
+        <dl>
+          <dt>.tymargins-on</dt>
+          <dd>Apply the default adjacent sibling margin rules to descendants of the element with this class</dd>
+          <dt>.tymargins-off</dt>
+          <dd>Remove the default adjacent sibling margin rules from descendants of the element with this class</dd>
+        </dl>
+      </section>
+    </main>
 		<%include footer.html%>
 	</body>
 </html>

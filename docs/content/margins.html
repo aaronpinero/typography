@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<%include head.html%>
+		<title>Tyfy - Benefits - Sensible Margins</title>
+	</head>
+	<body class="">
+		<%include header.html%>
+    <header class="pagetitle">
+			<h1>Sensible Margins</h1>
+    </header>
+    <main class="block">
+      <section class="section-body links-underlined">
+        <p>In <a href="https://alistapart.com/article/axiomatic-css-and-lobotomized-owls">Issue 406 of A List Apart</a>, Heydon Pickering precisely describes my complaint about <span class="smallcaps">HTML</span> margins:</p>
+        <blockquote>“Margins are something that exist between elements. Simply giving an element a top margin makes no sense, no matter how few or how many times you do it. It’s like applying glue to one side of an object before you’ve determined whether you actually want to stick it to something or what that something might be.”</blockquote>
+        <p>By default, <span class="smallcaps">HTML</span> headings, paragraphs, and lists have top and bottom margins. These extra margins often cause unexpected or unwanted collisions at the beginning or end of a containing element, depending on whether or not the containing element has its own margin or padding.</p>
+        <p><strong class="tyfy">Tyfy</strong> uses <a href="https://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators">adjacent sibling selectors</a> (in this case, Mr. Pickering’s <a href="https://css-tricks.com/lobotomized-owls/">lobotomized owl</a>) to put vertical margins <em>between</em> elements instead of assigning blanket margins to everything. This avoids the problem of having margins at the start and end of a containing element that must then be accounted for.</p>
+        <p><strong class="tyfy">Tyfy</strong> includes <a href="mixins.html">mixins</a> and utility classes (in the <a href="spacing.html">spacing</a> module) to facilitate enabling and disabling adjacent sibling margins in contexts where they are not needed.</p>
+        <h2>Spacing Rules</h2>
+        <p>By default, adjacent sibling margins are applied to all elements. They can be turned off by customizing the settings.</p>
+        <p>The <em>tymargins-size</em> and <em>tymargins</em> mixins apply the style rules. There are three rules included in the <em>tymargins</em> mixin:</p>
+        <ol>
+          <li>
+            <p>The first rule applies a margin of <code>$tyspacing-md</code> between all adjacent siblings.</p>
+            <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">@include tymargins-size(all,$tyspacing-md);</code></pre>
+          </li>
+          <li>
+            <p>The second rule applies a margin of <code>$tyspacing-md / 2</code> between all adjacent siblings inside ordered, unordered, and definition lists. The smaller margin visually emphasizes the logical relationship between elements in a list.</p>
+            <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">@include tymargins-size(lists,$tyspacing-md/2);</code></pre>
+          </li>
+          <li>
+            <p>The third rule applies a margin of <code>$tyspacing-lg</code> to the top of any heading that follows a non-heading element. The increased margin visually emphasizes the logical separation of content indicated by a heading.</p>
+            <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">@include tymargins-size(headings,$tyspacing-lg);</code></pre>
+          </li>
+        </ol>
+        <p>For more information about the spacing variables, see the <a href="settings.html">settings</a> module. To learn more about the <em>tymargins-size</em> and <em>tymargins</em> mixins, see the <a href="mixins.html">mixins</a> documentation. To learn more about turning the margins on and off, see the <a href="spacing.html">spacing</a> module.</p>
+		  </section>
+    </main>
+		<%include footer.html%>
+	</body>
+</html>
