@@ -747,11 +747,11 @@ span.dropcap {
 
 /* line 58, source/scss/optional/_utility.scss */
 span.smallcaps {
-  font-feature-settings: "c2sc", "smcp";
-  font-variant-caps: all-small-caps;
+  font-size: smaller;
   font-weight: bolder;
   letter-spacing: 0.075em;
-  margin-right: -0.0375em; }
+  margin-right: -0.0375em;
+  text-transform: uppercase; }
 
 /* line 66, source/scss/optional/_utility.scss */
 .tybutton {

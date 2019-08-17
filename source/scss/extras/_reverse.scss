@@ -1,14 +1,14 @@
 // reverse colors
-$tycolor-rev-bg:                    invert($tycolor-bg) !default;
-$tycolor-rev-fg:                    invert($tycolor-fg) !default;
-$tycolor-rev-text-light:            mix($tycolor-rev-fg,$tycolor-rev-bg,50%) !default;
-$tycolor-rev-link-default:          hsl(hue($tycolor-link-default),saturation($tycolor-link-default),(100% - lightness(darken($tycolor-link-default,25%)))) !default;
-$tycolor-rev-link-active:           hsl(hue($tycolor-link-active),saturation($tycolor-link-active),(100% - lightness(darken($tycolor-link-active,25%)))) !default;
-$tycolor-rev-bg-tab-active:         rgba($tycolor-rev-link-active,0.12) !default;
-$tycolor-rev-border:                mix($tycolor-rev-fg,$tycolor-rev-bg,12%) !default;
-$tycolor-rev-border-link-default:   rgba($tycolor-rev-link-default,0.5) !default;
-$tycolor-rev-border-link-active:    rgba($tycolor-rev-link-active,0.75) !default;
-$tycolor-rev-shade:                 rgba($tycolor-rev-fg,0.05) !default;
+$tycolor-rev-bg:                  invert($tycolor-bg) !default;
+$tycolor-rev-fg:                  invert($tycolor-fg) !default;
+$tycolor-rev-text-light:          mix($tycolor-rev-fg,$tycolor-rev-bg,50%) !default;
+$tycolor-rev-link-default:        hsl(hue($tycolor-link-default),saturation($tycolor-link-default),(100% - lightness(darken($tycolor-link-default,25%)))) !default;
+$tycolor-rev-link-active:         hsl(hue($tycolor-link-active),saturation($tycolor-link-active),(100% - lightness(darken($tycolor-link-active,25%)))) !default;
+$tycolor-rev-bg-tab-active:       rgba($tycolor-rev-link-active,0.12) !default;
+$tycolor-rev-border:              mix($tycolor-rev-fg,$tycolor-rev-bg,12%) !default;
+$tycolor-rev-border-link-default: rgba($tycolor-rev-link-default,0.5) !default;
+$tycolor-rev-border-link-active:  rgba($tycolor-rev-link-active,0.75) !default;
+$tycolor-rev-shade:               rgba($tycolor-rev-fg,0.05) !default;
 
 // root styles
 .reverse {

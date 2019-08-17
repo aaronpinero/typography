@@ -1,4 +1,8 @@
 strong.tyfy {
+  /* autoprefixer: off */
+  background:-webkit-linear-gradient($tycolor-link-active, $tycolor-link-default);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family:$tyfont-condensed;
   font-weight:bold;
   text-transform:uppercase;

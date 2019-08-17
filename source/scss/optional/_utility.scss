@@ -55,12 +55,11 @@ span {
     margin:0 0.25em 0 0.125em;
     text-align:center;
   }
-  &.smallcaps {
-    font-feature-settings:"c2sc", "smcp";
-    font-variant-caps:all-small-caps;
-    font-weight:bolder;
+  &.smallcaps { // styles based on https://joeclark.org/standards/small-caps.html; I like the fake better
+    font-size:smaller;
     letter-spacing:0.075em;
     margin-right:-0.0375em;
+    text-transform:uppercase;
   }
 }
 .tybutton {
