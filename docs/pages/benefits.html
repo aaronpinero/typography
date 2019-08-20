@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="../resources/style/tyfy-docs.css">
 		<link rel="stylesheet" href="../resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy - Modules - Spacing</title>
+		<title>Tyfy - Benefits</title>
 	</head>
 	<body class="">
 		    <!-- COMMON HEADER -->
@@ -94,31 +94,16 @@
     </nav>
 		<!--/ COMMON HEADER -->
     <header class="pagetitle">
-			<h1>Spacing</h1>
+			<h1>Benefits</h1>
     </header>
     <main class="block">
       <section class="section-body links-underlined">
-        <p>The spacing module removes the default top and bottom margins for all <span class="smallcaps">HTML</span> elements, replacing those styles with <strong class="tyfy">Tyfy</strong>s adjacent sibling margin rules. The adjacent sibling margin rules are applied if the value of the <code>$tymargins-on</code> setting is <code>true</code>. If you wish to apply the adjacent sibling margins only in specific contexts, you can set the value to <code>false</code> and use the <a href="mixins.html">mixins</a> or utility classes to selectively activate the margins.</p>
-        <h2 id="variables">Variables</h2>
-        <dl>
-          <dt>$tymargins-on</dt>
-          <dd><code class="val val-default">true !default;</code></dd>
-          <dd>If true, adjacent sibling selectors will be applied to all elements; if false, the default top and bottom margin of all elements is zero.</dd>
-          <dt>$tyspacing-md</dt>
-          <dd><code class="val val-default">tygrid(map-get($tyspacing,"medium")) !default;</code></dd>
-          <dd>The default adjacent sibling margin size; adjacent sibling margins between elements in a list will be half this value.</dd>
-          <dt>$tyspacing-lg</dt>
-          <dd><code class="val val-default">tygrid(map-get($tyspacing,"large")) !default;</code></dd>
-          <dd>The default top margin for a heading if preceded by a non-heading element.</dd>
-        </dl>
-        <h2>Classes</h2>
-        <p>The following classes are defined by the spacing module. They can be used to enable or disable the adjacent sibling margins in specific contexts. <em>Please note</em>: these classes may not behave as expected if nested. So, it is not recommended to use the <code>.tymargins-on</code> class on a descendant of an element that is using the <code>.tymargins-off</code>, or vice versa. This is because of how CSS interprets the wildcard selector.</p>
-        <dl>
-          <dt>.tymargins-on</dt>
-          <dd>Apply the default adjacent sibling margin rules to descendants of the element with this class</dd>
-          <dt>.tymargins-off</dt>
-          <dd>Remove the default adjacent sibling margin rules from descendants of the element with this class</dd>
-        </dl>
+        <p><strong class="tyfy">Tyfy</strong> provides three main benefits for your front-end development work:</p>
+        <ol>
+          <li>a consistent and maintainable <a href="grid.html">baseline grid</a>;</li>
+          <li>a simple way to define the <a href="scale.html">modular scale</a> for your typography; and</li>
+          <li>a system of <a href="margins.html">sensible margins</a> between elements</li>
+        </ol>
       </section>
     </main>
 		<!-- COMMON FOOTER -->
