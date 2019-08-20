@@ -1,0 +1,32 @@
+ul.nav-paging {
+  @include tymargins(off);
+  display:grid;
+  font-family:$tyfont-sans;
+  grid-template-columns:auto auto;
+  margin-top:$tyspacing-md * 2;
+  padding:0;
+  li {
+    display:block;
+  }
+  li.next {
+    text-align:right;
+    a::after {
+      content:tychar($tyicons-angle-right);
+      display:inline-block;
+      font-family:$tyfont-symbol;
+      font-size:70%;
+      margin-left:0.5em;
+      vertical-align:middle;
+    }
+  }
+  li.prev {
+    a::before {
+      content:tychar($tyicons-angle-left);
+      display:inline-block;
+      font-family:$tyfont-symbol;
+      font-size:70%;
+      margin-right:0.5em;
+      vertical-align:middle;
+    }
+  }
+}
