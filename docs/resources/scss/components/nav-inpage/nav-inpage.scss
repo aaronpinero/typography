@@ -4,6 +4,11 @@ nav.nav-inpage {
   font-size:tyscale(-1);
   line-height:tylead(tyscale(0));
   width:tygrid(9);
+  @media (min-height:400px) {
+    position:-webkit-sticky;
+    position:sticky;
+    top:tygrid(2);
+  }
   h2.tyfont-size-h6 {
     font-family:$tyfont-condensed;
     font-size:tyscale(-1);
