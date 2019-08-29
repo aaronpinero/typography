@@ -5,12 +5,14 @@ $tyfont-size-base:1.125rem;
 
 // tyfy settings overrides
 $tyspacing: (
+  "small":1,
   "medium":2,
   "large":4,
 );
 $tyindent: (
-  "medium":3,
   "small":2,
+  "medium":3,
+  "large":4,
 );
 $tymargins-on:true;
 
