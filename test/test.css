@@ -2039,20 +2039,20 @@ select.tyselect {
   h6.tyfy-collapsable-processed::before {
     width: 1.5rem; } }
 
-/* line 86, test/test.scss */
+/* line 88, test/test.scss */
 body {
   margin-left: auto;
   margin-right: auto;
   max-width: 52.5rem;
   padding: 1.5rem; }
 
-/* line 92, test/test.scss */
+/* line 94, test/test.scss */
 .button-rev {
   opacity: 0.25;
   position: fixed;
   right: 0.75rem;
   top: 0.75rem;
   z-index: 100; }
-  /* line 98, test/test.scss */
+  /* line 100, test/test.scss */
   .button-rev:hover {
     opacity: 1; }
