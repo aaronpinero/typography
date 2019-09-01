@@ -115,8 +115,11 @@
         <h2 id="spacing">Spacing</h2>
         <dl>
           <dt>$tyspacing</dt>
-          <dd><code class="val val-default">("medium":2, "large":3,) !default;</code></dd>
+          <dd><code class="val val-default">("small":1, "medium":2, "large":3,) !default;</code></dd>
           <dd><span class="smallcaps">SASS</span> map of values indicating the number of grid units for each spacing variable value.</dd>
+          <dt>$tyspacing-sm</dt>
+          <dd><code class="val val-default">tygrid(map-get($tyspacing,"small")) !default;</code></dd>
+          <dd>Small spacing between <span class="smallcaps">HTML</span> elements defined as a multiple of the grid unit.</dd>
           <dt>$tyspacing-md</dt>
           <dd><code class="val val-default">tygrid(map-get($tyspacing,"medium")) !default;</code></dd>
           <dd>Medium spacing between <span class="smallcaps">HTML</span> elements defined as a multiple of the grid unit.</dd>
@@ -124,14 +127,17 @@
           <dd><code class="val val-default">tygrid(map-get($tyspacing,"large")) !default;</code></dd>
           <dd>Large spacing between <span class="smallcaps">HTML</span> elements defined as a multiple of the grid unit; used for spacing above headings.</dd>
           <dt>$tyindent</dt>
-          <dd><code class="val val-default">("medium":3, "small":2,) !default;</code></dd>
+          <dd><code class="val val-default">("small":2, "medium":3, "large":4) !default;</code></dd>
           <dd><span class="smallcaps">SASS</span> map of values indicating the number of grid units for each indent variable value.</dd>
-          <dt>$tyindent-md</dt>
-          <dd><code class="val val-default">tygrid(map-get($tyindent,"medium")) !default;</code></dd>
-          <dd>Standard indent distance for lists and block quotes defined as a multiple of the grid unit.</dd>
           <dt>$tyindent-sm</dt>
           <dd><code class="val val-default">tygrid(map-get($tyindent,"small")) !default;</code></dd>
           <dd>Small indent distance for lists and block quotes at small screen sizes; defined as a multiple of the grid unit.</dd>
+          <dt>$tyindent-md</dt>
+          <dd><code class="val val-default">tygrid(map-get($tyindent,"medium")) !default;</code></dd>
+          <dd>Standard indent distance for lists and block quotes defined as a multiple of the grid unit.</dd>
+          <dt>$tyindent-lg</dt>
+          <dd><code class="val val-default">tygrid(map-get($tyindent,"large")) !default;</code></dd>
+          <dd>Large indent distance defined as a multiple of the grid unit.</dd>
           <dt>$tymargins-on</dt>
           <dd><code class="val val-default">true !default;</code></dd>
           <dd>Boolean value indicating if adjacent sibling margins styles are applied on the <code>&lt;body&gt;</code> tag.</dd>
