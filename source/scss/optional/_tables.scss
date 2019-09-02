@@ -119,7 +119,6 @@ table.responsive {
         font-size:tyfont-size(sm);
         left:0;
         position:absolute;
-        vertical-align:top;
         width:calc(33% - #{tygrid()});
         @media (min-width:$tybreak-table) {
           display:none;
