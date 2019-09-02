@@ -63,7 +63,7 @@
 // in which case the specified margin size will be applied to all
 // descendants
 
-@mixin tymargins-size ($context:all, $measure:tyspacing-y(md)) {
+@mixin tymargins-size ($context:all, $measure:tyspacing(md)) {
   @if $context == headings {
     // headings
     :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
@@ -109,9 +109,9 @@
     // everything
     @include tymargins-size;
     // lists
-    @include tymargins-size(lists,tyspacing-y(sm));
+    @include tymargins-size(lists,tyspacing(sm));
     // headings
-    @include tymargins-size(headings,tyspacing-y(lg));
+    @include tymargins-size(headings,tyspacing(lg));
   }
   @else {
     * + * {

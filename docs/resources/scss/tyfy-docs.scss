@@ -72,12 +72,12 @@ header.brand {
       li {
         @media (max-width:$tybreak-list-cols2 * 0.9999) {
           box-sizing:border-box;
-          width:calc(50% - #{(0.5 * tyspacing-y(lg))});
+          width:calc(50% - #{(0.5 * tyspacing(lg))});
           &:nth-child(2) {
             margin-top:0; // override of the default margin
           }
           &:nth-child(2n+1) {
-            margin-right:tyspacing-y(lg);
+            margin-right:tyspacing(lg);
           }
         }
         a {
@@ -133,13 +133,13 @@ header.brand {
 section.main {
   @extend .constrained;
   margin-top:0;
-  padding:tyspacing-y(md);
+  padding:tyspacing(md);
 }
 section.demo {
   border:$tywidth-border dashed darken($tycolor-bg,10%);
   border-radius:tygrid();
   box-shadow:inset 0px 0px tygrid(2) rgba(0,0,0,0.05);
-  margin-top:tyspacing-y(md);
+  margin-top:tyspacing(md);
 }
 section.demo.reverse {
   border:none;
@@ -147,15 +147,15 @@ section.demo.reverse {
 pre.codebox {
   background-color:$tycolor-shade;
   border:$tywidth-border $tycolor-border solid;
-  padding:calc(#{tyspacing-y(md)} - #{$tywidth-border});
+  padding:calc(#{tyspacing(md)} - #{$tywidth-border});
   overflow:auto;
   & + figure.example {
     border:$tywidth-border $tycolor-border solid;
     border-top:none;
     color:$color-example;
     margin:0;
-    padding:calc(#{tyspacing-y(md)} - #{$tywidth-border});
-    padding-top:tyspacing-y(md);
+    padding:calc(#{tyspacing(md)} - #{$tywidth-border});
+    padding-top:tyspacing(md);
     position:relative;
     a:not([href]) {
       color:$color-example;
@@ -183,16 +183,16 @@ pre[class*="language-"] {
   font-family:$tyfont-mono !important;
   margin:0 !important;
   * + & {
-    margin-top:tyspacing-y(md) !important;
+    margin-top:tyspacing(md) !important;
   }
   li * + & {
-    margin-top:tyspacing-y(md) / 2 !important;
+    margin-top:tyspacing(md) / 2 !important;
   }
 }
 :not(pre) > code[class*="language-"],
 pre.codebox[class*="language-"] {
   background-color:$tycolor-shade !important;
-  padding:calc(#{tyspacing-y(md)} - #{$tywidth-border}) !important;
+  padding:calc(#{tyspacing(md)} - #{$tywidth-border}) !important;
 }
 code.val-default {
   background-color:transparent;
@@ -248,7 +248,7 @@ table.utility {
     }
     &.form-control-classes {
       @media (min-width:55em) {
-        padding-left:tyspacing-y(md);
+        padding-left:tyspacing(md);
         width:75%;
       }
       label {
@@ -277,8 +277,8 @@ table.utility {
     border-top:none;
     color:$color-example;
     margin:0;
-    padding:calc(#{tyspacing-y(md)} - #{$tywidth-border});
-    padding-top:tyspacing-y(md);
+    padding:calc(#{tyspacing(md)} - #{$tywidth-border});
+    padding-top:tyspacing(md);
   }
 }
 .tables-demo-table {
