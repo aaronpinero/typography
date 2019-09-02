@@ -4,7 +4,7 @@ pre.codebox {
   box-shadow:0 0 tygrid(1) rgba(0,0,0,0.05) inset;
   box-sizing:border-box;
   overflow:auto;
-  padding:calc(#{$tyspacing-md} - #{$tywidth-border});
+  padding:calc(#{tyspacing(md)} - #{$tywidth-border});
   position:relative;
   &.codebox-short {
     max-height:tygrid(12);
@@ -20,20 +20,20 @@ pre.codebox[class*="language-"] {
   background-color:$tycolor-shade !important;
   font-family:$tyfont-mono !important;
   margin:0 !important;
-  padding:calc(#{$tyspacing-md} - #{$tywidth-border}) !important;
+  padding:calc(#{tyspacing(md)} - #{$tywidth-border}) !important;
   @if $tymargins-on {
     * + & {
-      margin-top:$tyspacing-md !important;
+      margin-top:tyspacing(md) !important;
     }
     li * + & {
-      margin-top:$tyspacing-md / 2 !important;
+      margin-top:tyspacing(md) / 2 !important;
     }
   }
   .tymargins-on * + & {
-    margin-top:$tyspacing-md !important;
+    margin-top:tyspacing(md) !important;
   }
   .tymargins-on li * + & {
-    margin-top:$tyspacing-md / 2 !important;
+    margin-top:tyspacing(md) / 2 !important;
   }
   code {
     font-family:$tyfont-mono !important;

@@ -1,33 +1,33 @@
 // heading sizes
 h6,
 .tyfont-size-h6 {
-  font-size:$tyfont-size-h6;
-  line-height:tylead($tyfont-size-h6,heading);
+  font-size:tyfont-size(h6);
+  line-height:tylead(tyfont-size(h6),heading);
 }
 h5,
 .tyfont-size-h5 {
-  font-size:$tyfont-size-h5;
-  line-height:tylead($tyfont-size-h5,heading);
+  font-size:tyfont-size(h5);
+  line-height:tylead(tyfont-size(h5),heading);
 }
 h4,
 .tyfont-size-h4 {
-  font-size:$tyfont-size-h4;
-  line-height:tylead($tyfont-size-h4,heading);
+  font-size:tyfont-size(h4);
+  line-height:tylead(tyfont-size(h4),heading);
 }
 h3,
 .tyfont-size-h3 {
-  font-size:$tyfont-size-h3;
-  line-height:tylead($tyfont-size-h3,heading);
+  font-size:tyfont-size(h3);
+  line-height:tylead(tyfont-size(h3),heading);
 }
 h2,
 .tyfont-size-h2 {
-  font-size:$tyfont-size-h2;
-  line-height:tylead($tyfont-size-h2,heading);
+  font-size:tyfont-size(h2);
+  line-height:tylead(tyfont-size(h2),heading);
 }
 h1,
 .tyfont-size-h1 {
-  font-size:$tyfont-size-h1;
-  line-height:tylead($tyfont-size-h1,heading);
+  font-size:tyfont-size(h1);
+  line-height:tylead(tyfont-size(h1),heading);
 }
 
 // heading styles

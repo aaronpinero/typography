@@ -33,9 +33,9 @@ body {
   box-sizing:border-box;
   margin-left:auto;
   margin-right:auto;
-  max-width:$tywidth-page + $tyspacing-md + $tyspacing-md; // width plus padding
-  padding-left:$tyspacing-md;
-  padding-right:$tyspacing-md;
+  max-width:$tywidth-page + tyspacing(md) + tyspacing(md); // width plus padding
+  padding-left:tyspacing(md);
+  padding-right:tyspacing(md);
 }
 
 // element containing the page body text, present on all pages
@@ -61,7 +61,7 @@ body {
 
 // space between content and footer
 main.block + footer.footer {
-  padding-top:$tyspacing-md;
+  padding-top:tyspacing(md);
 }
 
 .constrained {

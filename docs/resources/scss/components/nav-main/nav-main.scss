@@ -2,7 +2,7 @@
 $nav-show:52rem;
 
 // max width of a block
-$width-max-block:$tywidth-page + $tyspacing-md + $tyspacing-md;
+$width-max-block:$tywidth-page + tyspacing(md) + tyspacing(md);
 
 
 // nav element
@@ -49,7 +49,7 @@ nav.nav-main {
         font-family:$tyfont-symbol;
         font-weight:normal;
         text-align:center;
-        transition:background-color $tyduration-hover, color $tyduration-hover;
+        transition:background-color tyduration(hover), color tyduration(hover);
         width:tygrid(4);
       }
       &:hover {
@@ -267,7 +267,7 @@ nav.nav-main {
         height:0px;
         left:1.75rem;
         position:absolute;
-        transition:all $tyduration-hover;
+        transition:all tyduration(hover);
         visibility:hidden;
         width:28px;
       }

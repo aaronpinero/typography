@@ -3,7 +3,7 @@ ul.nav-paging {
   display:grid;
   font-family:$tyfont-sans;
   grid-template-columns:auto auto;
-  margin-top:$tyspacing-md * 2;
+  margin-top:tyspacing(md) * 2;
   padding:0;
   li {
     display:block;

@@ -3,10 +3,10 @@
 pre.codebox + figure.output {
   border-top:none;
   margin-top:0;
-  padding-top:$tyspacing-md;
+  padding-top:tyspacing(md);
 }
 figure.output + pre.codebox {
   border-top:none;
   margin-top:0;
-  padding-top:$tyspacing-md;
+  padding-top:tyspacing(md);
 }

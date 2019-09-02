@@ -46,7 +46,6 @@ input[type="submit"] {
   display:block;
   font-size:100%;
   outline:none;
-  vertical-align:middle;
   width:100%;
 }
 label {
@@ -63,7 +62,7 @@ label {
     margin-top:0;
   }
   form & + * {
-    margin-top:$tyspacing-md / 2;
+    margin-top:tyspacing(md) / 2;
   }
 }
 
@@ -95,7 +94,7 @@ input[type="color"] {
   font-family:$tyfont-input;
   line-height:tylead(tyscale(0));
   padding:calc(#{tygrid(0.75)} - #{$tywidth-border});
-  transition:border-color $tyduration-hover, box-shadow $tyduration-hover;
+  transition:border-color tyduration(hover), box-shadow tyduration(hover);
   width:100%;
   &:focus {
     border-color:var(--tycolor-link-active);

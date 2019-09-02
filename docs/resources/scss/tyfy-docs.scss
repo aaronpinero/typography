@@ -11,16 +11,16 @@ hr.demo {
 header.brand {
   h1 {
     @extend .constrained;
-    font-size:$tyfont-size-h3;
-    line-height:tylead($tyfont-size-h3,heading);
+    font-size:tyfont-size(h3);
+    line-height:tylead(tyfont-size(h3),heading);
     padding:tygrid() tygrid(2);
   }
   nav {
     @extend .constrained;
     padding:0 tygrid(2);
     h2 {
-      font-size:$tyfont-size-h5;
-      line-height:tylead($tyfont-size-h5,heading);
+      font-size:tyfont-size(h5);
+      line-height:tylead(tyfont-size(h5),heading);
     }
     ul.list-grid-4 {
       display:flex;
@@ -32,18 +32,18 @@ header.brand {
       li {
         @media (max-width:$tybreak-list-cols2 * 0.9999) {
           box-sizing:border-box;
-          width:calc(50% - #{(0.5 * $tyspacing-lg)});
+          width:calc(50% - #{(0.5 * tyspacing(lg))});
           &:nth-child(2) {
             margin-top:0; // override of the default margin
           }
           &:nth-child(2n+1) {
-            margin-right:$tyspacing-lg;
+            margin-right:tyspacing(lg);
           }
         }
         a {
           border-top:tygrid(0.25) rgba(white,0.05) solid;
           display:block;
-          font-size:$tyfont-size-sm;
+          font-size:tyfont-size(sm);
           padding-top:tygrid(0.5);
           padding-bottom:tygrid(0.5);
         }
@@ -54,22 +54,22 @@ header.brand {
       h2 {
         color:$tycolor-rev-link-default;
         cursor:pointer;
-        height:tylead($tyfont-size-h3,heading);
-        line-height:tylead($tyfont-size-h3,heading);
+        height:tylead(tyfont-size(h3),heading);
+        line-height:tylead(tyfont-size(h3),heading);
         overflow:hidden;
         position:absolute;
         right:tygrid(2);
         top:tygrid(-3);
-        transition-duration:$tyduration-hover;
+        transition-duration:tyduration(hover);
         transition-property:color;
-        width:tylead($tyfont-size-h3,heading);
+        width:tylead(tyfont-size(h3),heading);
         &::before {
           content:tychar($tyicons-bars);
           display:block;
           font-family:$tyfont-symbol;
-          height:tylead($tyfont-size-h3,heading);
+          height:tylead(tyfont-size(h3),heading);
           text-align:center;
-          width:tylead($tyfont-size-h3,heading);
+          width:tylead(tyfont-size(h3),heading);
         }
         &:hover {
           color:$tycolor-rev-link-active;
@@ -93,16 +93,8 @@ header.brand {
 section.main {
   @extend .constrained;
   margin-top:0;
-  padding:$tyspacing-md;
+  padding:tyspacing(md);
 }
-pre.codebox {
-  & + figure.example {
-    border-top:none;
-    margin:0;
-    padding-top:$tyspacing-md;
-  }
-}
-
 table.utility {
   th[scope="col"] {
     border-bottom:(2 * $tywidth-border) var(--tycolor-border) solid;
@@ -149,7 +141,7 @@ table.utility {
     }
     &.form-control-classes {
       @media (min-width:55em) {
-        padding-left:$tyspacing-md;
+        padding-left:tyspacing(md);
         width:75%;
       }
       label {
@@ -178,8 +170,8 @@ table.utility {
     border-top:none;
     color:$tycolor-example;
     margin:0;
-    padding:calc(#{$tyspacing-md} - #{$tywidth-border});
-    padding-top:$tyspacing-md;
+    padding:calc(#{tyspacing(md)} - #{$tywidth-border});
+    padding-top:tyspacing(md);
   }
 }
 .tables-demo-table {
@@ -204,8 +196,8 @@ footer {
   p {
     @extend .constrained;
     color:$tycolor-text-light;
-    font-size:$tyfont-size-sm;
-    line-height:tylead($tyfont-size-sm,heading);
+    font-size:tyfont-size(sm);
+    line-height:tylead(tyfont-size(sm),heading);
     padding:tygrid() tygrid(2);
   }
 }

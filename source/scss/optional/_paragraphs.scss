@@ -12,13 +12,13 @@ p.justified {
   text-align:justify;
 }
 p.lede {
-  font-size:$tyfont-size-lede;
-  line-height:tylead($tyfont-size-lede,tall);
+  font-size:tyfont-size(lede);
+  line-height:tylead(tyfont-size(lede),tall);
 }
 .cols2 {
   @media (min-width:$tybreak-cols2) {
     columns:2;
-    column-gap:$tyspacing-lg;
+    column-gap:tyspacing(lg);
     orphans:2;
     widows:2;
   }

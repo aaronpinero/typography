@@ -7,7 +7,7 @@ figure.output {
   color:$tycolor-example;
   margin-left:0; // override browser default
   margin-right:0; // override browser default
-  padding:calc(#{$tyspacing-md} - #{$tywidth-border});
+  padding:calc(#{tyspacing(md)} - #{$tywidth-border});
   position:relative;
   &.reverse {
     border-color:$tycolor-rev-border;

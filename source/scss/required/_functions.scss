@@ -84,3 +84,30 @@ $tylead-adjustment-short:1.2 !default; // $leading-style:short
   /* stylelint-disable-next-line string-no-newline */
   @return unquote("\"") + unquote(str_insert($code,"\\",1)) + unquote("\"");
 }
+
+////////// functions for sass maps //////////
+//
+// shorthand for getting values from the spacing, duration, and font size sass maps
+// see https://www.sitepoint.com/using-sass-maps/
+
+@function tyspacing($key) {
+  @if map-has-key($tyspacing, $key) {
+    @return tygrid(map-get($tyspacing, $key));
+  }
+  @warn "Unknown `#{$key}` in $tyspacing.";
+  @return null;
+}
+@function tyfont-size($key) {
+  @if map-has-key($tyfont-size, $key) {
+    @return tyscale(map-get($tyfont-size, $key));
+  }
+  @warn "Unknown `#{$key}` in $tyfont-size.";
+  @return null;
+}
+@function tyduration($key) {
+  @if map-has-key($tyduration, $key) {
+    @return map-get($tyduration, $key);
+  }
+  @warn "Unknown `#{$key}` in $tyduration.";
+  @return null;
+}
