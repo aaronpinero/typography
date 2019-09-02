@@ -1,12 +1,12 @@
 * + .tabs-container {
-  margin-top:tyspacing-y(md);
+  margin-top:tyspacing(md);
 }
 .tabs-container + h2,
 .tabs-container + h3,
 .tabs-container + h4,
 .tabs-container + h5,
 .tabs_container + h6 {
-  margin-top:tyspacing-y(lg);
+  margin-top:tyspacing(lg);
 }
 .tabs-container {
   ul.tabs {
@@ -50,7 +50,7 @@
   }
   &.tabs-processed {
     * + .tab-label {
-      margin-top:tyspacing-y(md);
+      margin-top:tyspacing(md);
     }
     .tab-label {
       background-color:transparent;

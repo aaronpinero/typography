@@ -4,15 +4,11 @@ $tyfont-size-scalar:1.25;
 $tyfont-size-base:1.125rem;
 
 // tyfy settings overrides
-$tyspacing-y: (
-  sm:1,
-  md:2,
-  lg:4,
-);
-$tyspacing-x: (
-  sm:2,
-  md:3,
-  lg:4,
+$tyspacing: (
+  sm:         1,
+  md:         2,
+  lg:         4,
+  indent:     3,
 );
 
 $tymargins-on:true;
@@ -90,7 +86,7 @@ body {
   margin-left:auto;
   margin-right:auto;
   max-width:tygrid(70);
-  padding:tyspacing-y(md);
+  padding:tyspacing(md);
 }
 .button-rev {
   opacity:0.25;

@@ -1,10 +1,10 @@
 blockquote {
   font-style:italic;
-  margin-left:tyspacing-x(sm);
-  margin-right:tyspacing-x(sm);
+  margin-left:tyspacing(md);
+  margin-right:tyspacing(md);
   @media (min-width:$tybreak-quote) {
-    margin-left:tyspacing-x(md);
-    margin-right:tyspacing-x(md);
+    margin-left:tyspacing(lg);
+    margin-right:tyspacing(lg);
   }
   p {
     font-style:italic;
@@ -57,8 +57,8 @@ blockquote {
       @media (min-width:$tybreak-float) {
         box-sizing:border-box;
         text-align:left;
-        margin-bottom:tyspacing-y(md);
-        width:calc(50% - #{tyspacing-y(md)});
+        margin-bottom:tyspacing(md);
+        width:calc(50% - #{tyspacing(md)});
         &:first-child + * {
           margin-top:0;
         }
@@ -69,14 +69,14 @@ blockquote {
         clear:left;
         float:left;
         margin-left:0;
-        margin-right:2 * tyspacing-y(md);
+        margin-right:2 * tyspacing(md);
       }
     }
     &.float-right {
       @media (min-width:$tybreak-float) {
         clear:right;
         float:right;
-        margin-left:2 * tyspacing-y(md);
+        margin-left:2 * tyspacing(md);
         margin-right:0;
       }
     }

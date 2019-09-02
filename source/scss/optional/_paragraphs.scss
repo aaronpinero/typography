@@ -18,7 +18,7 @@ p.lede {
 .cols2 {
   @media (min-width:$tybreak-cols2) {
     columns:2;
-    column-gap:tyspacing-y(lg);
+    column-gap:tyspacing(lg);
     orphans:2;
     widows:2;
   }
