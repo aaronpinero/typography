@@ -17,12 +17,9 @@
           <dt>$tymargins-on</dt>
           <dd><code class="val val-default">true !default;</code></dd>
           <dd>If true, adjacent sibling selectors will be applied to all elements; if false, the default top and bottom margin of all elements is zero.</dd>
-          <dt>$tyspacing-md</dt>
-          <dd><code class="val val-default">tygrid(map-get($tyspacing,"medium")) !default;</code></dd>
-          <dd>The default adjacent sibling margin size; adjacent sibling margins between elements in a list will be half this value.</dd>
-          <dt>$tyspacing-lg</dt>
-          <dd><code class="val val-default">tygrid(map-get($tyspacing,"large")) !default;</code></dd>
-          <dd>The default top margin for a heading if preceded by a non-heading element.</dd>
+          <dt>$tyspacing</dt>
+          <dd><code class="val val-default">(sm:1, md:2, lg:3, indent:3) !default;</code></dd>
+          <dd><span class="smallcaps">SASS</span> map of values indicating the number of grid units for each spacing variable value; these values are used to set the adjacent sibling margins.</dd>
         </dl>
         <h2>Classes</h2>
         <p>The following classes are defined by the spacing module. They can be used to enable or disable the adjacent sibling margins in specific contexts. <em>Please note</em>: these classes may not behave as expected if nested. So, it is not recommended to use the <code>.tymargins-on</code> class on a descendant of an element that is using the <code>.tymargins-off</code>, or vice versa. This is because of how CSS interprets the wildcard selector.</p>

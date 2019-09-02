@@ -31,12 +31,12 @@
         </dl>
         <h2 id="variables">Variables</h2>
         <dl>
-            <dt>$tybreak-cols2</dt>
+          <dt>$tybreak-cols2</dt>
           <dd><code class="val val-default">50em !default;</code></dd>
           <dd>Breakpoint above which text inside an element with the <code>cols2</code> class is displayed in two columns.</dd>
-          <dt>$tyfont-size-lede</dt>
-          <dd><code class="val val-default">tyscale(map-get($tyfont-size,"lede")) !default;</code></dd>
-            <dd>Font size applied to a paragraph with the <code>lede</code> class.</dd>
+          <dt>$tyfont-size</dt>
+          <dd><code class="val val-default">("sm":-1, "h6":0, "h5":1, "h4":2, "h3":3, "h2":4, "h1":6, "quote":2, "lede":2) !default;</code></dd>
+          <dd>A <span class="smallcaps">SASS</span> map of values indicating the scale step for each of the font size variables; the size of the lede text is set in this map.</dd>
         </dl>
         <h2 id="examples">Examples</h2>
         <h3>Lede</h3>

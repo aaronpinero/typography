@@ -21,16 +21,16 @@
         <p>The <em>tymargins-size</em> and <em>tymargins</em> mixins apply the style rules. There are three rules included in the <em>tymargins</em> mixin:</p>
         <ol>
           <li>
-            <p>The first rule applies a margin of <code>$tyspacing-md</code> between all adjacent siblings.</p>
-            <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">@include tymargins-size(all,$tyspacing-md);</code></pre>
+            <p>The first rule applies a margin of <code>tyspacing(md)</code> between all adjacent siblings.</p>
+            <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">@include tymargins-size(all,tyspacing(md));</code></pre>
           </li>
           <li>
-            <p>The second rule applies a margin of <code>$tyspacing-md / 2</code> between all adjacent siblings inside ordered, unordered, and definition lists. The smaller margin visually emphasizes the logical relationship between elements in a list.</p>
-            <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">@include tymargins-size(lists,$tyspacing-md/2);</code></pre>
+            <p>The second rule applies a margin of <code>tyspacing(sm)</code> between all adjacent siblings inside ordered, unordered, and definition lists. The smaller margin visually emphasizes the logical relationship between elements in a list.</p>
+            <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">@include tymargins-size(lists,tyspacing(sm));</code></pre>
           </li>
           <li>
-            <p>The third rule applies a margin of <code>$tyspacing-lg</code> to the top of any heading that follows a non-heading element. The increased margin visually emphasizes the logical separation of content indicated by a heading.</p>
-            <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">@include tymargins-size(headings,$tyspacing-lg);</code></pre>
+            <p>The third rule applies a margin of <code>tyspacing(lg)</code> to the top of any heading that follows a non-heading element. The increased margin visually emphasizes the logical separation of content indicated by a heading.</p>
+            <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">@include tymargins-size(headings,tyspacing(lg));</code></pre>
           </li>
         </ol>
         <p>For more information about the spacing variables, see the <a href="settings.html">settings</a> module. To learn more about the <em>tymargins-size</em> and <em>tymargins</em> mixins, see the <a href="mixins.html">mixins</a> documentation. To learn more about turning the margins on and off, see the <a href="spacing.html">spacing</a> module.</p>
