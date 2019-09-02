@@ -22,7 +22,7 @@ if (link_index != -1) {
     prev_link.innerHTML = '<a href="'+ links[link_index - 1].getAttribute('href') +'">Previous Page: '+ links[link_index - 1].textContent +'</a>';
     paging.appendChild(prev_link);
   }
-  if (link_index > 0) { // create next link
+  if (link_index < links.length - 1) { // create next link
     let next_link = document.createElement("li");
     next_link.classList.add("next");
     next_link.innerHTML = '<a href="'+ links[link_index + 1].getAttribute('href') +'">Next Page: '+ links[link_index + 1].textContent +'</a>';
