@@ -72,14 +72,16 @@
         <p><strong class="tyfy">Tyfy</strong> styles are based on <span class="smallcaps">SASS</span> variables that help define the baseline grid, element margins, fonts, text sizes, colors, and more. Sensible defaults are defined so you can get up and running quickly. Overriding the default values can alter the framework’s appearance to fit your brand.</p>
         <p>To override the default variable values, declare the custom values at the top of your <span class="smallcaps">SCSS</span> file. Begin with any <a href="core.html">core</a> values and then any <a href="settings.html">settings</a> values. The following sample comes from the <span class="smallcaps">SCSS</span> file for this documentation:</p>
         <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">// custom core variable values
+$tygrid-unit:0.75rem;
+$tyfont-size-scalar:1.25;
+
+// custom settings variable values
 $tyfont-serif:"IBM Plex Serif", serif;
 $tyfont-sans:"IBM Plex Sans", sans-serif;
 $tyfont-mono:"IBM Plex Mono", monospace;
-
-// custom settings variable values
-$tyfont-base:$tyfy-serif;
-$tyfont-heading:$tyfy-sans;
-
+$tyfont-base:$tyfont-serif;
+$tyfont-heading:$tyfont-sans;
+          
 // include tyfy
 @import "[path to tyfy]/source/scss/tyfy.scss"</code></pre>
         <p>For a full list of variables and their default values, see the documentation for the <a href="core.html">core</a> and <a href="settings.html">settings</a> modules.</p>
