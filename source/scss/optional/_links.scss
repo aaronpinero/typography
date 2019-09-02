@@ -1,7 +1,7 @@
 a {
   color:var(--tycolor-fg);
   text-decoration:none;
-  transition-duration:$tyduration-hover;
+  transition-duration:tyduration(hover);
   transition-property:background-color,border-color,color;
   &[href] {
     border-bottom-color:var(--tycolor-border-link-default);

@@ -116,7 +116,7 @@ table.responsive {
         color:var(--tycolor-text-light);
         display:block;
         font-family:$tyfont-table;
-        font-size:$tyfont-size-sm;
+        font-size:tyfont-size(sm);
         left:0;
         position:absolute;
         vertical-align:top;
@@ -166,7 +166,7 @@ table {
   &.float-right {
     @media (min-width:$tybreak-float) {
       box-sizing:border-box;
-      margin-bottom:$tyspacing-md;
+      margin-bottom:tyspacing-y(md);
       width:calc(50% - #{tygrid(2)});
     }
   }

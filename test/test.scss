@@ -4,16 +4,17 @@ $tyfont-size-scalar:1.25;
 $tyfont-size-base:1.125rem;
 
 // tyfy settings overrides
-$tyspacing: (
-  "small":1,
-  "medium":2,
-  "large":4,
+$tyspacing-y: (
+  sm:1,
+  md:2,
+  lg:4,
 );
-$tyindent: (
-  "small":2,
-  "medium":3,
-  "large":4,
+$tyspacing-x: (
+  sm:2,
+  md:3,
+  lg:4,
 );
+
 $tymargins-on:true;
 
 $tyfont-serif:georgia, serif;
@@ -50,11 +51,11 @@ $tybreak-tabs:40em;
 $tybreak-table:40em;
 
 $tyduration: (
-  "hover":    333ms,
-  "move":     667ms,
-  "long":     1000ms,
-  "longer":   2000ms,
-  "longest":  3000ms
+  "hover":333ms,
+  "move":667ms,
+  "1x":1000ms,
+  "2x":2000ms,
+  "3x":3000ms
 );
 
 $tycolor-bg:white;
@@ -89,7 +90,7 @@ body {
   margin-left:auto;
   margin-right:auto;
   max-width:tygrid(70);
-  padding:$tyspacing-md;
+  padding:tyspacing-y(md);
 }
 .button-rev {
   opacity:0.25;

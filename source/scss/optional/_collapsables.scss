@@ -21,10 +21,10 @@ h6.tyfy-collapsable-processed {
     right:tygrid(0);
     text-align:center;
     top:tygrid(0);
-    transition-duration:$tyduration-move;
+    transition-duration:tyduration(move);
     transition-property:background-color,color,top,transform;
     transition-timing-function:ease-in-out;
-    width:tylead($tyfont-size-h2,heading);
+    width:tylead(tyfont-size(h2),heading);
   }
   &.closed {
     &::before {
@@ -36,7 +36,7 @@ h6.tyfy-collapsable-processed {
     border-bottom:none;
     padding:calc(#{tygrid(2)} - #{$tywidth-border}) calc(#{tygrid(6)} - #{$tywidth-border}) calc(#{tygrid(1)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
     position:relative;
-    transition-duration:$tyduration-move;
+    transition-duration:tyduration(move);
     transition-property:padding-top;
     transition-timing-function:ease-in-out;
     &::before {
@@ -52,27 +52,27 @@ h6.tyfy-collapsable-processed {
   }
   * + &,
   .tymargins-on * + & {
-    margin-top:$tyspacing-md;
+    margin-top:tyspacing-y(md);
   }
 }
 h3.tyfy-collapsable-processed {
   &::before {
-    width:tylead($tyfont-size-h3,heading);
+    width:tylead(tyfont-size(h3),heading);
   }
 }
 h4.tyfy-collapsable-processed {
   &::before {
-    width:tylead($tyfont-size-h4,heading);
+    width:tylead(tyfont-size(h4),heading);
   }
 }
 h5.tyfy-collapsable-processed {
   &::before {
-    width:tylead($tyfont-size-h5,heading);
+    width:tylead(tyfont-size(h5),heading);
   }
 }
 h6.tyfy-collapsable-processed {
   &::before {
-    width:tylead($tyfont-size-h6,heading);
+    width:tylead(tyfont-size(h6),heading);
   }
 }
 h2.tyfy-collapsable-processed,
@@ -94,7 +94,7 @@ h6.tyfy-collapsable-processed {
   margin:0rem;
   overflow:hidden;
   padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tywidth-border}) 0;
-  transition-duration:$tyduration-move;
+  transition-duration:tyduration(move);
   transition-property:padding-top,padding-bottom,height;
   transition-timing-function:ease-in-out;
   @media (min-width:$tybreak-collapsables) {

@@ -21,16 +21,16 @@ hr {
   border-top:$tywidth-border var(--tycolor-border) solid;
   height:0;
   @if $tymargins-on {
-    margin-bottom:$tyspacing-lg;
-    margin-top:$tyspacing-lg;
+    margin-bottom:tyspacing-y(lg);
+    margin-top:tyspacing-y(lg);
   }
   .tymargins-off & {
     margin-bottom:0;
     margin-top:0;
   }
   .tymargins-on & {
-    margin-bottom:$tyspacing-lg;
-    margin-top:$tyspacing-lg;
+    margin-bottom:tyspacing-y(lg);
+    margin-top:tyspacing-y(lg);
   }
 }
 i {
