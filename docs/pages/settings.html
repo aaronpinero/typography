@@ -115,29 +115,8 @@
         <h2 id="spacing">Spacing</h2>
         <dl>
           <dt>$tyspacing</dt>
-          <dd><code class="val val-default">("small":1, "medium":2, "large":3,) !default;</code></dd>
+          <dd><code class="val val-default">(sm:1, md:2, lg:3, indent:3) !default;</code></dd>
           <dd><span class="smallcaps">SASS</span> map of values indicating the number of grid units for each spacing variable value.</dd>
-          <dt>$tyspacing-sm</dt>
-          <dd><code class="val val-default">tygrid(map-get($tyspacing,"small")) !default;</code></dd>
-          <dd>Small spacing between <span class="smallcaps">HTML</span> elements defined as a multiple of the grid unit.</dd>
-          <dt>$tyspacing-md</dt>
-          <dd><code class="val val-default">tygrid(map-get($tyspacing,"medium")) !default;</code></dd>
-          <dd>Medium spacing between <span class="smallcaps">HTML</span> elements defined as a multiple of the grid unit.</dd>
-          <dt>$tyspacing-lg</dt>
-          <dd><code class="val val-default">tygrid(map-get($tyspacing,"large")) !default;</code></dd>
-          <dd>Large spacing between <span class="smallcaps">HTML</span> elements defined as a multiple of the grid unit; used for spacing above headings.</dd>
-          <dt>$tyindent</dt>
-          <dd><code class="val val-default">("small":2, "medium":3, "large":4) !default;</code></dd>
-          <dd><span class="smallcaps">SASS</span> map of values indicating the number of grid units for each indent variable value.</dd>
-          <dt>$tyindent-sm</dt>
-          <dd><code class="val val-default">tygrid(map-get($tyindent,"small")) !default;</code></dd>
-          <dd>Small indent distance for lists and block quotes at small screen sizes; defined as a multiple of the grid unit.</dd>
-          <dt>$tyindent-md</dt>
-          <dd><code class="val val-default">tygrid(map-get($tyindent,"medium")) !default;</code></dd>
-          <dd>Standard indent distance for lists and block quotes defined as a multiple of the grid unit.</dd>
-          <dt>$tyindent-lg</dt>
-          <dd><code class="val val-default">tygrid(map-get($tyindent,"large")) !default;</code></dd>
-          <dd>Large indent distance defined as a multiple of the grid unit.</dd>
           <dt>$tymargins-on</dt>
           <dd><code class="val val-default">true !default;</code></dd>
           <dd>Boolean value indicating if adjacent sibling margins styles are applied on the <code>&lt;body&gt;</code> tag.</dd>
@@ -174,33 +153,6 @@
           <dt>$tyfont-size</dt>
           <dd><code class="val val-default">("sm":-1, "h6":0, "h5":1, "h4":2, "h3":3, "h2":4, "h1":6, "quote":2, "lede":2) !default;</code></dd>
           <dd>A <span class="smallcaps">SASS</span> map of values indicating the scale step for each of the font size variables.</dd>
-          <dt>$tyfont-size-sm</dt>
-          <dd><code class="val val-default">tyscale(map-get($tyfont-size,"sm")) !default;</code></dd>
-          <dd>Small font size, used in the quotes and tables modules; defaults to one scale step down from the base font size.</dd>
-          <dt>$tyfont-size-h6</dt>
-          <dd><code class="val val-default">tyscale(map-get($tyfont-size,"h6")) !default;</code></dd>
-          <dd>Level 6 heading font size.</dd>
-          <dt>$tyfont-size-h5</dt>
-          <dd><code class="val val-default">tyscale(map-get($tyfont-size,"h5")) !default;</code></dd>
-          <dd>Level 5 heading font size.</dd>
-          <dt>$tyfont-size-h4</dt>
-          <dd><code class="val val-default">tyscale(map-get($tyfont-size,"h4")) !default;</code></dd>
-          <dd>Level 4 heading font size.</dd>
-          <dt>$tyfont-size-h3</dt>
-          <dd><code class="val val-default">tyscale(map-get($tyfont-size,"h3")) !default;</code></dd>
-          <dd>Level 3 heading font size.</dd>
-          <dt>$tyfont-size-h2</dt>
-          <dd><code class="val val-default">tyscale(map-get($tyfont-size,"h2")) !default;</code></dd>
-          <dd>Level 2 heading font size.</dd>
-          <dt>$tyfont-size-h1</dt>
-          <dd><code class="val val-default">tyscale(map-get($tyfont-size,"h1")) !default;</code></dd>
-          <dd>Level 1 heading font size.</dd>
-          <dt>$tyfont-size-quote</dt>
-          <dd><code class="val val-default">tyscale(map-get($tyfont-size,"quote")) !default;</code></dd>
-          <dd>Pullquote font size.</dd>
-          <dt>$tyfont-size-lede</dt>
-          <dd><code class="val val-default">tyscale(map-get($tyfont-size,"lede")) !default;</code></dd>
-          <dd>Lede font size.</code></dd>
         </dl>
         <h2 id="measures">Measures</h2>
         <dl>
@@ -244,14 +196,8 @@
         <h2 id="trans">Transitions</h2>
         <dl>
           <dt>$tyduration</dt>
-          <dd><code class="val val-default">("hover":250ms, "move":500ms, "long":1000ms, "longer":2000ms, "longest":3000ms) !default;</code></dd>
+          <dd><code class="val val-default">("hover":250ms, "move":500ms, "1x":1000ms, "2x":2000ms, "3x":3000ms) !default;</code></dd>
           <dd><span class="smallcaps">SASS</span> map of duration values for <span class="smallcaps">CSS</span> transitions and animations.</dd>
-          <dt>$tyduration-hover</dt>
-          <dd><code class="val val-default">map-get($tyduration,"hover") !default;</code></dd>
-          <dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions related to hover events.</dd>
-          <dt>$tyduration-move</dt>
-          <dd><code class="val val-default">map-get($tyduration,"move") !default;</code></dd>
-          <dd>Duration in seconds for <span class="smallcaps">CSS</span> transitions where measures (width, height, position) are changing.</dd>
         </dl>
         <h2 id="colors">Colors</h2>
         <p>In the body module, the following colors are assigned to <span class="smallcaps">CSS</span> custom properties to facilicate dynamic or contextual color changes. The custom property names are the same as the equivalent <span class="smallcaps">SCSS</span> variable names.</p>
