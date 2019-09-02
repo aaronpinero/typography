@@ -30,129 +30,129 @@ samp {
 // paragraphs
 p.lede {
   @media (max-width:$tybreak-font-sm - 1em/32) {
-    font-size:$tyfont-size-lede / $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-lede / $tyfont-size-scalar),tall);
+    font-size:tyfont-size(lede) / $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(lede) / $tyfont-size-scalar),tall);
   }
   @media (min-width:$tybreak-font-lg) {
-    font-size:$tyfont-size-lede * $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-lede * $tyfont-size-scalar),tall);
+    font-size:tyfont-size(lede) * $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(lede) * $tyfont-size-scalar),tall);
   }
 }
 // headings
 h1,
 .tyfont-size-h1 {
   @media (max-width:$tybreak-font-sm - 1em/32) {
-    font-size:$tyfont-size-h1 / $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h1 / $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h1) / $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h1) / $tyfont-size-scalar),heading);
   }
   @media (min-width:$tybreak-font-lg) {
-    font-size:$tyfont-size-h1 * $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h1 * $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h1) * $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h1) * $tyfont-size-scalar),heading);
   }
 }
 h2,
 .tyfont-size-h2 {
   @media (max-width:$tybreak-font-sm - 1em/32) {
-    font-size:$tyfont-size-h2 / $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h2 / $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h2) / $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h2) / $tyfont-size-scalar),heading);
   }
   @media (min-width:$tybreak-font-lg) {
-    font-size:$tyfont-size-h2 * $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h2 * $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h2) * $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h2) * $tyfont-size-scalar),heading);
   }
 }
 h3,
 .tyfont-size-h3 {
   @media (max-width:$tybreak-font-sm - 1em/32) {
-    font-size:$tyfont-size-h3 / $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h3 / $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h3) / $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h3) / $tyfont-size-scalar),heading);
   }
   @media (min-width:$tybreak-font-lg) {
-    font-size:$tyfont-size-h3 * $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h3 * $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h3) * $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h3) * $tyfont-size-scalar),heading);
   }
 }
 h4,
 .tyfont-size-h4 {
   @media (max-width:$tybreak-font-sm - 1em/32) {
-    font-size:$tyfont-size-h4 / $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h4 / $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h4) / $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h4) / $tyfont-size-scalar),heading);
   }
   @media (min-width:$tybreak-font-lg) {
-    font-size:$tyfont-size-h4 * $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h4 * $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h4) * $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h4) * $tyfont-size-scalar),heading);
   }
 }
 h5,
 .tyfont-size-h5 {
   @media (max-width:$tybreak-font-sm - 1em/32) {
-    font-size:$tyfont-size-h5 / $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h5 / $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h5) / $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h5) / $tyfont-size-scalar),heading);
   }
   @media (min-width:$tybreak-font-lg) {
-    font-size:$tyfont-size-h5 * $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h5 * $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h5) * $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h5) * $tyfont-size-scalar),heading);
   }
 }
 h6,
 .tyfont-size-h6 {
   @media (max-width:$tybreak-font-sm - 1em/32) {
-    font-size:$tyfont-size-h6 / $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h6 / $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h6) / $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h6) / $tyfont-size-scalar),heading);
   }
   @media (min-width:$tybreak-font-lg) {
-    font-size:$tyfont-size-h6 * $tyfont-size-scalar;
-    line-height:tylead(($tyfont-size-h6 * $tyfont-size-scalar),heading);
+    font-size:tyfont-size(h6) * $tyfont-size-scalar;
+    line-height:tylead((tyfont-size(h6) * $tyfont-size-scalar),heading);
   }
 }
 // collapsables
 h2.tyfy-collapsable-processed {
   &::before {
     @media (max-width:$tybreak-font-sm - 1em/32) {
-      width:tylead(($tyfont-size-h2 / $tyfont-size-scalar),heading);
+      width:tylead((tyfont-size(h2) / $tyfont-size-scalar),heading);
     }
     @media (min-width:$tybreak-font-lg) {
-      width:tylead(($tyfont-size-h2 * $tyfont-size-scalar),heading);
+      width:tylead((tyfont-size(h2) * $tyfont-size-scalar),heading);
     }
   }
 }
 h3.tyfy-collapsable-processed {
   &::before {
     @media (max-width:$tybreak-font-sm - 1em/32) {
-      width:tylead(($tyfont-size-h3 / $tyfont-size-scalar),heading);
+      width:tylead((tyfont-size(h3) / $tyfont-size-scalar),heading);
     }
     @media (min-width:$tybreak-font-lg) {
-      width:tylead(($tyfont-size-h3 * $tyfont-size-scalar),heading);
+      width:tylead((tyfont-size(h3) * $tyfont-size-scalar),heading);
     }
   }
 }
 h4.tyfy-collapsable-processed {
   &::before {
     @media (max-width:$tybreak-font-sm - 1em/32) {
-      width:tylead(($tyfont-size-h4 / $tyfont-size-scalar),heading);
+      width:tylead((tyfont-size(h4) / $tyfont-size-scalar),heading);
     }
     @media (min-width:$tybreak-font-lg) {
-      width:tylead(($tyfont-size-h4 * $tyfont-size-scalar),heading);
+      width:tylead((tyfont-size(h4) * $tyfont-size-scalar),heading);
     }
   }
 }
 h5.tyfy-collapsable-processed {
   &::before {
     @media (max-width:$tybreak-font-sm - 1em/32) {
-      width:tylead(($tyfont-size-h5 / $tyfont-size-scalar),heading);
+      width:tylead((tyfont-size(h5) / $tyfont-size-scalar),heading);
     }
     @media (min-width:$tybreak-font-lg) {
-      width:tylead(($tyfont-size-h5 * $tyfont-size-scalar),heading);
+      width:tylead((tyfont-size(h5) * $tyfont-size-scalar),heading);
     }
   }
 }
 h6.tyfy-collapsable-processed {
   &::before {
     @media (max-width:$tybreak-font-sm - 1em/32) {
-      width:tylead(($tyfont-size-h6 / $tyfont-size-scalar),heading);
+      width:tylead((tyfont-size(h6) / $tyfont-size-scalar),heading);
     }
     @media (min-width:$tybreak-font-lg) {
-      width:tylead(($tyfont-size-h6 * $tyfont-size-scalar),heading);
+      width:tylead((tyfont-size(h6) * $tyfont-size-scalar),heading);
     }
   }
 }

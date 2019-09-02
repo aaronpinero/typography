@@ -1,7 +1,7 @@
 // default lists
 ol,
 ul {
-  padding-left:$tyindent-md;
+  padding-left:tyspacing-x(md);
 }
 dt {
   font-family:$tyfont-heading;
@@ -10,13 +10,13 @@ dt {
 dd {
   margin-left:0;
   margin-right:0;
-  padding-left:$tyindent-md;
+  padding-left:tyspacing-x(md);
 }
 
 // nested lists
 ol, ul {
   ol, ul {
-    margin-top:$tyspacing-md/2;
+    margin-top:tyspacing-y(sm);
   }
   .tymargins-off &,
   &.tymargins-off {
@@ -61,11 +61,11 @@ ul {
     &.list-indented {
       li {
         box-sizing:border-box;
-        padding-left:$tyindent-md/2;
-        text-indent:-1 * ($tyindent-md/2);
+        padding-left:tyspacing-x(md)/2;
+        text-indent:-1 * (tyspacing-x(md)/2);
       }
       ol, ul {
-        margin-left:-1 * ($tyindent-md/2);
+        margin-left:-1 * (tyspacing-x(md)/2);
       }
     }
     &.list-cols-2,
@@ -86,7 +86,7 @@ ul {
     flex-wrap:wrap;
     padding-left:0;
     li {
-      margin-left:$tyindent-md;
+      margin-left:tyspacing-x(md);
     }
     &.list-flex-center {
       justify-content:center;
@@ -110,14 +110,14 @@ ul {
     @media (min-width:$tybreak-list-cols2) {
       @include tymargins(off);
       columns:2;
-      column-gap:$tyspacing-lg;
+      column-gap:tyspacing-y(lg);
       margin-bottom:tygrid(-1); // to balance out the bottom padding on the list items
       padding-left:0;
       li {
         -webkit-column-break-inside:avoid;
         page-break-inside:avoid;
         break-inside:avoid;
-        margin-left:$tyindent-md;
+        margin-left:tyspacing-x(md);
         padding-bottom:tygrid(1);
       }
       &.tymargins-off,
@@ -143,18 +143,18 @@ ul {
       padding-left:0;
       li {
         box-sizing:border-box;
-        margin-left:$tyindent-md;
-        width:calc(50% - #{$tyindent-md} - #{(0.5 * $tyspacing-lg)});
+        margin-left:tyspacing-x(md);
+        width:calc(50% - #{tyspacing-x(md)} - #{(0.5 * tyspacing-y(lg))});
         &:nth-child(2) {
           margin-top:0; // override of the default margin
         }
         &:nth-child(2n+1) {
-          margin-right:$tyspacing-lg;
+          margin-right:tyspacing-y(lg);
         }
       }
       &.list-nobullet {
         li {
-          width:calc(50% - #{(0.5 * $tyspacing-lg)});
+          width:calc(50% - #{(0.5 * tyspacing-y(lg))});
         }
       }
     }
@@ -163,7 +163,7 @@ ul {
   &.list-grid-4 {
     @media (min-width:$tybreak-list-cols3) {
       li {
-        width:calc(33.33% - #{$tyindent-md} - #{(0.667 * $tyspacing-lg)});
+        width:calc(33.33% - #{tyspacing-x(md)} - #{(0.667 * tyspacing-y(lg))});
         &:nth-child(3) {
           margin-top:0; // override of the default margin
         }
@@ -172,12 +172,12 @@ ul {
         }
         &:nth-child(3n+1),
         &:nth-child(3n+2) {
-          margin-right:$tyspacing-lg;
+          margin-right:tyspacing-y(lg);
         }
       }
       &.list-nobullet {
         li {
-          width:calc(33.33% - #{(0.667 * $tyspacing-lg)});
+          width:calc(33.33% - #{(0.667 * tyspacing-y(lg))});
         }
       }
     }
@@ -185,7 +185,7 @@ ul {
   &.list-grid-4 {
     @media (min-width:$tybreak-list-cols4) {
       li {
-        width:calc(25% - #{$tyindent-md} - #{(0.75 * $tyspacing-lg)});
+        width:calc(25% - #{tyspacing-x(md)} - #{(0.75 * tyspacing-y(lg))});
         &:nth-child(4) {
           margin-top:0; // override of the default margin
         }
@@ -196,12 +196,12 @@ ul {
         &:nth-child(4n+1),
         &:nth-child(4n+2),
         &:nth-child(4n+3) {
-          margin-right:$tyspacing-lg;
+          margin-right:tyspacing-y(lg);
         }
       }
       &.list-nobullet {
         li {
-          width:calc(25% - #{(0.75 * $tyspacing-lg)});
+          width:calc(25% - #{(0.75 * tyspacing-y(lg))});
         }
       }
     }

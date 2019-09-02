@@ -4,23 +4,17 @@
 // grid and spacing
 // sass maps of spacing and indent values are defined as multiple of
 // the grid unit
-$tyspacing: (
-  "small":    1,
-  "medium":   2,
-  "large":    3,
+$tyspacing-y: (
+  sm:         1,
+  md:         2,
+  lg:         3,
 ) !default;
-$tyspacing-sm:                 tygrid(map-get($tyspacing,"small")) !default;
-$tyspacing-md:                 tygrid(map-get($tyspacing,"medium")) !default;
-$tyspacing-lg:                 tygrid(map-get($tyspacing,"large")) !default;
 
-$tyindent: (
-  "small":    2,
-  "medium":   3,
-  "large":    4,
+$tyspacing-x: (
+  sm:         2,
+  md:         3,
+  lg:         4,
 ) !default;
-$tyindent-sm:                  tygrid(map-get($tyindent,"small")) !default;
-$tyindent-md:                  tygrid(map-get($tyindent,"medium")) !default;
-$tyindent-lg:                  tygrid(map-get($tyindent,"large")) !default;
 
 // toggle for adjacent sibling margins
 $tymargins-on:                 true !default;
@@ -41,25 +35,16 @@ $tyfont-input:                 $tyfont-sans !default;
 // a sass map of font size values defined as number of steps up or down
 // the modular scale from the base font size
 $tyfont-size: (
-  "sm":       -1,
-  "h6":       0,
-  "h5":       1,
-  "h4":       2,
-  "h3":       3,
-  "h2":       4,
-  "h1":       6,
-  "quote":    2,
-  "lede":     2
+  sm:         -1,
+  h6:         0,
+  h5:         1,
+  h4:         2,
+  h3:         3,
+  h2:         4,
+  h1:         6,
+  quote:      2,
+  lede:       2
 ) !default;
-$tyfont-size-sm:               tyscale(map-get($tyfont-size,"sm")) !default;
-$tyfont-size-h6:               tyscale(map-get($tyfont-size,"h6")) !default;
-$tyfont-size-h5:               tyscale(map-get($tyfont-size,"h5")) !default;
-$tyfont-size-h4:               tyscale(map-get($tyfont-size,"h4")) !default;
-$tyfont-size-h3:               tyscale(map-get($tyfont-size,"h3")) !default;
-$tyfont-size-h2:               tyscale(map-get($tyfont-size,"h2")) !default;
-$tyfont-size-h1:               tyscale(map-get($tyfont-size,"h1")) !default;
-$tyfont-size-quote:            tyscale(map-get($tyfont-size,"quote")) !default;
-$tyfont-size-lede:             tyscale(map-get($tyfont-size,"lede")) !default;
 
 // measures
 $tywidth-border:               2px !default;
@@ -78,14 +63,12 @@ $tybreak-table:                40em !default;
 
 // durations for transition and animation
 $tyduration: (
-  "hover":    250ms,
-  "move":     500ms,
-  "long":     1000ms,
-  "longer":   2000ms,
-  "longest":  3000ms
+  hover:      250ms,
+  move:       500ms,
+  1x:         1000ms,
+  2x:         2000ms,
+  3x:         3000ms
 ) !default;
-$tyduration-hover:             map-get($tyduration,"hover") !default;
-$tyduration-move:              map-get($tyduration,"move") !default;
 
 // colors
 $tycolor-bg:                   white !default;

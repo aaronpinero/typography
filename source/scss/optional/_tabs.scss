@@ -1,12 +1,12 @@
 * + .tabs-container {
-  margin-top:$tyspacing-md;
+  margin-top:tyspacing-y(md);
 }
 .tabs-container + h2,
 .tabs-container + h3,
 .tabs-container + h4,
 .tabs-container + h5,
 .tabs_container + h6 {
-  margin-top:$tyspacing-lg;
+  margin-top:tyspacing-y(lg);
 }
 .tabs-container {
   ul.tabs {
@@ -34,7 +34,7 @@
       margin:0 0 ($tywidth-border * -1) 0;
       padding:calc(#{tygrid(1)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
       text-align:center;
-      transition-duration:$tyduration-hover;
+      transition-duration:tyduration(hover);
       transition-property:background-color;
       &:hover {
         background-color:var(--tycolor-bg-tab-active);
@@ -50,18 +50,18 @@
   }
   &.tabs-processed {
     * + .tab-label {
-      margin-top:$tyspacing-md;
+      margin-top:tyspacing-y(md);
     }
     .tab-label {
       background-color:transparent;
       border-bottom:$tywidth-border transparent solid;
       clear:both;
       cursor:pointer;
-      font-size:$tyfont-size-h3;
-      line-height:tylead($tyfont-size-h3,heading);
+      font-size:tyfont-size(h3);
+      line-height:tylead(tyfont-size(h3),heading);
       padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tywidth-border}) 0;
       position:relative;
-      transition-duration:$tyduration-move;
+      transition-duration:tyduration(move);
       transition-property:padding-top;
       &::before {
         border-radius:50%;
@@ -75,10 +75,10 @@
         right:0;
         text-align:center;
         top:0;
-        transition-duration:$tyduration-move;
+        transition-duration:tyduration(move);
         transition-property:background-color,color,top;
         transition-timing-function:ease-in-out;
-        width:tylead($tyfont-size-h3,heading);
+        width:tylead(tyfont-size(h3),heading);
       }
       @media (min-width:$tybreak-tabs) {
         display:none;

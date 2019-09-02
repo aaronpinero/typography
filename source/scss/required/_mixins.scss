@@ -63,7 +63,7 @@
 // in which case the specified margin size will be applied to all
 // descendants
 
-@mixin tymargins-size ($context:all, $measure:$tyspacing-md) {
+@mixin tymargins-size ($context:all, $measure:tyspacing-y(md)) {
   @if $context == headings {
     // headings
     :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
@@ -109,17 +109,14 @@
     // everything
     @include tymargins-size;
     // lists
-    @include tymargins-size(lists,$tyspacing-md/2);
+    @include tymargins-size(lists,tyspacing-y(sm));
     // headings
-    @include tymargins-size(headings,$tyspacing-lg);
+    @include tymargins-size(headings,tyspacing-y(lg));
   }
   @else {
-    // everything
-    @include tymargins-size(all,0rem);
-    // lists
-    @include tymargins-size(lists,0rem);
-    // headings
-    @include tymargins-size(headings,0rem);
+    * + * {
+      margin-top:0;
+    };
   }
 }
 
@@ -128,7 +125,7 @@
 // apply a fade-in animation; the duration of the 
 // animation is provided as a parameter
 
-@mixin tyfadein ($duration:1000ms) {
+@mixin tyfadein ($duration:tyduration(1x)) {
   animation:fadein $duration;
 }
 
@@ -169,7 +166,7 @@
   padding:tygrid(0.5) tygrid(1.5);
   text-decoration:none;
   text-shadow:0 1px 1px rgba(black,0.1);
-  transition:all $tyduration-hover;
+  transition:all tyduration(hover);
   vertical-align:middle;
   &,
   &[href] {
