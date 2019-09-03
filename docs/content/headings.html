@@ -25,10 +25,10 @@
         <h2 id="spacing">Spacing</h2>
         <p><strong class="tyfy">Tyfy</strong> headings are positioned closer to the text following the heading than the text preceding. <a href="margins.html">Adjacent sibling selectors</a> are used to define the margins for headings in context of other elements. If the element preceding a heading is not also a heading, the top margin for the heading will be larger than the standard margin. In <span class="smallcaps">CSS</span>, this is accomplished as follows:</p>
         <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">* + * {
-  margin-top: $tyspacing-md;
+  margin-top: tyspacing(md);
 }
 :not(h1) + h2 {
-  margin-top: $tyspacing-lg;
+  margin-top: tyspacing(lg);
 }</code></pre>
         <h2 id="classes">Classes</h2>
         <dl>
@@ -48,18 +48,12 @@
 "quote":      2,
 "lede":       2
 ) !default;</code></pre>
-        <p>Font size variables for headings are calculated using the values in the <span class="smallcaps">SASS</span> map and the <a href="scale.html"><em>tyscale</em></a> function.</p>
-        <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">$tyfont-size-h6: tyscale(map-get($tyfont-size,"h6")) !default;
-$tyfont-size-h5: tyscale(map-get($tyfont-size,"h5")) !default;
-$tyfont-size-h4: tyscale(map-get($tyfont-size,"h4")) !default;
-$tyfont-size-h3: tyscale(map-get($tyfont-size,"h3")) !default;
-$tyfont-size-h2: tyscale(map-get($tyfont-size,"h2")) !default;
-$tyfont-size-h1: tyscale(map-get($tyfont-size,"h1")) !default;</code></pre>
+        <p>Font size variables for headings are calculated using the values in the <span class="smallcaps">SASS</span> map and the <a href="scale.html"><em>tyscale</em></a> function. The <em><a href="functions.html">tyfont-size</a></em> function is provided as shorthand to writing font sizes using scale values.</p>
         <h2 id="variables">Other Variables</h2>
         <dl>
-          <dt>$tyspacing-lg</dt>
-          <dd><code class="val-default">tygrid(map-get($tyspacing,"large")) !default;</code></dd>
-          <dd>Top margin for headings when the preceding element is not another heading.</dd>
+          <dt>$tyspacing</dt>
+          <dd><code class="val val-default">(sm:1, md:2, lg:3, indent:3) !default;</code></dd>
+          <dd><span class="smallcaps">SASS</span> map of values indicating the number of grid units for each spacing variable value; the large size spacing is used to separate headings from other non-heading block eleemnts.</dd>
           <dt>$tyfont-heading</dt>
           <dd><code class="val-default">$tyfont-serif !default</code></dd>
           <dd>Font family for headings.</dd>

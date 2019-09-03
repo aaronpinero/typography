@@ -134,9 +134,9 @@
           <dt>$tycolor-fg</dt>
           <dd><code class="val-default">#111111 !default;</code></dd>
           <dd>Color of anchor links (same as body text color).</dd>
-          <dt>$tyduration-hover</dt>
-          <dd><code class="val-default">0.25s !default;</code></dd>
-          <dd>Duration for transition of border, background color, and text color on hovered links.</dd>
+          <dt>$tyduration</dt>
+          <dd><code class="val val-default">(hover:250ms, move:500ms, 1x:1000ms, 2x:2000ms, 3x:3000ms) !default;</code></dd>
+          <dd><span class="smallcaps">SASS</span> map of duration values for <span class="smallcaps">CSS</span> transitions and animations; the <code>hover</code> duration is used for links.</dd>
           <dt>$tycolor-link-default</dt>
           <dd><code class="val-default">#3380cc !default;</code></dd>
           <dd>Default link color.</dd>
@@ -172,12 +172,12 @@
           <h2><a href="http://aaronpinero.net">Ut euismod purus</a></h2>
           <p>Ut euismod purus sed <a href="http://aaronpinero.net">dolor bibendum</a>, et viverra sapien sagittis. Nullam luctus malesuada ante eget porttitor. Pellentesque eu lobortis augue. Quisque convallis porta tellus, eget lobortis dolor varius accumsan. <a href="http://aaronpinero.net">Donec eu purus</a> ut diam egestas dapibus. Morbi lorem est, luctus ac magna a, luctus volutpat mi. Nullam id <a href="http://aaronpinero.net">nulla eget urna</a> finibus lacinia. Curabitur porttitor tempus nulla non fringilla. Nam egestas vestibulum sem, vel tincidunt elit iaculis non.</p>
         </figure>
-        <h3>Buttons</h3>
-        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p&gt;&lt;a href="http://aaronpinero.net" class="button"&gt;Button&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://aaronpinero.net" class="button-outline"&gt;Outline Button&lt;/a&gt;&lt;/p&gt;</code></pre>
+        <h3>Links as Buttons</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p&gt;&lt;a href="http://aaronpinero.net" class="button"&gt;Link as Button&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://aaronpinero.net" class="button-outline"&gt;Link as Outline Button&lt;/a&gt;&lt;/p&gt;</code></pre>
         <figure class="output">
-          <p><a href="http://aaronpinero.net" class="tybutton">Button</a></p>
-          <p><a href="http://aaronpinero.net" class="tybutton-outline">Outline Button</a></p>
+          <p><a href="http://aaronpinero.net" class="tybutton">Link as Button</a></p>
+          <p><a href="http://aaronpinero.net" class="tybutton-outline">Link as Outline Button</a></p>
         </figure>
       </section>
     </main>
