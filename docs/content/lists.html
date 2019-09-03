@@ -6,124 +6,130 @@
 	</head>
 	<body class="">
 		<%include header.html%>
-		<section class="main links-underlined">
+    <header class="pagetitle">
 			<h1>List Styles</h1>
-			<p>Ordered, unordered, and definition lists inherit styles from the <a href="body.html">body</a> and <a href="spacing.html">spacing</a> modules. In addition to the default list types, <strong class="tyfy">Tyfy</strong> offers several display options for ordered and unordered lists.</p>
-			<h2 id="classes">Classes</h2>
-			<dl>
-  			<dt>.list-icons</dt>
-  			<dd>
-  			  <div>Applied to an unordered list to replace the default bullets with icons. A second class is required to identify the icon to be used:</div>
-  			  <dl>
-    			  <dt>.list-icons-angle</dt>
-    			  <dd>Used with the <code>list-icons</code> class to replace the default bullets with the <span title="angle" class="tyfyicons tyfyicons-angle-right example"></span>angle icon.</dd>
-    			  <dt>.list-icons-dash</dt>
-    			  <dd>Used with the <code>list-icons</code> class to replace the default bullets with the <span title="dash" class="tyfyicons tyfyicons-dash example"></span> dash icon.</dd>
-    			  <dt>.list-icons-check</dt>
-    			  <dd>Used with the <code>list-icons</code> class to replace the default bullets with the <span title="check" class="tyfyicons tyfyicons-check example"></span>check icon.</dd>
-  			  </dl>
-        </dd>
-  			<dt>.list-nobullet</dt>
-  			<dd>
-  			  <div>Applied to an unordered list to remove the bullets and left-hand padding.</div>
-  			  <dl>
-    			  <dt>.list-indented</dt>
-    			  <dd>Used with the <code>list-nobullet</code> class to more clearly identify individual list items. This class indents all lines after the first line in each list item. This class works with nested lists.</dd>
-  			  </dl>
-        </dd>
-  			<dt>.list-cols-2, .list-cols-3</dt>
-  			<dd>Applied to ordered and unordered lists to display items in columns. These classes use CSS columns; columns are read top to bottom and then left to right. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths. These classes <em>do not work with nested lists</em>.</dd>
-  			<dt>.list-grid-2, .list-grid-3, .list-grid-4</dt>
-  			<dd>Applied to ordered and unordered lists to display items in rows. These classes use CSS flexbox; rows are read left to right and then top to bottom. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths. These classes <em>do not work with nested lists</em>.</dd>
-  			<dt>.list-flex</dt>
-  			<dd>
-  			  <div>Applied to unordered lists to display list items in an in-line fashion. This class uses CSS flexbox. While this class is intended for use with the <code>list-nobullet</code> class, it can also be used alone or with the <code>list-icons</code> class. The default alignment of items is left. These classes <em>do not work with ordered lists or nested lists</em>.</div>
-  			  <dl>
-    			  <dt>.list-flex-center</dt>
-    			  <dd>Used with the <code>list-flex</code> class to center align the list items.</dd>
-    			  <dt>.list-flex-right</dt>
-    			  <dd>Used with the <code>list-flex</code> class to right align the list items.</dd>
-  			  </dl>
-        </dd>
-			</dl>
-			<h2 id="variables">Variables</h2>
-			<dl>
-  			<dt>$tyfont-heading</dt>
-				<dd><code class="val val-default">$tyfy-sans !default;</code></dd>
-  			<dd>Font family applied to the <code>&lt;dt&gt;</code> tag.</dd>
-  			<dt>$tyspacing-md</dt>
-				<dd><code class="val val-default">tygrid(map-get($tyspacing,"medium")) !default;</code></dd>
-  			<dd>$tyspacing-md is the margin between lists and other elements. Inside lists, $tyspacing-md/2 is the spacing between list items.</dd>
-				<dt>$tyindent-md</dt>
-				<dd><code class="val val-default">tygrid(map-get($tyindent,"medium")) !default;</code></dd>
-  			<dd>The amount of indentation for list items and definition list definitions. For text indented using the <code>list-indented</code> class, the value is half the value of <code>$tyindent-md</code>.</dd>
-				<dt>$tybreak-list-cols2</dt>
-				<dd><code class="val val-default">35em !default;</code></dd>
-				<dd>Above this em-based screen width grid and column lists can be 2 columns.</dd>
-				<dt>$tybreak-list-cols3</dt>
-				<dd><code class="val val-default">55em !default;</code></dd>
-				<dd>Above this em-based screen width grid and column lists can be 3 columns.</dd>
-				<dt>$tybreak-list-cols4</dt>
-				<dd><code class="val val-default">75em !default;</code></dd>
-				<dd>Above this em-based screen width grid and column lists can be 4 columns.</dd>
-				<dt>$tyspacing-lg</dt>
-				<dd><code class="val val-default">tygrid(map-get($tyspacing,"large")) !default;</code></dd>
-				<dd>The amount of horizontal space between list items when using the <code>list-col-[x]</code> or <code>list-grid-[x]</code> styles.</dd>
-				<dt>$tycolor-text-light</dt>
-				<dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,45%) !default;</code></dd>
-				<dd>Color of icon bullets when using the <code>list-icons</code> class.</dd>
-			</dl>
-			<h2 id="demo">Demo</h2>
-			<form class="form-demo" id="lists-demo">
-  			<div class="form-control form-control-type">
-    			<label>List Type</label>
-    			<label class="option" for="list-type-ordered"><input type="radio" name="list-type" id="list-type-ordered" value="ordered"> Ordered List</label>
-    			<label class="option" for="list-type-unordered"><input type="radio" name="list-type" id="list-type-unordered" value="unordered" checked="checked"> Unordered List</label>
-  			</div>
-  			<div class="form-control form-control-classes">
-    			<label>List Class</label>
-    			<label class="option" for="list-class-icons"><input type="checkbox" name="list-class" id="list-class-icons" value="list-icons"> .list-icons(-angle)</label>
-    			<label class="option" for="list-class-nobullet"><input type="checkbox" name="list-class" id="list-class-nobullet" value="list-nobullet"> .list-nobullet</label>
-    			<label class="option disabled" for="list-class-indented"><input type="checkbox" name="list-class" id="list-class-indented" value="list-indented" disabled="disabled"> .list-indented</label>
-    			<label class="option" for="list-class-cols2"><input type="checkbox" name="list-class" id="list-class-cols2" value="list-cols-2"> .list-cols-2</label>
-    			<label class="option" for="list-class-cols3"><input type="checkbox" name="list-class" id="list-class-cols3" value="list-cols-3"> .list-cols-3</label>
-    			<label class="option" for="list-class-grid2"><input type="checkbox" name="list-class" id="list-class-grid2" value="list-grid-2"> .list-grid-2</label>
-    			<label class="option" for="list-class-grid3"><input type="checkbox" name="list-class" id="list-class-grid3" value="list-grid-3"> .list-grid-3</label>
-    			<label class="option" for="list-class-grid4"><input type="checkbox" name="list-class" id="list-class-grid4" value="list-grid-4"> .list-grid-4</label>
-    			<label class="option" for="list-class-marginsoff"><input type="checkbox" name="list-class" id="list-class-marginsoff" value="tymargins-off"> .tymargins-off</label>
-    			<label class="option" for="list-class-flex"><input type="checkbox" name="list-class" id="list-class-flex" value="list-flex"> .list-flex</label>
-    			<label class="option disabled" for="list-class-flexcenter"><input type="checkbox" name="list-class" id="list-class-flexcenter" value="list-flex-center" disabled="disabled"> .list-flex-center</label>
-    			<label class="option disabled" for="list-class-flexright"><input type="checkbox" name="list-class" id="list-class-flexright" value="list-flex-right" disabled="disabled"> .list-flex-right</label>
-  			</div>
-			</form>
-			<figure class="example">
-  			<ul class="lists-demo-list">
-  				<li>Ab hic tempora tempora dolor</li>
-  				<li>Alias et nam voluptate</li>
-  				<li>
-  				  Blanditiis voluptates ad
-  					<ul>
-  						<li>Cras odio mauris, varius nec tempor nec, elementum eget augue.</li>
-  						<li>Vivamus pretium ante sed ex ultrices semper.</li>
-  					</ul>
-  				</li>
-  				<li>Cumque tempora alias</li>
-  				<li>Esse vel ut fugiat nisi</li>
-  				<li>Est error placeat sit</li>
-  				<li>Et placeat in suscipit et</li>
-  				<li>Ex est similique fugit vitae</li>
-  				<li>
-  				  In eos saepe eos qui tempora
-  					<ul>
-  						<li>Integer tincidunt felis luctus placerat fermentum.</li>
-              <li>Duis et felis mi. Mauris sed faucibus neque.</li>
-  					</ul>
-  				</li>
-  				<li>Ipsam omnis</li>
-  				<li>Labore asperiores velit</li>
-  			</ul>
-			</figure>
-		</section>
+		</header>
+    <main class="block">
+      <nav class="nav-inpage tymargins-off">
+        <h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
+        <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#classes">Classes</a></li>
+          <li><a class="navlink-secondary" href="#variables">Variables</a></li>
+          <li><a class="navlink-secondary" href="#demo">Demo</a></li>
+        </ul>
+      </nav>
+      <section class="section-body links-underlined">
+				<p>Ordered, unordered, and definition lists inherit styles from the <a href="body.html">body</a> and <a href="spacing.html">spacing</a> modules. In addition to the default list types, <strong class="tyfy">Tyfy</strong> offers several display options for ordered and unordered lists.</p>
+				<h2 id="classes">Classes</h2>
+				<dl>
+					<dt>.list-icons</dt>
+					<dd>
+						<div>Applied to an unordered list to replace the default bullets with icons. A second class is required to identify the icon to be used:</div>
+						<dl>
+							<dt>.list-icons-angle</dt>
+							<dd>Used with the <code>list-icons</code> class to replace the default bullets with the <span title="angle" class="tyfyicons tyfyicons-angle-right example"></span>angle icon.</dd>
+							<dt>.list-icons-dash</dt>
+							<dd>Used with the <code>list-icons</code> class to replace the default bullets with the <span title="dash" class="tyfyicons tyfyicons-dash example"></span> dash icon.</dd>
+							<dt>.list-icons-check</dt>
+							<dd>Used with the <code>list-icons</code> class to replace the default bullets with the <span title="check" class="tyfyicons tyfyicons-check example"></span>check icon.</dd>
+						</dl>
+					</dd>
+					<dt>.list-nobullet</dt>
+					<dd>
+						<div>Applied to an unordered list to remove the bullets and left-hand padding.</div>
+						<dl>
+							<dt>.list-indented</dt>
+							<dd>Used with the <code>list-nobullet</code> class to more clearly identify individual list items. This class indents all lines after the first line in each list item. This class works with nested lists.</dd>
+						</dl>
+					</dd>
+					<dt>.list-cols-2, .list-cols-3</dt>
+					<dd>Applied to ordered and unordered lists to display items in columns. These classes use CSS columns; columns are read top to bottom and then left to right. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths. These classes <em>do not work with nested lists</em>.</dd>
+					<dt>.list-grid-2, .list-grid-3, .list-grid-4</dt>
+					<dd>Applied to ordered and unordered lists to display items in rows. These classes use CSS flexbox; rows are read left to right and then top to bottom. For unordered lists, these classes can be used with <code>list-icons</code> or <code>list-nobullet</code>. The styles are responsive and reduce to a single column for small screen widths. These classes <em>do not work with nested lists</em>.</dd>
+					<dt>.list-flex</dt>
+					<dd>
+						<div>Applied to unordered lists to display list items in an in-line fashion. This class uses CSS flexbox. While this class is intended for use with the <code>list-nobullet</code> class, it can also be used alone or with the <code>list-icons</code> class. The default alignment of items is left. These classes <em>do not work with ordered lists or nested lists</em>.</div>
+						<dl>
+							<dt>.list-flex-center</dt>
+							<dd>Used with the <code>list-flex</code> class to center align the list items.</dd>
+							<dt>.list-flex-right</dt>
+							<dd>Used with the <code>list-flex</code> class to right align the list items.</dd>
+						</dl>
+					</dd>
+				</dl>
+				<h2 id="variables">Variables</h2>
+				<dl>
+					<dt>$tyfont-heading</dt>
+					<dd><code class="val val-default">$tyfy-sans !default;</code></dd>
+					<dd>Font family applied to the <code>&lt;dt&gt;</code> tag.</dd>
+          <dt>$tyspacing</dt>
+          <dd><code class="val val-default">(sm:1, md:2, lg:3, indent:3) !default;</code></dd>
+          <dd><span class="smallcaps">SASS</span> map of values indicating the number of grid units for each spacing variable value. The small spacing is used betwen elements in a list; the indent spacing is used for indenting list items; the large spacing is used as a column gap for lists in grids or columns.</dd>
+					<dt>$tybreak-list-cols2</dt>
+					<dd><code class="val val-default">35em !default;</code></dd>
+					<dd>Above this em-based screen width grid and column lists can be 2 columns.</dd>
+					<dt>$tybreak-list-cols3</dt>
+					<dd><code class="val val-default">55em !default;</code></dd>
+					<dd>Above this em-based screen width grid and column lists can be 3 columns.</dd>
+					<dt>$tybreak-list-cols4</dt>
+					<dd><code class="val val-default">75em !default;</code></dd>
+					<dd>Above this em-based screen width grid and column lists can be 4 columns.</dd>
+					<dt>$tycolor-text-light</dt>
+					<dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,45%) !default;</code></dd>
+					<dd>Color of icon bullets when using the <code>list-icons</code> class.</dd>
+				</dl>
+				<h2 id="demo">Demo</h2>
+				<form class="form-demo" id="lists-demo">
+					<div class="form-control form-control-type">
+						<label>List Type</label>
+						<label class="option" for="list-type-ordered"><input type="radio" name="list-type" id="list-type-ordered" value="ordered"> Ordered List</label>
+						<label class="option" for="list-type-unordered"><input type="radio" name="list-type" id="list-type-unordered" value="unordered" checked="checked"> Unordered List</label>
+					</div>
+					<div class="form-control form-control-classes">
+						<label>List Class</label>
+						<label class="option" for="list-class-icons"><input type="checkbox" name="list-class" id="list-class-icons" value="list-icons"> .list-icons(-angle)</label>
+						<label class="option" for="list-class-nobullet"><input type="checkbox" name="list-class" id="list-class-nobullet" value="list-nobullet"> .list-nobullet</label>
+						<label class="option disabled" for="list-class-indented"><input type="checkbox" name="list-class" id="list-class-indented" value="list-indented" disabled="disabled"> .list-indented</label>
+						<label class="option" for="list-class-cols2"><input type="checkbox" name="list-class" id="list-class-cols2" value="list-cols-2"> .list-cols-2</label>
+						<label class="option" for="list-class-cols3"><input type="checkbox" name="list-class" id="list-class-cols3" value="list-cols-3"> .list-cols-3</label>
+						<label class="option" for="list-class-grid2"><input type="checkbox" name="list-class" id="list-class-grid2" value="list-grid-2"> .list-grid-2</label>
+						<label class="option" for="list-class-grid3"><input type="checkbox" name="list-class" id="list-class-grid3" value="list-grid-3"> .list-grid-3</label>
+						<label class="option" for="list-class-grid4"><input type="checkbox" name="list-class" id="list-class-grid4" value="list-grid-4"> .list-grid-4</label>
+						<label class="option" for="list-class-marginsoff"><input type="checkbox" name="list-class" id="list-class-marginsoff" value="tymargins-off"> .tymargins-off</label>
+						<label class="option" for="list-class-flex"><input type="checkbox" name="list-class" id="list-class-flex" value="list-flex"> .list-flex</label>
+						<label class="option disabled" for="list-class-flexcenter"><input type="checkbox" name="list-class" id="list-class-flexcenter" value="list-flex-center" disabled="disabled"> .list-flex-center</label>
+						<label class="option disabled" for="list-class-flexright"><input type="checkbox" name="list-class" id="list-class-flexright" value="list-flex-right" disabled="disabled"> .list-flex-right</label>
+					</div>
+				</form>
+				<figure class="output">
+					<ul class="lists-demo-list">
+						<li>Ab hic tempora tempora dolor</li>
+						<li>Alias et nam voluptate</li>
+						<li>
+							Blanditiis voluptates ad
+							<ul>
+								<li>Cras odio mauris, varius nec tempor nec, elementum eget augue.</li>
+								<li>Vivamus pretium ante sed ex ultrices semper.</li>
+							</ul>
+						</li>
+						<li>Cumque tempora alias</li>
+						<li>Esse vel ut fugiat nisi</li>
+						<li>Est error placeat sit</li>
+						<li>Et placeat in suscipit et</li>
+						<li>Ex est similique fugit vitae</li>
+						<li>
+							In eos saepe eos qui tempora
+							<ul>
+								<li>Integer tincidunt felis luctus placerat fermentum.</li>
+								<li>Duis et felis mi. Mauris sed faucibus neque.</li>
+							</ul>
+						</li>
+						<li>Ipsam omnis</li>
+						<li>Labore asperiores velit</li>
+					</ul>
+				</figure>
+			</section>
+		</main>
 		<%include footer.html%>
     <script src="../resources/script/docs-demo-lists.js"></script>
 	</body>
