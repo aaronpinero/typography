@@ -2672,8 +2672,8 @@ table.utility th[scope="col"] {
 
 @media (min-width: 40em) {
   /* line 826, docs/resources/scss/tyfy-docs-all.scss */
-  .tables-demo-table.responsive th.row-hidden + td,
-  .tables-demo-table.responsive th.row-hidden + th {
+  .tables-demo-table.responsive:not(.striped):not(.vertical-rules) th.row-hidden + td,
+  .tables-demo-table.responsive:not(.striped):not(.vertical-rules) th.row-hidden + th {
     padding-left: 0; } }
 
 /* line 833, docs/resources/scss/tyfy-docs-all.scss */

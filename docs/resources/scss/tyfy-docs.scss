@@ -104,7 +104,7 @@ table.utility {
   th.row-hidden {
     display:none !important;
   }
-  &.responsive th.row-hidden {
+  &.responsive:not(.striped):not(.vertical-rules) th.row-hidden {
     @media (min-width:$tybreak-table) {
       & + td,
       & + th {
