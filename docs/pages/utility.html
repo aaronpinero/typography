@@ -93,104 +93,108 @@
       </ul>
     </nav>
 		<!--/ COMMON HEADER -->
-		<section class="main links-underlined">
+    <header class="pagetitle">
 			<h1>Styles</h1>
-			<p><strong class="tyfy">Tyfy</strong> includes style customizations for block and inline HTML elements used in typographic design. In addition, custom classes are defined for additional typographic enhancement.</p>
-			<h2>Special Case: Horizontal Rule</h2>
-			<p>The horizontal rule (<code>&lt;hr&gt;</code>) has unique margin styles. While all other elements in the framework inherit by the adjacent sibling margin styles, the horizontal rule is given both top and bottom margin. This exception is justified by the purpose of the horizontal rule, which is to act as a separator between other elements.</p>
-			<p>The top and bottom margins are equal to the value of the <code>$tyspacing-lg</code> variable. The margins are applied in two cases:</p>
-			<ul>
-			  <li>when the value of the <code>$tymargins-on</code> variable is <code>true</code>; or</li>
-			  <li>when a parent element has the <code>.tymargins-on</code> class.</li>
-			</ul>
-			<h2>Examples</h2>
-			<table class="clean utility responsive">
-  			<thead>
-    			<tr>
-      			<th scope="col">Sample</th>
-      			<th scope="col" style="width:9em;">Tag.Class</th>
-      			<th scope="col">Description</th>
-    			</tr>
-  			</thead>
-				<tbody>
-					<tr>
-						<td width="25%"><strong>Bold text</strong></td>
-						<td>b<br>strong</td>
-						<td>Bold text</td>
-					</tr>
-					<tr>
-						<td><em>Italic text</em></td>
-						<td>em<br>i</td>
-						<td>Italic text</td>
-					</tr>
-					<tr>
-						<td><code>Code</code></td>
-						<td>code</td>
-						<td>Text describing computer code</td>
-					</tr>
-					<tr>
-						<td><code class="code-nobg">Code, no background</code></td>
-						<td>code.code-nobg</td>
-						<td>The code tag with no background color</td>
-					</tr>
-					<tr>
-						<td><pre>Preformatted</pre></td>
-						<td>pre</td>
-						<td>Preformatted text</td>
-					</tr>
-					<tr>
-						<td><small>Small</small></td>
-						<td>small</td>
-						<td>Small text; makes text one scale step smaller</td>
-					</tr>
-					<tr>
-						<td><hr class="demo"></td>
-						<td>hr</td>
-						<td>Horizontal rule; the thickness is <code>$tywidth-border</code>; the color is <code>$tycolor-border</code></td>
-					</tr>
-					<tr>
-						<td><span class="light">Light</span></td>
-						<td>.light</td>
-						<td>Lighter text; the color is <code>$tycolor-text-light</code></td>
-					</tr>
-					<tr>
-						<td><span class="smallcaps">Small Caps</span></td>
-						<td>span.smallcaps</td>
-						<td>Small caps text</td>
-					</tr>
-					<tr>
-						<td><span class="tybutton">Button</span></td>
-						<td>.tybutton</td>
-						<td>Text as a button</td>
-					</tr>
-					<tr>
-						<td><span class="tybutton-outline">Outlined</span></td>
-						<td>.tybutton-outline</td>
-						<td>Text as an outlined button</td>
-					</tr>
-					<tr>
-						<td><span class="dropcap">D</span>rop cap</td>
-						<td>span.dropcap</td>
-						<td>A decorative drop cap</td>
-					</tr>
-					<tr>
-						<td><span class="tyfont-sans">Sans-serif font</span></td>
-						<td>.tyfont-sans</td>
-						<td>Display text using the <code>$tyfont-sans</code> font</td>
-					</tr>
-					<tr>
-						<td><span class="tyfont-serif">Serif font</span></td>
-						<td>.tyfont-serif</td>
-						<td>Display text using the <code>$tyfont-serif</code> font</td>
-					</tr>
-					<tr>
-						<td><span class="tyfont-mono">Monospace font</span></td>
-						<td>.tyfont-mono</td>
-						<td>Display text using the <code>$tyfont-mono</code> font</td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
+		</header>
+    <main class="block">
+      <section class="section-body links-underlined">
+				<p><strong class="tyfy">Tyfy</strong> includes style customizations for block and inline HTML elements used in typographic design. In addition, custom classes are defined for additional typographic enhancement.</p>
+				<h2>Special Case: Horizontal Rule</h2>
+				<p>The horizontal rule (<code>&lt;hr&gt;</code>) has unique margin styles. While all other elements in the framework inherit by the adjacent sibling margin styles, the horizontal rule is given both top and bottom margin. This exception is justified by the purpose of the horizontal rule, which is to act as a separator between other elements.</p>
+				<p>The top and bottom margins are equal to <code>tyspacing(lg)</code>. The margins are applied in two cases:</p>
+				<ul>
+					<li>when the value of the <code>$tymargins-on</code> variable is <code>true</code>; or</li>
+					<li>when a parent element has the <code>.tymargins-on</code> class.</li>
+				</ul>
+				<h2>Examples</h2>
+				<table class="clean utility responsive">
+					<thead>
+						<tr>
+							<th scope="col">Sample</th>
+							<th scope="col" style="width:9em;">Tag.Class</th>
+							<th scope="col">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td width="25%"><strong>Bold text</strong></td>
+							<td>b<br>strong</td>
+							<td>Bold text</td>
+						</tr>
+						<tr>
+							<td><em>Italic text</em></td>
+							<td>em<br>i</td>
+							<td>Italic text</td>
+						</tr>
+						<tr>
+							<td><code>Code</code></td>
+							<td>code</td>
+							<td>Text describing computer code</td>
+						</tr>
+						<tr>
+							<td><code class="code-nobg">Code, no background</code></td>
+							<td>code.code-nobg</td>
+							<td>The code tag with no background color</td>
+						</tr>
+						<tr>
+							<td><pre>Preformatted</pre></td>
+							<td>pre</td>
+							<td>Preformatted text</td>
+						</tr>
+						<tr>
+							<td><small>Small</small></td>
+							<td>small</td>
+							<td>Small text; makes text one scale step smaller</td>
+						</tr>
+						<tr>
+							<td><hr class="demo"></td>
+							<td>hr</td>
+							<td>Horizontal rule; the thickness is <code>$tywidth-border</code>; the color is <code>$tycolor-border</code></td>
+						</tr>
+						<tr>
+							<td><span class="light">Light</span></td>
+							<td>.light</td>
+							<td>Lighter text; the color is <code>$tycolor-text-light</code></td>
+						</tr>
+						<tr>
+							<td><span class="smallcaps">Small Caps</span></td>
+							<td>span.smallcaps</td>
+							<td>Small caps text</td>
+						</tr>
+						<tr>
+							<td><span class="tybutton">Button</span></td>
+							<td>.tybutton</td>
+							<td>Text as a button</td>
+						</tr>
+						<tr>
+							<td><span class="tybutton-outline">Outlined</span></td>
+							<td>.tybutton-outline</td>
+							<td>Text as an outlined button</td>
+						</tr>
+						<tr>
+							<td><span class="dropcap">D</span>rop cap</td>
+							<td>span.dropcap</td>
+							<td>A decorative drop cap</td>
+						</tr>
+						<tr>
+							<td><span class="tyfont-sans">Sans-serif font</span></td>
+							<td>.tyfont-sans</td>
+							<td>Display text using the <code>$tyfont-sans</code> font</td>
+						</tr>
+						<tr>
+							<td><span class="tyfont-serif">Serif font</span></td>
+							<td>.tyfont-serif</td>
+							<td>Display text using the <code>$tyfont-serif</code> font</td>
+						</tr>
+						<tr>
+							<td><span class="tyfont-mono">Monospace font</span></td>
+							<td>.tyfont-mono</td>
+							<td>Display text using the <code>$tyfont-mono</code> font</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</main>
 		<!-- COMMON FOOTER -->
 		<footer class="footer">
 			<div>© Copyright 2017-2019 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>
