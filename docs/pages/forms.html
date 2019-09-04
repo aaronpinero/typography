@@ -93,10 +93,21 @@
       </ul>
     </nav>
 		<!--/ COMMON HEADER -->
-    <section class="main links-underlined">
+    <header class="pagetitle">
       <h1>Forms</h1>
-      <p><strong class="tyfy">Tyfy</strong> provides basic styles for form elements. The styles are intended for simple forms where each form element consists of a label-input pair.</p>
-      <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
+		</header>
+    <main class="block">
+      <nav class="nav-inpage tymargins-off">
+        <h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
+        <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#variables">Variables</a></li>
+          <li><a class="navlink-secondary" href="#classes">Classes</a></li>
+          <li><a class="navlink-secondary" href="#examples">Examples</a></li>
+        </ul>
+      </nav>
+      <section class="section-body links-underlined">
+        <p><strong class="tyfy">Tyfy</strong> provides basic styles for form elements. The styles are intended for simple forms where each form element consists of a label-input pair.</p>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
   &lt;div&gt;
     &lt;label&gt;Text Input&lt;/label&gt;
     &lt;input type="text" name="name"&gt;
@@ -106,31 +117,31 @@
     &lt;input type="number" name="age"&gt;
   &lt;/div&gt;
 &lt;/form&gt;</code></pre>
-      <p>Element spacing has been adjusted so labels are more closely positioned to their associated input than to surrounding elements. There are <span class="smallcaps">CSS</span> classes for <code>select</code> and <code>label</code> elements that provide some presentation options.</p>
-      <h2>Variables</h2>
-      <dl>
-        <dt>$tyfont-input</dt>
-        <dd><code class="val val-default">$tyfont-sans !default;</code></dd>
-        <dd>Typeface for form elements.</dd>
-        <dt>$tywidth-border</dt>
-        <dd><code class="val val-default">2px !default;</code></dd>
-        <dd>Thickness of the borders around form elements.</dd>
-        <dt>$tycolor-border</dt>
-        <dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,12%) !default;</code></dd>
-        <dd>Default border color.</dd>
-      </dl>
-      <h2>Classes</h2>
-      <dl>
-        <dt>.tyselect</dt>
-        <dd>Adjusts the appearance of a <code>select</code> element so it is more consistent with other elements; this class can be applied directly to the <code>select</code> element or to a parent element.</dd>
-        <dt>.label-option</dt>
-        <dd>Apply to a <code>label</code> when used adjacent to or to encapsulate a radio button or checkbox input.</dd>
-        <dt>.label-inline</dt>
-        <dd>Apply to a <code>label</code> to display as an inline-block instead of block element.</dd>
-      </dl>
-			<h2>Examples</h2>
-			<h3>Inputs</h3>
-			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
+        <p>Element spacing has been adjusted so labels are more closely positioned to their associated input than to surrounding elements. There are <span class="smallcaps">CSS</span> classes for <code>select</code> and <code>label</code> elements that provide some presentation options.</p>
+        <h2 id="variables">Variables</h2>
+        <dl>
+          <dt>$tyfont-input</dt>
+          <dd><code class="val val-default">$tyfont-sans !default;</code></dd>
+          <dd>Typeface for form elements.</dd>
+          <dt>$tywidth-border</dt>
+          <dd><code class="val val-default">2px !default;</code></dd>
+          <dd>Thickness of the borders around form elements.</dd>
+          <dt>$tycolor-border</dt>
+          <dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,12%) !default;</code></dd>
+          <dd>Default border color.</dd>
+        </dl>
+        <h2 id="classes">Classes</h2>
+        <dl>
+          <dt>.tyselect</dt>
+          <dd>Adjusts the appearance of a <code>select</code> element so it is more consistent with other elements; this class can be applied directly to the <code>select</code> element or to a parent element.</dd>
+          <dt>.label-option</dt>
+          <dd>Apply to a <code>label</code> when used adjacent to or to encapsulate a radio button or checkbox input.</dd>
+          <dt>.label-inline</dt>
+          <dd>Apply to a <code>label</code> to display as an inline-block instead of block element.</dd>
+        </dl>
+        <h2 id="examples">Examples</h2>
+        <h3>Inputs</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
   &lt;div&gt;
     &lt;label&gt;Text Input&lt;/label&gt;
     &lt;input type="text" name="name"&gt;
@@ -141,21 +152,21 @@
   &lt;/div&gt;
   &lt;p&gt;&lt;input type="submit" name="submit" value="Submit Button"&gt;&lt;/p&gt;
 &lt;/form&gt;</code></pre>    
-			<figure class="example">
-        <form>
-          <div>
-            <label>Text Input</label>
-            <input type="text" name="name">
-          </div>
-          <div>
-            <label>Number Input</label>
-            <input type="number" name="age">
-          </div>
-          <p><input type="submit" name="submit" value="Submit Button"></p>
-        </form>
-			</figure>
-			<h3>Selects</h3>
-			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
+        <figure class="output">
+          <form>
+            <div>
+              <label>Text Input</label>
+              <input type="text" name="name">
+            </div>
+            <div>
+              <label>Number Input</label>
+              <input type="number" name="age">
+            </div>
+            <p><input type="submit" name="submit" value="Submit Button"></p>
+          </form>
+        </figure>
+        <h3>Selects</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
   &lt;div&gt;
     &lt;label&gt;Select&lt;/label&gt;
     &lt;div class="tyselect"&gt;
@@ -184,39 +195,39 @@
   &lt;/div&gt;
   &lt;p&gt;&lt;input type="submit" name="submit" value="Submit Button"&gt;&lt;/p&gt;
 &lt;/form&gt;</code></pre>    
-			<figure class="example">
-        <form>
-          <div>
-            <label>Select</label>
-            <div class="tyselect">
-              <select name="color">
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-                <option value="yellow">Yellow</option>
-                <option value="green">Green</option>
-                <option value="blue">Blue</option>
-                <option value="purple">Purple</option>
-              </select>
+        <figure class="output">
+          <form>
+            <div>
+              <label>Select</label>
+              <div class="tyselect">
+                <select name="color">
+                  <option value="red">Red</option>
+                  <option value="orange">Orange</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="green">Green</option>
+                  <option value="blue">Blue</option>
+                  <option value="purple">Purple</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div>
-            <label>Multiple Select</label>
-            <div class="tyselect">
-              <select name="color" multiple="multiple">
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-                <option value="yellow">Yellow</option>
-                <option value="green">Green</option>
-                <option value="blue">Blue</option>
-                <option value="purple">Purple</option>
-              </select>
+            <div>
+              <label>Multiple Select</label>
+              <div class="tyselect">
+                <select name="color" multiple="multiple">
+                  <option value="red">Red</option>
+                  <option value="orange">Orange</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="green">Green</option>
+                  <option value="blue">Blue</option>
+                  <option value="purple">Purple</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <p><input type="submit" name="submit" value="Submit Button"></p>
-        </form>
-			</figure>
-			<h3>Checkboxes and Radios</h3>
-			<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
+            <p><input type="submit" name="submit" value="Submit Button"></p>
+          </form>
+        </figure>
+        <h3>Checkboxes and Radios</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Fieldset&lt;/legend&gt;
     &lt;div&gt;
@@ -244,37 +255,38 @@
   &lt;/fieldset&gt;
   &lt;p&gt;&lt;input type="submit" name="submit" value="Submit Button"&gt;&lt;/p&gt;
 &lt;/form&gt;</code></pre>    
-			<figure class="example">
-        <form>
-          <fieldset>
-            <legend>Fieldset</legend>
-            <div>
-              <label>Option Labels, Inline</label>
+        <figure class="output">
+          <form>
+            <fieldset>
+              <legend>Fieldset</legend>
               <div>
-                <label class="label-option label-inline"><input type="checkbox" name="sky" value="a"> Option A</label>
-                <label class="label-option label-inline"><input type="checkbox" name="sky" value="b"> Option B</label>
-                <label class="label-option label-inline"><input type="checkbox" name="sky" value="c"> Option C</label>
+                <label>Option Labels, Inline</label>
+                <div>
+                  <label class="label-option label-inline"><input type="checkbox" name="sky" value="a"> Option A</label>
+                  <label class="label-option label-inline"><input type="checkbox" name="sky" value="b"> Option B</label>
+                  <label class="label-option label-inline"><input type="checkbox" name="sky" value="c"> Option C</label>
+                </div>
               </div>
-            </div>
-            <div>
-              <label>Option Labels, Inline</label>
               <div>
-                <label class="label-option label-inline"><input type="radio" name="sky" value="true"> True</label>
-                <label class="label-option label-inline"><input type="radio" name="sky" value="false"> False</label>
+                <label>Option Labels, Inline</label>
+                <div>
+                  <label class="label-option label-inline"><input type="radio" name="sky" value="true"> True</label>
+                  <label class="label-option label-inline"><input type="radio" name="sky" value="false"> False</label>
+                </div>
               </div>
-            </div>
-            <div>
-              <label>Option Labels</label>
-              <ul class="list-nobullet sibling-margins-off">
-                <li><label class="label-option"><input type="radio" name="roses" value="true"> True</label></li>
-                <li><label class="label-option"><input type="radio" name="roses" value="false"> False</label></li>
-              </ul>
-            </div>
-          </fieldset>
-          <p><input type="submit" name="submit" value="Submit Button"></p>
-        </form>
-			</figure>
-    </section>
+              <div>
+                <label>Option Labels</label>
+                <ul class="list-nobullet sibling-margins-off">
+                  <li><label class="label-option"><input type="radio" name="roses" value="true"> True</label></li>
+                  <li><label class="label-option"><input type="radio" name="roses" value="false"> False</label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <p><input type="submit" name="submit" value="Submit Button"></p>
+          </form>
+        </figure>
+      </section>
+    </main>
     <!-- COMMON FOOTER -->
 		<footer class="footer">
 			<div>© Copyright 2017-2019 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>

@@ -1496,8 +1496,9 @@ input[type="submit"] {
 /* line 127, source/scss/optional/_forms.scss */
 .tyselect select,
 select.tyselect {
+  -webkit-appearance: none;
   appearance: none; }
-  /* line 130, source/scss/optional/_forms.scss */
+  /* line 131, source/scss/optional/_forms.scss */
   .tyselect select:not([multiple]),
   select.tyselect:not([multiple]) {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#707070'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#707070'/%3E%3C/svg%3E");
