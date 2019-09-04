@@ -18,50 +18,13 @@
   }
   .form-control {
     box-sizing:border-box;
-    display:block;
+    display:flex;
+    flex-wrap:wrap;
     font-family:$tyfont-input;
     font-size:$tyfont-size-base;
     padding-top:tygrid();
     padding-bottom:tygrid();
     width:100%;
-    &.form-control-classes,
-    &.form-control-headers {
-      display:flex;
-      flex-wrap:wrap;
-    }
-  }
-  & + figure.output {
-    border-top:none;
-    margin-top:0;
-    padding-top:tyspacing(md);
-  }
-
-  // list demo styles
-  &#lists-demo .form-control {
-    &.form-control-type {
-      @media (min-width:55em) {
-        border-right:$tywidth-border solid $tycolor-border;
-        width:25%;
-      }
-    }
-    &.form-control-classes {
-      @media (min-width:55em) {
-        padding-left:tyspacing(md);
-        width:75%;
-      }
-      label {
-        @media (min-width:40em) {
-          width:33%;
-          &:first-child {
-            width:100%;
-          }
-        }
-      }
-    }
-  }
-
-  // tables demo styles
-  &#tables-demo .form-control {
     label:not(:first-child) {
       @media (min-width:30em) {
         width:50%;
@@ -70,5 +33,10 @@
         width:25%;
       }
     }
+  }
+  & + figure.output {
+    border-top:none;
+    margin-top:0;
+    padding-top:tyspacing(md);
   }
 }
