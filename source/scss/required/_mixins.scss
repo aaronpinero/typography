@@ -113,6 +113,12 @@
     // headings
     @include tymargins-size(headings,tyspacing(lg));
   }
+  @else if $state == skip {
+    // don't apply the margins to the immediate descendants
+    > * + * {
+      margin-top:0;
+    }
+  }
   @else {
     * + * {
       margin-top:0;

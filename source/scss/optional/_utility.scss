@@ -28,6 +28,10 @@ hr {
     margin-bottom:0;
     margin-top:0;
   }
+  .tymargins-skip > & {
+    margin-bottom:0;
+    margin-top:0;
+  }
   .tymargins-on & {
     margin-bottom:tyspacing(lg);
     margin-top:tyspacing(lg);

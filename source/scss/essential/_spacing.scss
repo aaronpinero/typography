@@ -14,6 +14,9 @@
 .tymargins-on {
   @include tymargins(on);
 }
+.tymargins-skip {
+  @include tymargins(skip);
+}
 .tymargins-off {
   @include tymargins(off);
 }
