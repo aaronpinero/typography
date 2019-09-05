@@ -93,17 +93,28 @@
       </ul>
     </nav>
 		<!--/ COMMON HEADER -->
-    <section class="main links-underlined">
+    <header class="pagetitle">
       <h1>Tabs</h1>
-      <p>Tabs are presented horizontally with the content of the selected tab appearing directly below the tabs. <strong class="tyfy">Tyfy</strong> tabs:</p>
-      <ul>
-        <li>are responsive, reducing to <a href="collapsables.html">collapsable headings</a> at small screen sizes</li>
-        <li>allow for anchored links to tabs or to content inside inactive tabs</li>
-        <li>require Javascript (tabs.js)</li>
-      </ul>
-      <h2><span class="smallcaps">HTML</span> Structure</h2>
-      <p>All tab labels and tab content are enclosed in a block-level element with the <code>tabs-container</code> class. Individual tabs are defined by indicating the label for each tab with the <code>tab-label</code> class.</p>
-      <pre class="codebox" data-lang="HTML"><code class="code-nobg">&lt;div class="tabs-container"&gt;
+    </header>
+    <main class="block">
+      <nav class="nav-inpage tymargins-off">
+        <h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
+        <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#structure"><span class="smallcaps">HTML</span> Structure</a></li>
+          <li><a class="navlink-secondary" href="#variables">Variables</a></li>
+          <li><a class="navlink-secondary" href="#example">Example</a></li>
+        </ul>
+      </nav>
+      <section class="section-body links-underlined">
+        <p>Tabs are presented horizontally with the content of the selected tab appearing directly below the tabs. <strong class="tyfy">Tyfy</strong> tabs:</p>
+        <ul class="tymargins-off">
+          <li>are responsive, reducing to <a href="collapsables.html">collapsable headings</a> at small screen sizes</li>
+          <li>allow for anchored links to tabs or to content inside inactive tabs</li>
+          <li>require Javascript (tabs.js)</li>
+        </ul>
+        <h2 id="structure"><span class="smallcaps">HTML</span> Structure</h2>
+        <p>All tab labels and tab content are enclosed in a block-level element with the <code>tabs-container</code> class. Individual tabs are defined by indicating the label for each tab with the <code>tab-label</code> class.</p>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;div class="tabs-container"&gt;
   &lt;h2 class="tab-label"&gt;Tab Label 1&lt;/h2&gt;
   &lt;p&gt;[content of the tab]&lt;/p&gt;
   &lt;p&gt;[content of the tab]&lt;/p&gt;
@@ -111,45 +122,55 @@
   &lt;p&gt;[content of the tab]&lt;/p&gt;
   &lt;ul&gt;[content of the tab]&lt;/ul&gt;
 &lt;/div&gt;</code></pre>
-      <p>JavaScript is used to identify the contents of each tab and to generate the clickable tabs. The content of a tab is defined as <em>all the next sibling elements following the <code>tab-label</code> element up to the next <code>tab-label</code></em>. JavaScript wraps the content of each tab in a  <code>&lt;div&gt;</code> with the class <code>tab-panel</code> and creates an unordered list . To indicate that JavaScript has acted on the collapsable heading, the class collapsable-processed is added to the collapsable heading. So, after JavaScript has run, the code will appear as follows:</p> 
-      <pre>&lt;div class="tabs-container"&gt;
-  &lt;h2 class="tab-label"&gt;Tab Label 1&lt;/h2&gt;
-  &lt;p&gt;[content of the tab]&lt;/p&gt;
-  &lt;p&gt;[content of the tab]&lt;/p&gt;
-  &lt;h2 class="tab-label"&gt;Tab Label 2&lt;/h2&gt;
-  &lt;p&gt;[content of the tab]&lt;/p&gt;
-  &lt;ul&gt;[content of the tab]&lt;/ul&gt;
-&lt;/div&gt;</pre>
-      <h2>Related Variables</h2>
-      <dl>
-        <dt>$tyfy-break-tabs</dt>
-        <dd>Breakpoint at which tabs transition from tabs to collapsables; !default value is <code>40em</code></dd>
-        <dt>$tyfy-width-border</dt>
-        <dd>Width of the border around tab labels and tab panels; !default value is <code>2px</code></dd>
-        <dt>$tycolor-border</dt>
-        <dd>Color of the borders around tab labels and tab panels; !default value <code>mix($tycolor-fg,$tycolor-bg,12%)</code></dd>
-        <dt>$tyfyicons-angle-down</dt>
-        <dd>The character code for the angle-down icon; this icon is used at small screen sizes when tabs become collapsables; !default value is <code>"ea01"</code></dd>
-        <dt>$tyfyicons-angle-up</dt>
-        <dd>The character code for the angle-up icon; this icon is used at small screen sizes when tabs become collapsables; !default value is <code>"ea05"</code></dd>
-      </dl>
-      <h2>Example</h2>
-      <p>Test links to:</p>
-      <ul>
-        <li><a href="#anchor">An anchor in the second tab</a></li>
-        <li><a href="#Donec Scelerisque">The third tab</a></li>
-      </ul>      
-      <div class="tabs-container">
-        <h2 class="tab-label">Lorem Ipsum</h2>
-        <p>Porro excepturi ad eligendi excepturi quam voluptate velit. Placeat modi animi natus est temporibus tenetur pariatur suscipit. Dolores sit id sit placeat consequatur temporibus accusamus et. Cumque voluptatum voluptatum delectus et sequi. Vero vitae officia eius ad. Consequatur impedit quam mollitia.</p>
-        <p>Aspernatur id nihil sit eveniet vero corporis necessitatibus sit. Magni quia vitae perferendis. Suscipit illo tempora minus officia nemo aut numquam. Qui et omnis velit repudiandae autem. Aperiam aut dolorem neque quis dolor est sunt.</p>
-        <h2 class="tab-label">Dolor Sit Amet</h2>
-        <p>Facilis error corrupti dolor eaque. <a name="anchor"><em>Anchor link</em></a> illum sequi officia rerum nostrum. Iste in quo eveniet. Deserunt quaerat a adipisci magni consequatur nesciunt distinctio praesentium. Ipsum vel ut est vel veritatis fugiat perspiciatis.</p>
-        <p>Omnis dolores sit pariatur facilis odit magni. Totam excepturi incidunt dolorem assumenda neque dolorem. Dolorem odio consequatur quas corrupti sequi. Nihil ut nihil itaque non at molestiae corporis. Explicabo voluptate quis et.</p>
-        <h2 class="tab-label">Donec Scelerisque</h2>
-        <p>Curabitur non mauris sodales, tempor lacus ac, maximus felis. Vestibulum ultrices augue ut arcu mattis pellentesque. Maecenas ullamcorper lorem sit amet pretium pharetra. Nunc ipsum tellus, hendrerit vitae bibendum vel, scelerisque sit amet libero. Duis imperdiet massa placerat venenatis pharetra. Donec consectetur quis odio sit amet sollicitudin. Morbi at faucibus odio. Duis viverra lacus a odio pretium, quis suscipit tortor accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur egestas venenatis est vel hendrerit. Fusce molestie bibendum ex in suscipit.</p>
-      </div>
-    </section>
+        <p>JavaScript is used to identify the contents of each tab and to generate the clickable tabs. The content of a tab is defined as <em>all the next sibling elements following the <code>tab-label</code> element up to the next <code>tab-label</code></em>. JavaScript wraps the content of each tab in a  <code>&lt;div&gt;</code> with the class <code>tab-panel</code>. In addition, the script creates an unordered list for the clickable tabs. Each tab label becomes and item in the list. To indicate that JavaScript has acted on the tabs, the class <code>tabs-processed</code> is added to the tabs container. So, after JavaScript has run, the code will appear as follows:</p> 
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;div class="tabs-container tabs-processed"&gt;
+  &lt;ul class="tabs"&gt;
+    &lt;li data-tabindex="0" class="open"&gt;Tab Label 1&lt;/li&gt;
+    &lt;li data-tabindex="1"&gt;Tab Label 2&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h2 class="tab-label collapsed open" data-tabindex="0"&gt;&lt;a id="Tab%20Label%201"&gt;Tab Label 1&lt;/a&gt;&lt;/h2&gt;
+  &lt;div class="tab-panel collapsed open"&gt;
+    &lt;p&gt;[content of the tab]&lt;/p&gt;
+    &lt;p&gt;[content of the tab]&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;h2 class="tab-label collapsed" data-tabindex="1"&gt;&lt;a id="Tab%20Label%202"&gt;Tab Label 2&lt;/a&gt;&lt;/h2&gt;
+  &lt;div class="tab-panel collapsed"&gt;
+    &lt;p&gt;[content of the tab]&lt;/p&gt;
+    &lt;ul&gt;[content of the tab]&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h2 id="variables">Variables</h2>
+        <dl>
+          <dt>$tyfy-break-tabs</dt>
+          <dd>Breakpoint at which tabs transition from tabs to collapsables; !default value is <code>40em</code></dd>
+          <dt>$tyfy-width-border</dt>
+          <dd>Width of the border around tab labels and tab panels; !default value is <code>2px</code></dd>
+          <dt>$tycolor-border</dt>
+          <dd>Color of the borders around tab labels and tab panels; !default value <code>mix($tycolor-fg,$tycolor-bg,12%)</code></dd>
+          <dt>$tyfyicons-angle-down</dt>
+          <dd>The character code for the angle-down icon; this icon is used at small screen sizes when tabs become collapsables; !default value is <code>"ea01"</code></dd>
+          <dt>$tyfyicons-angle-up</dt>
+          <dd>The character code for the angle-up icon; this icon is used at small screen sizes when tabs become collapsables; !default value is <code>"ea05"</code></dd>
+        </dl>
+        <h2 id="example">Example</h2>
+        <p>Test links to:</p>
+        <ul>
+          <li><a href="#anchor">An anchor in the second tab</a></li>
+          <li><a href="#Donec Scelerisque">The third tab</a></li>
+        </ul>      
+        <div class="tabs-container">
+          <h2 class="tab-label">Lorem Ipsum</h2>
+          <p>Porro excepturi ad eligendi excepturi quam voluptate velit. Placeat modi animi natus est temporibus tenetur pariatur suscipit. Dolores sit id sit placeat consequatur temporibus accusamus et. Cumque voluptatum voluptatum delectus et sequi. Vero vitae officia eius ad. Consequatur impedit quam mollitia.</p>
+          <p>Aspernatur id nihil sit eveniet vero corporis necessitatibus sit. Magni quia vitae perferendis. Suscipit illo tempora minus officia nemo aut numquam. Qui et omnis velit repudiandae autem. Aperiam aut dolorem neque quis dolor est sunt.</p>
+          <h2 class="tab-label">Dolor Sit Amet</h2>
+          <p>Facilis error corrupti dolor eaque. <a name="anchor"><em>Anchor link</em></a> illum sequi officia rerum nostrum. Iste in quo eveniet. Deserunt quaerat a adipisci magni consequatur nesciunt distinctio praesentium. Ipsum vel ut est vel veritatis fugiat perspiciatis.</p>
+          <p>Omnis dolores sit pariatur facilis odit magni. Totam excepturi incidunt dolorem assumenda neque dolorem. Dolorem odio consequatur quas corrupti sequi. Nihil ut nihil itaque non at molestiae corporis. Explicabo voluptate quis et.</p>
+          <h2 class="tab-label">Donec Scelerisque</h2>
+          <p>Curabitur non mauris sodales, tempor lacus ac, maximus felis. Vestibulum ultrices augue ut arcu mattis pellentesque. Maecenas ullamcorper lorem sit amet pretium pharetra. Nunc ipsum tellus, hendrerit vitae bibendum vel, scelerisque sit amet libero. Duis imperdiet massa placerat venenatis pharetra. Donec consectetur quis odio sit amet sollicitudin. Morbi at faucibus odio. Duis viverra lacus a odio pretium, quis suscipit tortor accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur egestas venenatis est vel hendrerit. Fusce molestie bibendum ex in suscipit.</p>
+        </div>
+      </section>
+    </main>
 		<!-- COMMON FOOTER -->
 		<footer class="footer">
 			<div>© Copyright 2017-2019 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>
