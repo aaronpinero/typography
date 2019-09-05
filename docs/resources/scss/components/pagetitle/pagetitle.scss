@@ -1,16 +1,39 @@
 header.pagetitle {
-  --tycolor-fg:white;
-  background-color:$tycolor-link-active;
-  box-shadow:0 1px tygrid(2) rgba(black,0.15) inset;
-  color:white;
+  &:not(.home) {
+    --tycolor-fg:white;
+    background-color:$tycolor-link-active;
+    background-image:url('data:image/svg+xml;charset=UTF-8,<svg width="97px" height="18px" viewBox="0 0 97 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2"><g fill="#FFFFFF"><rect x="0" y="0" width="2" height="10"></rect><rect x="5" y="0" width="2" height="10"></rect><rect x="10" y="0" width="2" height="18"></rect><rect x="25" y="0" width="2" height="18"></rect><rect x="15" y="0" width="2" height="10"></rect><rect x="20" y="0" width="2" height="10"></rect><rect x="30" y="0" width="2" height="10"></rect><rect x="35" y="0" width="2" height="10"></rect><rect x="40" y="0" width="2" height="18"></rect><rect x="45" y="0" width="2" height="10"></rect><rect x="50" y="0" width="2" height="10"></rect><rect x="55" y="0" width="2" height="18"></rect><rect x="70" y="0" width="2" height="18"></rect><rect x="60" y="0" width="2" height="10"></rect><rect x="65" y="0" width="2" height="10"></rect><rect x="75" y="0" width="2" height="10"></rect><rect x="80" y="0" width="2" height="10"></rect><rect x="85" y="0" width="2" height="18"></rect><rect x="90" y="0" width="2" height="10"></rect><rect x="95" y="0" width="2" height="10"></rect></g></g></svg>'), linear-gradient($tycolor-link-active, $tycolor-link-default);
+    background-position:bottom calc(#{tygrid(4)} - 18px) center,center center;
+    background-repeat:no-repeat,no-repeat;
+    background-size:97px 18px,cover;
+    box-shadow:0 1px tygrid(2) rgba(black,0.15) inset;
+    color:white;
+  }
   padding:tygrid(4) tygrid(2);
   text-align:center;
   @media (min-width:tygrid(60)) {
-    padding:tygrid(6) tygrid(2);
+    &:not(.home) {
+      background-position:bottom calc(#{tygrid(6)} - 18px) center,center center;
+      padding:tygrid(6) tygrid(2);
+    }
+    &.home {
+      padding:tygrid(8) tygrid(2);
+    }
   }
   h1 {
     font-family:$tyfont-condensed;
-    text-shadow:0 1px tygrid(0.5) rgba(black,0.25);
     text-transform:uppercase;
+  }
+  &:not(.home) h1 {
+    text-shadow:0 1px tygrid(0.5) rgba(black,0.25);
+  }
+  &.home h1 {
+    background:-webkit-linear-gradient($tycolor-link-active, $tycolor-link-default);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media (min-width:tygrid(60)) {
+      font-size:tyscale(10);
+      line-height:tylead(tyscale(10),heading);
+    }
   }
 }
