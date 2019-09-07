@@ -1770,19 +1770,19 @@ select.tyselect {
   animation: fadein 3000ms; }
 
 @media (max-width: 39.96875em) {
-  /* line 8, source/scss/extras/_responsive_text.scss */
+  /* line 14, source/scss/extras/_responsive_text.scss */
   body {
     font-size: 0.9rem;
     line-height: 1.75rem; } }
 
 @media (min-width: 80em) {
-  /* line 8, source/scss/extras/_responsive_text.scss */
+  /* line 14, source/scss/extras/_responsive_text.scss */
   body {
     font-size: 1.11111rem;
     line-height: 1.75rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 19, source/scss/extras/_responsive_text.scss */
+  /* line 25, source/scss/extras/_responsive_text.scss */
   pre,
   code,
   kbd,
@@ -1790,7 +1790,7 @@ select.tyselect {
     font-size: 0.9rem; } }
 
 @media (min-width: 80em) {
-  /* line 19, source/scss/extras/_responsive_text.scss */
+  /* line 25, source/scss/extras/_responsive_text.scss */
   pre,
   code,
   kbd,
@@ -1798,148 +1798,148 @@ select.tyselect {
     font-size: 1.11111rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 31, source/scss/extras/_responsive_text.scss */
+  /* line 37, source/scss/extras/_responsive_text.scss */
   p.lede {
-    font-size: 1.2rem;
+    font-size: 1.296rem;
     line-height: 1.75rem; } }
 
 @media (min-width: 80em) {
-  /* line 31, source/scss/extras/_responsive_text.scss */
+  /* line 37, source/scss/extras/_responsive_text.scss */
   p.lede {
-    font-size: 1.728rem;
+    font-size: 1.6rem;
     line-height: 2.625rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 42, source/scss/extras/_responsive_text.scss */
+  /* line 48, source/scss/extras/_responsive_text.scss */
   h1,
   .tyfont-size-h1 {
-    font-size: 2.48832rem;
-    line-height: 2.625rem; } }
+    font-size: 2.68739rem;
+    line-height: 3.5rem; } }
 
 @media (min-width: 80em) {
-  /* line 42, source/scss/extras/_responsive_text.scss */
+  /* line 48, source/scss/extras/_responsive_text.scss */
   h1,
   .tyfont-size-h1 {
-    font-size: 3.58318rem;
-    line-height: 4.375rem; } }
+    font-size: 3.31776rem;
+    line-height: 3.5rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 53, source/scss/extras/_responsive_text.scss */
+  /* line 59, source/scss/extras/_responsive_text.scss */
   h2,
   .tyfont-size-h2 {
-    font-size: 1.728rem;
-    line-height: 1.75rem; } }
+    font-size: 1.86624rem;
+    line-height: 2.625rem; } }
 
 @media (min-width: 80em) {
-  /* line 53, source/scss/extras/_responsive_text.scss */
+  /* line 59, source/scss/extras/_responsive_text.scss */
   h2,
   .tyfont-size-h2 {
-    font-size: 2.48832rem;
+    font-size: 2.304rem;
     line-height: 2.625rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 64, source/scss/extras/_responsive_text.scss */
+  /* line 70, source/scss/extras/_responsive_text.scss */
   h3,
   .tyfont-size-h3 {
-    font-size: 1.44rem;
+    font-size: 1.5552rem;
     line-height: 1.75rem; } }
 
 @media (min-width: 80em) {
-  /* line 64, source/scss/extras/_responsive_text.scss */
+  /* line 70, source/scss/extras/_responsive_text.scss */
   h3,
   .tyfont-size-h3 {
-    font-size: 2.0736rem;
+    font-size: 1.92rem;
     line-height: 2.625rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 75, source/scss/extras/_responsive_text.scss */
+  /* line 81, source/scss/extras/_responsive_text.scss */
   h4,
   .tyfont-size-h4 {
-    font-size: 1.2rem;
+    font-size: 1.296rem;
     line-height: 1.75rem; } }
 
 @media (min-width: 80em) {
-  /* line 75, source/scss/extras/_responsive_text.scss */
+  /* line 81, source/scss/extras/_responsive_text.scss */
   h4,
   .tyfont-size-h4 {
-    font-size: 1.728rem;
+    font-size: 1.6rem;
     line-height: 1.75rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 86, source/scss/extras/_responsive_text.scss */
+  /* line 92, source/scss/extras/_responsive_text.scss */
   h5,
   .tyfont-size-h5 {
-    font-size: 1rem;
+    font-size: 1.08rem;
     line-height: 1.75rem; } }
 
 @media (min-width: 80em) {
-  /* line 86, source/scss/extras/_responsive_text.scss */
+  /* line 92, source/scss/extras/_responsive_text.scss */
   h5,
   .tyfont-size-h5 {
-    font-size: 1.44rem;
+    font-size: 1.33333rem;
     line-height: 1.75rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 97, source/scss/extras/_responsive_text.scss */
+  /* line 103, source/scss/extras/_responsive_text.scss */
   h6,
   .tyfont-size-h6 {
-    font-size: 0.83333rem;
-    line-height: 0.875rem; } }
+    font-size: 0.9rem;
+    line-height: 1.75rem; } }
 
 @media (min-width: 80em) {
-  /* line 97, source/scss/extras/_responsive_text.scss */
+  /* line 103, source/scss/extras/_responsive_text.scss */
   h6,
   .tyfont-size-h6 {
-    font-size: 1.2rem;
+    font-size: 1.11111rem;
     line-height: 1.75rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 110, source/scss/extras/_responsive_text.scss */
+  /* line 116, source/scss/extras/_responsive_text.scss */
   h2.tyfy-collapsable-processed::before {
-    width: 1.75rem; } }
+    width: 2.625rem; } }
 
 @media (min-width: 80em) {
-  /* line 110, source/scss/extras/_responsive_text.scss */
+  /* line 116, source/scss/extras/_responsive_text.scss */
   h2.tyfy-collapsable-processed::before {
     width: 2.625rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 120, source/scss/extras/_responsive_text.scss */
+  /* line 126, source/scss/extras/_responsive_text.scss */
   h3.tyfy-collapsable-processed::before {
     width: 1.75rem; } }
 
 @media (min-width: 80em) {
-  /* line 120, source/scss/extras/_responsive_text.scss */
+  /* line 126, source/scss/extras/_responsive_text.scss */
   h3.tyfy-collapsable-processed::before {
     width: 2.625rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 130, source/scss/extras/_responsive_text.scss */
+  /* line 136, source/scss/extras/_responsive_text.scss */
   h4.tyfy-collapsable-processed::before {
     width: 1.75rem; } }
 
 @media (min-width: 80em) {
-  /* line 130, source/scss/extras/_responsive_text.scss */
+  /* line 136, source/scss/extras/_responsive_text.scss */
   h4.tyfy-collapsable-processed::before {
     width: 1.75rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 140, source/scss/extras/_responsive_text.scss */
+  /* line 146, source/scss/extras/_responsive_text.scss */
   h5.tyfy-collapsable-processed::before {
     width: 1.75rem; } }
 
 @media (min-width: 80em) {
-  /* line 140, source/scss/extras/_responsive_text.scss */
+  /* line 146, source/scss/extras/_responsive_text.scss */
   h5.tyfy-collapsable-processed::before {
     width: 1.75rem; } }
 
 @media (max-width: 39.96875em) {
-  /* line 150, source/scss/extras/_responsive_text.scss */
+  /* line 156, source/scss/extras/_responsive_text.scss */
   h6.tyfy-collapsable-processed::before {
-    width: 0.875rem; } }
+    width: 1.75rem; } }
 
 @media (min-width: 80em) {
-  /* line 150, source/scss/extras/_responsive_text.scss */
+  /* line 156, source/scss/extras/_responsive_text.scss */
   h6.tyfy-collapsable-processed::before {
     width: 1.75rem; } }
 

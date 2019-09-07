@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<%include head.html%>
+		<title>Tyfy - Modules - Responsive Text</title>
+  </head>
+  <body class="">
+		<%include header.html%>
+    <header class="pagetitle">
+      <h1>Responsive Text</h1>
+		</header>
+		<main class="block">
+			<section class="section-body links-underlined">
+        <p>This module provides rudimentary font resizing based on the width of the viewport. It is rudimenary in that it does not provide smooth scaling like <a href="https://github.com/twbs/rfs">RFS</a>, nor does it provide mixins or other tools for ease of use.</p>
+        <p>Instead, the goals of this module are:</p>
+        <ul class="tymargins-off">
+          <li>setup quickly</li>
+          <li>work with all <strong class="tyfy">Tyfy</strong> modules</li>
+          <li>maintain the baseline grid</li>
+        </ul>
+        <p>To keep things simple, the responsive text module creates two font size alternatives: smaller font sizes for small screen widths and a larger font sizes for large screen widths. The default font sizes are used at middle screen widths.</p>
+        <h2 id="variables">Variables</h2>
+        <p>The responsive text module provides variables that can be altered to customize the responsive text behavior:</p>
+        <dl>
+					<dt>$tybreak-font-sm</dt>
+					<dd><code class="val val-default">40em !default;</code></dd>
+					<dd>Screen width below which the font size decreases from the default base size.</dd>
+					<dt>$tybreak-font-lg</dt>
+					<dd><code class="val val-default">80em !default;</code></dd>
+					<dd>Screen width above which the font size increases from the default base size.</dd>
+					<dt>$tyfont-size-adjustment</dt>
+					<dd><code class="val val-default">0.9 !default;</code></dd>
+					<dd>The value used to increase or decrease font sizes. This value should be less than 1. A value of 1 would result in no size adjustment.</dd>
+        </dl>
+        <h2 id="implementation">Implementation</h2>
+        <p>To decrease a font size from the default, the font size is multiplied by the adjustment value; to increase the size, the size is divided by the adjustment value. Consider this example of how the font size of the level 1 heading (<code>&lt;h1&gt;</code>) is responsively styled by the module:</p>
+				<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">h1 {
+  @media (max-width:$tybreak-font-sm - 1em/32) {
+    font-size:tyfont-size(h1) * $tyfont-size-adjustment;
+    line-height:tylead((tyfont-size(h1) * $tyfont-size-adjustment),heading);
+  }
+  @media (min-width:$tybreak-font-lg) {
+    font-size:tyfont-size(h1) / $tyfont-size-adjustment;
+    line-height:tylead((tyfont-size(h1) / $tyfont-size-adjustment),heading);
+  }
+}</code></pre>
+        <p>As shown in the example, both the font size and line height are responsively styled. This preserves the baseline grid.</p>
+      </section>
+    </main>
+		<%include footer.html%>
+  </body>
+</html>
