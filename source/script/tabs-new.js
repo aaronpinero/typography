@@ -43,6 +43,11 @@ if (all_tabcontainers.length) {
           my_tabs.appendChild(my_tab);
         }
 
+        // add a click action for the tab
+        my_tab.addEventListener("click",function(){
+          console.log(this.getAttribute('data-tabindex'));
+        });
+
         // process the label element
         my_labels[x].classList.add('collapsed');
         my_labels[x].setAttribute('data-tabindex',x);
@@ -58,6 +63,18 @@ if (all_tabcontainers.length) {
 
         // add the tab panel to the page below the tab label
         my_labels[x].parentNode.insertBefore(my_tab_panel,my_labels[x].nextElementSibling);
+
+        // cycle through following siblings of the tab label
+        // adding them to the tab panel
+        // until the next tab label
+        let next_sib = my_tab_panel.nextElementSibling;
+        while (next_sib && !next_sib.classList.contains('tab-label')) {
+          // add the element to the wrapper
+          my_tab_panel.appendChild(next_sib);
+          
+          // move on to the next sibling
+          next_sib = my_tab_panel.nextElementSibling;
+        }
       }
       
       // add tabs to tab container
