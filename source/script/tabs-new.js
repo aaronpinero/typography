@@ -34,7 +34,6 @@ if (all_tabcontainers.length) {
         // add a tab for the tab label
         let my_tab = document.createElement("li");
         let my_tab_text = document.createTextNode(my_labels[x].innerText);
-        console.log(my_tab_text);
         my_tab.setAttribute('data-tabindex',x);
         my_tab.appendChild(my_tab_text);
         if (my_tabs.firstChild !== null) {
@@ -44,8 +43,21 @@ if (all_tabcontainers.length) {
           my_tabs.appendChild(my_tab);
         }
 
-        // wrap the contents of the tab
+        // process the label element
+        my_labels[x].classList.add('collapsed');
+        my_labels[x].setAttribute('data-tabindex',x);
+        my_labels[x].innerHTML = '<a id="'+encodeURIComponent(my_labels[x].innerText)+'">'+my_labels[x].innerText+'</a>';
 
+        // wrap the contents of the tab
+        // create the wrapper
+        let my_tab_panel = document.createElement("div");
+      
+        // apply class to the wrapper
+        // apply state class to the wrapper (default closed)
+        my_tab_panel.className = "tab-panel collapsed";
+
+        // add the tab panel to the page below the tab label
+        my_labels[x].parentNode.insertBefore(my_tab_panel,my_labels[x].nextElementSibling);
       }
       
       // add tabs to tab container
