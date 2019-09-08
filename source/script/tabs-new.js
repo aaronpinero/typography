@@ -45,7 +45,22 @@ if (all_tabcontainers.length) {
 
         // add a click action for the tab
         my_tab.addEventListener("click",function(){
-          console.log(this.getAttribute('data-tabindex'));
+          if (!this.classList.contains('open')) {
+            // close all the current opens
+            let opens = this.parentNode.parentNode.getElementsByClassName('open');
+            let y = opens.length - 1;
+            for (y; y >= 0; y--) {
+              opens[y].classList.add('collapsed');
+              opens[y].classList.remove('open');
+            }
+            // open the selected tab
+            this.classList.add('open');
+            let my_tabindex = this.getAttribute('data-tabindex');
+            this.parentNode.parentNode.getElementsByClassName('tab-label').item(my_tabindex).classList.remove('collapsed');
+            this.parentNode.parentNode.getElementsByClassName('tab-label').item(my_tabindex).classList.add('open');
+            this.parentNode.parentNode.getElementsByClassName('tab-panel').item(my_tabindex).classList.remove('collapsed');
+            this.parentNode.parentNode.getElementsByClassName('tab-panel').item(my_tabindex).classList.add('open');
+          }
         });
 
         // process the label element
