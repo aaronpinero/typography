@@ -62,8 +62,9 @@
       padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tywidth-border}) 0;
       position:relative;
       transition-duration:tyduration(move);
-      transition-property:padding-top;
-      &::before {
+      transition-property:background-color,color,top,transform;
+      transition-timing-function:ease-in-out;
+        &::before {
         border-radius:50%;
         color:var(--tycolor-text-light);
         content:tychar($tyicons-angle-up);
@@ -83,10 +84,10 @@
       @media (min-width:$tybreak-tabs) {
         display:none;
       }
-      &.collapsed {
+      &.closed {
         border-bottom:$tywidth-border var(--tycolor-border) solid;
         &::before {
-          content:tychar($tyicons-angle-down);
+          transform:rotate(180deg);
         }
       }
       &.transition {
@@ -104,6 +105,9 @@
       overflow:hidden;
       margin-top:0;
       padding:tygrid(1) 0 calc(#{tygrid(2)} - #{$tywidth-border}) 0;
+      transition-duration:tyduration(move);
+      transition-property:padding-top,padding-bottom,height;
+      transition-timing-function:ease-in-out;
       @media (min-width:$tybreak-tabs) {
         border:$tywidth-border var(--tycolor-border) solid;
         border-radius:0 0 $tyradius-border $tyradius-border;
@@ -114,7 +118,7 @@
       &.open {
         display:block;
       }
-      &.collapsed {
+      &.closed {
         @media (max-width:$tybreak-tabs*0.9999) {
           border:none;
           height:0;

@@ -1246,8 +1246,9 @@ h6.tyfy-collapsable-processed:hover::before {
   padding: 0 3rem calc(0.75rem - 2px) 0;
   position: relative;
   transition-duration: 667ms;
-  transition-property: padding-top; }
-  /* line 66, source/scss/optional/_tabs.scss */
+  transition-property: background-color,color,top,transform;
+  transition-timing-function: ease-in-out; }
+  /* line 67, source/scss/optional/_tabs.scss */
   .tabs-container.tyfy-tabs-processed .tab-label::before {
     border-radius: 50%;
     color: var(--tycolor-text-light);
@@ -1268,40 +1269,43 @@ h6.tyfy-collapsable-processed:hover::before {
     /* line 55, source/scss/optional/_tabs.scss */
     .tabs-container.tyfy-tabs-processed .tab-label {
       display: none; } }
-  /* line 86, source/scss/optional/_tabs.scss */
-  .tabs-container.tyfy-tabs-processed .tab-label.collapsed {
+  /* line 87, source/scss/optional/_tabs.scss */
+  .tabs-container.tyfy-tabs-processed .tab-label.closed {
     border-bottom: 2px var(--tycolor-border) solid; }
-    /* line 88, source/scss/optional/_tabs.scss */
-    .tabs-container.tyfy-tabs-processed .tab-label.collapsed::before {
-      content: "\ea01"; }
-  /* line 92, source/scss/optional/_tabs.scss */
+    /* line 89, source/scss/optional/_tabs.scss */
+    .tabs-container.tyfy-tabs-processed .tab-label.closed::before {
+      transform: rotate(180deg); }
+  /* line 93, source/scss/optional/_tabs.scss */
   .tabs-container.tyfy-tabs-processed .tab-label.transition {
     border-bottom-color: transparent; }
-  /* line 96, source/scss/optional/_tabs.scss */
+  /* line 97, source/scss/optional/_tabs.scss */
   .tabs-container.tyfy-tabs-processed .tab-label:hover::before {
     background-color: var(--tycolor-link-active);
     color: var(--tycolor-bg); }
 
-/* line 102, source/scss/optional/_tabs.scss */
+/* line 103, source/scss/optional/_tabs.scss */
 .tabs-container.tyfy-tabs-processed .tab-panel {
   border-bottom: 2px var(--tycolor-border) solid;
   overflow: hidden;
   margin-top: 0;
-  padding: 0.75rem 0 calc(1.5rem - 2px) 0; }
+  padding: 0.75rem 0 calc(1.5rem - 2px) 0;
+  transition-duration: 667ms;
+  transition-property: padding-top,padding-bottom,height;
+  transition-timing-function: ease-in-out; }
   @media (min-width: 40em) {
-    /* line 102, source/scss/optional/_tabs.scss */
+    /* line 103, source/scss/optional/_tabs.scss */
     .tabs-container.tyfy-tabs-processed .tab-panel {
       border: 2px var(--tycolor-border) solid;
       border-radius: 0 0 6px 6px;
       border-top: none;
       display: none;
       padding: 1.5rem calc(1.5rem - 2px) calc(1.5rem - 2px); } }
-  /* line 114, source/scss/optional/_tabs.scss */
+  /* line 118, source/scss/optional/_tabs.scss */
   .tabs-container.tyfy-tabs-processed .tab-panel.open {
     display: block; }
   @media (max-width: 39.996em) {
-    /* line 117, source/scss/optional/_tabs.scss */
-    .tabs-container.tyfy-tabs-processed .tab-panel.collapsed {
+    /* line 121, source/scss/optional/_tabs.scss */
+    .tabs-container.tyfy-tabs-processed .tab-panel.closed {
       border: none;
       height: 0;
       padding-bottom: 0;
