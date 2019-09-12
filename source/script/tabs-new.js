@@ -23,7 +23,7 @@ if (all_tabcontainers.length) {
     // if there are tab labels, do stuff
     if (my_labels.length) {
       
-      // create the container for the tabs
+      // create the container for the visible tabs
       let my_tabs = document.createElement("ul");
       my_tabs.className = "tabs";
 
@@ -35,6 +35,7 @@ if (all_tabcontainers.length) {
         let my_tab = document.createElement("li");
         let my_tab_text = document.createTextNode(my_labels[x].innerText);
         my_tab.setAttribute('data-tabindex',x);
+        my_tab.className = 'collapsed';
         my_tab.appendChild(my_tab_text);
         if (my_tabs.firstChild !== null) {
           my_tabs.insertBefore(my_tab,my_tabs.firstChild);
@@ -54,6 +55,7 @@ if (all_tabcontainers.length) {
               opens[y].classList.remove('open');
             }
             // open the selected tab
+            this.classList.remove('collapsed');
             this.classList.add('open');
             let my_tabindex = this.getAttribute('data-tabindex');
             this.parentNode.parentNode.getElementsByClassName('tab-label').item(my_tabindex).classList.remove('collapsed');
@@ -94,6 +96,14 @@ if (all_tabcontainers.length) {
       
       // add tabs to tab container
       all_tabcontainers[a].insertBefore(my_tabs,all_tabcontainers[a].firstChild)
+
+      // open the fisrt tab
+      my_tabs.getElementsByTagName('li').item(0).classList.remove('collapsed');
+      my_tabs.getElementsByTagName('li').item(0).classList.add('open');
+      all_tabcontainers[a].getElementsByClassName('tab-label').item(0).classList.remove('collapsed');
+      all_tabcontainers[a].getElementsByClassName('tab-label').item(0).classList.add('open');
+      all_tabcontainers[a].getElementsByClassName('tab-panel').item(0).classList.remove('collapsed');
+      all_tabcontainers[a].getElementsByClassName('tab-panel').item(0).classList.add('open');
 
       // indicate that the tabs container has been processed by javascript
       all_tabcontainers[a].classList.add('tyfy-tabs-processed');
