@@ -54,7 +54,6 @@
     }
     .tab-label {
       background-color:transparent;
-      border-bottom:$tywidth-border transparent solid;
       clear:both;
       cursor:pointer;
       font-size:tyfont-size(h3);
@@ -85,13 +84,9 @@
         display:none;
       }
       &.closed {
-        border-bottom:$tywidth-border var(--tycolor-border) solid;
         &::before {
           transform:rotate(180deg);
         }
-      }
-      &.transition {
-        border-bottom-color:transparent;
       }
       &:hover {
         &::before {
@@ -101,6 +96,7 @@
       }
     }
     .tab-panel {
+      box-sizing:content-box;
       border-bottom:$tywidth-border var(--tycolor-border) solid;
       overflow:hidden;
       margin-top:0;
@@ -116,15 +112,15 @@
         padding:tygrid(2) calc(#{tygrid(2)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
       }
       &.open {
-        display:block;
+        @media (min-width:$tybreak-tabs) {
+          display:block;
+        }
       }
       &.closed {
         @media (max-width:$tybreak-tabs*0.9999) {
-          border:none;
-          height:0;
+          height:0 !important;
           padding-bottom:0;
           padding-top:0;
-          position:absolute;
         }
       }
     }
