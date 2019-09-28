@@ -1170,12 +1170,11 @@ h6.tyfy-collapsable-processed:hover::before {
       border: 2px var(--tycolor-border) solid;
       border-top: none !important;
       padding: calc(0.75rem - 2px) calc(1.5rem - 2px) calc(1.5rem - 2px); } }
-  @media (min-width: 50em) {
-    /* line 105, source/scss/optional/_collapsables.scss */
-    .tyfy-collapsables.closed {
-      height: 0 !important;
-      padding-bottom: 0;
-      padding-top: 0; } }
+  /* line 105, source/scss/optional/_collapsables.scss */
+  .tyfy-collapsables.closed {
+    height: 0 !important;
+    padding-bottom: 0;
+    padding-top: 0; }
 
 /* line 1, source/scss/optional/_tabs.scss */
 * + .tabs-container {
