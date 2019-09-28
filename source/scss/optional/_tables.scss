@@ -124,6 +124,9 @@ table.responsive {
           display:none;
         }
       }
+      .tyfy-td-label + * {
+        margin-top:unset;
+      }
     }
   }
   &.striped,
