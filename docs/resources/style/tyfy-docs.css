@@ -985,55 +985,59 @@ table.responsive tbody td .tyfy-td-label {
     table.responsive tbody td .tyfy-td-label {
       display: none; } }
 
-/* line 132, source/scss/optional/_tables.scss */
+/* line 127, source/scss/optional/_tables.scss */
+table.responsive tbody td .tyfy-td-label + * {
+  margin-top: inherit; }
+
+/* line 135, source/scss/optional/_tables.scss */
 table.responsive.striped tbody td,
 table.responsive.striped tbody th, table.responsive.vertical-rules tbody td,
 table.responsive.vertical-rules tbody th {
   padding-left: 0.875rem;
   padding-right: 0.875rem; }
 
-/* line 138, source/scss/optional/_tables.scss */
+/* line 141, source/scss/optional/_tables.scss */
 table.responsive.striped tbody td .tyfy-td-label, table.responsive.vertical-rules tbody td .tyfy-td-label {
   left: 0.875rem; }
 
 @media (max-width: 39.996em) {
-  /* line 145, source/scss/optional/_tables.scss */
+  /* line 148, source/scss/optional/_tables.scss */
   table.responsive.striped thead + tbody td, table.responsive.vertical-rules thead + tbody td {
     padding-left: calc(33% + 0.875rem); } }
 
 @media (max-width: 39.996em) {
-  /* line 153, source/scss/optional/_tables.scss */
+  /* line 156, source/scss/optional/_tables.scss */
   table.responsive.vertical-rules tbody th[scope="row"] {
     border-right: 2px var(--tycolor-border) solid; } }
 
 @media (min-width: 40em) {
-  /* line 164, source/scss/optional/_tables.scss */
+  /* line 167, source/scss/optional/_tables.scss */
   table.float-left, table.float-right {
     box-sizing: border-box;
     margin-bottom: 1.75rem;
     width: calc(50% - 1.75rem); } }
 
 @media (min-width: 40em) {
-  /* line 172, source/scss/optional/_tables.scss */
+  /* line 175, source/scss/optional/_tables.scss */
   table.float-left {
     clear: left;
     float: left;
     margin-right: 3.5rem; } }
 
 @media (min-width: 40em) {
-  /* line 179, source/scss/optional/_tables.scss */
+  /* line 182, source/scss/optional/_tables.scss */
   table.float-right {
     clear: right;
     float: right;
     margin-left: 3.5rem; } }
 
 @media (min-width: 40em) {
-  /* line 187, source/scss/optional/_tables.scss */
+  /* line 190, source/scss/optional/_tables.scss */
   table.float-right + table.float-left {
     margin-right: 1.75rem; } }
 
 @media (min-width: 40em) {
-  /* line 192, source/scss/optional/_tables.scss */
+  /* line 195, source/scss/optional/_tables.scss */
   table.float-left + table.float-right {
     margin-left: 1.75rem; } }
 
@@ -2587,7 +2591,7 @@ header.pagetitle {
 /* line 744, docs/resources/scss/tyfy-docs-all.scss */
 hr.demo {
   margin-bottom: 0.875rem;
-  margin-top: 0.875rem; }
+  margin-top: 0.875rem !important; }
 
 /* line 748, docs/resources/scss/tyfy-docs-all.scss */
 .tyhidden {

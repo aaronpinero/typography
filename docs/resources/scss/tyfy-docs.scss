@@ -1,6 +1,6 @@
 hr.demo {
   margin-bottom:tygrid(1);
-  margin-top:tygrid(1);
+  margin-top:tygrid(1) !important;
 }
 .tyhidden {
   @include tyhidden;
