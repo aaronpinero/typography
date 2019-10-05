@@ -6,17 +6,17 @@
   "status": "ready",
   "context": {
     "modifier": "",
-    "title": "Page Title Here"
+    "title": "<h1>Page Title Here</h1>"
   },
   "variants": [
     {
       "name": "hometitle",
-      "title": "Home Page Title",
-      "label": "Home Page Title",
+      "title": "Home Page Hero",
+      "label": "Home Page Hero",
       "notes": "variation of the title on the home page",
       "context": {
         "modifier": "home",
-        "title": "Welcome to Tyfy"
+        "title": "<h1>Tyfy</h1>\n<p class=\"lede\">A framework for better web typography.</p>\n<ul class=\"list-flex list-flex-center list-nobullet\"><li><a class=\"tybutton-outline-white\" href=\"startup.html\">Get Started</a></li><li><a class=\"tybutton-outline-white\" href=\"modules.html\">Documentation</a></li></ul>"
       }
     }
   ]

@@ -1,0 +1,5 @@
+.reverse .tybutton-outline-white {
+  @include tybutton-outline(white,white);
+  font-family:$tyfont-sans;
+  margin:tygrid(0.5);
+}
