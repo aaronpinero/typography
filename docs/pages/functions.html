@@ -94,23 +94,23 @@
       </ul>
     </nav>
 		<!--/ COMMON HEADER -->
-    <header class="pagetitle">
+    <header class="pagetitle reverse">
       <h1>Functions</h1>
     </header>
     <main class="block">
       <nav class="nav-inpage tymargins-off">
         <h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
         <ul class="list-nobullet">
-          <li><a class="navlink-secondary" href="#fn-tylead">tylead()</a></li>
-          <li><a class="navlink-secondary" href="#fn-tygrid">tygrid()</a></li>
-          <li><a class="navlink-secondary" href="#fn-tyscale">tyscale()</a></li>
-          <li><a class="navlink-secondary" href="#fn-tychar">tychar()</a></li>
+          <li><a class="navlink-secondary" href="#fn-tylead"><em>tylead</em></a></li>
+          <li><a class="navlink-secondary" href="#fn-tygrid"><em>tygrid</em></a></li>
+          <li><a class="navlink-secondary" href="#fn-tyscale"><em>tyscale</em></a></li>
+          <li><a class="navlink-secondary" href="#fn-tychar"><em>tychar</em></a></li>
           <li><a class="navlink-secondary" href="#fn-maps"><span class="smallcaps">SASS</span> Map Helpers</a></li>
         </ul>
       </nav>
       <section class="section-body links-underlined">
         <p><strong class="tyfy">Tyfy</strong> includes custom <span class="smallcaps">SASS</span> functions that make the framework easier to use.</p>
-        <h2 id="fn-tylead">tylead()</h2>
+        <h2 id="fn-tylead"><em>tylead</em></h2>
         <p>This function calculates a <a href="grid.html">grid-based</a> line height for a given font size and (optional) line height style. The function helps maintain the baseline grid.</p>
         <h3 class="tyfont-size-h4">Arguments</h3>
         <dl>
@@ -143,7 +143,7 @@ p.special {
   font-size:1.2rem;
   line-height:tylead(1.2rem,tall);
 }</code></pre>
-        <h2 id="fn-tygrid">tygrid()</h2>
+        <h2 id="fn-tygrid"><em>tygrid</em></h2>
         <p>This function calculates a grid-based length value. This function facilitates the use of the $tygrid-unit variable by making your <span class="smallcaps">SCSS</span> easier to read, write, and maintain.</p>
         <h3 class="tyfont-size-h4">Arguments</h3>
         <dl>
@@ -157,7 +157,7 @@ p.special {
   margin-bottom:tygrid(1.5); // 1.5 times the default grid unit length
   width:tygrid(50); // 50 times the default grid unit length
 }</code></pre>
-        <h2 id="fn-tyscale">tyscale()</h2>
+        <h2 id="fn-tyscale"><em>tyscale</em></h2>
         <p>This function facilitates use of the <a href="scale.html">modular typographic scale</a> by automating the calculation of scale-based font sizes. The function accepts an integer and returns a font size, in rem units, that is the specified number of steps above or below the base font size on the typographic scale. The value 0 will return the base font size. If the argument is <code>2</code>, the function will return the font size that is 2 steps larger on the scale. If the argument is <code>-1</code>, the function will return the font size that is 1 step smaller on the scale.</p>
         <h3 class="tyfont-size-h4">Arguments</h3>
         <dl>
@@ -177,7 +177,7 @@ h6 {
 h5 {
   font-size: tyscale(1) !default;  // 1.2rem; one scale step up from the base size
 }</code></pre>
-        <h2 id="fn-tychar">tychar()</h2>
+        <h2 id="fn-tychar"><em>tychar</em></h2>
         <p>This function facilitates the use of the icon font in <span class="smallcaps">CSS</span> pseudo-elements by working around <a href="https://github.com/sass/libsass/issues/1115">a problem in <span class="smallcaps">SASS</span></a> related to character codes. This function properly applies icons when used in the <em>content</em> attribute of a pseudo-element.</p>
         <h3 class="tyfont-size-h4">Arguments</h3>
         <dl>
@@ -192,17 +192,17 @@ h5 {
         <h2 id="fn-maps"><span class="smallcaps">SASS</span> Map Helpers</h2>
         <p><strong class="tyfy">Tyfy</strong> provides <span class="smallcaps">SASS</span> maps for easily maintaining consistent, named values across modules. These values can be accessed using the <code>map-get()</code> function. The following custom functions are shorthand for <code>map-get</code>-ing values from the <span class="smallcaps">SASS</span> maps for the named font-size, spacing, and duration values.</p>
         <p>Each of the following custom functions requires the <span class="smallcaps">SASS</span> map key name as an argument. You can see all of the key names in the documentation for the <a href="settings.html">settings module</a>.</p>
-        <h3>tyspacing()</h3>
+        <h3><em>tyspacing</em></h3>
         <p>This function takes a key from the <code>$tyspacing</code> <span class="smallcaps">SASS</span> map and returns a rem-unit spacing value.</p>
         <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div {
   margin-left:tyspacing(md); // equivalent to tygrid(map-get($tyspacing,md))
 }</code></pre>
-        <h3>tyfont-size()</h3>
+        <h3><em>tyfont-size</em></h3>
         <p>This function takes a key from the <code>$tyfont-size</code> <span class="smallcaps">SASS</span> map and returns a rem-unit font size value.</p>
         <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">h2 {
   font-size:tyfont-size(h2); // equivalent to tyscale(map-get($tyfont-size,h2))
 }</code></pre>
-        <h3>tyduration()</h3>
+        <h3><em>tyduration</em></h3>
         <p>This function takes a key from the <code>$tyduration</code> <span class="smallcaps">SASS</span> map and returns a timing value.</p>
         <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">a {
   transition:color tyduration(hover); // equivalent to map-get($tyduration,hover)

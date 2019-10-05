@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="30px" viewBox="0 0 42 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>grid</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="TYFY-docs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-483.000000, -490.000000)">
+            <g id="grid" transform="translate(483.000000, 490.000000)">
+                <rect id="Rectangle-2" fill="#CCCCCC" x="7" y="0" width="28" height="2"></rect>
+                <rect id="Rectangle-2-Copy-4" fill="#CC3380" x="0" y="7" width="42" height="2"></rect>
+                <rect id="Rectangle-2-Copy-3" fill="#CCCCCC" x="7" y="14" width="28" height="2"></rect>
+                <rect id="Rectangle-2-Copy-2" fill="#CC3380" x="0" y="21" width="42" height="2"></rect>
+                <rect id="Rectangle-2-Copy" fill="#CCCCCC" x="7" y="28" width="28" height="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

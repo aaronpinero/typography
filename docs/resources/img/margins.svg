@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="30px" viewBox="0 0 42 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>margins</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="TYFY-docs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-773.000000, -490.000000)">
+            <g id="margins" transform="translate(773.000000, 490.000000)">
+                <rect id="Rectangle-2" fill="#CCCCCC" x="7" y="0" width="28" height="2"></rect>
+                <rect id="Rectangle-2-Copy-4" fill="#CCCCCC" x="0" y="7" width="42" height="2"></rect>
+                <rect id="Rectangle-2-Copy-3" fill="#CCCCCC" x="7" y="14" width="28" height="2"></rect>
+                <rect id="Rectangle-2-Copy-2" fill="#CCCCCC" x="0" y="21" width="42" height="2"></rect>
+                <rect id="Rectangle-2-Copy" fill="#CCCCCC" x="7" y="28" width="28" height="2"></rect>
+                <path d="M21.6653683,1.90156291 L25.6060913,5.23667633 C26.0276633,5.59346125 26.0801836,6.22444422 25.7233987,6.64601624 C25.5333946,6.87052245 25.2541917,7 24.960075,7 L17.0786292,7 C16.5263444,7 16.0786292,6.55228475 16.0786292,6 C16.0786292,5.70588333 16.2081067,5.42668048 16.4326129,5.23667633 L20.3733359,1.90156291 C20.7462071,1.58599447 21.2924971,1.58599447 21.6653683,1.90156291 Z" id="Triangle" fill="#CC3380"></path>
+                <path d="M21.7021881,23.2395937 L25.601224,26.569681 C26.0211848,26.928361 26.0708627,27.5595741 25.7121827,27.9795349 C25.5221915,28.2019863 25.2443191,28.3300873 24.9517763,28.3300873 L17.1537047,28.3300873 C16.6014199,28.3300873 16.1537047,27.8823721 16.1537047,27.3300873 C16.1537047,27.0375446 16.2818057,26.7596721 16.5042571,26.569681 L20.4032929,23.2395937 C20.7773309,22.9201354 21.3281502,22.9201354 21.7021881,23.2395937 Z" id="Triangle" fill="#CC3380" transform="translate(21.052750, 25.665044) scale(1, -1) translate(-21.052750, -25.665044) "></path>
+                <rect id="Rectangle-5" fill="#CC3380" x="20" y="7" width="2" height="16"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

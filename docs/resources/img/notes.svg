@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="30px" viewBox="0 0 42 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>notes</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="TYFY-docs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-193.000000, -490.000000)">
+            <g id="notes" transform="translate(193.000000, 490.000000)">
+                <rect id="Rectangle-2" fill="#CCCCCC" x="7" y="0" width="28" height="2"></rect>
+                <rect id="Rectangle-2-Copy-4" fill="#CCCCCC" x="0" y="7" width="42" height="2"></rect>
+                <rect id="Rectangle-2-Copy-3" fill="#CCCCCC" x="7" y="14" width="28" height="2"></rect>
+                <rect id="Rectangle-2-Copy-2" fill="#CCCCCC" x="0" y="21" width="42" height="2"></rect>
+                <rect id="Rectangle-2-Copy" fill="#CCCCCC" x="7" y="28" width="28" height="2"></rect>
+                <rect id="Rectangle-4" fill="#CC0066" x="11" y="22" width="7" height="6" rx="2"></rect>
+                <rect id="Rectangle-4-Copy" fill="#CC0066" x="23" y="15" width="7" height="6" rx="2"></rect>
+                <polygon id="Combined-Shape" fill="#CC0066" points="30 0 30 17 28 17 28 4.24401855 18 10 18 24 16 24 16 8"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
