@@ -12,7 +12,7 @@ templatesjs.dir = "./docs/includes/";
 // object identifying the source location and the output location for our HTML files
 var filepath = {};
 filepath.source = './docs/content/';
-filepath.dest = './docs/pages/';
+filepath.dest = './docs/';
 
 // read our source directory
 var dir = fs.readdir(filepath.source,function(err,files){

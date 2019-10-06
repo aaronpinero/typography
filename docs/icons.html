@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="resources/style/tyfy-docs.css">
 		<link rel="stylesheet" href="resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy</title>
+		<title>Tyfy - Modules - Icons</title>
 	</head>
 	<body class="">
 		    <!-- COMMON HEADER -->
@@ -94,37 +94,84 @@
       </ul>
     </nav>
 		<!--/ COMMON HEADER -->
-    <header class="pagetitle home reverse">
-			<h1>Tyfy</h1>
-			<p class="lede">A framework for better web typography.</p>
-			<ul class="list-flex list-flex-center list-nobullet">
-				<li><a class="tybutton-outline-white" href="startup.html">Get Started</a></li>
-				<li><a class="tybutton-outline-white" href="modules.html">Documentation</a></li>
-			</ul>
+    <header class="pagetitle reverse">
+			<h1>Icons</h1>
 		</header>
-    <main>
-			<section class="section-benefits links-underlined">
-				<h2 class="homesubhead">Why Tyfy?</h2>
-				<div class="col">
-					<img src="resources/img/notes.svg">
-					<h3>Modular Scale</h3>
-					<p><strong class="tyfy">Tyfy</strong> provides variables and SASS functions for setting a <a href="scale.html">modular scale</a>. A modular scale creates typographic contrast and harmonious font size proportions.</p>
-				</div>
-				<div class="col">
-					<img src="resources/img/grid.svg">
-					<h3>Baseline Grid</h3>
-					<p><strong class="tyfy">Tyfy</strong> helps you set and maintain a <a href="grid.html">baseline grid</a>. The framework provides a core grid unit variable and SASS functions for calculating grid-based measures.</p>
-				</div>
-				<div class="col">
-					<img src="resources/img/margins.svg">
-					<h3>Sensible Margins</h3>
-					<p>You usually don't need margins around HTML elements, only between HTMl elements. <strong class="tyfy">Tyfy</strong> provides mixins and classes that help you apply <a href="margins.html">sensible margins</a>.</p>
-				</div>
-			</section>
-      <section class="section-body block links-underlined">
-				<h2 class="homesubhead">About Tyfy</h2>
-				<p><strong class="tyfy">Tyfy</strong> (short for <i>typography</i> or <i>typogrify</i>) started as – and to some degree, remains – a personal project, a summary of past work, and resumé filler. It is inspired by the writings of <a href="https://en.wikipedia.org/wiki/Robert_Bringhurst">Robert Bringhurst</a> and the work of designers like <a href="https://matejlatin.co.uk">Matej Latin</a> and <a href="http://clagnut.com">Richard Rutter</a>.</p>
-				<p>I also have a related project, <a href="https://github.com/aaronpinero/typography-bootstrap">Tyfy Bootstrap</a>, that applies elements of this framework as a theme for <a href="https://getbootstrap.com/">Bootstrap</a>. </p>
+		<main class="block">
+			<nav class="nav-inpage tymargins-off">
+				<h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
+				<ul class="list-nobullet">
+					<li><a class="navlink-secondary" href="#need">Do I Need This Font?</a></li>
+					<li><a class="navlink-secondary" href="#iconsscss">Using Icons in <span class="smallcaps">SCSS</span></a></li>
+					<li><a class="navlink-secondary" href="#iconshtml">Using Icons in <span class="smallcaps">HTML</span></a></li>
+				</ul>
+			</nav>
+			<section class="section-body links-underlined">
+				<p><strong class="tyfy">Tyfy</strong> only needs a handful of icons. I've included a dozen or so common icons as a custom web font. Node.js and the <a href="https://www.npmjs.com/package/webfont">webfont</a> package are used to convert a set of .svg icons into an icon webfont called tyicons. The Sketch file used to create the .svgs is included in the <strong class="tyfy">Tyfy</strong> repository.</p>
+				<h2 id="need">Do I Need This Font?</h2>
+				<p>The tyicons font is <em>not required</em>. If you want to use a different icon font, simply customize icon character code variables in the <a href="settings.html">settings module</a> using character code values for your preferred font. Icons are used in styles for:</p>
+				<ul class="tymargins-off">
+					<li>
+						<a href="lists.html">lists</a>
+						<ul>
+							<li><code>$tyicons-angle-right</code></li>
+							<li><code>$tyicons-dash</code></li>
+							<li><code>$tyicons-check</code></li>
+						</ul>
+					</li>
+					<li>
+						<a href="quotes.html">blockquotes</a>
+						<ul>
+							<li><code>$tyicons-quote-right</code></li>
+						</ul>
+					</li>
+					<li>
+						<a href="collapsables.html">collapsables</a>
+						<ul>
+							<li><code>$tyicons-angle-up</code></li>
+						</ul>
+					</li>
+					<li>
+						<a href="tabs.html">tabs</a>
+						<ul>
+							<li><code>$tyicons-angle-up</code></li>
+						</ul>
+					</li>
+				</ul>
+				<p>If you are not planning to use those modules, <strong class="tyfy">Tyfy</strong> will not need icons and the character code variables can be ignored.</p>
+				<h2 id="iconsscss">Using Icons in <span class="smallcaps">SCSS</span></h2>
+				<p>Because of an issue with <span class="smallcaps">SASS</span>, the icon font character codes are stored in the <a href="settings.html">settings module</a> without their preceding slash.</p>
+				<p>To properly apply the character codes in the <span class="smallcaps">CSS</span> <code>content</code> property, <strong class="tyfy">Tyfy</strong> has a <a href="functions.html">custom function</a> named <code>tychar</code> that accepts a character code variable and returns the correct character code string.</p>
+				<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">$tyicons-angle-up: "ea04" !default;
+  			
+.tyicons-angle-up::before {
+  content: tychar($tyicons-angle-up);
+}</code></pre>
+				<h2 id="iconshtml">Using Icons in <span class="smallcaps">HTML</span></h2>
+				<p>The icons module includes classes for adding icons within the html. Those classes are employed in the following table.</p>
+				<table class="clean horizontal-rules">
+					<thead>
+						<tr>
+							<th scope="col">Icon</th>
+							<th scope="col">Class</th>
+							<th scope="col">Character code</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr><td><span class="tyicons tyicons-angle-down"></span></td><td>.tyicons-angle-down</td><td>\ea01</td></tr>
+						<tr><td><span class="tyicons tyicons-angle-left"></span></td><td>.tyicons-angle-left</td><td>\ea02</td></tr>
+						<tr><td><span class="tyicons tyicons-angle-right"></span></td><td>.tyicons-angle-right</td><td>\ea03</td></tr>
+						<tr><td><span class="tyicons tyicons-angle-up"></span></td><td>.tyicons-angle-up</td><td>\ea04</td></tr>
+						<tr><td><span class="tyicons tyicons-angle-up-down"></span></td><td>.tyicons-angle-up-down</td><td>\ea05</td></tr>
+						<tr><td><span class="tyicons tyicons-bars"></span></td><td>.tyicons-bars</td><td>\ea06</td></tr>
+						<tr><td><span class="tyicons tyicons-check"></span></td><td>.tyicons-check</td><td>\ea07</td></tr>
+						<tr><td><span class="tyicons tyicons-dash"></span></td><td>.tyicons-dash</td><td>\ea08</td></tr>
+						<tr><td><span class="tyicons tyicons-quote-left"></span></td><td>.tyicons-quote-left</td><td>\ea09</td></tr>
+						<tr><td><span class="tyicons tyicons-quote-right"></span></td><td>.tyicons-quote-right</td><td>\ea0a</td></tr>
+						<tr><td><span class="tyicons tyicons-search"></span></td><td>.tyicons-search</td><td>\ea0b</td></tr>
+						<tr><td><span class="tyicons tyicons-x"></span></td><td>.tyicons-x</td><td>\ea0c</td></tr>
+					</tbody>
+				</table>
 			</section>
 		</main>
 		<!-- COMMON FOOTER -->

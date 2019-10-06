@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	<head>
+  <head>
 		<!-- COMMON HEAD TAGS -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
@@ -18,9 +18,9 @@
 		<link rel="stylesheet" href="resources/style/tyfy-docs.css">
 		<link rel="stylesheet" href="resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy</title>
-	</head>
-	<body class="">
+		<title>Tyfy - Modules - Responsive Text</title>
+  </head>
+  <body class="">
 		    <!-- COMMON HEADER -->
     <nav class="nav-main" id="top">
       <a href="index.html" class="tyfy logo">Tyfy: A Web Framework</a>
@@ -94,39 +94,47 @@
       </ul>
     </nav>
 		<!--/ COMMON HEADER -->
-    <header class="pagetitle home reverse">
-			<h1>Tyfy</h1>
-			<p class="lede">A framework for better web typography.</p>
-			<ul class="list-flex list-flex-center list-nobullet">
-				<li><a class="tybutton-outline-white" href="startup.html">Get Started</a></li>
-				<li><a class="tybutton-outline-white" href="modules.html">Documentation</a></li>
-			</ul>
+    <header class="pagetitle reverse">
+      <h1>Responsive Text</h1>
 		</header>
-    <main>
-			<section class="section-benefits links-underlined">
-				<h2 class="homesubhead">Why Tyfy?</h2>
-				<div class="col">
-					<img src="resources/img/notes.svg">
-					<h3>Modular Scale</h3>
-					<p><strong class="tyfy">Tyfy</strong> provides variables and SASS functions for setting a <a href="scale.html">modular scale</a>. A modular scale creates typographic contrast and harmonious font size proportions.</p>
-				</div>
-				<div class="col">
-					<img src="resources/img/grid.svg">
-					<h3>Baseline Grid</h3>
-					<p><strong class="tyfy">Tyfy</strong> helps you set and maintain a <a href="grid.html">baseline grid</a>. The framework provides a core grid unit variable and SASS functions for calculating grid-based measures.</p>
-				</div>
-				<div class="col">
-					<img src="resources/img/margins.svg">
-					<h3>Sensible Margins</h3>
-					<p>You usually don't need margins around HTML elements, only between HTMl elements. <strong class="tyfy">Tyfy</strong> provides mixins and classes that help you apply <a href="margins.html">sensible margins</a>.</p>
-				</div>
-			</section>
-      <section class="section-body block links-underlined">
-				<h2 class="homesubhead">About Tyfy</h2>
-				<p><strong class="tyfy">Tyfy</strong> (short for <i>typography</i> or <i>typogrify</i>) started as – and to some degree, remains – a personal project, a summary of past work, and resumé filler. It is inspired by the writings of <a href="https://en.wikipedia.org/wiki/Robert_Bringhurst">Robert Bringhurst</a> and the work of designers like <a href="https://matejlatin.co.uk">Matej Latin</a> and <a href="http://clagnut.com">Richard Rutter</a>.</p>
-				<p>I also have a related project, <a href="https://github.com/aaronpinero/typography-bootstrap">Tyfy Bootstrap</a>, that applies elements of this framework as a theme for <a href="https://getbootstrap.com/">Bootstrap</a>. </p>
-			</section>
-		</main>
+		<main class="block">
+			<section class="section-body links-underlined">
+        <p>This module provides rudimentary font resizing based on the width of the viewport. It is rudimenary in that it does not provide smooth scaling like <a href="https://github.com/twbs/rfs">RFS</a>, nor does it provide mixins or other tools for ease of use.</p>
+        <p>Instead, the goals of this module are:</p>
+        <ul class="tymargins-off">
+          <li>setup quickly</li>
+          <li>work with all <strong class="tyfy">Tyfy</strong> modules</li>
+          <li>maintain the baseline grid</li>
+        </ul>
+        <p>To keep things simple, the responsive text module creates two font size alternatives: smaller font sizes for small screen widths and a larger font sizes for large screen widths. The default font sizes are used at middle screen widths.</p>
+        <h2 id="variables">Variables</h2>
+        <p>The responsive text module provides variables that can be altered to customize the responsive text behavior:</p>
+        <dl>
+					<dt>$tybreak-font-sm</dt>
+					<dd><code class="val val-default">40em !default;</code></dd>
+					<dd>Screen width below which the font size decreases from the default base size.</dd>
+					<dt>$tybreak-font-lg</dt>
+					<dd><code class="val val-default">80em !default;</code></dd>
+					<dd>Screen width above which the font size increases from the default base size.</dd>
+					<dt>$tyfont-size-adjustment</dt>
+					<dd><code class="val val-default">0.9 !default;</code></dd>
+					<dd>The value used to increase or decrease font sizes. This value should be less than 1. A value of 1 would result in no size adjustment.</dd>
+        </dl>
+        <h2 id="implementation">Implementation</h2>
+        <p>To decrease a font size from the default, the font size is multiplied by the adjustment value; to increase the size, the size is divided by the adjustment value. Consider this example of how the font size of the level 1 heading (<code>&lt;h1&gt;</code>) is responsively styled by the module:</p>
+				<pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">h1 {
+  @media (max-width:$tybreak-font-sm - 1em/32) {
+    font-size:tyfont-size(h1) * $tyfont-size-adjustment;
+    line-height:tylead((tyfont-size(h1) * $tyfont-size-adjustment),heading);
+  }
+  @media (min-width:$tybreak-font-lg) {
+    font-size:tyfont-size(h1) / $tyfont-size-adjustment;
+    line-height:tylead((tyfont-size(h1) / $tyfont-size-adjustment),heading);
+  }
+}</code></pre>
+        <p>As shown in the example, both the font size and line height are responsively styled. This preserves the baseline grid.</p>
+      </section>
+    </main>
 		<!-- COMMON FOOTER -->
 		<footer class="footer">
 			<div>© Copyright 2017-2019 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>
@@ -146,5 +154,5 @@
     <script src="resources/script/docs-nav.js"></script>
     <script src="resources/vendor/prism/prism.js"></script>
 		<!--/ COMMON FOOTER -->
-	</body>
+  </body>
 </html>

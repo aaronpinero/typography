@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="resources/style/tyfy-docs.css">
 		<link rel="stylesheet" href="resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy</title>
+		<title>Tyfy - Benefits - Modular Scale</title>
 	</head>
 	<body class="">
 		    <!-- COMMON HEADER -->
@@ -94,39 +94,58 @@
       </ul>
     </nav>
 		<!--/ COMMON HEADER -->
-    <header class="pagetitle home reverse">
-			<h1>Tyfy</h1>
-			<p class="lede">A framework for better web typography.</p>
-			<ul class="list-flex list-flex-center list-nobullet">
-				<li><a class="tybutton-outline-white" href="startup.html">Get Started</a></li>
-				<li><a class="tybutton-outline-white" href="modules.html">Documentation</a></li>
-			</ul>
-		</header>
-    <main>
-			<section class="section-benefits links-underlined">
-				<h2 class="homesubhead">Why Tyfy?</h2>
-				<div class="col">
-					<img src="resources/img/notes.svg">
-					<h3>Modular Scale</h3>
-					<p><strong class="tyfy">Tyfy</strong> provides variables and SASS functions for setting a <a href="scale.html">modular scale</a>. A modular scale creates typographic contrast and harmonious font size proportions.</p>
-				</div>
-				<div class="col">
-					<img src="resources/img/grid.svg">
-					<h3>Baseline Grid</h3>
-					<p><strong class="tyfy">Tyfy</strong> helps you set and maintain a <a href="grid.html">baseline grid</a>. The framework provides a core grid unit variable and SASS functions for calculating grid-based measures.</p>
-				</div>
-				<div class="col">
-					<img src="resources/img/margins.svg">
-					<h3>Sensible Margins</h3>
-					<p>You usually don't need margins around HTML elements, only between HTMl elements. <strong class="tyfy">Tyfy</strong> provides mixins and classes that help you apply <a href="margins.html">sensible margins</a>.</p>
-				</div>
-			</section>
-      <section class="section-body block links-underlined">
-				<h2 class="homesubhead">About Tyfy</h2>
-				<p><strong class="tyfy">Tyfy</strong> (short for <i>typography</i> or <i>typogrify</i>) started as – and to some degree, remains – a personal project, a summary of past work, and resumé filler. It is inspired by the writings of <a href="https://en.wikipedia.org/wiki/Robert_Bringhurst">Robert Bringhurst</a> and the work of designers like <a href="https://matejlatin.co.uk">Matej Latin</a> and <a href="http://clagnut.com">Richard Rutter</a>.</p>
-				<p>I also have a related project, <a href="https://github.com/aaronpinero/typography-bootstrap">Tyfy Bootstrap</a>, that applies elements of this framework as a theme for <a href="https://getbootstrap.com/">Bootstrap</a>. </p>
-			</section>
-		</main>
+    <header class="pagetitle reverse">
+      <h1>Modular Scale</h1>
+    </header>
+    <main class="block">
+      <section class="section-body links-underlined">
+        <p><a href="http://tbrown.org" data-href="http://tbrown.org">Tim Brown</a>, Head of Typography at Adobe Typekit and co-developer of <a href="http://www.modularscale.com">modularscale.com</a> writes:</p>
+        <blockquote>“By basing the dimensions of our compositions on values from modular scales, we can achieve a visual harmony not found in layouts that use arbitrary, conventional, or easily divisible numbers.”</blockquote>
+        <p>More simply, <a href="https://en.wikipedia.org/wiki/Robert_Bringhurst">Robert Bringhurst</a> writes “don’t compose without a scale”. Is he talking about music or typgraphic design?</p>
+        <p><strong class="tyfy">Tyfy</strong> follows Bringhurst’s advice and uses a modular scale for font size values.</p>
+        <h2 id="selecting">Selecting a Modular Scale</h2>
+        <p>The modular scale for your project depends on the value of two <strong class="tyfy">Tyfy</strong> variables: a base and a scalar (or ratio). The default value of these variables is defined in the <a href="core.html">core</a> module.</p>
+        <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">$tyfont-size-base: 1rem !default;
+$tyfont-size-scalar: 1.2 !default;</code></pre>
+        <p>The base of the scale is <code>$tyfont-size-base</code> (this is also the default font size for the <code>&lt;body&gt;</code> in <strong class="tyfy">Tyfy</strong>). Every step in the modular scale of font size values is calculated as a function of the base font size and the scalar: <em>step font size = base &times; scalar<sup>(step)</sup></em>, where <em>step</em> is the number of steps above or below the base value. The ratio between any two adjacent steps in the scale is the value of the scalar.</p>
+        <p>Using a modular scale for font sizes not only provides the visual harmony that Tim Brown described above, but also consistent and effective visual contrast between elements with different text sizes. The modular scale also takes the mystery out of how to select font sizes for elements like headings, subheadings, and pull quotes.</p>
+        <h2 id="tyscale">The <em>tyscale</em> Function</h2>
+        <p><strong class="tyfy">Tyfy</strong> provides a modular scale function that makes it easy to assign font size values based the modular scale. No math required! The function is named <em>tyscale</em> and is defined in the <a href="functions.html">functions</a> module.</p>
+        <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">@function tyscale($exponent:0) {
+  $i:0;
+  $scale:$tyfont-size-base;
+  @if $exponent < 0 {
+    @while $i > $exponent {
+      $scale:$scale/$tyfont-size-scalar;
+      $i:$i - 1;
+    }
+  }
+  @else if $exponent > 0 {
+    @while $i < $exponent {
+      $scale:$scale*$tyfont-size-scalar;
+      $i:$i + 1;
+    }
+  }
+  @return $scale;
+}</code></pre>
+        <p>The <em>tyscale</em> function accepts an integer argument and returns a font size value. The integer argument specifies the number of steps up or down the modular scale from the base font size.</p>
+        <p>This function is used in <strong class="tyfy">Tyfy</strong> to set all font size values. For example:</p>
+        <pre class="codebox" data-lang="SCSS"><code class="code-nobg language-scss">small {
+  font-size: tyscale(-1) !default; // 0.833rem; one scale step down from the base size
+}
+h6 {
+  font-size: tyscale(0) !default;  // 1rem; using 0 as the exponent is the same as setting the value to the base size
+}
+h5 {
+  font-size: tyscale(1) !default;  // 1.2rem; one scale step up from the base size
+}
+h4 {
+  font-size: tyscale(2) !default;  // 1.44rem; two scale steps up from the base size
+}
+[...]</code></pre>
+			  <p>Since all font sizes in <strong class="tyfy">Tyfy</strong> are based on the modular scale, you can quickly change every element’s font size by modifying either the base size or the scalar value. In this way you can fine-tune the typographic design of your project.</p>
+  		</section>
+  	</main>
 		<!-- COMMON FOOTER -->
 		<footer class="footer">
 			<div>© Copyright 2017-2019 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>

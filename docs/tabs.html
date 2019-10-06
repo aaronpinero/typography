@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="resources/style/tyfy-docs.css">
+		<link rel="stylesheet" href="resources/vendor/prism/prism.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Modules - Tabs</title>
+  </head>
+  <body class="">
+		    <!-- COMMON HEADER -->
+    <nav class="nav-main" id="top">
+      <a href="index.html" class="tyfy logo">Tyfy: A Web Framework</a>
+      <h1 class="nav-heading">Main Menu</h1>
+      <ul class="menu">
+        <li><a href="startup.html">Get Started</a></li>
+        <li><a href="customize.html">Customize</a></li>
+        <li>
+          <a href="benefits.html">Benefits</a>
+          <ul class="reverse">
+            <li><a href="scale.html">Modular Scale</a></li>
+            <li><a href="grid.html">Baseline Grid</a></li>
+            <li><a href="margins.html">Sensible Margins</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="modules.html">Modules</a>
+          <ul class="reverse megamenu">
+            <li>
+              <a href="required.html"><strong>Required</strong></a>
+              <ul>
+                <li><a href="core.html">Core</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="mixins.html">Mixins</a></li>
+                <li><a href="settings.html">Settings</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="essential.html"><strong>Essential</strong></a>
+              <ul>
+                <li><a href="normalize.html">Normalize</a></li>
+                <li><a href="body.html">Body</a></li>
+                <li><a href="spacing.html">Spacing</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="optional.html"><strong>Optional</strong></a>
+              <ul>
+                <li><a href="paragraphs.html">Paragraphs</a></li>
+                <li><a href="headings.html">Headings</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="lists.html">Lists</a></li>
+                <li><a href="utility.html">Text Styles</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="collapsables.html">Collapsables</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="extras.html"><strong>Extras</strong></a>
+              <ul>
+                <li><a href="effects.html">Effects</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="responsive_text.html">Responsive Text</a></li>
+                <li><a href="reverse.html">Reverse Colors</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+          <ul class="reverse">
+            <li><a href="about.html">Read Me</a></li>
+            <li><a href="compatibility.html">Browser Compatibility</a></li>
+            <li><a href="tools.html">Build Tools</a></li>
+            <li><a href="changelog.html">Change Log</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+		<!--/ COMMON HEADER -->
+    <header class="pagetitle reverse">
+      <h1>Tabs</h1>
+    </header>
+    <main class="block">
+      <nav class="nav-inpage tymargins-off">
+        <h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
+        <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#structure"><span class="smallcaps">HTML</span> Structure</a></li>
+          <li><a class="navlink-secondary" href="#variables">Variables</a></li>
+          <li><a class="navlink-secondary" href="#example">Example</a></li>
+        </ul>
+      </nav>
+      <section class="section-body links-underlined">
+        <p>Tabs are presented horizontally with the content of the selected tab appearing directly below the tabs. <strong class="tyfy">Tyfy</strong> tabs:</p>
+        <ul class="tymargins-off">
+          <li>are responsive, reducing to <a href="collapsables.html">collapsable headings</a> at small screen sizes</li>
+          <li>allow for anchored links to tabs or to content inside inactive tabs</li>
+          <li>require Javascript (tabs.js)</li>
+        </ul>
+        <h2 id="structure"><span class="smallcaps">HTML</span> Structure</h2>
+        <p>All tab labels and tab content are enclosed in a block-level element with the <code>tabs-container</code> class. Individual tabs are defined by indicating the label for each tab with the <code>tab-label</code> class.</p>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;div class="tabs-container"&gt;
+  &lt;h2 class="tab-label"&gt;Tab Label 1&lt;/h2&gt;
+  &lt;p&gt;[content of the tab]&lt;/p&gt;
+  &lt;p&gt;[content of the tab]&lt;/p&gt;
+  &lt;h2 class="tab-label"&gt;Tab Label 2&lt;/h2&gt;
+  &lt;p&gt;[content of the tab]&lt;/p&gt;
+  &lt;ul&gt;[content of the tab]&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+        <p>JavaScript is used to identify the contents of each tab and to generate the clickable tabs. The content of a tab is defined as <em>all the next sibling elements following the <code>tab-label</code> element up to the next <code>tab-label</code></em>. JavaScript wraps the content of each tab in a  <code>&lt;div&gt;</code> with the class <code>tab-panel</code>. In addition, the script creates an unordered list for the clickable tabs. Each tab label becomes and item in the list. To indicate that JavaScript has acted on the tabs, the class <code>tyfy-tabs-processed</code> is added to the tabs container. So, after JavaScript has run, the code will appear as follows:</p> 
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;div class="tabs-container tyfy-tabs-processed"&gt;
+  &lt;ul class="tabs"&gt;
+    &lt;li data-tabindex="0" class="open"&gt;Tab Label 1&lt;/li&gt;
+    &lt;li data-tabindex="1" class="closed"&gt;Tab Label 2&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h2 class="tab-label open" data-tabindex="0"&gt;&lt;a id="Tab%20Label%201"&gt;Tab Label 1&lt;/a&gt;&lt;/h2&gt;
+  &lt;div class="tab-panel open"&gt;
+    &lt;p&gt;[content of the tab]&lt;/p&gt;
+    &lt;p&gt;[content of the tab]&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;h2 class="tab-label closed" data-tabindex="1"&gt;&lt;a id="Tab%20Label%202"&gt;Tab Label 2&lt;/a&gt;&lt;/h2&gt;
+  &lt;div class="tab-panel closed"&gt;
+    &lt;p&gt;[content of the tab]&lt;/p&gt;
+    &lt;ul&gt;[content of the tab]&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h2 id="variables">Variables</h2>
+        <dl>
+          <dt>$tybreak-tabs</dt>
+          <dd><code class="val val-default">40em !default;</code></dd>
+          <dd>Screen width below which the <a href="tabs.html">responsive tabs</a> convert to collapsable sections.</dd>
+          <dt>$tywidth-border</dt>
+          <dd><code class="val val-default">2px !default;</code></dd>
+          <dd>The border thickness for tabs and the tab container.</dd>
+          <dt>$tycolor-border</dt>
+          <dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,12%) !default;</code></dd>
+          <dd>The border color</dd>
+					<dt>$tyicons-angle-up</dt>
+					<dd><code class="val val-default">"ea08" !default;</code></dd>
+          <dd>The character code for the angle-up icon. This icon is used at small screen sizes when tabs become collapsable headings. The icon is rotated 180 degrees when the collapsable heading is in the closed state.</dd>
+        </dl>
+        <h2 id="example">Example</h2>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p&gt;Test links to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#anchor"&gt;An anchor in the second tab&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#Scelerisque"&gt;The third tab&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tabs-container"&gt;
+  &lt;h2 class="tab-label"&gt;Lorem Ipsum&lt;/h2&gt;
+  &lt;p&gt;Porro excepturi ad eligendi excepturi quam voluptate velit. Placeat modi animi natus est temporibus tenetur pariatur suscipit. Dolores sit id sit placeat consequatur temporibus accusamus et. Cumque voluptatum voluptatum delectus et sequi. Vero vitae officia eius ad. Consequatur impedit quam mollitia.&lt;/p&gt;
+  &lt;p&gt;Aspernatur id nihil sit eveniet vero corporis necessitatibus sit. Magni quia vitae perferendis. Suscipit illo tempora minus officia nemo aut numquam. Qui et omnis velit repudiandae autem. Aperiam aut dolorem neque quis dolor est sunt.&lt;/p&gt;
+  &lt;h2 class="tab-label"&gt;Dolor Sit Amet&lt;/h2&gt;
+  &lt;p&gt;Facilis error corrupti dolor eaque. &lt;a name="anchor"&gt;&lt;em&gt;Anchor link&lt;/em&gt;&lt;/a&gt; illum sequi officia rerum nostrum. Iste in quo eveniet. Deserunt quaerat a adipisci magni consequatur nesciunt distinctio praesentium. Ipsum vel ut est vel veritatis fugiat perspiciatis.&lt;/p&gt;
+  &lt;p&gt;Omnis dolores sit pariatur facilis odit magni. Totam excepturi incidunt dolorem assumenda neque dolorem. Dolorem odio consequatur quas corrupti sequi. Nihil ut nihil itaque non at molestiae corporis. Explicabo voluptate quis et.&lt;/p&gt;
+  &lt;h2 class="tab-label"&gt;Scelerisque&lt;/h2&gt;
+  &lt;p&gt;Curabitur non mauris sodales, tempor lacus ac, maximus felis. Vestibulum ultrices augue ut arcu mattis pellentesque. Maecenas ullamcorper lorem sit amet pretium pharetra. Nunc ipsum tellus, hendrerit vitae bibendum vel, scelerisque sit amet libero. Duis imperdiet massa placerat venenatis pharetra. Donec consectetur quis odio sit amet sollicitudin. Morbi at faucibus odio. Duis viverra lacus a odio pretium, quis suscipit tortor accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur egestas venenatis est vel hendrerit. Fusce molestie bibendum ex in suscipit.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        <figure class="output">
+          <p>Test links to:</p>
+          <ul>
+            <li><a href="#anchor">An anchor in the second tab</a></li>
+            <li><a href="#Scelerisque">The third tab</a></li>
+          </ul>
+          <div class="tabs-container">
+            <h2 class="tab-label">Lorem Ipsum</h2>
+            <p>Porro excepturi ad eligendi excepturi quam voluptate velit. Placeat modi animi natus est temporibus tenetur pariatur suscipit. Dolores sit id sit placeat consequatur temporibus accusamus et. Cumque voluptatum voluptatum delectus et sequi. Vero vitae officia eius ad. Consequatur impedit quam mollitia.</p>
+            <p>Aspernatur id nihil sit eveniet vero corporis necessitatibus sit. Magni quia vitae perferendis. Suscipit illo tempora minus officia nemo aut numquam. Qui et omnis velit repudiandae autem. Aperiam aut dolorem neque quis dolor est sunt.</p>
+            <h2 class="tab-label">Dolor Sit Amet</h2>
+            <p>Facilis error corrupti dolor eaque. <a name="anchor"><em>Anchor link</em></a> illum sequi officia rerum nostrum. Iste in quo eveniet. Deserunt quaerat a adipisci magni consequatur nesciunt distinctio praesentium. Ipsum vel ut est vel veritatis fugiat perspiciatis.</p>
+            <p>Omnis dolores sit pariatur facilis odit magni. Totam excepturi incidunt dolorem assumenda neque dolorem. Dolorem odio consequatur quas corrupti sequi. Nihil ut nihil itaque non at molestiae corporis. Explicabo voluptate quis et.</p>
+            <h2 class="tab-label">Scelerisque</h2>
+            <p>Curabitur non mauris sodales, tempor lacus ac, maximus felis. Vestibulum ultrices augue ut arcu mattis pellentesque. Maecenas ullamcorper lorem sit amet pretium pharetra. Nunc ipsum tellus, hendrerit vitae bibendum vel, scelerisque sit amet libero. Duis imperdiet massa placerat venenatis pharetra. Donec consectetur quis odio sit amet sollicitudin. Morbi at faucibus odio. Duis viverra lacus a odio pretium, quis suscipit tortor accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur egestas venenatis est vel hendrerit. Fusce molestie bibendum ex in suscipit.</p>
+          </div>
+        </figure> 
+      </section>
+    </main>
+		<!-- COMMON FOOTER -->
+		<footer class="footer">
+			<div>© Copyright 2017-2019 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>
+      <div><a class="navlink-secondary navlink-github" href="https://github.com/aaronpinero/typography">Fork on Github</a></div>
+      <div><a class="navlink-secondary navlink-npm" href="https://www.npmjs.com/package/tyfy">npm install tyfy</a></div>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i,700,700i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="resources/scss/components/nav-main/nav-main.js"></script>
+    <script src="resources/script/docs-nav.js"></script>
+    <script src="resources/vendor/prism/prism.js"></script>
+		<!--/ COMMON FOOTER -->
+    <script src="../../dist/script/tabs.js"></script>
+  </body>
+</html>

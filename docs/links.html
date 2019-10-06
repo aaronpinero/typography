@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="resources/style/tyfy-docs.css">
+		<link rel="stylesheet" href="resources/vendor/prism/prism.css">
+		<!--/ COMMON HEAD TAGS -->
+		<title>Tyfy - Modules - Links</title>
+	</head>
+	<body class="">
+		    <!-- COMMON HEADER -->
+    <nav class="nav-main" id="top">
+      <a href="index.html" class="tyfy logo">Tyfy: A Web Framework</a>
+      <h1 class="nav-heading">Main Menu</h1>
+      <ul class="menu">
+        <li><a href="startup.html">Get Started</a></li>
+        <li><a href="customize.html">Customize</a></li>
+        <li>
+          <a href="benefits.html">Benefits</a>
+          <ul class="reverse">
+            <li><a href="scale.html">Modular Scale</a></li>
+            <li><a href="grid.html">Baseline Grid</a></li>
+            <li><a href="margins.html">Sensible Margins</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="modules.html">Modules</a>
+          <ul class="reverse megamenu">
+            <li>
+              <a href="required.html"><strong>Required</strong></a>
+              <ul>
+                <li><a href="core.html">Core</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="mixins.html">Mixins</a></li>
+                <li><a href="settings.html">Settings</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="essential.html"><strong>Essential</strong></a>
+              <ul>
+                <li><a href="normalize.html">Normalize</a></li>
+                <li><a href="body.html">Body</a></li>
+                <li><a href="spacing.html">Spacing</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="optional.html"><strong>Optional</strong></a>
+              <ul>
+                <li><a href="paragraphs.html">Paragraphs</a></li>
+                <li><a href="headings.html">Headings</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="lists.html">Lists</a></li>
+                <li><a href="utility.html">Text Styles</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="collapsables.html">Collapsables</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="extras.html"><strong>Extras</strong></a>
+              <ul>
+                <li><a href="effects.html">Effects</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="responsive_text.html">Responsive Text</a></li>
+                <li><a href="reverse.html">Reverse Colors</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+          <ul class="reverse">
+            <li><a href="about.html">Read Me</a></li>
+            <li><a href="compatibility.html">Browser Compatibility</a></li>
+            <li><a href="tools.html">Build Tools</a></li>
+            <li><a href="changelog.html">Change Log</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+		<!--/ COMMON HEADER -->
+    <header class="pagetitle reverse">
+			<h1>Link Styles</h1>
+		</header>
+    <main class="block">
+      <nav class="nav-inpage tymargins-off">
+        <h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
+        <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#classes">Classes</a></li>
+          <li><a class="navlink-secondary" href="#variables">Variables</a></li>
+          <li><a class="navlink-secondary" href="#examples">Examples</a></li>
+        </ul>
+      </nav>
+      <section class="section-body links-underlined">
+        <p>Links must have a style that is different from body text, but anchors should not. Because anchors and links share the <code>&lt;a&gt;</code> tag, it is necessary to progressively define styles for this tag. Here, the default appearance of the <code>&lt;a&gt;</code> tag is the same as for body text. Using an attribute selector, link styles can are applied to <code>&lt;a&gt;</code> elements that have an <code>href</code> attribute.</p>
+        <pre class="codebox"><code class="code-nobg language-scss">a {
+  // styles
+  &[href] {
+    // link styles 
+    &:hover,
+    &:active {
+      // hovered and active link styles
+    }
+  }
+}</code></pre>
+        <p>For underlined links, I use <code>border-bottom</code> instead of <code>text-decoration</code> to apply an underline. This way, the underline can be styled and transitions can be employed. The framework includes <span class="smallcaps">SASS</span> variables to globally define transition speeds.</p>
+        <h2 id="classes">Classes</h2>
+        <dl>
+            <dt>.links-underlined</dt>
+            <dd>Applied to a containing element to add underlines to descendant links; by default, links do not have any underline.</dd>
+            <dt>.links-notunderlined</dt>
+            <dd>Applied to a containing element to remove underlines to descendant links; intended to be used inside an element that has the <code>links-underlined</code> class.</dd>
+            <dt>.tybutton</dt>
+            <dd>Applied to an <code>&lt;a&gt;</code> tag to make a link appear as a button; based on the <a href="mixins.html">tybutton mixin</a>.</dd>
+            <dt>.tybutton-outline</dt>
+            <dd>Applied to an <code>&lt;a&gt;</code> tag to make a link appear as an outlined button;  <a href="mixins.html">tybutton-outline mixin</a>.</dd>
+        </dl>
+        <h2 id="variables">Variables</h2>
+        <dl>
+          <dt>$tycolor-fg</dt>
+          <dd><code class="val-default">#111111 !default;</code></dd>
+          <dd>Color of anchor links (same as body text color).</dd>
+          <dt>$tyduration</dt>
+          <dd><code class="val val-default">(hover:250ms, move:500ms, 1x:1000ms, 2x:2000ms, 3x:3000ms) !default;</code></dd>
+          <dd><span class="smallcaps">SASS</span> map of duration values for <span class="smallcaps">CSS</span> transitions and animations; the <code>hover</code> duration is used for links.</dd>
+          <dt>$tycolor-link-default</dt>
+          <dd><code class="val-default">#3380cc !default;</code></dd>
+          <dd>Default link color.</dd>
+          <dt>$tycolor-link-active</dt>
+          <dd><code class="val-default">#cc3380 !default;</code></dd>
+          <dd>Hovered and active link color.</dd>
+          <dt>$tycolor-border-link-default</dt>
+          <dd><code class="val-default">rgba($tycolor-link-default,0.5) !default;</code></dd>
+          <dd>Default link underline color.</dd>
+          <dt>$tycolor-border-link-active</dt>
+          <dd><code class="val-default">rgba($tycolor-link-active,0.75) !default;</code></dd>
+          <dd>Hovered and active link underline color.</dd>
+          <dt>$tywidth-border</dt>
+          <dd><code class="val-default">2px !default;</code></dd>
+          <dd>Width (thickness) of the link underline.</dd>
+        </dl>
+        <h2 id="examples">Examples</h2>
+        <h3>Default Styles</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;h2&gt;&lt;a name="anchor1"&gt;Anchored Heading&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a name="anchor2"&gt;Anchored text&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="http://aaronpinero.net"&gt;Ut euismod purus&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Ut euismod purus sed &lt;a href="http://aaronpinero.net"&gt;dolor bibendum&lt;/a&gt;, et viverra sapien sagittis. Nullam luctus malesuada ante eget porttitor. Pellentesque eu lobortis augue. Quisque convallis porta tellus, eget lobortis dolor varius accumsan. &lt;a href="http://aaronpinero.net"&gt;Donec eu purus&lt;/a&gt; ut diam egestas dapibus. Morbi lorem est, luctus ac magna a, luctus volutpat mi. Nullam id &lt;a href="http://aaronpinero.net"&gt;nulla eget urna&lt;/a&gt; finibus lacinia. Curabitur porttitor tempus nulla non fringilla. Nam egestas vestibulum sem, vel tincidunt elit iaculis non.&lt;/p&gt;</code></pre>
+        <figure class="output links-notunderlined">
+          <h2><a name="anchor1">Anchored Heading</a></h2>
+          <p><a name="anchor2">Anchored text</a>.</p>
+          <h2><a href="http://aaronpinero.net">Ut euismod purus</a></h2>
+          <p>Ut euismod purus sed <a href="http://aaronpinero.net">dolor bibendum</a>, et viverra sapien sagittis. Nullam luctus malesuada ante eget porttitor. Pellentesque eu lobortis augue. Quisque convallis porta tellus, eget lobortis dolor varius accumsan. <a href="http://aaronpinero.net">Donec eu purus</a> ut diam egestas dapibus. Morbi lorem est, luctus ac magna a, luctus volutpat mi. Nullam id <a href="http://aaronpinero.net">nulla eget urna</a> finibus lacinia. Curabitur porttitor tempus nulla non fringilla. Nam egestas vestibulum sem, vel tincidunt elit iaculis non.</p>
+        </figure>
+        <h3>Underlined</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;h2&gt;&lt;a href="http://aaronpinero.net"&gt;Ut euismod purus&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Ut euismod purus sed &lt;a href="http://aaronpinero.net"&gt;dolor bibendum&lt;/a&gt;, et viverra sapien sagittis. Nullam luctus malesuada ante eget porttitor. Pellentesque eu lobortis augue. Quisque convallis porta tellus, eget lobortis dolor varius accumsan. &lt;a href="http://aaronpinero.net"&gt;Donec eu purus&lt;/a&gt; ut diam egestas dapibus. Morbi lorem est, luctus ac magna a, luctus volutpat mi. Nullam id &lt;a href="http://aaronpinero.net"&gt;nulla eget urna&lt;/a&gt; finibus lacinia. Curabitur porttitor tempus nulla non fringilla. Nam egestas vestibulum sem, vel tincidunt elit iaculis non.&lt;/p&gt;</code></pre>
+        <figure class="output">
+          <h2><a href="http://aaronpinero.net">Ut euismod purus</a></h2>
+          <p>Ut euismod purus sed <a href="http://aaronpinero.net">dolor bibendum</a>, et viverra sapien sagittis. Nullam luctus malesuada ante eget porttitor. Pellentesque eu lobortis augue. Quisque convallis porta tellus, eget lobortis dolor varius accumsan. <a href="http://aaronpinero.net">Donec eu purus</a> ut diam egestas dapibus. Morbi lorem est, luctus ac magna a, luctus volutpat mi. Nullam id <a href="http://aaronpinero.net">nulla eget urna</a> finibus lacinia. Curabitur porttitor tempus nulla non fringilla. Nam egestas vestibulum sem, vel tincidunt elit iaculis non.</p>
+        </figure>
+        <h3>Links as Buttons</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;p&gt;&lt;a href="http://aaronpinero.net" class="button"&gt;Link as Button&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://aaronpinero.net" class="button-outline"&gt;Link as Outline Button&lt;/a&gt;&lt;/p&gt;</code></pre>
+        <figure class="output">
+          <p><a href="http://aaronpinero.net" class="tybutton">Link as Button</a></p>
+          <p><a href="http://aaronpinero.net" class="tybutton-outline">Link as Outline Button</a></p>
+        </figure>
+      </section>
+    </main>
+		<!-- COMMON FOOTER -->
+		<footer class="footer">
+			<div>© Copyright 2017-2019 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>
+      <div><a class="navlink-secondary navlink-github" href="https://github.com/aaronpinero/typography">Fork on Github</a></div>
+      <div><a class="navlink-secondary navlink-npm" href="https://www.npmjs.com/package/tyfy">npm install tyfy</a></div>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i,700,700i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="resources/scss/components/nav-main/nav-main.js"></script>
+    <script src="resources/script/docs-nav.js"></script>
+    <script src="resources/vendor/prism/prism.js"></script>
+		<!--/ COMMON FOOTER -->
+	</body>
+</html>

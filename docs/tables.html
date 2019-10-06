@@ -1,11 +1,99 @@
 <!doctype html>
 <html lang="en">
   <head>
-		<%include head.html%>
+		<!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="resources/style/tyfy-docs.css">
+		<link rel="stylesheet" href="resources/vendor/prism/prism.css">
+		<!--/ COMMON HEAD TAGS -->
     <title>Tyfy - Tables</title>
   </head>
   <body class="">
-		<%include header.html%>
+		    <!-- COMMON HEADER -->
+    <nav class="nav-main" id="top">
+      <a href="index.html" class="tyfy logo">Tyfy: A Web Framework</a>
+      <h1 class="nav-heading">Main Menu</h1>
+      <ul class="menu">
+        <li><a href="startup.html">Get Started</a></li>
+        <li><a href="customize.html">Customize</a></li>
+        <li>
+          <a href="benefits.html">Benefits</a>
+          <ul class="reverse">
+            <li><a href="scale.html">Modular Scale</a></li>
+            <li><a href="grid.html">Baseline Grid</a></li>
+            <li><a href="margins.html">Sensible Margins</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="modules.html">Modules</a>
+          <ul class="reverse megamenu">
+            <li>
+              <a href="required.html"><strong>Required</strong></a>
+              <ul>
+                <li><a href="core.html">Core</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="mixins.html">Mixins</a></li>
+                <li><a href="settings.html">Settings</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="essential.html"><strong>Essential</strong></a>
+              <ul>
+                <li><a href="normalize.html">Normalize</a></li>
+                <li><a href="body.html">Body</a></li>
+                <li><a href="spacing.html">Spacing</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="optional.html"><strong>Optional</strong></a>
+              <ul>
+                <li><a href="paragraphs.html">Paragraphs</a></li>
+                <li><a href="headings.html">Headings</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="lists.html">Lists</a></li>
+                <li><a href="utility.html">Text Styles</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="collapsables.html">Collapsables</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="extras.html"><strong>Extras</strong></a>
+              <ul>
+                <li><a href="effects.html">Effects</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="responsive_text.html">Responsive Text</a></li>
+                <li><a href="reverse.html">Reverse Colors</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+          <ul class="reverse">
+            <li><a href="about.html">Read Me</a></li>
+            <li><a href="compatibility.html">Browser Compatibility</a></li>
+            <li><a href="tools.html">Build Tools</a></li>
+            <li><a href="changelog.html">Change Log</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+		<!--/ COMMON HEADER -->
     <header class="pagetitle reverse">
       <h1>Tables</h1>
 		</header>
@@ -113,7 +201,25 @@
 				</figure>
 			</section>
 		</main>
-		<%include footer.html%>
+		<!-- COMMON FOOTER -->
+		<footer class="footer">
+			<div>© Copyright 2017-2019 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>
+      <div><a class="navlink-secondary navlink-github" href="https://github.com/aaronpinero/typography">Fork on Github</a></div>
+      <div><a class="navlink-secondary navlink-npm" href="https://www.npmjs.com/package/tyfy">npm install tyfy</a></div>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i,700,700i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="resources/scss/components/nav-main/nav-main.js"></script>
+    <script src="resources/script/docs-nav.js"></script>
+    <script src="resources/vendor/prism/prism.js"></script>
+		<!--/ COMMON FOOTER -->
     <script src="../../dist/script/tables.js"></script>
     <script src="resources/script/docs-demo-tables.js"></script>
   </body>

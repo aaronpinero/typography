@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="resources/style/tyfy-docs.css">
 		<link rel="stylesheet" href="resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy</title>
+		<title>Tyfy - Modules</title>
 	</head>
 	<body class="">
 		    <!-- COMMON HEADER -->
@@ -94,39 +94,72 @@
       </ul>
     </nav>
 		<!--/ COMMON HEADER -->
-    <header class="pagetitle home reverse">
-			<h1>Tyfy</h1>
-			<p class="lede">A framework for better web typography.</p>
-			<ul class="list-flex list-flex-center list-nobullet">
-				<li><a class="tybutton-outline-white" href="startup.html">Get Started</a></li>
-				<li><a class="tybutton-outline-white" href="modules.html">Documentation</a></li>
-			</ul>
-		</header>
-    <main>
-			<section class="section-benefits links-underlined">
-				<h2 class="homesubhead">Why Tyfy?</h2>
-				<div class="col">
-					<img src="resources/img/notes.svg">
-					<h3>Modular Scale</h3>
-					<p><strong class="tyfy">Tyfy</strong> provides variables and SASS functions for setting a <a href="scale.html">modular scale</a>. A modular scale creates typographic contrast and harmonious font size proportions.</p>
-				</div>
-				<div class="col">
-					<img src="resources/img/grid.svg">
-					<h3>Baseline Grid</h3>
-					<p><strong class="tyfy">Tyfy</strong> helps you set and maintain a <a href="grid.html">baseline grid</a>. The framework provides a core grid unit variable and SASS functions for calculating grid-based measures.</p>
-				</div>
-				<div class="col">
-					<img src="resources/img/margins.svg">
-					<h3>Sensible Margins</h3>
-					<p>You usually don't need margins around HTML elements, only between HTMl elements. <strong class="tyfy">Tyfy</strong> provides mixins and classes that help you apply <a href="margins.html">sensible margins</a>.</p>
-				</div>
-			</section>
-      <section class="section-body block links-underlined">
-				<h2 class="homesubhead">About Tyfy</h2>
-				<p><strong class="tyfy">Tyfy</strong> (short for <i>typography</i> or <i>typogrify</i>) started as – and to some degree, remains – a personal project, a summary of past work, and resumé filler. It is inspired by the writings of <a href="https://en.wikipedia.org/wiki/Robert_Bringhurst">Robert Bringhurst</a> and the work of designers like <a href="https://matejlatin.co.uk">Matej Latin</a> and <a href="http://clagnut.com">Richard Rutter</a>.</p>
-				<p>I also have a related project, <a href="https://github.com/aaronpinero/typography-bootstrap">Tyfy Bootstrap</a>, that applies elements of this framework as a theme for <a href="https://getbootstrap.com/">Bootstrap</a>. </p>
-			</section>
-		</main>
+    <header class="pagetitle reverse">
+			<h1>Modules</h1>
+    </header>
+    <main class="block">
+      <section class="section-body links-underlined">
+        <p>Below is an inventory of the modules that make up the framework. The required, essential, and optional modules are @imported in the following order. The extras modules are not all part of the default <strong class="tyfy">Tyfy</strong> distribution but can be added if desired.</p>
+        <h2 id="required">Required</h2>
+        <p>These modules are required to use <strong class="tyfy">Tyfy</strong>. They define the framework's variables, functions, and mixins.</p>
+        <dl>
+          <dt>@import "<a href="core.html">required/core</a>"</dt>
+          <dd>Defines the core <strong class="tyfy">Tyfy</strong> variables; these variables are used in the calculation of many of the framework settings and are required by the functions module.</dd>
+          <dt>@import "<a href="functions.html">required/functions</a>"</dt>
+          <dd>Defines functions that make it easy to use the grid and modular typographic scale.</dd>
+          <dt>@import "<a href="settings.html">required/settings</a>"</dt>
+          <dd>Defines the framework’s colors, fonts, breakpoints, etc.</dd>
+          <dt>@import "<a href="mixins.html">required/mixins</a>"</dt>
+          <dd>Defines <span class="smallcaps">SASS</span> mixins that make it easy to use the sibling margins, styles, and effects.</dd>
+        </dl>
+        <h2 id="essential">Essential</h2>
+        <p>These modules are not hard requirements for <strong class="tyfy">Tyfy</strong> but are highly recommended.</p>
+        <dl>
+          <dt>@import "<a href="normalize.html">essential/normalize</a>"</dt>
+          <dd>Apply selected styles from <a href="https://github.com/necolas/normalize.css/">normalize.css</a>.</dd>
+          <dt>@import "<a href="body.html">essential/body</a>"</dt>
+          <dd>Apply the base colors, font styles, and line height.</dd>
+          <dt>@import "<a href="spacing.html">essential/spacing</a>"</dt>
+          <dd>Apply margins between adjacent sibling <span class="smallcaps">HTML</span> elements; also contains classes for toggling the adjacent sibling margins.</dd>
+        </dl>
+        <h2 id="optional">Optional</h2>
+        <p>These optional modules provide specific typographic styles and UI patterns.</p> 
+        <dl>
+          <dt>@import "<a href="paragraphs.html">optional/paragraphs</a>"</dt>
+          <dd>Styles and classes for paragraphs.</dd>
+          <dt>@import "<a href="headings.html">optional/headings</a>"</dt>
+          <dd>Styles and classes for headings and heading sizes.</dd>
+          <dt>@import "<a href="links.html">optional/links</a>"</dt>
+          <dd>Styles and classes for links.</dd>
+          <dt>@import "<a href="lists.html">optional/lists</a>"</dt>
+          <dd>Styles and classes for lists.</dd>
+          <dt>@import "<a href="utility.html">optional/utility</a>"</dt>
+          <dd>Styles and classes for other inline- and block-level elements; additional classes for typographic enhancements.</dd>
+          <dt>@import "<a href="quotes.html">optional/quotes</a>"</dt>
+          <dd>Styles and classes for blockquotes and pullquotes.</dd>
+          <dt>@import "<a href="tables.html">optional/tables</a>"</dt>
+          <dd>Styles and classes for tables; responsive tables require tables.js.</dd>
+          <dt>@import "<a href="collapsables.html">optional/collapsables</a>"</dt>
+          <dd>Styles for a UI pattern similar to an accordion; requires collapsable.js.</dd>
+          <dt>@import "<a href="tabs.html">optional/tabs</a>"</dt>
+          <dd>Styles for responsive tabs; requires tabs.js.</dd>
+          <dt>@import "<a href="forms.html">optional/forms</a>"</dt>
+          <dd>Styles and classes for form elements.</dd>
+        </dl>
+        <h2 id="extras">Extras</h2>
+        <p>These modules provide additional functionality that might not be needed in every case.</p>
+        <dl>
+          <dt>@import "<a href="icons.html">extras/icons</a>"</dt>
+          <dd>Defines the font face and classes for the tyicons font.</dd>
+          <dt>@import "<a href="reverse.html">optional/reverse</a>"</dt>
+          <dd>Styles for reversed colors.</dd>
+          <dt>@import "<a href="effects.html">optional/effects</a>"</dt>
+          <dd>Styles for <span class="smallcaps">CSS</span> animations.</dd>
+          <dt>@import "<a href="responsive_text.html">extras/responsive_text</a>"</dt>
+          <dd>Text size adjustments for small and large screens.</dd>
+        </dl>
+      </section>
+    </main>
 		<!-- COMMON FOOTER -->
 		<footer class="footer">
 			<div>© Copyright 2017-2019 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>

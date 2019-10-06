@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	<head>
+  <head>
 		<!-- COMMON HEAD TAGS -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
@@ -18,9 +18,9 @@
 		<link rel="stylesheet" href="resources/style/tyfy-docs.css">
 		<link rel="stylesheet" href="resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy</title>
-	</head>
-	<body class="">
+		<title>Tyfy - Modules - Effects</title>
+  </head>
+  <body class="">
 		    <!-- COMMON HEADER -->
     <nav class="nav-main" id="top">
       <a href="index.html" class="tyfy logo">Tyfy: A Web Framework</a>
@@ -94,39 +94,25 @@
       </ul>
     </nav>
 		<!--/ COMMON HEADER -->
-    <header class="pagetitle home reverse">
-			<h1>Tyfy</h1>
-			<p class="lede">A framework for better web typography.</p>
-			<ul class="list-flex list-flex-center list-nobullet">
-				<li><a class="tybutton-outline-white" href="startup.html">Get Started</a></li>
-				<li><a class="tybutton-outline-white" href="modules.html">Documentation</a></li>
-			</ul>
+    <header class="pagetitle reverse">
+      <h1>Effects</h1>
 		</header>
-    <main>
-			<section class="section-benefits links-underlined">
-				<h2 class="homesubhead">Why Tyfy?</h2>
-				<div class="col">
-					<img src="resources/img/notes.svg">
-					<h3>Modular Scale</h3>
-					<p><strong class="tyfy">Tyfy</strong> provides variables and SASS functions for setting a <a href="scale.html">modular scale</a>. A modular scale creates typographic contrast and harmonious font size proportions.</p>
-				</div>
-				<div class="col">
-					<img src="resources/img/grid.svg">
-					<h3>Baseline Grid</h3>
-					<p><strong class="tyfy">Tyfy</strong> helps you set and maintain a <a href="grid.html">baseline grid</a>. The framework provides a core grid unit variable and SASS functions for calculating grid-based measures.</p>
-				</div>
-				<div class="col">
-					<img src="resources/img/margins.svg">
-					<h3>Sensible Margins</h3>
-					<p>You usually don't need margins around HTML elements, only between HTMl elements. <strong class="tyfy">Tyfy</strong> provides mixins and classes that help you apply <a href="margins.html">sensible margins</a>.</p>
-				</div>
-			</section>
-      <section class="section-body block links-underlined">
-				<h2 class="homesubhead">About Tyfy</h2>
-				<p><strong class="tyfy">Tyfy</strong> (short for <i>typography</i> or <i>typogrify</i>) started as – and to some degree, remains – a personal project, a summary of past work, and resumé filler. It is inspired by the writings of <a href="https://en.wikipedia.org/wiki/Robert_Bringhurst">Robert Bringhurst</a> and the work of designers like <a href="https://matejlatin.co.uk">Matej Latin</a> and <a href="http://clagnut.com">Richard Rutter</a>.</p>
-				<p>I also have a related project, <a href="https://github.com/aaronpinero/typography-bootstrap">Tyfy Bootstrap</a>, that applies elements of this framework as a theme for <a href="https://getbootstrap.com/">Bootstrap</a>. </p>
-			</section>
-		</main>
+		<main class="block">
+			<section class="section-body links-underlined">
+        <p>I added this module because it was an opportunity to experiment with <a href="https://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184"><span class="smallcaps">SASS</span> maps</a>. In this case, I have used a sass map to generate a number of classes that, when applied to an element, cause that element to fade in when the page is loaded. The duration of the fade animation depends on the class used.</p>
+        <p>To apply a fade in animation of arbitrary duration, there is a mixin that accepts duration as a variable.</p>
+        <p>For now, this is the only effect available. I may add more effects at a later time. I welcome <a href="https://github.com/aaronpinero/typography/issues">suggestions</a> for particular effects.</p>
+        <h2>Classes</h2>
+        <dl>
+          <dt class="fade-1s">.fade-1x</dt>
+          <dd>Applies a fade-in animation of 1000ms duration</dd>
+          <dt class="fade-2s">.fade-2x</dt>
+          <dd>Applies a fade-in animation of 2000ms duration</dd>
+          <dt class="fade-3s">.fade-3x</dt>
+          <dd>Applies a fade-in animation of 3000ms duration</dd>
+        </dl>
+      </section>
+    </main>
 		<!-- COMMON FOOTER -->
 		<footer class="footer">
 			<div>© Copyright 2017-2019 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>
@@ -146,5 +132,5 @@
     <script src="resources/script/docs-nav.js"></script>
     <script src="resources/vendor/prism/prism.js"></script>
 		<!--/ COMMON FOOTER -->
-	</body>
+  </body>
 </html>
