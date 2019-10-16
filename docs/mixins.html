@@ -202,7 +202,7 @@ a.button-outline[href] {
           <dt>$context</dt>
           <dd><em>optional</em></dd>
           <dd>Default value is <code class="val val-default">all</code></dd>
-          <dd>Allowed values are <code>all</code>, <code>headings</code>, or <code>lists</code>. The <code>all</code> context sets the value for all tags; the <code>headings</code> context sets the value only for headings; the <code>lists</code> context sets the value only for children of ordered, unordered, and definition lists.</dd>
+          <dd>Allowed values are <code>all</code>, <code>once</code>, <code>headings</code>, or <code>lists</code>. The <code>all</code> context sets the value for all tags; the <code>once</code> context sets the margin value only for immediate desendants; the <code>headings</code> context sets the value only for headings; the <code>lists</code> context sets the value only for children of ordered, unordered, and definition lists.</dd>
           <dt>$measure</dt>
           <dd><em>optional</em></dd>
           <dd>Default value is <code class="val val-default">$tyspacing-md</code></dd>
@@ -219,7 +219,7 @@ a.button-outline[href] {
           <dt>$state</dt>
           <dd><em>optional</em></dd>
           <dd>Default value is <code class="val val-default">on</code></dd>
-          <dd>Allowed values are <code>on</code>, <code>skip</code>, or <code>off</code>. The <code>skip</code> option eliminates the adjacent sibling margins only on immediate descendants.</dd>
+          <dd>Allowed values are <code>on</code>, <code>once</code>, <code>skip</code>, or <code>off</code>. The <code>skip</code> option eliminates the adjacent sibling margins only on immediate descendants; <code>once</code> applies the adjacent sibling margins only to immediate descendants.</dd>
         </dl>
         <h3 class="tyfont-size-h4">Example</h3>
         <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">tag.class {

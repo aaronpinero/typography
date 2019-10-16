@@ -88,6 +88,12 @@
       }
     }
   }
+  @else if $context == once {
+    // just the immediate descendants
+    > * + * {
+      margin-top:$measure;
+    }
+  }
   @else {
     // everything
     * + * {
@@ -118,6 +124,9 @@
     > * + * {
       margin-top:0;
     }
+  }
+  @else if $state == once {
+    @include tymargins-size(once);
   }
   @else {
     * + * {

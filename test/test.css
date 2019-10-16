@@ -180,7 +180,7 @@ body {
   margin-top: 0;
   margin-bottom: 0; }
 
-/* line 93, source/scss/required/_mixins.scss */
+/* line 99, source/scss/required/_mixins.scss */
 body * + * {
   margin-top: 1.5rem; }
 
@@ -201,7 +201,7 @@ body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
 body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
   margin-top: 3rem; }
 
-/* line 93, source/scss/required/_mixins.scss */
+/* line 99, source/scss/required/_mixins.scss */
 .tymargins-on * + * {
   margin-top: 1.5rem; }
 
@@ -222,12 +222,16 @@ body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
 .tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
   margin-top: 3rem; }
 
-/* line 118, source/scss/required/_mixins.scss */
-.tymargins-skip > * + * {
+/* line 132, source/scss/required/_mixins.scss */
+.tymargins-off * + * {
   margin-top: 0; }
 
-/* line 123, source/scss/required/_mixins.scss */
-.tymargins-off * + * {
+/* line 93, source/scss/required/_mixins.scss */
+.tymargins-once > * + * {
+  margin-top: 1.5rem; }
+
+/* line 124, source/scss/required/_mixins.scss */
+.tymargins-skip > * + * {
   margin-top: 0; }
 
 /* line 2, source/scss/optional/_paragraphs.scss */
@@ -349,15 +353,15 @@ a {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     transition: all 333ms;
     vertical-align: middle; }
-    /* line 179, source/scss/required/_mixins.scss */
+    /* line 188, source/scss/required/_mixins.scss */
     a[href].tybutton:hover, a[href].tybutton:active, a[href].tybutton[href]:hover, a[href].tybutton[href]:active {
       background-color: #339933;
       background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
       color: white; }
-    /* line 190, source/scss/required/_mixins.scss */
+    /* line 199, source/scss/required/_mixins.scss */
     a[href].tybutton:active, a[href].tybutton[href]:active {
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 193, source/scss/required/_mixins.scss */
+    /* line 202, source/scss/required/_mixins.scss */
     a[href].tybutton:focus, a[href].tybutton[href]:focus {
       outline: none; }
   /* line 30, source/scss/optional/_links.scss */
@@ -380,18 +384,18 @@ a {
     border: 2px #3366cc solid;
     color: #3366cc;
     padding: calc(0.375rem - 2px) calc(1.125rem - 2px); }
-    /* line 179, source/scss/required/_mixins.scss */
+    /* line 188, source/scss/required/_mixins.scss */
     a[href].tybutton-outline:hover, a[href].tybutton-outline:active, a[href].tybutton-outline[href]:hover, a[href].tybutton-outline[href]:active {
       background-color: #339933;
       background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
       color: white; }
-    /* line 190, source/scss/required/_mixins.scss */
+    /* line 199, source/scss/required/_mixins.scss */
     a[href].tybutton-outline:active, a[href].tybutton-outline[href]:active {
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 193, source/scss/required/_mixins.scss */
+    /* line 202, source/scss/required/_mixins.scss */
     a[href].tybutton-outline:focus, a[href].tybutton-outline[href]:focus {
       outline: none; }
-    /* line 220, source/scss/required/_mixins.scss */
+    /* line 229, source/scss/required/_mixins.scss */
     a[href].tybutton-outline:hover, a[href].tybutton-outline:active, a[href].tybutton-outline[href]:hover, a[href].tybutton-outline[href]:active {
       border-color: #309130; }
 
@@ -470,7 +474,7 @@ ul.list-flex {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0; }
-  /* line 123, source/scss/required/_mixins.scss */
+  /* line 132, source/scss/required/_mixins.scss */
   ul.list-flex * + * {
     margin-top: 0; }
   /* line 88, source/scss/optional/_lists.scss */
@@ -495,7 +499,7 @@ ul.list-flex {
     column-gap: 3rem;
     margin-bottom: -0.75rem;
     padding-left: 0; }
-    /* line 123, source/scss/required/_mixins.scss */
+    /* line 132, source/scss/required/_mixins.scss */
     ol.list-cols-2 * + *, ol.list-cols-3 * + *,
     ul.list-cols-2 * + *,
     ul.list-cols-3 * + * {
@@ -706,15 +710,15 @@ span.smallcaps {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   transition: all 333ms;
   vertical-align: middle; }
-  /* line 179, source/scss/required/_mixins.scss */
+  /* line 188, source/scss/required/_mixins.scss */
   .tybutton:hover, .tybutton:active, .tybutton[href]:hover, .tybutton[href]:active {
     background-color: #339933;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
     color: white; }
-  /* line 190, source/scss/required/_mixins.scss */
+  /* line 199, source/scss/required/_mixins.scss */
   .tybutton:active, .tybutton[href]:active {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-  /* line 193, source/scss/required/_mixins.scss */
+  /* line 202, source/scss/required/_mixins.scss */
   .tybutton:focus, .tybutton[href]:focus {
     outline: none; }
 
@@ -738,18 +742,18 @@ span.smallcaps {
   border: 2px #3366cc solid;
   color: #3366cc;
   padding: calc(0.375rem - 2px) calc(1.125rem - 2px); }
-  /* line 179, source/scss/required/_mixins.scss */
+  /* line 188, source/scss/required/_mixins.scss */
   .tybutton-outline:hover, .tybutton-outline:active, .tybutton-outline[href]:hover, .tybutton-outline[href]:active {
     background-color: #339933;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
     color: white; }
-  /* line 190, source/scss/required/_mixins.scss */
+  /* line 199, source/scss/required/_mixins.scss */
   .tybutton-outline:active, .tybutton-outline[href]:active {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-  /* line 193, source/scss/required/_mixins.scss */
+  /* line 202, source/scss/required/_mixins.scss */
   .tybutton-outline:focus, .tybutton-outline[href]:focus {
     outline: none; }
-  /* line 220, source/scss/required/_mixins.scss */
+  /* line 229, source/scss/required/_mixins.scss */
   .tybutton-outline:hover, .tybutton-outline:active, .tybutton-outline[href]:hover, .tybutton-outline[href]:active {
     border-color: #309130; }
 
@@ -1199,7 +1203,7 @@ h6.tyfy-collapsable-processed:hover::before {
   display: none;
   margin: 0;
   padding: 0; }
-  /* line 123, source/scss/required/_mixins.scss */
+  /* line 132, source/scss/required/_mixins.scss */
   .tabs-container ul.tabs * + * {
     margin-top: 0; }
   @media (min-width: 40em) {
@@ -1429,7 +1433,7 @@ input[type="color"] {
     border-color: var(--tycolor-link-active);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
 
-/* line 123, source/scss/required/_mixins.scss */
+/* line 132, source/scss/required/_mixins.scss */
 select * + * {
   margin-top: 0; }
 
@@ -1466,7 +1470,7 @@ input[type="submit"] {
   display: inline-block;
   font-family: helvetica, arial, sans-serif;
   width: auto; }
-  /* line 179, source/scss/required/_mixins.scss */
+  /* line 188, source/scss/required/_mixins.scss */
   button:hover, button:active, button[href]:hover, button[href]:active,
   input[type="button"]:hover,
   input[type="button"]:active,
@@ -1483,7 +1487,7 @@ input[type="submit"] {
     background-color: #339933;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
     color: white; }
-  /* line 190, source/scss/required/_mixins.scss */
+  /* line 199, source/scss/required/_mixins.scss */
   button:active, button[href]:active,
   input[type="button"]:active,
   input[type="button"][href]:active,
@@ -1492,7 +1496,7 @@ input[type="submit"] {
   input[type="submit"]:active,
   input[type="submit"][href]:active {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-  /* line 193, source/scss/required/_mixins.scss */
+  /* line 202, source/scss/required/_mixins.scss */
   button:focus, button[href]:focus,
   input[type="button"]:focus,
   input[type="button"][href]:focus,
@@ -1644,7 +1648,7 @@ select.tyselect {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     transition: all 333ms;
     vertical-align: middle; }
-    /* line 179, source/scss/required/_mixins.scss */
+    /* line 188, source/scss/required/_mixins.scss */
     .reverse .tybutton:hover, .reverse .tybutton:active, .reverse .tybutton[href]:hover, .reverse .tybutton[href]:active,
     .reverse a.tybutton:hover,
     .reverse a.tybutton:active,
@@ -1669,7 +1673,7 @@ select.tyselect {
       background-color: #c6ecc6;
       background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
       color: black; }
-    /* line 190, source/scss/required/_mixins.scss */
+    /* line 199, source/scss/required/_mixins.scss */
     .reverse .tybutton:active, .reverse .tybutton[href]:active,
     .reverse a.tybutton:active,
     .reverse a.tybutton[href]:active,
@@ -1682,7 +1686,7 @@ select.tyselect {
     .reverse input[type="submit"]:active,
     .reverse input[type="submit"][href]:active {
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 193, source/scss/required/_mixins.scss */
+    /* line 202, source/scss/required/_mixins.scss */
     .reverse .tybutton:focus, .reverse .tybutton[href]:focus,
     .reverse a.tybutton:focus,
     .reverse a.tybutton[href]:focus,
@@ -1716,7 +1720,7 @@ select.tyselect {
     border: 2px #99b3e6 solid;
     color: #99b3e6;
     padding: calc(0.375rem - 2px) calc(1.125rem - 2px); }
-    /* line 179, source/scss/required/_mixins.scss */
+    /* line 188, source/scss/required/_mixins.scss */
     .reverse .tybutton-outline:hover, .reverse .tybutton-outline:active, .reverse .tybutton-outline[href]:hover, .reverse .tybutton-outline[href]:active,
     .reverse a.tybutton-outline:hover,
     .reverse a.tybutton-outline:active,
@@ -1725,17 +1729,17 @@ select.tyselect {
       background-color: #c6ecc6;
       background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
       color: black; }
-    /* line 190, source/scss/required/_mixins.scss */
+    /* line 199, source/scss/required/_mixins.scss */
     .reverse .tybutton-outline:active, .reverse .tybutton-outline[href]:active,
     .reverse a.tybutton-outline:active,
     .reverse a.tybutton-outline[href]:active {
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 193, source/scss/required/_mixins.scss */
+    /* line 202, source/scss/required/_mixins.scss */
     .reverse .tybutton-outline:focus, .reverse .tybutton-outline[href]:focus,
     .reverse a.tybutton-outline:focus,
     .reverse a.tybutton-outline[href]:focus {
       outline: none; }
-    /* line 220, source/scss/required/_mixins.scss */
+    /* line 229, source/scss/required/_mixins.scss */
     .reverse .tybutton-outline:hover, .reverse .tybutton-outline:active, .reverse .tybutton-outline[href]:hover, .reverse .tybutton-outline[href]:active,
     .reverse a.tybutton-outline:hover,
     .reverse a.tybutton-outline:active,
