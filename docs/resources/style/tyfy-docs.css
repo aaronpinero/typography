@@ -221,16 +221,16 @@ body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
 .tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
   margin-top: 2.625rem; }
 
+/* line 132, source/scss/required/_mixins.scss */
+.tymargins-off * + * {
+  margin-top: 0; }
+
 /* line 93, source/scss/required/_mixins.scss */
 .tymargins-once > * + * {
   margin-top: 1.75rem; }
 
 /* line 124, source/scss/required/_mixins.scss */
 .tymargins-skip > * + * {
-  margin-top: 0; }
-
-/* line 132, source/scss/required/_mixins.scss */
-.tymargins-off * + * {
   margin-top: 0; }
 
 /* line 2, source/scss/optional/_paragraphs.scss */
