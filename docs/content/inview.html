@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<%include head.html%>
+		<title>Tyfy - Modules - In View</title>
+	</head>
+	<body class="">
+		<%include header.html%>
+    <header class="pagetitle reverse">
+			<h1>In View</h1>
+		</header>
+    <main class="block">
+      <section class="section-body links-underlined">
+        <h2 class="make-inview">Overview</h2>
+        <p class="make-inview"><em>This module consists solely of the JavaScript file located at dist/script/inview.js. There is no corresponding stylesheet.</em></p>
+        <p class="make-inview">The idea behind this module comes from the jQuery inview module, first created by <a href="https://github.com/zuk/jquery.inview">Remy Sharp</a> and then later rewritten by <a href="https://github.com/protonet/jquery.inview">Christopher Blum</a>. Those implementations calculate the viewport and element sizes and create a custom event handler to check for the appearance of an element in the browser's viewport.</p>
+        <p class="make-inview">This implementation uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a>. The code is adapted from the examples provided with the API documentation and on Google's <a href="https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video#inline_images">image lazy loading script</a>.</p>
+        <h2 class="make-inview">Details</h2>
+        <p class="make-inview">This module allows you to apply styles or actions to an element when the element first moves into the browser’s viewport. The styles or actions are triggered by a state class that is added to the element when it moves into view.</p>
+        <p class="make-inview">An element is considered in view when 25% of the element’s (rectangular) bounding box is in the viewport.</p>
+        <p class="make-inview">An element can only move into view once. No subsequent state changes will occur even if the element moves out of and then back into the viewport again.</p>
+        <h2 class="make-inview">Classes</h2>
+				<dl class="make-inview">
+					<dt>.make-inview</dt>
+					<dd>Apply this class to any element to indicate that the element should be observed by the Intersection Observer API.</dd>
+					<dt>.not-inview</dt>
+					<dd>This class is applied as the default state to any element that has the .make-inview class. You can use this class to apply default state styles. This class is removed when the element comes into view.</dd>
+					<dt>.inview</dt>
+					<dd>When an observed element comes into view, the .not-inview class is removed and this class is applied. You can use this class to apply end-state styles or as a trigger for further action.</dd>
+				</dl>
+        <h2 class="make-inview">Example</h2>
+        <p class="make-inview">A simple CSS transition occurs for each heading and paragraph in this page when the element comes into view. You can inspect the code to see the change of state class as you scroll down the page.</p>
+      </section>
+		</main>
+		<%include footer.html%>
+		<script src="../dist/script/inview.js"></script>
+	</body>
+</html>

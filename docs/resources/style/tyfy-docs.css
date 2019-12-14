@@ -2794,3 +2794,18 @@ table.utility th[scope="col"] {
 /* line 895, docs/resources/scss/tyfy-docs-all.scss */
 .tables-demo-table:not(.striped):not(.vertical-rules):not(.responsive) th.row-hidden + * {
   padding-left: 0; }
+
+/* line 901, docs/resources/scss/tyfy-docs-all.scss */
+.make-inview {
+  position: relative;
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out; }
+
+/* line 905, docs/resources/scss/tyfy-docs-all.scss */
+.make-inview.not-inview {
+  opacity: 0;
+  top: 1rem; }
+
+/* line 909, docs/resources/scss/tyfy-docs-all.scss */
+.make-inview.inview {
+  opacity: 1;
+  top: 0; }
