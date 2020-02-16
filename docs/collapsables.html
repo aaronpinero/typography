@@ -102,6 +102,7 @@
       <nav class="nav-inpage tymargins-off">
         <h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
         <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#a11y">Accessibility</a></li>
 					<li><a class="navlink-secondary" href="#structure"><span class="smallcaps">HTML</span> Structure</a></li>
           <li><a class="navlink-secondary" href="#variables">Variables</a></li>
           <li><a class="navlink-secondary" href="#example">Example</a></li>
@@ -111,6 +112,7 @@
 				<p>Collapsable headings are a simplified accordion pattern. <strong class="tyfy">Tyfy</strong> collapsable headings:</p>
 				<ul class="tymargins-off">
 						<li>are easy to implement</li>
+						<li>are accessible using keyboard input</li>
 						<li>are responsive</li>
 						<li>can be nested</li>
 						<li>allow for anchored links inside collapsed content</li>
@@ -118,6 +120,8 @@
 				</ul>
 				<p>Content authors can use this pattern by adding a single <span class="smallcaps">CSS</span> class a heading (H2 through H6). JavaScript encapsulates all the content belonging to that heading in a block element, collapses the content, and binds a click event to the heading to toggle the display of the content. Collapsable headings are easy to implement and apply in simple text editors like CKEditor.</p>
 				<p>The display of collapsable headings is responsive. At large screen widths, collapsable headings and content are fully bordered. At small screen widths, the design changes to remove the full border and maximize horizontal space.</p>
+				<h2 id="a11y">Accessibility</h2>
+				<p>The accessibility of the collapsables pattern was implemented based on the examples provided by Heydon Pickering in his "<a href="https://inclusive-components.design/collapsible-sections/">Inclusive Components</a>". In the absense of Javascript, the collapsable content is presented as normal content. With JavaScript enabled, the DOM is modified to add the necessary elements and attributes to enable keyboard accessibility.</p>
 				<h2 id="structure"><span class="smallcaps">HTML</span> Structure</h2>
 				<p>Create a collapsable heading by adding the <code>collapsable</code> class to a heading (H2 through H6).</p>
 				<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;h2 class="collapsable"&gt;Collapsable Heading&lt;/h2&gt;
@@ -126,15 +130,18 @@
 &lt;h2&gt;Regular Heading 2&lt;/h2&gt;
 &lt;p&gt;[content under the heading]&lt;/p&gt;
 &lt;ul&gt;[content under the heading]&lt;/ul&gt;</code></pre>
-				<p>JavaScript identifies the content belonging to the heading. The content belonging to a heading is defined as <em>all the sibling elements following the heading element up to the next heading of the same or higher level</em>. JavaScript wraps the content belonging to the heading in a <code>&lt;div&gt;</code> with the class <code>tyfy-collapsables</code>. To indicate that JavaScript has acted on the collapsable heading, the class <code>tyfy-collapsable-processed</code> is added to the heading. So, after JavaScript has run, the code will appear as follows:</p>
-				<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;h2 class="collapsable tyfy-collapsable-processed"&gt;Collapsable Heading&lt;/h2&gt;
-&lt;div class="tyfy-collapsables"&gt;
+				<p>JavaScript identifies the content belonging to the heading. The content belonging to a heading is defined as <em>all the sibling elements following the heading element up to the next heading of the same or higher level</em>. JavaScript wraps the content belonging to the heading in a <code>&lt;div&gt;</code> with the class <code>tyfy-collapsables</code>. For keyboard accessibility, a <code>&lt;button&gt;</code> is added to the collapsable heading with an <span class="smallcaps">ARIA</span> attribute to indicate state. To indicate that JavaScript has acted on the collapsable heading, the class <code>tyfy-collapsable-processed</code> is added to the heading. So, after JavaScript has run, the code will appear as follows:</p>
+				<pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;h2 class="collapsable closed tyfy-collapsable-processed"&gt;
+  &lt;button aria-expanded="false"&gt;Collapsable Heading&lt;/button&gt;
+&lt;/h2&gt;
+&lt;div class="tyfy-collapsables closed hiding"&gt;
   &lt;p&gt;[content under the heading]&lt;/p&gt;
   &lt;ul&gt;[content under the heading]&lt;/ul&gt;
 &lt;/div&gt;
 &lt;h2&gt;Regular Heading 2&lt;/h2&gt;
 &lt;p&gt;[content under the heading]&lt;/p&gt;
 &lt;ul&gt;[content under the heading]&lt;/ul&gt;</code></pre>
+				<p>As you can see from the example, the default state of a collapsable area is <code>closed</code>.</p>
 				<h2 id="variables">Variables</h2>
 				<dl>
 					<dt>$tybreak-collapsables</dt>

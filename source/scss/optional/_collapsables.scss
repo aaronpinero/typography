@@ -6,9 +6,15 @@ h5.tyfy-collapsable-processed,
 h6.tyfy-collapsable-processed {
   background-color:transparent;
   clear:both;
-  cursor:pointer;
-  padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tywidth-border}) 0;
   position:relative;
+  button {
+    all:unset;
+    box-sizing:border-box;
+    cursor:pointer;
+    display:block;
+    padding:0 tygrid(4) calc(#{tygrid(1)} - #{$tywidth-border}) 0;
+    width:100%;
+  }
   &::before {
     border-radius:50%;
     color:var(--tycolor-text-light);
@@ -32,19 +38,22 @@ h6.tyfy-collapsable-processed {
     }
   }
   @media (min-width:$tybreak-collapsables) {
-    border:$tywidth-border var(--tycolor-border) solid;
-    border-bottom:none;
-    padding:calc(#{tygrid(2)} - #{$tywidth-border}) calc(#{tygrid(6)} - #{$tywidth-border}) calc(#{tygrid(1)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
-    position:relative;
-    transition-duration:tyduration(move);
-    transition-property:padding-top;
-    transition-timing-function:ease-in-out;
+    button {
+      border:$tywidth-border var(--tycolor-border) solid;
+      border-bottom:none;
+      padding:calc(#{tygrid(2)} - #{$tywidth-border}) calc(#{tygrid(6)} - #{$tywidth-border}) calc(#{tygrid(1)} - #{$tywidth-border}) calc(#{tygrid(2)} - #{$tywidth-border});
+      transition-duration:tyduration(move);
+      transition-property:padding-top;
+      transition-timing-function:ease-in-out;
+    }
     &::before {
       right:tygrid(2);
       top:tygrid(2);
     }
     &.closed {
-      padding-top:calc(#{tygrid(1)} - #{$tywidth-border});
+      button {
+        padding-top:calc(#{tygrid(1)} - #{$tywidth-border});
+      }
       &::before {
         top:tygrid(1);
       }
@@ -80,7 +89,9 @@ h3.tyfy-collapsable-processed,
 h4.tyfy-collapsable-processed,
 h5.tyfy-collapsable-processed,
 h6.tyfy-collapsable-processed {
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-within {
     &::before {
       background-color:var(--tycolor-link-active);
       color:var(--tycolor-bg);
@@ -106,5 +117,8 @@ h6.tyfy-collapsable-processed {
     height:0 !important;
     padding-bottom:0;
     padding-top:0;
+  }
+  &.hiding > * {
+    display:none;
   }
 }

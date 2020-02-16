@@ -26,6 +26,16 @@ if (all_collapsables.length) {
     
     let a = ty_collapsables.length - 1;
     for (a; a >= 0; a--) {
+      // turn the heading into a button
+      // first create the button
+      let ty_collapsable_button = document.createElement("button");
+      // set initial state to false
+      ty_collapsable_button.setAttribute('aria-expanded','false');
+      // move the contents of the header into this button
+      ty_collapsable_button.innerHTML = ty_collapsables[a].innerHTML;
+      ty_collapsables[a].innerHTML = "";
+      ty_collapsables[a].appendChild(ty_collapsable_button);
+
       // wrap my children in a div that has the class 'ty-collapsables'
       // children are defined as all following sibling tags up to
       // the next heading tag of equal or higher ordinal
@@ -35,7 +45,7 @@ if (all_collapsables.length) {
       
       // apply class to the wrapper
       // apply state class to the wrapper (default closed)
-      ty_collapsables_wrapper.className = "tyfy-collapsables closed";
+      ty_collapsables_wrapper.className = "tyfy-collapsables closed hiding";
       
       // what's my tag?
       let my_tag = ty_collapsables[a].tagName;
@@ -71,11 +81,14 @@ if (all_collapsables.length) {
       ty_collapsables[a].addEventListener("click",function(){
         // find the collapsed content
         var collapsables = this.nextElementSibling;
+        var btn = this.querySelector("button");
         
         // if we are opening
         if (this.classList.contains('closed')) {
           // remove the closed state on the heading
           this.classList.remove('closed');
+          btn.setAttribute("aria-expanded","true");
+          collapsables.classList.remove('hiding');
 
           // get the scroll height of the collapsed content; the value will be
           // equivalent to clientHeight minus top and bottom padding
@@ -96,6 +109,7 @@ if (all_collapsables.length) {
           // add the transition and closed states on the heading
           // delay the closed to match the collapsing content
           setTimeout("that.classList.add('closed');",25);
+          setTimeout("that.querySelector('button').setAttribute('aria-expanded','false');",25);
           
           // get the height value of collapsed content; the value will be
           // equivalent to clientHeight minus top and bottom padding
@@ -118,6 +132,9 @@ if (all_collapsables.length) {
         // when a transition ends, remove the style attribute
         // and the transition state class
         this.setAttribute("style","");
+        if (this.classList.contains('closed')) {
+          this.classList.add('hiding');
+        }
       });
             
       // indicate that the heading has been processed by javascript
@@ -161,7 +178,9 @@ function TYFY_DetectAnchorLink() {
         let a = 0;
         for(a; a<parents.length; a++) {
           parents[a].classList.remove('closed');
+          parents[a].classList.remove('hiding');
           parents[a].previousElementSibling.classList.remove('closed');
+          parents[a].previousElementSibling.querySelector("button").setAttribute('aria-expanded','true');
         }
         
         // move the page to the anchor item
