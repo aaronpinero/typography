@@ -80,7 +80,9 @@ h3.tyfy-collapsable-processed,
 h4.tyfy-collapsable-processed,
 h5.tyfy-collapsable-processed,
 h6.tyfy-collapsable-processed {
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-within {
     &::before {
       background-color:var(--tycolor-link-active);
       color:var(--tycolor-bg);
@@ -106,5 +108,8 @@ h6.tyfy-collapsable-processed {
     height:0 !important;
     padding-bottom:0;
     padding-top:0;
+  }
+  &.hiding > * {
+    display:none;
   }
 }

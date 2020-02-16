@@ -26,6 +26,16 @@ if (all_collapsables.length) {
     
     let a = ty_collapsables.length - 1;
     for (a; a >= 0; a--) {
+      // turn the heading into a button
+      // first create the button
+      let ty_collapsable_button = document.createElement("button");
+      // set initial state to false
+      ty_collapsable_button.setAttribute('aria-expanded','false');
+      // move the contents of the header into this button
+      ty_collapsable_button.innerHTML = ty_collapsables[a].innerHTML;
+      ty_collapsables[a].innerHTML = "";
+      ty_collapsables[a].appendChild(ty_collapsable_button);
+
       // wrap my children in a div that has the class 'ty-collapsables'
       // children are defined as all following sibling tags up to
       // the next heading tag of equal or higher ordinal
@@ -35,7 +45,7 @@ if (all_collapsables.length) {
       
       // apply class to the wrapper
       // apply state class to the wrapper (default closed)
-      ty_collapsables_wrapper.className = "tyfy-collapsables closed";
+      ty_collapsables_wrapper.className = "tyfy-collapsables closed hiding";
       
       // what's my tag?
       let my_tag = ty_collapsables[a].tagName;
@@ -76,6 +86,7 @@ if (all_collapsables.length) {
         if (this.classList.contains('closed')) {
           // remove the closed state on the heading
           this.classList.remove('closed');
+          collapsables.classList.remove('hiding');
 
           // get the scroll height of the collapsed content; the value will be
           // equivalent to clientHeight minus top and bottom padding
@@ -118,6 +129,9 @@ if (all_collapsables.length) {
         // when a transition ends, remove the style attribute
         // and the transition state class
         this.setAttribute("style","");
+        if (this.classList.contains('closed')) {
+          this.classList.add('hiding');
+        }
       });
             
       // indicate that the heading has been processed by javascript
