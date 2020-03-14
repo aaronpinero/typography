@@ -55,4 +55,9 @@ $tycolor-rev-shade:               rgba($tycolor-rev-fg,0.05) !default;
       background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{$tycolor-rev-text-light}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{$tycolor-rev-text-light}'/%3E%3C/svg%3E");
     }
   }
+  
+  // media
+  .tymedia .tymedia-caption {
+    color:$tycolor-rev-text-light;
+  }
 }

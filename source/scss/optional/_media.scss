@@ -15,7 +15,14 @@
       width:100%;
     }
   }
+  img {
+    border:none;
+    display:block;
+    height:auto;
+    width:100%;
+  }
   .tymedia-caption {
+    color:$tycolor-text-light;
     font-size:tyscale(-1);
     line-height:tylead(tyscale(-1));
   }
