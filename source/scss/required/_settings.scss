@@ -61,9 +61,9 @@ $tybreak-table:                40em !default;
 $tyduration: (
   hover:      250ms,
   move:       500ms,
-  1x:         1000ms,
-  2x:         2000ms,
-  3x:         3000ms
+  sm:         1000ms,
+  md:         2000ms,
+  lg:         3000ms
 ) !default;
 
 // colors

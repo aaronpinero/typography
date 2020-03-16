@@ -22,15 +22,15 @@ $tyfont-heading:$tyfont-sans;
 $tyfont-table:$tyfont-sans;
 $tyfont-input:$tyfont-sans;
 $tyfont-size: (
-  "sm":-1,
-  "h6":-1,
-  "h5":0,
-  "h4":1,
-  "h3":2,
-  "h2":3,
-  "h1":5,
-  "quote":2,
-  "lede":2
+  sm:-1,
+  h6:-1,
+  h5:0,
+  h4:1,
+  h3:2,
+  h2:3,
+  h1:5,
+  quote:2,
+  lede:2
 );
 
 $tywidth-border:2px;
@@ -47,11 +47,11 @@ $tybreak-tabs:40em;
 $tybreak-table:40em;
 
 $tyduration: (
-  "hover":333ms,
-  "move":667ms,
-  "1x":1000ms,
-  "2x":2000ms,
-  "3x":3000ms
+  hover:      333ms,
+  move:       667ms,
+  sm:         1000ms,
+  md:         2000ms,
+  lg:         3000ms
 );
 
 $tycolor-bg:white;
