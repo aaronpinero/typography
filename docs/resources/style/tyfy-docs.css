@@ -1539,6 +1539,67 @@ select.tyselect {
     background-position: calc(100% - 0.4375rem) center;
     background-size: 1.09375rem auto; }
 
+/* line 1, source/scss/optional/_media.scss */
+img[data-lazyimage] {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  transition: all 1000ms ease-in-out; }
+  /* line 6, source/scss/optional/_media.scss */
+  img[data-lazyimage].not-lazyLoaded {
+    opacity: 0; }
+
+/* line 10, source/scss/optional/_media.scss */
+.tymedia {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0; }
+  /* line 14, source/scss/optional/_media.scss */
+  .tymedia .tymedia-iframe {
+    height: 0;
+    padding-top: 55.56%;
+    position: relative;
+    width: 100%; }
+    /* line 19, source/scss/optional/_media.scss */
+    .tymedia .tymedia-iframe iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%; }
+  /* line 27, source/scss/optional/_media.scss */
+  .tymedia img {
+    border: none;
+    display: block;
+    height: auto;
+    width: 100%; }
+  /* line 33, source/scss/optional/_media.scss */
+  .tymedia .tymedia-caption {
+    color: #707070;
+    font-size: 0.83333rem;
+    line-height: 1.75rem; }
+  /* line 38, source/scss/optional/_media.scss */
+  .tymedia * + .tymedia-caption {
+    margin-top: 0.875rem; }
+  @media (min-width: 40em) {
+    /* line 41, source/scss/optional/_media.scss */
+    .tymedia.float-left, .tymedia.float-right {
+      box-sizing: border-box;
+      margin-bottom: 1.75rem;
+      width: calc(50% - 1.75rem); } }
+  @media (min-width: 40em) {
+    /* line 49, source/scss/optional/_media.scss */
+    .tymedia.float-left {
+      clear: left;
+      float: left;
+      margin-right: 3.5rem; } }
+  @media (min-width: 40em) {
+    /* line 56, source/scss/optional/_media.scss */
+    .tymedia.float-right {
+      clear: right;
+      float: right;
+      margin-left: 3.5rem; } }
+
 @font-face {
   font-family: tyicons;
   src: url("../fonts/tyicons/tyicons.eot");
@@ -1773,6 +1834,9 @@ select.tyselect {
   .reverse .tyselect select:not([multiple]),
   .reverse select.tyselect:not([multiple]) {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#919191'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#919191'/%3E%3C/svg%3E"); }
+  /* line 60, source/scss/extras/_reverse.scss */
+  .reverse .tymedia .tymedia-caption {
+    color: #919191; }
 
 /* line 2, source/scss/extras/_effects.scss */
 .fade-hover {
@@ -1783,15 +1847,15 @@ select.tyselect {
   animation: fadein 500ms; }
 
 /* line 2, source/scss/extras/_effects.scss */
-.fade-1x {
+.fade-sm {
   animation: fadein 1000ms; }
 
 /* line 2, source/scss/extras/_effects.scss */
-.fade-2x {
+.fade-md {
   animation: fadein 2000ms; }
 
 /* line 2, source/scss/extras/_effects.scss */
-.fade-3x {
+.fade-lg {
   animation: fadein 3000ms; }
 
 @media (max-width: 39.96875em) {

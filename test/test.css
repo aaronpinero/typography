@@ -1555,13 +1555,13 @@ img[data-lazyimage] {
   margin-right: 0;
   padding: 0; }
   /* line 14, source/scss/optional/_media.scss */
-  .tymedia .tyiframe-responsive {
+  .tymedia .tymedia-iframe {
     height: 0;
     padding-top: 55.56%;
     position: relative;
     width: 100%; }
     /* line 19, source/scss/optional/_media.scss */
-    .tymedia .tyiframe-responsive iframe {
+    .tymedia .tymedia-iframe iframe {
       height: 100%;
       left: 0;
       position: absolute;

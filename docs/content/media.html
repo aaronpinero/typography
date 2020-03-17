@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%include head.html%>
+    <title>Tyfy - Modules - Media</title>
+  </head>
+  <body class="">
+    <%include header.html%>
+    <header class="pagetitle reverse">
+      <h1>Media</h1>
+		</header>
+    <main class="block">
+      <nav class="nav-inpage tymargins-off">
+        <h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
+        <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#variables">Image Lazy Loading</a></li>
+          <li><a class="navlink-secondary" href="#variables">Variables</a></li>
+          <li><a class="navlink-secondary" href="#classes">Classes</a></li>
+          <li><a class="navlink-secondary" href="#examples">Examples</a></li>
+        </ul>
+      </nav>
+      <section class="section-body links-underlined">
+        <p><strong class="tyfy">Tyfy</strong> provides basic styles for images and media embedded using the <code>&lt;iframe&gt;</code> tag &mdash; such as YouTube videos. The styles address a few common layout situations. Percentage widths are used to make media responsive.</p>
+        
+        <h2 id="lazy">Image Lazy Loading</h2>
+        <p><strong class="tyfy">Tyfy</strong> includes JavaScript (dist/script/lazyimage.js) for the lazy loading of images. Lazy loading of images is triggered by the use of the <code>data-lazyimage</code> attribute on the <code>&lt;img&gt;</code> tag.</code>. The <code>data-lazyimage</code> attribute defines the URI of the image to be loaded, and the <code>src</code> attribute is used for a placeholder. The loading of the image is triggered when the <code>&lt;img&gt;</code> appears in the viewport as determined by the Intersection Observer API.</p>
+
+        <h2 id="variables">Variables</h2>
+        <dl>
+					<dt>$tybreak-floats</dt>
+					<dd><code class="val val-default">40em !default;</code></dd>
+					<dd>Screen width above which float styles are enabled.</dd>
+          <dt>$tycolor-text-light</dt>
+          <dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,45%) !default;</code></dd>
+          <dd>A light text color variant, used for captions.</dd>
+        </dl>
+
+        <h2 id="classes">Classes</h2>
+        <dl>
+          <dt>.tymedia</dt>
+          <dd>Apply to the element containing a styled <code>&lt;img&gt;</code> or <code>&lt;iframe&gt;</code>.</dd>
+          <dt>.tymedia-caption</dt>
+          <dd>Apply to text serving as a caption inside the element with the <code>tymedia</code> class.</dd>
+          <dt>.tymedia-iframe</dt>
+          <dd>Apply to the element containing an <code>&lt;iframe&gt;</code> element; this must be nested inside the element with the <code>tymedia</code> class.</dd>
+					<dt>.float-left, .float-right</dt>
+					<dd>Applied to the element with the <code>tymedia</code> class to float the element left or right. At screen widths below the value of <code>$tyfy-break-floats</code>, the float styles are disabled.</dd>
+        </dl>
+
+        <h2 id="examples">Examples</h2>
+        <h3>Image, Full Width</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
+  &lt;div&gt;
+    &lt;label&gt;Text Input&lt;/label&gt;
+    &lt;input type="text" name="name"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label&gt;Number Input&lt;/label&gt;
+    &lt;input type="number" name="age"&gt;
+  &lt;/div&gt;
+  &lt;p&gt;&lt;input type="submit" name="submit" value="Submit Button"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>    
+        <figure class="output">
+          <form>
+            <div>
+              <label>Text Input</label>
+              <input type="text" name="name">
+            </div>
+            <div>
+              <label>Number Input</label>
+              <input type="number" name="age">
+            </div>
+            <p><input type="submit" name="submit" value="Submit Button"></p>
+          </form>
+        </figure>
+        <h3>Image, Float Left</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
+  &lt;div&gt;
+    &lt;label&gt;Select&lt;/label&gt;
+    &lt;div class="tyselect"&gt;
+      &lt;select name="color"&gt;
+        &lt;option value="red"&gt;Red&lt;/option&gt;
+        &lt;option value="orange"&gt;Orange&lt;/option&gt;
+        &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
+        &lt;option value="green"&gt;Green&lt;/option&gt;
+        &lt;option value="blue"&gt;Blue&lt;/option&gt;
+        &lt;option value="purple"&gt;Purple&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label&gt;Multiple Select&lt;/label&gt;
+    &lt;div class="tyselect"&gt;
+      &lt;select name="color" multiple="multiple"&gt;
+        &lt;option value="red"&gt;Red&lt;/option&gt;
+        &lt;option value="orange"&gt;Orange&lt;/option&gt;
+        &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
+        &lt;option value="green"&gt;Green&lt;/option&gt;
+        &lt;option value="blue"&gt;Blue&lt;/option&gt;
+        &lt;option value="purple"&gt;Purple&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;&lt;input type="submit" name="submit" value="Submit Button"&gt;&lt;/p&gt;
+&lt;/form&gt;</code></pre>    
+        <figure class="output">
+          <form>
+            <div>
+              <label>Select</label>
+              <div class="tyselect">
+                <select name="color">
+                  <option value="red">Red</option>
+                  <option value="orange">Orange</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="green">Green</option>
+                  <option value="blue">Blue</option>
+                  <option value="purple">Purple</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label>Multiple Select</label>
+              <div class="tyselect">
+                <select name="color" multiple="multiple">
+                  <option value="red">Red</option>
+                  <option value="orange">Orange</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="green">Green</option>
+                  <option value="blue">Blue</option>
+                  <option value="purple">Purple</option>
+                </select>
+              </div>
+            </div>
+            <p><input type="submit" name="submit" value="Submit Button"></p>
+          </form>
+        </figure>
+
+      </section>
+    </main>
+    <%include footer.html%>
+  </body>
+</html>
