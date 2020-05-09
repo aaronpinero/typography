@@ -85,6 +85,20 @@ $tylead-adjustment-short:1.2 !default; // $leading-style:short
   @return unquote("\"") + unquote(str_insert($code,"\\",1)) + unquote("\"");
 }
 
+////////// encodecolor function //////////
+//
+// be able to use a color in urlencoded svg for background image
+// from certainlyakey, see https://gist.github.com/certainlyakey/e9c0d8f5c87ff47e3d5b
+
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+    $hex: str-slice(ie-hex-str($string), 4);
+    $string:unquote("#{$hex}");
+  }
+  $string: '%23' + $string;
+	@return $string;
+}
+
 ////////// functions for sass maps //////////
 //
 // shorthand for getting values from the spacing, duration, and font size sass maps

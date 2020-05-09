@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="test.css">
+		<title>Tyfy Test - Media</title>
+	</head>
+	<body>
+	  <header class="tymargins-off">
+	    <div class="tyfont-sans"><strong><a href="test.html">Tests</a></strong></div>
+      <h1>Media Module</h1>
+    </header>
+
+    <h2>Responsive Image</h2>
+    <h3>Full Width</h3>
+    <figure class="tymedia">
+      <img alt="Photo of a colorfully-painted building" src="unsplash.jpg">
+      <figcaption class="tymedia-caption">Photo by Muhd Asyraaf on Unsplash</figcaption>
+    </figure>
+    <h3>Float Left</h3>
+    <figure class="tymedia float-left">
+      <img alt="Photo of a colorfully-painted building" src="unsplash.jpg">
+      <figcaption class="tymedia-caption">Photo by Muhd Asyraaf on Unsplash</figcaption>
+    </figure>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.</p>
+    <p>Phasellus vestibulum lorem sed risus ultricies tristique. Est sit amet facilisis magna. Vestibulum lectus mauris ultrices eros in. Ultricies mi quis hendrerit dolor magna eget. Commodo viverra maecenas accumsan lacus vel facilisis. Nunc sed augue lacus viverra vitae congue. Orci dapibus ultrices in iaculis nunc sed augue lacus viverra.</p>
+    <h3>Float Right</h3>
+    <figure class="tymedia float-right">
+      <img alt="Photo of a colorfully-painted building" src="unsplash.jpg">
+      <figcaption class="tymedia-caption">Photo by Muhd Asyraaf on Unsplash</figcaption>
+    </figure>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.</p>
+    <p>Phasellus vestibulum lorem sed risus ultricies tristique. Est sit amet facilisis magna. Vestibulum lectus mauris ultrices eros in. Ultricies mi quis hendrerit dolor magna eget. Commodo viverra maecenas accumsan lacus vel facilisis. Nunc sed augue lacus viverra vitae congue. Orci dapibus ultrices in iaculis nunc sed augue lacus viverra.</p>
+
+    <h2>Lazy-Loaded Image</h2>
+    <figure class="tymedia">
+      <img alt="Photo of a colorfully-painted building" data-lazyimage="unsplash.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E">
+      <figcaption class="tymedia-caption">Photo by Muhd Asyraaf on Unsplash</figcaption>
+    </figure>
+
+    <h2>Responsive iFrame</h2>
+    <h3>Full Width</h3>
+    <figure class="tymedia">
+      <div class="tymedia-iframe">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BIhNsAtPbPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <figcaption class="tymedia-caption">Trailer for the 25th James Bold film, <i>No Time to Die</i></figcaption>
+    </figure>
+    <h3>Float Left</h3>
+    <figure class="tymedia float-left">
+      <div class="tymedia-iframe">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BIhNsAtPbPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <figcaption class="tymedia-caption">Trailer for the 25th James Bold film, <i>No Time to Die</i></figcaption>
+    </figure>
+    <p>In No Time To Die, Bond has left active service and is enjoying a tranquil life in Jamaica. His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help. The mission to rescue a kidnapped scientist turns out to be far more treacherous than expected, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.</p>
+    <p>In cinemas November 2020.</p>
+    <h3>Float Right</h3>
+    <figure class="tymedia float-right">
+      <div class="tymedia-iframe">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BIhNsAtPbPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <figcaption class="tymedia-caption">Trailer for the 25th James Bold film, <i>No Time to Die</i></figcaption>
+    </figure>
+    <p>In No Time To Die, Bond has left active service and is enjoying a tranquil life in Jamaica. His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help. The mission to rescue a kidnapped scientist turns out to be far more treacherous than expected, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.</p>
+    <p>In cinemas November 2020.</p>
+
+		<script src="../dist/script/lazyimage.js"></script>
+    <script src="test.js"></script>    
+	</body>
+</html>    

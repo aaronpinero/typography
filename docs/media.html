@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- COMMON HEAD TAGS -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-32897472-1');
+		</script>
+		<meta charset="utf8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A typographic framework for the web created by Aaron Pinero">
+		<link rel="stylesheet" href="resources/style/tyfy-docs.css">
+		<link rel="stylesheet" href="resources/vendor/prism/prism.css">
+		<!--/ COMMON HEAD TAGS -->
+    <title>Tyfy - Modules - Media</title>
+  </head>
+  <body class="">
+        <!-- COMMON HEADER -->
+    <nav class="nav-main" id="top">
+      <a href="index.html" class="tyfy logo">Tyfy: A Web Framework</a>
+      <h1 class="nav-heading">Main Menu</h1>
+      <ul class="menu">
+        <li><a href="startup.html">Get Started</a></li>
+        <li><a href="customize.html">Customize</a></li>
+        <li>
+          <a href="benefits.html">Benefits</a>
+          <ul class="reverse">
+            <li><a href="scale.html">Modular Scale</a></li>
+            <li><a href="grid.html">Baseline Grid</a></li>
+            <li><a href="margins.html">Sensible Margins</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="modules.html">Modules</a>
+          <ul class="reverse megamenu">
+            <li>
+              <a href="required.html"><strong>Required</strong></a>
+              <ul>
+                <li><a href="core.html">Core</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="mixins.html">Mixins</a></li>
+                <li><a href="settings.html">Settings</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="essential.html"><strong>Essential</strong></a>
+              <ul>
+                <li><a href="normalize.html">Normalize</a></li>
+                <li><a href="body.html">Body</a></li>
+                <li><a href="spacing.html">Spacing</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="optional.html"><strong>Optional</strong></a>
+              <ul>
+                <li><a href="paragraphs.html">Paragraphs</a></li>
+                <li><a href="headings.html">Headings</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="lists.html">Lists</a></li>
+                <li><a href="utility.html">Text Styles</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="collapsables.html">Collapsables</a></li>
+                <li><a href="tabs.html">Tabs</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="extras.html"><strong>Extras</strong></a>
+              <ul>
+                <li><a href="effects.html">Effects</a></li>
+                <li><a href="icons.html">Icons</a></li>
+                <li><a href="inview.html">In View</a></li>
+                <li><a href="responsive_text.html">Responsive Text</a></li>
+                <li><a href="reverse.html">Reverse Colors</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+          <ul class="reverse">
+            <li><a href="about.html">Read Me</a></li>
+            <li><a href="compatibility.html">Browser Compatibility</a></li>
+            <li><a href="tools.html">Build Tools</a></li>
+            <li><a href="changelog.html">Change Log</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+		<!--/ COMMON HEADER -->
+    <header class="pagetitle reverse">
+      <h1>Media</h1>
+		</header>
+    <main class="block">
+      <nav class="nav-inpage tymargins-off">
+        <h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
+        <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#variables">Image Lazy Loading</a></li>
+          <li><a class="navlink-secondary" href="#variables">Variables</a></li>
+          <li><a class="navlink-secondary" href="#classes">Classes</a></li>
+          <li><a class="navlink-secondary" href="#examples">Examples</a></li>
+        </ul>
+      </nav>
+      <section class="section-body links-underlined">
+        <p><strong class="tyfy">Tyfy</strong> provides basic styles for images and media embedded using the <code>&lt;iframe&gt;</code> tag &mdash; such as YouTube videos. The styles address a few common layout situations. Percentage widths are used to make media responsive.</p>
+        
+        <h2 id="lazy">Image Lazy Loading</h2>
+        <p><strong class="tyfy">Tyfy</strong> includes JavaScript (dist/script/lazyimage.js) for the lazy loading of images. Lazy loading of images is triggered by the use of the <code>data-lazyimage</code> attribute on the <code>&lt;img&gt;</code> tag. The <code>data-lazyimage</code> attribute defines the URI of the image to be loaded, and the <code>src</code> attribute is used for a placeholder. The loading of the image is triggered when the <code>&lt;img&gt;</code> appears in the viewport as determined by the Intersection Observer API.</p>
+
+        <h2 id="variables">Variables</h2>
+        <dl>
+					<dt>$tybreak-floats</dt>
+					<dd><code class="val val-default">40em !default;</code></dd>
+					<dd>Screen width above which float styles are enabled.</dd>
+          <dt>$tycolor-text-light</dt>
+          <dd><code class="val val-default">mix($tycolor-fg,$tycolor-bg,45%) !default;</code></dd>
+          <dd>A light text color variant, used for captions.</dd>
+        </dl>
+
+        <h2 id="classes">Classes</h2>
+        <dl>
+          <dt>.tymedia</dt>
+          <dd>Apply to the element containing a styled <code>&lt;img&gt;</code> or <code>&lt;iframe&gt;</code>.</dd>
+          <dt>.tymedia-caption</dt>
+          <dd>Apply to text serving as a caption inside the element with the <code>tymedia</code> class.</dd>
+          <dt>.tymedia-iframe</dt>
+          <dd>Apply to the element containing an <code>&lt;iframe&gt;</code> element; this must be nested inside the element with the <code>tymedia</code> class.</dd>
+					<dt>.float-left, .float-right</dt>
+					<dd>Applied to the element with the <code>tymedia</code> class to float the element left or right. At screen widths below the value of <code>$tyfy-break-floats</code>, the float styles are disabled.</dd>
+        </dl>
+
+        <h2 id="examples">Examples</h2>
+
+        <h3>Image, Full Width</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;figure class="tymedia"&gt;
+  &lt;img alt="Photo of a colorfully-painted building" src="resources/img/unsplash.jpg"&gt;
+  &lt;figcaption class="tymedia-caption"&gt;Photo by Muhd Asyraaf on Unsplash&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>    
+        <figure class="output">
+          <figure class="tymedia">
+            <img alt="Photo of a colorfully-painted building" src="resources/img/unsplash.jpg">
+            <figcaption class="tymedia-caption">Photo by Muhd Asyraaf on Unsplash</figcaption>
+          </figure>
+        </figure>
+
+        <h3>Image, Float Left</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;figure class="tymedia float-left"&gt;
+  &lt;img alt="Photo of a colorfully-painted building" src="resources/img/unsplash.jpg"&gt;
+  &lt;figcaption class="tymedia-caption"&gt;Photo by Muhd Asyraaf on Unsplash&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.&lt;/p&gt;</code></pre>    
+        <figure class="output">
+          <figure class="tymedia float-left">
+            <img alt="Photo of a colorfully-painted building" src="resources/img/unsplash.jpg">
+            <figcaption class="tymedia-caption">Photo by Muhd Asyraaf on Unsplash</figcaption>
+          </figure>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.</p>
+        </figure>
+
+        <h3>Lazy-Loaded Image, Float Right</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;figure class="tymedia float-right"&gt;
+  &lt;img alt="Photo of a colorfully-painted building" data-lazyimage="resources/img/unsplash.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E"&gt;
+  &lt;figcaption class="tymedia-caption"&gt;Photo by Muhd Asyraaf on Unsplash&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.&lt;/p&gt;</code></pre>    
+        <figure class="output">
+          <figure class="tymedia float-right">
+            <img alt="Photo of a colorfully-painted building" data-lazyimage="resources/img/unsplash.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E">
+            <figcaption class="tymedia-caption">Photo by Muhd Asyraaf on Unsplash</figcaption>
+          </figure>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.</p>
+        </figure>
+
+        <h3>Embedded Video, Full Width</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;figure class="tymedia"&gt;
+  &lt;div class="tymedia-iframe"&gt;
+    &lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BIhNsAtPbPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+  &lt;figcaption class="tymedia-caption"&gt;Trailer for the 25th James Bold film, &lt;i&gt;No Time to Die&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>    
+        <figure class="output">
+          <figure class="tymedia">
+            <div class="tymedia-iframe">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BIhNsAtPbPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption class="tymedia-caption">Trailer for the 25th James Bold film, <i>No Time to Die</i></figcaption>
+          </figure>
+        </figure>
+
+        <h3>Embedded Video, Float Left</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;figure class="tymedia float-left"&gt;
+  &lt;div class="tymedia-iframe"&gt;
+    &lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BIhNsAtPbPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+  &lt;figcaption class="tymedia-caption"&gt;Trailer for the 25th James Bold film, &lt;i&gt;No Time to Die&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.&lt;/p&gt;</code></pre>    
+        <figure class="output">
+          <figure class="tymedia float-left">
+            <div class="tymedia-iframe">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BIhNsAtPbPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption class="tymedia-caption">Trailer for the 25th James Bold film, <i>No Time to Die</i></figcaption>
+          </figure>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.</p>
+        </figure>
+
+
+      </section>
+    </main>
+    <!-- COMMON FOOTER -->
+		<footer class="footer">
+			<div>© Copyright 2017-2020 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>
+      <div><a class="navlink-secondary navlink-github" href="https://github.com/aaronpinero/typography">Fork on Github</a></div>
+      <div><a class="navlink-secondary navlink-npm" href="https://www.npmjs.com/package/tyfy">npm install tyfy</a></div>
+		</footer>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['IBM+Plex+Mono:400,400i,700,700i','IBM+Plex+Sans+Condensed:700','IBM+Plex+Sans:100,100i,400,400i,700,700i','IBM+Plex+Serif:400,400i,700,700i']
+        }
+      });
+    </script>
+    <script src="resources/scss/components/nav-main/nav-main.js"></script>
+    <script src="resources/script/docs-nav.js"></script>
+    <script src="resources/vendor/prism/prism.js"></script>
+		<!--/ COMMON FOOTER -->
+		<script src="../dist/script/lazyimage.js"></script>
+  </body>
+</html>
