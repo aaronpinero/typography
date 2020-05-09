@@ -44,6 +44,9 @@ img[data-lazyimage] {
       box-sizing:border-box;
       margin-bottom:tyspacing(md);
       width:calc(50% - #{tygrid(2)});
+      &:first-child + * {
+        margin-top:0;
+      }
     }
   }
   &.float-left {

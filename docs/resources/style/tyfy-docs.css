@@ -811,7 +811,7 @@ blockquote {
       margin-top: 0.875rem; }
     /* line 34, source/scss/optional/_quotes.scss */
     blockquote.pullquote.pullquote-roof-fixed::before, blockquote.pullquote.pullquote-roof-full::before {
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#e2e2e2%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22%23E2E2E2%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
       background-size: auto 64px;
       background-position: center center;
       background-repeat: no-repeat;
@@ -1586,15 +1586,18 @@ img[data-lazyimage] {
     .tymedia.float-left, .tymedia.float-right {
       box-sizing: border-box;
       margin-bottom: 1.75rem;
-      width: calc(50% - 1.75rem); } }
+      width: calc(50% - 1.75rem); }
+      /* line 47, source/scss/optional/_media.scss */
+      .tymedia.float-left:first-child + *, .tymedia.float-right:first-child + * {
+        margin-top: 0; } }
   @media (min-width: 40em) {
-    /* line 49, source/scss/optional/_media.scss */
+    /* line 52, source/scss/optional/_media.scss */
     .tymedia.float-left {
       clear: left;
       float: left;
       margin-right: 3.5rem; } }
   @media (min-width: 40em) {
-    /* line 56, source/scss/optional/_media.scss */
+    /* line 59, source/scss/optional/_media.scss */
     .tymedia.float-right {
       clear: right;
       float: right;
