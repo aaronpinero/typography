@@ -75,9 +75,58 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.</p>
         </figure>
 
+        <h3>Lazy-Loaded Image, Float Right</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;figure class="tymedia float-right"&gt;
+  &lt;img alt="Photo of a colorfully-painted building" data-lazyimage="resources/img/unsplash.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E"&gt;
+  &lt;figcaption class="tymedia-caption"&gt;Photo by Muhd Asyraaf on Unsplash&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.&lt;/p&gt;</code></pre>    
+        <figure class="output">
+          <figure class="tymedia float-right">
+            <img alt="Photo of a colorfully-painted building" data-lazyimage="resources/img/unsplash.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' /%3E">
+            <figcaption class="tymedia-caption">Photo by Muhd Asyraaf on Unsplash</figcaption>
+          </figure>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.</p>
+        </figure>
+
+        <h3>Embedded Video, Full Width</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;figure class="tymedia"&gt;
+  &lt;div class="tymedia-iframe"&gt;
+    &lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BIhNsAtPbPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+  &lt;figcaption class="tymedia-caption"&gt;Trailer for the 25th James Bold film, &lt;i&gt;No Time to Die&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>    
+        <figure class="output">
+          <figure class="tymedia">
+            <div class="tymedia-iframe">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BIhNsAtPbPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption class="tymedia-caption">Trailer for the 25th James Bold film, <i>No Time to Die</i></figcaption>
+          </figure>
+        </figure>
+
+        <h3>Embedded Video, Float Left</h3>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;figure class="tymedia float-left"&gt;
+  &lt;div class="tymedia-iframe"&gt;
+    &lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BIhNsAtPbPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+  &lt;figcaption class="tymedia-caption"&gt;Trailer for the 25th James Bold film, &lt;i&gt;No Time to Die&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.&lt;/p&gt;</code></pre>    
+        <figure class="output">
+          <figure class="tymedia float-left">
+            <div class="tymedia-iframe">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BIhNsAtPbPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption class="tymedia-caption">Trailer for the 25th James Bold film, <i>No Time to Die</i></figcaption>
+          </figure>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Faucibus in ornare quam viverra. Enim facilisis gravida neque convallis. Morbi tristique senectus et netus. A arcu cursus vitae congue. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Integer eget aliquet nibh praesent tristique magna. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Imperdiet sed euismod nisi porta lorem mollis aliquam. Ultrices vitae auctor eu augue ut lectus arcu bibendum.</p>
+        </figure>
+
 
       </section>
     </main>
     <%include footer.html%>
+		<script src="../dist/script/lazyimage.js"></script>
   </body>
 </html>
