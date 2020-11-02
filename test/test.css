@@ -24,8 +24,7 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; }
+  text-decoration: underline dotted; }
 
 /* line 20, source/scss/essential/_normalize.scss */
 b,
@@ -153,15 +152,15 @@ textarea {
 /* line 1, source/scss/essential/_body.scss */
 :root {
   --tycolor-bg:                   white;
-  --tycolor-bg-tab-active:        rgba(51, 153, 51, 0.12);
+  --tycolor-bg-tab-active:        rgba(51, 153, 51, 0.2);
   --tycolor-fg:                   black;
   --tycolor-text-light:           #666666;
   --tycolor-link-default:         #3366cc;
   --tycolor-link-active:          #339933;
-  --tycolor-border:               #e0e0e0;
+  --tycolor-border:               #cccccc;
   --tycolor-border-link-default:  rgba(51, 102, 204, 0.5);
   --tycolor-border-link-active:   rgba(51, 153, 51, 0.75);
-  --tycolor-shade:                rgba(0, 0, 0, 0.05); }
+  --tycolor-shade:                rgba(0, 0, 0, 0.1); }
 
 /* line 13, source/scss/essential/_body.scss */
 html {
@@ -811,7 +810,7 @@ blockquote {
       margin-top: 0.75rem; }
     /* line 34, source/scss/optional/_quotes.scss */
     blockquote.pullquote.pullquote-roof-fixed::before, blockquote.pullquote.pullquote-roof-full::before {
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22#e0e0e0%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22%23CCCCCC%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
       background-size: auto 64px;
       background-position: center center;
       background-repeat: no-repeat;
@@ -1462,12 +1461,6 @@ select:not([multiple]) {
   box-shadow: 0 0 0 transparent; }
 
 /* line 110, source/scss/optional/_forms.scss */
-input[type="checkbox"],
-input[type="radio"] {
-  height: 1.125rem;
-  vertical-align: baseline; }
-
-/* line 115, source/scss/optional/_forms.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -1526,18 +1519,84 @@ input[type="submit"] {
   input[type="submit"][href]:focus {
     outline: none; }
 
-/* line 127, source/scss/optional/_forms.scss */
+/* line 122, source/scss/optional/_forms.scss */
 .tyselect select,
 select.tyselect {
-  -webkit-appearance: none;
-  appearance: none; }
-  /* line 131, source/scss/optional/_forms.scss */
+  appearance: none;
+  -webkit-appearance: none; }
+  /* line 126, source/scss/optional/_forms.scss */
   .tyselect select:not([multiple]),
   select.tyselect:not([multiple]) {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#666666'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#666666'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: calc(100% - 0.375rem) center;
     background-size: 0.9375rem auto; }
+
+/* line 135, source/scss/optional/_forms.scss */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  border-color: var(--tycolor-border);
+  border-style: solid;
+  border-radius: 6px;
+  border-width: 2px;
+  display: inline-block;
+  height: 1.5rem;
+  vertical-align: text-bottom;
+  width: 1.5rem; }
+  /* line 148, source/scss/optional/_forms.scss */
+  input[type="checkbox"]:checked {
+    background-color: var(--tycolor-link-active);
+    background-image: url("data:image/svg+xml;charset=ASCII,%3Csvg%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%2064%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23ffffff%22%20points%3D%2223%2056%2020.9401855%2053.9401855%200%2033%207%2026%2023%2042%2057%208%2064%2015%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0.75rem auto;
+    border-color: var(--tycolor-link-active); }
+  /* line 156, source/scss/optional/_forms.scss */
+  input[type="checkbox"]:hover {
+    border-color: var(--tycolor-link-active);
+    transform: scale(1.1); }
+  /* line 160, source/scss/optional/_forms.scss */
+  input[type="checkbox"]:hover, input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.375rem rgba(51, 153, 51, 0.2); }
+  /* line 165, source/scss/optional/_forms.scss */
+  input[type="checkbox"]:focus {
+    border-color: var(--tycolor-link-active); }
+
+/* line 169, source/scss/optional/_forms.scss */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  border-color: var(--tycolor-border);
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 2px;
+  display: inline-block;
+  height: 1.5rem;
+  vertical-align: text-bottom;
+  width: 1.5rem; }
+  /* line 182, source/scss/optional/_forms.scss */
+  input[type="radio"]:checked {
+    background-color: var(--tycolor-link-active);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-color: var(--tycolor-link-active); }
+  /* line 190, source/scss/optional/_forms.scss */
+  input[type="radio"]:hover {
+    border-color: var(--tycolor-link-active);
+    transform: scale(1.1); }
+  /* line 194, source/scss/optional/_forms.scss */
+  input[type="radio"]:hover, input[type="radio"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.375rem rgba(51, 153, 51, 0.2); }
+  /* line 199, source/scss/optional/_forms.scss */
+  input[type="radio"]:focus {
+    border-color: var(--tycolor-link-active); }
 
 /* line 1, source/scss/optional/_media.scss */
 img[data-lazyimage] {
@@ -1586,15 +1645,18 @@ img[data-lazyimage] {
     .tymedia.float-left, .tymedia.float-right {
       box-sizing: border-box;
       margin-bottom: 1.5rem;
-      width: calc(50% - 1.5rem); } }
+      width: calc(50% - 1.5rem); }
+      /* line 47, source/scss/optional/_media.scss */
+      .tymedia.float-left:first-child + *, .tymedia.float-right:first-child + * {
+        margin-top: 0; } }
   @media (min-width: 40em) {
-    /* line 49, source/scss/optional/_media.scss */
+    /* line 52, source/scss/optional/_media.scss */
     .tymedia.float-left {
       clear: left;
       float: left;
       margin-right: 3rem; } }
   @media (min-width: 40em) {
-    /* line 56, source/scss/optional/_media.scss */
+    /* line 59, source/scss/optional/_media.scss */
     .tymedia.float-right {
       clear: right;
       float: right;

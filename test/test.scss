@@ -59,11 +59,11 @@ $tycolor-fg:black;
 $tycolor-text-light:mix($tycolor-fg,$tycolor-bg,60%);
 $tycolor-link-default:#3366cc;
 $tycolor-link-active:#339933;
-$tycolor-bg-tab-active:rgba($tycolor-link-active,0.12);
-$tycolor-border:mix($tycolor-fg,$tycolor-bg,12%);
+$tycolor-bg-tab-active:rgba($tycolor-link-active,0.2);
+$tycolor-border:mix($tycolor-fg,$tycolor-bg,20%);
 $tycolor-border-link-default:rgba($tycolor-link-default,0.5);
 $tycolor-border-link-active:rgba($tycolor-link-active,0.75);
-$tycolor-shade:rgba($tycolor-fg,0.05);
+$tycolor-shade:rgba($tycolor-fg,0.1);
 
 $tyicons-path:"../dist/fonts/tyicons";
 
