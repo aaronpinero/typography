@@ -46,7 +46,7 @@ input[type="submit"] {
   display:block;
   font-size:100%;
   outline:none;
-  width:100%;
+  max-width:100%;
 }
 label {
   display:block;
@@ -59,7 +59,10 @@ label {
   }
   &.label-inline {
     display:inline-block;
+  }
+  .label-inline + &.label-inline {
     margin-top:0;
+    margin-left:tyspacing(sm);
   }
   form & + * {
     margin-top:tyspacing(md) / 2;
@@ -95,7 +98,6 @@ input[type="color"] {
   line-height:tylead(tyscale(0));
   padding:calc(#{tygrid(0.75)} - #{$tywidth-border});
   transition:border-color tyduration(hover), box-shadow tyduration(hover);
-  width:100%;
   &:focus {
     border-color:var(--tycolor-link-active);
     box-shadow:0 1px 2px rgba(0,0,0,0.2) inset;
@@ -118,16 +120,16 @@ input[type="submit"] {
   width:auto;
 }
 
-// special select element
-.tyselect select,
-select.tyselect {
-  appearance:none;
-  -webkit-appearance:none;
+// special select styles
+select {
   &:not([multiple]) {
-    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{$tycolor-text-light}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{$tycolor-text-light}'/%3E%3C/svg%3E");
+    appearance:none;
+    -webkit-appearance:none;
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{encodecolor($tycolor-text-light)}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{encodecolor($tycolor-text-light)}'/%3E%3C/svg%3E");
     background-repeat:no-repeat;
     background-position:calc(100% - #{tygrid(0.5)}) center;
     background-size:tygrid(1.25) auto;
+    padding-right:calc(#{tygrid(2.25)} - #{$tywidth-border});
   }
 }
 
@@ -135,19 +137,19 @@ select.tyselect {
 input[type="checkbox"] {
   appearance:none;
   -webkit-appearance:none;
-  background-color:$tycolor-bg;
+  background-color:var(--tycolor-bg);
   border-color:var(--tycolor-border);
   border-style:solid;
   border-radius:$tyradius-border;
   border-width:$tywidth-border;
   display:inline-block;
-  height:tygrid(2);
-  // transition:background-color $base-duration, border-color $base-duration, border-width $base-duration, transform $base-duration;
+  height:1.5em;
+  transition:background-color tyduration(hover), border-color tyduration(hover), transform tyduration(hover);
   vertical-align:text-bottom;
-  width:tygrid(2);
+  width:1.5em;
   &:checked {
     background-color:var(--tycolor-link-active);
-    background-image: url("data:image/svg+xml;charset=ASCII,%3Csvg%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%2064%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23ffffff%22%20points%3D%2223%2056%2020.9401855%2053.9401855%200%2033%207%2026%2023%2042%2057%208%2064%2015%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+    background-image:url("data:image/svg+xml;charset=ASCII,%3Csvg%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%2064%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22#{encodecolor($tycolor-bg)}%22%20points%3D%2223%2056%2020.9401855%2053.9401855%200%2033%207%2026%2023%2042%2057%208%2064%2015%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
     background-repeat:no-repeat;
     background-position:center;
     background-size:tygrid(1) auto;
@@ -169,19 +171,19 @@ input[type="checkbox"] {
 input[type="radio"] {
   appearance:none;
   -webkit-appearance:none;
-  background-color:$tycolor-bg;
+  background-color:var(--tycolor-bg);
   border-color:var(--tycolor-border);
   border-style:solid;
   border-radius:50%;
   border-width:$tywidth-border;
   display:inline-block;
-  height:tygrid(2);
-  // transition:background-color $base-duration, border-color $base-duration, border-width $base-duration, transform $base-duration;
+  height:1.5em;
+  transition:background-color tyduration(hover), border-color tyduration(hover), transform tyduration(hover);
   vertical-align:text-bottom;
-  width:1.5rem;
+  width:1.5em;
   &:checked {
     background-color:var(--tycolor-link-active);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='#{encodecolor($tycolor-bg)}'/%3e%3c/svg%3e");
     background-repeat:no-repeat;
     background-position:center;
     background-size:contain;

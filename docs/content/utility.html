@@ -12,13 +12,6 @@
     <main class="block">
       <section class="section-body links-underlined">
 				<p><strong class="tyfy">Tyfy</strong> includes style customizations for block and inline HTML elements used in typographic design. In addition, custom classes are defined for additional typographic enhancement.</p>
-				<h2>Special Case: Horizontal Rule</h2>
-				<p>The horizontal rule (<code>&lt;hr&gt;</code>) has unique margin styles. While all other elements in the framework inherit by the adjacent sibling margin styles, the horizontal rule is given both top and bottom margin. This exception is justified by the purpose of the horizontal rule, which is to act as a separator between other elements.</p>
-				<p>The top and bottom margins are equal to <code>tyspacing(lg)</code>. The margins are applied in two cases:</p>
-				<ul>
-					<li>when the value of the <code>$tymargins-on</code> variable is <code>true</code>; or</li>
-					<li>when a parent element has the <code>.tymargins-on</code> class.</li>
-				</ul>
 				<h2>Examples</h2>
 				<table class="clean utility responsive">
 					<thead>
@@ -106,6 +99,13 @@
 						</tr>
 					</tbody>
 				</table>
+        <h2>Special Case: Horizontal Rule</h2>
+        <p>The horizontal rule (<code>&lt;hr&gt;</code>) has unique margin styles. While all other elements in the framework inherit by the adjacent sibling margin styles, the horizontal rule is given both top and bottom margin. This exception is justified by the purpose of the horizontal rule, which is to act as a separator between other elements.</p>
+        <p>The top and bottom margins are equal to <code>tyspacing(lg)</code>. The margins are applied in two cases:</p>
+        <ul>
+          <li>when the value of the <code>$tymargins-on</code> variable is <code>true</code>; or</li>
+          <li>when a parent element has the <code>.tymargins-on</code> class.</li>
+        </ul>
 			</section>
 		</main>
 		<%include footer.html%>

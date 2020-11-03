@@ -30,7 +30,7 @@
     &lt;input type="number" name="age"&gt;
   &lt;/div&gt;
 &lt;/form&gt;</code></pre>
-        <p>Element spacing has been adjusted so labels are more closely positioned to their associated input than to surrounding elements. There are <span class="smallcaps">CSS</span> classes for <code>select</code> and <code>label</code> elements that provide some presentation options.</p>
+        <p>Element spacing has been adjusted so labels are more closely positioned to their associated input than to surrounding elements. There are <span class="smallcaps">CSS</span> classes for <code>label</code> elements that provide some presentation options.</p>
         <h2 id="variables">Variables</h2>
         <dl>
           <dt>$tyfont-input</dt>
@@ -45,8 +45,6 @@
         </dl>
         <h2 id="classes">Classes</h2>
         <dl>
-          <dt>.tyselect</dt>
-          <dd>Adjusts the appearance of a <code>select</code> element so it is more consistent with other elements; this class can be applied directly to the <code>select</code> element or to a parent element.</dd>
           <dt>.label-option</dt>
           <dd>Apply to a <code>label</code> when used adjacent to or to encapsulate a radio button or checkbox input.</dd>
           <dt>.label-inline</dt>
@@ -82,29 +80,25 @@
         <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;form&gt;
   &lt;div&gt;
     &lt;label&gt;Select&lt;/label&gt;
-    &lt;div class="tyselect"&gt;
-      &lt;select name="color"&gt;
-        &lt;option value="red"&gt;Red&lt;/option&gt;
-        &lt;option value="orange"&gt;Orange&lt;/option&gt;
-        &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
-        &lt;option value="green"&gt;Green&lt;/option&gt;
-        &lt;option value="blue"&gt;Blue&lt;/option&gt;
-        &lt;option value="purple"&gt;Purple&lt;/option&gt;
-      &lt;/select&gt;
-    &lt;/div&gt;
+    &lt;select name="color"&gt;
+      &lt;option value="red"&gt;Red&lt;/option&gt;
+      &lt;option value="orange"&gt;Orange&lt;/option&gt;
+      &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
+      &lt;option value="green"&gt;Green&lt;/option&gt;
+      &lt;option value="blue"&gt;Blue&lt;/option&gt;
+      &lt;option value="purple"&gt;Purple&lt;/option&gt;
+    &lt;/select&gt;
   &lt;/div&gt;
   &lt;div&gt;
     &lt;label&gt;Multiple Select&lt;/label&gt;
-    &lt;div class="tyselect"&gt;
-      &lt;select name="color" multiple="multiple"&gt;
-        &lt;option value="red"&gt;Red&lt;/option&gt;
-        &lt;option value="orange"&gt;Orange&lt;/option&gt;
-        &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
-        &lt;option value="green"&gt;Green&lt;/option&gt;
-        &lt;option value="blue"&gt;Blue&lt;/option&gt;
-        &lt;option value="purple"&gt;Purple&lt;/option&gt;
-      &lt;/select&gt;
-    &lt;/div&gt;
+    &lt;select name="color" multiple="multiple"&gt;
+      &lt;option value="red"&gt;Red&lt;/option&gt;
+      &lt;option value="orange"&gt;Orange&lt;/option&gt;
+      &lt;option value="yellow"&gt;Yellow&lt;/option&gt;
+      &lt;option value="green"&gt;Green&lt;/option&gt;
+      &lt;option value="blue"&gt;Blue&lt;/option&gt;
+      &lt;option value="purple"&gt;Purple&lt;/option&gt;
+    &lt;/select&gt;
   &lt;/div&gt;
   &lt;p&gt;&lt;input type="submit" name="submit" value="Submit Button"&gt;&lt;/p&gt;
 &lt;/form&gt;</code></pre>    
@@ -112,29 +106,25 @@
           <form>
             <div>
               <label>Select</label>
-              <div class="tyselect">
-                <select name="color">
-                  <option value="red">Red</option>
-                  <option value="orange">Orange</option>
-                  <option value="yellow">Yellow</option>
-                  <option value="green">Green</option>
-                  <option value="blue">Blue</option>
-                  <option value="purple">Purple</option>
-                </select>
-              </div>
+              <select name="color">
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+              </select>
             </div>
             <div>
               <label>Multiple Select</label>
-              <div class="tyselect">
-                <select name="color" multiple="multiple">
-                  <option value="red">Red</option>
-                  <option value="orange">Orange</option>
-                  <option value="yellow">Yellow</option>
-                  <option value="green">Green</option>
-                  <option value="blue">Blue</option>
-                  <option value="purple">Purple</option>
-                </select>
-              </div>
+              <select name="color" multiple="multiple">
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+              </select>
             </div>
             <p><input type="submit" name="submit" value="Submit Button"></p>
           </form>
