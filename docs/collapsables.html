@@ -112,12 +112,12 @@
       <section class="section-body links-underlined">
 				<p>Collapsable headings are a simplified accordion pattern. <strong class="tyfy">Tyfy</strong> collapsable headings:</p>
 				<ul class="tymargins-off">
-						<li>are easy to implement</li>
-						<li>are accessible using keyboard input</li>
-						<li>are responsive</li>
-						<li>can be nested</li>
-						<li>allow for anchored links inside collapsed content</li>
-						<li>require Javascript (collapsables.js)</li>
+					<li>are easy to implement</li>
+					<li>are accessible using keyboard input</li>
+					<li>are responsive</li>
+					<li>can be nested</li>
+					<li>allow for anchored links inside collapsed content</li>
+					<li>require Javascript (collapsables.js)</li>
 				</ul>
 				<p>Content authors can use this pattern by adding a single <span class="smallcaps">CSS</span> class a heading (H2 through H6). JavaScript encapsulates all the content belonging to that heading in a block element, collapses the content, and binds a click event to the heading to toggle the display of the content. Collapsable headings are easy to implement and apply in simple text editors like CKEditor.</p>
 				<p>The display of collapsable headings is responsive. At large screen widths, collapsable headings and content are fully bordered. At small screen widths, the design changes to remove the full border and maximize horizontal space.</p>
@@ -142,7 +142,7 @@
 &lt;h2&gt;Regular Heading 2&lt;/h2&gt;
 &lt;p&gt;[content under the heading]&lt;/p&gt;
 &lt;ul&gt;[content under the heading]&lt;/ul&gt;</code></pre>
-				<p>As you can see from the example, the default state of a collapsable area is <code>closed</code>.</p>
+				<p>As you can see from the example, the default state of a collapsable area is <code>closed</code>. The default state can be open by addition of the <code>open</code> class to the collapsable heading.</p>
 				<h2 id="variables">Variables</h2>
 				<dl>
 					<dt>$tybreak-collapsables</dt>
@@ -170,7 +170,7 @@
 &lt;p&gt;Nulla vitae massa et orci ornare convallis. Integer non aliquam eros. Aenean tempus iaculis malesuada. Proin lobortis quam ac erat dapibus, vitae dictum ex placerat. Aenean lobortis accumsan arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
 &lt;h3 class="collapsable"&gt;Sed sed quam convallis&lt;/h3&gt;
 &lt;p&gt;Porttitor magna vitae, iaculis nulla. Morbi in sem molestie, hendrerit velit id, egestas dolor. Nulla facilisi. Sed at augue finibus, interdum justo a, tincidunt urna.&lt;/p&gt;
-&lt;h2 class="collapsable"&gt;Morbi interdum tempus lorem&lt;/h2&gt;
+&lt;h2 class="collapsable open"&gt;Morbi interdum (initially open)&lt;/h2&gt;
 &lt;p&gt;Eu dictum orci venenatis id. Pellentesque consectetur accumsan ex id lobortis. Duis eget blandit ante, in iaculis lacus. Sed justo ipsum, euismod et venenatis quis, pharetra eu dolor. In condimentum placerat augue vel consequat. Quisque euismod fringilla tristique. Nunc convallis lectus ut tellus finibus, sit amet efficitur tortor blandit.&lt;/p&gt;</code></pre>
 				<figure class="output">
 					<p><a href="#testanchor">Test anchor link</a></p>
@@ -184,7 +184,7 @@
 					<p>Nulla vitae massa et orci ornare convallis. Integer non aliquam eros. Aenean tempus iaculis malesuada. Proin lobortis quam ac erat dapibus, vitae dictum ex placerat. Aenean lobortis accumsan arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					<h3 class="collapsable">Sed sed quam convallis</h3>
 					<p>porttitor magna vitae, iaculis nulla. Morbi in sem molestie, hendrerit velit id, egestas dolor. Nulla facilisi. Sed at augue finibus, interdum justo a, tincidunt urna.</p>
-					<h2 class="collapsable">Morbi interdum tempus lorem</h2>
+					<h2 class="collapsable open">Morbi interdum (initially open)</h2>
 					<p>eu dictum orci venenatis id. Pellentesque consectetur accumsan ex id lobortis. Duis eget blandit ante, in iaculis lacus. Sed justo ipsum, euismod et venenatis quis, pharetra eu dolor. In condimentum placerat augue vel consequat. Quisque euismod fringilla tristique. Nunc convallis lectus ut tellus finibus, sit amet efficitur tortor blandit.</p>
 				</figure>
 			</section>

@@ -26,11 +26,17 @@ if (all_collapsables.length) {
     
     let a = ty_collapsables.length - 1;
     for (a; a >= 0; a--) {
+      // what is the desired initial state? open or closed?
+      let initially_open = ty_collapsables[a].classList.contains('open');
+      
       // turn the heading into a button
       // first create the button
       let ty_collapsable_button = document.createElement("button");
-      // set initial state to false
-      ty_collapsable_button.setAttribute('aria-expanded','false');
+      
+      // set initial aria state
+      if (initially_open) { ty_collapsable_button.setAttribute('aria-expanded','true'); }
+      else { ty_collapsable_button.setAttribute('aria-expanded','false'); }
+      
       // move the contents of the header into this button
       ty_collapsable_button.innerHTML = ty_collapsables[a].innerHTML;
       ty_collapsables[a].innerHTML = "";
@@ -44,8 +50,9 @@ if (all_collapsables.length) {
       let ty_collapsables_wrapper = document.createElement("div");
       
       // apply class to the wrapper
-      // apply state class to the wrapper (default closed)
-      ty_collapsables_wrapper.className = "tyfy-collapsables closed hiding";
+      // apply state class to the wrapper
+      if (initially_open) { ty_collapsables_wrapper.className = "tyfy-collapsables"; }
+      else { ty_collapsables_wrapper.className = "tyfy-collapsables closed hiding"; }
       
       // what's my tag?
       let my_tag = ty_collapsables[a].tagName;
@@ -74,8 +81,9 @@ if (all_collapsables.length) {
         next_sib = ty_collapsables_wrapper.nextElementSibling;
       }
       
-      // set 'closed' as the initial state
-      ty_collapsables[a].classList.add('closed');
+      // set the initial state
+      ty_collapsables[a].classList.remove('open');
+      if (!initially_open) { ty_collapsables[a].classList.add('closed'); }
 
       // add event listener for click action
       ty_collapsables[a].addEventListener("click",function(){
