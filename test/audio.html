@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>Test</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <figure class="player">
+      <audio controls="true" src="http://www.flameandshadowopera.com/audio/overture.mp3"></audio>
+      <figcaption></figcaption>
+    </figure>
+    
+    <script>
+    
+      var players = document.getElementsByClassName('player');
+      console.log(players.length);
+      
+      var x;
+      for(x=0;x<players.length;x++) {
+        var player = players.item(x);
+        var player_audio = player.getElementsByTagName('audio').item(0);
+        
+        // show a loading indicator
+        player_audio.addEventListener('loadstart',function(e){
+          var loading_indicator = document.createElement("span");
+          loading_indicator.setAttribute('class','loading');
+          loading_indicator.innerText = "Loading";
+          
+          this.parentElement.getElementsByTagName('figcaption').item(0).appendChild(loading_indicator);
+        });
+        
+        // show the duration and current time when metadata is loaded
+        player_audio.addEventListener('loadedmetadata',function(e){
+          var duration_indicator = document.createElement("span");
+          duration_indicator.setAttribute('class','duration');
+          duration_indicator.innerText = FormatDuration(this.duration);
+
+          var current_indicator = document.createElement("span");
+          current_indicator.setAttribute('class','current');
+          current_indicator.innerText = FormatDuration(this.currentTime);
+          
+          this.parentElement.getElementsByTagName('figcaption').item(0).innerHTML = "";
+          this.parentElement.getElementsByTagName('figcaption').item(0).appendChild(current_indicator);
+          this.parentElement.getElementsByTagName('figcaption').item(0).appendChild(duration_indicator);
+        });
+        
+        // show the play/pause button when the audio is ready to play through
+        player_audio.addEventListener('canplaythrough',function(e){
+          var audio = this;
+          var play_pause = document.createElement("button");
+          play_pause.setAttribute('class','play-pause');
+          play_pause.innerText = "Play / Pause";
+          
+          this.parentElement.getElementsByTagName('figcaption').item(0).prepend(play_pause);
+          play_pause.addEventListener('click',function(){
+            if (audio.paused) { audio.play(); }
+            else { audio.pause(); }
+          });
+        });
+        
+        // regularly update the current time indicator
+        player_audio.addEventListener('timeupdate',function(e){
+          this.parentElement.getElementsByClassName('current').item(0).innerText = FormatDuration(this.currentTime);
+        });
+      }
+      
+      function FormatDuration(s) {
+        // given s sections, convert this into the format mm:ss
+        var minutes = Math.floor(s/60);
+        var seconds = Math.round(s % 60);
+        if (seconds < 10) { seconds = "0" + seconds; }
+        return minutes + ":" + seconds;
+      }
+    
+    </script>
+  </body>
+</html>
