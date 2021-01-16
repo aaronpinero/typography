@@ -1,12 +1,20 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>Test</title>
+    <meta charset="utf8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="test.css">
+    <title>Tyfy Test - Audio</title>
+    
     <style>
-      figure.player {
+      .player {
         margin-left:0;
         margin-right:0;
         position:relative;
-        --accent:#fc4030;
+        --player-bg-l:85%;
+        --player-fg-l:0%;
+        --player-accent:hsl(0,90%,40%);
       }
       audio.hidden {
         height:1px;
@@ -16,18 +24,19 @@
         z-index:0;
       }
       form.player-ui {
-        background-color:#ddd;
+        background-color:hsla(0,0%,var(--player-bg-l),1);
         border-radius:4px;
         box-sizing: border-box;
         display:flex;
         height:2rem;
-        max-width:40rem;
+        max-width:30rem;
         position:relative;
         z-index:1;        
       }
       span.current,
       span.duration,
       span.loading {
+        color:hsla(0,0%,var(--player-fg-l),1);
         display:block;
         flex-shrink:0;
         font-family:sans-serif;
@@ -54,28 +63,28 @@
         background-repeat:no-repeat;
         background-size:contain;
         border-radius:4px 0 0 4px;
-        border-right:1px rgba(0,0,0,0.1) solid;
+        border-right:1px hsla(0,0%,var(--player-fg-l),0.1) solid;
         text-indent:2rem;
         white-space:nowrap;
       }
       button.play-pause:hover {
-        background-color:var(--accent);
+        background-color:var(--player-accent);
       }
       button.play-pause.paused {
-        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23000000%22%20points%3D%2224%2016%2010%2025%2010%207%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22black%22%20points%3D%2224%2016%2010%2025%2010%207%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
       }
       button.play-pause.paused:hover {
         background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22white%22%20points%3D%2224%2016%2010%2025%2010%207%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
       }
       button.play-pause.playing {
-        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Crect%20x%3D%2210%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%23000000%22%3E%3C%2Frect%3E%3Crect%20x%3D%2218%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%23000000%22%3E%3C%2Frect%3E%3C%2Fsvg%3E");
+        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Crect%20x%3D%2210%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22black%22%3E%3C%2Frect%3E%3Crect%20x%3D%2218%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22black%22%3E%3C%2Frect%3E%3C%2Fsvg%3E");
       }
       button.play-pause.playing:hover {
         background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Crect%20x%3D%2210%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22white%22%3E%3C%2Frect%3E%3Crect%20x%3D%2218%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22white%22%3E%3C%2Frect%3E%3C%2Fsvg%3E");
       }
       input[type="range"] {
         -webkit-appearance:none !important;
-        background-color:rgba(0,0,0,0.25);
+        background-color:hsla(0,0%,var(--player-fg-l),0.25);
         border:0;
         border-radius:2px;
         height:4px;
@@ -93,9 +102,9 @@
       input[type="range"]::-webkit-slider-thumb {
         -webkit-appearance: none;
         background-color:white;
-        border:4px var(--accent) solid;
+        border:4px var(--player-accent) solid;
         border-radius:10px;
-        box-shadow:1px 1px 3px rgba(0,0,0,0.25);
+        box-shadow:1px 1px 3px hsla(0,0%,var(--player-fg-l),0.33);
         box-sizing:border-box;
         height:20px;
         width:20px;
@@ -103,9 +112,9 @@
       input[type="range"]::-moz-range-thumb {
         -webkit-appearance: none;
         background-color:white;
-        border:4px var(--accent) solid;
+        border:4px var(--player-accent) solid;
         border-radius:10px;
-        box-shadow:0 1px 2px rgba(0,0,0,0.25);
+        box-shadow:1px 1px 3px hsla(0,0%,var(--player-fg-l),0.33);
         box-sizing:border-box;
         height:20px;
         width:20px;
@@ -113,25 +122,36 @@
       input[type="range"]::-moz-range-progress {
         -webkit-appearance:none !important;
         height:4px;
-        background-color:var(--accent);
+        background-color:var(--player-accent);
         border-radius:2px;
       }
     </style>
+    
   </head>
   <body>
-    <figure class="player">
-      <audio controls="true" src="http://www.flameandshadowopera.com/audio/overture.mp3"></audio>
+    <header class="tymargins-off">
+      <!--<div class="tyfont-sans"><strong><a href="test.html">Tests</a></strong></div>-->
+      <h1>Audio Module</h1>
+    </header>
+
+    <figure class="player tymargins-off">
+      <audio src="../docs/resources/audio/Youssoupha_Sidibe_Music.mp3"></audio>
+    </figure>
+
+    <figure class="player tymargins-off">
+      <audio src="../docs/resources/audio/Ergo_Phizmiz.mp3"></audio>
     </figure>
 
     <script>
     
       var players = document.getElementsByClassName('player');
-      console.log(players.length);
       
       var x;
       for(x=0;x<players.length;x++) {
         var player = players.item(x);
         var player_audio = player.getElementsByTagName('audio').item(0);
+        player_audio.load();
+        
         var player_ui = document.createElement("form");
         player_ui.setAttribute('class','player-ui');
         
@@ -143,16 +163,20 @@
           var loading_indicator = document.createElement("span");
           loading_indicator.setAttribute('class','loading');
           loading_indicator.innerText = "Loading";
-          player_ui.appendChild(loading_indicator);
+          this.parentElement.getElementsByClassName('player-ui').item(0).appendChild(loading_indicator);
         });
-        
-        // show the duration and current time when metadata is loaded
-        player_audio.addEventListener('loadedmetadata',function(e){
-          // duration
+                
+        // show the play/pause button when the audio is ready to play through
+        player_audio.addEventListener('canplaythrough',function(e){
+          var audio = this;
+          var ui = this.parentElement.getElementsByClassName('player-ui').item(0);
+          
+          // duration indicator
           var duration_indicator = document.createElement("span");
           duration_indicator.setAttribute('class','duration');
-          duration_indicator.innerText = FormatDuration(this.duration);
-          // timeline
+          duration_indicator.innerText = FormatDuration(audio.duration);
+          
+          // timeline slider
           var timeline_control = document.createElement('input');
           timeline_control.setAttribute('type','range');
           timeline_control.setAttribute('class','timeline');
@@ -160,25 +184,27 @@
           timeline_control.setAttribute('max','1000');
           timeline_control.setAttribute('step','1');
           timeline_control.setAttribute('value','0');
-          // current
+          
+          // current timeline position indicator
           var current_indicator = document.createElement("span");
           current_indicator.setAttribute('class','current');
-          current_indicator.innerText = FormatDuration(this.currentTime);
-          
-          player_ui.appendChild(current_indicator);
-          player_ui.appendChild(timeline_control);
-          player_ui.appendChild(duration_indicator);
-        });
-        
-        // show the play/pause button when the audio is ready to play through
-        player_audio.addEventListener('canplaythrough',function(e){
-          var audio = this;
+          current_indicator.innerText = FormatDuration(audio.currentTime);
+
+          // play/pause button
           var play_pause = document.createElement("button");
           play_pause.setAttribute('class','play-pause paused');
           play_pause.innerText = "Play / Pause";
           
+          // remove the loading indicator
           audio.parentElement.getElementsByClassName('loading').item(0).remove();
-          player_ui.prepend(play_pause);
+          
+          // insert the player ui elements
+          ui.appendChild(play_pause);
+          ui.appendChild(current_indicator);
+          ui.appendChild(timeline_control);
+          ui.appendChild(duration_indicator);
+          
+          // activate the play/pause button
           play_pause.addEventListener('click',function(e){
             e.preventDefault();
             if (audio.paused) {
@@ -193,28 +219,31 @@
             }
           });
           
-          this.parentElement.getElementsByClassName('timeline').item(0).addEventListener('input',function(e){
+          // activate timeline control
+          timeline_control.addEventListener('input',function(e){
             v = this.value;
-            player_audio.currentTime = (v / 1000) * player_audio.duration;
+            audio.currentTime = (v / 1000) * audio.duration;
           });
           
           // volume
-          var volume_control = document.createElement('input');
-          volume_control.setAttribute('type','range');
-          volume_control.setAttribute('class','volume');
-          volume_control.setAttribute('min','0');
-          volume_control.setAttribute('max','100');
-          volume_control.setAttribute('step','1');
-          volume_control.setAttribute('value','100');
-          player_ui.appendChild(volume_control);
-          player_audio.volume = 1;
-          volume_control.addEventListener('input',function(e){
-            v = this.value;
-            player_audio.volume = v/100;
-          });
+          // volume doesnt work on ios, so I'm not adding it right now
+          
+          // var volume_control = document.createElement('input');
+          // volume_control.setAttribute('type','range');
+          // volume_control.setAttribute('class','volume');
+          // volume_control.setAttribute('min','0');
+          // volume_control.setAttribute('max','100');
+          // volume_control.setAttribute('step','1');
+          // volume_control.setAttribute('value','100');
+          // ui.appendChild(volume_control);
+          // audio.volume = 1;
+          // volume_control.addEventListener('input',function(e){
+          //   v = this.value;
+          //   audio.volume = v/100;
+          // });
         });
         
-        // when ends
+        // when audio ends
         player_audio.addEventListener('ended',function(e){
           this.parentElement.getElementsByClassName('play-pause').item(0).classList.add('paused');
           this.parentElement.getElementsByClassName('play-pause').item(0).classList.remove('playing');
@@ -234,7 +263,7 @@
         if (seconds < 10) { seconds = "0" + seconds; }
         return minutes + ":" + seconds;
       }
-    
+          
     </script>
   </body>
 </html>
