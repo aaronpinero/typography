@@ -1600,6 +1600,62 @@ input[type="radio"] {
   input[type="radio"]:focus {
     border-color: var(--tycolor-link-active); }
 
+/* line 207, source/scss/optional/_forms.scss */
+input[type="range"] {
+  -webkit-appearance: none !important;
+  background-color: transparent;
+  border: 0;
+  height: 1.75rem;
+  min-width: 3.5rem;
+  outline: none;
+  position: relative;
+  width: 100%; }
+  /* line 216, source/scss/optional/_forms.scss */
+  input[type="range"]::before {
+    background-color: var(--tycolor-border);
+    border: 0;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 4px;
+    outline: none;
+    position: absolute;
+    top: calc(0.875rem - 2px);
+    width: 100%;
+    z-index: -1; }
+  /* line 229, source/scss/optional/_forms.scss */
+  input[type="range"]::-moz-range-track {
+    background-color: var(--tycolor-border);
+    border: 0;
+    border-radius: 2px;
+    height: 4px;
+    outline: none;
+    width: 100%; }
+  /* line 237, source/scss/optional/_forms.scss */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: var(--tycolor-bg);
+    border: 4px var(--tycolor-link-active) solid;
+    border-radius: 0.4375rem;
+    box-sizing: border-box;
+    height: 1.75rem;
+    width: 1.75rem; }
+  /* line 246, source/scss/optional/_forms.scss */
+  input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    background-color: var(--tycolor-bg);
+    border: 4px var(--tycolor-link-active) solid;
+    border-radius: 0.4375rem;
+    box-sizing: border-box;
+    height: 1.75rem;
+    width: 1.75rem; }
+  /* line 255, source/scss/optional/_forms.scss */
+  input[type="range"]::-moz-range-progress {
+    -webkit-appearance: none !important;
+    height: 4px;
+    background-color: var(--tycolor-link-active);
+    border-radius: 2px; }
+
 /* line 1, source/scss/optional/_media.scss */
 img[data-lazyimage] {
   -webkit-transform: translate3d(0, 0, 0);
