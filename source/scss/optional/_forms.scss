@@ -182,7 +182,7 @@ input[type="radio"] {
   vertical-align:text-bottom;
   width:1.5em;
   &:checked {
-    background-color:var(--tycolor-link-active);
+    background-color: var(--tycolor-link-active);
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='#{encodecolor($tycolor-bg)}'/%3e%3c/svg%3e");
     background-repeat:no-repeat;
     background-position:center;
@@ -195,10 +195,67 @@ input[type="radio"] {
   }
   &:hover,
   &:focus {
-    outline:none;
-    box-shadow:0 0 0 tygrid(0.5) $tycolor-bg-tab-active;
+    outline: none;
+    box-shadow: 0 0 0 tygrid(0.5) $tycolor-bg-tab-active;
   }
   &:focus {
-    border-color:var(--tycolor-link-active);
+    border-color: var(--tycolor-link-active);
+  }
+}
+
+// range input
+input[type="range"] {
+  -webkit-appearance: none !important;
+  background-color: transparent;
+  border: 0;
+  height: tygrid(2);
+  min-width: tygrid(4);
+  outline: none;
+  position:relative;
+  width: 100%;
+  &::before {
+    background-color: var(--tycolor-border);
+    border: 0;
+    border-radius: 2px;
+    content:"";
+    display:block;
+    height: 4px;
+    outline: none;
+    position:absolute;
+    top:calc(#{tygrid()} - 2px);
+    width: 100%;
+    z-index: -1;
+  }
+  &::-moz-range-track {
+    background-color: var(--tycolor-border);
+    border: 0;
+    border-radius: 2px;
+    height: 4px;
+    outline: none;
+    width: 100%;
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: var(--tycolor-bg);
+    border: 4px var(--tycolor-link-active) solid;
+    border-radius: tygrid(0.5);
+    box-sizing: border-box;
+    height: tygrid(2);
+    width: tygrid(2);
+  }
+  &::-moz-range-thumb {
+    -webkit-appearance: none;
+    background-color: var(--tycolor-bg);
+    border: 4px var(--tycolor-link-active) solid;
+    border-radius: tygrid(0.5);
+    box-sizing: border-box;
+    height: tygrid(2);
+    width: tygrid(2);
+  }
+  &::-moz-range-progress {
+    -webkit-appearance: none !important;
+    height: 4px;
+    background-color: var(--tycolor-link-active);
+    border-radius: 2px;
   }
 }

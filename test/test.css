@@ -1543,7 +1543,7 @@ input[type="checkbox"] {
   display: inline-block;
   height: 1.5em;
   transition: background-color 333ms, border-color 333ms, transform 333ms;
-  vertical-align: bottom;
+  vertical-align: text-bottom;
   width: 1.5em; }
   /* line 150, source/scss/optional/_forms.scss */
   input[type="checkbox"]:checked {
@@ -1577,7 +1577,7 @@ input[type="radio"] {
   display: inline-block;
   height: 1.5em;
   transition: background-color 333ms, border-color 333ms, transform 333ms;
-  vertical-align: bottom;
+  vertical-align: text-bottom;
   width: 1.5em; }
   /* line 184, source/scss/optional/_forms.scss */
   input[type="radio"]:checked {
@@ -1598,6 +1598,62 @@ input[type="radio"] {
   /* line 201, source/scss/optional/_forms.scss */
   input[type="radio"]:focus {
     border-color: var(--tycolor-link-active); }
+
+/* line 207, source/scss/optional/_forms.scss */
+input[type="range"] {
+  -webkit-appearance: none !important;
+  background-color: transparent;
+  border: 0;
+  height: 1.5rem;
+  min-width: 3rem;
+  outline: none;
+  position: relative;
+  width: 100%; }
+  /* line 216, source/scss/optional/_forms.scss */
+  input[type="range"]::before {
+    background-color: var(--tycolor-border);
+    border: 0;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 4px;
+    outline: none;
+    position: absolute;
+    top: calc(0.75rem - 2px);
+    width: 100%;
+    z-index: -1; }
+  /* line 229, source/scss/optional/_forms.scss */
+  input[type="range"]::-moz-range-track {
+    background-color: var(--tycolor-border);
+    border: 0;
+    border-radius: 2px;
+    height: 4px;
+    outline: none;
+    width: 100%; }
+  /* line 237, source/scss/optional/_forms.scss */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: var(--tycolor-bg);
+    border: 4px var(--tycolor-link-active) solid;
+    border-radius: 0.375rem;
+    box-sizing: border-box;
+    height: 1.5rem;
+    width: 1.5rem; }
+  /* line 246, source/scss/optional/_forms.scss */
+  input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    background-color: var(--tycolor-bg);
+    border: 4px var(--tycolor-link-active) solid;
+    border-radius: 0.375rem;
+    box-sizing: border-box;
+    height: 1.5rem;
+    width: 1.5rem; }
+  /* line 255, source/scss/optional/_forms.scss */
+  input[type="range"]::-moz-range-progress {
+    -webkit-appearance: none !important;
+    height: 4px;
+    background-color: var(--tycolor-link-active);
+    border-radius: 2px; }
 
 /* line 1, source/scss/optional/_media.scss */
 img[data-lazyimage] {
