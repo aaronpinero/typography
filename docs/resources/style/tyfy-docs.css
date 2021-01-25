@@ -157,10 +157,10 @@ textarea {
   --tycolor-text-light:           #707070;
   --tycolor-link-default:         #0066CC;
   --tycolor-link-active:          #cc0066;
-  --tycolor-border:               #cfcfcf;
+  --tycolor-border:               #b8b8b8;
   --tycolor-border-link-default:  rgba(0, 102, 204, 0.5);
   --tycolor-border-link-active:   rgba(204, 0, 102, 0.75);
-  --tycolor-shade:                rgba(17, 17, 17, 0.1); }
+  --tycolor-shade:                rgba(17, 17, 17, 0.15); }
 
 /* line 13, source/scss/essential/_body.scss */
 html {
@@ -811,7 +811,7 @@ blockquote {
       margin-top: 0.875rem; }
     /* line 34, source/scss/optional/_quotes.scss */
     blockquote.pullquote.pullquote-roof-fixed::before, blockquote.pullquote.pullquote-roof-full::before {
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22%23CFCFCF%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22%23B8B8B8%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
       background-size: auto 64px;
       background-position: center center;
       background-repeat: no-repeat;
@@ -1822,10 +1822,10 @@ img[data-lazyimage] {
   --tycolor-text-light:           #919191;
   --tycolor-link-default:         #b3d9ff;
   --tycolor-link-active:          #ffb3d9;
-  --tycolor-border:               #494949;
+  --tycolor-border:               #585858;
   --tycolor-border-link-default:  rgba(179, 217, 255, 0.5);
   --tycolor-border-link-active:   rgba(255, 179, 217, 0.75);
-  --tycolor-shade:                rgba(238, 238, 238, 0.05);
+  --tycolor-shade:                rgba(238, 238, 238, 0.1);
   background-color: var(--tycolor-bg);
   color: var(--tycolor-fg); }
   /* line 30, source/scss/extras/_reverse.scss */
@@ -1949,7 +1949,7 @@ img[data-lazyimage] {
       border-color: #f2aace; }
   /* line 45, source/scss/extras/_reverse.scss */
   .reverse blockquote.pullquote-roof-fixed::before, .reverse blockquote.pullquote-roof-full::before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22%23494949%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22%23585858%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
   /* line 53, source/scss/extras/_reverse.scss */
   .reverse select:not([multiple]) {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='%23919191'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='%23919191'/%3E%3C/svg%3E"); }
@@ -2278,8 +2278,8 @@ strong.tyfy {
 
 /* line 99, docs/resources/scss/tyfy-docs-all.scss */
 pre.codebox {
-  background-color: rgba(17, 17, 17, 0.1);
-  border: 2px #cfcfcf solid;
+  background-color: rgba(17, 17, 17, 0.15);
+  border: 2px #b8b8b8 solid;
   box-shadow: 0 0 0.875rem rgba(0, 0, 0, 0.05) inset;
   box-sizing: border-box;
   overflow: auto;
@@ -2295,7 +2295,7 @@ pre.codebox {
 
 /* line 117, docs/resources/scss/tyfy-docs-all.scss */
 pre.codebox[class*="language-"] {
-  background-color: rgba(17, 17, 17, 0.1) !important;
+  background-color: rgba(17, 17, 17, 0.15) !important;
   font-family: "IBM Plex Mono", courier, monospace !important;
   margin: 0 !important;
   padding: calc(1.75rem - 2px) !important; }
@@ -2326,7 +2326,7 @@ code.val-default {
 
 /* line 149, docs/resources/scss/tyfy-docs-all.scss */
 .form-demo {
-  border: 2px solid #cfcfcf;
+  border: 2px solid #b8b8b8;
   box-shadow: inset 0px 0px 1.75rem rgba(0, 0, 0, 0.05);
   display: flex;
   flex-wrap: wrap;
@@ -2787,7 +2787,7 @@ a[href].navlink-secondary {
 /* line 696, docs/resources/scss/tyfy-docs-all.scss */
 figure.output {
   --tycolor-fg:#407010;
-  border: 2px #cfcfcf solid;
+  border: 2px #b8b8b8 solid;
   box-shadow: 0 0 0.875rem rgba(0, 0, 0, 0.05);
   color: #407010;
   margin-left: 0;
@@ -2796,7 +2796,7 @@ figure.output {
   position: relative; }
   /* line 705, docs/resources/scss/tyfy-docs-all.scss */
   figure.output.reverse {
-    border-color: #494949; }
+    border-color: #585858; }
   /* line 708, docs/resources/scss/tyfy-docs-all.scss */
   figure.output .reverse-toggle {
     border: 2px white solid;

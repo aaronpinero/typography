@@ -73,10 +73,10 @@ $tycolor-text-light:           mix($tycolor-fg,$tycolor-bg,60%) !default;
 $tycolor-link-default:         #0066CC !default;
 $tycolor-link-active:          #cc0066 !default;
 $tycolor-bg-tab-active:        rgba($tycolor-link-active,0.20) !default;
-$tycolor-border:               mix($tycolor-fg,$tycolor-bg,20%) !default;
+$tycolor-border:               mix($tycolor-fg,$tycolor-bg,30%) !default;
 $tycolor-border-link-default:  rgba($tycolor-link-default,0.5) !default;
 $tycolor-border-link-active:   rgba($tycolor-link-active,0.75) !default;
-$tycolor-shade:                rgba($tycolor-fg,0.1) !default;
+$tycolor-shade:                rgba($tycolor-fg,0.15) !default;
 
 // icons
 // path to icon fonts
