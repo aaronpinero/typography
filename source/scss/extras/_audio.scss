@@ -1,0 +1,43 @@
+figure.tyfy-audio-player {
+	margin-left: 0;
+	margin-right: 0;
+	position: relative;
+  audio.hidden {
+	  height: 1px;
+	  position: absolute;
+	  visibility: hidden;
+	  width: 1px;
+	  z-index: 0;
+  }
+  form.player-ui {
+	  align-items: center;
+	  background-color: var(--tycolor-shade);
+	  border-radius: $tyradius-border;
+	  display: flex;
+    span.current,
+    span.duration,
+    span.loading {
+	    flex-shrink: 0;
+      font-family: $tyfont-table;
+      font-size: tyscale(-1);
+      line-height: tylead(tyscale(-1));
+      margin-left: tygrid();
+      margin-right: tygrid();
+	    white-space:nowrap;
+    }
+    input.volume {
+	    flex-shrink:0;
+      margin-left: tygrid();
+      margin-right: tygrid();
+      width: tygrid(5);
+    }
+    button {
+	    flex-shrink: 0;
+	    height: tygrid(3);
+	    overflow: hidden;
+	    padding: 0;
+	    white-space: nowrap;
+	    width: tygrid(3);
+    }
+  }
+}

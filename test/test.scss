@@ -60,10 +60,10 @@ $tycolor-text-light:mix($tycolor-fg,$tycolor-bg,60%);
 $tycolor-link-default:#3366cc;
 $tycolor-link-active:#339933;
 $tycolor-bg-tab-active:rgba($tycolor-link-active,0.2);
-$tycolor-border:mix($tycolor-fg,$tycolor-bg,20%);
+$tycolor-border:mix($tycolor-fg,$tycolor-bg,30%);
 $tycolor-border-link-default:rgba($tycolor-link-default,0.5);
 $tycolor-border-link-active:rgba($tycolor-link-active,0.75);
-$tycolor-shade:rgba($tycolor-fg,0.1);
+$tycolor-shade:rgba($tycolor-fg,0.15);
 
 $tyicons-path:"../dist/fonts/tyicons";
 
@@ -76,11 +76,12 @@ $tycolor-rev-bg-tab-active:rgba($tycolor-rev-link-active,0.12);
 $tycolor-rev-border:mix($tycolor-rev-fg,$tycolor-rev-bg,20%);
 $tycolor-rev-border-link-default:rgba($tycolor-rev-link-default,0.5);
 $tycolor-rev-border-link-active:rgba($tycolor-rev-link-active,0.75);
-$tycolor-rev-shade:rgba($tycolor-rev-fg,0.05);
+$tycolor-rev-shade:rgba($tycolor-rev-fg,0.1);
 
 @import "../source/scss/tyfy.scss";
 @import "../source/scss/extras/_effects.scss";
 @import "../source/scss/extras/_responsive_text.scss";
+@import "../source/scss/extras/_audio.scss";
 
 body {
   margin-left:auto;
