@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <polygon fill="black" points="31 16 33 16 33 47.9975586 31 47.9975586 23 39.9975586 13 39.9975586 13 23.9975586 23 23.9975586"></polygon>
-  <polygon fill="black" points="51 27.8269958 46.8 32.0269958 51 36.2269958 48.2 39.0269958 44 34.8269958 39.8 39.0269958 37 36.2269958 41.2 32.0269958 37 27.8269958 39.8 25.0269958 44 29.2269958 48.2 25.0269958"></polygon>
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>muted</title>
+    <desc>Created with Sketch.</desc>
+    <g id="muted" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, 5.000000)" fill="#000000">
+            <polygon id="Path" points="30.3157895 1.17392937e-13 33.6842105 1.16671293e-13 33.6842105 53.890625 30.3157895 53.890625 16.8421053 40.4169408 0 40.4169408 0 13.4695724 16.8421053 13.4695724"></polygon>
+            <polygon id="Path" points="64 19.9191509 56.9263158 26.9928351 64 34.0665193 59.2842105 38.7823088 52.2105263 31.7086246 45.1368421 38.7823088 40.4210526 34.0665193 47.4947368 26.9928351 40.4210526 19.9191509 45.1368421 15.2033614 52.2105263 22.2770456 59.2842105 15.2033614"></polygon>
+        </g>
+    </g>
 </svg>
