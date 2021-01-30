@@ -1,0 +1,205 @@
+
+  $tyicons-angle-down: "\ea01";
+
+  $tyicons-angle-left: "\ea02";
+
+  $tyicons-angle-right: "\ea03";
+
+  $tyicons-angle-up: "\ea04";
+
+  $tyicons-angle-up-down: "\ea05";
+
+  $tyicons-bars: "\ea06";
+
+  $tyicons-check: "\ea07";
+
+  $tyicons-dash: "\ea08";
+
+  $tyicons-muted: "\ea09";
+
+  $tyicons-pause: "\ea0a";
+
+  $tyicons-play: "\ea0b";
+
+  $tyicons-quote-left: "\ea0c";
+
+  $tyicons-quote-right: "\ea0d";
+
+  $tyicons-search: "\ea0e";
+
+  $tyicons-sound: "\ea0f";
+
+  $tyicons-x: "\ea10";
+
+
+@font-face {
+  font-family: "tyicons";
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("./tyicons.eot");
+  src: url("./tyicons.eot?#iefix") format("embedded-opentype"), url("./tyicons.woff2") format("woff2"), url("./tyicons.woff") format("woff"), url("./tyicons.ttf") format("truetype"), url("./tyicons.svg#tyicons") format("svg");
+}
+
+%tyicons {
+display: inline-block;
+  font-family: "tyicons";
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tyicons {
+  @extend %tyicons;
+}
+
+.tyicons-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.tyicons-xs {
+  font-size: 0.75em;
+}
+
+.tyicons-sm {
+  font-size: 0.875em;
+}
+
+.tyicons-1x {
+  font-size: 1em;
+}
+
+.tyicons-2x {
+  font-size: 2em;
+}
+
+.tyicons-3x {
+  font-size: 3em;
+}
+
+.tyicons-4x {
+  font-size: 4em;
+}
+
+.tyicons-5x {
+  font-size: 5em;
+}
+
+.tyicons-6x {
+  font-size: 6em;
+}
+
+.tyicons-7x {
+  font-size: 7em;
+}
+
+.tyicons-8x {
+  font-size: 8em;
+}
+
+.tyicons-9x {
+  font-size: 9em;
+}
+
+.tyicons-10x {
+  font-size: 10em;
+}
+
+.tyicons-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.tyicons-border {
+  border: solid 0.08em #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.tyicons-pull-left {
+  float: left;
+}
+
+.tyicons-pull-right {
+  float: right;
+}
+
+.tyicons.tyicons-pull-left {
+  margin-right: 0.3em;
+}
+
+.tyicons.tyicons-pull-right {
+  margin-left: 0.3em;
+}
+
+
+.tyicons-angle-down::before {
+    content: "\ea01";
+}
+
+.tyicons-angle-left::before {
+    content: "\ea02";
+}
+
+.tyicons-angle-right::before {
+    content: "\ea03";
+}
+
+.tyicons-angle-up::before {
+    content: "\ea04";
+}
+
+.tyicons-angle-up-down::before {
+    content: "\ea05";
+}
+
+.tyicons-bars::before {
+    content: "\ea06";
+}
+
+.tyicons-check::before {
+    content: "\ea07";
+}
+
+.tyicons-dash::before {
+    content: "\ea08";
+}
+
+.tyicons-muted::before {
+    content: "\ea09";
+}
+
+.tyicons-pause::before {
+    content: "\ea0a";
+}
+
+.tyicons-play::before {
+    content: "\ea0b";
+}
+
+.tyicons-quote-left::before {
+    content: "\ea0c";
+}
+
+.tyicons-quote-right::before {
+    content: "\ea0d";
+}
+
+.tyicons-search::before {
+    content: "\ea0e";
+}
+
+.tyicons-sound::before {
+    content: "\ea0f";
+}
+
+.tyicons-x::before {
+    content: "\ea10";
+}
+

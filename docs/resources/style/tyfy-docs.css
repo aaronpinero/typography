@@ -816,7 +816,7 @@ blockquote {
       background-position: center center;
       background-repeat: no-repeat;
       color: var(--tycolor-border);
-      content: "\ea0a";
+      content: "\ea0d";
       display: block;
       font-family: tyicons;
       font-size: 1.75rem;
@@ -1799,20 +1799,36 @@ img[data-lazyimage] {
   content: "\ea08"; }
 
 /* line 70, source/scss/extras/_icons.scss */
-.tyicons-quote-left::before {
+.tyicons-muted::before {
   content: "\ea09"; }
 
 /* line 73, source/scss/extras/_icons.scss */
-.tyicons-quote-right::before {
+.tyicons-pause::before {
   content: "\ea0a"; }
 
 /* line 76, source/scss/extras/_icons.scss */
-.tyicons-search::before {
+.tyicons-play::before {
   content: "\ea0b"; }
 
 /* line 79, source/scss/extras/_icons.scss */
-.tyicons-x::before {
+.tyicons-quote-left::before {
   content: "\ea0c"; }
+
+/* line 82, source/scss/extras/_icons.scss */
+.tyicons-quote-right::before {
+  content: "\ea0d"; }
+
+/* line 85, source/scss/extras/_icons.scss */
+.tyicons-search::before {
+  content: "\ea0e"; }
+
+/* line 88, source/scss/extras/_icons.scss */
+.tyicons-sound::before {
+  content: "\ea0f"; }
+
+/* line 91, source/scss/extras/_icons.scss */
+.tyicons-x::before {
+  content: "\ea10"; }
 
 /* line 14, source/scss/extras/_reverse.scss */
 .reverse {
@@ -2531,7 +2547,7 @@ nav.nav-main.js-nav-active h1 {
 
 /* line 361, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main.nav-opened h1::before {
-  content: "\ea0c"; }
+  content: "\ea10"; }
 
 @media (min-width: 60.375rem) {
   /* line 370, docs/resources/scss/tyfy-docs-all.scss */
