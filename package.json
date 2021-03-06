@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/aaronpinero/typography#readme",
   "devDependencies": {
-    "@frctl/fractal": "^1.4.1",
+    "@frctl/fractal": "^1.5.4",
     "autoprefixer": "^10.2.4",
     "glob": "^7.1.6",
     "nodemon": "^1.19.3",
