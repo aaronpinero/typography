@@ -12,7 +12,7 @@
     "build-css-test": "./bin/build-css-test",
     "build-icons": "./bin/build-icons",
     "build-docs": "node docs/docs.js",
-    "build-js": "node source/terser.js",
+    "build-js": "node source/scripts.js",
     "fractal-start": "fractal start --sync",
     "watch-css": "./bin/watch-css",
     "watch-css-dev": "./bin/watch-css-dev",
@@ -35,7 +35,7 @@
   "devDependencies": {
     "@frctl/fractal": "^1.4.1",
     "autoprefixer": "^10.2.4",
-    "glob": "^7.1.4",
+    "glob": "^7.1.6",
     "nodemon": "^1.19.3",
     "postcss-cli": "^8.3.1",
     "sass": "^1.32.8",
