@@ -1,65 +1,65 @@
 figure.tyfy-audio-player {
-	margin-left: 0;
-	margin-right: 0;
-	position: relative;
+  margin-left:0;
+  margin-right:0;
+  position:relative;
   audio.hidden {
-	  height: 1px;
-	  position: absolute;
-	  visibility: hidden;
-	  width: 1px;
-	  z-index: 0;
+    height:1px;
+    position:absolute;
+    visibility:hidden;
+    width:1px;
+    z-index:0;
   }
   form.player-ui {
-	  align-items: center;
-	  background-color: var(--tycolor-shade);
-	  border-radius: $tyradius-border;
-	  display: flex;
+    align-items:center;
+    background-color:var(--tycolor-shade);
+    border-radius:$tyradius-border;
+    display:flex;
     span.current,
     span.duration,
     span.loading {
-	    flex-shrink: 0;
-      font-family: $tyfont-table;
-      font-size: tyscale(-1);
-      line-height: tylead(tyscale(-1));
-      margin-left: tygrid();
-      margin-right: tygrid();
-	    white-space:nowrap;
+      flex-shrink:0;
+      font-family:$tyfont-table;
+      font-size:tyscale(-1);
+      line-height:tylead(tyscale(-1));
+      margin-left:tygrid();
+      margin-right:tygrid();
+      white-space:nowrap;
     }
     input.volume {
-	    flex-shrink:0;
-      margin-left: tygrid();
-      margin-right: tygrid();
-      width: tygrid(5);
+      flex-shrink:0;
+      margin-left:tygrid();
+      margin-right:tygrid();
+      width:tygrid(5);
     }
     button {
-	    flex-shrink: 0;
-	    height: tygrid(3);
-	    overflow: hidden;
-	    padding: 0;
-	    white-space: nowrap;
-	    width: tygrid(3);
+      flex-shrink:0;
+      height:tygrid(3);
+      overflow:hidden;
+      padding:0;
+      white-space:nowrap;
+      width:tygrid(3);
       &::before {
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size:contain;
         display:block;
-        font-family: tyicons;
-        font-size: tygrid(1.5);
-        line-height: tygrid(3);
-        height: tygrid(3);
-        width: tygrid(3);
+        font-family:tyicons;
+        font-size:tygrid(1.5);
+        line-height:tygrid(3);
+        height:tygrid(3);
+        width:tygrid(3);
       }
       &.play-pause.paused::before {
-        content: tychar($tyicons-play);
+        content:tychar($tyicons-play);
       }
       &.play-pause.playing::before {
-        content: tychar($tyicons-pause);
+        content:tychar($tyicons-pause);
       }
       &.audio.sound::before {
-        content: tychar($tyicons-sound);
+        content:tychar($tyicons-sound);
       }
       &.audio.muted::before {
-        content: tychar($tyicons-muted);
+        content:tychar($tyicons-muted);
       }
     }
   }

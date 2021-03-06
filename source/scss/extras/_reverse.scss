@@ -8,7 +8,7 @@ $tycolor-rev-bg-tab-active:       rgba($tycolor-rev-link-active,0.12) !default;
 $tycolor-rev-border:              mix($tycolor-rev-fg,$tycolor-rev-bg,20%) !default;
 $tycolor-rev-border-link-default: rgba($tycolor-rev-link-default,0.5) !default;
 $tycolor-rev-border-link-active:  rgba($tycolor-rev-link-active,0.75) !default;
-$tycolor-rev-shade:               rgba($tycolor-rev-fg,0.10) !default;
+$tycolor-rev-shade:               rgba($tycolor-rev-fg,0.1) !default;
 
 // root styles
 .reverse {

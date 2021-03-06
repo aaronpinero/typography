@@ -63,7 +63,7 @@
       transition-duration:tyduration(move);
       transition-property:background-color,color,top,transform;
       transition-timing-function:ease-in-out;
-        &::before {
+      &::before {
         border-radius:50%;
         color:var(--tycolor-text-light);
         content:tychar($tyicons-angle-up);
