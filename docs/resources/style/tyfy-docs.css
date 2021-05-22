@@ -1,65 +1,66 @@
 @keyframes fadein {
   from {
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
-    opacity: 1; } }
-
-/* line 3, source/scss/essential/_normalize.scss */
+    opacity: 1;
+  }
+}
 html {
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+}
 
-/* line 6, source/scss/essential/_normalize.scss */
 body {
-  margin: 0; }
+  margin: 0;
+}
 
-/* line 9, source/scss/essential/_normalize.scss */
 main {
-  display: block; }
+  display: block;
+}
 
-/* line 12, source/scss/essential/_normalize.scss */
 a {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
-/* line 15, source/scss/essential/_normalize.scss */
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted; }
+  text-decoration: underline dotted;
+}
 
-/* line 20, source/scss/essential/_normalize.scss */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
-/* line 24, source/scss/essential/_normalize.scss */
 code,
 kbd,
 pre,
 samp {
   font-family: "IBM Plex Mono", courier, monospace;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
-/* line 31, source/scss/essential/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
-/* line 38, source/scss/essential/_normalize.scss */
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
-/* line 41, source/scss/essential/_normalize.scss */
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
-/* line 44, source/scss/essential/_normalize.scss */
 img {
-  border-style: none; }
+  border-style: none;
+}
 
-/* line 47, source/scss/essential/_normalize.scss */
 button,
 input,
 optgroup,
@@ -67,173 +68,167 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
-  margin: 0; }
+  margin: 0;
+}
 
-/* line 57, source/scss/essential/_normalize.scss */
 button,
 input {
-  overflow: visible; }
+  overflow: visible;
+}
 
-/* line 61, source/scss/essential/_normalize.scss */
 button,
 select {
-  text-transform: none; }
+  text-transform: none;
+}
 
-/* line 65, source/scss/essential/_normalize.scss */
 button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button; }
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
 
-/* line 71, source/scss/essential/_normalize.scss */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
-/* line 78, source/scss/essential/_normalize.scss */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
 
-/* line 84, source/scss/essential/_normalize.scss */
 fieldset {
   border-width: 2px;
   padding: calc(1.75rem - 2px);
-  padding-top: calc(1.3125rem - 2px); }
+  padding-top: calc(1.3125rem - 2px);
+}
 
-/* line 89, source/scss/essential/_normalize.scss */
 legend {
   box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
   padding: 0;
-  white-space: normal; }
+  white-space: normal;
+}
 
-/* line 97, source/scss/essential/_normalize.scss */
 textarea {
-  overflow: auto; }
+  overflow: auto;
+}
 
-/* line 100, source/scss/essential/_normalize.scss */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
-  padding: 0; }
+  padding: 0;
+}
 
-/* line 105, source/scss/essential/_normalize.scss */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
 
-/* line 109, source/scss/essential/_normalize.scss */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
-  outline-offset: -2px; }
+  outline-offset: -2px;
+}
 
-/* line 113, source/scss/essential/_normalize.scss */
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 
-/* line 116, source/scss/essential/_normalize.scss */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  font: inherit; }
+  font: inherit;
+}
 
-/* line 120, source/scss/essential/_normalize.scss */
 [hidden] {
-  display: none; }
+  display: none;
+}
 
-/* line 1, source/scss/essential/_body.scss */
 :root {
-  --tycolor-bg:                   white;
-  --tycolor-bg-tab-active:        rgba(204, 0, 102, 0.2);
-  --tycolor-fg:                   #111111;
-  --tycolor-text-light:           #707070;
-  --tycolor-link-default:         #0066CC;
-  --tycolor-link-active:          #cc0066;
-  --tycolor-border:               #b8b8b8;
-  --tycolor-border-link-default:  rgba(0, 102, 204, 0.5);
-  --tycolor-border-link-active:   rgba(204, 0, 102, 0.75);
-  --tycolor-shade:                rgba(17, 17, 17, 0.15); }
+  --tycolor-bg: white;
+  --tycolor-bg-tab-active: rgba(204, 0, 102, 0.2);
+  --tycolor-fg: #111111;
+  --tycolor-text-light: #707070;
+  --tycolor-link-default: #0066cc;
+  --tycolor-link-active: #cc0066;
+  --tycolor-border: #b8b8b8;
+  --tycolor-border-link-default: rgba(0, 102, 204, 0.5);
+  --tycolor-border-link-active: rgba(204, 0, 102, 0.75);
+  --tycolor-shade: rgba(17, 17, 17, 0.15);
+}
 
-/* line 13, source/scss/essential/_body.scss */
 html {
-  font-size: 100%; }
+  font-size: 100%;
+}
 
-/* line 16, source/scss/essential/_body.scss */
 body {
   background: var(--tycolor-bg);
   color: var(--tycolor-fg);
   font-family: "IBM Plex Serif", georgia, serif;
   font-size: 1rem;
-  line-height: 1.75rem; }
+  line-height: 1.75rem;
+}
 
-/* line 2, source/scss/essential/_spacing.scss */
 * {
   margin-top: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
-/* line 99, source/scss/required/_mixins.scss */
 body * + * {
-  margin-top: 1.75rem; }
-
-/* line 81, source/scss/required/_mixins.scss */
+  margin-top: 1.75rem;
+}
 body dl * + *, body ol * + *, body ul * + * {
-  margin-top: 0.875rem; }
-
-/* line 86, source/scss/required/_mixins.scss */
+  margin-top: 0.875rem;
+}
 body dl * + dd {
-  margin-top: 0; }
-
-/* line 69, source/scss/required/_mixins.scss */
+  margin-top: 0;
+}
 body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
 body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h2,
 body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h3,
 body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h4,
 body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
 body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
-  margin-top: 2.625rem; }
+  margin-top: 2.625rem;
+}
 
-/* line 99, source/scss/required/_mixins.scss */
 .tymargins-on * + * {
-  margin-top: 1.75rem; }
-
-/* line 81, source/scss/required/_mixins.scss */
+  margin-top: 1.75rem;
+}
 .tymargins-on dl * + *, .tymargins-on ol * + *, .tymargins-on ul * + * {
-  margin-top: 0.875rem; }
-
-/* line 86, source/scss/required/_mixins.scss */
+  margin-top: 0.875rem;
+}
 .tymargins-on dl * + dd {
-  margin-top: 0; }
-
-/* line 69, source/scss/required/_mixins.scss */
+  margin-top: 0;
+}
 .tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
 .tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h2,
 .tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h3,
 .tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h4,
 .tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
 .tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
-  margin-top: 2.625rem; }
+  margin-top: 2.625rem;
+}
 
-/* line 132, source/scss/required/_mixins.scss */
 .tymargins-off * + * {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
-/* line 93, source/scss/required/_mixins.scss */
 .tymargins-once > * + * {
-  margin-top: 1.75rem; }
+  margin-top: 1.75rem;
+}
 
-/* line 124, source/scss/required/_mixins.scss */
 .tymargins-skip > * + * {
-  margin-top: 0; }
+  margin-top: 0;
+}
 
-/* line 2, source/scss/optional/_paragraphs.scss */
 .justified p,
 p.justified {
   /* autoprefixer: off */
@@ -244,58 +239,59 @@ p.justified {
   -webkit-hyphenate-limit-after: 3;
   -webkit-hyphenate-limit-before: 3;
   hyphenate-limit-chars: 6 3 3;
-  text-align: justify; }
+  text-align: justify;
+}
 
-/* line 14, source/scss/optional/_paragraphs.scss */
 p.lede {
   font-size: 1.44rem;
-  line-height: 2.625rem; }
+  line-height: 2.625rem;
+}
 
 @media (min-width: 50em) {
-  /* line 18, source/scss/optional/_paragraphs.scss */
   .cols2 {
     columns: 2;
     column-gap: 2.625rem;
     orphans: 2;
-    widows: 2; } }
+    widows: 2;
+  }
+}
 
-/* line 2, source/scss/optional/_headings.scss */
 h6,
 .tyfont-size-h6 {
   font-size: 1rem;
-  line-height: 1.75rem; }
+  line-height: 1.75rem;
+}
 
-/* line 7, source/scss/optional/_headings.scss */
 h5,
 .tyfont-size-h5 {
   font-size: 1.2rem;
-  line-height: 1.75rem; }
+  line-height: 1.75rem;
+}
 
-/* line 12, source/scss/optional/_headings.scss */
 h4,
 .tyfont-size-h4 {
   font-size: 1.44rem;
-  line-height: 1.75rem; }
+  line-height: 1.75rem;
+}
 
-/* line 17, source/scss/optional/_headings.scss */
 h3,
 .tyfont-size-h3 {
   font-size: 1.728rem;
-  line-height: 1.75rem; }
+  line-height: 1.75rem;
+}
 
-/* line 22, source/scss/optional/_headings.scss */
 h2,
 .tyfont-size-h2 {
   font-size: 2.0736rem;
-  line-height: 2.625rem; }
+  line-height: 2.625rem;
+}
 
-/* line 27, source/scss/optional/_headings.scss */
 h1,
 .tyfont-size-h1 {
-  font-size: 2.98598rem;
-  line-height: 3.5rem; }
+  font-size: 2.985984rem;
+  line-height: 3.5rem;
+}
 
-/* line 34, source/scss/optional/_headings.scss */
 h1,
 h2,
 h3,
@@ -303,400 +299,42 @@ h4,
 h5,
 h6 {
   font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+}
 
-/* line 43, source/scss/optional/_headings.scss */
 h5 {
-  font-style: italic; }
+  font-style: italic;
+}
 
-/* line 46, source/scss/optional/_headings.scss */
 h6 {
   letter-spacing: 0.05em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
-/* line 1, source/scss/optional/_links.scss */
 a {
   color: var(--tycolor-fg);
   text-decoration: none;
   transition-duration: 250ms;
-  transition-property: background-color,border-color,color; }
-  /* line 6, source/scss/optional/_links.scss */
-  a[href] {
-    border-bottom-color: var(--tycolor-border-link-default);
-    color: var(--tycolor-link-default); }
-    /* line 9, source/scss/optional/_links.scss */
-    a[href]:hover, a[href]:active {
-      border-bottom-color: var(--tycolor-border-link-active);
-      color: var(--tycolor-link-active); }
-  /* line 16, source/scss/optional/_links.scss */
-  .links-underlined a[href] {
-    border-bottom-style: solid;
-    border-bottom-width: 2px; }
-  /* line 22, source/scss/optional/_links.scss */
-  .links-notunderlined a[href] {
-    border-bottom-style: none;
-    border-bottom-width: 0; }
-  /* line 27, source/scss/optional/_links.scss */
-  a[href].tybutton {
-    background-color: #0066CC;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0;
-    padding: 0.4375rem 1.3125rem;
-    text-decoration: none;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    transition: all 250ms;
-    vertical-align: middle; }
-    /* line 188, source/scss/required/_mixins.scss */
-    a[href].tybutton:hover, a[href].tybutton:active, a[href].tybutton[href]:hover, a[href].tybutton[href]:active {
-      background-color: #cc0066;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
-      color: white; }
-    /* line 199, source/scss/required/_mixins.scss */
-    a[href].tybutton:active, a[href].tybutton[href]:active {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 202, source/scss/required/_mixins.scss */
-    a[href].tybutton:focus, a[href].tybutton[href]:focus {
-      outline: none; }
-  /* line 30, source/scss/optional/_links.scss */
-  a[href].tybutton-outline {
-    background-color: #0066CC;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0;
-    padding: 0.4375rem 1.3125rem;
-    text-decoration: none;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    transition: all 250ms;
-    vertical-align: middle;
-    background-color: transparent;
-    border: 2px #0066CC solid;
-    color: #0066CC;
-    padding: calc(0.4375rem - 2px) calc(1.3125rem - 2px); }
-    /* line 188, source/scss/required/_mixins.scss */
-    a[href].tybutton-outline:hover, a[href].tybutton-outline:active, a[href].tybutton-outline[href]:hover, a[href].tybutton-outline[href]:active {
-      background-color: #cc0066;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
-      color: white; }
-    /* line 199, source/scss/required/_mixins.scss */
-    a[href].tybutton-outline:active, a[href].tybutton-outline[href]:active {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 202, source/scss/required/_mixins.scss */
-    a[href].tybutton-outline:focus, a[href].tybutton-outline[href]:focus {
-      outline: none; }
-    /* line 229, source/scss/required/_mixins.scss */
-    a[href].tybutton-outline:hover, a[href].tybutton-outline:active, a[href].tybutton-outline[href]:hover, a[href].tybutton-outline[href]:active {
-      border-color: #c20061; }
-
-/* line 2, source/scss/optional/_lists.scss */
-ol,
-ul {
-  padding-left: 2.625rem; }
-
-/* line 6, source/scss/optional/_lists.scss */
-dt {
-  font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
-  font-weight: 700; }
-
-/* line 10, source/scss/optional/_lists.scss */
-dd {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 2.625rem; }
-
-/* line 18, source/scss/optional/_lists.scss */
-ol ol, ol ul, ul ol, ul ul {
-  margin-top: 0.875rem; }
-
-/* line 23, source/scss/optional/_lists.scss */
-.tymargins-off ol ol, .tymargins-off ol ul, ol.tymargins-off ol, ol.tymargins-off ul, .tymargins-off ul ol, .tymargins-off ul ul, ul.tymargins-off ol, ul.tymargins-off ul {
-  margin-top: 0; }
-
-/* line 32, source/scss/optional/_lists.scss */
-ul.list-icons li {
-  list-style-type: none;
-  position: relative; }
-  /* line 35, source/scss/optional/_lists.scss */
-  ul.list-icons li::before {
-    color: var(--tycolor-text-light);
-    font-family: tyicons;
-    font-size: 66%;
-    margin-right: 0.4375rem;
-    position: absolute;
-    right: 100%;
-    top: 0; }
-
-/* line 45, source/scss/optional/_lists.scss */
-ul.list-icons.list-icons-angle li::before {
-  content: "\ea03"; }
-
-/* line 48, source/scss/optional/_lists.scss */
-ul.list-icons.list-icons-dash li::before {
-  content: "\ea08";
-  margin-top: 0.1em; }
-
-/* line 52, source/scss/optional/_lists.scss */
-ul.list-icons.list-icons-check li::before {
-  content: "\ea07"; }
-
-/* line 56, source/scss/optional/_lists.scss */
-ul.list-nobullet {
-  padding-left: 0; }
-  /* line 58, source/scss/optional/_lists.scss */
-  ul.list-nobullet li {
-    list-style-type: none; }
-  /* line 62, source/scss/optional/_lists.scss */
-  ul.list-nobullet.list-indented li {
-    box-sizing: border-box;
-    padding-left: 1.75rem;
-    text-indent: -1.75rem; }
-  /* line 67, source/scss/optional/_lists.scss */
-  ul.list-nobullet.list-indented ol, ul.list-nobullet.list-indented ul {
-    margin-left: -1.75rem; }
-  @media (min-width: 35em) {
-    /* line 77, source/scss/optional/_lists.scss */
-    ul.list-nobullet.list-cols-2 li, ul.list-nobullet.list-cols-3 li, ul.list-nobullet.list-grid-2 li, ul.list-nobullet.list-grid-3 li, ul.list-nobullet.list-grid-4 li {
-      margin-left: 0; } }
-
-/* line 83, source/scss/optional/_lists.scss */
-ul.list-flex {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0; }
-  /* line 132, source/scss/required/_mixins.scss */
-  ul.list-flex * + * {
-    margin-top: 0; }
-  /* line 88, source/scss/optional/_lists.scss */
-  ul.list-flex li {
-    margin-left: 1.75rem; }
-  /* line 91, source/scss/optional/_lists.scss */
-  ul.list-flex.list-flex-center {
-    justify-content: center; }
-  /* line 94, source/scss/optional/_lists.scss */
-  ul.list-flex.list-flex-right {
-    justify-content: flex-end; }
-  /* line 98, source/scss/optional/_lists.scss */
-  ul.list-flex.list-nobullet li {
-    margin-left: 0; }
-
-@media (min-width: 35em) {
-  /* line 108, source/scss/optional/_lists.scss */
-  ol.list-cols-2, ol.list-cols-3,
-  ul.list-cols-2,
-  ul.list-cols-3 {
-    columns: 2;
-    column-gap: 2.625rem;
-    margin-bottom: -0.875rem;
-    padding-left: 0; }
-    /* line 132, source/scss/required/_mixins.scss */
-    ol.list-cols-2 * + *, ol.list-cols-3 * + *,
-    ul.list-cols-2 * + *,
-    ul.list-cols-3 * + * {
-      margin-top: 0; }
-    /* line 116, source/scss/optional/_lists.scss */
-    ol.list-cols-2 li, ol.list-cols-3 li,
-    ul.list-cols-2 li,
-    ul.list-cols-3 li {
-      -webkit-column-break-inside: avoid;
-      page-break-inside: avoid;
-      break-inside: avoid;
-      margin-left: 1.75rem;
-      padding-bottom: 0.875rem; }
-    /* line 125, source/scss/optional/_lists.scss */
-    ol.list-cols-2.tymargins-off li,
-    .tymargins-off ol.list-cols-2 li, ol.list-cols-3.tymargins-off li,
-    .tymargins-off ol.list-cols-3 li,
-    ul.list-cols-2.tymargins-off li,
-    .tymargins-off
-    ul.list-cols-2 li,
-    ul.list-cols-3.tymargins-off li,
-    .tymargins-off
-    ul.list-cols-3 li {
-      padding-bottom: 0; } }
-
-@media (min-width: 55em) {
-  /* line 131, source/scss/optional/_lists.scss */
-  ol.list-cols-3,
-  ul.list-cols-3 {
-    columns: 3; } }
-
-@media (min-width: 35em) {
-  /* line 137, source/scss/optional/_lists.scss */
-  ol.list-grid-2, ol.list-grid-3, ol.list-grid-4,
-  ul.list-grid-2,
-  ul.list-grid-3,
-  ul.list-grid-4 {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0; }
-    /* line 144, source/scss/optional/_lists.scss */
-    ol.list-grid-2 li, ol.list-grid-3 li, ol.list-grid-4 li,
-    ul.list-grid-2 li,
-    ul.list-grid-3 li,
-    ul.list-grid-4 li {
-      box-sizing: border-box;
-      margin-left: 1.75rem;
-      width: calc(50% - 2.625rem - 1.3125rem); }
-      /* line 148, source/scss/optional/_lists.scss */
-      ol.list-grid-2 li:nth-child(2), ol.list-grid-3 li:nth-child(2), ol.list-grid-4 li:nth-child(2),
-      ul.list-grid-2 li:nth-child(2),
-      ul.list-grid-3 li:nth-child(2),
-      ul.list-grid-4 li:nth-child(2) {
-        margin-top: 0; }
-      /* line 151, source/scss/optional/_lists.scss */
-      ol.list-grid-2 li:nth-child(2n+1), ol.list-grid-3 li:nth-child(2n+1), ol.list-grid-4 li:nth-child(2n+1),
-      ul.list-grid-2 li:nth-child(2n+1),
-      ul.list-grid-3 li:nth-child(2n+1),
-      ul.list-grid-4 li:nth-child(2n+1) {
-        margin-right: 2.625rem; }
-    /* line 156, source/scss/optional/_lists.scss */
-    ol.list-grid-2.list-nobullet li, ol.list-grid-3.list-nobullet li, ol.list-grid-4.list-nobullet li,
-    ul.list-grid-2.list-nobullet li,
-    ul.list-grid-3.list-nobullet li,
-    ul.list-grid-4.list-nobullet li {
-      width: calc(50% - 1.3125rem); } }
-
-@media (min-width: 55em) {
-  /* line 165, source/scss/optional/_lists.scss */
-  ol.list-grid-3 li, ol.list-grid-4 li,
-  ul.list-grid-3 li,
-  ul.list-grid-4 li {
-    width: calc(33.33% - 2.625rem - 1.75088rem); }
-    /* line 167, source/scss/optional/_lists.scss */
-    ol.list-grid-3 li:nth-child(3), ol.list-grid-4 li:nth-child(3),
-    ul.list-grid-3 li:nth-child(3),
-    ul.list-grid-4 li:nth-child(3) {
-      margin-top: 0; }
-    /* line 170, source/scss/optional/_lists.scss */
-    ol.list-grid-3 li:nth-child(2n+1), ol.list-grid-4 li:nth-child(2n+1),
-    ul.list-grid-3 li:nth-child(2n+1),
-    ul.list-grid-4 li:nth-child(2n+1) {
-      margin-right: 0; }
-    /* line 173, source/scss/optional/_lists.scss */
-    ol.list-grid-3 li:nth-child(3n+1), ol.list-grid-3 li:nth-child(3n+2), ol.list-grid-4 li:nth-child(3n+1), ol.list-grid-4 li:nth-child(3n+2),
-    ul.list-grid-3 li:nth-child(3n+1),
-    ul.list-grid-3 li:nth-child(3n+2),
-    ul.list-grid-4 li:nth-child(3n+1),
-    ul.list-grid-4 li:nth-child(3n+2) {
-      margin-right: 2.625rem; }
-  /* line 179, source/scss/optional/_lists.scss */
-  ol.list-grid-3.list-nobullet li, ol.list-grid-4.list-nobullet li,
-  ul.list-grid-3.list-nobullet li,
-  ul.list-grid-4.list-nobullet li {
-    width: calc(33.33% - 1.75088rem); } }
-
-@media (min-width: 75em) {
-  /* line 187, source/scss/optional/_lists.scss */
-  ol.list-grid-4 li,
-  ul.list-grid-4 li {
-    width: calc(25% - 2.625rem - 1.96875rem); }
-    /* line 189, source/scss/optional/_lists.scss */
-    ol.list-grid-4 li:nth-child(4),
-    ul.list-grid-4 li:nth-child(4) {
-      margin-top: 0; }
-    /* line 192, source/scss/optional/_lists.scss */
-    ol.list-grid-4 li:nth-child(3n+1), ol.list-grid-4 li:nth-child(3n+2),
-    ul.list-grid-4 li:nth-child(3n+1),
-    ul.list-grid-4 li:nth-child(3n+2) {
-      margin-right: 0; }
-    /* line 196, source/scss/optional/_lists.scss */
-    ol.list-grid-4 li:nth-child(4n+1), ol.list-grid-4 li:nth-child(4n+2), ol.list-grid-4 li:nth-child(4n+3),
-    ul.list-grid-4 li:nth-child(4n+1),
-    ul.list-grid-4 li:nth-child(4n+2),
-    ul.list-grid-4 li:nth-child(4n+3) {
-      margin-right: 2.625rem; }
-  /* line 203, source/scss/optional/_lists.scss */
-  ol.list-grid-4.list-nobullet li,
-  ul.list-grid-4.list-nobullet li {
-    width: calc(25% - 1.96875rem); } }
-
-/* line 1, source/scss/optional/_utility.scss */
-b {
-  font-weight: 700; }
-
-/* line 4, source/scss/optional/_utility.scss */
-code {
-  background-color: var(--tycolor-shade);
-  border-radius: 0.125em;
-  font-family: "IBM Plex Mono", courier, monospace;
-  padding-left: 0.125em;
-  padding-right: 0.125em; }
-  /* line 10, source/scss/optional/_utility.scss */
-  code.code-nobg {
-    background-color: transparent;
-    padding-left: 0;
-    padding-right: 0; }
-
-/* line 16, source/scss/optional/_utility.scss */
-em {
-  font-style: italic; }
-
-/* line 19, source/scss/optional/_utility.scss */
-hr {
-  border: none;
-  border-top: 2px var(--tycolor-border) solid;
-  height: 0;
-  margin-bottom: 2.625rem;
-  margin-top: 2.625rem; }
-  /* line 27, source/scss/optional/_utility.scss */
-  .tymargins-off hr {
-    margin-bottom: 0;
-    margin-top: 0; }
-  /* line 31, source/scss/optional/_utility.scss */
-  .tymargins-skip > hr {
-    margin-bottom: 0;
-    margin-top: 0; }
-  /* line 35, source/scss/optional/_utility.scss */
-  .tymargins-on hr {
-    margin-bottom: 2.625rem;
-    margin-top: 2.625rem; }
-
-/* line 40, source/scss/optional/_utility.scss */
-i {
-  font-style: italic; }
-
-/* line 43, source/scss/optional/_utility.scss */
-pre {
-  font-family: "IBM Plex Mono", courier, monospace; }
-
-/* line 46, source/scss/optional/_utility.scss */
-small {
-  font-size: 83.33333%; }
-
-/* line 49, source/scss/optional/_utility.scss */
-strong {
-  font-weight: 700; }
-
-/* line 53, source/scss/optional/_utility.scss */
-span.dropcap {
-  display: inline-block;
-  float: left;
-  font-size: 400%;
-  font-weight: bold;
-  line-height: 100%;
-  margin: 0 0.25em 0 0.125em;
-  text-align: center; }
-
-/* line 62, source/scss/optional/_utility.scss */
-span.smallcaps {
-  font-size: smaller;
-  letter-spacing: 0.075em;
-  margin-right: -0.0375em;
-  text-transform: uppercase; }
-
-/* line 69, source/scss/optional/_utility.scss */
-.tybutton {
-  background-color: #0066CC;
+  transition-property: background-color, border-color, color;
+}
+a[href] {
+  border-bottom-color: var(--tycolor-border-link-default);
+  color: var(--tycolor-link-default);
+}
+a[href]:hover, a[href]:active {
+  border-bottom-color: var(--tycolor-border-link-active);
+  color: var(--tycolor-link-active);
+}
+.links-underlined a[href] {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+.links-notunderlined a[href] {
+  border-bottom-style: none;
+  border-bottom-width: 0;
+}
+a[href].tybutton {
+  background-color: #0066cc;
   border: none;
   border-radius: 4px;
   color: white;
@@ -709,22 +347,21 @@ span.smallcaps {
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   transition: all 250ms;
-  vertical-align: middle; }
-  /* line 188, source/scss/required/_mixins.scss */
-  .tybutton:hover, .tybutton:active, .tybutton[href]:hover, .tybutton[href]:active {
-    background-color: #cc0066;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
-    color: white; }
-  /* line 199, source/scss/required/_mixins.scss */
-  .tybutton:active, .tybutton[href]:active {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-  /* line 202, source/scss/required/_mixins.scss */
-  .tybutton:focus, .tybutton[href]:focus {
-    outline: none; }
-
-/* line 72, source/scss/optional/_utility.scss */
-.tybutton-outline {
-  background-color: #0066CC;
+  vertical-align: middle;
+}
+a[href].tybutton:hover, a[href].tybutton:active, a[href].tybutton[href]:hover, a[href].tybutton[href]:active {
+  background-color: #cc0066;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  color: white;
+}
+a[href].tybutton:active, a[href].tybutton[href]:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+a[href].tybutton:focus, a[href].tybutton[href]:focus {
+  outline: none;
+}
+a[href].tybutton-outline {
+  background-color: #0066cc;
   border: none;
   border-radius: 4px;
   color: white;
@@ -739,197 +376,550 @@ span.smallcaps {
   transition: all 250ms;
   vertical-align: middle;
   background-color: transparent;
-  border: 2px #0066CC solid;
-  color: #0066CC;
-  padding: calc(0.4375rem - 2px) calc(1.3125rem - 2px); }
-  /* line 188, source/scss/required/_mixins.scss */
-  .tybutton-outline:hover, .tybutton-outline:active, .tybutton-outline[href]:hover, .tybutton-outline[href]:active {
-    background-color: #cc0066;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
-    color: white; }
-  /* line 199, source/scss/required/_mixins.scss */
-  .tybutton-outline:active, .tybutton-outline[href]:active {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-  /* line 202, source/scss/required/_mixins.scss */
-  .tybutton-outline:focus, .tybutton-outline[href]:focus {
-    outline: none; }
-  /* line 229, source/scss/required/_mixins.scss */
-  .tybutton-outline:hover, .tybutton-outline:active, .tybutton-outline[href]:hover, .tybutton-outline[href]:active {
-    border-color: #c20061; }
+  border: 2px #0066cc solid;
+  color: #0066cc;
+  padding: calc(0.4375rem - 2px) calc(1.3125rem - 2px);
+}
+a[href].tybutton-outline:hover, a[href].tybutton-outline:active, a[href].tybutton-outline[href]:hover, a[href].tybutton-outline[href]:active {
+  background-color: #cc0066;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  color: white;
+}
+a[href].tybutton-outline:active, a[href].tybutton-outline[href]:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+a[href].tybutton-outline:focus, a[href].tybutton-outline[href]:focus {
+  outline: none;
+}
+a[href].tybutton-outline:hover, a[href].tybutton-outline:active, a[href].tybutton-outline[href]:hover, a[href].tybutton-outline[href]:active {
+  border-color: #c20061;
+}
 
-/* line 75, source/scss/optional/_utility.scss */
+ol,
+ul {
+  padding-left: 2.625rem;
+}
+
+dt {
+  font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 2.625rem;
+}
+
+ol ol, ol ul, ul ol, ul ul {
+  margin-top: 0.875rem;
+}
+.tymargins-off ol ol, .tymargins-off ol ul, ol.tymargins-off ol, ol.tymargins-off ul, .tymargins-off ul ol, .tymargins-off ul ul, ul.tymargins-off ol, ul.tymargins-off ul {
+  margin-top: 0;
+}
+
+ul.list-icons li {
+  list-style-type: none;
+  position: relative;
+}
+ul.list-icons li::before {
+  color: var(--tycolor-text-light);
+  font-family: tyicons;
+  font-size: 66%;
+  margin-right: 0.4375rem;
+  position: absolute;
+  right: 100%;
+  top: 0;
+}
+ul.list-icons.list-icons-angle li::before {
+  content: "\ea03";
+}
+ul.list-icons.list-icons-dash li::before {
+  content: "\ea08";
+  margin-top: 0.1em;
+}
+ul.list-icons.list-icons-check li::before {
+  content: "\ea07";
+}
+ul.list-nobullet {
+  padding-left: 0;
+}
+ul.list-nobullet li {
+  list-style-type: none;
+}
+ul.list-nobullet.list-indented li {
+  box-sizing: border-box;
+  padding-left: 1.75rem;
+  text-indent: -1.75rem;
+}
+ul.list-nobullet.list-indented ol, ul.list-nobullet.list-indented ul {
+  margin-left: -1.75rem;
+}
+@media (min-width: 35em) {
+  ul.list-nobullet.list-cols-2 li, ul.list-nobullet.list-cols-3 li, ul.list-nobullet.list-grid-2 li, ul.list-nobullet.list-grid-3 li, ul.list-nobullet.list-grid-4 li {
+    margin-left: 0;
+  }
+}
+ul.list-flex {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+ul.list-flex * + * {
+  margin-top: 0;
+}
+ul.list-flex li {
+  margin-left: 1.75rem;
+}
+ul.list-flex.list-flex-center {
+  justify-content: center;
+}
+ul.list-flex.list-flex-right {
+  justify-content: flex-end;
+}
+ul.list-flex.list-nobullet li {
+  margin-left: 0;
+}
+
+@media (min-width: 35em) {
+  ol.list-cols-2, ol.list-cols-3,
+ul.list-cols-2,
+ul.list-cols-3 {
+    columns: 2;
+    column-gap: 2.625rem;
+    margin-bottom: -0.875rem;
+    padding-left: 0;
+  }
+  ol.list-cols-2 * + *, ol.list-cols-3 * + *,
+ul.list-cols-2 * + *,
+ul.list-cols-3 * + * {
+    margin-top: 0;
+  }
+  ol.list-cols-2 li, ol.list-cols-3 li,
+ul.list-cols-2 li,
+ul.list-cols-3 li {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-left: 1.75rem;
+    padding-bottom: 0.875rem;
+  }
+  ol.list-cols-2.tymargins-off li, .tymargins-off ol.list-cols-2 li, ol.list-cols-3.tymargins-off li, .tymargins-off ol.list-cols-3 li,
+ul.list-cols-2.tymargins-off li,
+.tymargins-off ul.list-cols-2 li,
+ul.list-cols-3.tymargins-off li,
+.tymargins-off ul.list-cols-3 li {
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 55em) {
+  ol.list-cols-3,
+ul.list-cols-3 {
+    columns: 3;
+  }
+}
+@media (min-width: 35em) {
+  ol.list-grid-2, ol.list-grid-3, ol.list-grid-4,
+ul.list-grid-2,
+ul.list-grid-3,
+ul.list-grid-4 {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+  ol.list-grid-2 li, ol.list-grid-3 li, ol.list-grid-4 li,
+ul.list-grid-2 li,
+ul.list-grid-3 li,
+ul.list-grid-4 li {
+    box-sizing: border-box;
+    margin-left: 1.75rem;
+    width: calc(50% - 2.625rem - 1.3125rem);
+  }
+  ol.list-grid-2 li:nth-child(2), ol.list-grid-3 li:nth-child(2), ol.list-grid-4 li:nth-child(2),
+ul.list-grid-2 li:nth-child(2),
+ul.list-grid-3 li:nth-child(2),
+ul.list-grid-4 li:nth-child(2) {
+    margin-top: 0;
+  }
+  ol.list-grid-2 li:nth-child(2n+1), ol.list-grid-3 li:nth-child(2n+1), ol.list-grid-4 li:nth-child(2n+1),
+ul.list-grid-2 li:nth-child(2n+1),
+ul.list-grid-3 li:nth-child(2n+1),
+ul.list-grid-4 li:nth-child(2n+1) {
+    margin-right: 2.625rem;
+  }
+  ol.list-grid-2.list-nobullet li, ol.list-grid-3.list-nobullet li, ol.list-grid-4.list-nobullet li,
+ul.list-grid-2.list-nobullet li,
+ul.list-grid-3.list-nobullet li,
+ul.list-grid-4.list-nobullet li {
+    width: calc(50% - 1.3125rem);
+  }
+}
+@media (min-width: 55em) {
+  ol.list-grid-3 li, ol.list-grid-4 li,
+ul.list-grid-3 li,
+ul.list-grid-4 li {
+    width: calc(33.33% - 2.625rem - 1.750875rem);
+  }
+  ol.list-grid-3 li:nth-child(3), ol.list-grid-4 li:nth-child(3),
+ul.list-grid-3 li:nth-child(3),
+ul.list-grid-4 li:nth-child(3) {
+    margin-top: 0;
+  }
+  ol.list-grid-3 li:nth-child(2n+1), ol.list-grid-4 li:nth-child(2n+1),
+ul.list-grid-3 li:nth-child(2n+1),
+ul.list-grid-4 li:nth-child(2n+1) {
+    margin-right: 0;
+  }
+  ol.list-grid-3 li:nth-child(3n+1), ol.list-grid-3 li:nth-child(3n+2), ol.list-grid-4 li:nth-child(3n+1), ol.list-grid-4 li:nth-child(3n+2),
+ul.list-grid-3 li:nth-child(3n+1),
+ul.list-grid-3 li:nth-child(3n+2),
+ul.list-grid-4 li:nth-child(3n+1),
+ul.list-grid-4 li:nth-child(3n+2) {
+    margin-right: 2.625rem;
+  }
+  ol.list-grid-3.list-nobullet li, ol.list-grid-4.list-nobullet li,
+ul.list-grid-3.list-nobullet li,
+ul.list-grid-4.list-nobullet li {
+    width: calc(33.33% - 1.750875rem);
+  }
+}
+@media (min-width: 75em) {
+  ol.list-grid-4 li,
+ul.list-grid-4 li {
+    width: calc(25% - 2.625rem - 1.96875rem);
+  }
+  ol.list-grid-4 li:nth-child(4),
+ul.list-grid-4 li:nth-child(4) {
+    margin-top: 0;
+  }
+  ol.list-grid-4 li:nth-child(3n+1), ol.list-grid-4 li:nth-child(3n+2),
+ul.list-grid-4 li:nth-child(3n+1),
+ul.list-grid-4 li:nth-child(3n+2) {
+    margin-right: 0;
+  }
+  ol.list-grid-4 li:nth-child(4n+1), ol.list-grid-4 li:nth-child(4n+2), ol.list-grid-4 li:nth-child(4n+3),
+ul.list-grid-4 li:nth-child(4n+1),
+ul.list-grid-4 li:nth-child(4n+2),
+ul.list-grid-4 li:nth-child(4n+3) {
+    margin-right: 2.625rem;
+  }
+  ol.list-grid-4.list-nobullet li,
+ul.list-grid-4.list-nobullet li {
+    width: calc(25% - 1.96875rem);
+  }
+}
+
+b {
+  font-weight: 700;
+}
+
+code {
+  background-color: var(--tycolor-shade);
+  border-radius: 0.125em;
+  font-family: "IBM Plex Mono", courier, monospace;
+  padding-left: 0.125em;
+  padding-right: 0.125em;
+}
+code.code-nobg {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+em {
+  font-style: italic;
+}
+
+hr {
+  border: none;
+  border-top: 2px var(--tycolor-border) solid;
+  height: 0;
+  margin-bottom: 2.625rem;
+  margin-top: 2.625rem;
+}
+.tymargins-off hr {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.tymargins-skip > hr {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.tymargins-on hr {
+  margin-bottom: 2.625rem;
+  margin-top: 2.625rem;
+}
+
+i {
+  font-style: italic;
+}
+
+pre {
+  font-family: "IBM Plex Mono", courier, monospace;
+}
+
+small {
+  font-size: 83.3333333333%;
+}
+
+strong {
+  font-weight: 700;
+}
+
+span.dropcap {
+  display: inline-block;
+  float: left;
+  font-size: 400%;
+  font-weight: bold;
+  line-height: 100%;
+  margin: 0 0.25em 0 0.125em;
+  text-align: center;
+}
+span.smallcaps {
+  font-size: smaller;
+  letter-spacing: 0.075em;
+  margin-right: -0.0375em;
+  text-transform: uppercase;
+}
+
+.tybutton {
+  background-color: #0066cc;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0.4375rem 1.3125rem;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 250ms;
+  vertical-align: middle;
+}
+.tybutton:hover, .tybutton:active, .tybutton[href]:hover, .tybutton[href]:active {
+  background-color: #cc0066;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  color: white;
+}
+.tybutton:active, .tybutton[href]:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+.tybutton:focus, .tybutton[href]:focus {
+  outline: none;
+}
+
+.tybutton-outline {
+  background-color: #0066cc;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0.4375rem 1.3125rem;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 250ms;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 2px #0066cc solid;
+  color: #0066cc;
+  padding: calc(0.4375rem - 2px) calc(1.3125rem - 2px);
+}
+.tybutton-outline:hover, .tybutton-outline:active, .tybutton-outline[href]:hover, .tybutton-outline[href]:active {
+  background-color: #cc0066;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  color: white;
+}
+.tybutton-outline:active, .tybutton-outline[href]:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+.tybutton-outline:focus, .tybutton-outline[href]:focus {
+  outline: none;
+}
+.tybutton-outline:hover, .tybutton-outline:active, .tybutton-outline[href]:hover, .tybutton-outline[href]:active {
+  border-color: #c20061;
+}
+
 .tyfont-sans {
-  font-family: "IBM Plex Sans", helvetica, arial, sans-serif; }
+  font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
+}
 
-/* line 78, source/scss/optional/_utility.scss */
 .tyfont-serif {
-  font-family: "IBM Plex Serif", georgia, serif; }
+  font-family: "IBM Plex Serif", georgia, serif;
+}
 
-/* line 81, source/scss/optional/_utility.scss */
 .tyfont-mono {
-  font-family: "IBM Plex Mono", courier, monospace; }
+  font-family: "IBM Plex Mono", courier, monospace;
+}
 
-/* line 84, source/scss/optional/_utility.scss */
 .light {
-  color: var(--tycolor-text-light); }
+  color: var(--tycolor-text-light);
+}
 
-/* line 1, source/scss/optional/_quotes.scss */
 blockquote {
   font-style: italic;
   margin-left: 1.75rem;
-  margin-right: 1.75rem; }
-  @media (min-width: 50em) {
-    /* line 1, source/scss/optional/_quotes.scss */
-    blockquote {
-      margin-left: 2.625rem;
-      margin-right: 2.625rem; } }
-  /* line 9, source/scss/optional/_quotes.scss */
-  blockquote p {
-    font-style: italic; }
-  /* line 12, source/scss/optional/_quotes.scss */
-  blockquote.pullquote {
-    background-color: transparent;
-    border: none;
-    font-size: 1.44rem;
-    line-height: 2.625rem;
+  margin-right: 1.75rem;
+}
+@media (min-width: 50em) {
+  blockquote {
+    margin-left: 2.625rem;
+    margin-right: 2.625rem;
+  }
+}
+blockquote p {
+  font-style: italic;
+}
+blockquote.pullquote {
+  background-color: transparent;
+  border: none;
+  font-size: 1.44rem;
+  line-height: 2.625rem;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  text-align: center;
+}
+blockquote.pullquote p {
+  font-size: 1.44rem;
+  line-height: 2.625rem;
+}
+blockquote.pullquote cite {
+  display: block;
+  font-size: 0.8333333333rem;
+  font-style: normal;
+  line-height: 1.75rem;
+}
+blockquote.pullquote * + cite {
+  margin-top: 0.875rem;
+}
+blockquote.pullquote.pullquote-roof-fixed::before, blockquote.pullquote.pullquote-roof-full::before {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22%23B8B8B8%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-size: auto 64px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: var(--tycolor-border);
+  content: "\ea0d";
+  display: block;
+  font-family: tyicons;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 2.625rem;
+  text-align: center;
+}
+blockquote.pullquote.pullquote-roof-fixed::before {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 21.875rem;
+}
+@media (min-width: 40em) {
+  blockquote.pullquote.float-left, blockquote.pullquote.float-right {
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 1.75rem;
+    width: calc(50% - 1.75rem);
+  }
+  blockquote.pullquote.float-left:first-child + *, blockquote.pullquote.float-right:first-child + * {
+    margin-top: 0;
+  }
+}
+@media (min-width: 40em) {
+  blockquote.pullquote.float-left {
+    clear: left;
+    float: left;
     margin-left: 0;
+    margin-right: 3.5rem;
+  }
+}
+@media (min-width: 40em) {
+  blockquote.pullquote.float-right {
+    clear: right;
+    float: right;
+    margin-left: 3.5rem;
     margin-right: 0;
-    position: relative;
-    text-align: center; }
-    /* line 21, source/scss/optional/_quotes.scss */
-    blockquote.pullquote p {
-      font-size: 1.44rem;
-      line-height: 2.625rem; }
-    /* line 25, source/scss/optional/_quotes.scss */
-    blockquote.pullquote cite {
-      display: block;
-      font-size: 0.83333rem;
-      font-style: normal;
-      line-height: 1.75rem; }
-    /* line 31, source/scss/optional/_quotes.scss */
-    blockquote.pullquote * + cite {
-      margin-top: 0.875rem; }
-    /* line 34, source/scss/optional/_quotes.scss */
-    blockquote.pullquote.pullquote-roof-fixed::before, blockquote.pullquote.pullquote-roof-full::before {
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22%23B8B8B8%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-      background-size: auto 64px;
-      background-position: center center;
-      background-repeat: no-repeat;
-      color: var(--tycolor-border);
-      content: "\ea0d";
-      display: block;
-      font-family: tyicons;
-      font-size: 1.75rem;
-      font-style: normal;
-      font-weight: normal;
-      line-height: 2.625rem;
-      text-align: center; }
-    /* line 50, source/scss/optional/_quotes.scss */
-    blockquote.pullquote.pullquote-roof-fixed::before {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 21.875rem; }
-    @media (min-width: 40em) {
-      /* line 55, source/scss/optional/_quotes.scss */
-      blockquote.pullquote.float-left, blockquote.pullquote.float-right {
-        box-sizing: border-box;
-        text-align: left;
-        margin-bottom: 1.75rem;
-        width: calc(50% - 1.75rem); }
-        /* line 62, source/scss/optional/_quotes.scss */
-        blockquote.pullquote.float-left:first-child + *, blockquote.pullquote.float-right:first-child + * {
-          margin-top: 0; } }
-    @media (min-width: 40em) {
-      /* line 67, source/scss/optional/_quotes.scss */
-      blockquote.pullquote.float-left {
-        clear: left;
-        float: left;
-        margin-left: 0;
-        margin-right: 3.5rem; } }
-    @media (min-width: 40em) {
-      /* line 75, source/scss/optional/_quotes.scss */
-      blockquote.pullquote.float-right {
-        clear: right;
-        float: right;
-        margin-left: 3.5rem;
-        margin-right: 0; } }
+  }
+}
 
-/* line 2, source/scss/optional/_tables.scss */
 table {
   font-variant-numeric: lining-nums tabular-nums;
-  font-feature-settings: "lnum", "tnum"; }
+  font-feature-settings: "lnum", "tnum";
+}
 
-/* line 6, source/scss/optional/_tables.scss */
 th {
   font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
   font-variant-numeric: lining-nums tabular-nums;
   font-feature-settings: "lnum", "tnum";
   text-align: left;
-  vertical-align: top; }
-  /* line 12, source/scss/optional/_tables.scss */
-  th[scope="col"] {
-    vertical-align: bottom; }
+  vertical-align: top;
+}
+th[scope=col] {
+  vertical-align: bottom;
+}
 
-/* line 16, source/scss/optional/_tables.scss */
 td {
   font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
   font-variant-numeric: lining-nums tabular-nums;
   font-feature-settings: "lnum", "tnum";
-  vertical-align: top; }
+  vertical-align: top;
+}
 
-/* line 24, source/scss/optional/_tables.scss */
 table.clean {
   border-collapse: collapse;
-  width: 100%; }
-  /* line 27, source/scss/optional/_tables.scss */
-  table.clean td,
-  table.clean th {
-    border: none;
-    margin: 0;
-    padding-top: 0.4375rem;
-    padding-bottom: 0.4375rem; }
-  /* line 34, source/scss/optional/_tables.scss */
-  table.clean * + td,
-  table.clean * + th {
-    padding-left: 0.875rem; }
+  width: 100%;
+}
+table.clean td,
+table.clean th {
+  border: none;
+  margin: 0;
+  padding-top: 0.4375rem;
+  padding-bottom: 0.4375rem;
+}
+table.clean * + td,
+table.clean * + th {
+  padding-left: 0.875rem;
+}
 
-/* line 42, source/scss/optional/_tables.scss */
 table.striped td,
 table.striped th {
   padding-left: 0.875rem;
-  padding-right: 0.875rem; }
-
-/* line 48, source/scss/optional/_tables.scss */
+  padding-right: 0.875rem;
+}
 table.striped tbody tr:nth-child(2n+1) td,
 table.striped tbody tr:nth-child(2n+1) th {
-  background-color: var(--tycolor-shade); }
+  background-color: var(--tycolor-shade);
+}
 
-/* line 56, source/scss/optional/_tables.scss */
 table.horizontal-rules {
-  border-top: 2px var(--tycolor-border) solid; }
-  /* line 58, source/scss/optional/_tables.scss */
-  table.horizontal-rules td,
-  table.horizontal-rules th {
-    border-bottom: 2px var(--tycolor-border) solid; }
-  /* line 62, source/scss/optional/_tables.scss */
-  table.horizontal-rules th[scope="col"] {
-    border-bottom: 6px var(--tycolor-border) double; }
+  border-top: 2px var(--tycolor-border) solid;
+}
+table.horizontal-rules td,
+table.horizontal-rules th {
+  border-bottom: 2px var(--tycolor-border) solid;
+}
+table.horizontal-rules th[scope=col] {
+  border-bottom: 6px var(--tycolor-border) double;
+}
 
-/* line 68, source/scss/optional/_tables.scss */
 table.vertical-rules {
-  border-left: 2px var(--tycolor-border) solid; }
-  /* line 70, source/scss/optional/_tables.scss */
-  table.vertical-rules td,
-  table.vertical-rules th {
-    border-right: 2px var(--tycolor-border) solid;
-    padding-left: 0.875rem;
-    padding-right: 0.875rem; }
-  /* line 76, source/scss/optional/_tables.scss */
-  table.vertical-rules th[scope="row"] {
-    border-right: 6px var(--tycolor-border) double; }
+  border-left: 2px var(--tycolor-border) solid;
+}
+table.vertical-rules td,
+table.vertical-rules th {
+  border-right: 2px var(--tycolor-border) solid;
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}
+table.vertical-rules th[scope=row] {
+  border-right: 6px var(--tycolor-border) double;
+}
 
 @media (max-width: 39.996em) {
-  /* line 83, source/scss/optional/_tables.scss */
   table.responsive thead {
     border: 0;
     clip: rect(0 0 0 0);
@@ -938,114 +928,115 @@ table.vertical-rules {
     overflow: hidden;
     padding: 0;
     position: absolute;
-    width: 1px !important; }
-    /* line 43, source/scss/required/_mixins.scss */
-    table.responsive thead.focusable:active, table.responsive thead.focusable:focus {
-      clip: auto;
-      height: auto;
-      margin: 0;
-      overflow: visible;
-      position: static;
-      width: auto; }
-    /* line 86, source/scss/optional/_tables.scss */
-    table.responsive thead + tbody td {
-      padding-left: 33%; } }
-
+    width: 1px !important;
+  }
+  table.responsive thead.focusable:active, table.responsive thead.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+  table.responsive thead + tbody td {
+    padding-left: 33%;
+  }
+}
 @media (max-width: 39.996em) {
-  /* line 92, source/scss/optional/_tables.scss */
   table.responsive tbody tr {
-    display: block; } }
-
+    display: block;
+  }
+}
 @media (max-width: 39.996em) {
-  /* line 97, source/scss/optional/_tables.scss */
   table.responsive tbody tr + tr {
     border-top: 2px var(--tycolor-border) solid;
-    margin-top: 2px; } }
-
+    margin-top: 2px;
+  }
+}
 @media (max-width: 39.996em) {
-  /* line 103, source/scss/optional/_tables.scss */
   table.responsive tbody th {
     display: block;
-    padding-left: 0; } }
-
+    padding-left: 0;
+  }
+}
 @media (max-width: 39.996em) {
-  /* line 109, source/scss/optional/_tables.scss */
   table.responsive tbody td {
     display: block;
     padding-left: 0;
-    position: relative; } }
-
-/* line 115, source/scss/optional/_tables.scss */
+    position: relative;
+  }
+}
 table.responsive tbody td .tyfy-td-label {
   color: var(--tycolor-text-light);
   display: block;
   font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
-  font-size: 0.83333rem;
+  font-size: 0.8333333333rem;
   left: 0;
   position: absolute;
-  width: calc(33% - 0.875rem); }
-  @media (min-width: 40em) {
-    /* line 115, source/scss/optional/_tables.scss */
-    table.responsive tbody td .tyfy-td-label {
-      display: none; } }
-
-/* line 127, source/scss/optional/_tables.scss */
+  width: calc(33% - 0.875rem);
+}
+@media (min-width: 40em) {
+  table.responsive tbody td .tyfy-td-label {
+    display: none;
+  }
+}
 table.responsive tbody td .tyfy-td-label + * {
-  margin-top: inherit; }
-
-/* line 135, source/scss/optional/_tables.scss */
+  margin-top: inherit;
+}
 table.responsive.striped tbody td,
 table.responsive.striped tbody th, table.responsive.vertical-rules tbody td,
 table.responsive.vertical-rules tbody th {
   padding-left: 0.875rem;
-  padding-right: 0.875rem; }
-
-/* line 141, source/scss/optional/_tables.scss */
+  padding-right: 0.875rem;
+}
 table.responsive.striped tbody td .tyfy-td-label, table.responsive.vertical-rules tbody td .tyfy-td-label {
-  left: 0.875rem; }
-
+  left: 0.875rem;
+}
 @media (max-width: 39.996em) {
-  /* line 148, source/scss/optional/_tables.scss */
   table.responsive.striped thead + tbody td, table.responsive.vertical-rules thead + tbody td {
-    padding-left: calc(33% + 0.875rem); } }
-
+    padding-left: calc(33% + 0.875rem);
+  }
+}
 @media (max-width: 39.996em) {
-  /* line 156, source/scss/optional/_tables.scss */
-  table.responsive.vertical-rules tbody th[scope="row"] {
-    border-right: 2px var(--tycolor-border) solid; } }
+  table.responsive.vertical-rules tbody th[scope=row] {
+    border-right: 2px var(--tycolor-border) solid;
+  }
+}
 
 @media (min-width: 40em) {
-  /* line 167, source/scss/optional/_tables.scss */
   table.float-left, table.float-right {
     box-sizing: border-box;
     margin-bottom: 1.75rem;
-    width: calc(50% - 1.75rem); } }
-
+    width: calc(50% - 1.75rem);
+  }
+}
 @media (min-width: 40em) {
-  /* line 175, source/scss/optional/_tables.scss */
   table.float-left {
     clear: left;
     float: left;
-    margin-right: 3.5rem; } }
-
+    margin-right: 3.5rem;
+  }
+}
 @media (min-width: 40em) {
-  /* line 182, source/scss/optional/_tables.scss */
   table.float-right {
     clear: right;
     float: right;
-    margin-left: 3.5rem; } }
+    margin-left: 3.5rem;
+  }
+}
 
 @media (min-width: 40em) {
-  /* line 190, source/scss/optional/_tables.scss */
   table.float-right + table.float-left {
-    margin-right: 1.75rem; } }
+    margin-right: 1.75rem;
+  }
+}
 
 @media (min-width: 40em) {
-  /* line 195, source/scss/optional/_tables.scss */
   table.float-left + table.float-right {
-    margin-left: 1.75rem; } }
+    margin-left: 1.75rem;
+  }
+}
 
-/* line 2, source/scss/optional/_collapsables.scss */
 h2.tyfy-collapsable-processed,
 h3.tyfy-collapsable-processed,
 h4.tyfy-collapsable-processed,
@@ -1053,116 +1044,112 @@ h5.tyfy-collapsable-processed,
 h6.tyfy-collapsable-processed {
   background-color: transparent;
   clear: both;
-  position: relative; }
-  /* line 10, source/scss/optional/_collapsables.scss */
-  h2.tyfy-collapsable-processed button,
-  h3.tyfy-collapsable-processed button,
-  h4.tyfy-collapsable-processed button,
-  h5.tyfy-collapsable-processed button,
-  h6.tyfy-collapsable-processed button {
-    all: unset;
-    box-sizing: border-box;
-    cursor: pointer;
-    display: block;
-    padding: 0 3.5rem calc(0.875rem - 2px) 0;
-    width: 100%; }
-  /* line 18, source/scss/optional/_collapsables.scss */
-  h2.tyfy-collapsable-processed::before,
-  h3.tyfy-collapsable-processed::before,
-  h4.tyfy-collapsable-processed::before,
-  h5.tyfy-collapsable-processed::before,
-  h6.tyfy-collapsable-processed::before {
-    border-radius: 50%;
-    color: var(--tycolor-text-light);
-    content: "\ea04";
-    font-family: tyicons;
-    font-size: 60%;
-    font-style: normal;
-    font-weight: normal;
-    position: absolute;
-    right: 0rem;
-    text-align: center;
-    top: 0rem;
-    transition-duration: 500ms;
-    transition-property: background-color,color,top,transform;
-    transition-timing-function: ease-in-out;
-    width: 2.625rem; }
-  /* line 36, source/scss/optional/_collapsables.scss */
-  h2.tyfy-collapsable-processed.closed::before,
-  h3.tyfy-collapsable-processed.closed::before,
-  h4.tyfy-collapsable-processed.closed::before,
-  h5.tyfy-collapsable-processed.closed::before,
-  h6.tyfy-collapsable-processed.closed::before {
-    transform: rotate(180deg); }
-  @media (min-width: 50em) {
-    /* line 41, source/scss/optional/_collapsables.scss */
-    h2.tyfy-collapsable-processed button,
-    h3.tyfy-collapsable-processed button,
-    h4.tyfy-collapsable-processed button,
-    h5.tyfy-collapsable-processed button,
-    h6.tyfy-collapsable-processed button {
-      border: 2px var(--tycolor-border) solid;
-      border-bottom: none;
-      padding: calc(1.75rem - 2px) calc(5.25rem - 2px) calc(0.875rem - 2px) calc(1.75rem - 2px);
-      transition-duration: 500ms;
-      transition-property: padding-top;
-      transition-timing-function: ease-in-out; }
-    /* line 49, source/scss/optional/_collapsables.scss */
-    h2.tyfy-collapsable-processed::before,
-    h3.tyfy-collapsable-processed::before,
-    h4.tyfy-collapsable-processed::before,
-    h5.tyfy-collapsable-processed::before,
-    h6.tyfy-collapsable-processed::before {
-      right: 1.75rem;
-      top: 1.75rem; }
-    /* line 54, source/scss/optional/_collapsables.scss */
-    h2.tyfy-collapsable-processed.closed button,
-    h3.tyfy-collapsable-processed.closed button,
-    h4.tyfy-collapsable-processed.closed button,
-    h5.tyfy-collapsable-processed.closed button,
-    h6.tyfy-collapsable-processed.closed button {
-      padding-top: calc(0.875rem - 2px); }
-    /* line 57, source/scss/optional/_collapsables.scss */
-    h2.tyfy-collapsable-processed.closed::before,
-    h3.tyfy-collapsable-processed.closed::before,
-    h4.tyfy-collapsable-processed.closed::before,
-    h5.tyfy-collapsable-processed.closed::before,
-    h6.tyfy-collapsable-processed.closed::before {
-      top: 0.875rem; } }
-  /* line 62, source/scss/optional/_collapsables.scss */
-  * + h2.tyfy-collapsable-processed,
-  .tymargins-on * + h2.tyfy-collapsable-processed, * +
-  h3.tyfy-collapsable-processed,
-  .tymargins-on * +
-  h3.tyfy-collapsable-processed, * +
-  h4.tyfy-collapsable-processed,
-  .tymargins-on * +
-  h4.tyfy-collapsable-processed, * +
-  h5.tyfy-collapsable-processed,
-  .tymargins-on * +
-  h5.tyfy-collapsable-processed, * +
-  h6.tyfy-collapsable-processed,
-  .tymargins-on * +
-  h6.tyfy-collapsable-processed {
-    margin-top: 1.75rem; }
-
-/* line 68, source/scss/optional/_collapsables.scss */
-h3.tyfy-collapsable-processed::before {
-  width: 1.75rem; }
-
-/* line 73, source/scss/optional/_collapsables.scss */
-h4.tyfy-collapsable-processed::before {
-  width: 1.75rem; }
-
-/* line 78, source/scss/optional/_collapsables.scss */
-h5.tyfy-collapsable-processed::before {
-  width: 1.75rem; }
-
-/* line 83, source/scss/optional/_collapsables.scss */
+  position: relative;
+}
+h2.tyfy-collapsable-processed button,
+h3.tyfy-collapsable-processed button,
+h4.tyfy-collapsable-processed button,
+h5.tyfy-collapsable-processed button,
+h6.tyfy-collapsable-processed button {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  padding: 0 3.5rem calc(0.875rem - 2px) 0;
+  width: 100%;
+}
+h2.tyfy-collapsable-processed::before,
+h3.tyfy-collapsable-processed::before,
+h4.tyfy-collapsable-processed::before,
+h5.tyfy-collapsable-processed::before,
 h6.tyfy-collapsable-processed::before {
-  width: 1.75rem; }
+  border-radius: 50%;
+  color: var(--tycolor-text-light);
+  content: "\ea04";
+  font-family: tyicons;
+  font-size: 60%;
+  font-style: normal;
+  font-weight: normal;
+  position: absolute;
+  right: 0rem;
+  text-align: center;
+  top: 0rem;
+  transition-duration: 500ms;
+  transition-property: background-color, color, top, transform;
+  transition-timing-function: ease-in-out;
+  width: 2.625rem;
+}
+h2.tyfy-collapsable-processed.closed::before,
+h3.tyfy-collapsable-processed.closed::before,
+h4.tyfy-collapsable-processed.closed::before,
+h5.tyfy-collapsable-processed.closed::before,
+h6.tyfy-collapsable-processed.closed::before {
+  transform: rotate(180deg);
+}
+@media (min-width: 50em) {
+  h2.tyfy-collapsable-processed button,
+h3.tyfy-collapsable-processed button,
+h4.tyfy-collapsable-processed button,
+h5.tyfy-collapsable-processed button,
+h6.tyfy-collapsable-processed button {
+    border: 2px var(--tycolor-border) solid;
+    border-bottom: none;
+    padding: calc(1.75rem - 2px) calc(5.25rem - 2px) calc(0.875rem - 2px) calc(1.75rem - 2px);
+    transition-duration: 500ms;
+    transition-property: padding-top;
+    transition-timing-function: ease-in-out;
+  }
+  h2.tyfy-collapsable-processed::before,
+h3.tyfy-collapsable-processed::before,
+h4.tyfy-collapsable-processed::before,
+h5.tyfy-collapsable-processed::before,
+h6.tyfy-collapsable-processed::before {
+    right: 1.75rem;
+    top: 1.75rem;
+  }
+  h2.tyfy-collapsable-processed.closed button,
+h3.tyfy-collapsable-processed.closed button,
+h4.tyfy-collapsable-processed.closed button,
+h5.tyfy-collapsable-processed.closed button,
+h6.tyfy-collapsable-processed.closed button {
+    padding-top: calc(0.875rem - 2px);
+  }
+  h2.tyfy-collapsable-processed.closed::before,
+h3.tyfy-collapsable-processed.closed::before,
+h4.tyfy-collapsable-processed.closed::before,
+h5.tyfy-collapsable-processed.closed::before,
+h6.tyfy-collapsable-processed.closed::before {
+    top: 0.875rem;
+  }
+}
+* + h2.tyfy-collapsable-processed, .tymargins-on * + h2.tyfy-collapsable-processed,
+* + h3.tyfy-collapsable-processed,
+.tymargins-on * + h3.tyfy-collapsable-processed,
+* + h4.tyfy-collapsable-processed,
+.tymargins-on * + h4.tyfy-collapsable-processed,
+* + h5.tyfy-collapsable-processed,
+.tymargins-on * + h5.tyfy-collapsable-processed,
+* + h6.tyfy-collapsable-processed,
+.tymargins-on * + h6.tyfy-collapsable-processed {
+  margin-top: 1.75rem;
+}
 
-/* line 95, source/scss/optional/_collapsables.scss */
+h3.tyfy-collapsable-processed::before {
+  width: 1.75rem;
+}
+
+h4.tyfy-collapsable-processed::before {
+  width: 1.75rem;
+}
+
+h5.tyfy-collapsable-processed::before {
+  width: 1.75rem;
+}
+
+h6.tyfy-collapsable-processed::before {
+  width: 1.75rem;
+}
+
 h2.tyfy-collapsable-processed:hover::before, h2.tyfy-collapsable-processed:focus::before, h2.tyfy-collapsable-processed:focus-within::before,
 h3.tyfy-collapsable-processed:hover::before,
 h3.tyfy-collapsable-processed:focus::before,
@@ -1177,9 +1164,9 @@ h6.tyfy-collapsable-processed:hover::before,
 h6.tyfy-collapsable-processed:focus::before,
 h6.tyfy-collapsable-processed:focus-within::before {
   background-color: var(--tycolor-link-active);
-  color: var(--tycolor-bg); }
+  color: var(--tycolor-bg);
+}
 
-/* line 102, source/scss/optional/_collapsables.scss */
 .tyfy-collapsables {
   box-sizing: content-box;
   border-bottom: 2px var(--tycolor-border) solid;
@@ -1187,83 +1174,83 @@ h6.tyfy-collapsable-processed:focus-within::before {
   overflow: hidden;
   padding: 0.875rem 0 calc(1.75rem - 2px) 0;
   transition-duration: 500ms;
-  transition-property: padding-top,padding-bottom,height;
-  transition-timing-function: ease-in-out; }
-  @media (min-width: 50em) {
-    /* line 102, source/scss/optional/_collapsables.scss */
-    .tyfy-collapsables {
-      border: 2px var(--tycolor-border) solid;
-      border-top: none !important;
-      padding: calc(0.875rem - 2px) calc(1.75rem - 2px) calc(1.75rem - 2px); } }
-  /* line 116, source/scss/optional/_collapsables.scss */
-  .tyfy-collapsables.closed {
-    height: 0 !important;
-    padding-bottom: 0;
-    padding-top: 0; }
-  /* line 121, source/scss/optional/_collapsables.scss */
-  .tyfy-collapsables.hiding > * {
-    display: none; }
+  transition-property: padding-top, padding-bottom, height;
+  transition-timing-function: ease-in-out;
+}
+@media (min-width: 50em) {
+  .tyfy-collapsables {
+    border: 2px var(--tycolor-border) solid;
+    border-top: none !important;
+    padding: calc(0.875rem - 2px) calc(1.75rem - 2px) calc(1.75rem - 2px);
+  }
+}
+.tyfy-collapsables.closed {
+  height: 0 !important;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.tyfy-collapsables.hiding > * {
+  display: none;
+}
 
-/* line 1, source/scss/optional/_tabs.scss */
 * + .tabs-container {
-  margin-top: 1.75rem; }
+  margin-top: 1.75rem;
+}
 
-/* line 4, source/scss/optional/_tabs.scss */
 .tabs-container + h2,
 .tabs-container + h3,
 .tabs-container + h4,
 .tabs-container + h5,
 .tabs_container + h6 {
-  margin-top: 2.625rem; }
+  margin-top: 2.625rem;
+}
 
-/* line 12, source/scss/optional/_tabs.scss */
 .tabs-container ul.tabs {
   align-items: stretch;
   border-bottom: 2px var(--tycolor-border) solid;
   display: none;
   margin: 0;
-  padding: 0; }
-  /* line 132, source/scss/required/_mixins.scss */
-  .tabs-container ul.tabs * + * {
-    margin-top: 0; }
-  @media (min-width: 40em) {
-    /* line 12, source/scss/optional/_tabs.scss */
-    .tabs-container ul.tabs {
-      display: flex; } }
-  /* line 22, source/scss/optional/_tabs.scss */
-  .tabs-container ul.tabs li + li {
-    margin-left: 0.875rem; }
-  /* line 25, source/scss/optional/_tabs.scss */
-  .tabs-container ul.tabs li {
-    background-color: var(--tycolor-shade);
-    border: 2px var(--tycolor-border) solid;
-    border-radius: 4px 4px 0 0;
-    color: var(--tycolor-text-light);
-    cursor: pointer;
-    display: block;
-    flex: 1;
-    font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
-    margin: 0 0 -2px 0;
-    padding: calc(0.875rem - 2px) calc(1.75rem - 2px);
-    text-align: center;
-    transition-duration: 250ms;
-    transition-property: background-color; }
-    /* line 39, source/scss/optional/_tabs.scss */
-    .tabs-container ul.tabs li:hover {
-      background-color: var(--tycolor-bg-tab-active);
-      color: var(--tycolor-link-active); }
-    /* line 43, source/scss/optional/_tabs.scss */
-    .tabs-container ul.tabs li.open {
-      background-color: var(--tycolor-bg);
-      border-bottom: 2px var(--tycolor-bg) solid;
-      color: var(--tycolor-fg);
-      font-weight: 600; }
-
-/* line 52, source/scss/optional/_tabs.scss */
+  padding: 0;
+}
+.tabs-container ul.tabs * + * {
+  margin-top: 0;
+}
+@media (min-width: 40em) {
+  .tabs-container ul.tabs {
+    display: flex;
+  }
+}
+.tabs-container ul.tabs li + li {
+  margin-left: 0.875rem;
+}
+.tabs-container ul.tabs li {
+  background-color: var(--tycolor-shade);
+  border: 2px var(--tycolor-border) solid;
+  border-radius: 4px 4px 0 0;
+  color: var(--tycolor-text-light);
+  cursor: pointer;
+  display: block;
+  flex: 1;
+  font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
+  margin: 0 0 -2px 0;
+  padding: calc(0.875rem - 2px) calc(1.75rem - 2px);
+  text-align: center;
+  transition-duration: 250ms;
+  transition-property: background-color;
+}
+.tabs-container ul.tabs li:hover {
+  background-color: var(--tycolor-bg-tab-active);
+  color: var(--tycolor-link-active);
+}
+.tabs-container ul.tabs li.open {
+  background-color: var(--tycolor-bg);
+  border-bottom: 2px var(--tycolor-bg) solid;
+  color: var(--tycolor-fg);
+  font-weight: 600;
+}
 .tabs-container.tyfy-tabs-processed * + .tab-label {
-  margin-top: 1.75rem; }
-
-/* line 55, source/scss/optional/_tabs.scss */
+  margin-top: 1.75rem;
+}
 .tabs-container.tyfy-tabs-processed .tab-label {
   background-color: transparent;
   clear: both;
@@ -1273,38 +1260,38 @@ h6.tyfy-collapsable-processed:focus-within::before {
   padding: 0 3.5rem calc(0.875rem - 2px) 0;
   position: relative;
   transition-duration: 500ms;
-  transition-property: background-color,color,top,transform;
-  transition-timing-function: ease-in-out; }
-  /* line 66, source/scss/optional/_tabs.scss */
-  .tabs-container.tyfy-tabs-processed .tab-label::before {
-    border-radius: 50%;
-    color: var(--tycolor-text-light);
-    content: "\ea04";
-    font-family: tyicons;
-    font-size: 60%;
-    font-style: normal;
-    font-weight: normal;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    transition-duration: 500ms;
-    transition-property: background-color,color,top;
-    transition-timing-function: ease-in-out;
-    width: 1.75rem; }
-  @media (min-width: 40em) {
-    /* line 55, source/scss/optional/_tabs.scss */
-    .tabs-container.tyfy-tabs-processed .tab-label {
-      display: none; } }
-  /* line 87, source/scss/optional/_tabs.scss */
-  .tabs-container.tyfy-tabs-processed .tab-label.closed::before {
-    transform: rotate(180deg); }
-  /* line 92, source/scss/optional/_tabs.scss */
-  .tabs-container.tyfy-tabs-processed .tab-label:hover::before {
-    background-color: var(--tycolor-link-active);
-    color: var(--tycolor-bg); }
-
-/* line 98, source/scss/optional/_tabs.scss */
+  transition-property: background-color, color, top, transform;
+  transition-timing-function: ease-in-out;
+}
+.tabs-container.tyfy-tabs-processed .tab-label::before {
+  border-radius: 50%;
+  color: var(--tycolor-text-light);
+  content: "\ea04";
+  font-family: tyicons;
+  font-size: 60%;
+  font-style: normal;
+  font-weight: normal;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transition-duration: 500ms;
+  transition-property: background-color, color, top;
+  transition-timing-function: ease-in-out;
+  width: 1.75rem;
+}
+@media (min-width: 40em) {
+  .tabs-container.tyfy-tabs-processed .tab-label {
+    display: none;
+  }
+}
+.tabs-container.tyfy-tabs-processed .tab-label.closed::before {
+  transform: rotate(180deg);
+}
+.tabs-container.tyfy-tabs-processed .tab-label:hover::before {
+  background-color: var(--tycolor-link-active);
+  color: var(--tycolor-bg);
+}
 .tabs-container.tyfy-tabs-processed .tab-panel {
   box-sizing: content-box;
   border-bottom: 2px var(--tycolor-border) solid;
@@ -1312,28 +1299,31 @@ h6.tyfy-collapsable-processed:focus-within::before {
   margin-top: 0;
   padding: 0.875rem 0 calc(1.75rem - 2px) 0;
   transition-duration: 500ms;
-  transition-property: padding-top,padding-bottom,height;
-  transition-timing-function: ease-in-out; }
-  @media (min-width: 40em) {
-    /* line 98, source/scss/optional/_tabs.scss */
-    .tabs-container.tyfy-tabs-processed .tab-panel {
-      border: 2px var(--tycolor-border) solid;
-      border-radius: 0 0 4px 4px;
-      border-top: none;
-      display: none;
-      padding: 1.75rem calc(1.75rem - 2px) calc(1.75rem - 2px); } }
-  @media (min-width: 40em) {
-    /* line 114, source/scss/optional/_tabs.scss */
-    .tabs-container.tyfy-tabs-processed .tab-panel.open {
-      display: block; } }
-  @media (max-width: 39.996em) {
-    /* line 119, source/scss/optional/_tabs.scss */
-    .tabs-container.tyfy-tabs-processed .tab-panel.closed {
-      height: 0 !important;
-      padding-bottom: 0;
-      padding-top: 0; } }
+  transition-property: padding-top, padding-bottom, height;
+  transition-timing-function: ease-in-out;
+}
+@media (min-width: 40em) {
+  .tabs-container.tyfy-tabs-processed .tab-panel {
+    border: 2px var(--tycolor-border) solid;
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+    display: none;
+    padding: 1.75rem calc(1.75rem - 2px) calc(1.75rem - 2px);
+  }
+}
+@media (min-width: 40em) {
+  .tabs-container.tyfy-tabs-processed .tab-panel.open {
+    display: block;
+  }
+}
+@media (max-width: 39.996em) {
+  .tabs-container.tyfy-tabs-processed .tab-panel.closed {
+    height: 0 !important;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
 
-/* line 2, source/scss/optional/_forms.scss */
 fieldset {
   border-color: var(--tycolor-border);
   border-radius: 4px;
@@ -1341,88 +1331,88 @@ fieldset {
   display: block;
   margin-left: 0;
   margin-right: 0;
-  padding: calc(1.3125rem - 2px) calc(1.75rem - 2px) calc(1.75rem - 2px) calc(1.75rem - 2px); }
-  /* line 10, source/scss/optional/_forms.scss */
-  fieldset legend {
-    font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
-    line-height: 1.75rem;
-    margin-left: -0.875rem;
-    margin-right: -0.875rem;
-    padding-left: 0.875rem;
-    padding-right: 0.875rem; }
-    /* line 19, source/scss/optional/_forms.scss */
-    fieldset legend + * {
-      margin-top: 0; }
+  padding: calc(1.3125rem - 2px) calc(1.75rem - 2px) calc(1.75rem - 2px) calc(1.75rem - 2px);
+}
+fieldset legend {
+  font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.75rem;
+  margin-left: -0.875rem;
+  margin-right: -0.875rem;
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}
+fieldset legend + * {
+  margin-top: 0;
+}
 
-/* line 24, source/scss/optional/_forms.scss */
 button,
 select,
 textarea,
-input[type="text"],
-input[type="file"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type=text],
+input[type=file],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+input[type=button],
+input[type=reset],
+input[type=submit] {
   box-sizing: border-box;
   display: block;
   font-size: 100%;
   outline: none;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
-/* line 51, source/scss/optional/_forms.scss */
 label {
   display: block;
-  font-weight: bold; }
-  /* line 54, source/scss/optional/_forms.scss */
-  label.label-option {
-    font-weight: normal; }
-  /* line 57, source/scss/optional/_forms.scss */
-  .label-option + label.label-option {
-    margin-top: 0; }
-  /* line 60, source/scss/optional/_forms.scss */
-  label.label-inline {
-    display: inline-block; }
-  /* line 63, source/scss/optional/_forms.scss */
-  .label-inline + label.label-inline {
-    margin-top: 0;
-    margin-left: 0.875rem; }
-  /* line 67, source/scss/optional/_forms.scss */
-  form label + * {
-    margin-top: 0.875rem; }
+  font-weight: bold;
+}
+label.label-option {
+  font-weight: normal;
+}
+.label-option + label.label-option {
+  margin-top: 0;
+}
+label.label-inline {
+  display: inline-block;
+}
+.label-inline + label.label-inline {
+  margin-top: 0;
+  margin-left: 0.875rem;
+}
+form label + * {
+  margin-top: 0.875rem;
+}
 
-/* line 73, source/scss/optional/_forms.scss */
 select,
 textarea,
-input[type="text"],
-input[type="file"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
+input[type=text],
+input[type=file],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color] {
   background-color: var(--tycolor-bg);
   border-color: var(--tycolor-border);
   border-style: solid;
@@ -1433,42 +1423,41 @@ input[type="color"] {
   font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
   line-height: 1.75rem;
   padding: calc(0.65625rem - 2px);
-  transition: border-color 250ms, box-shadow 250ms; }
-  /* line 101, source/scss/optional/_forms.scss */
-  select:focus,
-  textarea:focus,
-  input[type="text"]:focus,
-  input[type="file"]:focus,
-  input[type="password"]:focus,
-  input[type="datetime"]:focus,
-  input[type="datetime-local"]:focus,
-  input[type="date"]:focus,
-  input[type="month"]:focus,
-  input[type="time"]:focus,
-  input[type="week"]:focus,
-  input[type="number"]:focus,
-  input[type="email"]:focus,
-  input[type="url"]:focus,
-  input[type="search"]:focus,
-  input[type="tel"]:focus,
-  input[type="color"]:focus {
-    border-color: var(--tycolor-link-active);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
+  transition: border-color 250ms, box-shadow 250ms;
+}
+select:focus,
+textarea:focus,
+input[type=text]:focus,
+input[type=file]:focus,
+input[type=password]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=date]:focus,
+input[type=month]:focus,
+input[type=time]:focus,
+input[type=week]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=color]:focus {
+  border-color: var(--tycolor-link-active);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+}
 
-/* line 132, source/scss/required/_mixins.scss */
 select * + * {
-  margin-top: 0; }
-
-/* line 108, source/scss/optional/_forms.scss */
+  margin-top: 0;
+}
 select:not([multiple]) {
-  box-shadow: 0 0 0 transparent; }
+  box-shadow: 0 0 0 transparent;
+}
 
-/* line 112, source/scss/optional/_forms.scss */
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  background-color: #0066CC;
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  background-color: #0066cc;
   border: none;
   border-radius: 4px;
   color: white;
@@ -1485,44 +1474,44 @@ input[type="submit"] {
   border: none;
   display: inline-block;
   font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
-  width: auto; }
-  /* line 188, source/scss/required/_mixins.scss */
-  button:hover, button:active, button[href]:hover, button[href]:active,
-  input[type="button"]:hover,
-  input[type="button"]:active,
-  input[type="button"][href]:hover,
-  input[type="button"][href]:active,
-  input[type="reset"]:hover,
-  input[type="reset"]:active,
-  input[type="reset"][href]:hover,
-  input[type="reset"][href]:active,
-  input[type="submit"]:hover,
-  input[type="submit"]:active,
-  input[type="submit"][href]:hover,
-  input[type="submit"][href]:active {
-    background-color: #cc0066;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
-    color: white; }
-  /* line 199, source/scss/required/_mixins.scss */
-  button:active, button[href]:active,
-  input[type="button"]:active,
-  input[type="button"][href]:active,
-  input[type="reset"]:active,
-  input[type="reset"][href]:active,
-  input[type="submit"]:active,
-  input[type="submit"][href]:active {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-  /* line 202, source/scss/required/_mixins.scss */
-  button:focus, button[href]:focus,
-  input[type="button"]:focus,
-  input[type="button"][href]:focus,
-  input[type="reset"]:focus,
-  input[type="reset"][href]:focus,
-  input[type="submit"]:focus,
-  input[type="submit"][href]:focus {
-    outline: none; }
+  width: auto;
+}
+button:hover, button:active, button[href]:hover, button[href]:active,
+input[type=button]:hover,
+input[type=button]:active,
+input[type=button][href]:hover,
+input[type=button][href]:active,
+input[type=reset]:hover,
+input[type=reset]:active,
+input[type=reset][href]:hover,
+input[type=reset][href]:active,
+input[type=submit]:hover,
+input[type=submit]:active,
+input[type=submit][href]:hover,
+input[type=submit][href]:active {
+  background-color: #cc0066;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  color: white;
+}
+button:active, button[href]:active,
+input[type=button]:active,
+input[type=button][href]:active,
+input[type=reset]:active,
+input[type=reset][href]:active,
+input[type=submit]:active,
+input[type=submit][href]:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+button:focus, button[href]:focus,
+input[type=button]:focus,
+input[type=button][href]:focus,
+input[type=reset]:focus,
+input[type=reset][href]:focus,
+input[type=submit]:focus,
+input[type=submit][href]:focus {
+  outline: none;
+}
 
-/* line 125, source/scss/optional/_forms.scss */
 select:not([multiple]) {
   appearance: none;
   -webkit-appearance: none;
@@ -1530,10 +1519,10 @@ select:not([multiple]) {
   background-repeat: no-repeat;
   background-position: calc(100% - 0.4375rem) center;
   background-size: 1.09375rem auto;
-  padding-right: calc(1.96875rem - 2px); }
+  padding-right: calc(1.96875rem - 2px);
+}
 
-/* line 137, source/scss/optional/_forms.scss */
-input[type="checkbox"] {
+input[type=checkbox] {
   appearance: none;
   -webkit-appearance: none;
   background-color: var(--tycolor-bg);
@@ -1545,29 +1534,29 @@ input[type="checkbox"] {
   height: 1.5em;
   transition: background-color 250ms, border-color 250ms, transform 250ms;
   vertical-align: text-bottom;
-  width: 1.5em; }
-  /* line 150, source/scss/optional/_forms.scss */
-  input[type="checkbox"]:checked {
-    background-color: var(--tycolor-link-active);
-    background-image: url("data:image/svg+xml;charset=ASCII,%3Csvg%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%2064%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%2223%2056%2020.9401855%2053.9401855%200%2033%207%2026%2023%2042%2057%208%2064%2015%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 0.875rem auto;
-    border-color: var(--tycolor-link-active); }
-  /* line 158, source/scss/optional/_forms.scss */
-  input[type="checkbox"]:hover {
-    border-color: var(--tycolor-link-active);
-    transform: scale(1.1); }
-  /* line 162, source/scss/optional/_forms.scss */
-  input[type="checkbox"]:hover, input[type="checkbox"]:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.4375rem rgba(204, 0, 102, 0.2); }
-  /* line 167, source/scss/optional/_forms.scss */
-  input[type="checkbox"]:focus {
-    border-color: var(--tycolor-link-active); }
+  width: 1.5em;
+}
+input[type=checkbox]:checked {
+  background-color: var(--tycolor-link-active);
+  background-image: url("data:image/svg+xml;charset=ASCII,%3Csvg%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%2064%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%2223%2056%2020.9401855%2053.9401855%200%2033%207%2026%2023%2042%2057%208%2064%2015%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.875rem auto;
+  border-color: var(--tycolor-link-active);
+}
+input[type=checkbox]:hover {
+  border-color: var(--tycolor-link-active);
+  transform: scale(1.1);
+}
+input[type=checkbox]:hover, input[type=checkbox]:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4375rem rgba(204, 0, 102, 0.2);
+}
+input[type=checkbox]:focus {
+  border-color: var(--tycolor-link-active);
+}
 
-/* line 171, source/scss/optional/_forms.scss */
-input[type="radio"] {
+input[type=radio] {
   appearance: none;
   -webkit-appearance: none;
   background-color: var(--tycolor-bg);
@@ -1579,29 +1568,29 @@ input[type="radio"] {
   height: 1.5em;
   transition: background-color 250ms, border-color 250ms, transform 250ms;
   vertical-align: text-bottom;
-  width: 1.5em; }
-  /* line 184, source/scss/optional/_forms.scss */
-  input[type="radio"]:checked {
-    background-color: var(--tycolor-link-active);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23FFFFFF'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    border-color: var(--tycolor-link-active); }
-  /* line 192, source/scss/optional/_forms.scss */
-  input[type="radio"]:hover {
-    border-color: var(--tycolor-link-active);
-    transform: scale(1.1); }
-  /* line 196, source/scss/optional/_forms.scss */
-  input[type="radio"]:hover, input[type="radio"]:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.4375rem rgba(204, 0, 102, 0.2); }
-  /* line 201, source/scss/optional/_forms.scss */
-  input[type="radio"]:focus {
-    border-color: var(--tycolor-link-active); }
+  width: 1.5em;
+}
+input[type=radio]:checked {
+  background-color: var(--tycolor-link-active);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23FFFFFF'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-color: var(--tycolor-link-active);
+}
+input[type=radio]:hover {
+  border-color: var(--tycolor-link-active);
+  transform: scale(1.1);
+}
+input[type=radio]:hover, input[type=radio]:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4375rem rgba(204, 0, 102, 0.2);
+}
+input[type=radio]:focus {
+  border-color: var(--tycolor-link-active);
+}
 
-/* line 207, source/scss/optional/_forms.scss */
-input[type="range"] {
+input[type=range] {
   -webkit-appearance: none !important;
   background-color: transparent;
   border: 0;
@@ -1609,125 +1598,128 @@ input[type="range"] {
   min-width: 3.5rem;
   outline: none;
   position: relative;
-  width: 100%; }
-  /* line 216, source/scss/optional/_forms.scss */
-  input[type="range"]::before {
-    background-color: var(--tycolor-border);
-    border: 0;
-    border-radius: 2px;
-    content: "";
-    display: block;
-    height: 4px;
-    outline: none;
-    position: absolute;
-    top: calc(0.875rem - 2px);
-    width: 100%;
-    z-index: -1; }
-  /* line 229, source/scss/optional/_forms.scss */
-  input[type="range"]::-moz-range-track {
-    background-color: var(--tycolor-border);
-    border: 0;
-    border-radius: 2px;
-    height: 4px;
-    outline: none;
-    width: 100%; }
-  /* line 237, source/scss/optional/_forms.scss */
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: var(--tycolor-bg);
-    border: 4px var(--tycolor-link-active) solid;
-    border-radius: 0.4375rem;
-    box-sizing: border-box;
-    height: 1.75rem;
-    width: 1.75rem; }
-  /* line 246, source/scss/optional/_forms.scss */
-  input[type="range"]::-moz-range-thumb {
-    -webkit-appearance: none;
-    background-color: var(--tycolor-bg);
-    border: 4px var(--tycolor-link-active) solid;
-    border-radius: 0.4375rem;
-    box-sizing: border-box;
-    height: 1.75rem;
-    width: 1.75rem; }
-  /* line 255, source/scss/optional/_forms.scss */
-  input[type="range"]::-moz-range-progress {
-    -webkit-appearance: none !important;
-    height: 4px;
-    background-color: var(--tycolor-link-active);
-    border-radius: 2px; }
+  width: 100%;
+}
+input[type=range]::before {
+  background-color: var(--tycolor-border);
+  border: 0;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 4px;
+  outline: none;
+  position: absolute;
+  top: calc(0.875rem - 2px);
+  width: 100%;
+  z-index: -1;
+}
+input[type=range]::-moz-range-track {
+  background-color: var(--tycolor-border);
+  border: 0;
+  border-radius: 2px;
+  height: 4px;
+  outline: none;
+  width: 100%;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: var(--tycolor-bg);
+  border: 4px var(--tycolor-link-active) solid;
+  border-radius: 0.4375rem;
+  box-sizing: border-box;
+  height: 1.75rem;
+  width: 1.75rem;
+}
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background-color: var(--tycolor-bg);
+  border: 4px var(--tycolor-link-active) solid;
+  border-radius: 0.4375rem;
+  box-sizing: border-box;
+  height: 1.75rem;
+  width: 1.75rem;
+}
+input[type=range]::-moz-range-progress {
+  -webkit-appearance: none !important;
+  height: 4px;
+  background-color: var(--tycolor-link-active);
+  border-radius: 2px;
+}
 
-/* line 1, source/scss/optional/_media.scss */
 img[data-lazyimage] {
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
-  transition: all 1000ms ease-in-out; }
-  /* line 6, source/scss/optional/_media.scss */
-  img[data-lazyimage].not-lazyLoaded {
-    opacity: 0; }
+  transition: all 1000ms ease-in-out;
+}
+img[data-lazyimage].not-lazyLoaded {
+  opacity: 0;
+}
 
-/* line 10, source/scss/optional/_media.scss */
 .tymedia {
   margin-left: 0;
   margin-right: 0;
-  padding: 0; }
-  /* line 14, source/scss/optional/_media.scss */
-  .tymedia .tymedia-iframe {
-    height: 0;
-    padding-top: 55.56%;
-    position: relative;
-    width: 100%; }
-    /* line 19, source/scss/optional/_media.scss */
-    .tymedia .tymedia-iframe iframe {
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%; }
-  /* line 27, source/scss/optional/_media.scss */
-  .tymedia img {
-    border: none;
-    display: block;
-    height: auto;
-    width: 100%; }
-  /* line 33, source/scss/optional/_media.scss */
-  .tymedia .tymedia-caption {
-    color: #707070;
-    font-size: 0.83333rem;
-    line-height: 1.75rem; }
-  /* line 38, source/scss/optional/_media.scss */
-  .tymedia * + .tymedia-caption {
-    margin-top: 0.875rem; }
-  @media (min-width: 40em) {
-    /* line 41, source/scss/optional/_media.scss */
-    .tymedia.float-left, .tymedia.float-right {
-      box-sizing: border-box;
-      margin-bottom: 1.75rem;
-      width: calc(50% - 1.75rem); }
-      /* line 47, source/scss/optional/_media.scss */
-      .tymedia.float-left:first-child + *, .tymedia.float-right:first-child + * {
-        margin-top: 0; } }
-  @media (min-width: 40em) {
-    /* line 52, source/scss/optional/_media.scss */
-    .tymedia.float-left {
-      clear: left;
-      float: left;
-      margin-right: 3.5rem; } }
-  @media (min-width: 40em) {
-    /* line 59, source/scss/optional/_media.scss */
-    .tymedia.float-right {
-      clear: right;
-      float: right;
-      margin-left: 3.5rem; } }
+  padding: 0;
+}
+.tymedia .tymedia-iframe {
+  height: 0;
+  padding-top: 55.56%;
+  position: relative;
+  width: 100%;
+}
+.tymedia .tymedia-iframe iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.tymedia img {
+  border: none;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.tymedia .tymedia-caption {
+  color: #707070;
+  font-size: 0.8333333333rem;
+  line-height: 1.75rem;
+}
+.tymedia * + .tymedia-caption {
+  margin-top: 0.875rem;
+}
+@media (min-width: 40em) {
+  .tymedia.float-left, .tymedia.float-right {
+    box-sizing: border-box;
+    margin-bottom: 1.75rem;
+    width: calc(50% - 1.75rem);
+  }
+  .tymedia.float-left:first-child + *, .tymedia.float-right:first-child + * {
+    margin-top: 0;
+  }
+}
+@media (min-width: 40em) {
+  .tymedia.float-left {
+    clear: left;
+    float: left;
+    margin-right: 3.5rem;
+  }
+}
+@media (min-width: 40em) {
+  .tymedia.float-right {
+    clear: right;
+    float: right;
+    margin-left: 3.5rem;
+  }
+}
 
 @font-face {
   font-family: tyicons;
   src: url("../fonts/tyicons/tyicons.eot");
   src: url("../fonts/tyicons/tyicons.eot?#iefix") format("embedded-opentype"), url("../fonts/tyicons/tyicons.woff2") format("woff2"), url("../fonts/tyicons/tyicons.woff") format("woff"), url("../fonts/tyicons/tyicons.ttf") format("truetype"), url("../fonts/tyicons/tyicons.svg#tyicons") format("svg");
   font-style: normal;
-  font-weight: 400; }
-
-/* line 11, source/scss/extras/_icons.scss */
+  font-weight: 400;
+}
 .tyicons {
   display: inline-block;
   font-family: tyicons;
@@ -1737,502 +1729,518 @@ img[data-lazyimage] {
   text-rendering: auto;
   transform: translate(0, 0);
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+}
 
-/* line 25, source/scss/extras/_icons.scss */
 .tyicons-lg {
   vertical-align: -15%;
   line-height: 0.75em;
-  font-size: 1.33333333em; }
+  font-size: 1.33333333em;
+}
 
-/* line 30, source/scss/extras/_icons.scss */
 .tyicons-2x {
-  font-size: 2em; }
+  font-size: 2em;
+}
 
-/* line 33, source/scss/extras/_icons.scss */
 .tyicons-3x {
-  font-size: 3em; }
+  font-size: 3em;
+}
 
-/* line 36, source/scss/extras/_icons.scss */
 .tyicons-4x {
-  font-size: 4em; }
+  font-size: 4em;
+}
 
-/* line 39, source/scss/extras/_icons.scss */
 .tyicons-5x {
-  font-size: 5em; }
+  font-size: 5em;
+}
 
-/* line 42, source/scss/extras/_icons.scss */
 .tyicons-fw {
   width: 1.28571429em;
-  text-align: center; }
+  text-align: center;
+}
 
-/* line 46, source/scss/extras/_icons.scss */
 .tyicons-angle-down::before {
-  content: "\ea01"; }
+  content: "\ea01";
+}
 
-/* line 49, source/scss/extras/_icons.scss */
 .tyicons-angle-left::before {
-  content: "\ea02"; }
+  content: "\ea02";
+}
 
-/* line 52, source/scss/extras/_icons.scss */
 .tyicons-angle-right::before {
-  content: "\ea03"; }
+  content: "\ea03";
+}
 
-/* line 55, source/scss/extras/_icons.scss */
 .tyicons-angle-up-down::before {
-  content: "\ea05"; }
+  content: "\ea05";
+}
 
-/* line 58, source/scss/extras/_icons.scss */
 .tyicons-angle-up::before {
-  content: "\ea04"; }
+  content: "\ea04";
+}
 
-/* line 61, source/scss/extras/_icons.scss */
 .tyicons-bars::before {
-  content: "\ea06"; }
+  content: "\ea06";
+}
 
-/* line 64, source/scss/extras/_icons.scss */
 .tyicons-check::before {
-  content: "\ea07"; }
+  content: "\ea07";
+}
 
-/* line 67, source/scss/extras/_icons.scss */
 .tyicons-dash::before {
-  content: "\ea08"; }
+  content: "\ea08";
+}
 
-/* line 70, source/scss/extras/_icons.scss */
 .tyicons-muted::before {
-  content: "\ea09"; }
+  content: "\ea09";
+}
 
-/* line 73, source/scss/extras/_icons.scss */
 .tyicons-pause::before {
-  content: "\ea0a"; }
+  content: "\ea0a";
+}
 
-/* line 76, source/scss/extras/_icons.scss */
 .tyicons-play::before {
-  content: "\ea0b"; }
+  content: "\ea0b";
+}
 
-/* line 79, source/scss/extras/_icons.scss */
 .tyicons-quote-left::before {
-  content: "\ea0c"; }
+  content: "\ea0c";
+}
 
-/* line 82, source/scss/extras/_icons.scss */
 .tyicons-quote-right::before {
-  content: "\ea0d"; }
+  content: "\ea0d";
+}
 
-/* line 85, source/scss/extras/_icons.scss */
 .tyicons-search::before {
-  content: "\ea0e"; }
+  content: "\ea0e";
+}
 
-/* line 88, source/scss/extras/_icons.scss */
 .tyicons-sound::before {
-  content: "\ea0f"; }
+  content: "\ea0f";
+}
 
-/* line 91, source/scss/extras/_icons.scss */
 .tyicons-x::before {
-  content: "\ea10"; }
+  content: "\ea10";
+}
 
-/* line 14, source/scss/extras/_reverse.scss */
 .reverse {
-  --tycolor-bg:                   #333;
-  --tycolor-bg-tab-active:        rgba(255, 179, 217, 0.12);
-  --tycolor-fg:                   #eeeeee;
-  --tycolor-text-light:           #919191;
-  --tycolor-link-default:         #b3d9ff;
-  --tycolor-link-active:          #ffb3d9;
-  --tycolor-border:               #585858;
-  --tycolor-border-link-default:  rgba(179, 217, 255, 0.5);
-  --tycolor-border-link-active:   rgba(255, 179, 217, 0.75);
-  --tycolor-shade:                rgba(238, 238, 238, 0.1);
+  --tycolor-bg: #333;
+  --tycolor-bg-tab-active: rgba(255, 179, 217, 0.12);
+  --tycolor-fg: #eeeeee;
+  --tycolor-text-light: #919191;
+  --tycolor-link-default: #b3d9ff;
+  --tycolor-link-active: #ffb3d9;
+  --tycolor-border: #585858;
+  --tycolor-border-link-default: rgba(179, 217, 255, 0.5);
+  --tycolor-border-link-active: rgba(255, 179, 217, 0.75);
+  --tycolor-shade: rgba(238, 238, 238, 0.1);
   background-color: var(--tycolor-bg);
-  color: var(--tycolor-fg); }
-  /* line 30, source/scss/extras/_reverse.scss */
-  .reverse .tybutton,
-  .reverse a.tybutton,
-  .reverse button,
-  .reverse input[type="button"],
-  .reverse input[type="reset"],
-  .reverse input[type="submit"] {
-    background-color: #b3d9ff;
-    border: none;
-    border-radius: 4px;
-    color: black;
-    cursor: pointer;
-    display: inline-block;
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0;
-    padding: 0.4375rem 1.3125rem;
-    text-decoration: none;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    transition: all 250ms;
-    vertical-align: middle; }
-    /* line 188, source/scss/required/_mixins.scss */
-    .reverse .tybutton:hover, .reverse .tybutton:active, .reverse .tybutton[href]:hover, .reverse .tybutton[href]:active,
-    .reverse a.tybutton:hover,
-    .reverse a.tybutton:active,
-    .reverse a.tybutton[href]:hover,
-    .reverse a.tybutton[href]:active,
-    .reverse button:hover,
-    .reverse button:active,
-    .reverse button[href]:hover,
-    .reverse button[href]:active,
-    .reverse input[type="button"]:hover,
-    .reverse input[type="button"]:active,
-    .reverse input[type="button"][href]:hover,
-    .reverse input[type="button"][href]:active,
-    .reverse input[type="reset"]:hover,
-    .reverse input[type="reset"]:active,
-    .reverse input[type="reset"][href]:hover,
-    .reverse input[type="reset"][href]:active,
-    .reverse input[type="submit"]:hover,
-    .reverse input[type="submit"]:active,
-    .reverse input[type="submit"][href]:hover,
-    .reverse input[type="submit"][href]:active {
-      background-color: #ffb3d9;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
-      color: black; }
-    /* line 199, source/scss/required/_mixins.scss */
-    .reverse .tybutton:active, .reverse .tybutton[href]:active,
-    .reverse a.tybutton:active,
-    .reverse a.tybutton[href]:active,
-    .reverse button:active,
-    .reverse button[href]:active,
-    .reverse input[type="button"]:active,
-    .reverse input[type="button"][href]:active,
-    .reverse input[type="reset"]:active,
-    .reverse input[type="reset"][href]:active,
-    .reverse input[type="submit"]:active,
-    .reverse input[type="submit"][href]:active {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 202, source/scss/required/_mixins.scss */
-    .reverse .tybutton:focus, .reverse .tybutton[href]:focus,
-    .reverse a.tybutton:focus,
-    .reverse a.tybutton[href]:focus,
-    .reverse button:focus,
-    .reverse button[href]:focus,
-    .reverse input[type="button"]:focus,
-    .reverse input[type="button"][href]:focus,
-    .reverse input[type="reset"]:focus,
-    .reverse input[type="reset"][href]:focus,
-    .reverse input[type="submit"]:focus,
-    .reverse input[type="submit"][href]:focus {
-      outline: none; }
-  /* line 38, source/scss/extras/_reverse.scss */
-  .reverse .tybutton-outline,
-  .reverse a.tybutton-outline {
-    background-color: #b3d9ff;
-    border: none;
-    border-radius: 4px;
-    color: black;
-    cursor: pointer;
-    display: inline-block;
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0;
-    padding: 0.4375rem 1.3125rem;
-    text-decoration: none;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    transition: all 250ms;
-    vertical-align: middle;
-    background-color: transparent;
-    border: 2px #b3d9ff solid;
-    color: #b3d9ff;
-    padding: calc(0.4375rem - 2px) calc(1.3125rem - 2px); }
-    /* line 188, source/scss/required/_mixins.scss */
-    .reverse .tybutton-outline:hover, .reverse .tybutton-outline:active, .reverse .tybutton-outline[href]:hover, .reverse .tybutton-outline[href]:active,
-    .reverse a.tybutton-outline:hover,
-    .reverse a.tybutton-outline:active,
-    .reverse a.tybutton-outline[href]:hover,
-    .reverse a.tybutton-outline[href]:active {
-      background-color: #ffb3d9;
-      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
-      color: black; }
-    /* line 199, source/scss/required/_mixins.scss */
-    .reverse .tybutton-outline:active, .reverse .tybutton-outline[href]:active,
-    .reverse a.tybutton-outline:active,
-    .reverse a.tybutton-outline[href]:active {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-    /* line 202, source/scss/required/_mixins.scss */
-    .reverse .tybutton-outline:focus, .reverse .tybutton-outline[href]:focus,
-    .reverse a.tybutton-outline:focus,
-    .reverse a.tybutton-outline[href]:focus {
-      outline: none; }
-    /* line 229, source/scss/required/_mixins.scss */
-    .reverse .tybutton-outline:hover, .reverse .tybutton-outline:active, .reverse .tybutton-outline[href]:hover, .reverse .tybutton-outline[href]:active,
-    .reverse a.tybutton-outline:hover,
-    .reverse a.tybutton-outline:active,
-    .reverse a.tybutton-outline[href]:hover,
-    .reverse a.tybutton-outline[href]:active {
-      border-color: #f2aace; }
-  /* line 45, source/scss/extras/_reverse.scss */
-  .reverse blockquote.pullquote-roof-fixed::before, .reverse blockquote.pullquote-roof-full::before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22%23585858%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E"); }
-  /* line 53, source/scss/extras/_reverse.scss */
-  .reverse select:not([multiple]) {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='%23919191'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='%23919191'/%3E%3C/svg%3E"); }
-  /* line 59, source/scss/extras/_reverse.scss */
-  .reverse input[type="checkbox"]:checked {
-    background-image: url("data:image/svg+xml;charset=ASCII,%3Csvg%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%2064%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23333333%22%20points%3D%2223%2056%2020.9401855%2053.9401855%200%2033%207%2026%2023%2042%2057%208%2064%2015%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E"); }
-  /* line 65, source/scss/extras/_reverse.scss */
-  .reverse input[type="radio"]:checked {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23333333'/%3e%3c/svg%3e"); }
-  /* line 71, source/scss/extras/_reverse.scss */
-  .reverse .tymedia .tymedia-caption {
-    color: #919191; }
+  color: var(--tycolor-fg);
+}
+.reverse .tybutton,
+.reverse a.tybutton,
+.reverse button,
+.reverse input[type=button],
+.reverse input[type=reset],
+.reverse input[type=submit] {
+  background-color: #b3d9ff;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0.4375rem 1.3125rem;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 250ms;
+  vertical-align: middle;
+}
+.reverse .tybutton:hover, .reverse .tybutton:active, .reverse .tybutton[href]:hover, .reverse .tybutton[href]:active,
+.reverse a.tybutton:hover,
+.reverse a.tybutton:active,
+.reverse a.tybutton[href]:hover,
+.reverse a.tybutton[href]:active,
+.reverse button:hover,
+.reverse button:active,
+.reverse button[href]:hover,
+.reverse button[href]:active,
+.reverse input[type=button]:hover,
+.reverse input[type=button]:active,
+.reverse input[type=button][href]:hover,
+.reverse input[type=button][href]:active,
+.reverse input[type=reset]:hover,
+.reverse input[type=reset]:active,
+.reverse input[type=reset][href]:hover,
+.reverse input[type=reset][href]:active,
+.reverse input[type=submit]:hover,
+.reverse input[type=submit]:active,
+.reverse input[type=submit][href]:hover,
+.reverse input[type=submit][href]:active {
+  background-color: #ffb3d9;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  color: black;
+}
+.reverse .tybutton:active, .reverse .tybutton[href]:active,
+.reverse a.tybutton:active,
+.reverse a.tybutton[href]:active,
+.reverse button:active,
+.reverse button[href]:active,
+.reverse input[type=button]:active,
+.reverse input[type=button][href]:active,
+.reverse input[type=reset]:active,
+.reverse input[type=reset][href]:active,
+.reverse input[type=submit]:active,
+.reverse input[type=submit][href]:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+.reverse .tybutton:focus, .reverse .tybutton[href]:focus,
+.reverse a.tybutton:focus,
+.reverse a.tybutton[href]:focus,
+.reverse button:focus,
+.reverse button[href]:focus,
+.reverse input[type=button]:focus,
+.reverse input[type=button][href]:focus,
+.reverse input[type=reset]:focus,
+.reverse input[type=reset][href]:focus,
+.reverse input[type=submit]:focus,
+.reverse input[type=submit][href]:focus {
+  outline: none;
+}
+.reverse .tybutton-outline,
+.reverse a.tybutton-outline {
+  background-color: #b3d9ff;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0.4375rem 1.3125rem;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 250ms;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 2px #b3d9ff solid;
+  color: #b3d9ff;
+  padding: calc(0.4375rem - 2px) calc(1.3125rem - 2px);
+}
+.reverse .tybutton-outline:hover, .reverse .tybutton-outline:active, .reverse .tybutton-outline[href]:hover, .reverse .tybutton-outline[href]:active,
+.reverse a.tybutton-outline:hover,
+.reverse a.tybutton-outline:active,
+.reverse a.tybutton-outline[href]:hover,
+.reverse a.tybutton-outline[href]:active {
+  background-color: #ffb3d9;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  color: black;
+}
+.reverse .tybutton-outline:active, .reverse .tybutton-outline[href]:active,
+.reverse a.tybutton-outline:active,
+.reverse a.tybutton-outline[href]:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+.reverse .tybutton-outline:focus, .reverse .tybutton-outline[href]:focus,
+.reverse a.tybutton-outline:focus,
+.reverse a.tybutton-outline[href]:focus {
+  outline: none;
+}
+.reverse .tybutton-outline:hover, .reverse .tybutton-outline:active, .reverse .tybutton-outline[href]:hover, .reverse .tybutton-outline[href]:active,
+.reverse a.tybutton-outline:hover,
+.reverse a.tybutton-outline:active,
+.reverse a.tybutton-outline[href]:hover,
+.reverse a.tybutton-outline[href]:active {
+  border-color: #f2aace;
+}
+.reverse blockquote.pullquote-roof-fixed::before, .reverse blockquote.pullquote-roof-full::before {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox%3D%220%200%201920%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20fill%3D%22%23585858%22%3E%3Cpolygon%20points%3D%220%2028%20936%2028%20936%2032%200%2032%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22984%2028%201920%2028%201920%2032%20984%2032%22%3E%3C%2Fpolygon%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+.reverse select:not([multiple]) {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='%23919191'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='%23919191'/%3E%3C/svg%3E");
+}
+.reverse input[type=checkbox]:checked {
+  background-image: url("data:image/svg+xml;charset=ASCII,%3Csvg%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%2064%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23333333%22%20points%3D%2223%2056%2020.9401855%2053.9401855%200%2033%207%2026%2023%2042%2057%208%2064%2015%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+}
+.reverse input[type=radio]:checked {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23333333'/%3e%3c/svg%3e");
+}
+.reverse .tymedia .tymedia-caption {
+  color: #919191;
+}
 
-/* line 2, source/scss/extras/_effects.scss */
 .fade-hover {
-  animation: fadein 250ms; }
+  animation: fadein 250ms;
+}
 
-/* line 2, source/scss/extras/_effects.scss */
 .fade-move {
-  animation: fadein 500ms; }
+  animation: fadein 500ms;
+}
 
-/* line 2, source/scss/extras/_effects.scss */
 .fade-sm {
-  animation: fadein 1000ms; }
+  animation: fadein 1000ms;
+}
 
-/* line 2, source/scss/extras/_effects.scss */
 .fade-md {
-  animation: fadein 2000ms; }
+  animation: fadein 2000ms;
+}
 
-/* line 2, source/scss/extras/_effects.scss */
 .fade-lg {
-  animation: fadein 3000ms; }
+  animation: fadein 3000ms;
+}
 
 @media (max-width: 39.96875em) {
-  /* line 14, source/scss/extras/_responsive_text.scss */
   body {
     font-size: 0.9rem;
-    line-height: 1.75rem; } }
-
+    line-height: 1.75rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 14, source/scss/extras/_responsive_text.scss */
   body {
-    font-size: 1.11111rem;
-    line-height: 1.75rem; } }
+    font-size: 1.1111111111rem;
+    line-height: 1.75rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 25, source/scss/extras/_responsive_text.scss */
   pre,
-  code,
-  kbd,
-  samp {
-    font-size: 0.9rem; } }
-
+code,
+kbd,
+samp {
+    font-size: 0.9rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 25, source/scss/extras/_responsive_text.scss */
   pre,
-  code,
-  kbd,
-  samp {
-    font-size: 1.11111rem; } }
+code,
+kbd,
+samp {
+    font-size: 1.1111111111rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 37, source/scss/extras/_responsive_text.scss */
   p.lede {
     font-size: 1.296rem;
-    line-height: 1.75rem; } }
-
+    line-height: 1.75rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 37, source/scss/extras/_responsive_text.scss */
   p.lede {
     font-size: 1.6rem;
-    line-height: 2.625rem; } }
+    line-height: 2.625rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 48, source/scss/extras/_responsive_text.scss */
   h1,
-  .tyfont-size-h1 {
-    font-size: 2.68739rem;
-    line-height: 3.5rem; } }
-
+.tyfont-size-h1 {
+    font-size: 2.6873856rem;
+    line-height: 3.5rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 48, source/scss/extras/_responsive_text.scss */
   h1,
-  .tyfont-size-h1 {
+.tyfont-size-h1 {
     font-size: 3.31776rem;
-    line-height: 3.5rem; } }
+    line-height: 3.5rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 59, source/scss/extras/_responsive_text.scss */
   h2,
-  .tyfont-size-h2 {
+.tyfont-size-h2 {
     font-size: 1.86624rem;
-    line-height: 2.625rem; } }
-
+    line-height: 2.625rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 59, source/scss/extras/_responsive_text.scss */
   h2,
-  .tyfont-size-h2 {
+.tyfont-size-h2 {
     font-size: 2.304rem;
-    line-height: 2.625rem; } }
+    line-height: 2.625rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 70, source/scss/extras/_responsive_text.scss */
   h3,
-  .tyfont-size-h3 {
+.tyfont-size-h3 {
     font-size: 1.5552rem;
-    line-height: 1.75rem; } }
-
+    line-height: 1.75rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 70, source/scss/extras/_responsive_text.scss */
   h3,
-  .tyfont-size-h3 {
+.tyfont-size-h3 {
     font-size: 1.92rem;
-    line-height: 2.625rem; } }
+    line-height: 2.625rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 81, source/scss/extras/_responsive_text.scss */
   h4,
-  .tyfont-size-h4 {
+.tyfont-size-h4 {
     font-size: 1.296rem;
-    line-height: 1.75rem; } }
-
+    line-height: 1.75rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 81, source/scss/extras/_responsive_text.scss */
   h4,
-  .tyfont-size-h4 {
+.tyfont-size-h4 {
     font-size: 1.6rem;
-    line-height: 1.75rem; } }
+    line-height: 1.75rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 92, source/scss/extras/_responsive_text.scss */
   h5,
-  .tyfont-size-h5 {
+.tyfont-size-h5 {
     font-size: 1.08rem;
-    line-height: 1.75rem; } }
-
+    line-height: 1.75rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 92, source/scss/extras/_responsive_text.scss */
   h5,
-  .tyfont-size-h5 {
-    font-size: 1.33333rem;
-    line-height: 1.75rem; } }
+.tyfont-size-h5 {
+    font-size: 1.3333333333rem;
+    line-height: 1.75rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 103, source/scss/extras/_responsive_text.scss */
   h6,
-  .tyfont-size-h6 {
+.tyfont-size-h6 {
     font-size: 0.9rem;
-    line-height: 1.75rem; } }
-
+    line-height: 1.75rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 103, source/scss/extras/_responsive_text.scss */
   h6,
-  .tyfont-size-h6 {
-    font-size: 1.11111rem;
-    line-height: 1.75rem; } }
+.tyfont-size-h6 {
+    font-size: 1.1111111111rem;
+    line-height: 1.75rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 116, source/scss/extras/_responsive_text.scss */
   h2.tyfy-collapsable-processed::before {
-    width: 2.625rem; } }
-
+    width: 2.625rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 116, source/scss/extras/_responsive_text.scss */
   h2.tyfy-collapsable-processed::before {
-    width: 2.625rem; } }
+    width: 2.625rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 126, source/scss/extras/_responsive_text.scss */
   h3.tyfy-collapsable-processed::before {
-    width: 1.75rem; } }
-
+    width: 1.75rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 126, source/scss/extras/_responsive_text.scss */
   h3.tyfy-collapsable-processed::before {
-    width: 2.625rem; } }
+    width: 2.625rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 136, source/scss/extras/_responsive_text.scss */
   h4.tyfy-collapsable-processed::before {
-    width: 1.75rem; } }
-
+    width: 1.75rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 136, source/scss/extras/_responsive_text.scss */
   h4.tyfy-collapsable-processed::before {
-    width: 1.75rem; } }
+    width: 1.75rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 146, source/scss/extras/_responsive_text.scss */
   h5.tyfy-collapsable-processed::before {
-    width: 1.75rem; } }
-
+    width: 1.75rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 146, source/scss/extras/_responsive_text.scss */
   h5.tyfy-collapsable-processed::before {
-    width: 1.75rem; } }
+    width: 1.75rem;
+  }
+}
 
 @media (max-width: 39.96875em) {
-  /* line 156, source/scss/extras/_responsive_text.scss */
   h6.tyfy-collapsable-processed::before {
-    width: 1.75rem; } }
-
+    width: 1.75rem;
+  }
+}
 @media (min-width: 80em) {
-  /* line 156, source/scss/extras/_responsive_text.scss */
   h6.tyfy-collapsable-processed::before {
-    width: 1.75rem; } }
+    width: 1.75rem;
+  }
+}
 
-/* line 25, docs/resources/scss/tyfy-docs-all.scss */
 body {
   animation: fadein 1s;
   margin: 0 0 1.75rem 0;
-  padding: 0; }
+  padding: 0;
+}
 
-/* line 32, docs/resources/scss/tyfy-docs-all.scss */
 .block, footer.footer {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
   max-width: 60.375rem;
   padding-left: 1.75rem;
-  padding-right: 1.75rem; }
+  padding-right: 1.75rem;
+}
 
-/* line 42, docs/resources/scss/tyfy-docs-all.scss */
 .section-body {
   margin-left: auto;
   margin-right: auto;
-  max-width: 43.75rem; }
+  max-width: 43.75rem;
+}
 
-/* line 49, docs/resources/scss/tyfy-docs-all.scss */
 .nav-inpage {
-  float: right; }
-  @media (max-width: 49.9375em) {
-    /* line 49, docs/resources/scss/tyfy-docs-all.scss */
-    .nav-inpage {
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 1px !important;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px !important; }
-      /* line 43, source/scss/required/_mixins.scss */
-      .nav-inpage.focusable:active, .nav-inpage.focusable:focus {
-        clip: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        position: static;
-        width: auto; } }
-  @media (min-width: 50em) {
-    /* line 54, docs/resources/scss/tyfy-docs-all.scss */
-    .nav-inpage + .section-body {
-      margin-left: 0;
-      margin-right: 11.375rem; } }
+  float: right;
+}
+@media (max-width: 49.9375em) {
+  .nav-inpage {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px !important;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px !important;
+  }
+  .nav-inpage.focusable:active, .nav-inpage.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+@media (min-width: 50em) {
+  .nav-inpage + .section-body {
+    margin-left: 0;
+    margin-right: 11.375rem;
+  }
+}
 
-/* line 63, docs/resources/scss/tyfy-docs-all.scss */
 main.block + footer.footer {
-  padding-top: 1.75rem; }
+  padding-top: 1.75rem;
+}
 
-/* line 67, docs/resources/scss/tyfy-docs-all.scss */
-.constrained, header.brand h1, header.brand nav {
+.constrained, header.brand nav, header.brand h1 {
   margin-left: auto;
   margin-right: auto;
-  max-width: 55rem; }
+  max-width: 55rem;
+}
 
-/* line 73, docs/resources/scss/tyfy-docs-all.scss */
 .tyfy.logo {
   background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="101px" height="18px" viewBox="0 0 101 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M54,3.5 L54,18 L50,18 L50,3.5 L46,3.5 L46,0 L58,0 L58,3.5 L54,3.5 Z M64,18 L64,11.5 L59,0 L63,0 L65.75,7.25 L66.25,7.25 L68.9951172,0 L73,0 L68,11.5 L68,18 L64,18 Z M92,18 L92,11.5 L87,0 L91,0 L93.75,7.25 L94.25,7.25 L96.9951172,0 L101,0 L96,11.5 L96,18 L92,18 Z M75,18 L75,0 L86,0 L86,3.5 L79,3.5 L79,7.00158691 L84.747851,7.00158691 L84.747851,10.5 L79,10.5 L79,18 L75,18 Z" id="Tyfy"></path><g id="tics"><rect x="0" y="0" width="2" height="18"></rect><rect x="5" y="8" width="2" height="10"></rect><rect x="10" y="8" width="2" height="10"></rect><rect x="15" y="0" width="2" height="18"></rect><rect x="30" y="0" width="2" height="18"></rect><rect x="20" y="8" width="2" height="10"></rect><rect x="25" y="8" width="2" height="10"></rect><rect x="35" y="8" width="2" height="10"></rect><rect x="40" y="8" width="2" height="10"></rect></g></svg>');
   background-position: left 1.75rem center;
@@ -2243,19 +2251,19 @@ main.block + footer.footer {
   height: 3.5rem;
   overflow: hidden;
   padding-top: 3.5rem;
-  width: 10.5rem; }
+  width: 10.5rem;
+}
 
-/* line 85, docs/resources/scss/tyfy-docs-all.scss */
 strong.tyfy {
   /* autoprefixer: off */
-  background: -webkit-linear-gradient(#cc0066, #0066CC);
+  background: -webkit-linear-gradient(#cc0066, #0066cc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "IBM Plex Sans Condensed", sans-serif;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
-/* line 94, docs/resources/scss/tyfy-docs-all.scss */
 .reverse .tybutton-outline-white {
   background-color: white;
   border: none;
@@ -2276,23 +2284,23 @@ strong.tyfy {
   color: white;
   padding: calc(0.4375rem - 2px) calc(1.3125rem - 2px);
   font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
-  margin: 0.4375rem; }
-  /* line 188, source/scss/required/_mixins.scss */
-  .reverse .tybutton-outline-white:hover, .reverse .tybutton-outline-white:active, .reverse .tybutton-outline-white[href]:hover, .reverse .tybutton-outline-white[href]:active {
-    background-color: white;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
-    color: black; }
-  /* line 199, source/scss/required/_mixins.scss */
-  .reverse .tybutton-outline-white:active, .reverse .tybutton-outline-white[href]:active {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-  /* line 202, source/scss/required/_mixins.scss */
-  .reverse .tybutton-outline-white:focus, .reverse .tybutton-outline-white[href]:focus {
-    outline: none; }
-  /* line 229, source/scss/required/_mixins.scss */
-  .reverse .tybutton-outline-white:hover, .reverse .tybutton-outline-white:active, .reverse .tybutton-outline-white[href]:hover, .reverse .tybutton-outline-white[href]:active {
-    border-color: #f2f2f2; }
+  margin: 0.4375rem;
+}
+.reverse .tybutton-outline-white:hover, .reverse .tybutton-outline-white:active, .reverse .tybutton-outline-white[href]:hover, .reverse .tybutton-outline-white[href]:active {
+  background-color: white;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  color: black;
+}
+.reverse .tybutton-outline-white:active, .reverse .tybutton-outline-white[href]:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+.reverse .tybutton-outline-white:focus, .reverse .tybutton-outline-white[href]:focus {
+  outline: none;
+}
+.reverse .tybutton-outline-white:hover, .reverse .tybutton-outline-white:active, .reverse .tybutton-outline-white[href]:hover, .reverse .tybutton-outline-white[href]:active {
+  border-color: #f2f2f2;
+}
 
-/* line 99, docs/resources/scss/tyfy-docs-all.scss */
 pre.codebox {
   background-color: rgba(17, 17, 17, 0.15);
   border: 2px #b8b8b8 solid;
@@ -2300,261 +2308,269 @@ pre.codebox {
   box-sizing: border-box;
   overflow: auto;
   padding: calc(1.75rem - 2px);
-  position: relative; }
-  /* line 107, docs/resources/scss/tyfy-docs-all.scss */
-  pre.codebox.codebox-short {
-    max-height: 10.5rem; }
-  /* line 110, docs/resources/scss/tyfy-docs-all.scss */
-  pre.codebox code {
-    background-color: transparent;
-    padding: 0; }
+  position: relative;
+}
+pre.codebox.codebox-short {
+  max-height: 10.5rem;
+}
+pre.codebox code {
+  background-color: transparent;
+  padding: 0;
+}
 
-/* line 117, docs/resources/scss/tyfy-docs-all.scss */
-pre.codebox[class*="language-"] {
+pre.codebox[class*=language-] {
   background-color: rgba(17, 17, 17, 0.15) !important;
   font-family: "IBM Plex Mono", courier, monospace !important;
   margin: 0 !important;
-  padding: calc(1.75rem - 2px) !important; }
-  /* line 123, docs/resources/scss/tyfy-docs-all.scss */
-  * + pre.codebox[class*="language-"] {
-    margin-top: 1.75rem !important; }
-  /* line 126, docs/resources/scss/tyfy-docs-all.scss */
-  li * + pre.codebox[class*="language-"] {
-    margin-top: 0.875rem !important; }
-  /* line 130, docs/resources/scss/tyfy-docs-all.scss */
-  .tymargins-on * + pre.codebox[class*="language-"] {
-    margin-top: 1.75rem !important; }
-  /* line 133, docs/resources/scss/tyfy-docs-all.scss */
-  .tymargins-on li * + pre.codebox[class*="language-"] {
-    margin-top: 0.875rem !important; }
-  /* line 136, docs/resources/scss/tyfy-docs-all.scss */
-  pre.codebox[class*="language-"] code {
-    font-family: "IBM Plex Mono", courier, monospace !important; }
+  padding: calc(1.75rem - 2px) !important;
+}
+* + pre.codebox[class*=language-] {
+  margin-top: 1.75rem !important;
+}
+li * + pre.codebox[class*=language-] {
+  margin-top: 0.875rem !important;
+}
+.tymargins-on * + pre.codebox[class*=language-] {
+  margin-top: 1.75rem !important;
+}
+.tymargins-on li * + pre.codebox[class*=language-] {
+  margin-top: 0.875rem !important;
+}
+pre.codebox[class*=language-] code {
+  font-family: "IBM Plex Mono", courier, monospace !important;
+}
 
-/* line 140, docs/resources/scss/tyfy-docs-all.scss */
 code.val-default {
   background-color: transparent;
   color: #6600cc;
   font-style: italic;
   font-weight: normal;
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+}
 
-/* line 149, docs/resources/scss/tyfy-docs-all.scss */
 .form-demo {
   border: 2px solid #b8b8b8;
   box-shadow: inset 0px 0px 1.75rem rgba(0, 0, 0, 0.05);
   display: flex;
   flex-wrap: wrap;
-  padding: 0.875rem 1.75rem; }
-  /* line 132, source/scss/required/_mixins.scss */
-  .form-demo * + * {
-    margin-top: 0; }
-  /* line 156, docs/resources/scss/tyfy-docs-all.scss */
-  .form-demo label {
-    display: block;
-    font-weight: bold;
-    width: 100%; }
-    /* line 160, docs/resources/scss/tyfy-docs-all.scss */
-    .form-demo label.option {
-      font-weight: normal; }
-    /* line 163, docs/resources/scss/tyfy-docs-all.scss */
-    .form-demo label.disabled {
-      color: #707070; }
-  /* line 167, docs/resources/scss/tyfy-docs-all.scss */
-  .form-demo .form-control {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
-    font-size: 1rem;
-    padding-top: 0.875rem;
-    padding-bottom: 0.875rem;
-    width: 100%; }
-    @media (min-width: 30em) {
-      /* line 176, docs/resources/scss/tyfy-docs-all.scss */
-      .form-demo .form-control label:not(:first-child) {
-        width: 50%; } }
-    @media (min-width: 50em) {
-      /* line 176, docs/resources/scss/tyfy-docs-all.scss */
-      .form-demo .form-control label:not(:first-child) {
-        width: 25%; } }
-  /* line 185, docs/resources/scss/tyfy-docs-all.scss */
-  .form-demo + figure.output {
-    border-top: none;
-    margin-top: 0;
-    padding-top: 1.75rem; }
+  padding: 0.875rem 1.75rem;
+}
+.form-demo * + * {
+  margin-top: 0;
+}
+.form-demo label {
+  display: block;
+  font-weight: bold;
+  width: 100%;
+}
+.form-demo label.option {
+  font-weight: normal;
+}
+.form-demo label.disabled {
+  color: #707070;
+}
+.form-demo .form-control {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
+  font-size: 1rem;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+  width: 100%;
+}
+@media (min-width: 30em) {
+  .form-demo .form-control label:not(:first-child) {
+    width: 50%;
+  }
+}
+@media (min-width: 50em) {
+  .form-demo .form-control label:not(:first-child) {
+    width: 25%;
+  }
+}
+.form-demo + figure.output {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 1.75rem;
+}
 
-/* line 194, docs/resources/scss/tyfy-docs-all.scss */
 pre.codebox + figure.output {
   border-top: none;
   margin-top: 0;
-  padding-top: 1.75rem; }
+  padding-top: 1.75rem;
+}
 
-/* line 199, docs/resources/scss/tyfy-docs-all.scss */
 figure.output + pre.codebox {
   border-top: none;
   margin-top: 0;
-  padding-top: 1.75rem; }
+  padding-top: 1.75rem;
+}
 
-/* line 204, docs/resources/scss/tyfy-docs-all.scss */
 footer.footer {
   --tycolor-fg:#707070;
   color: #707070;
-  font-size: 0.83333rem;
-  line-height: 1.75rem; }
-  /* line 132, source/scss/required/_mixins.scss */
-  footer.footer * + * {
-    margin-top: 0; }
-  /* line 211, docs/resources/scss/tyfy-docs-all.scss */
+  font-size: 0.8333333333rem;
+  line-height: 1.75rem;
+}
+footer.footer * + * {
+  margin-top: 0;
+}
+footer.footer::before {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="1812px" height="18px" viewBox="0 0 1812 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="footer-line" fill="#CC0066"><rect id="left-rule" x="0" y="16" width="1686" height="2"></rect><g id="tics"><rect x="1689" y="0" width="2" height="18"></rect><rect x="1694" y="8" width="2" height="10"></rect><rect x="1699" y="8" width="2" height="10"></rect><rect x="1704" y="0" width="2" height="18"></rect><rect x="1719" y="0" width="2" height="18"></rect><rect x="1709" y="8" width="2" height="10"></rect><rect x="1714" y="8" width="2" height="10"></rect><rect x="1724" y="8" width="2" height="10"></rect><rect x="1729" y="8" width="2" height="10"></rect></g><rect id="right-rule" x="1734" y="16" width="78" height="2"></rect></g></svg>');
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%221812px%22%20height%3D%2218px%22%20viewBox%3D%220%200%201812%2018%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20id%3D%22footer-line%22%20fill%3D%22%23CC0066%22%3E%3Crect%20id%3D%22left-rule%22%20x%3D%220%22%20y%3D%2216%22%20width%3D%221686%22%20height%3D%222%22%3E%3C%2Frect%3E%3Cg%20id%3D%22tics%22%3E%3Crect%20x%3D%221689%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%221694%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%221699%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%221704%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%221719%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%221709%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%221714%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%221724%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%221729%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3C%2Fg%3E%3Crect%20id%3D%22right-rule%22%20x%3D%221734%22%20y%3D%2216%22%20width%3D%2278%22%20height%3D%222%22%3E%3C%2Frect%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-position: top 0px right -83px;
+  background-repeat: no-repeat;
+  background-size: auto 18px;
+  content: "";
+  display: block;
+  height: 18px;
+  margin-bottom: 0.875rem;
+}
+@media (min-width: 50em) {
   footer.footer::before {
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="1812px" height="18px" viewBox="0 0 1812 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="footer-line" fill="#CC0066"><rect id="left-rule" x="0" y="16" width="1686" height="2"></rect><g id="tics"><rect x="1689" y="0" width="2" height="18"></rect><rect x="1694" y="8" width="2" height="10"></rect><rect x="1699" y="8" width="2" height="10"></rect><rect x="1704" y="0" width="2" height="18"></rect><rect x="1719" y="0" width="2" height="18"></rect><rect x="1709" y="8" width="2" height="10"></rect><rect x="1714" y="8" width="2" height="10"></rect><rect x="1724" y="8" width="2" height="10"></rect><rect x="1729" y="8" width="2" height="10"></rect></g><rect id="right-rule" x="1734" y="16" width="78" height="2"></rect></g></svg>');
-    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%221812px%22%20height%3D%2218px%22%20viewBox%3D%220%200%201812%2018%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20id%3D%22footer-line%22%20fill%3D%22%23CC0066%22%3E%3Crect%20id%3D%22left-rule%22%20x%3D%220%22%20y%3D%2216%22%20width%3D%221686%22%20height%3D%222%22%3E%3C%2Frect%3E%3Cg%20id%3D%22tics%22%3E%3Crect%20x%3D%221689%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%221694%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%221699%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%221704%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%221719%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%221709%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%221714%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%221724%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%221729%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3C%2Fg%3E%3Crect%20id%3D%22right-rule%22%20x%3D%221734%22%20y%3D%2216%22%20width%3D%2278%22%20height%3D%222%22%3E%3C%2Frect%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-    background-position: top 0px right -83px;
-    background-repeat: no-repeat;
-    background-size: auto 18px;
-    content: "";
-    display: block;
-    height: 18px;
-    margin-bottom: 0.875rem; }
-    @media (min-width: 50em) {
-      /* line 211, docs/resources/scss/tyfy-docs-all.scss */
-      footer.footer::before {
-        background-position: top right; } }
-  /* line 225, docs/resources/scss/tyfy-docs-all.scss */
-  footer.footer > div:first-child {
-    margin-bottom: 0.4375rem; }
-  @media (min-width: 50em) {
-    /* line 229, docs/resources/scss/tyfy-docs-all.scss */
-    footer.footer > div {
-      display: inline-block; }
-    /* line 232, docs/resources/scss/tyfy-docs-all.scss */
-    footer.footer > div + div {
-      margin-left: 1.75rem; } }
+    background-position: top right;
+  }
+}
+footer.footer > div:first-child {
+  margin-bottom: 0.4375rem;
+}
+@media (min-width: 50em) {
+  footer.footer > div {
+    display: inline-block;
+  }
+  footer.footer > div + div {
+    margin-left: 1.75rem;
+  }
+}
 
 @media (min-width: 50em) {
-  /* line 237, docs/resources/scss/tyfy-docs-all.scss */
   dl.grid {
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 1.75rem;
-    grid-row-gap: 1.75rem; }
-    /* line 132, source/scss/required/_mixins.scss */
-    dl.grid * + * {
-      margin-top: 0; }
-    /* line 244, docs/resources/scss/tyfy-docs-all.scss */
-    dl.grid dd {
-      padding: 0; } }
+    grid-row-gap: 1.75rem;
+  }
+  dl.grid * + * {
+    margin-top: 0;
+  }
+  dl.grid dd {
+    padding: 0;
+  }
+}
 
-/* line 249, docs/resources/scss/tyfy-docs-all.scss */
 h2.homesubhead {
   font-family: "IBM Plex Sans Condensed", sans-serif;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
-/* line 254, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-inpage {
   --tycolor-fg:#707070;
   color: #707070;
-  font-size: 0.83333rem;
+  font-size: 0.8333333333rem;
   line-height: 1.75rem;
-  width: 7.875rem; }
-  @media (min-height: 400px) {
-    /* line 254, docs/resources/scss/tyfy-docs-all.scss */
-    nav.nav-inpage {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 1.75rem; } }
-  /* line 265, docs/resources/scss/tyfy-docs-all.scss */
-  nav.nav-inpage h2.tyfont-size-h6 {
-    font-family: "IBM Plex Sans Condensed", sans-serif;
-    font-size: 0.83333rem;
-    line-height: 1.75rem;
-    padding-bottom: 0.875rem;
-    position: relative;
-    text-transform: uppercase; }
-    /* line 271, docs/resources/scss/tyfy-docs-all.scss */
-    nav.nav-inpage h2.tyfont-size-h6::after {
-      background-color: rgba(204, 0, 102, 0.5);
-      bottom: calc(0.4375rem - 1px);
-      content: "";
-      height: 2px;
-      left: 0;
-      position: absolute;
-      width: 18px; }
-    /* line 281, docs/resources/scss/tyfy-docs-all.scss */
-    nav.nav-inpage h2.tyfont-size-h6 a[href] {
-      color: #707070; }
-      /* line 283, docs/resources/scss/tyfy-docs-all.scss */
-      nav.nav-inpage h2.tyfont-size-h6 a[href]:hover, nav.nav-inpage h2.tyfont-size-h6 a[href]:active {
-        color: var(--tycolor-link-active); }
+  width: 7.875rem;
+}
+@media (min-height: 400px) {
+  nav.nav-inpage {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1.75rem;
+  }
+}
+nav.nav-inpage h2.tyfont-size-h6 {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: 0.8333333333rem;
+  line-height: 1.75rem;
+  padding-bottom: 0.875rem;
+  position: relative;
+  text-transform: uppercase;
+}
+nav.nav-inpage h2.tyfont-size-h6::after {
+  background-color: rgba(204, 0, 102, 0.5);
+  bottom: calc(0.4375rem - 1px);
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 18px;
+}
+nav.nav-inpage h2.tyfont-size-h6 a[href] {
+  color: #707070;
+}
+nav.nav-inpage h2.tyfont-size-h6 a[href]:hover, nav.nav-inpage h2.tyfont-size-h6 a[href]:active {
+  color: var(--tycolor-link-active);
+}
 
-/* line 298, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main {
   background-color: var(--tycolor-bg);
   margin-left: auto;
   margin-right: auto;
-  position: relative; }
-  @media (min-width: 52rem) {
-    /* line 304, docs/resources/scss/tyfy-docs-all.scss */
-    nav.nav-main.js-nav-active {
-      display: flex;
-      justify-content: space-between; } }
-  /* line 310, docs/resources/scss/tyfy-docs-all.scss */
-  nav.nav-main + * {
-    margin-top: 0; }
+  position: relative;
+}
+@media (min-width: 52rem) {
+  nav.nav-main.js-nav-active {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+nav.nav-main + * {
+  margin-top: 0;
+}
 
-/* line 317, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main h1 {
   font-size: 1rem;
   line-height: 3.5rem;
   margin: 0;
   position: absolute;
   right: 0;
-  top: 0; }
-  @media (min-width: 60.375rem) {
-    /* line 317, docs/resources/scss/tyfy-docs-all.scss */
-    nav.nav-main h1 {
-      right: calc(50vw - 30.1875rem); } }
-
-/* line 329, docs/resources/scss/tyfy-docs-all.scss */
+  top: 0;
+}
+@media (min-width: 60.375rem) {
+  nav.nav-main h1 {
+    right: calc(50vw - 30.1875rem);
+  }
+}
 nav.nav-main.js-nav-active h1 {
   cursor: pointer;
   height: 3.5rem;
   overflow: hidden;
-  width: 3.5rem; }
-  /* line 334, docs/resources/scss/tyfy-docs-all.scss */
-  nav.nav-main.js-nav-active h1::before {
-    background-color: var(--tycolor-bg);
-    content: "\ea06";
-    display: block;
-    font-family: tyicons;
-    font-weight: normal;
-    text-align: center;
-    transition: background-color 250ms, color 250ms;
-    width: 3.5rem; }
-  /* line 345, docs/resources/scss/tyfy-docs-all.scss */
-  nav.nav-main.js-nav-active h1:hover::before {
-    background-color: var(--tycolor-link-active);
-    color: var(--tycolor-bg); }
-  @media (min-width: 52rem) {
-    /* line 329, docs/resources/scss/tyfy-docs-all.scss */
-    nav.nav-main.js-nav-active h1 {
-      height: 0;
-      overflow: hidden;
-      visibility: hidden;
-      width: 0; } }
-
-/* line 361, docs/resources/scss/tyfy-docs-all.scss */
+  width: 3.5rem;
+}
+nav.nav-main.js-nav-active h1::before {
+  background-color: var(--tycolor-bg);
+  content: "\ea06";
+  display: block;
+  font-family: tyicons;
+  font-weight: normal;
+  text-align: center;
+  transition: background-color 250ms, color 250ms;
+  width: 3.5rem;
+}
+nav.nav-main.js-nav-active h1:hover::before {
+  background-color: var(--tycolor-link-active);
+  color: var(--tycolor-bg);
+}
+@media (min-width: 52rem) {
+  nav.nav-main.js-nav-active h1 {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+  }
+}
 nav.nav-main.nav-opened h1::before {
-  content: "\ea10"; }
+  content: "\ea10";
+}
 
 @media (min-width: 60.375rem) {
-  /* line 370, docs/resources/scss/tyfy-docs-all.scss */
   nav.nav-main .tyfy.logo {
-    margin-left: calc(50vw - 30.1875rem); } }
+    margin-left: calc(50vw - 30.1875rem);
+  }
+}
 
-/* line 379, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main ul {
   box-sizing: border-box;
   display: flex;
@@ -2563,111 +2579,111 @@ nav.nav-main ul {
   line-height: 1.75rem;
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 @media (min-width: 60.375rem) {
-  /* line 393, docs/resources/scss/tyfy-docs-all.scss */
   nav.nav-main > ul {
-    margin-right: calc(50vw - 30.1875rem); } }
-
+    margin-right: calc(50vw - 30.1875rem);
+  }
+}
 @media (min-width: 52rem) {
-  /* line 399, docs/resources/scss/tyfy-docs-all.scss */
   nav.nav-main.js-nav-active > ul {
-    flex-direction: row; } }
-
+    flex-direction: row;
+  }
+}
 @media (max-width: 51.95rem) {
-  /* line 399, docs/resources/scss/tyfy-docs-all.scss */
   nav.nav-main.js-nav-active > ul {
     height: 0;
-    visibility: hidden; }
-    /* line 406, docs/resources/scss/tyfy-docs-all.scss */
-    nav.nav-main.js-nav-active > ul.nav-transition {
-      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-      visibility: visible; } }
-
+    visibility: hidden;
+  }
+  nav.nav-main.js-nav-active > ul.nav-transition {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    visibility: visible;
+  }
+}
 @media (max-width: 51.95rem) {
-  /* line 414, docs/resources/scss/tyfy-docs-all.scss */
   nav.nav-main.nav-opened > ul {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     height: auto;
-    visibility: visible; } }
+    visibility: visible;
+  }
+}
 
-/* line 426, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main > ul > li > ul {
   border-left: white 0.4375rem solid;
   border-right: white 0.4375rem solid;
-  position: relative; }
-
-/* line 432, docs/resources/scss/tyfy-docs-all.scss */
+  position: relative;
+}
 nav.nav-main.js-nav-active > ul > li > ul {
   height: 0;
-  overflow: hidden; }
-  /* line 435, docs/resources/scss/tyfy-docs-all.scss */
-  nav.nav-main.js-nav-active > ul > li > ul.ul-opened {
+  overflow: hidden;
+}
+nav.nav-main.js-nav-active > ul > li > ul.ul-opened {
+  border-bottom: white 0.4375rem solid;
+  height: auto;
+  overflow: visible;
+}
+@media (min-width: 52rem) {
+  nav.nav-main.js-nav-active > ul > li > ul {
     border-bottom: white 0.4375rem solid;
-    height: auto;
-    overflow: visible; }
-  @media (min-width: 52rem) {
-    /* line 432, docs/resources/scss/tyfy-docs-all.scss */
-    nav.nav-main.js-nav-active > ul > li > ul {
-      border-bottom: white 0.4375rem solid;
-      flex-direction: row;
-      justify-content: center;
-      left: 0;
-      position: absolute;
-      visibility: hidden;
-      width: 100%; }
-      /* line 448, docs/resources/scss/tyfy-docs-all.scss */
-      nav.nav-main.js-nav-active > ul > li > ul.ul-transition, nav.nav-main.js-nav-active > ul > li > ul.ul-opened {
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-        visibility: visible; } }
-
+    flex-direction: row;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+  }
+  nav.nav-main.js-nav-active > ul > li > ul.ul-transition, nav.nav-main.js-nav-active > ul > li > ul.ul-opened {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    visibility: visible;
+  }
+}
 @media (max-width: 51.95rem) {
-  /* line 455, docs/resources/scss/tyfy-docs-all.scss */
   nav.nav-main.js-nav-active > ul > li > ul.megamenu {
     flex-direction: row;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+  }
+}
 
-/* line 466, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main > ul > li > ul.megamenu ul {
   flex-direction: column;
-  padding-bottom: 0.875rem; }
-
+  padding-bottom: 0.875rem;
+}
 @media (min-width: 52rem) {
-  /* line 470, docs/resources/scss/tyfy-docs-all.scss */
   nav.nav-main > ul > li > ul.megamenu li:nth-child(3) ul {
     flex-wrap: wrap;
-    max-height: 12.25rem; } }
+    max-height: 12.25rem;
+  }
+}
 
-/* line 480, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main li {
   margin: 0;
-  padding: 0; }
-
-/* line 485, docs/resources/scss/tyfy-docs-all.scss */
+  padding: 0;
+}
 nav.nav-main.js-nav-active > ul ul.megamenu li {
   flex: 1;
-  max-width: 11.9rem; }
-  @media (min-width: 52rem) {
-    /* line 488, docs/resources/scss/tyfy-docs-all.scss */
-    nav.nav-main.js-nav-active > ul ul.megamenu li:nth-child(3) {
-      flex: 2;
-      max-width: 23.8rem; } }
+  max-width: 11.9rem;
+}
+@media (min-width: 52rem) {
+  nav.nav-main.js-nav-active > ul ul.megamenu li:nth-child(3) {
+    flex: 2;
+    max-width: 23.8rem;
+  }
+}
 
-/* line 500, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main ul li a strong {
   font-family: "IBM Plex Sans Condensed", sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
-/* line 509, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main ul a[href] {
   display: block;
   font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
   line-height: 1.75rem;
   padding: 0.875rem 1.75rem;
-  position: relative; }
-
-/* line 517, docs/resources/scss/tyfy-docs-all.scss */
+  position: relative;
+}
 nav.nav-main ul li + li > a[href]::before {
   background-color: var(--tycolor-border);
   content: "";
@@ -2675,18 +2691,18 @@ nav.nav-main ul li + li > a[href]::before {
   left: 1.75rem;
   position: absolute;
   top: 0;
-  width: 1.125rem; }
-
+  width: 1.125rem;
+}
 @media (min-width: 52rem) {
-  /* line 531, docs/resources/scss/tyfy-docs-all.scss */
   nav.nav-main.js-nav-active ul li + li > a[href]::before {
     height: 1.125rem;
     left: 0;
     margin-top: -0.5625rem;
     top: 50%;
-    width: 2px; } }
+    width: 2px;
+  }
+}
 
-/* line 549, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main.js-nav-active a[href].expandable::after {
   background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="28px" height="14px" viewBox="0 0 28 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="0,14 14,0 28,14" fill="#333"></polygon></svg>');
   background-repeat: no-repeat;
@@ -2699,108 +2715,107 @@ nav.nav-main.js-nav-active a[href].expandable::after {
   position: absolute;
   transition: all 250ms;
   visibility: hidden;
-  width: 28px; }
-
+  width: 28px;
+}
 @media (min-width: 52rem) {
-  /* line 565, docs/resources/scss/tyfy-docs-all.scss */
   nav.nav-main.js-nav-active a[href].expandable.ul-opened::after {
     height: 14px;
-    visibility: visible; } }
-
+    visibility: visible;
+  }
+}
 @media (max-width: 51.95rem) {
-  /* line 575, docs/resources/scss/tyfy-docs-all.scss */
   nav.nav-main.nav-opened a[href].expandable.ul-opened::after {
     height: 14px;
-    visibility: visible; } }
+    visibility: visible;
+  }
+}
 
-/* line 588, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main > ul ul a[href] {
-  padding: 0.875rem 1.3125rem; }
-
+  padding: 0.875rem 1.3125rem;
+}
 @media (max-width: 51.95rem) {
-  /* line 592, docs/resources/scss/tyfy-docs-all.scss */
   nav.nav-main > ul ul li + li > a[href]::before {
-    left: 1.3125rem; } }
+    left: 1.3125rem;
+  }
+}
 
-/* line 604, docs/resources/scss/tyfy-docs-all.scss */
 nav.nav-main > ul > li > ul.megamenu ul a[href] {
-  padding: 0rem 1.3125rem; }
-
-/* line 608, docs/resources/scss/tyfy-docs-all.scss */
+  padding: 0rem 1.3125rem;
+}
 nav.nav-main > ul > li > ul.megamenu ul li + li > a[href]::before {
-  display: none; }
+  display: none;
+}
 
-/* line 614, docs/resources/scss/tyfy-docs-all.scss */
 ul.nav-paging {
   display: grid;
   font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
   grid-template-columns: auto auto;
   margin-top: 3.5rem;
-  padding: 0; }
-  /* line 132, source/scss/required/_mixins.scss */
-  ul.nav-paging * + * {
-    margin-top: 0; }
-  /* line 621, docs/resources/scss/tyfy-docs-all.scss */
-  ul.nav-paging li {
-    display: block; }
-  /* line 624, docs/resources/scss/tyfy-docs-all.scss */
-  ul.nav-paging li.next {
-    text-align: right; }
-    /* line 626, docs/resources/scss/tyfy-docs-all.scss */
-    ul.nav-paging li.next a::after {
-      content: "\ea03";
-      display: inline-block;
-      font-family: tyicons;
-      font-size: 70%;
-      margin-left: 0.5em;
-      vertical-align: middle; }
-  /* line 636, docs/resources/scss/tyfy-docs-all.scss */
-  ul.nav-paging li.prev a::before {
-    content: "\ea02";
-    display: inline-block;
-    font-family: tyicons;
-    font-size: 70%;
-    margin-right: 0.5em;
-    vertical-align: middle; }
+  padding: 0;
+}
+ul.nav-paging * + * {
+  margin-top: 0;
+}
+ul.nav-paging li {
+  display: block;
+}
+ul.nav-paging li.next {
+  text-align: right;
+}
+ul.nav-paging li.next a::after {
+  content: "\ea03";
+  display: inline-block;
+  font-family: tyicons;
+  font-size: 70%;
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+ul.nav-paging li.prev a::before {
+  content: "\ea02";
+  display: inline-block;
+  font-family: tyicons;
+  font-size: 70%;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
 
-/* line 646, docs/resources/scss/tyfy-docs-all.scss */
 a[href].navlink-secondary {
   color: #707070;
-  font-family: "IBM Plex Sans", helvetica, arial, sans-serif; }
-  /* line 649, docs/resources/scss/tyfy-docs-all.scss */
-  a[href].navlink-secondary:hover, a[href].navlink-secondary:active {
-    color: var(--tycolor-link-active); }
-  /* line 655, docs/resources/scss/tyfy-docs-all.scss */
-  a[href].navlink-secondary.navlink-github::before, a[href].navlink-secondary.navlink-npm::before {
-    background-size: contain;
-    background-repeat: no-repeat;
-    content: "";
-    display: inline-block;
-    margin-right: 0.33em;
-    height: 1.09375rem;
-    vertical-align: middle;
-    width: 1.09375rem; }
-  /* line 667, docs/resources/scss/tyfy-docs-all.scss */
-  a[href].navlink-secondary.navlink-github:before {
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="#707070"/></svg>');
-    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20496%20512%22%3E%3Cpath%20d%3D%22M165.9%20397.4c0%202-2.3%203.6-5.2%203.6-3.3.3-5.6-1.3-5.6-3.6%200-2%202.3-3.6%205.2-3.6%203-.3%205.6%201.3%205.6%203.6zm-31.1-4.5c-.7%202%201.3%204.3%204.3%204.9%202.6%201%205.6%200%206.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2%202.3zm44.2-1.7c-2.9.7-4.9%202.6-4.6%204.9.3%202%202.9%203.3%205.9%202.6%202.9-.7%204.9-2.6%204.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8%208C106.1%208%200%20113.3%200%20252c0%20110.9%2069.8%20205.8%20169.5%20239.2%2012.8%202.3%2017.3-5.6%2017.3-12.1%200-6.2-.3-40.4-.3-61.4%200%200-70%2015-84.7-29.8%200%200-11.4-29.1-27.8-36.6%200%200-22.9-15.7%201.6-15.4%200%200%2024.9%202%2038.6%2025.8%2021.9%2038.6%2058.6%2027.5%2072.9%2020.9%202.3-16%208.8-27.1%2016-33.7-55.9-6.2-112.3-14.3-112.3-110.5%200-27.5%207.6-41.3%2023.6-58.9-2.6-6.5-11.1-33.3%202.6-67.9%2020.9-6.5%2069%2027%2069%2027%2020-5.6%2041.5-8.5%2062.8-8.5s42.8%202.9%2062.8%208.5c0%200%2048.1-33.6%2069-27%2013.7%2034.7%205.2%2061.4%202.6%2067.9%2016%2017.7%2025.8%2031.5%2025.8%2058.9%200%2096.5-58.9%20104.2-114.8%20110.5%209.2%207.9%2017%2022.9%2017%2046.4%200%2033.7-.3%2075.4-.3%2083.6%200%206.5%204.6%2014.4%2017.3%2012.1C428.2%20457.8%20496%20362.9%20496%20252%20496%20113.3%20383.5%208%20244.8%208zM97.2%20352.9c-1.3%201-1%203.3.7%205.2%201.6%201.6%203.9%202.3%205.2%201%201.3-1%201-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7%201.3.3%202.9%202.3%203.9%201.6%201%203.6.7%204.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4%2035.6c-1.6%201.3-1%204.3%201.3%206.2%202.3%202.3%205.2%202.6%206.5%201%201.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6%201-1.6%203.6%200%205.9%201.6%202.3%204.3%203.3%205.6%202.3%201.6-1.3%201.6-3.9%200-6.2-1.4-2.3-4-3.3-5.6-2z%22%20fill%3D%22%23707070%22%2F%3E%3C%2Fsvg%3E"); }
-  /* line 673, docs/resources/scss/tyfy-docs-all.scss */
-  a[href].navlink-secondary.navlink-github:hover:before, a[href].navlink-secondary.navlink-github:active:before {
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="#cc0066"/></svg>');
-    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20496%20512%22%3E%3Cpath%20d%3D%22M165.9%20397.4c0%202-2.3%203.6-5.2%203.6-3.3.3-5.6-1.3-5.6-3.6%200-2%202.3-3.6%205.2-3.6%203-.3%205.6%201.3%205.6%203.6zm-31.1-4.5c-.7%202%201.3%204.3%204.3%204.9%202.6%201%205.6%200%206.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2%202.3zm44.2-1.7c-2.9.7-4.9%202.6-4.6%204.9.3%202%202.9%203.3%205.9%202.6%202.9-.7%204.9-2.6%204.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8%208C106.1%208%200%20113.3%200%20252c0%20110.9%2069.8%20205.8%20169.5%20239.2%2012.8%202.3%2017.3-5.6%2017.3-12.1%200-6.2-.3-40.4-.3-61.4%200%200-70%2015-84.7-29.8%200%200-11.4-29.1-27.8-36.6%200%200-22.9-15.7%201.6-15.4%200%200%2024.9%202%2038.6%2025.8%2021.9%2038.6%2058.6%2027.5%2072.9%2020.9%202.3-16%208.8-27.1%2016-33.7-55.9-6.2-112.3-14.3-112.3-110.5%200-27.5%207.6-41.3%2023.6-58.9-2.6-6.5-11.1-33.3%202.6-67.9%2020.9-6.5%2069%2027%2069%2027%2020-5.6%2041.5-8.5%2062.8-8.5s42.8%202.9%2062.8%208.5c0%200%2048.1-33.6%2069-27%2013.7%2034.7%205.2%2061.4%202.6%2067.9%2016%2017.7%2025.8%2031.5%2025.8%2058.9%200%2096.5-58.9%20104.2-114.8%20110.5%209.2%207.9%2017%2022.9%2017%2046.4%200%2033.7-.3%2075.4-.3%2083.6%200%206.5%204.6%2014.4%2017.3%2012.1C428.2%20457.8%20496%20362.9%20496%20252%20496%20113.3%20383.5%208%20244.8%208zM97.2%20352.9c-1.3%201-1%203.3.7%205.2%201.6%201.6%203.9%202.3%205.2%201%201.3-1%201-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7%201.3.3%202.9%202.3%203.9%201.6%201%203.6.7%204.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4%2035.6c-1.6%201.3-1%204.3%201.3%206.2%202.3%202.3%205.2%202.6%206.5%201%201.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6%201-1.6%203.6%200%205.9%201.6%202.3%204.3%203.3%205.6%202.3%201.6-1.3%201.6-3.9%200-6.2-1.4-2.3-4-3.3-5.6-2z%22%20fill%3D%22%23707070%22%2F%3E%3C%2Fsvg%3E"); }
-  /* line 679, docs/resources/scss/tyfy-docs-all.scss */
-  a[href].navlink-secondary.navlink-npm {
-    font-family: "IBM Plex Mono", courier, monospace; }
-    /* line 681, docs/resources/scss/tyfy-docs-all.scss */
-    a[href].navlink-secondary.navlink-npm:before {
-      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z" fill="#707070"/></svg>');
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20576%20512%22%3E%3Cpath%20d%3D%22M288%20288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416%2032H32v128h64v-96h32v96h32V192zm160%200H192v160h64v-32h64V192zm224%200H352v128h64v-96h32v96h32v-96h32v96h32V192z%22%20fill%3D%22%23707070%22%2F%3E%3C%2Fsvg%3E"); }
-    /* line 687, docs/resources/scss/tyfy-docs-all.scss */
-    a[href].navlink-secondary.navlink-npm:hover:before, a[href].navlink-secondary.navlink-npm:active:before {
-      background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z" fill="#cc0066"/></svg>');
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20576%20512%22%3E%3Cpath%20d%3D%22M288%20288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416%2032H32v128h64v-96h32v96h32V192zm160%200H192v160h64v-32h64V192zm224%200H352v128h64v-96h32v96h32v-96h32v96h32V192z%22%20fill%3D%22%23707070%22%2F%3E%3C%2Fsvg%3E"); }
+  font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
+}
+a[href].navlink-secondary:hover, a[href].navlink-secondary:active {
+  color: var(--tycolor-link-active);
+}
+a[href].navlink-secondary.navlink-github::before, a[href].navlink-secondary.navlink-npm::before {
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  margin-right: 0.33em;
+  height: 1.09375rem;
+  vertical-align: middle;
+  width: 1.09375rem;
+}
+a[href].navlink-secondary.navlink-github:before {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="#707070"/></svg>');
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20496%20512%22%3E%3Cpath%20d%3D%22M165.9%20397.4c0%202-2.3%203.6-5.2%203.6-3.3.3-5.6-1.3-5.6-3.6%200-2%202.3-3.6%205.2-3.6%203-.3%205.6%201.3%205.6%203.6zm-31.1-4.5c-.7%202%201.3%204.3%204.3%204.9%202.6%201%205.6%200%206.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2%202.3zm44.2-1.7c-2.9.7-4.9%202.6-4.6%204.9.3%202%202.9%203.3%205.9%202.6%202.9-.7%204.9-2.6%204.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8%208C106.1%208%200%20113.3%200%20252c0%20110.9%2069.8%20205.8%20169.5%20239.2%2012.8%202.3%2017.3-5.6%2017.3-12.1%200-6.2-.3-40.4-.3-61.4%200%200-70%2015-84.7-29.8%200%200-11.4-29.1-27.8-36.6%200%200-22.9-15.7%201.6-15.4%200%200%2024.9%202%2038.6%2025.8%2021.9%2038.6%2058.6%2027.5%2072.9%2020.9%202.3-16%208.8-27.1%2016-33.7-55.9-6.2-112.3-14.3-112.3-110.5%200-27.5%207.6-41.3%2023.6-58.9-2.6-6.5-11.1-33.3%202.6-67.9%2020.9-6.5%2069%2027%2069%2027%2020-5.6%2041.5-8.5%2062.8-8.5s42.8%202.9%2062.8%208.5c0%200%2048.1-33.6%2069-27%2013.7%2034.7%205.2%2061.4%202.6%2067.9%2016%2017.7%2025.8%2031.5%2025.8%2058.9%200%2096.5-58.9%20104.2-114.8%20110.5%209.2%207.9%2017%2022.9%2017%2046.4%200%2033.7-.3%2075.4-.3%2083.6%200%206.5%204.6%2014.4%2017.3%2012.1C428.2%20457.8%20496%20362.9%20496%20252%20496%20113.3%20383.5%208%20244.8%208zM97.2%20352.9c-1.3%201-1%203.3.7%205.2%201.6%201.6%203.9%202.3%205.2%201%201.3-1%201-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7%201.3.3%202.9%202.3%203.9%201.6%201%203.6.7%204.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4%2035.6c-1.6%201.3-1%204.3%201.3%206.2%202.3%202.3%205.2%202.6%206.5%201%201.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6%201-1.6%203.6%200%205.9%201.6%202.3%204.3%203.3%205.6%202.3%201.6-1.3%201.6-3.9%200-6.2-1.4-2.3-4-3.3-5.6-2z%22%20fill%3D%22%23707070%22%2F%3E%3C%2Fsvg%3E");
+}
+a[href].navlink-secondary.navlink-github:hover:before, a[href].navlink-secondary.navlink-github:active:before {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="#cc0066"/></svg>');
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20496%20512%22%3E%3Cpath%20d%3D%22M165.9%20397.4c0%202-2.3%203.6-5.2%203.6-3.3.3-5.6-1.3-5.6-3.6%200-2%202.3-3.6%205.2-3.6%203-.3%205.6%201.3%205.6%203.6zm-31.1-4.5c-.7%202%201.3%204.3%204.3%204.9%202.6%201%205.6%200%206.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2%202.3zm44.2-1.7c-2.9.7-4.9%202.6-4.6%204.9.3%202%202.9%203.3%205.9%202.6%202.9-.7%204.9-2.6%204.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8%208C106.1%208%200%20113.3%200%20252c0%20110.9%2069.8%20205.8%20169.5%20239.2%2012.8%202.3%2017.3-5.6%2017.3-12.1%200-6.2-.3-40.4-.3-61.4%200%200-70%2015-84.7-29.8%200%200-11.4-29.1-27.8-36.6%200%200-22.9-15.7%201.6-15.4%200%200%2024.9%202%2038.6%2025.8%2021.9%2038.6%2058.6%2027.5%2072.9%2020.9%202.3-16%208.8-27.1%2016-33.7-55.9-6.2-112.3-14.3-112.3-110.5%200-27.5%207.6-41.3%2023.6-58.9-2.6-6.5-11.1-33.3%202.6-67.9%2020.9-6.5%2069%2027%2069%2027%2020-5.6%2041.5-8.5%2062.8-8.5s42.8%202.9%2062.8%208.5c0%200%2048.1-33.6%2069-27%2013.7%2034.7%205.2%2061.4%202.6%2067.9%2016%2017.7%2025.8%2031.5%2025.8%2058.9%200%2096.5-58.9%20104.2-114.8%20110.5%209.2%207.9%2017%2022.9%2017%2046.4%200%2033.7-.3%2075.4-.3%2083.6%200%206.5%204.6%2014.4%2017.3%2012.1C428.2%20457.8%20496%20362.9%20496%20252%20496%20113.3%20383.5%208%20244.8%208zM97.2%20352.9c-1.3%201-1%203.3.7%205.2%201.6%201.6%203.9%202.3%205.2%201%201.3-1%201-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7%201.3.3%202.9%202.3%203.9%201.6%201%203.6.7%204.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4%2035.6c-1.6%201.3-1%204.3%201.3%206.2%202.3%202.3%205.2%202.6%206.5%201%201.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6%201-1.6%203.6%200%205.9%201.6%202.3%204.3%203.3%205.6%202.3%201.6-1.3%201.6-3.9%200-6.2-1.4-2.3-4-3.3-5.6-2z%22%20fill%3D%22%23707070%22%2F%3E%3C%2Fsvg%3E");
+}
+a[href].navlink-secondary.navlink-npm {
+  font-family: "IBM Plex Mono", courier, monospace;
+}
+a[href].navlink-secondary.navlink-npm:before {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z" fill="#707070"/></svg>');
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20576%20512%22%3E%3Cpath%20d%3D%22M288%20288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416%2032H32v128h64v-96h32v96h32V192zm160%200H192v160h64v-32h64V192zm224%200H352v128h64v-96h32v96h32v-96h32v96h32V192z%22%20fill%3D%22%23707070%22%2F%3E%3C%2Fsvg%3E");
+}
+a[href].navlink-secondary.navlink-npm:hover:before, a[href].navlink-secondary.navlink-npm:active:before {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416 32H32v128h64v-96h32v96h32V192zm160 0H192v160h64v-32h64V192zm224 0H352v128h64v-96h32v96h32v-96h32v96h32V192z" fill="#cc0066"/></svg>');
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20576%20512%22%3E%3Cpath%20d%3D%22M288%20288h-32v-64h32v64zm288-128v192H288v32H160v-32H0V160h576zm-416%2032H32v128h64v-96h32v96h32V192zm160%200H192v160h64v-32h64V192zm224%200H352v128h64v-96h32v96h32v-96h32v96h32V192z%22%20fill%3D%22%23707070%22%2F%3E%3C%2Fsvg%3E");
+}
 
-/* line 696, docs/resources/scss/tyfy-docs-all.scss */
 figure.output {
   --tycolor-fg:#407010;
   border: 2px #b8b8b8 solid;
@@ -2809,54 +2824,55 @@ figure.output {
   margin-left: 0;
   margin-right: 0;
   padding: calc(1.75rem - 2px);
-  position: relative; }
-  /* line 705, docs/resources/scss/tyfy-docs-all.scss */
-  figure.output.reverse {
-    border-color: #585858; }
-  /* line 708, docs/resources/scss/tyfy-docs-all.scss */
-  figure.output .reverse-toggle {
-    border: 2px white solid;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.33);
-    font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
-    font-weight: bold;
-    letter-spacing: 1px;
-    position: absolute;
-    right: 0;
-    text-transform: uppercase;
-    top: -1.3125rem;
-    transform: scale(0.66); }
+  position: relative;
+}
+figure.output.reverse {
+  border-color: #585858;
+}
+figure.output .reverse-toggle {
+  border: 2px white solid;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.33);
+  font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: -1.3125rem;
+  transform: scale(0.66);
+}
 
-/* line 721, docs/resources/scss/tyfy-docs-all.scss */
 header.pagetitle {
   background-color: #cc0066;
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="97px" height="18px" viewBox="0 0 97 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2"><g fill="#FFFFFF"><rect x="0" y="8" width="2" height="10"></rect><rect x="5" y="8" width="2" height="10"></rect><rect x="10" y="0" width="2" height="18"></rect><rect x="25" y="0" width="2" height="18"></rect><rect x="15" y="8" width="2" height="10"></rect><rect x="20" y="8" width="2" height="10"></rect><rect x="30" y="8" width="2" height="10"></rect><rect x="35" y="8" width="2" height="10"></rect><rect x="40" y="0" width="2" height="18"></rect><rect x="45" y="8" width="2" height="10"></rect><rect x="50" y="8" width="2" height="10"></rect><rect x="55" y="0" width="2" height="18"></rect><rect x="70" y="0" width="2" height="18"></rect><rect x="60" y="8" width="2" height="10"></rect><rect x="65" y="8" width="2" height="10"></rect><rect x="75" y="8" width="2" height="10"></rect><rect x="80" y="8" width="2" height="10"></rect><rect x="85" y="0" width="2" height="18"></rect><rect x="90" y="8" width="2" height="10"></rect><rect x="95" y="8" width="2" height="10"></rect></g></g></svg>'), linear-gradient(#cc0066, #0066CC);
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2297px%22%20height%3D%2218px%22%20viewBox%3D%220%200%2097%2018%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20opacity%3D%220.2%22%3E%3Cg%20fill%3D%22%23FFFFFF%22%3E%3Crect%20x%3D%220%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%225%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2210%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2225%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2215%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2220%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2230%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2235%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2240%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2245%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2250%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2255%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2270%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2260%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2265%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2275%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2280%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2285%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2290%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2295%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"), linear-gradient(#cc0066, #0066CC);
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="97px" height="18px" viewBox="0 0 97 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2"><g fill="#FFFFFF"><rect x="0" y="8" width="2" height="10"></rect><rect x="5" y="8" width="2" height="10"></rect><rect x="10" y="0" width="2" height="18"></rect><rect x="25" y="0" width="2" height="18"></rect><rect x="15" y="8" width="2" height="10"></rect><rect x="20" y="8" width="2" height="10"></rect><rect x="30" y="8" width="2" height="10"></rect><rect x="35" y="8" width="2" height="10"></rect><rect x="40" y="0" width="2" height="18"></rect><rect x="45" y="8" width="2" height="10"></rect><rect x="50" y="8" width="2" height="10"></rect><rect x="55" y="0" width="2" height="18"></rect><rect x="70" y="0" width="2" height="18"></rect><rect x="60" y="8" width="2" height="10"></rect><rect x="65" y="8" width="2" height="10"></rect><rect x="75" y="8" width="2" height="10"></rect><rect x="80" y="8" width="2" height="10"></rect><rect x="85" y="0" width="2" height="18"></rect><rect x="90" y="8" width="2" height="10"></rect><rect x="95" y="8" width="2" height="10"></rect></g></g></svg>'), linear-gradient(#cc0066, #0066cc);
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2297px%22%20height%3D%2218px%22%20viewBox%3D%220%200%2097%2018%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cg%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20opacity%3D%220.2%22%3E%3Cg%20fill%3D%22%23FFFFFF%22%3E%3Crect%20x%3D%220%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%225%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2210%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2225%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2215%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2220%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2230%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2235%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2240%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2245%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2250%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2255%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2270%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2260%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2265%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2275%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2280%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2285%22%20y%3D%220%22%20width%3D%222%22%20height%3D%2218%22%3E%3C%2Frect%3E%3Crect%20x%3D%2290%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3Crect%20x%3D%2295%22%20y%3D%228%22%20width%3D%222%22%20height%3D%2210%22%3E%3C%2Frect%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"), linear-gradient(#cc0066, #0066cc);
   background-position: top calc(3.5rem - 18px) center, center center;
-  background-repeat: no-repeat,no-repeat;
-  background-size: 97px 18px,cover;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 97px 18px, cover;
   box-shadow: 0 1px 1.75rem rgba(0, 0, 0, 0.15) inset;
   padding: 3.5rem 1.75rem;
-  text-align: center; }
-  @media (min-width: 52.5rem) {
-    /* line 721, docs/resources/scss/tyfy-docs-all.scss */
-    header.pagetitle {
-      background-position: top calc(5.25rem - 18px) center, center center;
-      padding: 5.25rem 1.75rem; } }
-  /* line 735, docs/resources/scss/tyfy-docs-all.scss */
-  header.pagetitle h1 {
-    font-family: "IBM Plex Sans Condensed", sans-serif;
-    text-shadow: 0 1px 0.4375rem rgba(0, 0, 0, 0.25);
-    text-transform: uppercase; }
-  /* line 740, docs/resources/scss/tyfy-docs-all.scss */
-  header.pagetitle p.lede {
-    margin-top: 0; }
+  text-align: center;
+}
+@media (min-width: 52.5rem) {
+  header.pagetitle {
+    background-position: top calc(5.25rem - 18px) center, center center;
+    padding: 5.25rem 1.75rem;
+  }
+}
+header.pagetitle h1 {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  text-shadow: 0 1px 0.4375rem rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+}
+header.pagetitle p.lede {
+  margin-top: 0;
+}
 
-/* line 744, docs/resources/scss/tyfy-docs-all.scss */
 hr.demo {
   margin-bottom: 0.875rem;
-  margin-top: 0.875rem !important; }
+  margin-top: 0.875rem !important;
+}
 
-/* line 748, docs/resources/scss/tyfy-docs-all.scss */
 .tyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2865,179 +2881,180 @@ hr.demo {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px !important; }
-  /* line 43, source/scss/required/_mixins.scss */
-  .tyhidden.focusable:active, .tyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto; }
+  width: 1px !important;
+}
+.tyhidden.focusable:active, .tyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
 
-/* line 751, docs/resources/scss/tyfy-docs-all.scss */
 .tyicons {
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
-/* line 755, docs/resources/scss/tyfy-docs-all.scss */
 header.brand h1 {
   font-size: 1.728rem;
   line-height: 1.75rem;
-  padding: 0.875rem 1.75rem; }
-
-/* line 761, docs/resources/scss/tyfy-docs-all.scss */
+  padding: 0.875rem 1.75rem;
+}
 header.brand nav {
-  padding: 0 1.75rem; }
-  /* line 764, docs/resources/scss/tyfy-docs-all.scss */
-  header.brand nav h2 {
-    font-size: 1.2rem;
-    line-height: 1.75rem; }
-  /* line 768, docs/resources/scss/tyfy-docs-all.scss */
-  header.brand nav ul.list-grid-4 {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
-    margin-top: 0.875rem;
-    padding-bottom: 0.875rem;
-    padding-left: 0; }
-    @media (max-width: 34.9965em) {
-      /* line 775, docs/resources/scss/tyfy-docs-all.scss */
-      header.brand nav ul.list-grid-4 li {
-        box-sizing: border-box;
-        width: calc(50% - 1.3125rem); }
-        /* line 779, docs/resources/scss/tyfy-docs-all.scss */
-        header.brand nav ul.list-grid-4 li:nth-child(2) {
-          margin-top: 0; }
-        /* line 782, docs/resources/scss/tyfy-docs-all.scss */
-        header.brand nav ul.list-grid-4 li:nth-child(2n+1) {
-          margin-right: 2.625rem; } }
-    /* line 786, docs/resources/scss/tyfy-docs-all.scss */
-    header.brand nav ul.list-grid-4 li a {
-      border-top: 0.21875rem rgba(255, 255, 255, 0.05) solid;
-      display: block;
-      font-size: 0.83333rem;
-      padding-top: 0.4375rem;
-      padding-bottom: 0.4375rem; }
-  /* line 795, docs/resources/scss/tyfy-docs-all.scss */
-  header.brand nav.nav-processed {
-    position: relative; }
-    /* line 797, docs/resources/scss/tyfy-docs-all.scss */
-    header.brand nav.nav-processed h2 {
-      color: #b3d9ff;
-      cursor: pointer;
-      height: 1.75rem;
-      line-height: 1.75rem;
-      overflow: hidden;
-      position: absolute;
-      right: 1.75rem;
-      top: -2.625rem;
-      transition-duration: 250ms;
-      transition-property: color;
-      width: 1.75rem; }
-      /* line 809, docs/resources/scss/tyfy-docs-all.scss */
-      header.brand nav.nav-processed h2::before {
-        content: "\ea06";
-        display: block;
-        font-family: tyicons;
-        height: 1.75rem;
-        text-align: center;
-        width: 1.75rem; }
-      /* line 817, docs/resources/scss/tyfy-docs-all.scss */
-      header.brand nav.nav-processed h2:hover {
-        color: #ffb3d9; }
-    /* line 821, docs/resources/scss/tyfy-docs-all.scss */
-    header.brand nav.nav-processed ul {
-      height: 0;
-      margin-top: 0;
-      overflow: hidden;
-      padding-bottom: 0; }
-    /* line 828, docs/resources/scss/tyfy-docs-all.scss */
-    header.brand nav.nav-processed.nav-open ul {
-      height: auto;
-      padding-bottom: 0.875rem; }
+  padding: 0 1.75rem;
+}
+header.brand nav h2 {
+  font-size: 1.2rem;
+  line-height: 1.75rem;
+}
+header.brand nav ul.list-grid-4 {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "IBM Plex Sans", helvetica, arial, sans-serif;
+  margin-top: 0.875rem;
+  padding-bottom: 0.875rem;
+  padding-left: 0;
+}
+@media (max-width: 34.9965em) {
+  header.brand nav ul.list-grid-4 li {
+    box-sizing: border-box;
+    width: calc(50% - 1.3125rem);
+  }
+  header.brand nav ul.list-grid-4 li:nth-child(2) {
+    margin-top: 0;
+  }
+  header.brand nav ul.list-grid-4 li:nth-child(2n+1) {
+    margin-right: 2.625rem;
+  }
+}
+header.brand nav ul.list-grid-4 li a {
+  border-top: 0.21875rem rgba(255, 255, 255, 0.05) solid;
+  display: block;
+  font-size: 0.8333333333rem;
+  padding-top: 0.4375rem;
+  padding-bottom: 0.4375rem;
+}
+header.brand nav.nav-processed {
+  position: relative;
+}
+header.brand nav.nav-processed h2 {
+  color: #b3d9ff;
+  cursor: pointer;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  overflow: hidden;
+  position: absolute;
+  right: 1.75rem;
+  top: -2.625rem;
+  transition-duration: 250ms;
+  transition-property: color;
+  width: 1.75rem;
+}
+header.brand nav.nav-processed h2::before {
+  content: "\ea06";
+  display: block;
+  font-family: tyicons;
+  height: 1.75rem;
+  text-align: center;
+  width: 1.75rem;
+}
+header.brand nav.nav-processed h2:hover {
+  color: #ffb3d9;
+}
+header.brand nav.nav-processed ul {
+  height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+header.brand nav.nav-processed.nav-open ul {
+  height: auto;
+  padding-bottom: 0.875rem;
+}
 
-/* line 836, docs/resources/scss/tyfy-docs-all.scss */
 .section-benefits {
   background-color: rgba(0, 102, 204, 0.05);
-  padding: 1.75rem 0; }
-  @media (min-width: 60.375rem) {
-    /* line 836, docs/resources/scss/tyfy-docs-all.scss */
-    .section-benefits {
-      align-items: flex-start;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 2.625rem 0; }
-      /* line 124, source/scss/required/_mixins.scss */
-      .section-benefits > * + * {
-        margin-top: 0; } }
-  /* line 847, docs/resources/scss/tyfy-docs-all.scss */
-  .section-benefits h2 {
-    box-sizing: border-box;
-    margin-bottom: 1.75rem;
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
-    width: 100%; }
-  /* line 854, docs/resources/scss/tyfy-docs-all.scss */
+  padding: 1.75rem 0;
+}
+@media (min-width: 60.375rem) {
+  .section-benefits {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2.625rem 0;
+  }
+  .section-benefits > * + * {
+    margin-top: 0;
+  }
+}
+.section-benefits h2 {
+  box-sizing: border-box;
+  margin-bottom: 1.75rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  width: 100%;
+}
+.section-benefits .col {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 43.75rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+.section-benefits .col img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-benefits .col img + h3 {
+  margin-top: 0.875rem;
+}
+.section-benefits .col h3 {
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+}
+.section-benefits .col h3 + p {
+  margin-top: 0.875rem;
+}
+@media (min-width: 60.375rem) {
   .section-benefits .col {
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 43.75rem;
-    padding-left: 1.75rem;
-    padding-right: 1.75rem; }
-    /* line 861, docs/resources/scss/tyfy-docs-all.scss */
-    .section-benefits .col img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto; }
-    /* line 866, docs/resources/scss/tyfy-docs-all.scss */
-    .section-benefits .col img + h3 {
-      margin-top: 0.875rem; }
-    /* line 869, docs/resources/scss/tyfy-docs-all.scss */
-    .section-benefits .col h3 {
-      font-weight: normal;
-      font-style: italic;
-      text-align: center; }
-    /* line 874, docs/resources/scss/tyfy-docs-all.scss */
-    .section-benefits .col h3 + p {
-      margin-top: 0.875rem; }
-    @media (min-width: 60.375rem) {
-      /* line 854, docs/resources/scss/tyfy-docs-all.scss */
-      .section-benefits .col {
-        margin: 0;
-        max-width: 20.12299rem;
-        width: 33.33333%; } }
+    margin: 0;
+    max-width: 20.1229875rem;
+    width: 33.33333%;
+  }
+}
 
-/* line 885, docs/resources/scss/tyfy-docs-all.scss */
-table.utility th[scope="col"] {
-  border-bottom: 4px var(--tycolor-border) solid; }
+table.utility th[scope=col] {
+  border-bottom: 4px var(--tycolor-border) solid;
+}
 
-/* line 890, docs/resources/scss/tyfy-docs-all.scss */
 .tables-demo-table th.row-hidden {
-  display: none !important; }
-
+  display: none !important;
+}
 @media (min-width: 40em) {
-  /* line 895, docs/resources/scss/tyfy-docs-all.scss */
-  .tables-demo-table.responsive:not(.striped):not(.vertical-rules) th.row-hidden + td,
-  .tables-demo-table.responsive:not(.striped):not(.vertical-rules) th.row-hidden + th {
-    padding-left: 0; } }
-
-/* line 902, docs/resources/scss/tyfy-docs-all.scss */
+  .tables-demo-table.responsive:not(.striped):not(.vertical-rules) th.row-hidden + td, .tables-demo-table.responsive:not(.striped):not(.vertical-rules) th.row-hidden + th {
+    padding-left: 0;
+  }
+}
 .tables-demo-table:not(.striped):not(.vertical-rules):not(.responsive) th.row-hidden + * {
-  padding-left: 0; }
+  padding-left: 0;
+}
 
-/* line 908, docs/resources/scss/tyfy-docs-all.scss */
 .make-inview {
   position: relative;
-  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out; }
+  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out;
+}
 
-/* line 912, docs/resources/scss/tyfy-docs-all.scss */
 .make-inview.not-inview {
   opacity: 0;
-  top: 1rem; }
+  top: 1rem;
+}
 
-/* line 916, docs/resources/scss/tyfy-docs-all.scss */
 .make-inview.inview {
   opacity: 1;
-  top: 0; }
+  top: 0;
+}

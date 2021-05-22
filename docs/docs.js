@@ -34,7 +34,7 @@ var dir = fs.readdir(filepath.source,function(err,files){
 var glob = require("glob");
 
 // include sass for compiling sass to css
-var sass = require('node-sass');
+var sass = require('sass');
 
 // variable that will hold the contents of the concatenated scss
 var scss = fs.readFileSync('./docs/resources/scss/tyfy-docs-base.scss');;
@@ -58,8 +58,7 @@ glob("./docs/resources/scss/components/**/*.scss", function(err, files){
 
 		// render the scss as css
 		sass.render({
-		  file: './docs/resources/scss/tyfy-docs-all.scss',
-			sourceComments: true
+		  file: './docs/resources/scss/tyfy-docs-all.scss'
 		}, function(err, result) {
 			if (err) throw err;
 
