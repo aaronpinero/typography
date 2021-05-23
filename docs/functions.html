@@ -107,6 +107,7 @@
           <li><a class="navlink-secondary" href="#fn-tygrid"><em>tygrid</em></a></li>
           <li><a class="navlink-secondary" href="#fn-tyscale"><em>tyscale</em></a></li>
           <li><a class="navlink-secondary" href="#fn-tychar"><em>tychar</em></a></li>
+          <li><a class="navlink-secondary" href="#fn-encodecolor"><em>encodecolor</em></a></li>
           <li><a class="navlink-secondary" href="#fn-maps"><span class="smallcaps">SASS</span> Map Helpers</a></li>
         </ul>
       </nav>
@@ -190,6 +191,21 @@ h5 {
         <h3 class="tyfont-size-h4">Example</h3>
         <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">div::before {
   content: tychar($tyicons-angle-left);
+}</code></pre>
+        <h2 id="fn-encodecolor"><em>encodecolor</em></h2>
+        <p>This function helps using <span class="smallcaps">SASS</span> color variables in URL encoded strings. This is specifically useful when adding SVG background images in <span class="smallcaps">SCSS</span>. The code for this function comes from <a href="https://gist.github.com/certainlyakey/e9c0d8f5c87ff47e3d5b">a GitHub Gist by certainlyakey</a>.</p>
+        <h3 class="tyfont-size-h4">Arguments</h3>
+        <dl>
+          <dt>$color</dt>
+          <dd><em>required</em></dd>
+          <dd>A sass color variable name.</dd>
+        </dl>
+        <h3 class="tyfont-size-h4">Example</h3>
+        <pre class="codebox mini" data-lang="SCSS"><code class="code-nobg language-scss">input:checked {
+  background-image:url("data:image/svg+xml;charset=ASCII,
+  %3Csvg%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%2064%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.
+  org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22#{encodecolor($tycolor-bg)}
+  %22%20points%3D%2223%2056%2020.9401855%2053.9401855%200%2033%207%2026%2023%2042%2057%208%2064%2015%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
 }</code></pre>
         <h2 id="fn-maps"><span class="smallcaps">SASS</span> Map Helpers</h2>
         <p><strong class="tyfy">Tyfy</strong> provides <span class="smallcaps">SASS</span> maps for easily maintaining consistent, named values across modules. These values can be accessed using the <code>map-get()</code> function. The following custom functions are shorthand for <code>map-get</code>-ing values from the <span class="smallcaps">SASS</span> maps for the named font-size, spacing, and duration values.</p>

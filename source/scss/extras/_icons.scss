@@ -67,15 +67,6 @@
 .tyicons-dash::before {
   content:tychar($tyicons-dash);
 }
-.tyicons-muted::before {
-  content:tychar($tyicons-muted);
-}
-.tyicons-pause::before {
-  content:tychar($tyicons-pause);
-}
-.tyicons-play::before {
-  content:tychar($tyicons-play);
-}
 .tyicons-quote-left::before {
   content:tychar($tyicons-quote-left);
 }
@@ -84,9 +75,6 @@
 }
 .tyicons-search::before {
   content:tychar($tyicons-search);
-}
-.tyicons-sound::before {
-  content:tychar($tyicons-sound);
 }
 .tyicons-x::before {
   content:tychar($tyicons-x);

@@ -15,21 +15,13 @@
 
   $tyicons-dash: "\ea08";
 
-  $tyicons-muted: "\ea09";
+  $tyicons-quote-left: "\ea09";
 
-  $tyicons-pause: "\ea0a";
+  $tyicons-quote-right: "\ea0a";
 
-  $tyicons-play: "\ea0b";
+  $tyicons-search: "\ea0b";
 
-  $tyicons-quote-left: "\ea0c";
-
-  $tyicons-quote-right: "\ea0d";
-
-  $tyicons-search: "\ea0e";
-
-  $tyicons-sound: "\ea0f";
-
-  $tyicons-x: "\ea10";
+  $tyicons-x: "\ea0c";
 
 
 @font-face {
@@ -171,35 +163,19 @@ display: inline-block;
     content: "\ea08";
 }
 
-.tyicons-muted::before {
+.tyicons-quote-left::before {
     content: "\ea09";
 }
 
-.tyicons-pause::before {
+.tyicons-quote-right::before {
     content: "\ea0a";
 }
 
-.tyicons-play::before {
+.tyicons-search::before {
     content: "\ea0b";
 }
 
-.tyicons-quote-left::before {
-    content: "\ea0c";
-}
-
-.tyicons-quote-right::before {
-    content: "\ea0d";
-}
-
-.tyicons-search::before {
-    content: "\ea0e";
-}
-
-.tyicons-sound::before {
-    content: "\ea0f";
-}
-
 .tyicons-x::before {
-    content: "\ea10";
+    content: "\ea0c";
 }
 

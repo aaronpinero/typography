@@ -119,6 +119,13 @@ input[type="submit"] {
   font-family:$tyfont-input;
   width:auto;
 }
+button[disabled],
+input[type="button"][disabled],
+input[type="reset"][disabled],
+input[type="submit"][disabled] {
+  background-color: mix($tycolor-fg,$tycolor-bg,40%);
+  cursor: not-allowed;
+}
 
 // special select styles
 select {
