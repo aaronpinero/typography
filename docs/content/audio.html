@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%include head.html%>
+    <title>Tyfy - Modules - Audio</title>
+  </head>
+  <body class="">
+    <%include header.html%>
+    <header class="pagetitle reverse">
+      <h1>Audio</h1>
+    </header>
+    <main class="block">
+      <nav class="nav-inpage tymargins-off">
+        <h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
+        <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#caveat">Caveat</a></li>
+          <li><a class="navlink-secondary" href="#class">Class</a></li>
+          <li><a class="navlink-secondary" href="#variables">Variables</a></li>
+          <li><a class="navlink-secondary" href="#examples">Examples</a></li>
+        </ul>
+      </nav>
+      <section class="section-body links-underlined">
+        <p>The presentation of the <span class="smallcaps">HTML</span> audio element varies by browser and operating system. In addition, there are few options for customizing the appearance of the element to match brand guidelines or other element styles.</p>
+        <p>This module uses button and range input elements to create a custom <span class="smallcaps">HTML</span> audio player. The styles for the buttons and range elements are already provided by the <a href="forms.html">Forms module</a> (which is required for use with this module). The script in the dist/script/audio.js file is also required to convert the default audio element into the <strong class="tyfy">TYFY</strong> custom audio player and provide the requisite event handling.</p>
+        <h2 id="caveat">Caveat</h2>
+        <p>The volume control in the custom audio player is not presented when using Safari. In iOS, access the volume parameter via JavaScript is read-only. Volume cannot be set by JavaScript. Since there is no reliable way to determine if the client is using Safari on iOS or macOS, I have simply removed the volume control if the detected browser is Safari.</p>
+        <h2 id="class">Class</h2>
+        <dl>
+          <dt>.tyfy-audio-player</dt>
+          <dd>Applied to a figure element containing the <span class="smallcaps">HTML</span> audio element. This class identifies the audio element to convert into custom audio player.</dd>
+        </dl>
+        <h2 id="variables">Variables</h2>
+        <dl>
+          <dt>$tycolor-link-default</dt>
+          <dd><code class="val-default">#3380cc !default;</code></dd>
+          <dd>Default color of the play/pause button and the sound on/off button.</dd>
+          <dt>$tycolor-link-active</dt>
+          <dd><code class="val-default">#cc3380 !default;</code></dd>
+          <dd>Hovered color of the play/pause button and the sound on/off button; accent color for the playhead and volume sliders.</dd>
+          <dt>$tycolor-shade</dt>
+          <dd><code class="val-default">rgba($tycolor-fg,0.15) !default;</code></dd>
+          <dd>Background color of the custom audio player.</dd>
+        </dl>
+        <h2 id="examples">Example</h2>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;figure class="tyfy-audio-player tymargins-off"&gt;
+  &lt;audio preload&gt;
+    &lt;source src="../docs/resources/audio/Youssoupha_Sidibe_Music.mp3" type="audio/mpeg"&gt;
+  &lt;/audio&gt;
+&lt;/figure&gt;
+&lt;figure class="tyfy-audio-player tymargins-off"&gt;
+  &lt;audio preload&gt;
+    &lt;source src="../docs/resources/audio/Ergo_Phizmiz.mp3" type="audio/mpeg"&gt;
+  &lt;/audio&gt;
+&lt;/figure&gt;</code></pre>
+        <figure class="output">
+          <figure class="tyfy-audio-player tymargins-off">
+            <audio preload>
+              <source src="../docs/resources/audio/Youssoupha_Sidibe_Music.mp3" type="audio/mpeg">
+            </audio>
+          </figure>
+          <figure class="tyfy-audio-player tymargins-off">
+            <audio preload>
+              <source src="../docs/resources/audio/Ergo_Phizmiz.mp3" type="audio/mpeg">
+            </audio>
+          </figure>
+        </figure>
+      </section>
+    </main>
+    <%include footer.html%>
+    <script src="../dist/script/audio.js"></script>
+  </body>
+</html>

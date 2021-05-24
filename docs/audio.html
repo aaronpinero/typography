@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<!-- COMMON HEAD TAGS -->
+  <head>
+    <!-- COMMON HEAD TAGS -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-32897472-1"></script>
 		<script>
@@ -18,10 +18,10 @@
 		<link rel="stylesheet" href="resources/style/tyfy-docs.css">
 		<link rel="stylesheet" href="resources/vendor/prism/prism.css">
 		<!--/ COMMON HEAD TAGS -->
-		<title>Tyfy - About - README</title>
-	</head>
-	<body class="">
-		    <!-- COMMON HEADER -->
+    <title>Tyfy - Modules - Audio</title>
+  </head>
+  <body class="">
+        <!-- COMMON HEADER -->
     <nav class="nav-main" id="top">
       <a href="index.html" class="tyfy logo">Tyfy: A Web Framework</a>
       <h1 class="nav-heading">Main Menu</h1>
@@ -98,35 +98,66 @@
     </nav>
 		<!--/ COMMON HEADER -->
     <header class="pagetitle reverse">
-			<h1>README</h1>
+      <h1>Audio</h1>
     </header>
     <main class="block">
+      <nav class="nav-inpage tymargins-off">
+        <h2 class="tyfont-size-h6"><a href="#top">Contents</a></h2>
+        <ul class="list-nobullet">
+          <li><a class="navlink-secondary" href="#caveat">Caveat</a></li>
+          <li><a class="navlink-secondary" href="#class">Class</a></li>
+          <li><a class="navlink-secondary" href="#variables">Variables</a></li>
+          <li><a class="navlink-secondary" href="#examples">Examples</a></li>
+        </ul>
+      </nav>
       <section class="section-body links-underlined">
-        <p class="lede"><strong class="tyfy">Tyfy</strong> is a framework for better web typography.</p>
-        <p>At first, I named this project “typography”. This accurately described my goal of encoding typographic rules and patterns. The name later changed to a short form of the portmanteau “typogrify”. So <strong class="tyfy">Tyfy</strong> rhymes with “WiFi” or “Sci-Fi”.</p>
-        <p>For more information about how <strong class="tyfy">Tyfy</strong> came to be, you can read <a href="https://medium.com/@aaronpinero/why-tyfy-1665e36b4f94">the Medium article</a>.</p>
-        <h2>Rationale</h2>
-        <p>There are three reasons why I started <strong class="tyfy">Tyfy</strong>:</p>
-        <ul class="tymargins-off">
-          <li>To collect all of my best practices into one system.</li>
-          <li>To improve my development workflow.</li>
-          <li>To learn something along the way.</li>
-        </ul>
-        <p>A framework is an expression of the values, preferences, priorities, and experience of its creators. While I embrace some existing frameworks (Bootstrap, PureCSS), I want to create something that reflects my values and the work that I do.</p>
-        <h2>Thanks</h2>
-        <p>This project would not have happened without the benefit of work done by others. Their contributions to front-end development are part of my experience, and so my work reflects theirs. <strong class="tyfy">Tyfy</strong> has something old, something new, something borrowed, and something blue from the following sources:</p>
-        <ul class="list-cols-2">
-          <li><a href="https://html5boilerplate.com">HTML5 Boilerplate</a></li>
-          <li><a href="https://archetypeapp.com">Archetype</a></li>
-          <li><a href="https://betterwebtype.com">Better Web Type</a></li>
-          <li><a href="https://getbootstrap.com">Bootstrap</a></li>
-          <li><a href="https://developers.google.com/web/fundamentals">Google Web Fundamentals</a></li>
-          <li><a href="https://inclusive-components.design">Inclusive Components</a></li>
-          <li><a href="https://purecss.io">PureCSS</a></li>
-        </ul>
+        <p>The presentation of the <span class="smallcaps">HTML</span> audio element varies by browser and operating system. In addition, there are few options for customizing the appearance of the element to match brand guidelines or other element styles.</p>
+        <p>This module uses button and range input elements to create a custom <span class="smallcaps">HTML</span> audio player. The styles for the buttons and range elements are already provided by the <a href="forms.html">Forms module</a> (which is required for use with this module). The script in the dist/script/audio.js file is also required to convert the default audio element into the <strong class="tyfy">TYFY</strong> custom audio player and provide the requisite event handling.</p>
+        <h2 id="caveat">Caveat</h2>
+        <p>The volume control in the custom audio player is not presented when using Safari. In iOS, access the volume parameter via JavaScript is read-only. Volume cannot be set by JavaScript. Since there is no reliable way to determine if the client is using Safari on iOS or macOS, I have simply removed the volume control if the detected browser is Safari.</p>
+        <h2 id="class">Class</h2>
+        <dl>
+          <dt>.tyfy-audio-player</dt>
+          <dd>Applied to a figure element containing the <span class="smallcaps">HTML</span> audio element. This class identifies the audio element to convert into custom audio player.</dd>
+        </dl>
+        <h2 id="variables">Variables</h2>
+        <dl>
+          <dt>$tycolor-link-default</dt>
+          <dd><code class="val-default">#3380cc !default;</code></dd>
+          <dd>Default color of the play/pause button and the sound on/off button.</dd>
+          <dt>$tycolor-link-active</dt>
+          <dd><code class="val-default">#cc3380 !default;</code></dd>
+          <dd>Hovered color of the play/pause button and the sound on/off button; accent color for the playhead and volume sliders.</dd>
+          <dt>$tycolor-shade</dt>
+          <dd><code class="val-default">rgba($tycolor-fg,0.15) !default;</code></dd>
+          <dd>Background color of the custom audio player.</dd>
+        </dl>
+        <h2 id="examples">Example</h2>
+        <pre class="codebox" data-lang="HTML"><code class="code-nobg language-html">&lt;figure class="tyfy-audio-player tymargins-off"&gt;
+  &lt;audio preload&gt;
+    &lt;source src="../docs/resources/audio/Youssoupha_Sidibe_Music.mp3" type="audio/mpeg"&gt;
+  &lt;/audio&gt;
+&lt;/figure&gt;
+&lt;figure class="tyfy-audio-player tymargins-off"&gt;
+  &lt;audio preload&gt;
+    &lt;source src="../docs/resources/audio/Ergo_Phizmiz.mp3" type="audio/mpeg"&gt;
+  &lt;/audio&gt;
+&lt;/figure&gt;</code></pre>
+        <figure class="output">
+          <figure class="tyfy-audio-player tymargins-off">
+            <audio preload>
+              <source src="../docs/resources/audio/Youssoupha_Sidibe_Music.mp3" type="audio/mpeg">
+            </audio>
+          </figure>
+          <figure class="tyfy-audio-player tymargins-off">
+            <audio preload>
+              <source src="../docs/resources/audio/Ergo_Phizmiz.mp3" type="audio/mpeg">
+            </audio>
+          </figure>
+        </figure>
       </section>
     </main>
-		<!-- COMMON FOOTER -->
+    <!-- COMMON FOOTER -->
 		<footer class="footer">
 			<div>© Copyright 2017-2020 by <a class="navlink-secondary navlink-default" href="http://www.aaronpinero.com">Aaron Pinero</a></div>
       <div><a class="navlink-secondary navlink-github" href="https://github.com/aaronpinero/typography">Fork on Github</a></div>
@@ -145,5 +176,6 @@
     <script src="resources/script/docs-nav.js"></script>
     <script src="resources/vendor/prism/prism.js"></script>
 		<!--/ COMMON FOOTER -->
-	</body>
+    <script src="../dist/script/audio.js"></script>
+  </body>
 </html>
