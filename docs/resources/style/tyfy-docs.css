@@ -190,12 +190,7 @@ body dl * + *, body ol * + *, body ul * + * {
 body dl * + dd {
   margin-top: 0;
 }
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h2,
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h3,
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h4,
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
+body :not(h1, h2, h3, h4, h5, h6) + :is(h1,h2,h3,h4,h5,h6) {
   margin-top: 2.625rem;
 }
 
@@ -208,12 +203,7 @@ body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
 .tymargins-on dl * + dd {
   margin-top: 0;
 }
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h2,
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h3,
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h4,
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
+.tymargins-on :not(h1, h2, h3, h4, h5, h6) + :is(h1,h2,h3,h4,h5,h6) {
   margin-top: 2.625rem;
 }
 

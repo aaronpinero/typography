@@ -4,16 +4,7 @@
 // clears floats inside the element to which the mixin is applied
 
 @mixin tyclear {
-  *zoom:1;
-  &::before,
-  &::after {
-    display:table;
-    content:"";
-    line-height:0;
-  }
-  &::after {
-    clear:both;
-  }
+  display: flow-root;
 }
 
 ////////// tyhidden mixin //////////
@@ -66,12 +57,7 @@
 @mixin tymargins-size ($context:all, $measure:tyspacing(md)) {
   @if $context == headings {
     // headings
-    :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
-    :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h2,
-    :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h3,
-    :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h4,
-    :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
-    :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
+    :not(h1,h2,h3,h4,h5,h6) + :is(h1,h2,h3,h4,h5,h6) {
       margin-top:$measure;
     }
   }
