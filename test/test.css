@@ -191,12 +191,7 @@ body dl * + *, body ol * + *, body ul * + * {
 body dl * + dd {
   margin-top: 0;
 }
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h2,
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h3,
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h4,
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
-body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
+body :not(h1, h2, h3, h4, h5, h6) + :is(h1,h2,h3,h4,h5,h6) {
   margin-top: 3rem;
 }
 
@@ -209,12 +204,7 @@ body :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
 .tymargins-on dl * + dd {
   margin-top: 0;
 }
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h1,
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h2,
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h3,
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h4,
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h5,
-.tymargins-on :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + h6 {
+.tymargins-on :not(h1, h2, h3, h4, h5, h6) + :is(h1,h2,h3,h4,h5,h6) {
   margin-top: 3rem;
 }
 
@@ -804,7 +794,7 @@ blockquote.pullquote.pullquote-roof-fixed::before, blockquote.pullquote.pullquot
   background-position: center center;
   background-repeat: no-repeat;
   color: var(--tycolor-border);
-  content: "\ea0d";
+  content: "\ea0a";
   display: block;
   font-family: tyicons;
   font-size: 1.5rem;
@@ -1799,36 +1789,20 @@ img[data-lazyimage].not-lazyLoaded {
   content: "\ea08";
 }
 
-.tyicons-muted::before {
+.tyicons-quote-left::before {
   content: "\ea09";
 }
 
-.tyicons-pause::before {
+.tyicons-quote-right::before {
   content: "\ea0a";
 }
 
-.tyicons-play::before {
+.tyicons-search::before {
   content: "\ea0b";
 }
 
-.tyicons-quote-left::before {
-  content: "\ea0c";
-}
-
-.tyicons-quote-right::before {
-  content: "\ea0d";
-}
-
-.tyicons-search::before {
-  content: "\ea0e";
-}
-
-.tyicons-sound::before {
-  content: "\ea0f";
-}
-
 .tyicons-x::before {
-  content: "\ea10";
+  content: "\ea0c";
 }
 
 .reverse {
@@ -1987,15 +1961,27 @@ img[data-lazyimage].not-lazyLoaded {
   color: #999999;
 }
 .reverse figure.tyfy-audio-player form.player-ui button.play-pause.paused::before {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%2399B3E6%22%20points%3D%2224%2016%2010%2025%2010%207%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+}
+.reverse figure.tyfy-audio-player form.player-ui button.play-pause.paused:hover::before {
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23333333%22%20points%3D%2224%2016%2010%2025%2010%207%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
 }
 .reverse figure.tyfy-audio-player form.player-ui button.play-pause.playing::before {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Crect%20x%3D%2210%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%2399B3E6%22%3E%3C%2Frect%3E%3Crect%20x%3D%2218%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%2399B3E6%22%3E%3C%2Frect%3E%3C%2Fsvg%3E");
+}
+.reverse figure.tyfy-audio-player form.player-ui button.play-pause.playing:hover::before {
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Crect%20x%3D%2210%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%23333333%22%3E%3C%2Frect%3E%3Crect%20x%3D%2218%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%23333333%22%3E%3C%2Frect%3E%3C%2Fsvg%3E");
 }
 .reverse figure.tyfy-audio-player form.player-ui button.audio.sound::before {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%2399B3E6%22%20points%3D%2215.5%207.98650208%2016.5%207.98650208%2016.5%2023.9852814%2015.5%2023.9852814%2011.5%2019.9852814%206.5%2019.9852814%206.5%2011.9852814%2011.5%2011.9852814%22%3E%3C%2Fpolygon%3E%3Cpath%20d%3D%22M21.5%2C15.9852814%20C21.5%2C17.0898509%2021.0522847%2C18.0898509%2020.3284271%2C18.8137085%20L18.9142136%2C17.3994949%20C19.2761424%2C17.0375661%2019.5%2C16.5375661%2019.5%2C15.9852814%20C19.5%2C15.4329966%2019.2761424%2C14.9329966%2018.9142136%2C14.5710678%20L20.3284271%2C13.1568542%20C21.0522847%2C13.8807119%2021.5%2C14.8807119%2021.5%2C15.9852814%20Z%22%20fill%3D%22%2399B3E6%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M25.5%2C15.9852814%20C25.5%2C18.1939121%2024.6049815%2C20.1935%2023.1578535%2C21.6411362%20L21.7426407%2C20.2279221%20C22.8284271%2C19.1421356%2023.5%2C17.6421356%2023.5%2C15.9852814%20C23.5%2C14.3284271%2022.8284271%2C12.8284271%2021.7426407%2C11.7426407%20L23.1578535%2C10.3294266%20C24.6049815%2C11.7770628%2025.5%2C13.7766507%2025.5%2C15.9852814%20Z%22%20fill%3D%22%2399B3E6%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+}
+.reverse figure.tyfy-audio-player form.player-ui button.audio.sound:hover::before {
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23333333%22%20points%3D%2215.5%207.98650208%2016.5%207.98650208%2016.5%2023.9852814%2015.5%2023.9852814%2011.5%2019.9852814%206.5%2019.9852814%206.5%2011.9852814%2011.5%2011.9852814%22%3E%3C%2Fpolygon%3E%3Cpath%20d%3D%22M21.5%2C15.9852814%20C21.5%2C17.0898509%2021.0522847%2C18.0898509%2020.3284271%2C18.8137085%20L18.9142136%2C17.3994949%20C19.2761424%2C17.0375661%2019.5%2C16.5375661%2019.5%2C15.9852814%20C19.5%2C15.4329966%2019.2761424%2C14.9329966%2018.9142136%2C14.5710678%20L20.3284271%2C13.1568542%20C21.0522847%2C13.8807119%2021.5%2C14.8807119%2021.5%2C15.9852814%20Z%22%20fill%3D%22%23333333%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M25.5%2C15.9852814%20C25.5%2C18.1939121%2024.6049815%2C20.1935%2023.1578535%2C21.6411362%20L21.7426407%2C20.2279221%20C22.8284271%2C19.1421356%2023.5%2C17.6421356%2023.5%2C15.9852814%20C23.5%2C14.3284271%2022.8284271%2C12.8284271%2021.7426407%2C11.7426407%20L23.1578535%2C10.3294266%20C24.6049815%2C11.7770628%2025.5%2C13.7766507%2025.5%2C15.9852814%20Z%22%20fill%3D%22%23333333%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
 }
 .reverse figure.tyfy-audio-player form.player-ui button.audio.muted::before {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%2399B3E6%22%20points%3D%2215.5%207.98650208%2016.5%207.98650208%2016.5%2023.9852814%2015.5%2023.9852814%2011.5%2019.9852814%206.5%2019.9852814%206.5%2011.9852814%2011.5%2011.9852814%22%3E%3C%2Fpolygon%3E%3Cpolygon%20fill%3D%22%2399B3E6%22%20points%3D%2225.5%2013.9%2023.4%2016%2025.5%2018.1%2024.1%2019.5%2022%2017.4%2019.9%2019.5%2018.5%2018.1%2020.6%2016%2018.5%2013.9%2019.9%2012.5%2022%2014.6%2024.1%2012.5%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+}
+.reverse figure.tyfy-audio-player form.player-ui button.audio.muted:hover::before {
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23333333%22%20points%3D%2215.5%207.98650208%2016.5%207.98650208%2016.5%2023.9852814%2015.5%2023.9852814%2011.5%2019.9852814%206.5%2019.9852814%206.5%2011.9852814%2011.5%2011.9852814%22%3E%3C%2Fpolygon%3E%3Cpolygon%20fill%3D%22%23333333%22%20points%3D%2225.5%2013.9%2023.4%2016%2025.5%2018.1%2024.1%2019.5%2022%2017.4%2019.9%2019.5%2018.5%2018.1%2020.6%2016%2018.5%2013.9%2019.9%2012.5%2022%2014.6%2024.1%2012.5%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
 }
 
@@ -2214,6 +2200,7 @@ figure.tyfy-audio-player {
 }
 figure.tyfy-audio-player audio.hidden {
   height: 1px;
+  margin: -1px;
   position: absolute;
   visibility: hidden;
   width: 1px;
@@ -2230,46 +2217,89 @@ figure.tyfy-audio-player form.player-ui span.duration,
 figure.tyfy-audio-player form.player-ui span.loading {
   flex-shrink: 0;
   font-family: helvetica, arial, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   line-height: 1.5rem;
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
+  text-align: center;
   white-space: nowrap;
+  width: 7ch;
 }
 figure.tyfy-audio-player form.player-ui input.volume {
   flex-shrink: 0;
-  margin-left: 0.75rem;
+  margin-left: 0.375rem;
   margin-right: 0.75rem;
   width: 3.75rem;
 }
 figure.tyfy-audio-player form.player-ui button {
+  background-color: transparent;
   flex-shrink: 0;
-  height: 2.25rem;
+  height: 1.875rem;
+  margin: 0.375rem 0 0.375rem 0.375rem;
   overflow: hidden;
   padding: 0;
   white-space: nowrap;
-  width: 2.25rem;
+  width: 1.875rem;
 }
 figure.tyfy-audio-player form.player-ui button::before {
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 2.25rem auto;
+  background-size: 1.875rem auto;
   content: "";
   display: block;
-  height: 2.25rem;
-  width: 2.25rem;
+  height: 1.875rem;
+  width: 1.875rem;
+}
+figure.tyfy-audio-player form.player-ui button:hover, figure.tyfy-audio-player form.player-ui button:active {
+  background-color: var(--tycolor-link-active);
 }
 figure.tyfy-audio-player form.player-ui button.play-pause.paused::before {
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%2224%2016%2010%2025%2010%207%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+  background-image: url("data: image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%233366CC%22%20points%3D%2224%2016%2010%2025%2010%207%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+}
+figure.tyfy-audio-player form.player-ui button.play-pause.paused:hover::before {
+  background-image: url("data: image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%2224%2016%2010%2025%2010%207%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
 }
 figure.tyfy-audio-player form.player-ui button.play-pause.playing::before {
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Crect%20x%3D%2210%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%23FFFFFF%22%3E%3C%2Frect%3E%3Crect%20x%3D%2218%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%23FFFFFF%22%3E%3C%2Frect%3E%3C%2Fsvg%3E");
+  background-image: url("data: image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Crect%20x%3D%2210%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%233366CC%22%3E%3C%2Frect%3E%3Crect%20x%3D%2218%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%233366CC%22%3E%3C%2Frect%3E%3C%2Fsvg%3E");
+}
+figure.tyfy-audio-player form.player-ui button.play-pause.playing:hover::before {
+  background-image: url("data: image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Crect%20x%3D%2210%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%23FFFFFF%22%3E%3C%2Frect%3E%3Crect%20x%3D%2218%22%20y%3D%228%22%20width%3D%224%22%20height%3D%2216%22%20fill%3D%22%23FFFFFF%22%3E%3C%2Frect%3E%3C%2Fsvg%3E");
 }
 figure.tyfy-audio-player form.player-ui button.audio.sound::before {
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%2215.5%207.98650208%2016.5%207.98650208%2016.5%2023.9852814%2015.5%2023.9852814%2011.5%2019.9852814%206.5%2019.9852814%206.5%2011.9852814%2011.5%2011.9852814%22%3E%3C%2Fpolygon%3E%3Cpath%20d%3D%22M21.5%2C15.9852814%20C21.5%2C17.0898509%2021.0522847%2C18.0898509%2020.3284271%2C18.8137085%20L18.9142136%2C17.3994949%20C19.2761424%2C17.0375661%2019.5%2C16.5375661%2019.5%2C15.9852814%20C19.5%2C15.4329966%2019.2761424%2C14.9329966%2018.9142136%2C14.5710678%20L20.3284271%2C13.1568542%20C21.0522847%2C13.8807119%2021.5%2C14.8807119%2021.5%2C15.9852814%20Z%22%20fill%3D%22%23FFFFFF%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M25.5%2C15.9852814%20C25.5%2C18.1939121%2024.6049815%2C20.1935%2023.1578535%2C21.6411362%20L21.7426407%2C20.2279221%20C22.8284271%2C19.1421356%2023.5%2C17.6421356%2023.5%2C15.9852814%20C23.5%2C14.3284271%2022.8284271%2C12.8284271%2021.7426407%2C11.7426407%20L23.1578535%2C10.3294266%20C24.6049815%2C11.7770628%2025.5%2C13.7766507%2025.5%2C15.9852814%20Z%22%20fill%3D%22%23FFFFFF%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+  background-image: url("data: image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%233366CC%22%20points%3D%2215.5%207.98650208%2016.5%207.98650208%2016.5%2023.9852814%2015.5%2023.9852814%2011.5%2019.9852814%206.5%2019.9852814%206.5%2011.9852814%2011.5%2011.9852814%22%3E%3C%2Fpolygon%3E%3Cpath%20d%3D%22M21.5%2C15.9852814%20C21.5%2C17.0898509%2021.0522847%2C18.0898509%2020.3284271%2C18.8137085%20L18.9142136%2C17.3994949%20C19.2761424%2C17.0375661%2019.5%2C16.5375661%2019.5%2C15.9852814%20C19.5%2C15.4329966%2019.2761424%2C14.9329966%2018.9142136%2C14.5710678%20L20.3284271%2C13.1568542%20C21.0522847%2C13.8807119%2021.5%2C14.8807119%2021.5%2C15.9852814%20Z%22%20fill%3D%22%233366CC%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M25.5%2C15.9852814%20C25.5%2C18.1939121%2024.6049815%2C20.1935%2023.1578535%2C21.6411362%20L21.7426407%2C20.2279221%20C22.8284271%2C19.1421356%2023.5%2C17.6421356%2023.5%2C15.9852814%20C23.5%2C14.3284271%2022.8284271%2C12.8284271%2021.7426407%2C11.7426407%20L23.1578535%2C10.3294266%20C24.6049815%2C11.7770628%2025.5%2C13.7766507%2025.5%2C15.9852814%20Z%22%20fill%3D%22%233366CC%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+}
+figure.tyfy-audio-player form.player-ui button.audio.sound:hover::before {
+  background-image: url("data: image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%2215.5%207.98650208%2016.5%207.98650208%2016.5%2023.9852814%2015.5%2023.9852814%2011.5%2019.9852814%206.5%2019.9852814%206.5%2011.9852814%2011.5%2011.9852814%22%3E%3C%2Fpolygon%3E%3Cpath%20d%3D%22M21.5%2C15.9852814%20C21.5%2C17.0898509%2021.0522847%2C18.0898509%2020.3284271%2C18.8137085%20L18.9142136%2C17.3994949%20C19.2761424%2C17.0375661%2019.5%2C16.5375661%2019.5%2C15.9852814%20C19.5%2C15.4329966%2019.2761424%2C14.9329966%2018.9142136%2C14.5710678%20L20.3284271%2C13.1568542%20C21.0522847%2C13.8807119%2021.5%2C14.8807119%2021.5%2C15.9852814%20Z%22%20fill%3D%22%23FFFFFF%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M25.5%2C15.9852814%20C25.5%2C18.1939121%2024.6049815%2C20.1935%2023.1578535%2C21.6411362%20L21.7426407%2C20.2279221%20C22.8284271%2C19.1421356%2023.5%2C17.6421356%2023.5%2C15.9852814%20C23.5%2C14.3284271%2022.8284271%2C12.8284271%2021.7426407%2C11.7426407%20L23.1578535%2C10.3294266%20C24.6049815%2C11.7770628%2025.5%2C13.7766507%2025.5%2C15.9852814%20Z%22%20fill%3D%22%23FFFFFF%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
 }
 figure.tyfy-audio-player form.player-ui button.audio.muted::before {
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%2215.5%207.98650208%2016.5%207.98650208%2016.5%2023.9852814%2015.5%2023.9852814%2011.5%2019.9852814%206.5%2019.9852814%206.5%2011.9852814%2011.5%2011.9852814%22%3E%3C%2Fpolygon%3E%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%2225.5%2013.9%2023.4%2016%2025.5%2018.1%2024.1%2019.5%2022%2017.4%2019.9%2019.5%2018.5%2018.1%2020.6%2016%2018.5%2013.9%2019.9%2012.5%2022%2014.6%2024.1%2012.5%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+  background-image: url("data: image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%233366CC%22%20points%3D%2215.5%207.98650208%2016.5%207.98650208%2016.5%2023.9852814%2015.5%2023.9852814%2011.5%2019.9852814%206.5%2019.9852814%206.5%2011.9852814%2011.5%2011.9852814%22%3E%3C%2Fpolygon%3E%3Cpolygon%20fill%3D%22%233366CC%22%20points%3D%2225.5%2013.9%2023.4%2016%2025.5%2018.1%2024.1%2019.5%2022%2017.4%2019.9%2019.5%2018.5%2018.1%2020.6%2016%2018.5%2013.9%2019.9%2012.5%2022%2014.6%2024.1%2012.5%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+}
+figure.tyfy-audio-player form.player-ui button.audio.muted:hover::before {
+  background-image: url("data: image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20viewBox%3D%220%200%2032%2032%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%2215.5%207.98650208%2016.5%207.98650208%2016.5%2023.9852814%2015.5%2023.9852814%2011.5%2019.9852814%206.5%2019.9852814%206.5%2011.9852814%2011.5%2011.9852814%22%3E%3C%2Fpolygon%3E%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%2225.5%2013.9%2023.4%2016%2025.5%2018.1%2024.1%2019.5%2022%2017.4%2019.9%2019.5%2018.5%2018.1%2020.6%2016%2018.5%2013.9%2019.9%2012.5%2022%2014.6%2024.1%2012.5%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+}
+figure.tyfy-audio-player form.player-ui input[type=range]::-webkit-slider-thumb {
+  border: 4px var(--tycolor-link-default) solid;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  height: 1.125rem;
+  -webkit-transition: border-color 333ms;
+  transition: border-color 333ms;
+  width: 1.125rem;
+}
+figure.tyfy-audio-player form.player-ui input[type=range]::-webkit-slider-thumb:hover {
+  border: 4px var(--tycolor-link-active) solid;
+}
+figure.tyfy-audio-player form.player-ui input[type=range]::-moz-range-thumb {
+  border: 4px var(--tycolor-link-default) solid;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  height: 1.125rem;
+  -moz-transition: border-color 333ms;
+  transition: border-color 333ms;
+  width: 1.125rem;
+}
+figure.tyfy-audio-player form.player-ui input[type=range]::-moz-range-thumb:hover {
+  border: 4px var(--tycolor-link-active) solid;
 }
 
 body {
