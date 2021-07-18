@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes fadein {
   from {
     opacity: 0;
@@ -794,13 +795,14 @@ blockquote.pullquote.pullquote-roof-fixed::before, blockquote.pullquote.pullquot
   background-position: center center;
   background-repeat: no-repeat;
   color: var(--tycolor-border);
-  content: "\ea0a";
+  content: "”";
   display: block;
-  font-family: tyicons;
-  font-size: 1.75rem;
+  font-size: 5.25rem;
   font-style: normal;
   font-weight: normal;
   line-height: 2.625rem;
+  margin: -0.875rem 0;
+  padding-top: 2.625rem;
   text-align: center;
 }
 blockquote.pullquote.pullquote-roof-fixed::before {
@@ -1789,20 +1791,12 @@ img[data-lazyimage].not-lazyLoaded {
   content: "\ea08";
 }
 
-.tyicons-quote-left::before {
+.tyicons-search::before {
   content: "\ea09";
 }
 
-.tyicons-quote-right::before {
-  content: "\ea0a";
-}
-
-.tyicons-search::before {
-  content: "\ea0b";
-}
-
 .tyicons-x::before {
-  content: "\ea0c";
+  content: "\ea0a";
 }
 
 .reverse {
@@ -2683,7 +2677,7 @@ nav.nav-main.js-nav-active h1:hover::before {
   }
 }
 nav.nav-main.nav-opened h1::before {
-  content: "\ea0c";
+  content: "\ea0a";
 }
 
 @media (min-width: 60.375rem) {

@@ -38,13 +38,14 @@ blockquote {
       background-position:center center;
       background-repeat:no-repeat;
       color:var(--tycolor-border);
-      content:tychar($tyicons-quote-right);
+      content:'”';
       display:block;
-      font-family:$tyfont-symbol;
-      font-size:tygrid(2);
+      font-size:tygrid(6);
       font-style:normal;
       font-weight:normal;
       line-height:tygrid(3);
+      margin:tygrid(-1) 0;
+      padding-top:tygrid(3);
       text-align:center;
     }
     &.pullquote-roof-fixed::before {

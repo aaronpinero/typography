@@ -15,13 +15,9 @@
 
   $tyicons-dash: "\ea08";
 
-  $tyicons-quote-left: "\ea09";
+  $tyicons-search: "\ea09";
 
-  $tyicons-quote-right: "\ea0a";
-
-  $tyicons-search: "\ea0b";
-
-  $tyicons-x: "\ea0c";
+  $tyicons-x: "\ea0a";
 
 
 @font-face {
@@ -163,19 +159,11 @@ display: inline-block;
     content: "\ea08";
 }
 
-.tyicons-quote-left::before {
+.tyicons-search::before {
     content: "\ea09";
 }
 
-.tyicons-quote-right::before {
-    content: "\ea0a";
-}
-
-.tyicons-search::before {
-    content: "\ea0b";
-}
-
 .tyicons-x::before {
-    content: "\ea0c";
+    content: "\ea0a";
 }
 
