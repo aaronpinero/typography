@@ -32,6 +32,9 @@
   --tyfy-color-tab-active-bg: color-mix(in srgb, var(--tyfy-color-active) 20%, transparent);
   --tyfy-color-border: color-mix(in srgb, var(--tyfy-color-fg) 30%, var(--tyfy-color-bg) 70%);
   --tyfy-color-link-decoration: color-mix(in srgb, var(--tyfy-color-link) 60%, transparent);
-  --tyfy-color-link-decoration-active: color-mix(in srgb, var(--tyfy-color-active) 75%, transparent);
+  --tyfy-color-link-decoration-active: color-mix(in srgb, var(--tyfy-color-active) 90%, transparent);
   --tyfy-color-bg-shaded: color-mix(in srgb, var(--tyfy-color-fg) 15%, transparent);
+  
+  /* tyfy.settings.animation */
+  --tyfy-transition-duration-link: 0.25s;
 }
