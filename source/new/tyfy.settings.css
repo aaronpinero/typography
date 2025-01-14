@@ -1,0 +1,37 @@
+:root {
+  /* tyfy.settings.grid */
+  --tyfy-grid-unit-vertical: 0.9375rem; 
+  --tyfy-grid-unit-horizontal: 1.125rem;
+  
+  /* tyfy.settings.typography */
+  --tyfy-font-size-base: 1.25rem;
+  --tyfy-font-size-scalar: 1.2;
+  
+  --tyfy-font-size-xs: calc(var(--tyfy-font-size-base) / (2 * var(--tyfy-font-size-scalar)));
+  --tyfy-font-size-sm: calc(var(--tyfy-font-size-base) / var(--tyfy-font-size-scalar));
+  --tyfy-font-size-h6: calc(var(--tyfy-font-size-base) / var(--tyfy-font-size-scalar));
+  --tyfy-font-size-h5: var(--tyfy-font-size-base);
+  --tyfy-font-size-h4: calc(var(--tyfy-font-size-base) * var(--tyfy-font-size-scalar));
+  --tyfy-font-size-h3: calc(var(--tyfy-font-size-base) * (1.5 * var(--tyfy-font-size-scalar)));
+  --tyfy-font-size-h2: calc(var(--tyfy-font-size-base) * (2 * var(--tyfy-font-size-scalar)));
+  --tyfy-font-size-h1: calc(var(--tyfy-font-size-base) * (3 * var(--tyfy-font-size-scalar)));
+  --tyfy-font-size-quote: calc(var(--tyfy-font-size-base) * (1.5 * var(--tyfy-font-size-scalar)));
+  --tyfy-font-size-lede: calc(var(--tyfy-font-size-base) * (1.5 * var(--tyfy-font-size-scalar)));
+  
+  /* tyfy.settings.measures */
+  --tyfy-width-border: 2px;
+  --tyfy-radius-border: 4px;
+  
+  /* tyfy.settings.colors */
+  --tyfy-color-bg: white !default;
+  --tyfy-color-fg: #111111 !default;
+  --tyfy-color-text-light: color-mix(in srgb, var(--tyfy-color-fg) 60%, var(--tyfy-color-bg));
+  --tyfy-color-active: #cc0066;
+  --tyfy-color-link: #0066cc;
+  --tyfy-color-link-active: var(--tyfy-color-active);
+  --tyfy-color-tab-active-bg: color-mix(in srgb, var(--tyfy-color-active) 20%, transparent);
+  --tyfy-color-border: color-mix(in srgb, var(--tyfy-color-fg) 30%, var(--tyfy-color-bg) 70%);
+  --tyfy-color-link-decoration: color-mix(in srgb, var(--tyfy-color-link) 60%, transparent);
+  --tyfy-color-link-decoration-active: color-mix(in srgb, var(--tyfy-color-active) 75%, transparent);
+  --tyfy-color-bg-shaded: color-mix(in srgb, var(--tyfy-color-fg) 15%, transparent);
+}

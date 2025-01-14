@@ -1,0 +1,21 @@
+/* tyfy.essentials.spacing */
+@scope (.tyfy-margins-on) to (.tyfy-margins-off) {
+  :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li,figure,blockquote) {
+    margin-bottom: unset;
+    margin-top: unset;
+  }
+  :is(p,ul,ol,dl,figure,blockquote,h1,h2,h3,h4,h5,h6) + :is(p,ul,ol,dl,figure,blockquote) {
+    margin-top: calc(2 * var(--tyfy-grid-unit-vertical));
+  }
+  :not(h1,h2,h3,h4,h5,h6) + :is(h1,h2,h3,h4,h5,h6) {
+    margin-top: calc(3 * var(--tyfy-grid-unit-vertical));
+  }
+  dl, ol, ul, blockquote {
+    * + :not(dd) {
+      margin-top: var(--tyfy-grid-unit-vertical);
+    }
+  }
+}
+:is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li,figure,blockquote) + .tyfy-margins-off:is(p,ul,ol,dl,figure,blockquote) {
+  margin-top: calc(2 * var(--tyfy-grid-unit-vertical));
+}

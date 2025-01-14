@@ -1,0 +1,13 @@
+/* tyfy.optional.links */
+a {
+  color: var(--tyfy-color-fg);
+  text-decoration: none;
+  &[href] {
+    color: var(--tyfy-color-link);
+    text-decoration-line: underline;
+    text-decoration-color: var(--tyfy-color-link-decoration);
+    text-decoration-style: solid;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.1em;
+  }
+}

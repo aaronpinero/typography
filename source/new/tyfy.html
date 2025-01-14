@@ -14,16 +14,27 @@
         margin: 0;
         padding: calc(2 * var(--tyfy-grid-unit-vertical)) calc(2 * var(--tyfy-grid-unit-horizontal));
       }
+      figure img {
+        aspect-ratio: 4/3;
+        display: block;
+        height: calc(10 * var(--tyfy-grid-unit-vertical));
+      }
+
     </style>
   </head>
   <body class="tyfy-margins-on">
     <h1>Tyfy Test</h1>
-    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Vel volutpat eget himenaeos amet adipiscing habitant tempor velit. Porttitor orci luctus dictumst orci augue praesent blandit nisl. Feugiat quis vestibulum volutpat, blandit lectus augue erat. Suspendisse auctor vel taciti porta potenti gravida sodales. Ac arcu nunc phasellus id turpis eleifend leo. Felis himenaeos habitant consequat ad posuere vivamus ipsum erat. Vestibulum feugiat viverra nascetur consequat congue gravida facilisi.</p>
+    <p>Lorem ipsum odor amet, <a href="http://aaronpinero.net">consectetuer adipiscing</a> elit. Vel volutpat eget himenaeos amet adipiscing habitant tempor velit. Porttitor orci luctus dictumst orci augue praesent blandit nisl. Feugiat quis vestibulum volutpat, <a href="https://www.google.com">blandit</a> lectus augue erat. Suspendisse auctor vel taciti porta potenti gravida sodales. Ac arcu nunc phasellus id turpis eleifend leo. Felis himenaeos habitant consequat ad posuere vivamus ipsum erat. Vestibulum feugiat viverra nascetur consequat congue gravida facilisi.</p>
     <h2>Heading 2</h2>
-    <p>Inceptos mollis congue fermentum tristique quam. Hendrerit himenaeos sed aliquam sodales malesuada nibh tempus nostra tempor. Pellentesque eget porttitor conubia convallis vivamus pellentesque vivamus. Dis per morbi ullamcorper facilisi dolor facilisis vehicula ut facilisis. Dictum libero amet hendrerit fusce velit nisl nullam. Sagittis blandit dolor et semper mollis class consequat arcu lectus. Eu varius auctor molestie feugiat; sagittis elit.</p>
+    <p>Inceptos mollis congue fermentum tristique quam. Hendrerit himenaeos sed aliquam sodales malesuada nibh tempus nostra tempor. Pellentesque eget porttitor conubia convallis vivamus pellentesque vivamus. Dis per morbi ullamcorper facilisi dolor facilisis vehicula ut facilisis.</p>
+    <figure>
+      <img src="https://placehold.co/320x240">
+      <figcaption>This is a caption.</figcaption>
+    </figure>
+    <p>Dictum libero amet hendrerit fusce velit nisl nullam. Sagittis blandit dolor et semper mollis class consequat arcu lectus. Eu varius auctor molestie feugiat; sagittis elit.</p>
     <h2>Heading 2</h2>
     <p>Gravida duis nullam nisl duis fusce fusce libero molestie etiam. Penatibus neque tellus eget habitant per quisque malesuada sagittis sagittis. Blandit suscipit dictumst sollicitudin vestibulum accumsan mollis nulla proin vivamus. Quam phasellus nullam dictumst; nunc sem amet non. Eget congue volutpat pharetra metus aenean ex nibh augue auctor. Ridiculus fusce natoque elit litora molestie sed; aliquam sapien semper. Taciti nibh sit id dui a.</p>
-    <h3>Heading 3</h3>
+    <h3><a href="https://www.espn.com">Heading 3</a></h3>
     <p>Cursus sagittis ex nibh ante varius ornare.</p>
     <ul>
       <li>Natoque quis eleifend suspendisse tempus tristique sed quam.</li>
@@ -32,6 +43,11 @@
     </ul>
     <p>Ligula maecenas proin ridiculus, quam nunc congue taciti. Ullamcorper leo lectus curabitur at fermentum. Magna sed mattis mattis consectetur hac fringilla quam ridiculus. Mus habitasse vitae; pharetra gravida consectetur lacinia. Mus ac vehicula platea posuere sodales lorem euismod.</p>
     <h4>Heading 4</h4>
-    <p>Efficitur adipiscing class odio ac donec semper pretium quis lectus. Ipsum class vestibulum eget urna sapien cursus tristique tortor. Maximus tristique consectetur sollicitudin litora class in mauris. Fames feugiat turpis id et ut; habitasse dui aliquet. Imperdiet torquent arcu netus consectetur auctor. Ornare nisl pharetra ac lacinia tempus massa fermentum proin?</p>
+    <p>Efficitur adipiscing class odio ac donec semper pretium quis lectus. Ipsum class vestibulum eget urna sapien cursus tristique tortor.</p>
+    <blockquote>
+      <p>Maximus tristique consectetur sollicitudin litora class in mauris. Fames feugiat turpis id et ut; habitasse dui aliquet.</p>
+      <p>- <cite>Aaron Pinero</cite></p>
+    </blockquote>
+    <p>Imperdiet torquent arcu netus consectetur auctor. Ornare nisl pharetra ac lacinia tempus massa fermentum proin?</p>
   </body>
 </html>
