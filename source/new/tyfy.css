@@ -1,0 +1,101 @@
+@import "normalize.css" layer(normalize);
+
+@layer tyfy {
+  :root {
+    /* core.grid */
+    --tyfy-grid-unit-vertical: 0.9375rem; 
+    --tyfy-grid-unit-horizontal: 1.125rem;
+    
+    /* core.typography */
+    --tyfy-font-size-base: 1.25rem;
+    --tyfy-font-size-scalar: 1.2;
+    
+    /* core.settings.typography */
+    --tyfy-font-size-xs: calc(var(--tyfy-font-size-base) / (2 * var(--tyfy-font-size-scalar)));
+    --tyfy-font-size-sm: calc(var(--tyfy-font-size-base) / var(--tyfy-font-size-scalar));
+    --tyfy-font-size-h6: calc(var(--tyfy-font-size-base) / var(--tyfy-font-size-scalar));
+    --tyfy-font-size-h5: var(--tyfy-font-size-base);
+    --tyfy-font-size-h4: calc(var(--tyfy-font-size-base) * var(--tyfy-font-size-scalar));
+    --tyfy-font-size-h3: calc(var(--tyfy-font-size-base) * (1.5 * var(--tyfy-font-size-scalar)));
+    --tyfy-font-size-h2: calc(var(--tyfy-font-size-base) * (2 * var(--tyfy-font-size-scalar)));
+    --tyfy-font-size-h1: calc(var(--tyfy-font-size-base) * (3 * var(--tyfy-font-size-scalar)));
+    --tyfy-font-size-quote: calc(var(--tyfy-font-size-base) * (1.5 * var(--tyfy-font-size-scalar)));
+    --tyfy-font-size-lede: calc(var(--tyfy-font-size-base) * (1.5 * var(--tyfy-font-size-scalar)));
+    
+    /* core.settings.measures */
+    --tyfy-width-border: 2px;
+    --tyfy-radius-border: 4px;
+    
+    /* core.settings.colors */
+    --tyfy-color-bg: white !default;
+    --tyfy-color-fg: #111111 !default;
+    --tyfy-color-text-light: color-mix(in srgb, var(--tyfy-color-fg) 60%, var(--tyfy-color-bg));
+    --tyfy-color-active: #cc0066;
+    --tyfy-color-link: #0066cc;
+    --tyfy-color-link-active: var(--tyfy-color-active);
+    --tyfy-color-tab-active-bg: color-mix(in srgb, var(--tyfy-color-active) 20%, var(--tyfy-color-bg) 0%);
+    --tyfy-color-border: color-mix(in srgb, var(--tyfy-color-fg) 30%, var(--tyfy-color-bg) 70%);
+    --tyfy-color-link-decoration: color-mix(in srgb, var(--tyfy-color-link) 60%, var(--tyfy-color-bg) 0%);
+    --tyfy-color-link-decoration-active: color-mix(in srgb, var(--tyfy-color-active) 75%, var(--tyfy-color-bg) 0%);
+    --tyfy-color-bg-shaded: color-mix(in srgb, var(--tyfy-color-fg) 15%, var(--tyfy-color-bg) 0%);
+  }
+  
+  /* essentials.body */
+  body {
+    background: var(--tyfy-color-bg);
+    color: var(--tyfy-color-fg);
+    font-size: var(--tyfy-font-size-base);
+    line-height: calc(round(up, calc(var(--tyfy-font-size-base)/var(--tyfy-grid-unit-vertical)), 1) * var(--tyfy-grid-unit-vertical));
+  }
+  
+  /* essentials.spacing */
+  :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li) {
+    margin-bottom: unset;
+    margin-top: unset;
+  }
+  :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dd,li) + :is(p,ul,ol,dl,dt) {
+    margin-top: calc(2 * var(--tyfy-grid-unit-vertical));
+  }
+  :not(h1,h2,h3,h4,h5,h6) + :is(h1,h2,h3,h4,h5,h6) {
+    margin-top: calc(3 * var(--tyfy-grid-unit-vertical));
+  }
+  dl, ol, ul {
+    * + :not(dd) {
+      margin-top: var(--tyfy-grid-unit-vertical);
+    }
+  }
+  
+  /* optional.headings */
+  h1, .h1 {
+    font-size: var(--tyfy-font-size-h1);
+    line-height: calc(round(up, calc(var(--tyfy-font-size-h1)/var(--tyfy-grid-unit-vertical)), 1) * var(--tyfy-grid-unit-vertical));
+  }
+  h2, .h2 {
+    font-size: var(--tyfy-font-size-h2);
+    line-height: calc(round(up, calc(var(--tyfy-font-size-h2)/var(--tyfy-grid-unit-vertical)), 1) * var(--tyfy-grid-unit-vertical));
+  }
+  h3, .h3 {
+    font-size: var(--tyfy-font-size-h3);
+    line-height: calc(round(up, calc(var(--tyfy-font-size-h3)/var(--tyfy-grid-unit-vertical)), 1) * var(--tyfy-grid-unit-vertical));
+  }
+  h4, .h4 {
+    font-size: var(--tyfy-font-size-h4);
+    line-height: calc(round(up, calc(var(--tyfy-font-size-h4)/var(--tyfy-grid-unit-vertical)), 1) * var(--tyfy-grid-unit-vertical));
+  }
+  h5, .h5 {
+    font-size: var(--tyfy-font-size-h5);
+    line-height: calc(round(up, calc(var(--tyfy-font-size-h5)/var(--tyfy-grid-unit-vertical)), 1) * var(--tyfy-grid-unit-vertical));
+  }
+  h6, .h6 {
+    font-size: var(--tyfy-font-size-h6);
+    line-height: calc(round(up, calc(var(--tyfy-font-size-h6)/var(--tyfy-grid-unit-vertical)), 1) * var(--tyfy-grid-unit-vertical));
+  }
+  h5 {
+    font-style: italic;
+  }
+  h6 {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+}
