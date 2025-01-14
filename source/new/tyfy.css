@@ -49,19 +49,21 @@
   }
   
   /* essentials.spacing */
-  :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li) {
-    margin-bottom: unset;
-    margin-top: unset;
-  }
-  :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dd,li) + :is(p,ul,ol,dl,dt) {
-    margin-top: calc(2 * var(--tyfy-grid-unit-vertical));
-  }
-  :not(h1,h2,h3,h4,h5,h6) + :is(h1,h2,h3,h4,h5,h6) {
-    margin-top: calc(3 * var(--tyfy-grid-unit-vertical));
-  }
-  dl, ol, ul {
-    * + :not(dd) {
-      margin-top: var(--tyfy-grid-unit-vertical);
+  @scope (.tyfy-margins-on) to (.tyfy-margins-off) {
+    :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li) {
+      margin-bottom: unset;
+      margin-top: unset;
+    }
+    :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dd,li) + :is(p,ul,ol,dl,dt) {
+      margin-top: calc(2 * var(--tyfy-grid-unit-vertical));
+    }
+    :not(h1,h2,h3,h4,h5,h6) + :is(h1,h2,h3,h4,h5,h6) {
+      margin-top: calc(3 * var(--tyfy-grid-unit-vertical));
+    }
+    dl, ol, ul {
+      * + :not(dd) {
+        margin-top: var(--tyfy-grid-unit-vertical);
+      }
     }
   }
   
