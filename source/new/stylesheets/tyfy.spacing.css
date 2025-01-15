@@ -1,0 +1,36 @@
+/* tyfy.essentials.spacing */
+@scope (.tyfy-margins-on) to (.tyfy-margins-off) {
+  :scope {
+    --tyfy-margins-size-blocks: 2;
+    --tyfy-margins-size-headings: 3;
+    --tyfy-margins-size-interiors: 1;
+    --tyfy-margins-size-lists: 1;
+  }
+  :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li,figure,blockquote) {
+    margin-bottom: unset;
+    margin-top: unset;
+  }
+  :is(p,ul,ol,dl,figure,blockquote,h1,h2,h3,h4,h5,h6) + :is(p,ul,ol,dl,figure,blockquote) {
+    margin-top: calc(var(--tyfy-margins-size-blocks) * var(--tyfy-grid-unit-vertical));
+  }
+  :not(h1,h2,h3,h4,h5,h6) + :is(h1,h2,h3,h4,h5,h6) {
+    margin-top: calc(var(--tyfy-margins-size-headings) * var(--tyfy-grid-unit-vertical));
+  }
+  ul, ol {
+    * + *,
+    ol,
+    ul {
+      margin-top: calc(var(--tyfy-margins-size-lists) * var(--tyfy-grid-unit-vertical));
+    } 
+  }
+  dl {
+    * + :not(dd) {
+      margin-top: calc(var(--tyfy-margins-size-lists) * var(--tyfy-grid-unit-vertical));
+    }
+  }
+  blockquote {
+    * + * {
+      margin-top: calc(var(--tyfy-margins-size-interiors) * var(--tyfy-grid-unit-vertical));
+    }
+  }
+}

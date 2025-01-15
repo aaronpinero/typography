@@ -1,6 +1,7 @@
-@import "normalize.css" layer(normalize);
-@import "tyfy.settings.css" layer(tyfy);
-@import "tyfy.essentials.body.css" layer(tyfy);
-@import "tyfy.essentials.spacing.css" layer(tyfy);
-@import "tyfy.optional.headings.css" layer(tyfy);
-@import "tyfy.optional.links.css" layer(tyfy);
+@import "stylesheets/normalize.css" layer(normalize);
+@import "stylesheets/tyfy.settings.css" layer(tyfy-base);
+@import "stylesheets/tyfy.body.css" layer(tyfy-base);
+@import "stylesheets/tyfy.spacing.css" layer(tyfy-base);
+@import "stylesheets/tyfy.headings.css" layer(tyfy-styles);
+@import "stylesheets/tyfy.links.css" layer(tyfy-styles);
+@import "stylesheets/tyfy.lists.css" layer(tyfy-styles);

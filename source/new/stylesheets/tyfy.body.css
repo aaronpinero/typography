@@ -3,5 +3,5 @@ body {
   background: var(--tyfy-color-bg);
   color: var(--tyfy-color-fg);
   font-size: var(--tyfy-font-size-base);
-  line-height: calc(round(up, calc(var(--tyfy-font-size-base)/var(--tyfy-grid-unit-vertical)), 1) * var(--tyfy-grid-unit-vertical));
+  line-height: round(up, var(--tyfy-font-size-base), var(--tyfy-grid-unit-vertical));
 }

@@ -6,6 +6,9 @@
     <title>Tyfy Test</title>
     <link rel="stylesheet" href="tyfy.css">
     <style>
+      :root {
+        --tyfy-grid-unit-vertical: 0.875rem; 
+      }
       body {
         background-image: repeating-linear-gradient(0deg,rgba(0,0,0,0.06) 0px,rgba(0,0,0,0.06) 1px,transparent 0px,transparent 50%);
         background-repeat: repeat;
@@ -36,9 +39,15 @@
     <p>Gravida duis nullam nisl duis fusce fusce libero molestie etiam. Penatibus neque tellus eget habitant per quisque malesuada sagittis sagittis. Blandit suscipit dictumst sollicitudin vestibulum accumsan mollis nulla proin vivamus. Quam phasellus nullam dictumst; nunc sem amet non. Eget congue volutpat pharetra metus aenean ex nibh augue auctor. Ridiculus fusce natoque elit litora molestie sed; aliquam sapien semper. Taciti nibh sit id dui a.</p>
     <h3><a href="https://www.espn.com">Heading 3</a></h3>
     <p>Cursus sagittis ex nibh ante varius ornare.</p>
-    <ul>
+    <ul class="spacing-lg">
       <li>Natoque quis eleifend suspendisse tempus tristique sed quam.</li>
-      <li>Porta ante ridiculus platea a suspendisse quisque lacinia pretium.</li>
+      <li>
+        Porta ante ridiculus platea a suspendisse quisque lacinia pretium.
+        <ol class="spacing-none">
+          <li>Quam phasellus nullam dictumst</li>
+          <li>Eget congue volutpat pharetra</li>
+        </ol>
+      </li>
       <li>Posuere litora duis adipiscing at montes urna.</li>
     </ul>
     <p>Ligula maecenas proin ridiculus, quam nunc congue taciti. Ullamcorper leo lectus curabitur at fermentum. Magna sed mattis mattis consectetur hac fringilla quam ridiculus. Mus habitasse vitae; pharetra gravida consectetur lacinia. Mus ac vehicula platea posuere sodales lorem euismod.</p>

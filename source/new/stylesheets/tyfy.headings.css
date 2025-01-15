@@ -1,0 +1,32 @@
+/* tyfy.optional.headings */
+h1, .h1 {
+  font-size: var(--tyfy-font-size-h1);
+  line-height: round(up, var(--tyfy-font-size-h1), var(--tyfy-grid-unit-vertical));
+}
+h2, .h2 {
+  font-size: var(--tyfy-font-size-h2);
+  line-height: round(up, var(--tyfy-font-size-h2), var(--tyfy-grid-unit-vertical));
+}
+h3, .h3 {
+  font-size: var(--tyfy-font-size-h3);
+  line-height: round(up, var(--tyfy-font-size-h3), var(--tyfy-grid-unit-vertical));
+}
+h4, .h4 {
+  font-size: var(--tyfy-font-size-h4);
+  line-height: round(up, var(--tyfy-font-size-h4), var(--tyfy-grid-unit-vertical));
+}
+h5, .h5 {
+  font-size: var(--tyfy-font-size-h5);
+  line-height: round(up, var(--tyfy-font-size-h5), var(--tyfy-grid-unit-vertical));
+}
+h6, .h6 {
+  font-size: var(--tyfy-font-size-h6);
+  line-height: round(up, var(--tyfy-font-size-h6), var(--tyfy-grid-unit-vertical));
+}
+h5 {
+  font-style: italic;
+}
+h6 {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}

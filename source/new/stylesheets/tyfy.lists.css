@@ -1,0 +1,22 @@
+/* tyfy.optional.lists */
+ol,
+ul {
+  padding-left: calc(var(--tyfy-grid-unit-horizontal) * 2);
+}
+dd {
+  margin-left: unset;
+  margin-right: unset;
+  padding-left: calc(var(--tyfy-grid-unit-horizontal) * 2);
+}
+
+ul, ol {
+  &.spacing-lg {
+    --tyfy-margins-size-lists: 2;
+  }
+  &.spacing-md {
+    --tyfy-margins-size-lists: 1;
+  }
+  &.spacing-none {
+    --tyfy-margins-size-lists: 0;
+  }
+}

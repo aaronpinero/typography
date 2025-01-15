@@ -16,5 +16,10 @@ a {
       text-decoration-color: var(--tyfy-color-link-decoration-active);
       text-decoration-thickness: 0.15em;
     }
+    &:focus:focus-visible {
+      outline-color: var(--tyfy-color-link-decoration);
+      outline-offset: 0.1em;
+      outline-width: 0.1em;
+    }
   }
 }
