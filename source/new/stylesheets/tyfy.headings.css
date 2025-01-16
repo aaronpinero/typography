@@ -1,4 +1,4 @@
-/* tyfy.optional.headings */
+/* tyfy.headings */
 h1, .h1 {
   font-size: var(--tyfy-font-size-h1);
   line-height: round(up, var(--tyfy-font-size-h1), var(--tyfy-grid-unit-vertical));

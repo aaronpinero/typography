@@ -1,7 +1,16 @@
-/* tyfy.essentials.body */
+/* tyfy.body */
 body {
+  animation: fadein 1s;
   background: var(--tyfy-color-bg);
   color: var(--tyfy-color-fg);
   font-size: var(--tyfy-font-size-base);
   line-height: round(up, var(--tyfy-font-size-base), var(--tyfy-grid-unit-vertical));
+}
+@keyframes fadein {
+  from {
+    opacity:0
+  }
+  to {
+    opacity:1
+  }
 }

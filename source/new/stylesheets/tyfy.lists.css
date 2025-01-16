@@ -1,12 +1,15 @@
-/* tyfy.optional.lists */
+/* tyfy.lists */
+:root {
+  --tyfy-list-indent: calc(2 * var(--tyfy-grid-unit-horizontal));
+}
 ol,
 ul {
-  padding-left: calc(var(--tyfy-grid-unit-horizontal) * 2);
+  padding-left: var(--tyfy-list-indent);
 }
 dd {
   margin-left: unset;
   margin-right: unset;
-  padding-left: calc(var(--tyfy-grid-unit-horizontal) * 2);
+  padding-left: var(--tyfy-list-indent);
 }
 
 ul, ol {
@@ -18,5 +21,25 @@ ul, ol {
   }
   &.spacing-none {
     --tyfy-margins-size-lists: 0;
+  }
+}
+
+/* unordered list variations */
+ul {
+  &.list-nobullet {
+    padding-left: unset;
+    li {
+      list-style-type: none;
+    }
+    &.indented {
+      li {
+        box-sizing: border-box;
+        padding-left: var(--tyfy-list-indent);
+        text-indent: calc(-1 * var(--tyfy-list-indent));
+      }
+      ol, ul {
+        margin-left: calc(-1 * var(--tyfy-list-indent));
+      }
+    }
   }
 }

@@ -23,8 +23,8 @@
   --tyfy-radius-border: 4px;
   
   /* tyfy.settings.colors */
-  --tyfy-color-bg: white !default;
-  --tyfy-color-fg: #111111 !default;
+  --tyfy-color-bg: white;
+  --tyfy-color-fg: #111111;
   --tyfy-color-text-light: color-mix(in srgb, var(--tyfy-color-fg) 60%, var(--tyfy-color-bg));
   --tyfy-color-active: #cc0066;
   --tyfy-color-link: #0066cc;
