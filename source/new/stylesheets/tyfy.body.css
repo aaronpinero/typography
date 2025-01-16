@@ -3,8 +3,8 @@ body {
   animation: fadein 1s;
   background: var(--tyfy-color-bg);
   color: var(--tyfy-color-fg);
-  font-size: var(--tyfy-font-size-base);
-  line-height: round(up, var(--tyfy-font-size-base), var(--tyfy-grid-unit-vertical));
+  font-size: var(--tyfy-fs-base);
+  line-height: round(up, var(--tyfy-fs-base), var(--tyfy-vgu));
 }
 @keyframes fadein {
   from {

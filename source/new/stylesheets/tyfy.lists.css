@@ -1,6 +1,6 @@
 /* tyfy.lists */
 :root {
-  --tyfy-list-indent: calc(2 * var(--tyfy-grid-unit-horizontal));
+  --tyfy-list-indent: calc(2 * var(--tyfy-hgu));
 }
 ol,
 ul {

@@ -1,22 +1,22 @@
 :root {
   /* tyfy.settings.grid */
-  --tyfy-grid-unit-vertical: 0.9375rem; 
-  --tyfy-grid-unit-horizontal: 1.125rem;
+  --tyfy-vgu: 0.9375rem; /* vertical grid unit */
+  --tyfy-hgu: 1.125rem; /* horizontal grid unit */
   
   /* tyfy.settings.typography */
-  --tyfy-font-size-base: 1.25rem;
-  --tyfy-font-size-scalar: 1.2;
+  --tyfy-fs-base: 1.25rem;
+  --tyfy-fs-scalar: 1.2;
   
-  --tyfy-font-size-xs: calc(var(--tyfy-font-size-base) / (2 * var(--tyfy-font-size-scalar)));
-  --tyfy-font-size-sm: calc(var(--tyfy-font-size-base) / var(--tyfy-font-size-scalar));
-  --tyfy-font-size-h6: calc(var(--tyfy-font-size-base) / var(--tyfy-font-size-scalar));
-  --tyfy-font-size-h5: var(--tyfy-font-size-base);
-  --tyfy-font-size-h4: calc(var(--tyfy-font-size-base) * var(--tyfy-font-size-scalar));
-  --tyfy-font-size-h3: calc(var(--tyfy-font-size-base) * (1.5 * var(--tyfy-font-size-scalar)));
-  --tyfy-font-size-h2: calc(var(--tyfy-font-size-base) * (2 * var(--tyfy-font-size-scalar)));
-  --tyfy-font-size-h1: calc(var(--tyfy-font-size-base) * (3 * var(--tyfy-font-size-scalar)));
-  --tyfy-font-size-quote: calc(var(--tyfy-font-size-base) * (1.5 * var(--tyfy-font-size-scalar)));
-  --tyfy-font-size-lede: calc(var(--tyfy-font-size-base) * (1.5 * var(--tyfy-font-size-scalar)));
+  --tyfy-fs-xs: calc(var(--tyfy-fs-base) / (2 * var(--tyfy-fs-scalar)));
+  --tyfy-fs-sm: calc(var(--tyfy-fs-base) / var(--tyfy-fs-scalar));
+  --tyfy-fs-h6: calc(var(--tyfy-fs-base) / var(--tyfy-fs-scalar));
+  --tyfy-fs-h5: var(--tyfy-fs-base);
+  --tyfy-fs-h4: calc(var(--tyfy-fs-base) * var(--tyfy-fs-scalar));
+  --tyfy-fs-h3: calc(var(--tyfy-fs-base) * (1.5 * var(--tyfy-fs-scalar)));
+  --tyfy-fs-h2: calc(var(--tyfy-fs-base) * (2 * var(--tyfy-fs-scalar)));
+  --tyfy-fs-h1: calc(var(--tyfy-fs-base) * (3 * var(--tyfy-fs-scalar)));
+  --tyfy-fs-quote: calc(var(--tyfy-fs-base) * (1.5 * var(--tyfy-fs-scalar)));
+  --tyfy-fs-lede: calc(var(--tyfy-fs-base) * (1.5 * var(--tyfy-fs-scalar)));
   
   /* tyfy.settings.measures */
   --tyfy-width-border: 2px;

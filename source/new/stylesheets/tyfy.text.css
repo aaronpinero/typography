@@ -16,7 +16,7 @@ hr {
   height: var(--tyfy-width-border);
 }
 small {
-  font-size: calc(100% / var(--tyfy-font-size-scalar)); // basically one scale step down from wherever we are
+  font-size: calc(100% / var(--tyfy-fs-scalar)); // basically one scale step down from wherever we are
 }
 span {
   &.dropcap {
