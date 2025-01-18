@@ -2,8 +2,10 @@
 @import "stylesheets/tyfy.settings.css" layer(tyfy-base);
 @import "stylesheets/tyfy.body.css" layer(tyfy-base);
 @import "stylesheets/tyfy.margins.css" layer(tyfy-base);
+@import "stylesheets/tyfy.utilities.css" layer(tyfy-base);
 @import "stylesheets/tyfy.headings.css" layer(tyfy-styles);
 @import "stylesheets/tyfy.links.css" layer(tyfy-styles);
 @import "stylesheets/tyfy.lists.css" layer(tyfy-styles);
 @import "stylesheets/tyfy.text.css" layer(tyfy-styles);
 @import "stylesheets/tyfy.quotes.css" layer(tyfy-styles);
+@import "stylesheets/tyfy.tables.css" layer(tyfy-styles);

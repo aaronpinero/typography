@@ -1,0 +1,36 @@
+/* tyfy.utilities */
+@layer tyfy-utilities {
+  .clearfix {
+    display: flow-root;
+  }
+  .container-inline-size {
+    container-type: inline-size;
+  }
+  .visually-hidden {
+    border:0;
+    clip:rect(0 0 0 0);
+    height:1px !important;
+    margin:-1px;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    width:1px !important;
+    &.focusable:active,
+    &.focusable:focus {
+      clip:auto;
+      height:auto;
+      margin:0;
+      overflow:visible;
+      position:static;
+      width:auto;
+    }
+  }
+}
+.unhide {
+  clip: unset;
+  height: unset;
+  margin: unset;
+  overflow: unset;
+  position: unset;
+  width: unset;
+}
