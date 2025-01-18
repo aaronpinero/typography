@@ -6,3 +6,4 @@
 @import "stylesheets/tyfy.links.css" layer(tyfy-styles);
 @import "stylesheets/tyfy.lists.css" layer(tyfy-styles);
 @import "stylesheets/tyfy.text.css" layer(tyfy-styles);
+@import "stylesheets/tyfy.quotes.css" layer(tyfy-styles);

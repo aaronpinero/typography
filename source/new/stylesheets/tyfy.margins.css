@@ -32,11 +32,6 @@
       margin-top: calc(var(--tyfy-margins-size-lists) * var(--tyfy-vgu));
     }
   }
-  blockquote {
-    * + * {
-      margin-top: calc(var(--tyfy-margins-size-interiors) * var(--tyfy-vgu));
-    }
-  }
   hr {
     margin-bottom: calc(var(--tyfy-margins-size-hr) * var(--tyfy-vgu) - var(--tyfy-width-border));
     margin-top: calc(var(--tyfy-margins-size-hr) * var(--tyfy-vgu) - var(--tyfy-width-border));

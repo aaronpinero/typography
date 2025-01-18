@@ -1,0 +1,75 @@
+/* tyfy.quotes */
+:root {
+  --tyfy-quote-indent: calc(2 * var(--tyfy-hgu));
+}
+q {
+  font-style: italic;
+}
+blockquote {
+  font-style: italic;
+  margin-left: var(--tyfy-quote-indent);
+  margin-right: var(--tyfy-quote-indent);
+  * + * {
+    margin-top: calc(var(--tyfy-margins-size-interiors) * var(--tyfy-vgu));
+  }
+  .citation {
+    font-size: calc(100% / var(--tyfy-fs-scalar));
+    font-style: normal;
+  }
+  &.pullquote {
+    font-size: var(--tyfy-fs-quote);
+    line-height: round(up, calc(var(--tyfy-fs-quote) * 1.2), var(--tyfy-vgu));
+    position: relative;
+    &.centered {
+      text-align: center;
+    }
+    &.with-rule {
+      border-bottom: var(--tyfy-width-border) var(--tyfy-color-border) solid;
+      padding-bottom: calc(2 * var(--tyfy-vgu) - var(--tyfy-width-border));
+      &::before {
+        background-image: linear-gradient(90deg, var(--tyfy-color-border) 0%, var(--tyfy-color-border) calc(50% - 2 * var(--tyfy-hgu)), transparent calc(50% - 2 * var(--tyfy-hgu) + 1px), transparent calc(50% + 2 * var(--tyfy-hgu) - 1px), var(--tyfy-color-border) calc(50% + 2 * var(--tyfy-hgu)), var(--tyfy-color-border) 100%);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% 4px;
+        color: var(--tyfy-color-text-light);
+        content: "“";
+        text-decoration-line: underline;
+        text-underline-offset: calc(-2 * var(--tyfy-vgu));
+        font-size: calc(4 * var(--tyfy-vgu));
+        line-height: 1;
+        height: calc(3 * var(--tyfy-vgu));
+        overflow: hidden;
+        font-weight: bold;
+        text-align:center;
+        display: block;
+      }
+    }
+    &.float-left,
+    &.float-right {
+      @container (min-width: 25em) {
+        box-sizing: border-box;
+        margin-bottom: calc(2 * var(--tyfy-vgu));
+        width: calc(50% - var(--tyfy-hgu));
+        &:first-child + * {
+          margin-top:0;
+        }
+      }
+    }
+    &.float-left {
+      @container (min-width: 25em) {
+        clear: left;
+        float: left;
+        margin-left: 0;
+        margin-right: calc(2 * var(--tyfy-hgu));
+      }
+    }
+    &.float-right {
+      @container (min-width: 25em) {
+        clear: right;
+        float: right;
+        margin-left: calc(2 * var(--tyfy-hgu));
+        margin-right: 0;
+      }
+    }
+  }
+}

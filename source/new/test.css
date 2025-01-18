@@ -10,6 +10,7 @@ body {
   background-size: calc(2 * var(--tyfy-vgu)) calc(2 * var(--tyfy-vgu)), calc(2 * var(--tyfy-hgu)) calc(2 * var(--tyfy-hgu));
   font-family: var(--font-serif);
   margin: 0;
+  max-width: calc(45 * var(--tyfy-hgu));
   padding: calc(2 * var(--tyfy-vgu)) calc(2 * var(--tyfy-hgu));
 }
 header + * {

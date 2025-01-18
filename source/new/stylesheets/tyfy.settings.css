@@ -15,8 +15,8 @@
   --tyfy-fs-h3: calc(var(--tyfy-fs-base) * (1.5 * var(--tyfy-fs-scalar)));
   --tyfy-fs-h2: calc(var(--tyfy-fs-base) * (2 * var(--tyfy-fs-scalar)));
   --tyfy-fs-h1: calc(var(--tyfy-fs-base) * (3 * var(--tyfy-fs-scalar)));
-  --tyfy-fs-quote: calc(var(--tyfy-fs-base) * (1.5 * var(--tyfy-fs-scalar)));
-  --tyfy-fs-lede: calc(var(--tyfy-fs-base) * (1.5 * var(--tyfy-fs-scalar)));
+  --tyfy-fs-quote: calc(var(--tyfy-fs-base) * var(--tyfy-fs-scalar));
+  --tyfy-fs-lede: calc(var(--tyfy-fs-base) * var(--tyfy-fs-scalar));
   
   /* tyfy.settings.measures */
   --tyfy-width-border: 2px;
