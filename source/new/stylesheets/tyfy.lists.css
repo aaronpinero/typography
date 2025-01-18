@@ -12,7 +12,7 @@ dd {
   padding-left: var(--tyfy-list-indent);
 }
 
-ul, ol {
+ul, ol, dl {
   &.spacing-lg {
     --tyfy-margins-size-lists: 2;
   }

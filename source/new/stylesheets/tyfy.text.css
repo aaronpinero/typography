@@ -35,3 +35,6 @@ span {
     text-transform: uppercase;
   }
 }
+.text-light {
+  color: var(--tyfy-color-text-light);
+}

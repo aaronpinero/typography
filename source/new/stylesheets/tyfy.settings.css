@@ -23,11 +23,12 @@
   --tyfy-radius-border: 4px;
   
   /* tyfy.settings.colors */
-  --tyfy-color-bg: white;
-  --tyfy-color-fg: #111111;
+  color-scheme: light dark;
+  --tyfy-color-bg: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 10%));
+  --tyfy-color-fg: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 90%)) ;
   --tyfy-color-text-light: color-mix(in srgb, var(--tyfy-color-fg) 60%, var(--tyfy-color-bg));
-  --tyfy-color-active: #cc0066;
-  --tyfy-color-link: #0066cc;
+  --tyfy-color-active: light-dark(hsl(330, 100%, 40%), hsl(330, 100%, 70%)); /* #cc0066 */
+  --tyfy-color-link: light-dark(hsl(210, 100%, 40%), hsl(210, 100%, 70%)); /* #0066cc */
   --tyfy-color-link-active: var(--tyfy-color-active);
   --tyfy-color-tab-active-bg: color-mix(in srgb, var(--tyfy-color-active) 20%, transparent);
   --tyfy-color-border: color-mix(in srgb, var(--tyfy-color-fg) 30%, var(--tyfy-color-bg) 70%);
