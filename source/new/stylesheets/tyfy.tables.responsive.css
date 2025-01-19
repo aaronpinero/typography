@@ -21,9 +21,8 @@
         grid-column: 1/3;
       }
       tr + tr {
-        border-top: var(--tyfy-border-thick);
-        margin-top: calc((0.5 * var(--tyfy-margin-sm)) - var(--tyfy-width-border));
-        padding-top: calc((0.5 * var(--tyfy-margin-sm)) - var(--tyfy-width-border));
+        border-top: var(--tyfy-border);
+        margin-top: calc(var(--tyfy-margin-sm) - var(--tyfy-width-border));
       }
       th {
         grid-column: 1/3;
@@ -35,7 +34,6 @@
           display: grid;
           grid-template-columns: subgrid;
           &::before {
-            color: var(--tyfy-color-text-light);
             content: attr(data-label);
             font-weight: bold;
             grid-column: 1/2;
@@ -51,45 +49,24 @@
           padding-bottom: calc(var(--tyfy-vgu) - (2 * var(--tyfy-width-border)));
           padding-top: var(--tyfy-vgu);
         }
-        tr:not(:first-child) th[scope="row"] {
-          border-top: var(--tyfy-border);
-          padding-top: calc(var(--tyfy-vgu) - var(--tyfy-width-border));
-        }
-        tr:not(:last-child) td:last-child {
-          border-bottom: none;
-          padding-bottom: calc(0.5 * var(--tyfy-vgu));
-          padding-top: calc(0.5 * var(--tyfy-vgu));
-        }
       }
     }
     &.striped,
-    &.vertical-rules {
+    &.vrules {
       tbody {
-        td,
-        th {
-          padding-left:tygrid(1);
-          padding-right:tygrid(1);
-        }
         td {
-          .tyfy-td-label {
-            left:tygrid(1);
-          }
-        }
-      }
-      thead {
-        @media (max-width:$tybreak-table*0.9999) {
-          & + tbody td {
-            padding-left:calc(33% + #{tygrid(1)});
-          }
+          padding-left: var(--tyfy-hgu);
         }
       }
     }
-    &.vertical-rules {
+    &.vrules {
+      border-left: none;
       tbody {
+        tr {
+          border-left: var(--tyfy-border);
+        }
         th[scope="row"] {
-          @media (max-width:$tybreak-table*0.9999) {
-            border-right:$tywidth-border var(--tycolor-border) solid;
-          }
+          border-right: var(--tyfy-border);
         }
       }
     }
