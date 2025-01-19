@@ -10,3 +10,4 @@
 @import "stylesheets/tyfy.quotes.css" layer(tyfy-styles);
 @import "stylesheets/tyfy.tables.css" layer(tyfy-styles);
 @import "stylesheets/tyfy.tables.responsive.css" layer(tyfy-styles);
+@import "stylesheets/tyfy.floats.css" layer(tyfy-styles);

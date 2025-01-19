@@ -44,32 +44,5 @@ blockquote {
         display: block;
       }
     }
-    &.float-left,
-    &.float-right {
-      @container (min-width: 25em) {
-        box-sizing: border-box;
-        margin-bottom: calc(2 * var(--tyfy-vgu));
-        width: calc(50% - var(--tyfy-hgu));
-        &:first-child + * {
-          margin-top:0;
-        }
-      }
-    }
-    &.float-left {
-      @container (min-width: 25em) {
-        clear: left;
-        float: left;
-        margin-left: 0;
-        margin-right: calc(2 * var(--tyfy-hgu));
-      }
-    }
-    &.float-right {
-      @container (min-width: 25em) {
-        clear: right;
-        float: right;
-        margin-left: calc(2 * var(--tyfy-hgu));
-        margin-right: 0;
-      }
-    }
   }
 }

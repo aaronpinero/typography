@@ -81,39 +81,3 @@ table.vrules {
     border-right: var(--tyfy-border-thick);
   }
 }
-
-// floated table
-table {
-  &.float-left,
-  &.float-right {
-    @media (min-width:$tybreak-float) {
-      box-sizing:border-box;
-      margin-bottom:tyspacing(md);
-      width:calc(50% - #{tygrid(2)});
-    }
-  }
-  &.float-left {
-    @media (min-width:$tybreak-float) {
-      clear:left;
-      float:left;
-      margin-right:tygrid(4);
-    }
-  }
-  &.float-right {
-    @media (min-width:$tybreak-float) {
-      clear:right;
-      float:right;
-      margin-left:tygrid(4);
-    }
-  }
-}
-table.float-right + table.float-left {
-  @media (min-width:$tybreak-float) {
-    margin-right:tygrid(2);
-  }
-}
-table.float-left + table.float-right {
-  @media (min-width:$tybreak-float) {
-    margin-left:tygrid(2);
-  }
-}

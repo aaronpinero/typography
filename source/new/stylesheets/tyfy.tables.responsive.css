@@ -1,5 +1,5 @@
 /* tyfy.tables.responsive */
-@container (max-width: 29.9999999em) {
+@container (max-width: 29.99em) {
   table.responsive {
     display: block;
     thead {
