@@ -46,81 +46,98 @@ table.striped {
 }
 
 table.hrules {
-  border-top: var(--tyfy-width-border) var(--tyfy-color-border) solid;
+  background-image: linear-gradient(90deg, var(--tyfy-color-border), var(--tyfy-color-border));
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100% var(--tyfy-width-border);
   td,
   th {
-    border-bottom: var(--tyfy-width-border) var(--tyfy-color-border) solid;
-    padding-bottom: calc((0.5 * var(--tyfy-vgu)) - (0.5 * var(--tyfy-width-border)));
-    padding-top: calc((0.5 * var(--tyfy-vgu)) - (0.5 * var(--tyfy-width-border)));
+    border-bottom: var(--tyfy-border);
+    padding-bottom: calc(0.5 * (var(--tyfy-vgu) - var(--tyfy-width-border)));
+    padding-top: calc(0.5 * (var(--tyfy-vgu) - var(--tyfy-width-border)));
   }
   th[scope="col"] {
-    border-bottom: calc(2 * var(--tyfy-width-border)) var(--tyfy-color-border) solid;
-    padding-bottom: calc((1 * var(--tyfy-vgu)) - (1.5 * var(--tyfy-width-border)));
-    padding-top: calc((1 * var(--tyfy-vgu)) - (1.5 * var(--tyfy-width-border)));
+    border-bottom: var(--tyfy-border-thick);
+    padding-bottom: calc(var(--tyfy-vgu) - var(--tyfy-width-border));
+    padding-top: calc(var(--tyfy-vgu) - var(--tyfy-width-border));
   }
 }
 
 table.vrules {
-  border-left: var(--tyfy-width-border) var(--tyfy-color-border) solid;
+  border-left: var(--tyfy-border);
   td,
   th {
-    border-right: var(--tyfy-width-border) var(--tyfy-color-border) solid;
+    border-right: var(--tyfy-border);
     padding-left: var(--tyfy-hgu);
     padding-right: var(--tyfy-hgu);
   }
   th[scope="row"] {
-    border-right: calc(2 * var(--tyfy-width-border)) var(--tyfy-color-border) solid;
+    border-right: var(--tyfy-border-thick);
   }
 }
 
-// responsive table
 table.responsive {
+  @container (max-width: 29.9999999em) {
+    display: block;
+  }
   thead {
-    @media (max-width:$tybreak-table*0.9999) {
-      @include tyhidden;
-      & + tbody td {
-        padding-left:33%;
-      }
+    @container (max-width: 29.9999999em) {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px !important;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position:absolute;
+      width: 1px !important;
     }
   }
   tbody {
+    @container (max-width: 29.9999999em) {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
     tr {
-      @media (max-width:$tybreak-table*0.9999) {
-        display:block;
+      @container (max-width: 29.9999999em) {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: 1/3;
       }
     }
     tr + tr {
-      @media (max-width:$tybreak-table*0.9999) {
-        border-top:$tywidth-border var(--tycolor-border) solid;
-        margin-top:$tywidth-border;
+      @container (max-width: 29.9999999em) {
+        border-top: calc(2 * var(--tyfy-width-border)) var(--tyfy-color-border) solid;
+        margin-top: calc((0.5 * var(--tyfy-margin-sm)) - var(--tyfy-width-border));
+        padding-top: calc((0.5 * var(--tyfy-margin-sm)) - var(--tyfy-width-border));
       }
     }
     th {
-      @media (max-width:$tybreak-table*0.9999) {
-        display:block;
-        padding-left:0;
+      @container (max-width: 29.9999999em) {
+        grid-column: 1/3;
       }
     }
     td {
-      @media (max-width:$tybreak-table*0.9999) {
-        display:block;
-        padding-left:0;
-        position:relative;
-      }
-      .tyfy-td-label {
-        color:var(--tycolor-text-light);
-        display:block;
-        font-family:$tyfont-table;
-        font-size:tyfont-size(sm);
-        left:0;
-        position:absolute;
-        width:calc(33% - #{tygrid()});
-        @media (min-width:$tybreak-table) {
-          display:none;
+      @container (max-width: 29.9999999em) {
+        grid-column: 1/3;
+        padding-left: 0;
+        &[data-label] {
+          display: grid;
+          grid-template-columns: subgrid;
+          &::before {
+            color: var(--tyfy-color-text-light);
+            content: attr(data-label);
+            font-weight: bold;
+            grid-column: 1/2;
+            padding-right: var(--tyfy-hgu);
+          }
         }
       }
-      .tyfy-td-label + * {
-        margin-top:inherit;
+    }
+  }
+  &.hrules {
+    @container (max-width: 29.9999999em) {
+      tr:not(:last-child) td:last-child {
+        border-bottom: none;
       }
     }
   }

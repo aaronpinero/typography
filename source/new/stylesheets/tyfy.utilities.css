@@ -1,4 +1,8 @@
 /* tyfy.utilities */
+:root {
+  --tyfy-border: var(--tyfy-width-border) var(--tyfy-color-border) solid;
+  --tyfy-border-thick: calc(2 * var(--tyfy-width-border)) var(--tyfy-color-border) solid;
+}
 @layer tyfy-utilities {
   .clearfix {
     display: flow-root;
@@ -7,22 +11,22 @@
     container-type: inline-size;
   }
   .visually-hidden {
-    border:0;
-    clip:rect(0 0 0 0);
-    height:1px !important;
-    margin:-1px;
-    overflow:hidden;
-    padding:0;
-    position:absolute;
-    width:1px !important;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px !important;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px !important;
     &.focusable:active,
     &.focusable:focus {
-      clip:auto;
-      height:auto;
-      margin:0;
-      overflow:visible;
-      position:static;
-      width:auto;
+      clip: autoauto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
     }
   }
 }
