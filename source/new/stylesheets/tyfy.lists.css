@@ -14,13 +14,13 @@ dd {
 
 ul, ol, dl {
   &.spacing-lg {
-    --tyfy-margins-size-lists: 2;
+    --tyfy-margin-lists: var(--tyfy-margin-md);
   }
   &.spacing-md {
-    --tyfy-margins-size-lists: 1;
+    --tyfy-margin-lists: var(--tyfy-margin-sm);
   }
   &.spacing-none {
-    --tyfy-margins-size-lists: 0;
+    --tyfy-margin-lists: 0;
   }
 }
 

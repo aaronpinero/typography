@@ -10,7 +10,7 @@ blockquote {
   margin-left: var(--tyfy-quote-indent);
   margin-right: var(--tyfy-quote-indent);
   * + * {
-    margin-top: calc(var(--tyfy-margins-size-interiors) * var(--tyfy-vgu));
+    margin-top: var(--tyfy-margin-sm);
   }
   .citation {
     font-size: calc(100% / var(--tyfy-fs-scalar));

@@ -1,50 +1,52 @@
 /* tyfy.margins */
 @scope (.tyfy-margins-on) to (.tyfy-margins-off) {
   :scope {
-    --tyfy-margins-size-blocks: 2;
-    --tyfy-margins-size-headings: 3;
-    --tyfy-margins-size-hr: 3;
-    --tyfy-margins-size-interiors: 1;
-    --tyfy-margins-size-lists: 1;
+    --tyfy-margin-sm: calc(1 * var(--tyfy-vgu));
+    --tyfy-margin-md: calc(2 * var(--tyfy-vgu));
+    --tyfy-margin-lg: calc(3 * var(--tyfy-vgu));
+    --tyfy-margin-blocks: var(--tyfy-margin-md);
+    --tyfy-margin-headings: var(--tyfy-margin-lg);
+    --tyfy-margin-lists: var(--tyfy-margin-sm);
   }
-  :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li,figure,blockquote,hr) {
+  p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li,figure,blockquote,hr {
     margin-bottom: unset;
     margin-top: unset;
   }
   :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,figure,blockquote,hr,table) + :is(p,ul,ol,dl,figure,blockquote,table) {
-    margin-top: calc(var(--tyfy-margins-size-blocks) * var(--tyfy-vgu));
+    margin-top: var(--tyfy-margin-blocks);
   }
   :not(h1,h2,h3,h4,h5,h6) + :is(h1,h2,h3,h4,h5,h6) {
-    margin-top: calc(var(--tyfy-margins-size-headings) * var(--tyfy-vgu));
+    margin-top: var(--tyfy-margin-headings);
   }
   :is(h1,h2,h3,h4,h5,h6) + :is(h1,h2,h3,h4,h5,h6) {
-    margin-top: calc(var(--tyfy-margins-size-interiors) * var(--tyfy-vgu));
+    margin-top: var(--tyfy-margin-sm);
   }
   ul, ol {
     * + *,
     ol,
     ul {
-      margin-top: calc(var(--tyfy-margins-size-lists) * var(--tyfy-vgu));
+      margin-top: var(--tyfy-margin-lists);
     } 
   }
   dl {
     * + :not(dd) {
-      margin-top: calc(var(--tyfy-margins-size-lists) * var(--tyfy-vgu));
+      margin-top: var(--tyfy-margin-lists);
     }
   }
   hr {
-    margin-bottom: calc(var(--tyfy-margins-size-hr) * var(--tyfy-vgu) - var(--tyfy-width-border));
-    margin-top: calc(var(--tyfy-margins-size-hr) * var(--tyfy-vgu) - var(--tyfy-width-border));
+    margin-bottom: var(--tyfy-margin-lg);
+    margin-top: var(--tyfy-margin-lg);
   }
 }
 
 .tyfy-margins-zero {
   .tyfy-margins-on & {
-    --tyfy-margins-size-blocks: 0;
-    --tyfy-margins-size-headings: 0;
-    --tyfy-margins-size-hr: 0;
-    --tyfy-margins-size-interiors: 0;
-    --tyfy-margins-size-lists: 0;
+    --tyfy-margin-sm: 0;
+    --tyfy-margin-md: 0;
+    --tyfy-margin-lg: 0;
+    --tyfy-margin-blocks: var(--tyfy-margin-md);
+    --tyfy-margin-headings: var(--tyfy-margin-lg);
+    --tyfy-margin-lists: var(--tyfy-margin-sm);
   }
   .tyfy-margins-off & {
     :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li,figure,blockquote,hr) {
