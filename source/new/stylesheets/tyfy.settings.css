@@ -3,6 +3,14 @@
   --tyfy-vgu: 0.9375rem; /* vertical grid unit */
   --tyfy-hgu: 1.125rem; /* horizontal grid unit */
   
+  /* tyfy.settings.spacing */
+  --tyfy-vspace-sm: calc(1 * var(--tyfy-vgu));
+  --tyfy-vspace-md: calc(2 * var(--tyfy-vgu));
+  --tyfy-vspace-lg: calc(3 * var(--tyfy-vgu));
+  --tyfy-hspace-sm: calc(1 * var(--tyfy-hgu));
+  --tyfy-hspace-md: calc(2 * var(--tyfy-hgu));
+  --tyfy-hspace-lg: calc(3 * var(--tyfy-hgu));
+  
   /* tyfy.settings.typography */
   --tyfy-fs-base: 1.25rem;
   --tyfy-fs-scalar: 1.2;

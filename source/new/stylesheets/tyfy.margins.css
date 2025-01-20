@@ -1,12 +1,11 @@
 /* tyfy.margins */
 @scope (.tyfy-margins-on) to (.tyfy-margins-off) {
   :scope {
-    --tyfy-margin-sm: calc(1 * var(--tyfy-vgu));
-    --tyfy-margin-md: calc(2 * var(--tyfy-vgu));
-    --tyfy-margin-lg: calc(3 * var(--tyfy-vgu));
-    --tyfy-margin-blocks: var(--tyfy-margin-md);
-    --tyfy-margin-headings: var(--tyfy-margin-lg);
-    --tyfy-margin-lists: var(--tyfy-margin-sm);
+    --tyfy-margin-blocks: var(--tyfy-vspace-md);
+    --tyfy-margin-headings-lg: var(--tyfy-vspace-lg);
+    --tyfy-margin-headings-sm: var(--tyfy-vspace-sm);
+    --tyfy-margin-lists: var(--tyfy-vspace-sm);
+    --tyfy-margin-rule: var(--tyfy-vspace-lg);
   }
   p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li,figure,blockquote,hr {
     margin-bottom: unset;
@@ -16,10 +15,10 @@
     margin-top: var(--tyfy-margin-blocks);
   }
   :not(h1,h2,h3,h4,h5,h6) + :is(h1,h2,h3,h4,h5,h6) {
-    margin-top: var(--tyfy-margin-headings);
+    margin-top: var(--tyfy-margin-headings-lg);
   }
   :is(h1,h2,h3,h4,h5,h6) + :is(h1,h2,h3,h4,h5,h6) {
-    margin-top: var(--tyfy-margin-sm);
+    margin-top: var(--tyfy-margin-headings-sm);
   }
   ul, ol {
     * + *,
@@ -34,19 +33,18 @@
     }
   }
   hr {
-    margin-bottom: var(--tyfy-margin-lg);
-    margin-top: var(--tyfy-margin-lg);
+    margin-bottom: var(--tyfy-margin-rule);
+    margin-top: var(--tyfy-margin-rule);
   }
 }
 
 .tyfy-margins-zero {
   .tyfy-margins-on & {
-    --tyfy-margin-sm: 0;
-    --tyfy-margin-md: 0;
-    --tyfy-margin-lg: 0;
-    --tyfy-margin-blocks: var(--tyfy-margin-md);
-    --tyfy-margin-headings: var(--tyfy-margin-lg);
-    --tyfy-margin-lists: var(--tyfy-margin-sm);
+    --tyfy-margin-blocks: 0;
+    --tyfy-margin-headings-lg: 0;
+    --tyfy-margin-headings-sm: 0;
+    --tyfy-margin-lists: 0;
+    --tyfy-margin-rule: 0;
   }
   .tyfy-margins-off & {
     :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li,figure,blockquote,hr) {

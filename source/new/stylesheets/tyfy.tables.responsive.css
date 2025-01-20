@@ -22,7 +22,7 @@
       }
       tr + tr {
         border-top: var(--tyfy-border);
-        margin-top: calc(var(--tyfy-margin-sm) - var(--tyfy-width-border));
+        margin-top: calc(var(--tyfy-vspace-sm) - var(--tyfy-width-border));
       }
       th {
         grid-column: 1/3;

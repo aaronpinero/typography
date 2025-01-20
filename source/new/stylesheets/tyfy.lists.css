@@ -1,6 +1,6 @@
 /* tyfy.lists */
 :root {
-  --tyfy-list-indent: calc(2 * var(--tyfy-hgu));
+  --tyfy-list-indent: var(--tyfy-hspace-md);
 }
 ol,
 ul {
@@ -14,10 +14,10 @@ dd {
 
 ul, ol, dl {
   &.spacing-lg {
-    --tyfy-margin-lists: var(--tyfy-margin-md);
+    --tyfy-margin-lists: var(--tyfy-vspace-md);
   }
   &.spacing-md {
-    --tyfy-margin-lists: var(--tyfy-margin-sm);
+    --tyfy-margin-lists: var(--tyfy-vspace-sm);
   }
   &.spacing-none {
     --tyfy-margin-lists: 0;

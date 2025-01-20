@@ -1,6 +1,7 @@
 /* tyfy.quotes */
 :root {
-  --tyfy-quote-indent: calc(2 * var(--tyfy-hgu));
+  --tyfy-quote-indent: var(--tyfy-hspace-md);
+  --tyfy-margin-quote: var(--tyfy-vspace-sm);
 }
 q {
   font-style: italic;
@@ -10,7 +11,7 @@ blockquote {
   margin-left: var(--tyfy-quote-indent);
   margin-right: var(--tyfy-quote-indent);
   * + * {
-    margin-top: var(--tyfy-margin-sm);
+    margin-top: var(--tyfy-margin-quote);
   }
   .citation {
     font-size: calc(100% / var(--tyfy-fs-scalar));
@@ -24,7 +25,7 @@ blockquote {
       text-align: center;
     }
     &.with-rule {
-      border-bottom: var(--tyfy-width-border) var(--tyfy-color-border) solid;
+      border-bottom: var(--tyfy-border);
       padding-bottom: calc(2 * var(--tyfy-vgu) - var(--tyfy-width-border));
       &::before {
         background-image: linear-gradient(90deg, var(--tyfy-color-border) 0%, var(--tyfy-color-border) calc(50% - 2 * var(--tyfy-hgu)), transparent calc(50% - 2 * var(--tyfy-hgu) + 1px), transparent calc(50% + 2 * var(--tyfy-hgu) - 1px), var(--tyfy-color-border) calc(50% + 2 * var(--tyfy-hgu)), var(--tyfy-color-border) 100%);

@@ -1,7 +1,7 @@
 /* tyfy.floats.tables */
 :root {
-  --tyfy-margin-float-inline: calc(2 * var(--tyfy-hgu));
-  --tyfy-margin-float-end: calc(2 * var(--tyfy-vgu));
+  --tyfy-margin-float-inline: var(--tyfy-hspace-md);
+  --tyfy-margin-float-end: var(--tyfy-vspace-md);
 }
 @container (min-width: 25em) {
   table {
@@ -11,7 +11,7 @@
       margin-bottom: var(--tyfy-margin-float-end);
       width: calc(50% - (0.5 * var(--tyfy-margin-float-inline)));
       &:first-child + * {
-        margin-top:0;
+        margin-top: 0;
       }
     }
     &.float-left {
@@ -45,7 +45,7 @@
         margin-bottom: var(--tyfy-margin-float-end);
         width: calc(50% - (0.5 * var(--tyfy-margin-float-inline)));
         &:first-child + * {
-          margin-top:0;
+          margin-top: 0;
         }
       }
       &.float-left {

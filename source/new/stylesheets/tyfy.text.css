@@ -12,7 +12,7 @@ code {
 }
 hr {
   border:none;
-  border-top: var(--tyfy-width-border) var(--tyfy-color-border) solid;
+  border-top: var(--tyfy-border);
   height: var(--tyfy-width-border);
 }
 small {
