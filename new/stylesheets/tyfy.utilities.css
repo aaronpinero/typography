@@ -38,3 +38,17 @@
   position: unset;
   width: unset;
 }
+
+.color-scheme-dark {
+  color-scheme: only dark;
+  background: var(--tyfy-color-bg);
+  color: var(--tyfy-color-fg);
+}
+
+.tyfy-margin-top-md {
+  margin-top: var(--tyfy-vspace-md);
+}
+
+.tyfy-padding-md {
+  padding: var(--tyfy-hspace-md) var(--tyfy-vspace-md);
+}

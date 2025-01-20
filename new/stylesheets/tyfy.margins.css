@@ -53,3 +53,7 @@
     }
   }
 }
+
+.tyfy-margin-md {
+  margin-top: var(--tyfy-vspace-md);
+}

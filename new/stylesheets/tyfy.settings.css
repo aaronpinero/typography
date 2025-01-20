@@ -27,16 +27,16 @@
   --tyfy-fs-lede: calc(var(--tyfy-fs-base) * var(--tyfy-fs-scalar));
   
   /* tyfy.settings.measures */
-  --tyfy-width-border: 2px;
-  --tyfy-radius-border: 4px;
+  --tyfy-width-border: 0.125rem;
+  --tyfy-radius-border: 0.375rem;
   
   /* tyfy.settings.colors */
   color-scheme: light dark;
   --tyfy-color-bg: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 10%));
   --tyfy-color-fg: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 90%)) ;
   --tyfy-color-text-light: color-mix(in srgb, var(--tyfy-color-fg) 60%, var(--tyfy-color-bg));
-  --tyfy-color-active: light-dark(hsl(330, 100%, 40%), hsl(330, 100%, 70%)); /* #cc0066 */
-  --tyfy-color-link: light-dark(hsl(210, 100%, 40%), hsl(210, 100%, 70%)); /* #0066cc */
+  --tyfy-color-active: light-dark(hsl(310, 100%, 40%), hsl(310, 100%, 70%)); /* #cc0066 */
+  --tyfy-color-link: light-dark(hsl(140, 50%, 35%), hsl(140, 50%, 70%)); /* #0066cc */
   --tyfy-color-link-active: var(--tyfy-color-active);
   --tyfy-color-tab-active-bg: color-mix(in srgb, var(--tyfy-color-active) 20%, transparent);
   --tyfy-color-border: color-mix(in srgb, var(--tyfy-color-fg) 40%, var(--tyfy-color-bg) 60%);
