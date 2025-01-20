@@ -42,4 +42,27 @@ ul {
       }
     }
   }
+  &.list-flex {
+    --tyfy-margin-lists: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    li {
+      margin-left: var(--tyfy-hspace-md);
+    }
+    &.centered {
+      justify-content: center;
+    }
+    &.right {
+      justify-content: flex-end;
+    }
+    &.list-nobullet {
+      margin-left: calc(-1 * var(--tyfy-hspace-sm));
+      margin-right: calc(-1 * var(--tyfy-hspace-sm));
+      li {
+        margin-left: var(--tyfy-hspace-sm);
+        margin-right: var(--tyfy-hspace-sm);
+      }
+    }
+  }
 }
