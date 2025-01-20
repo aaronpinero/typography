@@ -35,8 +35,8 @@
   --tyfy-color-bg: light-dark(hsl(0, 0%, 100%), hsl(0, 0%, 10%));
   --tyfy-color-fg: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 90%)) ;
   --tyfy-color-text-light: color-mix(in srgb, var(--tyfy-color-fg) 60%, var(--tyfy-color-bg));
-  --tyfy-color-active: light-dark(hsl(310, 100%, 40%), hsl(310, 100%, 70%)); /* #cc0066 */
-  --tyfy-color-link: light-dark(hsl(140, 50%, 35%), hsl(140, 50%, 70%)); /* #0066cc */
+  --tyfy-color-active: light-dark(hsl(310, 80%, 45%), hsl(310, 80%, 70%)); /* #cc0066 */
+  --tyfy-color-link: light-dark(hsl(140, 55%, 33%), hsl(140, 55%, 70%)); /* #0066cc */
   --tyfy-color-link-active: var(--tyfy-color-active);
   --tyfy-color-tab-active-bg: color-mix(in srgb, var(--tyfy-color-active) 20%, transparent);
   --tyfy-color-border: color-mix(in srgb, var(--tyfy-color-fg) 40%, var(--tyfy-color-bg) 60%);
