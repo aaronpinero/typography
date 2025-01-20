@@ -1,2 +1,0 @@
-sass --style=compressed source/scss:dist/style
-postcss dist/style/*.css --replace --config config/postcss.config.js

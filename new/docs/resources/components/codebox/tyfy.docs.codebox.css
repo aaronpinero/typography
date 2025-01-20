@@ -1,0 +1,78 @@
+/* tyfy.docs.codebox */
+pre.codebox code {
+  background-color: transparent; /* override tyfy.text.css */
+}
+pre.codebox[class*="language-"] {
+  border: var(--tyfy-border);
+  margin: inherit;
+  padding: calc(var(--tyfy-vspace-md) - var(--tyfy-width-border)) calc(var(--tyfy-hspace-md) - var(--tyfy-width-border));
+  overflow: auto;
+}
+/* override prism.css */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: var(--tyfy-color-fg);
+  text-shadow: none;
+  font-size: var(--tyfy-fs-base);
+  line-height: round(up, var(--tyfy-fs-base), var(--tyfy-vgu));
+}
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  background: light-dark(hsl(212, 92%, 85%), hsl(212, 92%, 35%));
+}
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  background: light-dark(hsl(212, 92%, 85%), hsl(212, 92%, 35%));
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: var(--tyfy-color-bg-shaded);
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: light-dark(hsl(210, 13%, 50%), hsl(210, 13%, 62%));
+}
+.token.punctuation {
+  color: light-dark(hsl(0, 0%, 60%), hsl(0, 0%, 50%));
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: light-dark(hsl(330, 100%, 30%), hsl(330, 70%, 70%));
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: light-dark(hsl(80, 100%, 30%), hsl(80, 70%, 70%));
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: light-dark(hsl(32, 45%, 41%), hsl(32, 45%, 66%));
+  background: light-dark(hsla(0, 0%, 100%, .2), hsla(0, 0%, 0%, .2));
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: light-dark(hsl(198, 100%, 33%), hsl(198, 75%, 66%));
+}
+.token.function,
+.token.class-name {
+  color: light-dark(hsl(348, 70%, 55%), hsl(348, 80%, 58%));
+}
+.token.regex,
+.token.important,
+.token.variable {
+  color: light-dark(hsl(39, 100%, 46%), hsl(39, 80%, 66%));
+}

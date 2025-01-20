@@ -11,7 +11,7 @@
     margin-bottom: unset;
     margin-top: unset;
   }
-  :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,figure,blockquote,hr,table) + :is(p,ul,ol,dl,figure,blockquote,table) {
+  :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,figure,blockquote,hr,table,pre) + :is(p,ul,ol,dl,figure,blockquote,table,pre) {
     margin-top: var(--tyfy-margin-blocks);
   }
   :not(h1,h2,h3,h4,h5,h6) + :is(h1,h2,h3,h4,h5,h6) {

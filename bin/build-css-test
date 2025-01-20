@@ -1,3 +1,0 @@
-stylelint --syntax scss "test/test.scss"
-sass test/test.scss:test/test.css
-postcss test/*.css --replace --config config/postcss.config.js

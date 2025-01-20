@@ -1,0 +1,16 @@
+title: "Code Example Box"
+label: "Code Box"
+notes: "Default element for code examples, no length limit. Based on best practice described on <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code\">MDN</a>, this code box uses a <code>code</code> tag inside a <code>pre</code> tag. Syntactic sugar is provided by <a href=\"prismjs.com\">prism.js</a>."
+preview: "@preview-codebox"
+status: "ready"
+context:
+  modifier: "default"
+  lang: "css"
+  code: "pre.codebox code {\n\tbackground-color: transparent; /* override tyfy.text.css */\n}\n\n/* override prism.css */\ncode[class*=\"language-\"],\npre[class*=\"language-\"] {\n\tcolor: var(--tyfy-color-fg);\n\ttext-shadow: none;\n\tfont-size: var(--tyfy-fs-base);\n\tline-height: round(up, var(--tyfy-fs-base), var(--tyfy-vgu));\n}"
+variants:
+  - name: "short"
+    notes: "Short element for code examples; height is limited; content will scroll within box"
+    context:
+      modifier: "short"
+      lang: "css"
+      code: ":root {\n\t--tyfy-vgu: 0.875rem; \n\t--font-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;\n\t--color-hgl: light-dark(rgba(0,0,255,0.1), rgba(128,128,255,0.1));\n\t--color-vgl: light-dark(rgba(255,0,0,0.1), rgba(255,128,128,0.1));\n}"
