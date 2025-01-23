@@ -11,4 +11,5 @@
 @import "tyfy.tables.css" layer(tyfy-styles);
 @import "tyfy.tables.responsive.css" layer(tyfy-styles);
 @import "tyfy.buttons.css" layer(tyfy-styles);
+@import "tyfy.forms.css" layer(tyfy-styles);
 @import "tyfy.floats.css" layer(tyfy-styles);
