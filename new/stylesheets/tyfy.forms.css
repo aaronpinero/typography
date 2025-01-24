@@ -69,13 +69,14 @@ input[type="color"] {
     outline-offset: var(--tyfy-width-border);
   }
   &:disabled {
+    color: var(--tyfy-color-text-light);
     pointer-events: none;
     opacity: 0.8;
   }
 }
 select {
   &:not([multiple]) {
-    box-shadow: 0 0 0 transparent;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
   }
 }
 button,
@@ -95,7 +96,8 @@ select {
   &:not([multiple]) {
     appearance: none;
     -webkit-appearance: none;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='#{encodecolor($tycolor-text-light)}'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='#{encodecolor($tycolor-text-light)}'/%3E%3C/svg%3E");
+    background-blend-mode: exclusion;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='%23808080'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='%23808080'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: calc(100% - 0.5em) center;
     background-size: 1em auto;

@@ -75,7 +75,7 @@
     --tyfy-color-btn-fg: white;
     --tyfy-color-btn-bg: transparent;
     --tyfy-color-btn-border: white;
-    --tyfy-color-btn-outline: var(--tyfy-color-border);
+    --tyfy-color-btn-outline: var(--tyfy-color-fg);
   }
   &.btn-danger {
     --tyfy-color-btn-fg: var(--tyfy-color-bg);
