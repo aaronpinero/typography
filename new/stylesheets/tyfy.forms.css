@@ -100,8 +100,8 @@ select {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='%23808080'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='%23808080'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: calc(100% - 0.5em) center;
-    background-size: 1em auto;
-    padding-right: calc(var(--tyfy-hspace-sm) - var(--tyfy-width-border));
+    background-size: 0.85em auto;
+    padding-right: var(--tyfy-hspace-md);
   }
 }
 

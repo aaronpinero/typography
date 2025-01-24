@@ -1,5 +1,4 @@
 :root {
-  --tyfy-vgu: 0.875rem; 
   --font-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
   --color-hgl: light-dark(rgba(0,0,255,0.1), rgba(128,128,255,0.1));
   --color-vgl: light-dark(rgba(255,0,0,0.1), rgba(255,128,128,0.1));
