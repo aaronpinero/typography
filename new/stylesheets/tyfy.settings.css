@@ -46,4 +46,10 @@
   
   /* tyfy.settings.animation */
   --tyfy-transition-duration-link: 0.25s;
+  
+  /* tyfy.settings.svgs */
+  --tyfy-select-caret-light: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M6,13L9,10L16,17L23,10L26,13L16,23L6,13Z" fill="hsl(0,0%,40%)" /></svg>');
+  --tyfy-select-caret-dark: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M6,13L9,10L16,17L23,10L26,13L16,23L6,13Z" fill="hsl(0,0%,70%)" /></svg>');
+  --tyfy-input-check-light: url('data:image/svg+xml,<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon fill="white" points="23 56 20.9401855 53.9401855 0 33 7 26 23 42 57 8 64 15"></polygon></svg>');
+  --tyfy-input-check-dark: url('data:image/svg+xml,<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon fill="black" points="23 56 20.9401855 53.9401855 0 33 7 26 23 42 57 8 64 15"></polygon></svg>');
 }

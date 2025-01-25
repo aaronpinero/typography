@@ -96,46 +96,53 @@ select {
   &:not([multiple]) {
     appearance: none;
     -webkit-appearance: none;
-    background-blend-mode: exclusion;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='6 10 16 0 26 10 23 13 16 6 9 13' fill='%23808080'/%3E%3Cpolygon points='6 22 9 19 16 26 23 19 26 22 16 32' fill='%23808080'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: calc(100% - 0.5em) center;
-    background-size: 0.85em auto;
+    background-size: 1em auto;
     padding-right: var(--tyfy-hspace-md);
+    @media (prefers-color-scheme: light) {
+      background-image: var(--tyfy-select-caret-light);
+    }
+    @media (prefers-color-scheme: dark) {
+      background-image: var(--tyfy-select-caret-dark);
+    }
   }
 }
 
 input[type="checkbox"] {
-  appearance:none;
+  appearance: none;
   background-color: var(--tyfy-color-bg);
-  border-color: var(--tyfy-color-border);
-  border-style:solid;
-  border-radius:$tyradius-border;
-  border-width:$tywidth-border;
-  display:inline-block;
-  height:1.5em;
-  transition:background-color tyduration(hover), border-color tyduration(hover), transform tyduration(hover);
-  vertical-align:text-bottom;
-  width:1.5em;
+  border: var(--tyfy-color-input-border) var(--tyfy-width-border) solid;
+  border-radius: var(--tyfy-radius-border);
+  box-sizing: border-box;
+  display: inline-block;
+  height: 1.5em;
+  transition: background-color 0.25s, border-color 0.25s, transform 0.25s;
+  vertical-align: top;
+  width: 1.5em;
   &:checked {
-    background-color:var(--tycolor-link-active);
-    background-image:url("data:image/svg+xml;charset=ASCII,%3Csvg%20width%3D%2264px%22%20height%3D%2264px%22%20viewBox%3D%220%200%2064%2064%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cpolygon%20fill%3D%22#{encodecolor(var(--tyfy-color-bg))}%22%20points%3D%2223%2056%2020.9401855%2053.9401855%200%2033%207%2026%2023%2042%2057%208%2064%2015%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:tygrid(1) auto;
-    border-color:var(--tycolor-link-active);
+    background-color: var(--tyfy-color-active);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0.85em auto;
+    border-color: var(--tyfy-color-input-border-active);
+    @media (prefers-color-scheme: light) {
+      background-image: var(--tyfy-input-check-light);
+    }
+    @media (prefers-color-scheme: dark) {
+      background-image: var(--tyfy-input-check-dark);
+    }
+
   }
   &:hover {
-    border-color:var(--tycolor-link-active);
-    transform:scale(1.1);
+    border-color: var(--tyfy-color-active);
+    transform: scale(1.1);
   }
-  &:hover,
-  &:focus {
-    outline:none;
-    box-shadow:0 0 0 tygrid(0.5) var(--tyfy-color-bg)-tab-active;
-  }
-  &:focus {
-    border-color:var(--tycolor-link-active);
+  &:focus:focus-visible {
+    border-color: var(--tyfy-color-input-border-active);
+    outline-color: var(--tyfy-color-input-outline-focus);
+    outline-width: var(--tyfy-width-border);
+    outline-offset: var(--tyfy-width-border);
   }
 }
 input[type="radio"] {
