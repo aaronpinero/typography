@@ -1,0 +1,95 @@
+/* tyfy.collapsables */
+.tyfy-collapsable-processed {
+  background-color: transparent;
+  clear: both;
+  position: relative;
+  button {
+    all: unset;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    padding: 0 calc(round(up, 1em, var(--tyfy-vgu)) + var(--tyfy-hspace-sm)) var(--tyfy-vspace-sm) 0;
+    width: 100%;
+  }
+  &::before {
+    background-image: var(--tyfy-details-caret-light);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 0.85em auto;
+    border-radius: 50%;
+    content: "";
+    height: round(up, 1em, var(--tyfy-vgu));
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotate(180deg);
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, top 0.5s ease-in-out, transform 0.5s ease-in-out;
+    width: round(up, 1em, var(--tyfy-vgu));
+  }
+  &.closed {
+    button {
+      padding-bottom: calc(var(--tyfy-vspace-sm) - var(--tyfy-width-border));
+    }
+    &::before {
+      transform:rotate(0deg);
+    }
+  }
+  @media (min-width: 40rem) {
+    button {
+      border: var(--tyfy-border);
+      border-bottom: none;
+      padding: calc(var(--tyfy-vspace-md) - var(--tyfy-width-border)) calc(round(up, 1em, var(--tyfy-vgu)) + var(--tyfy-hspace-md) + var(--tyfy-hspace-sm)) var(--tyfy-vspace-sm) calc(var(--tyfy-hspace-md) - var(--tyfy-width-border));
+      transition-duration: 0.5s;
+      transition-property: padding-top;
+      transition-timing-function: ease-in-out;
+    }
+    &::before {
+      right: var(--tyfy-hspace-md);
+      top: var(--tyfy-vspace-md);
+    }
+    &.closed {
+      button {
+        padding-top: calc(var(--tyfy-vspace-sm) - var(--tyfy-width-border));
+      }
+      &::before {
+        top: var(--tyfy-vspace-sm);
+      }
+    }
+  }
+  &:hover,
+  &:focus,
+  &:focus-within {
+    &::before {
+      background-color:var(--tyfy-color-active);
+      background-image: var(--tyfy-details-caret-active-light);
+    }
+  }
+  .tyfy-margins-on * + & {
+    margin-top: var(--tyfy-margin-blocks);
+  }
+}
+
+.tyfy-collapsables {
+  box-sizing: content-box;
+  border-bottom: var(--tyfy-border);
+  margin: 0rem;
+  overflow: hidden;
+  padding: var(--tyfy-vspace-sm) 0 calc(var(--tyfy-vspace-md) - var(--tyfy-width-border)) 0;
+  transition-duration: 0.5s;
+  transition-property: padding-top,padding-bottom,height;
+  transition-timing-function: ease-in-out;
+  @media (min-width: 40rem) {
+    border: var(--tyfy-border);
+    border-top: none !important;
+    padding: var(--tyfy-vspace-sm) calc(var(--tyfy-hspace-md) - var(--tyfy-width-border)) calc(var(--tyfy-vspace-md) - var(--tyfy-width-border));
+  }
+  &.closed {
+    height: 0 !important;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  &.hiding > * {
+    position: absolute;
+    visibility: hidden;
+  }
+}
