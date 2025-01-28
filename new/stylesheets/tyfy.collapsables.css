@@ -25,6 +25,9 @@
     transform: rotate(180deg);
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, top 0.5s ease-in-out, transform 0.5s ease-in-out;
     width: round(up, 1em, var(--tyfy-vgu));
+    @media (prefers-color-scheme: dark) {
+      background-image: var(--tyfy-details-caret-dark);
+    }
   }
   &.closed {
     button {
@@ -62,6 +65,9 @@
     &::before {
       background-color:var(--tyfy-color-active);
       background-image: var(--tyfy-details-caret-active-light);
+      @media (prefers-color-scheme: dark) {
+        background-image: var(--tyfy-details-caret-active-dark);
+      }
     }
   }
   .tyfy-margins-on * + & {
@@ -93,3 +99,59 @@
     visibility: hidden;
   }
 }
+
+/* tyfy.details */
+details {
+  border: var(--tyfy-border);
+  summary { 
+    border-radius: 0;
+    cursor: pointer;
+    list-style: none;
+    padding: var(--tyfy-vspace-sm) calc(round(up, 1em, var(--tyfy-vgu)) + var(--tyfy-hspace-sm)) var(--tyfy-vspace-sm) var(--tyfy-hspace-sm);
+    position: relative;
+    transition: background-color 0.25s, color 0.25s;
+    &::-webkit-details-marker {
+      display: none;
+    }
+    &::before {
+      background-image: var(--tyfy-details-caret-light);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 0.85em auto;
+      border-radius: 50%;
+      content: "";
+      height: round(up, 1em, var(--tyfy-vgu));
+      position: absolute;
+      right: var(--tyfy-hspace-sm);
+      top: var(--tyfy-vspace-sm);
+      transform: rotate(180deg);
+      transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+      width: round(up, 1em, var(--tyfy-vgu));
+      @media (prefers-color-scheme: dark) {
+        background-image: var(--tyfy-details-caret-dark);
+      }
+    }
+    &:hover {
+      color: var(--tyfy-color-action);
+      &::before {
+        background-color:var(--tyfy-color-active);
+        background-image: var(--tyfy-details-caret-active-light);
+        @media (prefers-color-scheme: dark) {
+          background-image: var(--tyfy-details-caret-active-dark);
+        }
+      }
+    }
+    &:focus:focus-visible {
+      outline-color: var(--tyfy-color-input-outline-focus);
+      outline-width: var(--tyfy-width-border);
+      outline-offset: var(--tyfy-width-border);
+    }
+  }
+  & > .details-wrapper {
+    padding: var(--tyfy-vspace-sm) var(--tyfy-hspace-sm);
+  }
+  &[open] summary::before {
+    transform: rotate(0deg);
+  }
+}
+
