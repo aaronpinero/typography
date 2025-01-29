@@ -25,10 +25,10 @@
     transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, top 0.5s ease-in-out, transform 0.5s ease-in-out;
     width: round(up, 1em, var(--tyfy-vgu));
     @media (prefers-color-scheme: light) {
-      background-image: var(--tyfy-details-caret-light);
+      background-image: var(--tyfy-caret-light);
     }
     @media (prefers-color-scheme: dark) {
-      background-image: var(--tyfy-details-caret-dark);
+      background-image: var(--tyfy-caret-dark);
     }
   }
   &.closed {
@@ -67,10 +67,10 @@
     &::before {
       background-color:var(--tyfy-color-active);
       @media (prefers-color-scheme: light) {
-        background-image: var(--tyfy-details-caret-active-light);
+        background-image: var(--tyfy-caret-active-light);
       }
       @media (prefers-color-scheme: dark) {
-        background-image: var(--tyfy-details-caret-active-dark);
+        background-image: var(--tyfy-caret-active-dark);
       }
     }
   }
@@ -131,10 +131,10 @@ details {
       transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
       width: round(up, 1em, var(--tyfy-vgu));
       @media (prefers-color-scheme: light) {
-        background-image: var(--tyfy-details-caret-light);
+        background-image: var(--tyfy-caret-light);
       }
       @media (prefers-color-scheme: dark) {
-        background-image: var(--tyfy-details-caret-dark);
+        background-image: var(--tyfy-caret-dark);
       }
     }
     &:hover {
@@ -142,10 +142,10 @@ details {
       &::before {
         background-color:var(--tyfy-color-active);
         @media (prefers-color-scheme: light) {
-          background-image: var(--tyfy-details-caret-active-light);
+          background-image: var(--tyfy-caret-active-light);
         }
         @media (prefers-color-scheme: dark) {
-          background-image: var(--tyfy-details-caret-active-dark);
+          background-image: var(--tyfy-caret-active-dark);
         }
       }
     }

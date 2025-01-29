@@ -41,10 +41,10 @@ select {
     box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
     padding-right: var(--tyfy-hspace-md);
     @media (prefers-color-scheme: light) {
-      background-image: var(--tyfy-select-caret-light);
+      background-image: var(--tyfy-caret-light);
     }
     @media (prefers-color-scheme: dark) {
-      background-image: var(--tyfy-select-caret-dark);
+      background-image: var(--tyfy-caret-dark);
     }
     &:disabled {
       box-shadow: none;
@@ -106,7 +106,7 @@ input[type="radio"] {
     background-color: var(--tyfy-color-active);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 0.85em auto;
+    background-size: 1em auto;
     border-color: var(--tyfy-color-input-border-active);
     box-shadow: none;
   }
@@ -124,16 +124,22 @@ input[type="radio"] {
 input[type="checkbox"] {
   &:checked {
     @media (prefers-color-scheme: light) {
-      background-image: var(--tyfy-input-check-light);
+      background-image: var(--tyfy-check-light);
     }
     @media (prefers-color-scheme: dark) {
-      background-image: var(--tyfy-input-check-dark);
+      background-image: var(--tyfy-check-dark);
     }
   }
 }
 input[type="radio"] {
   border-radius:50%;
   &:checked {
+    @media (prefers-color-scheme: light) {
+      background-image: var(--tyfy-dot-light);
+    }
+    @media (prefers-color-scheme: dark) {
+      background-image: var(--tyfy-dot-dark);
+    }
   }
 }
 input[type="range"] {
