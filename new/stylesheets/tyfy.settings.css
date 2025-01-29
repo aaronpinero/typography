@@ -45,7 +45,8 @@
   --tyfy-color-bg-shaded: color-mix(in srgb, var(--tyfy-color-fg) 15%, transparent);
   
   /* tyfy.settings.animation */
-  --tyfy-transition-duration-link: 0.25s;
+  --tyfy-duration-sm: 0.25s;
+  --tyfy-duration-md: 0.5s;
   
   /* tyfy.settings.svgs */
   --tyfy-select-caret-light: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M6,13L9,10L16,17L23,10L26,13L16,23L6,13Z" fill="hsl(0,0%,40%)" /></svg>');

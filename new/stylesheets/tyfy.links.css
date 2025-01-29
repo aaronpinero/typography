@@ -9,7 +9,7 @@ a {
     text-decoration-style: solid;
     text-decoration-thickness: 0.1em;
     text-underline-offset: 0.15em;
-    transition: color var(--tyfy-transition-duration-link) ease-in-out, text-decoration-color var(--tyfy-transition-duration-link) ease-in-out, text-decoration-thickness var(--tyfy-transition-duration-link) ease-in-out;
+    transition: color var(--tyfy-duration-sm) ease-in-out, text-decoration-color var(--tyfy-duration-sm) ease-in-out, text-decoration-thickness var(--tyfy-duration-sm) ease-in-out;
     &:hover,
     &:active {
       color: var(--tyfy-color-link-active);

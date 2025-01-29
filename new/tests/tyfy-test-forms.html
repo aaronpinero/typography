@@ -14,14 +14,84 @@
     </header>
   
     <form>
-      <div>
-        <label class="block">Text Input</label>
-        <input type="text" name="name">
-      </div>
-      <div>
-        <label class="block">Number Input</label>
-        <input type="number" name="age">
-      </div>
+      <fieldset>
+        <legend>Text Inputs</legend>
+        <div>
+          <label>Regular label for text input</label>
+          <input type="text" name="name">
+        </div>
+        <div>
+          <label>Regular label for block text input</label>
+          <input type="text" name="name" class="tyfy-block">
+        </div>
+        <div>
+          <label class="tyfy-block">Block label for disabled text input</label>
+          <input type="text" name="name" disabled>
+        </div>
+        <div>
+          <label class="tyfy-block">Number Input</label>
+          <input type="number" name="age">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Textareas</legend>
+        <div>
+          <label class="tyfy-block">Block label for textarea</label>
+          <textarea rows="3"></textarea>
+        </div>
+        <div>
+          <label>Regular label for disabled textarea</label>
+          <textarea rows="3" disabled></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Selects</legend>
+        <div>
+          <label>Select</label>
+          <select name="color">
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="white">White</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="black">Black</option>
+          </select>
+        </div>
+        <div>
+          <label>Disabled Select</label>
+          <select name="color" disabled>
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="white">White</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="black">Black</option>
+          </select>
+        </div>
+        <div>
+          <label>Multiple Select</label>
+          <select name="color" multiple="multiple">
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="purple">Purple</option>
+            <option value="white">White</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="black">Black</option>
+          </select>
+        </div>
+      </fieldset>
       <div>
         <label>Range Input</label>
         <input type="range" min="0" max="100" step="1" value="25">
@@ -30,40 +100,10 @@
         <label>Range Input Disabled</label>
         <input type="range" min="0" max="100" step="1" value="25" disabled>
       </div>
-      <div>
-        <label>Select</label>
-        <select name="color">
-          <option value="red">Red</option>
-          <option value="orange">Orange</option>
-          <option value="yellow">Yellow</option>
-          <option value="green">Green</option>
-          <option value="blue">Blue</option>
-          <option value="purple">Purple</option>
-          <option value="white">White</option>
-          <option value="gold">Gold</option>
-          <option value="silver">Silver</option>
-          <option value="black">Black</option>
-        </select>
-      </div>
-      <div>
-        <label>Multiple Select</label>
-        <select name="color" multiple="multiple">
-          <option value="red">Red</option>
-          <option value="orange">Orange</option>
-          <option value="yellow">Yellow</option>
-          <option value="green">Green</option>
-          <option value="blue">Blue</option>
-          <option value="purple">Purple</option>
-          <option value="white">White</option>
-          <option value="gold">Gold</option>
-          <option value="silver">Silver</option>
-          <option value="black">Black</option>
-        </select>
-      </div>
       <fieldset>
         <legend>Fieldset</legend>
         <div>
-          <label class="block">Option Labels, Inline</label>
+          <label class="tyfy-block">Option Labels, Inline</label>
           <div>
             <label class="label-option label-inline"><input type="checkbox" name="sky" value="a"> Option A</label>
             <label class="label-option label-inline"><input type="checkbox" name="sky" value="b"> Option B</label>

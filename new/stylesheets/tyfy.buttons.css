@@ -22,7 +22,7 @@
   margin: 0;
   padding: calc((0.5 * var(--tyfy-vgu)) - var(--tyfy-width-btn-border)) calc((0.75 * var(--tyfy-hgu)) - var(--tyfy-width-btn-border));
   text-shadow: 0 1px 1px rgba(black,0.1);
-  transition: all var(--tyfy-transition-duration-link);
+  transition: all var(--tyfy-duration-sm);
   vertical-align: middle;
   &,
   &[href] {

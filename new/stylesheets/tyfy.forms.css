@@ -5,6 +5,75 @@
   --tyfy-color-input-border-active: var(--tyfy-color-active);
   --tyfy-color-input-outline-focus: light-dark(hsla(310, 80%, 45%, 0.7), hsla(310, 80%, 70%, 0.7)); /* #cc0066 */
 }
+button,
+input,
+select,
+textarea {
+  background-color: var(--tyfy-color-bg);
+  border: var(--tyfy-color-input-border) var(--tyfy-width-border) solid;
+  border-radius: var(--tyfy-radius-border);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15) inset;
+  box-sizing: border-box;
+  color: var(--tyfy-color-fg);
+  font-size: var(--tyfy-fs-base);
+  line-height: round(up, var(--tyfy-fs-base), var(--tyfy-vgu));
+  padding: calc((0.5 * var(--tyfy-vgu)) - var(--tyfy-width-border)) calc((0.75 * var(--tyfy-hgu)) - var(--tyfy-width-border));
+  transition: border-color var(--tyfy-duration-sm), box-shadow var(--tyfy-duration-sm);
+  &:disabled {
+    border-style: dotted;
+    box-shadow: none;
+    color: var(--tyfy-color-text-light);
+  }
+  &:focus:focus-visible {
+    border-color: var(--tyfy-color-input-border-active);
+    outline-color: var(--tyfy-color-input-outline-focus);
+    outline-width: var(--tyfy-width-border);
+    outline-offset: var(--tyfy-width-border);
+  }
+}
+select {
+  &:not([multiple]) {
+    appearance: none;
+    -webkit-appearance: none;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 0.5em) center;
+    background-size: 1em auto;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+    padding-right: var(--tyfy-hspace-md);
+    @media (prefers-color-scheme: light) {
+      background-image: var(--tyfy-select-caret-light);
+    }
+    @media (prefers-color-scheme: dark) {
+      background-image: var(--tyfy-select-caret-dark);
+    }
+    &:disabled {
+      box-shadow: none;
+    }
+  }
+}
+
+textarea {
+  display: block;
+  max-width: 100%;
+  width: auto;
+}
+input,
+select {
+  &.tyfy-block {
+    display: block;
+    max-width: 100%;
+    width: auto;    
+  }
+}
+label {
+  font-weight: bold;
+  &.tyfy-block {
+    display: block;
+    & + * {
+      margin-top: var(--tyfy-vspace-sm);
+    }
+  }
+}
 fieldset {
   border-color: var(--tyfy-color-border);
   border-radius: var(--tyfy-radius-border);
@@ -16,6 +85,7 @@ fieldset {
     font-size: var(--tyfy-fs-base);
     font-weight: bold;
     line-height: round(up, var(--tyfy-fs-base), var(--tyfy-vgu));
+    margin-bottom: var(--tyfy-width-border); /* fixes some strange top padding artifact*/
     margin-left: calc(-1 * var(--tyfy-hspace-sm));
     margin-right: calc(-1 * var(--tyfy-hspace-sm));
     padding-left: var(--tyfy-hspace-sm);
@@ -25,16 +95,7 @@ fieldset {
     }
   }
 }
-label {
-  font-weight: bold;
-  &.block {
-    display: block;
-    & + * {
-      margin-top: var(--tyfy-vspace-sm);
-    }
-  }
-}
-select,
+/* select,
 textarea,
 input[type="text"],
 input[type="file"],
@@ -60,7 +121,7 @@ input[type="color"] {
   font-size: var(--tyfy-fs-base);
   line-height: round(up, var(--tyfy-fs-base), var(--tyfy-vgu));
   padding: calc((0.5 * var(--tyfy-vgu)) - var(--tyfy-width-border)) calc((0.75 * var(--tyfy-hgu)) - var(--tyfy-width-border));
-  transition: border-color var(--tyfy-transition-duration-link), box-shadow var(--tyfy-transition-duration-link);
+  transition: border-color var(--tyfy-duration-sm), box-shadow var(--tyfy-duration-sm);
   max-width: 100%;
   &:focus:focus-visible {
     border-color: var(--tyfy-color-input-border-active);
@@ -73,12 +134,7 @@ input[type="color"] {
     pointer-events: none;
     opacity: 0.8;
   }
-}
-select {
-  &:not([multiple]) {
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
-  }
-}
+} */
 button,
 input[type="button"],
 input[type="reset"],
@@ -90,23 +146,6 @@ input[type="reset"][disabled],
 input[type="submit"][disabled] {
   background-color: color-mix(in srgb, var(--tyfy-color-fg) 60% ,var(--tyfy-color-bg) 40%);
   cursor: not-allowed;
-}
-
-select {
-  &:not([multiple]) {
-    appearance: none;
-    -webkit-appearance: none;
-    background-repeat: no-repeat;
-    background-position: calc(100% - 0.5em) center;
-    background-size: 1em auto;
-    padding-right: var(--tyfy-hspace-md);
-    @media (prefers-color-scheme: light) {
-      background-image: var(--tyfy-select-caret-light);
-    }
-    @media (prefers-color-scheme: dark) {
-      background-image: var(--tyfy-select-caret-dark);
-    }
-  }
 }
 
 input[type="checkbox"] {
