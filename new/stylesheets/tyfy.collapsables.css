@@ -110,10 +110,11 @@ details {
   summary { 
     border-radius: 0;
     cursor: pointer;
+    font-weight: bold;
     list-style: none;
-    padding: var(--tyfy-vspace-sm) calc(round(up, 1em, var(--tyfy-vgu)) + var(--tyfy-hspace-sm)) var(--tyfy-vspace-sm) var(--tyfy-hspace-sm);
+    padding: calc(var(--tyfy-vspace-sm) - var(--tyfy-width-border)) calc(round(up, 1em, var(--tyfy-vgu)) + var(--tyfy-hspace-md) + var(--tyfy-hspace-sm)) calc(var(--tyfy-vspace-sm) - var(--tyfy-width-border)) calc(var(--tyfy-hspace-md) - var(--tyfy-width-border));
     position: relative;
-    transition: background-color 0.25s, color 0.25s;
+    transition: background-color var(--tyfy-duration-sm), color var(--tyfy-duration-sm);
     &::-webkit-details-marker {
       display: none;
     }
@@ -127,7 +128,6 @@ details {
       position: absolute;
       right: var(--tyfy-hspace-sm);
       top: var(--tyfy-vspace-sm);
-      transform: rotate(180deg);
       transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
       width: round(up, 1em, var(--tyfy-vgu));
       @media (prefers-color-scheme: light) {
@@ -156,10 +156,10 @@ details {
     }
   }
   & > .details-wrapper {
-    padding: var(--tyfy-vspace-sm) var(--tyfy-hspace-sm);
+    padding: var(--tyfy-vspace-sm) calc(var(--tyfy-hspace-md) - var(--tyfy-width-border));
   }
   &[open] summary::before {
-    transform: rotate(0deg);
+    transform: rotate(180deg);
   }
 }
 
