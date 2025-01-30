@@ -38,3 +38,7 @@ span {
 .text-light {
   color: var(--tyfy-color-text-light);
 }
+.lede {
+  font-size: var(--tyfy-fs-lede);
+  line-height: round(up, var(--tyfy-fs-lede), var(--tyfy-vgu));
+}

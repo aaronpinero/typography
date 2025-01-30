@@ -1,0 +1,6 @@
+figure.output {
+  border: var(--tyfy-border);
+  box-shadow: 0 0 var(--tyfy-vgu) rgba(black,0.05);
+  padding: calc(var(--tyfy-vspace-md) - var(--tyfy-width-border)) calc(var(--tyfy-hspace-md) - var(--tyfy-width-border));
+  position: relative;
+}

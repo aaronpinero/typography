@@ -22,12 +22,13 @@
   margin: 0;
   padding: calc((0.5 * var(--tyfy-vgu)) - var(--tyfy-width-btn-border)) calc((0.75 * var(--tyfy-hgu)) - var(--tyfy-width-btn-border));
   text-shadow: 0 1px 1px rgba(black,0.1);
-  transition: all var(--tyfy-duration-sm);
+  transition: all var(--tyfy-duration-sm) ease-in-out;
   vertical-align: middle;
   &,
   &[href] {
     color: var(--tyfy-color-btn-fg);
     text-decoration: none;
+    transition: all var(--tyfy-duration-sm) ease-in-out;
     &:hover,
     &:active {
       background-color: var(--tyfy-color-btn-active-bg);
@@ -76,6 +77,15 @@
     --tyfy-color-btn-bg: transparent;
     --tyfy-color-btn-border: white;
     --tyfy-color-btn-outline: var(--tyfy-color-fg);
+    &,
+    &[href] {
+      &:hover,
+      &:active {
+        background-color: white;
+        border-color: white;
+        color: hsl(0, 0%, 10%);
+      }
+    }
   }
   &.btn-danger {
     --tyfy-color-btn-fg: var(--tyfy-color-bg);

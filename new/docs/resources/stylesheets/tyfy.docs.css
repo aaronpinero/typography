@@ -3,6 +3,8 @@
 @import "../components/brandlogo/tyfy.docs.brandlogo.css";
 @import "../components/brandname/tyfy.docs.brandname.css";
 @import "../components/codebox/tyfy.docs.codebox.css";
+@import "../components/pagetitle/tyfy.docs.pagetitle.css";
+@import "../components/outputbox/tyfy.docs.outputbox.css";
 
 body {
   font-family: Raleway;

@@ -1,0 +1,20 @@
+header.pagetitle {
+  --tyfy-margin-blocks: var(--tyfy-vspace-sm);
+  background-color: var(--tyfy-color-active);
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="97px" height="18px" viewBox="0 0 97 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g opacity="0.33"><g fill="white"><rect x="0" y="8" width="2" height="10"></rect><rect x="5" y="8" width="2" height="10"></rect><rect x="10" y="0" width="2" height="18"></rect><rect x="25" y="0" width="2" height="18"></rect><rect x="15" y="8" width="2" height="10"></rect><rect x="20" y="8" width="2" height="10"></rect><rect x="30" y="8" width="2" height="10"></rect><rect x="35" y="8" width="2" height="10"></rect><rect x="40" y="0" width="2" height="18"></rect><rect x="45" y="8" width="2" height="10"></rect><rect x="50" y="8" width="2" height="10"></rect><rect x="55" y="0" width="2" height="18"></rect><rect x="70" y="0" width="2" height="18"></rect><rect x="60" y="8" width="2" height="10"></rect><rect x="65" y="8" width="2" height="10"></rect><rect x="75" y="8" width="2" height="10"></rect><rect x="80" y="8" width="2" height="10"></rect><rect x="85" y="0" width="2" height="18"></rect><rect x="90" y="8" width="2" height="10"></rect><rect x="95" y="8" width="2" height="10"></rect></g></g></svg>'), linear-gradient(var(--tyfy-color-active), var(--tyfy-color-text-light));
+  background-position: top calc((2 * var(--tyfy-vspace-md)) - 18px) center, center center;
+  background-repeat: no-repeat,no-repeat;
+  background-size: 97px 18px, cover;
+  box-shadow: 0 1px var(--tyfy-vspace-md) rgba(black,0.15) inset;
+  color-scheme: only light;
+  padding: calc(2 * var(--tyfy-vspace-md)) var(--tyfy-hspace-md);
+  text-align: center;
+  @media (min-width: 600px) {
+    background-position: top calc((3 * var(--tyfy-vspace-md)) - 18px) center, center center;
+    padding: calc(3 * var(--tyfy-vspace-md)) var(--tyfy-hspace-md);
+  }
+  h1 {
+    text-shadow: 0 1px calc(0.5 * var(--tyfy-vgu)) rgba(black,0.25);
+    text-transform: uppercase;
+  }
+}

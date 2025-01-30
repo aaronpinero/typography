@@ -1,0 +1,16 @@
+title: "Page Title"
+label: "Page Title"
+notes: "The header that displays the title of a documentation page."
+preview: "@preview-template"
+status: "ready"
+context:
+  modifier: ""
+  title: "<h1>Page Title Here</h1>"
+variants:
+  - name: "hometitle"
+    title: Home Page Hero
+    label: Home Page Hero
+    notes: "variation of the title on the home page"
+    context:
+      modifier: "home"
+      title: "<h1>Tyfy</h1>\n<p class=\"lede\">A framework for better web typography.</p>\n<ul class=\"list-flex centered list-nobullet\"><li><a class=\"tyfy-btn btn-white btn-outline\" href=\"startup.html\">Get Started</a></li><li><a class=\"tyfy-btn btn-white btn-outline\" href=\"modules.html\">Documentation</a></li></ul>"

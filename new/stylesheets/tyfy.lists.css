@@ -44,9 +44,11 @@ ul {
   }
   &.list-flex {
     --tyfy-margin-lists: 0;
+    column-gap: var(--tyfy-hspace-sm);
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
+    row-gap: var(--tyfy-vspace-sm);
     li {
       margin-left: var(--tyfy-hspace-md);
     }
@@ -57,11 +59,8 @@ ul {
       justify-content: flex-end;
     }
     &.list-nobullet {
-      margin-left: calc(-1 * var(--tyfy-hspace-sm));
-      margin-right: calc(-1 * var(--tyfy-hspace-sm));
       li {
-        margin-left: var(--tyfy-hspace-sm);
-        margin-right: var(--tyfy-hspace-sm);
+        margin: 0;
       }
     }
   }

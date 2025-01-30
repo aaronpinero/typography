@@ -46,8 +46,9 @@
     --tyfy-margin-lists: 0;
     --tyfy-margin-rule: 0;
   }
+  &,
   .tyfy-margins-off & {
-    :is(p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li,figure,blockquote,hr) {
+    p,ul,ol,dl,h1,h2,h3,h4,h5,h6,dt,dd,li,figure,blockquote,hr {
       margin-bottom: unset;
       margin-top: unset;
     }
