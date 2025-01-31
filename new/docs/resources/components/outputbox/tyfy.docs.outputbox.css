@@ -1,3 +1,4 @@
+/* tyfy.docs.outputbox */
 figure.output {
   border: var(--tyfy-border);
   box-shadow: 0 0 var(--tyfy-vgu) rgba(black,0.05);

@@ -1,10 +1,12 @@
 @import "../fonts/raleway/raleway.css" layer(fonts);
-@import "../../../../stylesheets/tyfy.css";
+@import "../../../../stylesheets/tyfy.css" layer(tyfy);
 @import "../components/brandlogo/tyfy.docs.brandlogo.css";
 @import "../components/brandname/tyfy.docs.brandname.css";
 @import "../components/codebox/tyfy.docs.codebox.css";
 @import "../components/pagetitle/tyfy.docs.pagetitle.css";
 @import "../components/outputbox/tyfy.docs.outputbox.css";
+@import "../components/navlink-secondary/tyfy.docs.navlink.secondary.css";
+@import "../components/nav-paging/tyfy.docs.nav.paging.css";
 
 body {
   font-family: Raleway;

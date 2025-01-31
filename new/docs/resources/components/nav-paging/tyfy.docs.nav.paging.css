@@ -1,0 +1,31 @@
+/* tyfy.docs.nav.paging */
+ul.nav-paging {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: calc(2 * var(--tyfy-vspace-md));
+  padding: 0;
+  li {
+    display:block;
+  }
+  li.next {
+    text-align: right;
+    a::after {
+      /* content: tychar($tyicons-angle-right); */
+      display: inline-block;
+      /* font-family: $tyfont-symbol; */
+      font-size: 70%;
+      margin-left: 0.5em;
+      vertical-align: middle;
+    }
+  }
+  li.prev {
+    a::before {
+      /* content: tychar($tyicons-angle-left); */
+      display: inline-block;
+      /* font-family: $tyfont-symbol; */
+      font-size: 70%;
+      margin-right: 0.5em;
+      vertical-align: middle;
+    }
+  }
+}
