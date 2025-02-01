@@ -1,5 +1,7 @@
 /* tyfy.docs.outputbox */
 figure.output {
+  --tyfy-color-fg: light-dark(hsl(225,40%,30%),hsl(225,40%,80%));
+  color: var(--tyfy-color-fg);
   border: var(--tyfy-border);
   box-shadow: 0 0 var(--tyfy-vgu) rgba(black,0.05);
   padding: calc(var(--tyfy-vspace-md) - var(--tyfy-width-border)) calc(var(--tyfy-hspace-md) - var(--tyfy-width-border));

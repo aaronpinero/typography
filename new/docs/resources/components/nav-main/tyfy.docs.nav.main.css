@@ -1,0 +1,317 @@
+/* tyfy.docs.nav.main */ 
+/* nav element */
+nav.nav-main {
+  background-color: var(--tyfy-color-bg);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  &.js-nav-active {
+    @media (min-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  & + * {
+    margin-top: 0;
+  }
+}
+
+/* title of menu that will serve as mobile menu button */
+nav.nav-main {
+  h1 {
+    font-size: var(--tyfy-fs-base);
+    line-height: calc(4 * var(--tyfy-vgu));
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @media (min-width: 70rem) {
+      right: calc(50vw - 35rem);
+    }
+  }
+  &.js-nav-active {
+    h1 {
+      cursor: pointer;
+      height: calc(4 * var(--tyfy-vgu));
+      overflow: hidden;
+      width: calc(4 * var(--tyfy-vgu));
+      &::before {
+        background-color: var(--tyfy-color-bg);
+        content: var(--picons-bold-bars);
+        display: block;
+        font-family: 'picons-bold';
+        font-weight: normal;
+        text-align: center;
+        transition: background-color var(--tyfy-duration-sm), color var(--tyfy-duration-sm);
+        width: calc(4 * var(--tyfy-vgu));
+      }
+      &:hover {
+        &::before {
+          background-color: var(--tyfy-color-link-active);
+          color: var(--tyfy-color-bg);
+        }
+      }
+      @media (min-width: 800px) {
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+      }
+    }
+  }
+  /* change of state when mobile nav is open */
+  &.nav-opened {
+    h1 {
+      &: : before {
+        content: tychar($tyicons-x);
+      }
+    }
+  }
+}
+
+/* logo */
+nav.nav-main {
+  .tyfy.logo {
+    @media (min-width: 70rem) {
+      margin-left: calc(50vw - 35rem);
+    }
+  }
+}
+
+/* basic list styles */
+nav.nav-main {
+  ul {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--tyfy-fs-base);
+    line-height: round(up, var(--tyfy-fs-base), var(--tyfy-vgu));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* top level list styles */
+nav.nav-main {
+  & > ul {
+    @media (min-width: 70rem) {
+      margin-right: calc(50vw - 35rem);
+    }
+  }
+  &.js-nav-active {
+    & > ul {
+      @media (min-width: 800px) {
+        flex-direction: row;
+      }
+      @media (max-width: 799px) {
+        height: 0;
+        visibility: hidden;
+        &.nav-transition {
+          box-shadow: 0 2px 2px rgba(black,0.1);
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &.nav-opened {
+    & > ul {
+      @media (max-width: $nav-show - 1rem/20) {
+        box-shadow: 0 2px 2px rgba(black,0.1);
+        height: auto;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+// second level list styles
+nav.nav-main {
+  & > ul > li > ul {
+    border-left: $tycolor-bg tygrid(0.5) solid;
+    border-right: $tycolor-bg tygrid(0.5) solid;
+    position: relative;
+  }
+  &.js-nav-active {
+    & > ul > li > ul {
+      height: 0;
+      overflow: hidden;
+      &.ul-opened {
+        border-bottom: $tycolor-bg tygrid(0.5) solid;
+        height: auto;
+        overflow: visible;
+      }
+      @media (min-width: $nav-show) {
+        border-bottom: $tycolor-bg tygrid(0.5) solid;
+        flex-direction: row;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        &.ul-transition,
+        &.ul-opened {
+          box-shadow: 0 2px 2px rgba(black,0.1);
+          visibility: visible;
+        }
+      }
+    }
+    & > ul > li > ul.megamenu {
+      @media (max-width: $nav-show - 1rem/20) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+// third level list styles
+nav.nav-main {
+  & > ul > li > ul.megamenu ul {
+    flex-direction:  column;
+    padding-bottom: tygrid(1);
+  }
+  & > ul > li > ul.megamenu li: nth-child(3) ul {
+    @media (min-width: $nav-show) {
+      flex-wrap: wrap;
+      max-height: tygrid(14);
+    }
+  }
+}
+
+// list item styles
+nav.nav-main {
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  &.js-nav-active {
+    & > ul ul.megamenu li {
+      flex: 1;
+      max-width: ($width-max-block - tygrid(1)) / 5; // max width minus the borders, divided into fifths
+      &: nth-child(3) {
+        @media (min-width: $nav-show) {
+          flex: 2;
+          max-width: 2 * (($width-max-block - tygrid(1)) / 5); // max width minus the borders, divided into fifths, allowing 2 fifths
+        }
+      }
+    }
+  }
+}
+
+// strong
+nav.nav-main {
+  ul li a strong {
+    font-family: $tyfont-condensed;
+    text-transform: uppercase;
+  }
+}
+
+// menu links, default
+nav.nav-main {
+  ul {
+    a[href] {
+      display: block;
+      font-family: $tyfont-sans;
+      line-height: tylead(tyscale(0));
+      padding: tygrid(1) tygrid(2);
+      position: relative;
+    }
+    li + li > a[href] {
+      &: : before {
+        background-color: var(--tycolor-border);
+        content: "";
+        height: $tywidth-border;
+        left: tygrid(2);
+        position: absolute;
+        top: 0;
+        width: tygrid(18/14);
+      }
+    }
+  }
+  &.js-nav-active {
+    ul {
+      li + li > a[href] {
+        &: : before {
+          @media (min-width: $nav-show) {
+            height: tygrid(18/14);
+            left: 0;
+            margin-top: tygrid(-9/14);
+            top: 50%;
+            width: $tywidth-border;
+          }
+        }
+      }
+    }
+  }
+}
+
+// menu links, first level expandable
+nav.nav-main {
+  &.js-nav-active {
+    a[href].expandable {
+      &: : after {
+        background-image: url('data: image/svg+xml;charset=UTF-8,<svg width="28px" height="14px" viewBox="0 0 28 14" version="1.1" xmlns="http: //www.w3.org/2000/svg" xmlns: xlink="http: //www.w3.org/1999/xlink"><polygon points="0,14 14,0 28,14" fill="#{$tycolor-rev-bg}"></polygon></svg>');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 28px 14px;
+        bottom: 0;
+        content: "";
+        height: 0px;
+        left: 1.75rem;
+        position: absolute;
+        transition: all tyduration(hover);
+        visibility: hidden;
+        width: 28px;
+      }
+    }
+    a[href].expandable.ul-opened {
+      &: : after {
+        @media (min-width: $nav-show) {
+          height: 14px;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &.nav-opened {
+    a[href].expandable.ul-opened {
+      &: : after {
+        @media (max-width: $nav-show - 1rem/20) {
+          height: 14px;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+// menu links, second level
+nav.nav-main {
+  & > ul ul {
+    a[href] {
+      padding: tygrid(1) tygrid(1.5);
+    }
+    li + li > a[href] {
+      &: : before {
+        @media (max-width: $nav-show - 1rem/20) {
+          left: tygrid(1.5);
+        }
+      }
+    }
+  }
+}
+
+// menu links, third level
+nav.nav-main {
+  & > ul > li > ul.megamenu ul {
+    a[href] {
+      padding: tygrid(0) tygrid(1.5);
+    }
+    li + li > a[href] {
+      &: : before {
+        display: none;
+      }
+    }
+  }
+}
