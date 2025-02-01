@@ -1,0 +1,88 @@
+:root {
+  --picons-bold-angle: "\ea01";
+  --picons-bold-arrow: "\ea02";
+  --picons-bold-bars: "\ea03";
+  --picons-bold-book: "\ea04";
+  --picons-bold-calendar: "\ea05";
+  --picons-bold-chair: "\ea06";
+  --picons-bold-check: "\ea07";
+  --picons-bold-chevron: "\ea08";
+  --picons-bold-circle: "\ea09";
+  --picons-bold-clock: "\ea0a";
+  --picons-bold-cog: "\ea0b";
+  --picons-bold-database: "\ea0c";
+  --picons-bold-diamond: "\ea0d";
+  --picons-bold-external: "\ea0e";
+  --picons-bold-file_text: "\ea0f";
+  --picons-bold-funnel: "\ea10";
+  --picons-bold-hand: "\ea11";
+  --picons-bold-home: "\ea12";
+  --picons-bold-lock: "\ea13";
+  --picons-bold-map_pin: "\ea14";
+  --picons-bold-minus: "\ea15";
+  --picons-bold-mute: "\ea16";
+  --picons-bold-pause: "\ea17";
+  --picons-bold-play: "\ea18";
+  --picons-bold-plus: "\ea19";
+  --picons-bold-search: "\ea1a";
+  --picons-bold-sort: "\ea1b";
+  --picons-bold-sound: "\ea1c";
+  --picons-bold-star: "\ea1d";
+  --picons-bold-times: "\ea1e";
+  --picons-bold-tool: "\ea1f";
+  --picons-bold-x: "\ea20";
+}
+@font-face {
+  font-family: "picons-bold";
+  src: url('picons-bold.eot?t=1640460004914'); /* IE9*/
+  src: url('picons-bold.eot?t=1640460004914#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url("picons-bold.woff2?t=1640460004914") format("woff2"),
+  url("picons-bold.woff?t=1640460004914") format("woff"),
+  url('picons-bold.ttf?t=1640460004914') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('picons-bold.svg?t=1640460004914#picons-bold') format('svg'); /* iOS 4.1- */
+}
+
+[class^="picons-bold-"], [class*=" picons-bold-"] {
+  font-family: 'picons-bold' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class^="picons-bold-"]::before,
+[class*=" picons-bold-"]::before {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.picons-bold-angle:before { content: "\ea01"; }
+.picons-bold-arrow:before { content: "\ea02"; }
+.picons-bold-bars:before { content: "\ea03"; }
+.picons-bold-book:before { content: "\ea04"; }
+.picons-bold-calendar:before { content: "\ea05"; }
+.picons-bold-chair:before { content: "\ea06"; }
+.picons-bold-check:before { content: "\ea07"; }
+.picons-bold-chevron:before { content: "\ea08"; }
+.picons-bold-circle:before { content: "\ea09"; }
+.picons-bold-clock:before { content: "\ea0a"; }
+.picons-bold-cog:before { content: "\ea0b"; }
+.picons-bold-database:before { content: "\ea0c"; }
+.picons-bold-diamond:before { content: "\ea0d"; }
+.picons-bold-external:before { content: "\ea0e"; }
+.picons-bold-file_text:before { content: "\ea0f"; }
+.picons-bold-funnel:before { content: "\ea10"; }
+.picons-bold-hand:before { content: "\ea11"; }
+.picons-bold-home:before { content: "\ea12"; }
+.picons-bold-lock:before { content: "\ea13"; }
+.picons-bold-map_pin:before { content: "\ea14"; }
+.picons-bold-minus:before { content: "\ea15"; }
+.picons-bold-mute:before { content: "\ea16"; }
+.picons-bold-pause:before { content: "\ea17"; }
+.picons-bold-play:before { content: "\ea18"; }
+.picons-bold-plus:before { content: "\ea19"; }
+.picons-bold-search:before { content: "\ea1a"; }
+.picons-bold-sort:before { content: "\ea1b"; }
+.picons-bold-sound:before { content: "\ea1c"; }
+.picons-bold-star:before { content: "\ea1d"; }
+.picons-bold-times:before { content: "\ea1e"; }
+.picons-bold-tool:before { content: "\ea1f"; }
+.picons-bold-x:before { content: "\ea20"; }

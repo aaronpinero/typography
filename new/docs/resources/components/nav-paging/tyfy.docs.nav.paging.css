@@ -6,26 +6,32 @@ ul.nav-paging {
   padding: 0;
   li {
     display:block;
+    a[href] {
+      --tyfy-color-link-decoration: transparent;
+    }
   }
   li.next {
     text-align: right;
     a::after {
-      /* content: tychar($tyicons-angle-right); */
+      content: var(--picons-bold-angle);
       display: inline-block;
-      /* font-family: $tyfont-symbol; */
-      font-size: 70%;
-      margin-left: 0.5em;
+      font-family: 'picons-bold';
+      margin-left: 0.33em;
       vertical-align: middle;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
   }
   li.prev {
     a::before {
-      /* content: tychar($tyicons-angle-left); */
+      content: var(--picons-bold-angle);
       display: inline-block;
-      /* font-family: $tyfont-symbol; */
-      font-size: 70%;
-      margin-right: 0.5em;
+      font-family: 'picons-bold';
+      margin-right: 0.33em;
+      transform: rotate(180deg);
       vertical-align: middle;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
   }
 }

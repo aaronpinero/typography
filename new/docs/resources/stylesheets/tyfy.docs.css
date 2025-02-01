@@ -1,4 +1,5 @@
 @import "../fonts/raleway/raleway.css" layer(fonts);
+@import "../fonts/picons-bold/picons-bold.css" layer(fonts);
 @import "../../../../stylesheets/tyfy.css" layer(tyfy);
 @import "../components/brandlogo/tyfy.docs.brandlogo.css";
 @import "../components/brandname/tyfy.docs.brandname.css";
