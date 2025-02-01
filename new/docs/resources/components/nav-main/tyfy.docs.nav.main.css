@@ -62,8 +62,8 @@ nav.nav-main {
   /* change of state when mobile nav is open */
   &.nav-opened {
     h1 {
-      &: : before {
-        content: tychar($tyicons-x);
+      &::before {
+        content: var(--picons-bold-x);
       }
     }
   }
@@ -116,7 +116,7 @@ nav.nav-main {
   }
   &.nav-opened {
     & > ul {
-      @media (max-width: $nav-show - 1rem/20) {
+      @media (max-width: 799px) {
         box-shadow: 0 2px 2px rgba(black,0.1);
         height: auto;
         visibility: visible;
@@ -125,11 +125,11 @@ nav.nav-main {
   }
 }
 
-// second level list styles
+/* second level list styles */
 nav.nav-main {
   & > ul > li > ul {
-    border-left: $tycolor-bg tygrid(0.5) solid;
-    border-right: $tycolor-bg tygrid(0.5) solid;
+    border-left: var(--tyfy-color-bg) calc(0.5 * var(--tyfy-hgu)) solid;
+    border-right: var(--tyfy-color-bg) calc(0.5 * var(--tyfy-hgu)) solid;
     position: relative;
   }
   &.js-nav-active {
@@ -137,12 +137,12 @@ nav.nav-main {
       height: 0;
       overflow: hidden;
       &.ul-opened {
-        border-bottom: $tycolor-bg tygrid(0.5) solid;
+        border-bottom: var(--tyfy-color-bg) calc(0.5 * var(--tyfy-hgu));
         height: auto;
         overflow: visible;
       }
       @media (min-width: $nav-show) {
-        border-bottom: $tycolor-bg tygrid(0.5) solid;
+        border-bottom: var(--tyfy-color-bg) calc(0.5 * var(--tyfy-hgu));
         flex-direction: row;
         justify-content: center;
         left: 0;
@@ -157,7 +157,7 @@ nav.nav-main {
       }
     }
     & > ul > li > ul.megamenu {
-      @media (max-width: $nav-show - 1rem/20) {
+      @media (max-width: 799px) {
         flex-direction: row;
         flex-wrap: wrap;
       }
@@ -165,21 +165,21 @@ nav.nav-main {
   }
 }
 
-// third level list styles
+/* third level list styles */
 nav.nav-main {
   & > ul > li > ul.megamenu ul {
     flex-direction:  column;
-    padding-bottom: tygrid(1);
+    padding-bottom: var(--tyfy-vgu);
   }
-  & > ul > li > ul.megamenu li: nth-child(3) ul {
-    @media (min-width: $nav-show) {
+  & > ul > li > ul.megamenu li:nth-child(3) ul {
+    @media (min-width: 800px) {
       flex-wrap: wrap;
-      max-height: tygrid(14);
+      max-height: calc(14 * var(--tyfy-vgu));
     }
   }
 }
 
-// list item styles
+/* list item styles */
 nav.nav-main {
   li {
     margin: 0;
@@ -199,7 +199,7 @@ nav.nav-main {
   }
 }
 
-// strong
+/* strong */
 nav.nav-main {
   ul li a strong {
     font-family: $tyfont-condensed;
@@ -207,7 +207,7 @@ nav.nav-main {
   }
 }
 
-// menu links, default
+/* menu links, default */
 nav.nav-main {
   ul {
     a[href] {
@@ -246,7 +246,7 @@ nav.nav-main {
   }
 }
 
-// menu links, first level expandable
+/* menu links, first level expandable */
 nav.nav-main {
   &.js-nav-active {
     a[href].expandable {
