@@ -8,6 +8,7 @@
 @import "../components/outputbox/tyfy.docs.outputbox.css";
 @import "../components/navlink-secondary/tyfy.docs.navlink.secondary.css";
 @import "../components/nav-paging/tyfy.docs.nav.paging.css";
+@import "../components/nav-inpage/tyfy.docs.nav.inpage.css";
 
 body {
   font-family: Raleway;

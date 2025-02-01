@@ -1,0 +1,28 @@
+/* tyfy.docs.nav.inpage */
+nav.nav-inpage {
+  --tyfy-color-fg: var(--tyfy-color-text-light);
+  font-size: var(--tyfy-fs-sm);
+  line-height: round(up, var(--tyfy-fs-sm), var(--tyfy-vgu));
+  width: calc(9 * var(--tyfy-hgu));
+  @media (min-height:400px) {
+    position: sticky;
+    top: var(--tyfy-vspace-md);
+  }
+  h2.h6 {
+    padding-bottom: var(--tyfy-vspace-sm);
+    position: relative;
+    &::after {
+      background-color: var(--tyfy-color-active);
+      bottom: calc(0.5 * var(--tyfy-vgu) - 1px);
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: 18px;
+    }
+    a[href] {
+      --tyfy-color-link: var(--tyfy-color-text-light);
+      --tyfy-color-link-decoration: transparent;
+    }
+  }
+}
