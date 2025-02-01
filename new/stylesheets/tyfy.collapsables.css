@@ -106,6 +106,9 @@
 
 /* tyfy.details */
 details {
+  @media (prefers-reduced-motion: no-preference) {
+    interpolate-size: allow-keywords;
+  }
   border: var(--tyfy-border);
   summary { 
     border-radius: 0;
