@@ -14,7 +14,3 @@
 @import "tyfy.forms.css" layer(tyfy-styles);
 @import "tyfy.floats.css" layer(tyfy-styles);
 @import "tyfy.collapsables.css" layer(tyfy-styles);
-
-@view-transition {
-  navigation: auto;
-}
