@@ -1,5 +1,4 @@
 /* tyfy.docs.nav.main */ 
-/* nav element */
 nav.nav-main {
   background-color: var(--tyfy-color-bg);
   margin-left: auto;
@@ -7,30 +6,37 @@ nav.nav-main {
   position: relative;
   &.js-nav-active {
     @media (min-width: 800px) {
+      /* Position logo on left and menu on right. */
       display: flex;
       justify-content: space-between;
     }
-  }
-  & + * {
-    margin-top: 0;
   }
 }
 
 /* title of menu that will serve as mobile menu button */
 nav.nav-main {
   h1 {
-    font-size: var(--tyfy-fs-base);
-    line-height: calc(4 * var(--tyfy-vgu));
-    margin: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    @media (min-width: 70rem) {
-      right: calc(50vw - 35rem);
+    all: unset;
+    button {
+      appearance: none;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      display: block;
+      font-size: var(--tyfy-fs-base);
+      line-height: calc(4 * var(--tyfy-vgu));
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      @media (min-width: 70rem) {
+        right: calc(50vw - 35rem);
+      }
     }
   }
   &.js-nav-active {
-    h1 {
+    h1 button {
       cursor: pointer;
       height: calc(4 * var(--tyfy-vgu));
       overflow: hidden;
@@ -61,7 +67,7 @@ nav.nav-main {
   }
   /* change of state when mobile nav is open */
   &.nav-opened {
-    h1 {
+    h1 button {
       &::before {
         content: var(--picons-bold-x);
       }
@@ -128,6 +134,10 @@ nav.nav-main {
 /* second level list styles */
 nav.nav-main {
   & > ul > li > ul {
+    color-scheme: only dark;
+    @media (prefers-color-scheme: dark) {
+      color-scheme: only light;
+    }
     border-left: var(--tyfy-color-bg) calc(0.5 * var(--tyfy-hgu)) solid;
     border-right: var(--tyfy-color-bg) calc(0.5 * var(--tyfy-hgu)) solid;
     position: relative;
@@ -141,7 +151,7 @@ nav.nav-main {
         height: auto;
         overflow: visible;
       }
-      @media (min-width: $nav-show) {
+      @media (min-width: 800px) {
         border-bottom: var(--tyfy-color-bg) calc(0.5 * var(--tyfy-hgu));
         flex-direction: row;
         justify-content: center;
@@ -168,7 +178,7 @@ nav.nav-main {
 /* third level list styles */
 nav.nav-main {
   & > ul > li > ul.megamenu ul {
-    flex-direction:  column;
+    flex-direction: column;
     padding-bottom: var(--tyfy-vgu);
   }
   & > ul > li > ul.megamenu li:nth-child(3) ul {
@@ -188,11 +198,11 @@ nav.nav-main {
   &.js-nav-active {
     & > ul ul.megamenu li {
       flex: 1;
-      max-width: ($width-max-block - tygrid(1)) / 5; // max width minus the borders, divided into fifths
-      &: nth-child(3) {
-        @media (min-width: $nav-show) {
+      max-width: 19%; // max width minus the borders, divided into fifths
+      &:nth-child(3) {
+        @media (min-width: 800px) {
           flex: 2;
-          max-width: 2 * (($width-max-block - tygrid(1)) / 5); // max width minus the borders, divided into fifths, allowing 2 fifths
+          max-width: 39%; // max width minus the borders, divided into fifths, allowing 2 fifths
         }
       }
     }
@@ -202,43 +212,44 @@ nav.nav-main {
 /* strong */
 nav.nav-main {
   ul li a strong {
-    font-family: $tyfont-condensed;
     text-transform: uppercase;
   }
 }
 
-/* menu links, default */
+/* Menu links, default */
 nav.nav-main {
   ul {
     a[href] {
+      --tyfy-color-link: var(--tyfy-color-fg);
+      --tyfy-color-link-decoration: transparent;
       display: block;
-      font-family: $tyfont-sans;
-      line-height: tylead(tyscale(0));
-      padding: tygrid(1) tygrid(2);
+      font-size: var(--tyfy-fs-sm);
+      line-height: round(up, var(--tyfy-fs-sm), var(--tyfy-vgu));
+      padding: var(--tyfy-vspace-sm) var(--tyfy-hspace-md);
       position: relative;
     }
     li + li > a[href] {
-      &: : before {
-        background-color: var(--tycolor-border);
+      &::before {
+        background-color: var(--tyfy-color-border);
         content: "";
-        height: $tywidth-border;
-        left: tygrid(2);
+        height: var(--tyfy-width-border);
+        left: var(--tyfy-hspace-md);
         position: absolute;
         top: 0;
-        width: tygrid(18/14);
+        width: var(--tyfy-hspace-sm);
       }
     }
   }
   &.js-nav-active {
     ul {
       li + li > a[href] {
-        &: : before {
-          @media (min-width: $nav-show) {
-            height: tygrid(18/14);
+        &::before {
+          @media (min-width: 800px) {
+            height: var(--tyfy-vspace-sm);
             left: 0;
-            margin-top: tygrid(-9/14);
+            margin-top: calc(-0.5 * var(--tyfy-vspace-sm));
             top: 50%;
-            width: $tywidth-border;
+            width: var(--tyfy-width-border);
           }
         }
       }
@@ -250,8 +261,8 @@ nav.nav-main {
 nav.nav-main {
   &.js-nav-active {
     a[href].expandable {
-      &: : after {
-        background-image: url('data: image/svg+xml;charset=UTF-8,<svg width="28px" height="14px" viewBox="0 0 28 14" version="1.1" xmlns="http: //www.w3.org/2000/svg" xmlns: xlink="http: //www.w3.org/1999/xlink"><polygon points="0,14 14,0 28,14" fill="#{$tycolor-rev-bg}"></polygon></svg>');
+      &::after {
+        background-image: url('data: image/svg+xml;charset=UTF-8,<svg width="28px" height="14px" viewBox="0 0 28 14" version="1.1" xmlns="http: //www.w3.org/2000/svg" xmlns: xlink="http: //www.w3.org/1999/xlink"><polygon points="0,14 14,0 28,14" fill="hsl(0,0%,10%"></polygon></svg>');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 28px 14px;
@@ -266,8 +277,8 @@ nav.nav-main {
       }
     }
     a[href].expandable.ul-opened {
-      &: : after {
-        @media (min-width: $nav-show) {
+      &::after {
+        @media (min-width: 800px) {
           height: 14px;
           visibility: visible;
         }
@@ -276,8 +287,8 @@ nav.nav-main {
   }
   &.nav-opened {
     a[href].expandable.ul-opened {
-      &: : after {
-        @media (max-width: $nav-show - 1rem/20) {
+      &::after {
+        @media (max-width: 799px) {
           height: 14px;
           visibility: visible;
         }
@@ -290,12 +301,12 @@ nav.nav-main {
 nav.nav-main {
   & > ul ul {
     a[href] {
-      padding: tygrid(1) tygrid(1.5);
+      padding: var(--tyfy-vgu) calc(1.5 * var(--tyfy-hgu));
     }
     li + li > a[href] {
       &: : before {
-        @media (max-width: $nav-show - 1rem/20) {
-          left: tygrid(1.5);
+        @media (max-width: 799px) {
+          left: calc(1.5 * var(--tyfy-hgu));
         }
       }
     }
@@ -306,7 +317,7 @@ nav.nav-main {
 nav.nav-main {
   & > ul > li > ul.megamenu ul {
     a[href] {
-      padding: tygrid(0) tygrid(1.5);
+      padding: 0 calc(1.5 * var(--tyfy-hgu));
     }
     li + li > a[href] {
       &: : before {
