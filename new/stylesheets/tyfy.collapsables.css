@@ -109,6 +109,14 @@ details {
   @media (prefers-reduced-motion: no-preference) {
     interpolate-size: allow-keywords;
   }
+  &::details-content {
+    block-size: 0;
+    overflow-y: clip;
+    transition: content-visibility var(--tyfy-duration-md) allow-discrete, block-size var(--tyfy-duration-md); 
+  }
+  &[open]::details-content {
+    block-size: auto;
+  }
   border: var(--tyfy-border);
   summary { 
     border-radius: 0;
@@ -131,7 +139,7 @@ details {
       position: absolute;
       right: var(--tyfy-hspace-sm);
       top: var(--tyfy-vspace-sm);
-      transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+      transition: background-color var(--tyfy-duration-sm) ease-in-out, color var(--tyfy-duration-sm) ease-in-out, transform var(--tyfy-duration-md) ease-in-out;
       width: round(up, 1em, var(--tyfy-vgu));
       @media (prefers-color-scheme: light) {
         background-image: var(--tyfy-caret-light);
