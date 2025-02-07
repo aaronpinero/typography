@@ -9,20 +9,22 @@ nav.nav-inpage {
     top: var(--tyfy-vspace-md);
   }
   h2.h6 {
-    padding-bottom: var(--tyfy-vspace-sm);
-    position: relative;
-    &::after {
-      background-color: var(--tyfy-color-active);
-      bottom: calc(0.5 * var(--tyfy-vgu) - 1px);
-      content: "";
-      height: 2px;
-      left: 0;
-      position: absolute;
-      width: 18px;
-    }
     a[href] {
       --tyfy-color-link: var(--tyfy-color-text-light);
       --tyfy-color-link-decoration: transparent;
+    }
+  }
+  li {
+    border-left: var(--tyfy-border);
+    padding-left: calc(var(--tyfy-hspace-sm) - var(--tyfy-width-border));
+    transition: border-width var(--tyfy-duration-sm), border-color var(--tyfy-duration-sm), padding-left var(--tyfy-duration-sm);
+    a[href].active {
+      font-style: italic;
+    }
+    &:has(a.active) {
+      border-left-width: calc(3 * var(--tyfy-width-border));
+      border-left-color: var(--tyfy-color-active);
+      padding-left: calc(var(--tyfy-hspace-sm) - (3 * var(--tyfy-width-border)));
     }
   }
 }

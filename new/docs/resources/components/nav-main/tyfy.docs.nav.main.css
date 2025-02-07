@@ -4,17 +4,8 @@ nav.nav-main {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  &.js-nav-active {
-    @media (min-width: 900px) {
-      /* Position logo on left and menu on right. */
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-}
 
-/* title of menu that will serve as mobile menu button */
-nav.nav-main {
+  /* Menu heading/button */
   h1 {
     all: unset;
     button {
@@ -26,7 +17,7 @@ nav.nav-main {
       font-size: var(--tyfy-fs-base);
       line-height: calc(4 * var(--tyfy-vgu));
       margin: 0;
-      padding: 0;
+      padding: 0 var(--tyfy-hspace-md);
       position: absolute;
       right: 0;
       top: 0;
@@ -35,275 +26,45 @@ nav.nav-main {
       }
     }
   }
-  &.js-nav-active {
-    h1 button {
-      cursor: pointer;
-      height: calc(4 * var(--tyfy-vgu));
-      overflow: hidden;
-      width: calc(4 * var(--tyfy-vgu));
-      &::before {
-        background-color: var(--tyfy-color-bg);
-        content: var(--picons-bold-bars);
-        display: block;
-        font-family: 'picons-bold';
-        font-weight: normal;
-        text-align: center;
-        transition: background-color var(--tyfy-duration-sm), color var(--tyfy-duration-sm);
-        width: calc(4 * var(--tyfy-vgu));
-      }
-      &:hover {
-        &::before {
-          background-color: var(--tyfy-color-link-active);
-          color: var(--tyfy-color-bg);
-        }
-      }
-      @media (min-width: 900px) {
-        height: 0;
-        overflow: hidden;
-        visibility: hidden;
-        width: 0;
-      }
-    }
-  }
-  /* change of state when mobile nav is open */
-  &.nav-opened {
-    h1 button {
-      &::before {
-        content: var(--picons-bold-x);
-      }
-    }
-  }
-}
 
-/* logo */
-nav.nav-main {
+  /* Logo */
   .tyfy.logo {
     @media (min-width: 70rem) {
       margin-left: calc(50vw - 35rem);
     }
   }
-}
 
-/* basic list styles */
-nav.nav-main {
+  /* Basic list styles */
   ul {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    font-size: var(--tyfy-fs-base);
-    line-height: round(up, var(--tyfy-fs-base), var(--tyfy-vgu));
+    display: block;
     list-style: none;
     margin: 0;
-    padding: 0;
-  }
-}
-
-/* top level list styles */
-nav.nav-main {
-  & > ul {
-    @media (min-width: 70rem) {
-      margin-right: calc(50vw - 35rem);
+    padding: 0 var(--tyfy-hspace-md);
+    li {
+      margin: 0;
+      padding: 0;
     }
-  }
-  &.js-nav-active {
-    & > ul {
-      @media (min-width: 900px) {
-        flex-direction: row;
-      }
-      @media (max-width: 899px) {
-        height: 0;
-        visibility: hidden;
-        &.nav-transition {
-          box-shadow: 0 2px 2px rgba(black,0.1);
-          visibility: visible;
-        }
-      }
-    }
-  }
-  &.nav-opened {
-    & > ul {
-      @media (max-width: 899px) {
-        box-shadow: 0 2px 2px rgba(black,0.1);
-        height: auto;
-        visibility: visible;
-      }
-    }
-  }
-}
-
-/* second level list styles */
-nav.nav-main {
-  & > ul > li > ul {
-    border-left: var(--tyfy-color-fg) calc(0.5 * var(--tyfy-hspace-sm)) solid;
-    border-right: var(--tyfy-color-fg) calc(0.5 * var(--tyfy-hspace-sm)) solid;
-    position: relative;
-  }
-  &.js-nav-active {
-    & > ul > li > ul {
-      height: 0;
-      overflow: hidden;
-      &.ul-opened {
-        border-bottom: var(--tyfy-color-fg) calc(0.5 * var(--tyfy-hgu)) solid;
-        height: auto;
-        overflow: visible;
-        padding: calc(0.5 * var(--tyfy-vspace-sm)) calc(0.5 * var(--tyfy-hspace-sm));
-      }
-      @media (min-width: 900px) {
-        border-bottom: var(--tyfy-color-fg) calc(0.5 * var(--tyfy-hgu)) solid;
-        flex-direction: row;
-        justify-content: center;
-        left: 0;
-        position: absolute;
-        visibility: hidden;
-        width: 100%;
-        &.ul-transition,  
-        &.ul-opened {
-          box-shadow: 0 2px 2px rgba(black,0.1);
-          visibility: visible;
-        }
-      }
-    }
-    & > ul > li > ul.megamenu {
-      @media (max-width: 899px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-    }
-  }
-}
-
-/* third level list styles */
-nav.nav-main {
-  & > ul > li > ul.megamenu ul {
-    flex-direction: column;
-    padding-bottom: var(--tyfy-vgu);
-  }
-  & > ul > li > ul.megamenu li:nth-child(3) ul {
-    @media (min-width: 900px) {
-      flex-wrap: wrap;
-      max-height: calc(14 * var(--tyfy-vgu));
-    }
-  }
-}
-
-/* list item styles */
-nav.nav-main {
-  li {
-    margin: 0;
-    padding: 0;
-  }
-  &.js-nav-active {
-    & > ul ul.megamenu li {
-      flex: 1;
-      max-width: 19%; // max width minus the borders, divided into fifths
-      &:nth-child(3) {
-        @media (min-width: 900px) {
-          flex: 2;
-          max-width: 39%; // max width minus the borders, divided into fifths, allowing 2 fifths
-        }
-      }
-    }
-  }
-}
-
-/* Menu links, default */
-nav.nav-main {
-  ul {
     a[href] {
       --tyfy-color-link: var(--tyfy-color-fg);
       --tyfy-color-link-decoration: transparent;
+      border-top: var(--tyfy-border);
       display: block;
       font-size: var(--tyfy-fs-sm);
+      font-weight: bold;
       line-height: round(up, var(--tyfy-fs-sm), var(--tyfy-vgu));
-      padding: var(--tyfy-vspace-sm) var(--tyfy-hspace-md);
+      padding: calc(var(--tyfy-vspace-sm) - var(--tyfy-width-border)) 0 var(--tyfy-vspace-sm) 0;
       position: relative;
     }
-    li + li > a[href] {
-      &::before {
-        background-color: var(--tyfy-color-border);
-        content: "";
-        height: var(--tyfy-width-border);
-        left: var(--tyfy-hspace-md);
-        position: absolute;
-        top: 0;
-        width: calc(100% - 2 * var(--tyfy-hspace-md));
-      }
-    }
-  }
-  &.js-nav-active {
     ul {
-      li + li > a[href] {
-        &::before {
-          @media (min-width: 900px) {
-            content: unset;
-          }
-        }
+      padding: 0 0 var(--tyfy-hspace-sm) 0;
+      a[href] {
+        border-top: none;
+        font-weight: normal;
+        padding: calc(var(--tyfy-vspace-sm)/2) var(--tyfy-hspace-sm);
       }
-    }
-  }
-}
-
-/* menu links, first level expandable */
-nav.nav-main {
-  &.js-nav-active {
-    a[href].expandable {
-      &::after {
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 20px 10px;
-        bottom: 0;
-        content: "";
-        height: 0px;
-        left: var(--tyfy-hspace-md);
-        position: absolute;
-        transition: all 0.25s;
-        visibility: hidden;
-        width: 20px;
-        @media (min-width: 900px) {
-          left: calc(50% - 10px);
-        }
-        @media (prefers-color-scheme: light) {
-          background-image: url('data: image/svg+xml;charset=UTF-8,<svg width="28px" height="14px" viewBox="0 0 20 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="0,10 10,0 20,10" fill="hsl(0,0%,10%)"></polygon></svg>');
-        }
-        @media (prefers-color-scheme: dark) {
-          background-image: url('data: image/svg+xml;charset=UTF-8,<svg width="28px" height="14px" viewBox="0 0 20 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="0,10 10,0 20,10" fill="hsl(0,0%,100%)"></polygon></svg>');
-        }
-      }
-    }
-    a[href].expandable.ul-opened {
-      &::after {
-        height: 10px;
-        visibility: visible;
-      }
-    }
-  }
-}
-
-/* Menu links, second level */
-nav.nav-main {
-  & > ul ul {
-    a[href] {
-      padding: calc(0.5 * var(--tyfy-vspace-sm)) var(--tyfy-hspace-sm);
-    }
-    li + li > a[href] {
-      &::before {
-        @media (max-width: 899px) {
-          left: calc(1.5 * var(--tyfy-hgu));
-        }
-      }
-    }
-  }
-}
-
-/* menu links, third level */
-nav.nav-main {
-  & > ul > li > ul.megamenu ul {
-    a[href] {
-      padding: 0 calc(1.5 * var(--tyfy-hgu));
-    }
-    li + li > a[href] {
-      &: : before {
-        display: none;
+      &.megamenu {
+        columns: 10rem auto;
       }
     }
   }
