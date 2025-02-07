@@ -60,12 +60,27 @@ nav.nav-main {
       padding: 0 0 var(--tyfy-hspace-sm) 0;
       a[href] {
         border-top: none;
+        font-size: var(--tyfy-fs-xs);
         font-weight: normal;
+        line-height: round(up, var(--tyfy-fs-xs), var(--tyfy-vgu));
         padding: calc(var(--tyfy-vspace-sm)/2) var(--tyfy-hspace-sm);
       }
       &.megamenu {
-        columns: 10rem auto;
+        columns: 8.5rem auto;
+        li {
+          break-inside: avoid;
+        }
       }
     }
+  }
+  
+  /* Expandable options */
+  & > ul > li:has(ul) > a[href]::after {
+    content: var(--picons-bold-angle);
+    font-family: 'picons-bold';
+    position: absolute;
+    right: var(--tyfy-hspace-sm);
+    transform: rotate(90deg);
+    top: calc(var(--tyfy-vspace-sm);
   }
 }

@@ -15,14 +15,14 @@
   --tyfy-fs-base: 1.25rem;
   --tyfy-fs-scalar: 1.2;
   
-  --tyfy-fs-xs: calc(var(--tyfy-fs-base) / (2 * var(--tyfy-fs-scalar)));
+  --tyfy-fs-xs: calc(var(--tyfy-fs-base) / (var(--tyfy-fs-scalar) * var(--tyfy-fs-scalar)));
   --tyfy-fs-sm: calc(var(--tyfy-fs-base) / var(--tyfy-fs-scalar));
   --tyfy-fs-h6: calc(var(--tyfy-fs-base) / var(--tyfy-fs-scalar));
   --tyfy-fs-h5: var(--tyfy-fs-base);
   --tyfy-fs-h4: calc(var(--tyfy-fs-base) * var(--tyfy-fs-scalar));
-  --tyfy-fs-h3: calc(var(--tyfy-fs-base) * (1.5 * var(--tyfy-fs-scalar)));
-  --tyfy-fs-h2: calc(var(--tyfy-fs-base) * (2 * var(--tyfy-fs-scalar)));
-  --tyfy-fs-h1: calc(var(--tyfy-fs-base) * (3 * var(--tyfy-fs-scalar)));
+  --tyfy-fs-h3: calc(var(--tyfy-fs-base) * (var(--tyfy-fs-scalar) * var(--tyfy-fs-scalar)));
+  --tyfy-fs-h2: calc(var(--tyfy-fs-base) * (var(--tyfy-fs-scalar) * var(--tyfy-fs-scalar) * var(--tyfy-fs-scalar)));
+  --tyfy-fs-h1: calc(var(--tyfy-fs-base) * (var(--tyfy-fs-scalar) * var(--tyfy-fs-scalar) * var(--tyfy-fs-scalar) * var(--tyfy-fs-scalar) * var(--tyfy-fs-scalar)));
   --tyfy-fs-quote: calc(var(--tyfy-fs-base) * var(--tyfy-fs-scalar));
   --tyfy-fs-lede: calc(var(--tyfy-fs-base) * var(--tyfy-fs-scalar));
   
