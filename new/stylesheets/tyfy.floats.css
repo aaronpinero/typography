@@ -1,65 +1,41 @@
-/* tyfy.floats.tables */
+/* tyfy.floats */
 :root {
-  --tyfy-margin-float-inline: var(--tyfy-hspace-md);
-  --tyfy-margin-float-end: var(--tyfy-vspace-md);
+  --tyfy-float-margin-inline: var(--tyfy-hspace-md);
+  --tyfy-float-margin-end: var(--tyfy-vspace-md);
+  --tyfy-float-width: 50%;
+  --tyfy-float-threshold: 30em;
 }
-@container (min-width: 25em) {
-  table {
-    &.float-left,
-    &.float-right {
-      box-sizing: border-box;
-      margin-bottom: var(--tyfy-margin-float-end);
-      width: calc(50% - (0.5 * var(--tyfy-margin-float-inline)));
-      &:first-child + * {
-        margin-top: 0;
-      }
-    }
-    &.float-left {
-      clear: left;
-      float: left;
-      margin-left: 0;
-      margin-right: var(--tyfy-margin-float-inline);
-    }
-    &.float-right {
-      clear: right;
-      float: right;
-      margin-left: var(--tyfy-margin-float-inline);
-      margin-right: 0;
-    }
-  }
-  table.float-right + table.float-left {
-    margin-right: calc(0.5 * var(--tyfy-margin-float-inline));
-  }
-  table.float-left + table.float-right {
-    margin-left: calc(0.5 * var(--tyfy-margin-float-inline));
-  }
+.float-left,
+.float-right {
+  box-sizing: border-box;
+  margin-bottom: var(--tyfy-margin-blocks);
+  max-width: 100%;
+  width: max(
+    calc(var(--tyfy-float-width) - (0.5 * var(--tyfy-float-margin-inline))),
+    calc(999 * (var(--tyfy-float-threshold) - 100%))
+  );
 }
-
-/* tyfy.floats.quotes */
-@container (min-width: 25em) {
-  blockquote {
-    &.pullquote {
-      &.float-left,
-      &.float-right {
-        box-sizing: border-box;
-        margin-bottom: var(--tyfy-margin-float-end);
-        width: calc(50% - (0.5 * var(--tyfy-margin-float-inline)));
-        &:first-child + * {
-          margin-top: 0;
-        }
-      }
-      &.float-left {
-        clear: left;
-        float: left;
-        margin-left: 0;
-        margin-right: var(--tyfy-margin-float-inline);
-      }
-      &.float-right {
-        clear: right;
-        float: right;
-        margin-left: var(--tyfy-margin-float-inline);
-        margin-right: 0;
-      }
-    }
-  }
+.float-left {
+  clear: left;
+  float: left;
+  margin-left: 0;
+  margin-right: max(
+    0rem,
+    min(
+      var(--tyfy-float-margin-inline),
+      calc(-999 * (var(--tyfy-float-threshold) - 100% - 1px))
+    )
+  );
+}
+.float-right {
+  clear: right;
+  float: right;
+  margin-left: max(
+    0rem, 
+    min(
+      var(--tyfy-float-margin-inline),
+      calc(-999 * (var(--tyfy-float-threshold) - 100% - 1px))
+    )
+  );
+  margin-right: 0;
 }
