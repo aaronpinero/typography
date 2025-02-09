@@ -9,12 +9,11 @@ nav.nav-main {
   h1 {
     all: unset;
     button {
-      appearance: none;
       border: none;
       border-radius: 0;
-      cursor: pointer;
+      box-shadow: none;
       display: block;
-      font-size: var(--tyfy-fs-base);
+      font-size: var(--tyfy-fs-sm);
       line-height: calc(4 * var(--tyfy-vgu));
       margin: 0;
       padding: 0 var(--tyfy-hspace-md);

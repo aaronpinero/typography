@@ -10,7 +10,9 @@
   --tyfy-width-btn-border: var(--tyfy-width-border);
   --tyfy-radius-btn-border: var(--tyfy-radius-border);
 }
-.tyfy-btn {
+.tyfy-btn,
+button,
+input:is([type="button"], [type="reset"], [type="submit"]) {
   background-color: var(--tyfy-color-btn-bg);
   border: var(--tyfy-width-btn-border) var(--tyfy-color-btn-border) solid;
   border-radius: var(--tyfy-radius-btn-border);
@@ -29,14 +31,14 @@
     color: var(--tyfy-color-btn-fg);
     text-decoration: none;
     transition: all var(--tyfy-duration-sm) ease-in-out;
-    &:hover,
-    &:active {
+    &:hover:not([disabled]),
+    &:active:not([disabled]) {
       background-color: var(--tyfy-color-btn-active-bg);
+      background-image: linear-gradient(to bottom, hsla(0, 0%, 100%, .05) 0%, hsla(0, 0%, 0%, .05) 100%);
       border-color: var(--tyfy-color-btn-active-border);
       color: var(--tyfy-color-btn-active-fg);
-      background-image: linear-gradient(to bottom, hsla(0, 0%, 100%, .05) 0%, hsla(0, 0%, 0%, .05) 100%);
     }
-    &:active {
+    &:active:not([disabled]) {
       box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset, 0 0 6px rgba(0,0,0,0.2) inset;
     }
     &:focus:focus-visible {
@@ -48,31 +50,31 @@
   &.bold {
     font-weight: bold;
   }
-  &.btn-outline {
+  &.btn-outline:not([disabled]) {
     --tyfy-color-btn-fg: var(--tyfy-color-link);
     --tyfy-color-btn-bg: transparent;
     --tyfy-color-btn-border: var(--tyfy-color-link);
     --tyfy-color-btn-outline: var(--tyfy-color-link-decoration);
   }
-  &.btn-secondary {
+  &.btn-secondary:not([disabled]) {
     --tyfy-color-btn-fg: var(--tyfy-color-bg);
     --tyfy-color-btn-bg: var(--tyfy-color-text-light);
     --tyfy-color-btn-border: var(--tyfy-color-text-light);
     --tyfy-color-btn-outline: var(--tyfy-color-border);
   }
-  &.btn-secondary.btn-outline {
+  &.btn-secondary.btn-outline:not([disabled]) {
     --tyfy-color-btn-fg: var(--tyfy-color-text-light);
     --tyfy-color-btn-bg: transparent;
     --tyfy-color-btn-border: var(--tyfy-color-text-light);
     --tyfy-color-btn-outline: var(--tyfy-color-border);
   }
-  &.btn-white {
+  &.btn-white:not([disabled]) {
     --tyfy-color-btn-fg: var(--tyfy-color-bg);
     --tyfy-color-btn-bg: white;
     --tyfy-color-btn-border: white;
     --tyfy-color-btn-outline: var(--tyfy-color-fg);
   }
-  &.btn-white.btn-outline {
+  &.btn-white.btn-outline:not([disabled]) {
     --tyfy-color-btn-fg: white;
     --tyfy-color-btn-bg: transparent;
     --tyfy-color-btn-border: white;
@@ -87,7 +89,7 @@
       }
     }
   }
-  &.btn-danger {
+  &.btn-danger:not([disabled]) {
     --tyfy-color-btn-fg: var(--tyfy-color-bg);
     --tyfy-color-btn-bg: light-dark(hsl(0, 100%, 43%), hsl(0, 100%, 65%));
     --tyfy-color-btn-border: light-dark(hsl(0, 100%, 43%), hsl(0, 100%, 65%));
@@ -96,7 +98,7 @@
     --tyfy-color-btn-active-bg: light-dark(hsl(0, 100%, 33%), hsl(0, 100%, 75%));
     --tyfy-color-btn-active-border: light-dark(hsl(0, 100%, 33%), hsl(0, 100%, 75%));
   }
-  &.btn-danger.btn-outline {
+  &.btn-danger.btn-outline:not([disabled]) {
     --tyfy-color-btn-fg: light-dark(hsl(0, 100%, 43%), hsl(0, 100%, 65%));
     --tyfy-color-btn-bg: transparent;
     --tyfy-color-btn-border: light-dark(hsl(0, 100%, 43%), hsl(0, 100%, 65%));
@@ -104,5 +106,15 @@
     --tyfy-color-btn-active-fg: var(--tyfy-color-bg);
     --tyfy-color-btn-active-bg: light-dark(hsl(0, 100%, 33%), hsl(0, 100%, 75%));
     --tyfy-color-btn-active-border: light-dark(hsl(0, 100%, 33%), hsl(0, 100%, 75%));
+  }
+  &[disabled] {
+    --tyfy-color-btn-fg: var(--tyfy-color-text-light);
+    --tyfy-color-btn-bg: transparent;
+    --tyfy-color-btn-border: var(--tyfy-color-text-light);
+    --tyfy-color-btn-outline: var(--tyfy-color-border);
+    --tyfy-color-btn-active-fg: var(--tyfy-color-text-light);
+    --tyfy-color-btn-active-bg: transparent;
+    --tyfy-color-btn-active-border: var(--tyfy-color-text-light);
+    cursor: unset;
   }
 }

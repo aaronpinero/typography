@@ -5,8 +5,7 @@
   --tyfy-color-input-border-active: var(--tyfy-color-active);
   --tyfy-color-input-outline-focus: light-dark(hsla(310, 80%, 45%, 0.7), hsla(310, 80%, 70%, 0.7)); /* #cc0066 */
 }
-button,
-input,
+input:not([type="button"], [type="reset"], [type="submit"]),
 select,
 textarea {
   background-color: var(--tyfy-color-bg);
@@ -228,4 +227,9 @@ input[type="range"]:disabled::-moz-range-thumb {
   border-color: var(--tyfy-color-input-border);
   box-shadow: none;
 }
-
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+}
