@@ -1,9 +1,17 @@
 /* tyfy.docs.outputbox */
 figure.output {
+  --color-hgl: light-dark(rgba(0,0,255,0.1), rgba(128,128,255,0.1));
+  --color-vgl: light-dark(rgba(255,0,0,0.1), rgba(255,128,128,0.1));
   --tyfy-color-fg: light-dark(hsl(225,40%,30%),hsl(225,40%,80%));
+  background-image: repeating-linear-gradient(0deg, var(--color-hgl) 0px, var(--color-hgl) 1px, transparent 0px, transparent 50%), repeating-linear-gradient(90deg, var(--color-vgl) 0px, var(--color-vgl) 1px, transparent 0px, transparent 50%);
+  background-repeat: repeat, repeat;
+  background-size: calc(2 * var(--tyfy-vgu)) calc(2 * var(--tyfy-vgu)), calc(2 * var(--tyfy-hgu)) calc(2 * var(--tyfy-hgu));
+  box-shadow: 0 0 var(--tyfy-vgu) hsla(0, 0%, 0%, 0.2) inset;
   color: var(--tyfy-color-fg);
-  border: var(--tyfy-border);
-  box-shadow: 0 0 var(--tyfy-vgu) rgba(black,0.05);
-  padding: calc(var(--tyfy-vspace-md) - var(--tyfy-width-border)) calc(var(--tyfy-hspace-md) - var(--tyfy-width-border));
+  padding: var(--tyfy-vspace-md) var(--tyfy-hspace-md);
   position: relative;
+}
+:root {
+  --color-hgl: light-dark(rgba(0,0,255,0.1), rgba(128,128,255,0.1));
+  --color-vgl: light-dark(rgba(255,0,0,0.1), rgba(255,128,128,0.1));
 }
